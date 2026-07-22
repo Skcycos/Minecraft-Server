@@ -1,0 +1,40 @@
+{
+  "enabled": {
+    "description": "Enable Paradigm's native tablist formatting.",
+    "value": false
+  },
+  "header": {
+    "description": "Formatted lines displayed above the player list.",
+    "value": [
+      "<gradient:aqua:light_purple><bold>Paradigm</bold></gradient>",
+      "<color:gray>{server_name} · {online_players}/{max_players}</color>"
+    ]
+  },
+  "footer": {
+    "description": "Formatted lines displayed below the player list.",
+    "value": [
+      "<color:gray>Server: <color:white>{server_id}</color> · Network: <color:white>{network_id}</color></color>",
+      "<color:dark_gray>play.example.com</color>"
+    ]
+  },
+  "playerFormat": {
+    "description": "Formatted player name shown in the tablist.",
+    "value": "{prefix}<color:white>{player_name}</color>{suffix}"
+  },
+  "sorting": {
+    "description": "Ordered deterministic player sorting rules.",
+    "value": [
+      "GROUP_WEIGHT_DESC",
+      "PLAYER_NAME_ASC"
+    ]
+  },
+  "showPing": {
+    "description": "Append a numeric ping value to formatted player names.",
+    "value": false
+  },
+  "refreshInterval": {
+    "description": "Seconds between dynamic tablist refresh checks.",
+    "value": 5
+  },
+  "perWorldOverrides": {}
+}

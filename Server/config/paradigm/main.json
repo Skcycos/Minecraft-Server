@@ -1,0 +1,150 @@
+{
+  "announcementsEnable": {
+    "description": "Enable or disable the Announcements module.",
+    "value": true
+  },
+  "motdEnable": {
+    "description": "Enable or disable the Message of the Day (MOTD) module.",
+    "value": true
+  },
+  "mentionsEnable": {
+    "description": "Enable or disable the player @mentions module.",
+    "value": true
+  },
+  "restartEnable": {
+    "description": "Enable or disable the scheduled server Restart module.",
+    "value": true
+  },
+  "debugEnable": {
+    "description": "Enable or disable debug logging for Paradigm modules. This can be very verbose.",
+    "value": false
+  },
+  "defaultLanguage": {
+    "description": "The default language for translatable messages. E.g., 'en', 'de', 'es'.",
+    "value": "en"
+  },
+  "commandManagerEnable": {
+    "description": "Enable or disable the custom Command Manager for custom commands.",
+    "value": true
+  },
+  "forceCommandPriorityEnable": {
+    "description": "When enabled, Paradigm commands override existing root command literals from other mods/plugins (e.g., /home).",
+    "value": true
+  },
+  "internalPermissionsEnable": {
+    "description": "Enable or disable Paradigm internal permissions/groups (permissions.json and /paradigm group).",
+    "value": true
+  },
+  "externalCommandPermissionsEnable": {
+    "description": "Enable command permission discovery/guard for commands from Minecraft and other mods.",
+    "value": true
+  },
+  "externalCommandPermissionMode": {
+    "description": "How discovered command permissions are enforced. 'deny_only' only blocks explicit denies; 'strict' requires an explicit allow or vanilla OP access.",
+    "value": "deny_only"
+  },
+  "registerForgePermissionHandler": {
+    "description": "Register Paradigm as an optional Forge/NeoForge PermissionAPI handler. Forge/NeoForge server config still decides which handler is active.",
+    "value": true
+  },
+  "telemetryEnable": {
+    "description": "Enables anonymous telemetry (server count, online players). Sends only anonymized metrics.",
+    "value": true
+  },
+  "telemetryIntervalSeconds": {
+    "description": "Telemetry ping interval in seconds.",
+    "value": 300
+  },
+  "telemetryServerId": {
+    "description": "Anonymous server ID (auto-generated when empty).",
+    "value": "5d15a546-1dd1-4466-9904-fb3d703c1486"
+  },
+  "webEditorTestUrl": {
+    "description": "When enabled, use the local web editor test URL (http://localhost:8083) instead of production.",
+    "value": false
+  },
+  "spawnWorld": {
+    "description": "Global spawn world id (set via /setspawn). Empty means spawn is not configured.",
+    "value": ""
+  },
+  "spawnX": {
+    "description": "Global spawn X coordinate.",
+    "value": 0.0
+  },
+  "spawnY": {
+    "description": "Global spawn Y coordinate.",
+    "value": 64.0
+  },
+  "spawnZ": {
+    "description": "Global spawn Z coordinate.",
+    "value": 0.0
+  },
+  "spawnYaw": {
+    "description": "Global spawn yaw rotation.",
+    "value": 0.0
+  },
+  "spawnPitch": {
+    "description": "Global spawn pitch rotation.",
+    "value": 0.0
+  },
+  "homeCommandsEnable": {
+    "description": "Enable or disable /sethome, /home, /delhome, /homes and /back commands.",
+    "value": true
+  },
+  "tpaCommandsEnable": {
+    "description": "Enable or disable /tpa, /tpahere, /tpaccept, /tpdeny and /tpcancel commands.",
+    "value": true
+  },
+  "warpCommandsEnable": {
+    "description": "Enable or disable /warp, /warps, /setwarp, /delwarp and /warpinfo commands.",
+    "value": true
+  },
+  "spawnCommandsEnable": {
+    "description": "Enable or disable /spawn and /setspawn commands.",
+    "value": true
+  },
+  "seenCommandEnable": {
+    "description": "Enable or disable /seen command.",
+    "value": true
+  },
+  "ignoreCommandsEnable": {
+    "description": "Enable or disable /ignore and /unignore commands.",
+    "value": true
+  },
+  "gamemodeCommandsEnable": {
+    "description": "Enable or disable /gamemode and gamemode aliases.",
+    "value": true
+  },
+  "flyCommandEnable": {
+    "description": "Enable or disable /fly command.",
+    "value": true
+  },
+  "clearInventoryCommandEnable": {
+    "description": "Enable or disable /clearinv and /ci commands.",
+    "value": true
+  },
+  "timeWeatherCommandsEnable": {
+    "description": "Enable or disable /day, /night, /sun, /rain and /thunder commands.",
+    "value": true
+  },
+  "speedCommandEnable": {
+    "description": "Enable or disable /speed command.",
+    "value": true
+  },
+  "feedCommandEnable": {
+    "description": "Enable or disable /feed command.",
+    "value": true
+  },
+  "healCommandEnable": {
+    "description": "Enable or disable /heal command.",
+    "value": true
+  },
+  "moderationCommandsEnable": {
+    "description": "Enable or disable moderation commands (/kick, /ban, /mute, /warn, /jail).",
+    "value": true
+  },
+  "adminUtilityCommandsEnable": {
+    "description": "Enable or disable admin utility commands (/vanish, /god, /invsee, /repair, /sudo, /near, /whois, /top, /jump).",
+    "value": true
+  }
+}

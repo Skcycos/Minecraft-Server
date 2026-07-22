@@ -1,0 +1,30 @@
+{
+  "provider": "sqlite",
+  "fallbackToJsonOnSqlFailure": true,
+  "networkId": "default",
+  "serverId": "default",
+  "serverName": "Default Server",
+  "sqlite": {
+    "path": "config/paradigm/data/paradigm.db"
+  },
+  "sql": {
+    "dialect": "mysql",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "paradigm",
+    "username": "paradigm",
+    "password": "",
+    "passwordEnv": "",
+    "poolSize": 5,
+    "ssl": false
+  },
+  "runtimeLibraries": {
+    "enabled": true,
+    "cachePath": "config/paradigm/libs",
+    "downloadTimeoutSeconds": 20,
+    "connectTimeoutSeconds": 10,
+    "repositoryBaseUrl": "https://repo1.maven.org/maven2",
+    "allowDownload": true,
+    "allowInsecureRepository": false
+  }
+}

@@ -1,0 +1,22 @@
+# Generated and machine-local files
+.DS_Store
+Server/.DS_Store
+
+# NeoForge/runtime downloads and generated state
+Server/libraries/
+Server/cache/
+Server/logs/
+Server/crash-reports/
+Server/hs_err_pid*.log
+Server/neoforge-*.jar
+Server/neoforge-*.jar.log
+neoforge-*.jar
+neoforge-*.jar.log
+
+# World and player runtime data
+Server/world/
+Server/usercache.json
+Server/whitelist.json
+Server/ops.json
+Server/banned-ips.json
+Server/banned-players.json

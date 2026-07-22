@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "host": "127.0.0.1",
+  "port": 8765,
+  "publicBaseUrl": "",
+  "requireLogin": true,
+  "loginTokenMinutes": 10,
+  "sessionMinutes": 120,
+  "allowRemoteAccess": false,
+  "allowedOrigins": [],
+  "rateLimitPerMinute": 120,
+  "staticCacheSeconds": 300
+}

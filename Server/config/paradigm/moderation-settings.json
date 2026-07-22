@@ -1,0 +1,34 @@
+{
+  "banScreenEnabled": {
+    "description": "Use Paradigm's formatted ban rejection screen.",
+    "value": true
+  },
+  "banScreenLines": {
+    "description": "Formatted lines shown when Paradigm rejects a banned connection.",
+    "value": [
+      "<bold><color:red>You are banned</color></bold>",
+      "",
+      "<color:gray>Reason</color>",
+      "{reason}",
+      "",
+      "<color:gray>Punished by</color>",
+      "{actor}",
+      "",
+      "<color:gray>Ban ID</color>",
+      "{punishment_id}",
+      "",
+      "<color:gray>Expires</color>",
+      "{expiry}",
+      "",
+      "<color:aqua>{appeal_url}</color>"
+    ]
+  },
+  "appealUrl": {
+    "description": "Appeal URL available as {appeal_url}.",
+    "value": "https://example.invalid/appeal/{punishment_id}"
+  },
+  "cacheRefreshSeconds": {
+    "description": "How often SQL-backed servers refresh active punishments from storage.",
+    "value": 30
+  }
+}

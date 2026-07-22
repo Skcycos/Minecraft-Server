@@ -1,0 +1,139 @@
+[
+  {
+    "name": "example",
+    "description": "Sends a greeting to the player.",
+    "permission": "example.custom.permissions",
+    "requirePermission": false,
+    "actions": [
+      {
+        "type": "message",
+        "text": [
+          "&aHello &6{player}! &bWelcome to the server!",
+          "&aEnjoy your stay and check out our rules."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "example2",
+    "description": "Teleports the player to spawn.",
+    "permission": "example2.custom.permissions",
+    "requirePermission": false,
+    "actions": [
+      {
+        "type": "teleport",
+        "x": 100,
+        "y": 64,
+        "z": 100
+      },
+      {
+        "type": "message",
+        "text": [
+          "&aYou have been teleported to spawn!"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "example3",
+    "description": "Runs multiple commands for admins.",
+    "permission": "example3.custom.permissions",
+    "requirePermission": true,
+    "actions": [
+      {
+        "type": "runcmd",
+        "commands": [
+          "say Hello world!",
+          "give @p minecraft:diamond 1"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "checkdiamond",
+    "description": "Checks if you have 5 diamonds.",
+    "permission": "paradigm.checkdiamond",
+    "requirePermission": false,
+    "actions": [
+      {
+        "type": "conditional",
+        "conditions": [
+          {
+            "type": "has_item",
+            "value": "minecraft:diamond",
+            "item_amount": 5,
+            "negate": false
+          }
+        ],
+        "on_success": [
+          {
+            "type": "message",
+            "text": [
+              "&aSuccess! You had the required item."
+            ]
+          },
+          {
+            "type": "run_console",
+            "commands": [
+              "say {player} has at least 5 diamonds!"
+            ]
+          }
+        ],
+        "on_failure": [
+          {
+            "type": "message",
+            "text": [
+              "&cFailure! You need at least 5 diamonds to use this command."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cooldown_test",
+    "description": "A command with a 30-second cooldown.",
+    "permission": "paradigm.cooldown.test",
+    "requirePermission": false,
+    "actions": [
+      {
+        "type": "message",
+        "text": [
+          "&aYou successfully used the cooldown command!"
+        ]
+      }
+    ],
+    "cooldown_seconds": 30,
+    "cooldown_message": "&cThis command is on cooldown! Please wait &e{remaining_time} &cseconds."
+  },
+  {
+    "name": "altar_ritual",
+    "description": "A command that only works in a specific area.",
+    "permission": "paradigm.altar.use",
+    "requirePermission": false,
+    "actions": [
+      {
+        "type": "message",
+        "text": [
+          "&aYou have found the secret altar!"
+        ]
+      }
+    ],
+    "cooldown_seconds": 60,
+    "cooldown_message": "&cThe altar's magic needs time to recharge.",
+    "area_restriction": {
+      "world": "minecraft:overworld",
+      "corner1": [
+        0,
+        60,
+        0
+      ],
+      "corner2": [
+        10,
+        70,
+        10
+      ],
+      "restriction_message": "&cYou must be at the secret altar to use this command."
+    }
+  }
+]

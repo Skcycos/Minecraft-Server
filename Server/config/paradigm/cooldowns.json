@@ -1,0 +1,19 @@
+{
+  "cooldowns": {},
+  "commandCooldownSeconds": {
+    "home": 0,
+    "back": 0,
+    "spawn": 0,
+    "warp": 0,
+    "tpa": 0,
+    "tpahere": 0,
+    "tpaccept": 0
+  },
+  "commandWarmupSeconds": {
+    "home": 0,
+    "back": 0,
+    "spawn": 0,
+    "warp": 0,
+    "tpaccept": 0
+  }
+}
