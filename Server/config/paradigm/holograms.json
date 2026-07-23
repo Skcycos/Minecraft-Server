@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "defaultViewDistance": 48.0,
+  "defaultRefreshIntervalSeconds": 5,
+  "renderMode": "auto",
+  "holograms": {}
+}

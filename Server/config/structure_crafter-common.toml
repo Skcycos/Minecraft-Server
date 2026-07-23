@@ -1,0 +1,8 @@
+[General]
+	#Preview Unlock Distance
+	# Default: 300
+	# Range: > 1
+	preview_unlock_distance = 300
+
+["Hidden Features"]
+	material_list_scattered = true

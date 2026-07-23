@@ -1,0 +1,34 @@
+#Structure Upload Validation
+#Allowed Values: ALL, MODERATORS, GAMEMASTERS, ADMINS, OWNERS, NO_ONE
+server_upload_validation = "ADMINS"
+#Upload Wait Time
+# Default: 20
+# Range: > 1
+upload_wait_time = 20
+#Placement Distance Multiplier
+# Default: 3
+# Range: 1 ~ 10
+structure_place_distance = 3
+#NBT Placement Mode
+#Allowed Values: ALL, IGNORE_NBT, BLACKLIST
+structure_place_mode = "BLACKLIST"
+#NBT Ignore List
+structure_blacklist = ["#minecraft:signs"]
+
+["Structure Size Limit"]
+	#Structure Size Limit (X)
+	# Default: 30
+	# Range: > -1
+	max_size_x = 30
+	#Structure Size Limit (Y)
+	# Default: 60
+	# Range: > -1
+	max_size_y = 60
+	#Structure Size Limit (Z)
+	# Default: 30
+	# Range: > -1
+	max_size_z = 30
+	#Structure Volume Limit
+	# Default: 100000
+	# Range: > -1
+	max_volume = 100000

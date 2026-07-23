@@ -1,20 +1,20 @@
 {
   "enabled": {
     "description": "Enable Paradigm's native tablist formatting.",
-    "value": false
+    "value": true
   },
   "header": {
     "description": "Formatted lines displayed above the player list.",
     "value": [
-      "<gradient:aqua:light_purple><bold>Paradigm</bold></gradient>",
-      "<color:gray>{server_name} · {online_players}/{max_players}</color>"
+      "<gradient:aqua:gold><bold>✦ 食韵筑家III：烟火长歌 ✦</bold></gradient>",
+      "<color:gray>慢节奏美食建筑生活服 · 在线：{online_players}/{max_players}</color>"
     ]
   },
   "footer": {
     "description": "Formatted lines displayed below the player list.",
     "value": [
-      "<color:gray>Server: <color:white>{server_id}</color> · Network: <color:white>{network_id}</color></color>",
-      "<color:dark_gray>play.example.com</color>"
+      "<color:gray>美食 · 建筑 · 交易 · 聚落共建</color>",
+      "<color:dark_gray>主世界长期保留，愿你慢慢把日子过成家。</color>"
     ]
   },
   "playerFormat": {
