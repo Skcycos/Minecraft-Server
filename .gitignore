@@ -1,6 +1,7 @@
 # Generated and machine-local files
 .DS_Store
 Server/.DS_Store
+.~*.docx
 
 # NeoForge/runtime downloads and generated state
 Server/libraries/
