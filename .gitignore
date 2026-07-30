@@ -31,3 +31,7 @@ Server/config/paradigm/discovered_permissions.json
 Server/config/paradigm/dashboard-heartbeats.json
 Server/config/spark/tmp-client/*.tmp
 Server/config/bountiful/errors.log
+
+# Local development data and generated configuration backups
+Server/local/
+Server/config/*.bak
