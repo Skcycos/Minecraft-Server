@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "when": "finalize",
+    "hostile": true,
+    "healthmultiply": 2.5,
+    "result": "default"
+  },
+  {
+    "when": "finalize",
+    "healthmultiply": 6.5,
+    "result": "default"
+  }
+]

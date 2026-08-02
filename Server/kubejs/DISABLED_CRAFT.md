@@ -1,0 +1,48 @@
+# 禁用合成清单（怎么用）
+
+## 你只需要改一个文件
+
+编辑：
+
+`kubejs/startup_scripts/disabled_craft_registry.js`
+
+在 `DISABLED_CRAFT_ENTRIES` 数组里**增加或删除**条目即可。
+
+```js
+{ id: 'create:deployer', reason: '自动交互/摆放，可绕过操作限制' },
+```
+
+- `id`：物品 ID（必填）
+- `reason`：鼠标悬停时显示的原因（可选）
+
+## 会自动同步什么？
+
+| 脚本 | 作用 |
+|---|---|
+| `startup_scripts/disabled_craft_registry.js` | 唯一清单 → 写入 `global.SYDisabledCraft` |
+| `server_scripts/disabled_craft_recipes.js` | 服务端删除这些物品的合成输出配方 |
+| `client_scripts/disabled_craft_tooltips.js` | 客户端物品上显示「禁止合成」描述 |
+
+**不需要再手写两份列表**，也不需要额外“同步脚本”——改完重启 / `/reload` 即可。
+
+## 生效方式
+
+- **服务端配方**：重启服，或游戏内 `/reload`（KubeJS 服务端脚本重载）
+- **客户端描述**：客户端需有相同 `kubejs/`；改完后重启客户端，或 `F3+T` / KubeJS 客户端重载
+
+## 重要：客户端整合包
+
+本仓库是服务端目录。玩家要看到物品上的禁用说明，必须把下面目录同步进客户端整合包：
+
+```
+kubejs/startup_scripts/disabled_craft_registry.js
+kubejs/client_scripts/disabled_craft_tooltips.js
+```
+
+（整份 `kubejs/` 一起拷最省事。）
+
+JEI 在配方被删后也会搜不到合成，但 **tooltip 依赖客户端脚本**。
+
+## 旧文件
+
+`server_scripts/create_disabled_recipes.js` 已弃用，请勿再往里加内容。

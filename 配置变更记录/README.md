@@ -81,6 +81,36 @@ SnowyTree = true
 - `Server/config/ordertocook/`
 - `Server/config/trades/`
 
+### Scorched Guns：养老服数值与环境
+
+| 文件 | 当前设置 | 目的 | 回滚方式 |
+|---|---|---|---|
+| `Server/config/scguns-common.toml` | `globalDamageMultiplier=0.2`；`enemyBulletDamage=0.9`；炮塔基础伤害约 1/5；`griefing`/喷火点方块全关；火箭/手雷爆炸半径减半 | 枪械伤害约原先 1/5，禁止破坏建筑 | 倍率改回 `1.0`，敌方子弹 `4.5`，炮塔/爆炸半径/griefing 改回默认 |
+
+### InControl：生物生命倍率
+
+| 文件 | 当前设置 | 目的 | 回滚方式 |
+|---|---|---|---|
+| `Server/config/incontrol/spawn.json` | 敌对 `2.5`；其余非玩家（友好/中立/村民等）`6.5`；`when=finalize` | 养老服：敌对略耐打；动物与中立生物更耐误伤 | 改回 `[]` 或调整倍率数值 |
+
+### KubeJS / Create：P1 组装 + 列车禁用
+
+| 文件 | 当前设置 | 目的 |
+|---|---|---|
+| `Server/kubejs/startup_scripts/disabled_craft_registry.js` | 增补 cart_assembler、portable 接口、压路机、矿车耦合等；列车轨道/车站/信号/控制/转向架等整套禁用 | 减少移动结构刷资源；列车实体与加载对性能不友好 |
+
+### KubeJS：节气功能件 + 原版自动机/破坏物
+
+| 文件 | 当前设置 | 目的 |
+|---|---|---|
+| `Server/kubejs/startup_scripts/disabled_craft_registry.js` | 节气温室/湿度/检测/季节传感器等；原版合成器、侦测器、幽匿感测体、粘性活塞、TNT/末地水晶/重生锚 | 节气仅视觉；限制红石自动机与破坏 |
+
+### Lightman's Currency：养老经济收紧
+
+| 文件 | 当前设置 | 目的 | 回滚方式 |
+|---|---|---|---|
+| `Server/config/lightmanscurrency-common.txt` | 实体掉币关；箱子出币关；`canMint`/`canCraftCoinMint` 关；猪灵金币易货/游荡商人货币交易/银行家/收银员关；绿宝石替换交易仍为 false 未动 | 货币不靠打怪、箱子、铸币、村民扩展产出 | 将对应项改回 true |
+
 ## 当前需确认项
 
 | 文件 | 当前值 | 说明 |
