@@ -1,0 +1,597 @@
+{
+  "replace": true,
+  "content": {
+    "farmersdelight_fruit_salad": {
+      "type": "item",
+      "content": "farmersdelight:fruit_salad",
+      "amount": {
+        "min": 1,
+        "max": 4
+      },
+      "unitWorth": 85,
+      "weightMult": 0.4,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_bacon_and_eggs": {
+      "type": "item",
+      "content": "farmersdelight:bacon_and_eggs",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 80,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_hamburger": {
+      "type": "item",
+      "content": "farmersdelight:hamburger",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 68,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_mutton_wrap": {
+      "type": "item",
+      "content": "farmersdelight:mutton_wrap",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 65,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_pasta_with_mutton_chop": {
+      "type": "item",
+      "content": "farmersdelight:pasta_with_mutton_chop",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 63,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "kaleidoscope_cookery_cold_roasted_meat": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:cold_roasted_meat",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 63,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_steak_and_potatoes": {
+      "type": "item",
+      "content": "farmersdelight:steak_and_potatoes",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 61,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_bacon_sandwich": {
+      "type": "item",
+      "content": "farmersdelight:bacon_sandwich",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 57,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_onion_soup": {
+      "type": "item",
+      "content": "farmersdelight:onion_soup",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 57,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "farmersdelight_ratatouille": {
+      "type": "item",
+      "content": "farmersdelight:ratatouille",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 52,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_fish_flavored_shredded_pork": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:fish_flavored_shredded_pork",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 49,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_hui_noodle": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:hui_noodle",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 49,
+      "weightMult": 0.8
+    },
+    "farmersdelight_chicken_sandwich": {
+      "type": "item",
+      "content": "farmersdelight:chicken_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 48,
+      "weightMult": 0.8
+    },
+    "farmersdelight_fish_stew": {
+      "type": "item",
+      "content": "farmersdelight:fish_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 46,
+      "weightMult": 0.8
+    },
+    "farmersdelight_dumplings": {
+      "type": "item",
+      "content": "farmersdelight:dumplings",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 45,
+      "weightMult": 0.8
+    },
+    "farmersdelight_chicken_soup": {
+      "type": "item",
+      "content": "farmersdelight:chicken_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 44,
+      "weightMult": 0.8
+    },
+    "farmersdelight_glow_berry_custard": {
+      "type": "item",
+      "content": "farmersdelight:glow_berry_custard",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 43,
+      "weightMult": 0.8
+    },
+    "farmersdelight_mixed_salad": {
+      "type": "item",
+      "content": "farmersdelight:mixed_salad",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 43,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_beef_noodle": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:beef_noodle",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 40,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_stir_fried_pork_with_peppers": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:stir_fried_pork_with_peppers",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 40,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_udon_noodle": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:udon_noodle",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 40,
+      "weightMult": 0.8
+    },
+    "farmersdelight_fried_rice": {
+      "type": "item",
+      "content": "farmersdelight:fried_rice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 38,
+      "weightMult": 0.8
+    },
+    "farmersdelight_stuffed_potato": {
+      "type": "item",
+      "content": "farmersdelight:stuffed_potato",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 38,
+      "weightMult": 0.8
+    },
+    "farmersdelight_mushroom_rice": {
+      "type": "item",
+      "content": "farmersdelight:mushroom_rice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 37,
+      "weightMult": 0.8
+    },
+    "farmersdelight_vegetable_soup": {
+      "type": "item",
+      "content": "farmersdelight:vegetable_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 37,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_spicy_rabbit_head": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:spicy_rabbit_head",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 37,
+      "weightMult": 0.8
+    },
+    "farmersdelight_apple_cider": {
+      "type": "item",
+      "content": "farmersdelight:apple_cider",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 36,
+      "weightMult": 0.8
+    },
+    "farmersdelight_barbecue_stick": {
+      "type": "item",
+      "content": "farmersdelight:barbecue_stick",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "farmersdelight_beef_stew": {
+      "type": "item",
+      "content": "farmersdelight:beef_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_braised_pork_ribs": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:braised_pork_ribs",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_hot_dry_noodles": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:hot_dry_noodles",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 34,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_sweet_and_sour_pork": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:sweet_and_sour_pork",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 34,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_stuffed_tiger_skin_pepper": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:stuffed_tiger_skin_pepper",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 33,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_numbing_spicy_chicken": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:numbing_spicy_chicken",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 32,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_braised_beef": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:braised_beef",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 31,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_braised_beef_rice_bowl": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:braised_beef_rice_bowl",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 27
+    },
+    "kaleidoscope_cookery_fish_flavored_shredded_pork_rice_bowl": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:fish_flavored_shredded_pork_rice_bowl",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 27
+    },
+    "kaleidoscope_cookery_oil_splashed_fish": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:oil_splashed_fish",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 27
+    },
+    "kaleidoscope_cookery_stir_fried_pork_with_peppers_rice_bowl": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:stir_fried_pork_with_peppers_rice_bowl",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 27
+    },
+    "kaleidoscope_cookery_sweet_and_sour_pork_rice_bowl": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:sweet_and_sour_pork_rice_bowl",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 27
+    },
+    "farmersdelight_kelp_roll": {
+      "type": "item",
+      "content": "farmersdelight:kelp_roll",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 24
+    },
+    "kaleidoscope_cookery_four_joy_meatball_soup": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:four_joy_meatball_soup",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 23
+    },
+    "kaleidoscope_cookery_candied_potato": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:candied_potato",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 16
+    },
+    "kaleidoscope_cookery_laba_congee": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:laba_congee",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 14
+    },
+    "kaleidoscope_cookery_oolong": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:oolong",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 14
+    },
+    "kaleidoscope_cookery_brown_mushroom_pot_soup": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:brown_mushroom_pot_soup",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 10
+    },
+    "kaleidoscope_cookery_red_mushroom_pot_soup": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:red_mushroom_pot_soup",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 10
+    },
+    "kaleidoscope_cookery_stargazy_pie": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:stargazy_pie",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_scramble_egg_with_tomatoes_rice_bowl": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:scramble_egg_with_tomatoes_rice_bowl",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 32,
+      "weightMult": 0.8
+    },
+    "kaleidoscope_cookery_scramble_egg_with_tomatoes": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:scramble_egg_with_tomatoes",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 22
+    },
+    "kaleidoscope_cookery_zongzi": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:zongzi",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "kaleidoscope_cookery_zongzi_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:zongzi_plate",
+      "amount": {
+        "min": 1,
+        "max": 4
+      },
+      "unitWorth": 66,
+      "weightMult": 0.45,
+      "rarity": "UNCOMMON"
+    },
+    "kaleidoscope_cookery_sticky_rice_cake_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:sticky_rice_cake_plate",
+      "amount": {
+        "min": 1,
+        "max": 4
+      },
+      "unitWorth": 50,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "kaleidoscope_cookery_qingtuan_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:qingtuan_plate",
+      "amount": {
+        "min": 1,
+        "max": 6
+      },
+      "unitWorth": 45,
+      "weightMult": 0.55,
+      "rarity": "UNCOMMON"
+    },
+    "kaleidoscope_cookery_sticky_candy_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:sticky_candy_plate",
+      "amount": {
+        "min": 1,
+        "max": 4
+      },
+      "unitWorth": 61,
+      "weightMult": 0.45,
+      "rarity": "UNCOMMON"
+    },
+    "kaleidoscope_cookery_baozi": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:baozi",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 25,
+      "weightMult": 0.7
+    },
+    "kaleidoscope_cookery_baozi_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:baozi_plate",
+      "amount": {
+        "min": 1,
+        "max": 2
+      },
+      "unitWorth": 134,
+      "weightMult": 0.35,
+      "rarity": "RARE"
+    },
+    "kaleidoscope_cookery_shengjian_mantou_plate": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:shengjian_mantou_plate",
+      "amount": {
+        "min": 1,
+        "max": 2
+      },
+      "unitWorth": 134,
+      "weightMult": 0.35,
+      "rarity": "RARE"
+    },
+    "kaleidoscope_cookery_samsa": {
+      "type": "item",
+      "content": "kaleidoscope_cookery:samsa",
+      "amount": {
+        "min": 2,
+        "max": 12
+      },
+      "unitWorth": 25,
+      "weightMult": 0.7
+    }
+  }
+}

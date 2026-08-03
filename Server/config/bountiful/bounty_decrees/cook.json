@@ -1,11 +1,10 @@
 {
   "replace": true,
-  "linkedProfessions": [
-    "farmer"
-  ],
+  "linkedProfessions": [],
   "objectives": [
-    "farmer_objs",
-    "food_common_objs"
+    "food_common_objs",
+    "food_t2_objs",
+    "food_t3_objs"
   ],
   "rewards": [
     "_all_rews",
