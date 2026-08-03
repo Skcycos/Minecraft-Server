@@ -1,0 +1,305 @@
+﻿配方ID,产物,数量,机器,原料,附加参数
+acacia_cabinet,金合欢木橱柜(farmersdelight:acacia_cabinet),1,工作台,金合欢木台阶(minecraft:acacia_slab)×6 + 金合欢木活板门(minecraft:acacia_trapdoor)×2,
+apple_pie,苹果派(farmersdelight:apple_pie),1,工作台,小麦(#c:crops/wheat)×3 + 苹果(minecraft:apple)×3 + 糖(minecraft:sugar)×2 + 馅饼酥皮(farmersdelight:pie_crust),
+apple_pie_from_slices,苹果派(farmersdelight:apple_pie),1,工作台,苹果派切片(farmersdelight:apple_pie_slice)×4,
+bacon_and_eggs,培根蛋(farmersdelight:bacon_and_eggs),1,工作台,熟培根(#c:foods/cooked_bacon) + 熟培根(#c:foods/cooked_bacon) + 碗(minecraft:bowl) + 熟蛋(#c:foods/cooked_egg) + 熟蛋(#c:foods/cooked_egg),
+bacon_sandwich,培根三明治(farmersdelight:bacon_sandwich),1,工作台,面包(#c:foods/bread) + 熟培根(#c:foods/cooked_bacon) + 绿叶菜(#c:foods/leafy_green) + 番茄(#c:crops/tomato),
+bamboo_basket,竹篮(farmersdelight:bamboo_basket),1,工作台,竹子(minecraft:bamboo)×4 + 粗布(farmersdelight:canvas)×3,
+bamboo_cabinet,竹橱柜(farmersdelight:bamboo_cabinet),1,工作台,竹台阶(minecraft:bamboo_slab)×6 + 竹活板门(minecraft:bamboo_trapdoor)×2,
+barbecue_stick,烧烤串(farmersdelight:barbecue_stick),1,工作台,番茄(#c:crops/tomato) + 洋葱(#c:crops/onion) + 熟肉(#c:foods/cooked_meat) + 木棍(minecraft:stick),
+beef_patty,牛肉饼(farmersdelight:beef_patty),1,熔炉,牛肉馅(farmersdelight:minced_beef),200刻; 经验0.35
+beef_patty_from_campfire_cooking,牛肉饼(farmersdelight:beef_patty),1,营火,牛肉馅(farmersdelight:minced_beef),600刻; 经验0.35
+beef_patty_from_smoking,牛肉饼(farmersdelight:beef_patty),1,烟熏炉,牛肉馅(farmersdelight:minced_beef),100刻; 经验0.35
+beetroot_crate,箱装甜菜根(farmersdelight:beetroot_crate),1,工作台,甜菜根(minecraft:beetroot)×9,
+beetroot_from_crate,甜菜根(minecraft:beetroot),9,工作台,箱装甜菜根(farmersdelight:beetroot_crate),
+birch_cabinet,白桦木橱柜(farmersdelight:birch_cabinet),1,工作台,白桦木台阶(minecraft:birch_slab)×6 + 白桦木活板门(minecraft:birch_trapdoor)×2,
+black_canvas_sign,黑色粗布告示牌(farmersdelight:black_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 黑色染料(#c:dyes/black),
+black_hanging_canvas_sign,悬挂式黑色粗布告示牌(farmersdelight:black_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 黑色染料(#c:dyes/black),
+blue_canvas_sign,蓝色粗布告示牌(farmersdelight:blue_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 蓝色染料(#c:dyes/blue),
+blue_hanging_canvas_sign,悬挂式蓝色粗布告示牌(farmersdelight:blue_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 蓝色染料(#c:dyes/blue),
+book_from_canvas,书(minecraft:book),1,工作台,纸(minecraft:paper) + 纸(minecraft:paper) + 纸(minecraft:paper) + 粗布(farmersdelight:canvas),
+bread_from_smelting,面包(minecraft:bread),1,熔炉,面团(farmersdelight:wheat_dough),200刻; 经验0.35
+bread_from_smoking,面包(minecraft:bread),1,烟熏炉,面团(farmersdelight:wheat_dough),100刻; 经验0.35
+brown_canvas_sign,棕色粗布告示牌(farmersdelight:brown_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 棕色染料(#c:dyes/brown),
+brown_hanging_canvas_sign,悬挂式棕色粗布告示牌(farmersdelight:brown_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 棕色染料(#c:dyes/brown),
+cabbage,卷心菜(farmersdelight:cabbage),9,工作台,箱装卷心菜(farmersdelight:cabbage_crate),
+cabbage_crate,箱装卷心菜(farmersdelight:cabbage_crate),1,工作台,卷心菜(farmersdelight:cabbage)×9,
+cabbage_from_leaves,卷心菜(farmersdelight:cabbage),1,工作台,卷心菜叶(farmersdelight:cabbage_leaf) + 卷心菜叶(farmersdelight:cabbage_leaf),
+cake_from_milk_bottle,蛋糕(minecraft:cake),1,工作台,奶(#c:drinks/milk)×3 + 糖(minecraft:sugar)×2 + 蛋(#c:eggs) + 小麦(#c:crops/wheat)×3,
+cake_from_slices,蛋糕(minecraft:cake),1,工作台,蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice) + 蛋糕切片(farmersdelight:cake_slice),
+canvas,粗布(farmersdelight:canvas),1,工作台,草秆(farmersdelight:straw)×4,
+canvas_from_canvas_rug,粗布(farmersdelight:canvas),1,工作台,粗布毯(farmersdelight:canvas_rug) + 粗布毯(farmersdelight:canvas_rug),
+canvas_rug,粗布毯(farmersdelight:canvas_rug),2,工作台,粗布(farmersdelight:canvas),
+canvas_sign,粗布告示牌(farmersdelight:canvas_sign),3,工作台,木板(#minecraft:planks)×4 + 粗布(farmersdelight:canvas)×2 + 木棍(minecraft:stick),
+carrot_crate,箱装胡萝卜(farmersdelight:carrot_crate),1,工作台,胡萝卜(minecraft:carrot)×9,
+carrot_from_crate,胡萝卜(minecraft:carrot),9,工作台,箱装胡萝卜(farmersdelight:carrot_crate),
+cherry_cabinet,樱花木橱柜(farmersdelight:cherry_cabinet),1,工作台,樱花木台阶(minecraft:cherry_slab)×6 + 樱花木活板门(minecraft:cherry_trapdoor)×2,
+chicken_sandwich,鸡肉三明治(farmersdelight:chicken_sandwich),1,工作台,面包(#c:foods/bread) + 熟鸡肉(#c:foods/cooked_chicken) + 绿叶菜(#c:foods/leafy_green) + 胡萝卜(#c:crops/carrot),
+chocolate_pie,巧克力派(farmersdelight:chocolate_pie),1,工作台,可可豆(minecraft:cocoa_beans)×3 + 奶(#c:drinks/milk)×3 + 糖(minecraft:sugar)×2 + 馅饼酥皮(farmersdelight:pie_crust),
+chocolate_pie_from_slices,巧克力派(farmersdelight:chocolate_pie),1,工作台,巧克力派切片(farmersdelight:chocolate_pie_slice)×4,
+cod_roll,鳕鱼寿司(farmersdelight:cod_roll),2,工作台,生鳕鱼片(farmersdelight:cod_slice) + 生鳕鱼片(farmersdelight:cod_slice) + 米饭(farmersdelight:cooked_rice),
+cooked_bacon,熟培根(farmersdelight:cooked_bacon),1,熔炉,生培根(farmersdelight:bacon),200刻; 经验0.35
+cooked_bacon_from_campfire_cooking,熟培根(farmersdelight:cooked_bacon),1,营火,生培根(farmersdelight:bacon),600刻; 经验0.35
+cooked_bacon_from_smoking,熟培根(farmersdelight:cooked_bacon),1,烟熏炉,生培根(farmersdelight:bacon),100刻; 经验0.35
+cooked_chicken_cuts,熟鸡肉丁(farmersdelight:cooked_chicken_cuts),1,熔炉,生鸡肉丁(farmersdelight:chicken_cuts),200刻; 经验0.35
+cooked_chicken_cuts_from_campfire_cooking,熟鸡肉丁(farmersdelight:cooked_chicken_cuts),1,营火,生鸡肉丁(farmersdelight:chicken_cuts),600刻; 经验0.35
+cooked_chicken_cuts_from_smoking,熟鸡肉丁(farmersdelight:cooked_chicken_cuts),1,烟熏炉,生鸡肉丁(farmersdelight:chicken_cuts),100刻; 经验0.35
+cooked_cod_slice,熟鳕鱼片(farmersdelight:cooked_cod_slice),1,熔炉,生鳕鱼片(farmersdelight:cod_slice),200刻; 经验0.35
+cooked_cod_slice_from_campfire_cooking,熟鳕鱼片(farmersdelight:cooked_cod_slice),1,营火,生鳕鱼片(farmersdelight:cod_slice),600刻; 经验0.35
+cooked_cod_slice_from_smoking,熟鳕鱼片(farmersdelight:cooked_cod_slice),1,烟熏炉,生鳕鱼片(farmersdelight:cod_slice),100刻; 经验0.35
+cooked_mutton_chops,熟羊排(farmersdelight:cooked_mutton_chops),1,熔炉,生羊排(farmersdelight:mutton_chops),200刻; 经验0.35
+cooked_mutton_chops_from_campfire_cooking,熟羊排(farmersdelight:cooked_mutton_chops),1,营火,生羊排(farmersdelight:mutton_chops),600刻; 经验0.35
+cooked_mutton_chops_from_smoking,熟羊排(farmersdelight:cooked_mutton_chops),1,烟熏炉,生羊排(farmersdelight:mutton_chops),100刻; 经验0.35
+cooked_salmon_slice,熟鲑鱼片(farmersdelight:cooked_salmon_slice),1,熔炉,生鲑鱼片(farmersdelight:salmon_slice),200刻; 经验0.35
+cooked_salmon_slice_from_campfire_cooking,熟鲑鱼片(farmersdelight:cooked_salmon_slice),1,营火,生鲑鱼片(farmersdelight:salmon_slice),600刻; 经验0.35
+cooked_salmon_slice_from_smoking,熟鲑鱼片(farmersdelight:cooked_salmon_slice),1,烟熏炉,生鲑鱼片(farmersdelight:salmon_slice),100刻; 经验0.35
+cooking_pot,厨锅(farmersdelight:cooking_pot),1,工作台,红砖(minecraft:brick)×2 + 木锹(minecraft:wooden_shovel) + 铁锭(#c:ingots/iron)×5 + 水桶(#c:buckets/water),
+crimson_cabinet,绯红木橱柜(farmersdelight:crimson_cabinet),1,工作台,绯红木台阶(minecraft:crimson_slab)×6 + 绯红木活板门(minecraft:crimson_trapdoor)×2,
+cutting_board,砧板(farmersdelight:cutting_board),1,工作台,木棍(minecraft:stick)×2 + 木板(#minecraft:planks)×4,
+cyan_canvas_sign,青色粗布告示牌(farmersdelight:cyan_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 青色染料(#c:dyes/cyan),
+cyan_hanging_canvas_sign,悬挂式青色粗布告示牌(farmersdelight:cyan_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 青色染料(#c:dyes/cyan),
+dark_oak_cabinet,深色橡木橱柜(farmersdelight:dark_oak_cabinet),1,工作台,深色橡木台阶(minecraft:dark_oak_slab)×6 + 深色橡木活板门(minecraft:dark_oak_trapdoor)×2,
+diamond_knife,钻石刀(farmersdelight:diamond_knife),1,工作台,钻石(minecraft:diamond) + 木棍(minecraft:stick),
+egg_sandwich,夹蛋三明治(farmersdelight:egg_sandwich),1,工作台,面包(#c:foods/bread) + 熟蛋(#c:foods/cooked_egg) + 熟蛋(#c:foods/cooked_egg),
+flint_knife,燧石刀(farmersdelight:flint_knife),1,工作台,燧石(minecraft:flint) + 木棍(minecraft:stick),
+food_serving,{},1,厨锅(分装机制),,
+fried_egg,煎蛋(farmersdelight:fried_egg),1,熔炉,鸡蛋(minecraft:egg),200刻; 经验0.35
+fried_egg_from_campfire_cooking,煎蛋(farmersdelight:fried_egg),1,营火,鸡蛋(minecraft:egg),600刻; 经验0.35
+fried_egg_from_smoking,煎蛋(farmersdelight:fried_egg),1,烟熏炉,鸡蛋(minecraft:egg),100刻; 经验0.35
+fruit_salad,水果沙拉(farmersdelight:fruit_salad),1,工作台,苹果(minecraft:apple) + 西瓜片(minecraft:melon_slice) + 西瓜片(minecraft:melon_slice) + 浆果(#c:foods/berry) + 浆果(#c:foods/berry) + 南瓜片(farmersdelight:pumpkin_slice) + 碗(minecraft:bowl),
+full_tatami_mat,长榻榻米垫(farmersdelight:full_tatami_mat),2,工作台,榻榻米方块(farmersdelight:tatami),
+full_tatami_mat_from_halves,长榻榻米垫(farmersdelight:full_tatami_mat),1,工作台,短榻榻米垫(farmersdelight:half_tatami_mat) + 短榻榻米垫(farmersdelight:half_tatami_mat),
+gleaming_salad_block,闪亮沙拉(farmersdelight:gleaming_salad_block),1,工作台,发光浆果(minecraft:glow_berries) + 蜜瓶(minecraft:honey_bottle) + 发光浆果(minecraft:glow_berries) + 番茄(#c:crops/tomato) + 金胡萝卜(minecraft:golden_carrot) + 甜菜根(#c:crops/beetroot) + 卷心菜(farmersdelight:cabbage) + 碗(minecraft:bowl) + 卷心菜(farmersdelight:cabbage),
+gold_nugget_from_blasting_knife,金粒(minecraft:gold_nugget),1,高炉,金刀(farmersdelight:golden_knife),100刻; 经验0.1
+gold_nugget_from_smelting_knife,金粒(minecraft:gold_nugget),1,熔炉,金刀(farmersdelight:golden_knife),200刻; 经验0.1
+golden_knife,金刀(farmersdelight:golden_knife),1,工作台,金锭(minecraft:gold_ingot) + 木棍(minecraft:stick),
+gray_canvas_sign,灰色粗布告示牌(farmersdelight:gray_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 灰色染料(#c:dyes/gray),
+gray_hanging_canvas_sign,悬挂式灰色粗布告示牌(farmersdelight:gray_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 灰色染料(#c:dyes/gray),
+green_canvas_sign,绿色粗布告示牌(farmersdelight:green_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 绿色染料(#c:dyes/green),
+green_hanging_canvas_sign,悬挂式绿色粗布告示牌(farmersdelight:green_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 绿色染料(#c:dyes/green),
+grilled_salmon,香烤鲑鱼(farmersdelight:grilled_salmon),1,工作台,熟鲑鱼(#c:foods/cooked_salmon) + 甜浆果(minecraft:sweet_berries) + 碗(minecraft:bowl) + 卷心菜(#c:crops/cabbage) + 洋葱(#c:crops/onion),
+half_tatami_mat,短榻榻米垫(farmersdelight:half_tatami_mat),2,工作台,长榻榻米垫(farmersdelight:full_tatami_mat),
+hamburger,汉堡包(farmersdelight:hamburger),1,工作台,面包(#c:foods/bread) + 牛肉饼(farmersdelight:beef_patty) + 绿叶菜(#c:foods/leafy_green) + 番茄(#c:crops/tomato) + 洋葱(#c:crops/onion),
+hanging_canvas_sign,悬挂式粗布告示牌(farmersdelight:hanging_canvas_sign),6,工作台,锁链(minecraft:chain)×2 + 原木(#minecraft:logs)×4 + 粗布(farmersdelight:canvas)×2,
+honey_cookie,蜂蜜曲奇(farmersdelight:honey_cookie),8,工作台,蜜瓶(minecraft:honey_bottle) + 小麦(#c:crops/wheat) + 小麦(#c:crops/wheat),
+honey_glazed_ham_block,蜜汁火腿(farmersdelight:honey_glazed_ham_block),1,工作台,甜浆果(minecraft:sweet_berries) + 蜜瓶(minecraft:honey_bottle) + 甜浆果(minecraft:sweet_berries) + 甜浆果(minecraft:sweet_berries) + 烟熏火腿(farmersdelight:smoked_ham) + 甜浆果(minecraft:sweet_berries) + 米饭(farmersdelight:cooked_rice) + 碗(minecraft:bowl) + 米饭(farmersdelight:cooked_rice),
+horse_feed,马食(farmersdelight:horse_feed),1,工作台,任选其一:[干草块(minecraft:hay_block) | 稻穗捆(farmersdelight:rice_bale)] + 苹果(minecraft:apple) + 苹果(minecraft:apple) + 金胡萝卜(minecraft:golden_carrot),
+iron_knife,铁刀(farmersdelight:iron_knife),1,工作台,铁锭(#c:ingots/iron) + 木棍(minecraft:stick),
+iron_nugget_from_blasting_knife,铁粒(minecraft:iron_nugget),1,高炉,铁刀(farmersdelight:iron_knife),100刻; 经验0.1
+iron_nugget_from_smelting_knife,铁粒(minecraft:iron_nugget),1,熔炉,铁刀(farmersdelight:iron_knife),200刻; 经验0.1
+jungle_cabinet,丛林木橱柜(farmersdelight:jungle_cabinet),1,工作台,丛林木台阶(minecraft:jungle_slab)×6 + 丛林木活板门(minecraft:jungle_trapdoor)×2,
+kelp_roll,海带寿司卷(farmersdelight:kelp_roll),1,工作台,米饭(farmersdelight:cooked_rice)×2 + 蔬菜(#c:foods/vegetable) + 干海带(minecraft:dried_kelp)×3,
+lead_from_straw,拴绳(minecraft:lead),1,工作台,草秆(farmersdelight:straw)×5,
+light_blue_canvas_sign,淡蓝色粗布告示牌(farmersdelight:light_blue_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 淡蓝色染料(#c:dyes/light_blue),
+light_blue_hanging_canvas_sign,悬挂式淡蓝色粗布告示牌(farmersdelight:light_blue_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 淡蓝色染料(#c:dyes/light_blue),
+light_gray_canvas_sign,淡灰色粗布告示牌(farmersdelight:light_gray_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 淡灰色染料(#c:dyes/light_gray),
+light_gray_hanging_canvas_sign,悬挂式淡灰色粗布告示牌(farmersdelight:light_gray_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 淡灰色染料(#c:dyes/light_gray),
+lime_canvas_sign,黄绿色粗布告示牌(farmersdelight:lime_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 黄绿色染料(#c:dyes/lime),
+lime_hanging_canvas_sign,悬挂式黄绿色粗布告示牌(farmersdelight:lime_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 黄绿色染料(#c:dyes/lime),
+magenta_canvas_sign,品红色粗布告示牌(farmersdelight:magenta_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 品红色染料(#c:dyes/magenta),
+magenta_hanging_canvas_sign,悬挂式品红色粗布告示牌(farmersdelight:magenta_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 品红色染料(#c:dyes/magenta),
+mangrove_cabinet,红树木橱柜(farmersdelight:mangrove_cabinet),1,工作台,红树木台阶(minecraft:mangrove_slab)×6 + 红树木活板门(minecraft:mangrove_trapdoor)×2,
+melon_juice,西瓜汁(farmersdelight:melon_juice),1,工作台,西瓜片(minecraft:melon_slice) + 西瓜片(minecraft:melon_slice) + 糖(minecraft:sugar) + 西瓜片(minecraft:melon_slice) + 西瓜片(minecraft:melon_slice) + 玻璃瓶(minecraft:glass_bottle),
+melon_popsicle,西瓜冰棍(farmersdelight:melon_popsicle),1,工作台,西瓜片(minecraft:melon_slice)×4 + 冰(minecraft:ice)×2 + 木棍(minecraft:stick),
+milk_bottle,奶瓶(farmersdelight:milk_bottle),4,工作台,奶桶(minecraft:milk_bucket) + 玻璃瓶(minecraft:glass_bottle) + 玻璃瓶(minecraft:glass_bottle) + 玻璃瓶(minecraft:glass_bottle) + 玻璃瓶(minecraft:glass_bottle),
+milk_bucket_from_bottles,奶桶(minecraft:milk_bucket),1,工作台,桶(minecraft:bucket) + 奶瓶(farmersdelight:milk_bottle) + 奶瓶(farmersdelight:milk_bottle) + 奶瓶(farmersdelight:milk_bottle) + 奶瓶(farmersdelight:milk_bottle),
+mixed_salad,混合沙拉(farmersdelight:mixed_salad),1,工作台,绿叶菜(#c:foods/leafy_green) + 番茄(#c:crops/tomato) + 甜菜根(#c:crops/beetroot) + 碗(minecraft:bowl),
+mutton_wrap,羊肉卷饼(farmersdelight:mutton_wrap),1,工作台,面包(#c:foods/bread) + 熟羊肉(#c:foods/cooked_mutton) + 绿叶菜(#c:foods/leafy_green) + 洋葱(#c:crops/onion),
+nether_salad,下界沙拉(farmersdelight:nether_salad),1,工作台,绯红菌(minecraft:crimson_fungus) + 诡异菌(minecraft:warped_fungus) + 碗(minecraft:bowl),
+netherite_knife_smithing,下界合金刀(farmersdelight:netherite_knife),1,锻造台,下界合金升级锻造模板(minecraft:netherite_upgrade_smithing_template) + 钻石刀(farmersdelight:diamond_knife) + 下界合金锭(minecraft:netherite_ingot),
+oak_cabinet,橡木橱柜(farmersdelight:oak_cabinet),1,工作台,橡木台阶(minecraft:oak_slab)×6 + 橡木活板门(minecraft:oak_trapdoor)×2,
+onion,洋葱(farmersdelight:onion),9,工作台,箱装洋葱(farmersdelight:onion_crate),
+onion_crate,箱装洋葱(farmersdelight:onion_crate),1,工作台,洋葱(farmersdelight:onion)×9,
+orange_canvas_sign,橙色粗布告示牌(farmersdelight:orange_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 橙色染料(#c:dyes/orange),
+orange_hanging_canvas_sign,悬挂式橙色粗布告示牌(farmersdelight:orange_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 橙色染料(#c:dyes/orange),
+organic_compost_from_rotten_flesh,有机堆肥(farmersdelight:organic_compost),1,工作台,泥土(minecraft:dirt) + 腐肉(minecraft:rotten_flesh) + 腐肉(minecraft:rotten_flesh) + 草秆(farmersdelight:straw) + 草秆(farmersdelight:straw) + 骨粉(minecraft:bone_meal) + 骨粉(minecraft:bone_meal) + 骨粉(minecraft:bone_meal) + 骨粉(minecraft:bone_meal),
+organic_compost_from_tree_bark,有机堆肥(farmersdelight:organic_compost),1,工作台,泥土(minecraft:dirt) + 草秆(farmersdelight:straw) + 草秆(farmersdelight:straw) + 骨粉(minecraft:bone_meal) + 骨粉(minecraft:bone_meal) + 树皮(farmersdelight:tree_bark) + 树皮(farmersdelight:tree_bark) + 树皮(farmersdelight:tree_bark) + 树皮(farmersdelight:tree_bark),
+packed_mud_from_straw,泥坯(minecraft:packed_mud),2,工作台,草秆(farmersdelight:straw) + 泥巴(minecraft:mud) + 泥巴(minecraft:mud),
+painting_from_canvas,画(minecraft:painting),1,工作台,木棍(minecraft:stick)×8 + 粗布(farmersdelight:canvas),
+paper_from_tree_bark,纸(minecraft:paper),1,工作台,树皮(farmersdelight:tree_bark) + 树皮(farmersdelight:tree_bark) + 树皮(farmersdelight:tree_bark),
+pie_crust,馅饼酥皮(farmersdelight:pie_crust),1,工作台,小麦(#c:crops/wheat)×3 + 奶(#c:drinks/milk),
+pink_canvas_sign,粉红色粗布告示牌(farmersdelight:pink_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 粉红色染料(#c:dyes/pink),
+pink_hanging_canvas_sign,悬挂式粉红色粗布告示牌(farmersdelight:pink_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 粉红色染料(#c:dyes/pink),
+potato_crate,箱装马铃薯(farmersdelight:potato_crate),1,工作台,马铃薯(minecraft:potato)×9,
+potato_from_crate,马铃薯(minecraft:potato),9,工作台,箱装马铃薯(farmersdelight:potato_crate),
+pumpkin_from_slices,南瓜(minecraft:pumpkin),1,工作台,南瓜片(farmersdelight:pumpkin_slice)×4,
+pumpkin_pie_from_pie_crust,南瓜派(minecraft:pumpkin_pie),2,工作台,南瓜片(farmersdelight:pumpkin_slice)×4 + 蛋(#c:eggs) + 糖(minecraft:sugar) + 馅饼酥皮(farmersdelight:pie_crust),
+pumpkin_pie_from_slices,南瓜派(minecraft:pumpkin_pie),1,工作台,南瓜派切片(farmersdelight:pumpkin_pie_slice)×4,
+pumpkin_seeds_from_slice,南瓜种子(minecraft:pumpkin_seeds),1,工作台,南瓜片(farmersdelight:pumpkin_slice),
+purple_canvas_sign,紫色粗布告示牌(farmersdelight:purple_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 紫色染料(#c:dyes/purple),
+purple_hanging_canvas_sign,悬挂式紫色粗布告示牌(farmersdelight:purple_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 紫色染料(#c:dyes/purple),
+red_canvas_sign,红色粗布告示牌(farmersdelight:red_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 红色染料(#c:dyes/red),
+red_hanging_canvas_sign,悬挂式红色粗布告示牌(farmersdelight:red_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 红色染料(#c:dyes/red),
+rice,稻米(farmersdelight:rice),1,工作台,稻米穗(farmersdelight:rice_panicle),
+rice_bag,袋装稻米(farmersdelight:rice_bag),1,工作台,稻米(farmersdelight:rice)×9,
+rice_bale,稻穗捆(farmersdelight:rice_bale),1,工作台,稻米穗(farmersdelight:rice_panicle)×9,
+rice_from_bag,稻米(farmersdelight:rice),9,工作台,袋装稻米(farmersdelight:rice_bag),
+rice_panicle,稻米穗(farmersdelight:rice_panicle),9,工作台,稻穗捆(farmersdelight:rice_bale),
+rice_roll_medley_block,寿司拼盘(farmersdelight:rice_roll_medley_block),1,工作台,海带寿司(farmersdelight:kelp_roll_slice) + 海带寿司(farmersdelight:kelp_roll_slice) + 海带寿司(farmersdelight:kelp_roll_slice) + 鲑鱼寿司(farmersdelight:salmon_roll) + 鲑鱼寿司(farmersdelight:salmon_roll) + 鲑鱼寿司(farmersdelight:salmon_roll) + 鳕鱼寿司(farmersdelight:cod_roll) + 碗(minecraft:bowl) + 鳕鱼寿司(farmersdelight:cod_roll),
+roast_chicken_block,烤鸡(farmersdelight:roast_chicken_block),1,工作台,洋葱(#c:crops/onion) + 蛋(#c:eggs) + 面包(#c:foods/bread) + 胡萝卜(#c:crops/carrot) + 熟鸡肉(minecraft:cooked_chicken) + 烤马铃薯(minecraft:baked_potato) + 胡萝卜(#c:crops/carrot) + 碗(minecraft:bowl) + 烤马铃薯(minecraft:baked_potato),
+roasted_mutton_chops,烤羊排(farmersdelight:roasted_mutton_chops),1,工作台,熟羊排(farmersdelight:cooked_mutton_chops) + 甜菜根(#c:crops/beetroot) + 碗(minecraft:bowl) + 米饭(farmersdelight:cooked_rice) + 番茄(#c:crops/tomato),
+rope,绳子(farmersdelight:rope),4,工作台,草秆(farmersdelight:straw)×2,
+rope_fence,绳栅栏(farmersdelight:rope_fence),3,工作台,绳子(farmersdelight:rope)×4 + 木棍(minecraft:stick)×2,
+rope_fence_gate,绳栅栏门(farmersdelight:rope_fence_gate),1,工作台,木棍(minecraft:stick)×4 + 绳子(farmersdelight:rope)×2,
+rope_from_safety_net,绳子(farmersdelight:rope),4,工作台,安全网(farmersdelight:safety_net),
+safety_net,安全网(farmersdelight:safety_net),1,工作台,绳子(farmersdelight:rope)×4,
+salmon_roll,鲑鱼寿司(farmersdelight:salmon_roll),2,工作台,生鲑鱼片(farmersdelight:salmon_slice) + 生鲑鱼片(farmersdelight:salmon_slice) + 米饭(farmersdelight:cooked_rice),
+scaffolding_from_canvas,脚手架(minecraft:scaffolding),6,工作台,竹子(minecraft:bamboo)×6 + 粗布(farmersdelight:canvas),
+shepherds_pie_block,牧羊人派(farmersdelight:shepherds_pie_block),1,工作台,烤马铃薯(minecraft:baked_potato) + 奶(#c:drinks/milk) + 烤马铃薯(minecraft:baked_potato) + 熟羊肉(#c:foods/cooked_mutton) + 熟羊肉(#c:foods/cooked_mutton) + 熟羊肉(#c:foods/cooked_mutton) + 洋葱(#c:crops/onion) + 碗(minecraft:bowl) + 洋葱(#c:crops/onion),
+skillet,煎锅(farmersdelight:skillet),1,工作台,铁锭(#c:ingots/iron)×4 + 红砖(minecraft:brick),
+smoked_ham,烟熏火腿(farmersdelight:smoked_ham),1,烟熏炉,火腿(farmersdelight:ham),200刻; 经验0.35
+spruce_cabinet,云杉木橱柜(farmersdelight:spruce_cabinet),1,工作台,云杉木台阶(minecraft:spruce_slab)×6 + 云杉木活板门(minecraft:spruce_trapdoor)×2,
+steak_and_potatoes,牛排配马铃薯(farmersdelight:steak_and_potatoes),1,工作台,烤马铃薯(minecraft:baked_potato) + 牛排(minecraft:cooked_beef) + 碗(minecraft:bowl) + 洋葱(#c:crops/onion) + 米饭(farmersdelight:cooked_rice),
+stove,炉灶(farmersdelight:stove),1,工作台,铁锭(#c:ingots/iron)×3 + 红砖块(minecraft:bricks)×4 + 营火(minecraft:campfire),
+straw,草秆(farmersdelight:straw),9,工作台,草捆(farmersdelight:straw_bale),
+straw_bale,草捆(farmersdelight:straw_bale),1,工作台,草秆(farmersdelight:straw)×9,
+stuffed_potato,填馅马铃薯(farmersdelight:stuffed_potato),1,工作台,烤马铃薯(minecraft:baked_potato) + 熟牛肉(#c:foods/cooked_beef) + 奶(#c:drinks/milk),
+sweet_berry_cheesecake,甜浆果芝士派(farmersdelight:sweet_berry_cheesecake),1,工作台,甜浆果(minecraft:sweet_berries)×6 + 奶(#c:drinks/milk)×2 + 馅饼酥皮(farmersdelight:pie_crust),
+sweet_berry_cheesecake_from_slices,甜浆果芝士派(farmersdelight:sweet_berry_cheesecake),1,工作台,甜浆果芝士派切片(farmersdelight:sweet_berry_cheesecake_slice)×4,
+sweet_berry_cookie,甜浆果曲奇(farmersdelight:sweet_berry_cookie),8,工作台,甜浆果(minecraft:sweet_berries) + 小麦(#c:crops/wheat) + 小麦(#c:crops/wheat),
+tatami,榻榻米方块(farmersdelight:tatami),2,工作台,粗布(farmersdelight:canvas)×2 + 草秆(farmersdelight:straw)×2,
+tatami_block_from_full,榻榻米方块(farmersdelight:tatami),1,工作台,长榻榻米垫(farmersdelight:full_tatami_mat) + 长榻榻米垫(farmersdelight:full_tatami_mat),
+tomato,番茄(farmersdelight:tomato),9,工作台,箱装番茄(farmersdelight:tomato_crate),
+tomato_crate,箱装番茄(farmersdelight:tomato_crate),1,工作台,番茄(farmersdelight:tomato)×9,
+tomato_seeds,番茄种子(farmersdelight:tomato_seeds),1,工作台,任选其一:[番茄(farmersdelight:tomato) | 烂番茄(farmersdelight:rotten_tomato)],
+warped_cabinet,诡异木橱柜(farmersdelight:warped_cabinet),1,工作台,诡异木台阶(minecraft:warped_slab)×6 + 诡异木活板门(minecraft:warped_trapdoor)×2,
+wheat_dough_from_egg,面团(farmersdelight:wheat_dough),3,工作台,小麦(#c:crops/wheat) + 小麦(#c:crops/wheat) + 小麦(#c:crops/wheat) + 蛋(#c:eggs),
+wheat_dough_from_water,{},1,面团机制,,
+white_canvas_sign,白色粗布告示牌(farmersdelight:white_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 白色染料(#c:dyes/white),
+white_hanging_canvas_sign,悬挂式白色粗布告示牌(farmersdelight:white_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 白色染料(#c:dyes/white),
+wooden_basket,木篮(farmersdelight:wooden_basket),1,工作台,木棍(minecraft:stick)×4 + 粗布(farmersdelight:canvas)×3,
+yellow_canvas_sign,黄色粗布告示牌(farmersdelight:yellow_canvas_sign),1,工作台,帆布告示牌(#farmersdelight:canvas_signs) + 黄色染料(#c:dyes/yellow),
+yellow_hanging_canvas_sign,悬挂式黄色粗布告示牌(farmersdelight:yellow_hanging_canvas_sign),1,工作台,悬挂帆布告示牌(#farmersdelight:hanging_canvas_signs) + 黄色染料(#c:dyes/yellow),
+apple_cider,苹果酒(farmersdelight:apple_cider),1,厨锅(置于炉灶上),苹果(minecraft:apple) + 苹果(minecraft:apple) + 糖(minecraft:sugar),200刻; 经验1.0
+baked_cod_stew,烘焙鳕鱼炖(farmersdelight:baked_cod_stew),1,厨锅(置于炉灶上),生鳕鱼(#c:foods/raw_cod) + 马铃薯(#c:crops/potato) + 蛋(#c:eggs) + 番茄(#c:crops/tomato),200刻; 经验1.0
+beef_stew,牛肉炖(farmersdelight:beef_stew),1,厨锅(置于炉灶上),生牛肉(#c:foods/raw_beef) + 胡萝卜(#c:crops/carrot) + 马铃薯(#c:crops/potato),200刻; 经验1.0
+beetroot_soup,甜菜汤(minecraft:beetroot_soup),1,厨锅(置于炉灶上),甜菜根(#c:crops/beetroot) + 甜菜根(#c:crops/beetroot) + 甜菜根(#c:crops/beetroot),200刻; 经验1.0
+bone_broth,大骨汤(farmersdelight:bone_broth),1,厨锅(置于炉灶上),骨头(#c:bones) + 任选其一:[发光浆果(minecraft:glow_berries) | 蘑菇(#c:mushrooms) | 垂根(minecraft:hanging_roots) | 发光地衣(minecraft:glow_lichen)],200刻; 经验0.35
+cabbage_rolls,卷心菜卷(farmersdelight:cabbage_rolls),1,厨锅(置于炉灶上),卷心菜(#c:crops/cabbage) + 任选其一:[生肉(#c:foods/raw_meat) | 安全生鱼(不含河豚)(#c:foods/safe_raw_fish) | 蔬菜(#c:foods/vegetable) | 蘑菇(#c:mushrooms)],100刻; 经验0.35
+chicken_soup,鸡肉汤(farmersdelight:chicken_soup),1,厨锅(置于炉灶上),生鸡肉(#c:foods/raw_chicken) + 胡萝卜(#c:crops/carrot) + 绿叶菜(#c:foods/leafy_green) + 蔬菜(#c:foods/vegetable)(除西瓜片(minecraft:melon_slice)),200刻; 经验1.0
+cooked_rice,米饭(farmersdelight:cooked_rice),1,厨锅(置于炉灶上),稻米(#c:crops/rice),100刻; 经验0.35
+dog_food,狗粮(farmersdelight:dog_food),1,厨锅(置于炉灶上),腐肉(minecraft:rotten_flesh) + 骨粉(minecraft:bone_meal) + 生肉(#c:foods/raw_meat) + 稻米(#c:crops/rice),200刻; 经验1.0
+dumplings,饺子(farmersdelight:dumplings),2,厨锅(置于炉灶上),面团(#c:foods/dough) + 卷心菜(#c:crops/cabbage) + 洋葱(#c:crops/onion) + 任选其一:[生鸡肉(#c:foods/raw_chicken) | 生猪排(#c:foods/raw_pork) | 生牛肉(#c:foods/raw_beef) | 棕色蘑菇(minecraft:brown_mushroom)],200刻; 经验1.0
+fish_stew,鱼肉炖(farmersdelight:fish_stew),1,厨锅(置于炉灶上),安全生鱼(不含河豚)(#c:foods/safe_raw_fish) + 番茄酱(farmersdelight:tomato_sauce) + 洋葱(#c:crops/onion),200刻; 经验1.0
+fried_rice,炒饭(farmersdelight:fried_rice),1,厨锅(置于炉灶上),稻米(#c:crops/rice) + 蛋(#c:eggs) + 胡萝卜(#c:crops/carrot) + 洋葱(#c:crops/onion),200刻; 经验1.0
+glow_berry_custard,发光浆果蛋奶沙司(farmersdelight:glow_berry_custard),1,厨锅(置于炉灶上),发光浆果(minecraft:glow_berries) + 奶(#c:drinks/milk) + 蛋(#c:eggs) + 糖(minecraft:sugar),200刻; 经验1.0
+hot_cocoa,热可可(farmersdelight:hot_cocoa),1,厨锅(置于炉灶上),奶(#c:drinks/milk) + 糖(minecraft:sugar) + 可可豆(minecraft:cocoa_beans) + 可可豆(minecraft:cocoa_beans),200刻; 经验1.0
+mushroom_rice,蘑菇饭(farmersdelight:mushroom_rice),1,厨锅(置于炉灶上),棕色蘑菇(minecraft:brown_mushroom) + 红色蘑菇(minecraft:red_mushroom) + 稻米(#c:crops/rice) + 任选其一:[胡萝卜(minecraft:carrot) | 马铃薯(minecraft:potato)],200刻; 经验1.0
+mushroom_stew,蘑菇煲(minecraft:mushroom_stew),1,厨锅(置于炉灶上),棕色蘑菇(minecraft:brown_mushroom) + 红色蘑菇(minecraft:red_mushroom),200刻; 经验1.0
+noodle_soup,面条汤(farmersdelight:noodle_soup),1,厨锅(置于炉灶上),意面(#c:foods/pasta) + 蛋(#c:eggs) + 干海带(minecraft:dried_kelp) + 生猪排(#c:foods/raw_pork),200刻; 经验1.0
+onion_soup,洋葱汤(farmersdelight:onion_soup),1,厨锅(置于炉灶上),洋葱(#c:crops/onion) + 洋葱(#c:crops/onion) + 面包(#c:foods/bread) + 奶(#c:drinks/milk),200刻; 经验1.0
+pasta_with_meatballs,肉丸意面(farmersdelight:pasta_with_meatballs),1,厨锅(置于炉灶上),牛肉馅(farmersdelight:minced_beef) + 意面(#c:foods/pasta) + 番茄酱(farmersdelight:tomato_sauce),200刻; 经验1.0
+pasta_with_mutton_chop,羊排意面(farmersdelight:pasta_with_mutton_chop),1,厨锅(置于炉灶上),生羊肉(#c:foods/raw_mutton) + 意面(#c:foods/pasta) + 番茄酱(farmersdelight:tomato_sauce),200刻; 经验1.0
+pumpkin_soup,南瓜汤(farmersdelight:pumpkin_soup),1,厨锅(置于炉灶上),南瓜片(farmersdelight:pumpkin_slice) + 绿叶菜(#c:foods/leafy_green) + 生猪排(#c:foods/raw_pork) + 奶(#c:drinks/milk),200刻; 经验1.0
+rabbit_stew,兔肉煲(minecraft:rabbit_stew),1,厨锅(置于炉灶上),马铃薯(#c:crops/potato) + 生兔肉(minecraft:rabbit) + 胡萝卜(#c:crops/carrot) + 任选其一:[棕色蘑菇(minecraft:brown_mushroom) | 红色蘑菇(minecraft:red_mushroom)],200刻; 经验1.0
+ratatouille,蔬菜杂烩(farmersdelight:ratatouille),1,厨锅(置于炉灶上),番茄(#c:crops/tomato) + 洋葱(#c:crops/onion) + 甜菜根(#c:crops/beetroot) + 蔬菜(#c:foods/vegetable)(除西瓜片(minecraft:melon_slice)),200刻; 经验1.0
+squid_ink_pasta,鱿鱼墨面(farmersdelight:squid_ink_pasta),1,厨锅(置于炉灶上),安全生鱼(不含河豚)(#c:foods/safe_raw_fish) + 意面(#c:foods/pasta) + 番茄(#c:crops/tomato) + 墨囊(minecraft:ink_sac),200刻; 经验1.0
+stuffed_pumpkin_block,填馅南瓜(farmersdelight:stuffed_pumpkin_block),1,厨锅(置于炉灶上),稻米(#c:crops/rice) + 洋葱(#c:crops/onion) + 棕色蘑菇(minecraft:brown_mushroom) + 马铃薯(#c:crops/potato) + 浆果(#c:foods/berry) + 蔬菜(#c:foods/vegetable)(除西瓜片(minecraft:melon_slice)),400刻; 经验2.0
+tomato_sauce,番茄酱(farmersdelight:tomato_sauce),1,厨锅(置于炉灶上),番茄(#c:crops/tomato) + 番茄(#c:crops/tomato),100刻; 经验0.35
+vegetable_noodles,蔬菜面(farmersdelight:vegetable_noodles),1,厨锅(置于炉灶上),胡萝卜(#c:crops/carrot) + 蘑菇(#c:mushrooms) + 意面(#c:foods/pasta) + 绿叶菜(#c:foods/leafy_green) + 蔬菜(#c:foods/vegetable)(除西瓜片(minecraft:melon_slice)),200刻; 经验1.0
+vegetable_soup,蔬菜汤(farmersdelight:vegetable_soup),1,厨锅(置于炉灶上),胡萝卜(#c:crops/carrot) + 马铃薯(#c:crops/potato) + 甜菜根(#c:crops/beetroot) + 绿叶菜(#c:foods/leafy_green),200刻; 经验1.0
+acacia_log,去皮金合欢木原木(minecraft:stripped_acacia_log) + 树皮(farmersdelight:tree_bark),1,砧板,金合欢原木(minecraft:acacia_log),工具:斧(剥皮)或斧(#minecraft:axes)
+acacia_wood,去皮金合欢木(minecraft:stripped_acacia_wood) + 树皮(farmersdelight:tree_bark),1,砧板,金合欢木(minecraft:acacia_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+allium,品红色染料(minecraft:magenta_dye),2,砧板,绒球葱(minecraft:allium),工具:knife_dig或刀(#c:tools/knife)
+apple_pie,苹果派切片(farmersdelight:apple_pie_slice),4,砧板,苹果派(farmersdelight:apple_pie),工具:knife_dig或刀(#c:tools/knife)
+azure_bluet,淡灰色染料(minecraft:light_gray_dye),2,砧板,蓝花美耳草(minecraft:azure_bluet),工具:knife_dig或刀(#c:tools/knife)
+bamboo_basket,粗布(farmersdelight:canvas) + 竹子(minecraft:bamboo),1,砧板,竹篮(farmersdelight:bamboo_basket),工具:斧或斧(#minecraft:axes)
+bamboo_block,去皮竹块(minecraft:stripped_bamboo_block) + 草秆(farmersdelight:straw),1,砧板,竹块(minecraft:bamboo_block),工具:斧(剥皮)或斧(#minecraft:axes)
+beef,牛肉馅(farmersdelight:minced_beef),2,砧板,生牛肉(minecraft:beef),工具:knife_dig或刀(#c:tools/knife)
+birch_log,去皮白桦木原木(minecraft:stripped_birch_log) + 树皮(farmersdelight:tree_bark),1,砧板,白桦原木(minecraft:birch_log),工具:斧(剥皮)或斧(#minecraft:axes)
+birch_wood,去皮白桦木(minecraft:stripped_birch_wood) + 树皮(farmersdelight:tree_bark),1,砧板,白桦木(minecraft:birch_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+blue_orchid,淡蓝色染料(minecraft:light_blue_dye),2,砧板,兰花(minecraft:blue_orchid),工具:knife_dig或刀(#c:tools/knife)
+brown_mushroom_colony,棕色蘑菇(minecraft:brown_mushroom),5,砧板,棕色蘑菇菌落(farmersdelight:brown_mushroom_colony),工具:knife_dig或刀(#c:tools/knife)
+cabbage,卷心菜叶(farmersdelight:cabbage_leaf),2,砧板,卷心菜(farmersdelight:cabbage),工具:knife_dig或刀(#c:tools/knife)
+cake,蛋糕切片(farmersdelight:cake_slice),7,砧板,蛋糕(minecraft:cake),工具:knife_dig或刀(#c:tools/knife)
+cherry_log,去皮樱花木原木(minecraft:stripped_cherry_log) + 树皮(farmersdelight:tree_bark),1,砧板,樱花原木(minecraft:cherry_log),工具:斧(剥皮)或斧(#minecraft:axes)
+cherry_wood,去皮樱花木(minecraft:stripped_cherry_wood) + 树皮(farmersdelight:tree_bark),1,砧板,樱花木(minecraft:cherry_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+chicken,生鸡肉丁(farmersdelight:chicken_cuts) + 骨粉(minecraft:bone_meal),2,砧板,生鸡肉(minecraft:chicken),工具:knife_dig或刀(#c:tools/knife)
+chocolate_pie,巧克力派切片(farmersdelight:chocolate_pie_slice),4,砧板,巧克力派(farmersdelight:chocolate_pie),工具:knife_dig或刀(#c:tools/knife)
+clay,黏土球(minecraft:clay_ball),4,砧板,黏土块(minecraft:clay),工具:锹或锹(#minecraft:shovels)
+cod,生鳕鱼片(farmersdelight:cod_slice) + 骨粉(minecraft:bone_meal),2,砧板,生鳕鱼(minecraft:cod),工具:knife_dig或刀(#c:tools/knife)
+cooked_chicken,熟鸡肉丁(farmersdelight:cooked_chicken_cuts) + 骨粉(minecraft:bone_meal),2,砧板,熟鸡肉(minecraft:cooked_chicken),工具:knife_dig或刀(#c:tools/knife)
+cooked_cod,熟鳕鱼片(farmersdelight:cooked_cod_slice) + 骨粉(minecraft:bone_meal),2,砧板,熟鳕鱼(minecraft:cooked_cod),工具:knife_dig或刀(#c:tools/knife)
+cooked_mutton,熟羊排(farmersdelight:cooked_mutton_chops),2,砧板,熟羊肉(minecraft:cooked_mutton),工具:knife_dig或刀(#c:tools/knife)
+cooked_salmon,熟鲑鱼片(farmersdelight:cooked_salmon_slice) + 骨粉(minecraft:bone_meal),2,砧板,熟鲑鱼(minecraft:cooked_salmon),工具:knife_dig或刀(#c:tools/knife)
+cornflower,蓝色染料(minecraft:blue_dye),2,砧板,矢车菊(minecraft:cornflower),工具:knife_dig或刀(#c:tools/knife)
+crimson_hyphae,去皮绯红木菌核(minecraft:stripped_crimson_hyphae) + 树皮(farmersdelight:tree_bark),1,砧板,绯红菌核(minecraft:crimson_hyphae),工具:斧(剥皮)或斧(#minecraft:axes)
+crimson_stem,去皮绯红木菌柄(minecraft:stripped_crimson_stem) + 树皮(farmersdelight:tree_bark),1,砧板,绯红菌柄(minecraft:crimson_stem),工具:斧(剥皮)或斧(#minecraft:axes)
+dandelion,黄色染料(minecraft:yellow_dye),2,砧板,蒲公英(minecraft:dandelion),工具:knife_dig或刀(#c:tools/knife)
+dark_oak_log,去皮深色橡木原木(minecraft:stripped_dark_oak_log) + 树皮(farmersdelight:tree_bark),1,砧板,深色橡木原木(minecraft:dark_oak_log),工具:斧(剥皮)或斧(#minecraft:axes)
+dark_oak_wood,去皮深色橡木(minecraft:stripped_dark_oak_wood) + 树皮(farmersdelight:tree_bark),1,砧板,深色橡木(minecraft:dark_oak_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+gravel,砂砾(minecraft:gravel) + 燧石(minecraft:flint),1,砧板,砂砾(minecraft:gravel),工具:锹或锹(#minecraft:shovels)
+ham,生猪排(minecraft:porkchop) + 骨头(minecraft:bone),2,砧板,火腿(farmersdelight:ham),工具:knife_dig或刀(#c:tools/knife)
+ink_sac,黑色染料(minecraft:black_dye),2,砧板,墨囊(minecraft:ink_sac),工具:knife_dig或刀(#c:tools/knife)
+jungle_log,去皮丛林木原木(minecraft:stripped_jungle_log) + 树皮(farmersdelight:tree_bark),1,砧板,丛林原木(minecraft:jungle_log),工具:斧(剥皮)或斧(#minecraft:axes)
+jungle_wood,去皮丛林木(minecraft:stripped_jungle_wood) + 树皮(farmersdelight:tree_bark),1,砧板,丛林木(minecraft:jungle_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+kelp_roll,海带寿司(farmersdelight:kelp_roll_slice),3,砧板,海带寿司卷(farmersdelight:kelp_roll),工具:knife_dig或刀(#c:tools/knife)
+lily_of_the_valley,白色染料(minecraft:white_dye),2,砧板,铃兰(minecraft:lily_of_the_valley),工具:knife_dig或刀(#c:tools/knife)
+mangrove_log,去皮红树木原木(minecraft:stripped_mangrove_log) + 树皮(farmersdelight:tree_bark),1,砧板,红树木原木(minecraft:mangrove_log),工具:斧(剥皮)或斧(#minecraft:axes)
+mangrove_wood,去皮红树木(minecraft:stripped_mangrove_wood) + 树皮(farmersdelight:tree_bark),1,砧板,红树木(minecraft:mangrove_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+melon,西瓜片(minecraft:melon_slice),9,砧板,西瓜(minecraft:melon),工具:knife_dig或刀(#c:tools/knife)
+mutton,生羊排(farmersdelight:mutton_chops),2,砧板,生羊肉(minecraft:mutton),工具:knife_dig或刀(#c:tools/knife)
+oak_log,去皮橡木原木(minecraft:stripped_oak_log) + 树皮(farmersdelight:tree_bark),1,砧板,橡木原木(minecraft:oak_log),工具:斧(剥皮)或斧(#minecraft:axes)
+oak_wood,去皮橡木(minecraft:stripped_oak_wood) + 树皮(farmersdelight:tree_bark),1,砧板,橡木(minecraft:oak_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+orange_tulip,橙色染料(minecraft:orange_dye),2,砧板,橙色郁金香(minecraft:orange_tulip),工具:knife_dig或刀(#c:tools/knife)
+oxeye_daisy,淡灰色染料(minecraft:light_gray_dye),2,砧板,滨菊(minecraft:oxeye_daisy),工具:knife_dig或刀(#c:tools/knife)
+pink_tulip,粉红色染料(minecraft:pink_dye),2,砧板,粉色郁金香(minecraft:pink_tulip),工具:knife_dig或刀(#c:tools/knife)
+poppy,红色染料(minecraft:red_dye),2,砧板,虞美人(minecraft:poppy),工具:knife_dig或刀(#c:tools/knife)
+porkchop,生培根(farmersdelight:bacon),2,砧板,生猪排(minecraft:porkchop),工具:knife_dig或刀(#c:tools/knife)
+pumpkin,南瓜片(farmersdelight:pumpkin_slice),4,砧板,南瓜(minecraft:pumpkin),工具:knife_dig或刀(#c:tools/knife)
+pumpkin_pie,南瓜派切片(farmersdelight:pumpkin_pie_slice),4,砧板,南瓜派(minecraft:pumpkin_pie),工具:knife_dig或刀(#c:tools/knife)
+red_mushroom_colony,红色蘑菇(minecraft:red_mushroom),5,砧板,红色蘑菇菌落(farmersdelight:red_mushroom_colony),工具:knife_dig或刀(#c:tools/knife)
+red_tulip,红色染料(minecraft:red_dye),2,砧板,红色郁金香(minecraft:red_tulip),工具:knife_dig或刀(#c:tools/knife)
+rice_panicle,稻米(farmersdelight:rice) + 草秆(farmersdelight:straw),1,砧板,稻米穗(farmersdelight:rice_panicle),工具:knife_dig或刀(#c:tools/knife)
+salmon,生鲑鱼片(farmersdelight:salmon_slice) + 骨粉(minecraft:bone_meal),2,砧板,生鲑鱼(minecraft:salmon),工具:knife_dig或刀(#c:tools/knife)
+smoked_ham,熟猪排(minecraft:cooked_porkchop) + 骨头(minecraft:bone),2,砧板,烟熏火腿(farmersdelight:smoked_ham),工具:knife_dig或刀(#c:tools/knife)
+spruce_log,去皮云杉木原木(minecraft:stripped_spruce_log) + 树皮(farmersdelight:tree_bark),1,砧板,云杉原木(minecraft:spruce_log),工具:斧(剥皮)或斧(#minecraft:axes)
+spruce_wood,去皮云杉木(minecraft:stripped_spruce_wood) + 树皮(farmersdelight:tree_bark),1,砧板,云杉木(minecraft:spruce_wood),工具:斧(剥皮)或斧(#minecraft:axes)
+sweet_berry_cheesecake,甜浆果芝士派切片(farmersdelight:sweet_berry_cheesecake_slice),4,砧板,甜浆果芝士派(farmersdelight:sweet_berry_cheesecake),工具:knife_dig或刀(#c:tools/knife)
+tag_dough,生意面(farmersdelight:raw_pasta),1,砧板,面团(#c:foods/dough),工具:knife_dig或刀(#c:tools/knife)
+torchflower,橙色染料(minecraft:orange_dye),2,砧板,火把花(minecraft:torchflower),工具:knife_dig或刀(#c:tools/knife)
+warped_hyphae,去皮诡异木菌核(minecraft:stripped_warped_hyphae) + 树皮(farmersdelight:tree_bark),1,砧板,诡异菌核(minecraft:warped_hyphae),工具:斧(剥皮)或斧(#minecraft:axes)
+warped_stem,去皮诡异木菌柄(minecraft:stripped_warped_stem) + 树皮(farmersdelight:tree_bark),1,砧板,诡异菌柄(minecraft:warped_stem),工具:斧(剥皮)或斧(#minecraft:axes)
+white_tulip,淡灰色染料(minecraft:light_gray_dye),2,砧板,白色郁金香(minecraft:white_tulip),工具:knife_dig或刀(#c:tools/knife)
+wild_beetroots,甜菜种子(minecraft:beetroot_seeds) + 红色染料(minecraft:red_dye),1,砧板,海甜菜(farmersdelight:wild_beetroots),工具:knife_dig或刀(#c:tools/knife)
+wild_cabbages,卷心菜种子(farmersdelight:cabbage_seeds) + 黄色染料(minecraft:yellow_dye),1,砧板,野生卷心菜(farmersdelight:wild_cabbages),工具:knife_dig或刀(#c:tools/knife)
+wild_carrots,胡萝卜(minecraft:carrot) + 淡灰色染料(minecraft:light_gray_dye),1,砧板,野生胡萝卜(farmersdelight:wild_carrots),工具:knife_dig或刀(#c:tools/knife)
+wild_onions,洋葱(farmersdelight:onion) + 品红色染料(minecraft:magenta_dye) + 黄绿色染料(minecraft:lime_dye),1,砧板,野生洋葱(farmersdelight:wild_onions),工具:knife_dig或刀(#c:tools/knife)
+wild_potatoes,马铃薯(minecraft:potato) + 紫色染料(minecraft:purple_dye),1,砧板,野生马铃薯(farmersdelight:wild_potatoes),工具:knife_dig或刀(#c:tools/knife)
+wild_rice,稻米(farmersdelight:rice) + 草秆(farmersdelight:straw),1,砧板,野生稻米(farmersdelight:wild_rice),工具:knife_dig或刀(#c:tools/knife)
+wild_tomatoes,番茄种子(farmersdelight:tomato_seeds) + 番茄(farmersdelight:tomato) + 绿色染料(minecraft:green_dye),1,砧板,番茄灌木(farmersdelight:wild_tomatoes),工具:knife_dig或刀(#c:tools/knife)
+wither_rose,黑色染料(minecraft:black_dye),2,砧板,凋灵玫瑰(minecraft:wither_rose),工具:knife_dig或刀(#c:tools/knife)
+wooden_basket,粗布(farmersdelight:canvas) + 木棍(minecraft:stick),1,砧板,木篮(farmersdelight:wooden_basket),工具:斧或斧(#minecraft:axes)
+acacia_chest_boat,金合欢木船(minecraft:acacia_boat) + 箱子(minecraft:chest),1,砧板,金合欢木储物船(minecraft:acacia_chest_boat),工具:锄或锄(#minecraft:hoes)
+acacia_furniture,金合欢木板(minecraft:acacia_planks),1,砧板,任选其一:[金合欢木门(minecraft:acacia_door) | 金合欢木活板门(minecraft:acacia_trapdoor) | 金合欢木告示牌(minecraft:acacia_sign) | 金合欢木悬挂牌(minecraft:acacia_hanging_sign) | 金合欢木栅栏(minecraft:acacia_fence) | 金合欢木栅栏门(minecraft:acacia_fence_gate) | 金合欢木压力板(minecraft:acacia_pressure_plate) | 金合欢木按钮(minecraft:acacia_button) | 金合欢木船(minecraft:acacia_boat) | 金合欢木橱柜(farmersdelight:acacia_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+amethyst_block,紫水晶碎片(minecraft:amethyst_shard),4,砧板,紫水晶块(minecraft:amethyst_block),工具:镐或镐(#minecraft:pickaxes)
+bamboo_chest_raft,竹竹筏(minecraft:bamboo_raft) + 箱子(minecraft:chest),1,砧板,竹储物竹筏(minecraft:bamboo_chest_raft),工具:锄或锄(#minecraft:hoes)
+bamboo_furniture,竹板(minecraft:bamboo_planks),1,砧板,任选其一:[竹门(minecraft:bamboo_door) | 竹活板门(minecraft:bamboo_trapdoor) | 竹告示牌(minecraft:bamboo_sign) | 竹悬挂牌(minecraft:bamboo_hanging_sign) | 竹栅栏(minecraft:bamboo_fence) | 竹栅栏门(minecraft:bamboo_fence_gate) | 竹压力板(minecraft:bamboo_pressure_plate) | 竹按钮(minecraft:bamboo_button) | 竹竹筏(minecraft:bamboo_raft) | 竹橱柜(farmersdelight:bamboo_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+birch_chest_boat,白桦木船(minecraft:birch_boat) + 箱子(minecraft:chest),1,砧板,白桦木储物船(minecraft:birch_chest_boat),工具:锄或锄(#minecraft:hoes)
+birch_furniture,白桦木板(minecraft:birch_planks),1,砧板,任选其一:[白桦木门(minecraft:birch_door) | 白桦木活板门(minecraft:birch_trapdoor) | 白桦木告示牌(minecraft:birch_sign) | 白桦木悬挂牌(minecraft:birch_hanging_sign) | 白桦木栅栏(minecraft:birch_fence) | 白桦木栅栏门(minecraft:birch_fence_gate) | 白桦木压力板(minecraft:birch_pressure_plate) | 白桦木按钮(minecraft:birch_button) | 白桦木船(minecraft:birch_boat) | 白桦木橱柜(farmersdelight:birch_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+bricks,红砖(minecraft:brick),4,砧板,红砖块(minecraft:bricks),工具:镐或镐(#minecraft:pickaxes)
+cherry_chest_boat,樱花木船(minecraft:cherry_boat) + 箱子(minecraft:chest),1,砧板,樱花木储物船(minecraft:cherry_chest_boat),工具:锄或锄(#minecraft:hoes)
+cherry_furniture,樱花木板(minecraft:cherry_planks),1,砧板,任选其一:[樱花木门(minecraft:cherry_door) | 樱花木活板门(minecraft:cherry_trapdoor) | 樱花木告示牌(minecraft:cherry_sign) | 樱花木悬挂牌(minecraft:cherry_hanging_sign) | 樱花木栅栏(minecraft:cherry_fence) | 樱花木栅栏门(minecraft:cherry_fence_gate) | 樱花木压力板(minecraft:cherry_pressure_plate) | 樱花木按钮(minecraft:cherry_button) | 樱花木船(minecraft:cherry_boat) | 樱花木橱柜(farmersdelight:cherry_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+chest_minecart,矿车(minecraft:minecart) + 箱子(minecraft:chest),1,砧板,箱子矿车(minecraft:chest_minecart),工具:锄或锄(#minecraft:hoes)
+crimson_furniture,绯红木板(minecraft:crimson_planks),1,砧板,任选其一:[绯红木门(minecraft:crimson_door) | 绯红木活板门(minecraft:crimson_trapdoor) | 绯红木告示牌(minecraft:crimson_sign) | 绯红木悬挂牌(minecraft:crimson_hanging_sign) | 绯红木栅栏(minecraft:crimson_fence) | 绯红木栅栏门(minecraft:crimson_fence_gate) | 绯红木压力板(minecraft:crimson_pressure_plate) | 绯红木按钮(minecraft:crimson_button) | 绯红木橱柜(farmersdelight:crimson_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+dark_oak_chest_boat,深色橡木船(minecraft:dark_oak_boat) + 箱子(minecraft:chest),1,砧板,深色橡木储物船(minecraft:dark_oak_chest_boat),工具:锄或锄(#minecraft:hoes)
+dark_oak_furniture,深色橡木木板(minecraft:dark_oak_planks),1,砧板,任选其一:[深色橡木门(minecraft:dark_oak_door) | 深色橡木活板门(minecraft:dark_oak_trapdoor) | 深色橡木告示牌(minecraft:dark_oak_sign) | 深色橡木悬挂牌(minecraft:dark_oak_hanging_sign) | 深色橡木栅栏(minecraft:dark_oak_fence) | 深色橡木栅栏门(minecraft:dark_oak_fence_gate) | 深色橡木压力板(minecraft:dark_oak_pressure_plate) | 深色橡木按钮(minecraft:dark_oak_button) | 深色橡木船(minecraft:dark_oak_boat) | 深色橡木橱柜(farmersdelight:dark_oak_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+deepslate,深板岩圆石(minecraft:cobbled_deepslate),1,砧板,深板岩(minecraft:deepslate),工具:镐或镐(#minecraft:pickaxes)
+furnace_minecart,矿车(minecraft:minecart) + 熔炉(minecraft:furnace),1,砧板,动力矿车(minecraft:furnace_minecart),工具:锄或锄(#minecraft:hoes)
+hopper_minecart,矿车(minecraft:minecart) + minecraft:hopper,1,砧板,漏斗矿车(minecraft:hopper_minecart),工具:锄或锄(#minecraft:hoes)
+jungle_chest_boat,丛林木船(minecraft:jungle_boat) + 箱子(minecraft:chest),1,砧板,丛林木储物船(minecraft:jungle_chest_boat),工具:锄或锄(#minecraft:hoes)
+jungle_furniture,丛林木板(minecraft:jungle_planks),1,砧板,任选其一:[丛林木门(minecraft:jungle_door) | 丛林木活板门(minecraft:jungle_trapdoor) | 丛林木告示牌(minecraft:jungle_sign) | 丛林木悬挂牌(minecraft:jungle_hanging_sign) | 丛林木栅栏(minecraft:jungle_fence) | 丛林木栅栏门(minecraft:jungle_fence_gate) | 丛林木压力板(minecraft:jungle_pressure_plate) | 丛林木按钮(minecraft:jungle_button) | 丛林木船(minecraft:jungle_boat) | 丛林木橱柜(farmersdelight:jungle_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+leather_armor,皮革(minecraft:leather),1,砧板,任选其一:[皮革头盔(minecraft:leather_helmet) | 皮革胸甲(minecraft:leather_chestplate) | 皮革护腿(minecraft:leather_leggings) | 皮革靴(minecraft:leather_boots)],工具:剪刀或剪刀(#c:tools/shear)
+leather_horse_armor,皮革(minecraft:leather),2,砧板,皮革马铠(minecraft:leather_horse_armor),工具:剪刀或剪刀(#c:tools/shear)
+mangrove_chest_boat,红树木船(minecraft:mangrove_boat) + 箱子(minecraft:chest),1,砧板,红树木储物船(minecraft:mangrove_chest_boat),工具:锄或锄(#minecraft:hoes)
+mangrove_furniture,红树木板(minecraft:mangrove_planks),1,砧板,任选其一:[红树木门(minecraft:mangrove_door) | 红树木活板门(minecraft:mangrove_trapdoor) | 红树木告示牌(minecraft:mangrove_sign) | 红树木悬挂牌(minecraft:mangrove_hanging_sign) | 红树木栅栏(minecraft:mangrove_fence) | 红树木栅栏门(minecraft:mangrove_fence_gate) | 红树木压力板(minecraft:mangrove_pressure_plate) | 红树木按钮(minecraft:mangrove_button) | 红树木船(minecraft:mangrove_boat) | 红树木橱柜(farmersdelight:mangrove_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+nether_bricks,下界砖(minecraft:nether_brick),4,砧板,下界砖块(minecraft:nether_bricks),工具:镐或镐(#minecraft:pickaxes)
+oak_chest_boat,橡木船(minecraft:oak_boat) + 箱子(minecraft:chest),1,砧板,橡木储物船(minecraft:oak_chest_boat),工具:锄或锄(#minecraft:hoes)
+oak_furniture,橡木木板(minecraft:oak_planks),1,砧板,任选其一:[橡木门(minecraft:oak_door) | 橡木活板门(minecraft:oak_trapdoor) | 橡木告示牌(minecraft:oak_sign) | 橡木悬挂牌(minecraft:oak_hanging_sign) | 橡木栅栏(minecraft:oak_fence) | 橡木栅栏门(minecraft:oak_fence_gate) | 橡木压力板(minecraft:oak_pressure_plate) | 橡木按钮(minecraft:oak_button) | 橡木船(minecraft:oak_boat) | 橡木橱柜(farmersdelight:oak_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+quartz_block,下界石英(minecraft:quartz),4,砧板,石英块(minecraft:quartz_block),工具:镐或镐(#minecraft:pickaxes)
+saddle,皮革(minecraft:leather) + 铁粒(minecraft:iron_nugget),2,砧板,鞍(minecraft:saddle),工具:剪刀或剪刀(#c:tools/shear)
+spruce_chest_boat,云杉木船(minecraft:spruce_boat) + 箱子(minecraft:chest),1,砧板,云杉木储物船(minecraft:spruce_chest_boat),工具:锄或锄(#minecraft:hoes)
+spruce_furniture,云杉木板(minecraft:spruce_planks),1,砧板,任选其一:[云杉木门(minecraft:spruce_door) | 云杉木活板门(minecraft:spruce_trapdoor) | 云杉木告示牌(minecraft:spruce_sign) | 云杉木悬挂牌(minecraft:spruce_hanging_sign) | 云杉木栅栏(minecraft:spruce_fence) | 云杉木栅栏门(minecraft:spruce_fence_gate) | 云杉木压力板(minecraft:spruce_pressure_plate) | 云杉木按钮(minecraft:spruce_button) | 云杉木船(minecraft:spruce_boat) | 云杉木橱柜(farmersdelight:spruce_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%
+stone,圆石(minecraft:cobblestone),1,砧板,石头(minecraft:stone),工具:镐或镐(#minecraft:pickaxes)
+tnt_minecart,矿车(minecraft:minecart) + minecraft:tnt,1,砧板,TNT 矿车(minecraft:tnt_minecart),工具:锄或锄(#minecraft:hoes)
+warped_furniture,诡异木板(minecraft:warped_planks),1,砧板,任选其一:[诡异木门(minecraft:warped_door) | 诡异木活板门(minecraft:warped_trapdoor) | 诡异木告示牌(minecraft:warped_sign) | 诡异木悬挂牌(minecraft:warped_hanging_sign) | 诡异木栅栏(minecraft:warped_fence) | 诡异木栅栏门(minecraft:warped_fence_gate) | 诡异木压力板(minecraft:warped_pressure_plate) | 诡异木按钮(minecraft:warped_button) | 诡异木橱柜(farmersdelight:warped_cabinet)],工具:斧或斧(#minecraft:axes); 掉落率75%

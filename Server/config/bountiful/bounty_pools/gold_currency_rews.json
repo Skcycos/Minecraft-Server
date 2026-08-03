@@ -1,0 +1,43 @@
+{
+  "replace": true,
+  "content": {
+    "gold_coin_high_tier": {
+      "type": "item",
+      "content": "lightmanscurrency:coin_gold",
+      "amount": {
+        "min": 1,
+        "max": 18
+      },
+      "unitWorth": 100,
+      "rarity": "RARE",
+      "weightMult": 0.08,
+      "repRequired": 10,
+      "forbids": [
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_copper"
+        },
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_iron"
+        },
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_gold"
+        },
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_emerald"
+        },
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_diamond"
+        },
+        {
+          "type": "item",
+          "content": "lightmanscurrency:coin_netherite"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "replace": true,
+  "content": {
+    "oak_sapling": {
+      "type": "item",
+      "content": "minecraft:oak_sapling",
+      "amount": {
+        "min": 3,
+        "max": 24
+      },
+      "unitWorth": 5
+    },
+    "wheat": {
+      "type": "item",
+      "content": "minecraft:wheat",
+      "amount": {
+        "min": 4,
+        "max": 24
+      },
+      "unitWorth": 5
+    },
+    "carrot": {
+      "type": "item",
+      "content": "minecraft:carrot",
+      "amount": {
+        "min": 4,
+        "max": 24
+      },
+      "unitWorth": 4
+    },
+    "potato": {
+      "type": "item",
+      "content": "minecraft:potato",
+      "amount": {
+        "min": 16,
+        "max": 48
+      },
+      "unitWorth": 4
+    },
+    "beetroot": {
+      "type": "item",
+      "content": "minecraft:beetroot",
+      "amount": {
+        "min": 4,
+        "max": 24
+      },
+      "unitWorth": 7
+    },
+    "pumpkin": {
+      "type": "item",
+      "content": "minecraft:pumpkin",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 17
+    },
+    "melon": {
+      "type": "item",
+      "content": "minecraft:melon",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 25,
+      "rarity": "UNCOMMON"
+    },
+    "melon_slice": {
+      "type": "item",
+      "content": "minecraft:melon_slice",
+      "amount": {
+        "min": 2,
+        "max": 32
+      },
+      "unitWorth": 5
+    },
+    "sugar": {
+      "type": "item",
+      "content": "minecraft:sugar",
+      "amount": {
+        "min": 4,
+        "max": 32
+      },
+      "unitWorth": 4
+    },
+    "sugar_cane": {
+      "type": "item",
+      "content": "minecraft:sugar_cane",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 4
+    },
+    "cactus": {
+      "type": "item",
+      "content": "minecraft:cactus",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 4,
+      "weightMult": 0.6
+    },
+    "bamboo": {
+      "type": "item",
+      "content": "minecraft:bamboo",
+      "amount": {
+        "min": 16,
+        "max": 64
+      },
+      "unitWorth": 2,
+      "weightMult": 0.35
+    },
+    "kelp": {
+      "type": "item",
+      "content": "minecraft:kelp",
+      "amount": {
+        "min": 16,
+        "max": 64
+      },
+      "unitWorth": 2,
+      "weightMult": 0.35
+    },
+    "cocoa_beans": {
+      "type": "item",
+      "content": "minecraft:cocoa_beans",
+      "amount": {
+        "min": 4,
+        "max": 20
+      },
+      "unitWorth": 8,
+      "rarity": "UNCOMMON"
+    },
+    "sweet_berries": {
+      "type": "item",
+      "content": "minecraft:sweet_berries",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 6
+    },
+    "glow_berries": {
+      "type": "item",
+      "content": "minecraft:glow_berries",
+      "amount": {
+        "min": 4,
+        "max": 20
+      },
+      "unitWorth": 9,
+      "rarity": "UNCOMMON"
+    },
+    "crop_tomato": {
+      "type": "item_tag",
+      "content": "c:crops/tomato",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 6
+    },
+    "crop_cabbage": {
+      "type": "item_tag",
+      "content": "c:crops/cabbage",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 6
+    },
+    "crop_onion": {
+      "type": "item_tag",
+      "content": "c:crops/onion",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 6
+    },
+    "crop_rice": {
+      "type": "item_tag",
+      "content": "c:crops/rice",
+      "amount": {
+        "min": 8,
+        "max": 32
+      },
+      "unitWorth": 5
+    },
+    "high_tier_hay_bale_order": {
+      "type": "item",
+      "content": "minecraft:hay_block",
+      "amount": {
+        "min": 24,
+        "max": 48
+      },
+      "unitWorth": 45,
+      "rarity": "RARE",
+      "weightMult": 0.1,
+      "timeMult": 1.5
+    }
+  }
+}

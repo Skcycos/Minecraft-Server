@@ -28,9 +28,8 @@
     },
     "general": {
         "dataPathsToExclude": [
-            "bounty_pools/bountiful/example_pool",
-            "bounty_pools/*/another_example",
-            "bounty_decrees/other/*"
+            "bounty_pools/*",
+            "bounty_decrees/*"
         ]
     }
 }

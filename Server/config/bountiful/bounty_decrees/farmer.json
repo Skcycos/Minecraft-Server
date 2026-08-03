@@ -1,0 +1,16 @@
+{
+  "replace": true,
+  "linkedProfessions": [
+    "farmer"
+  ],
+  "objectives": [
+    "farmer_objs"
+  ],
+  "rewards": [
+    "_all_rews",
+    "gold_currency_rews"
+  ],
+  "canSpawn": true,
+  "canReveal": true,
+  "canWanderBuy": true
+}
