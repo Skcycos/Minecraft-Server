@@ -61,6 +61,21 @@ After the first launch, edit `config/tcth-common.toml`:
 Every individual compat feature added in later phases gets its own toggle, so
 each integration can be turned off independently.
 
+**Reward switch semantics:** `jobsPlusRewardsEnabled` controls whether the
+`tcth:on_dish_cooked` Arc action is sent for dish events. It does **not** gate
+the preset's `taste_meal` action — that is a separate `arc:on_eat` action: as
+soon as the `tcth-chef` data pack is enabled, eating `#tcth:chef_meals` grants
+1 XP even when `jobsPlusRewardsEnabled=false`. During zero-reward drills, do
+not eat those dishes.
+
+## Client requirement
+
+When Jobs+/Arc integration or the `tcth-chef` preset is enabled, **the server
+and every client must install a matching version of TCTH Integration**. TCTH
+registers custom Arc action/condition/data types and ships the Jobs+ job
+translation resources; without it on the client, the Jobs+ GUI cannot resolve
+the TCTH types and job/powerup text is missing.
+
 ## Building from source
 
 ```bash

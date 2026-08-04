@@ -24,6 +24,7 @@ import com.tanrunn.tcth.test.MinecraftTestBootstrap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.BusBuilder;
@@ -122,5 +123,55 @@ class KaleidoscopeDishAdapterTest {
         assertNull(event.getPlayer());
         assertTrue(event.isAutomated(), "non-player actor must be flagged automated");
         assertEquals(CookingDevice.KALEIDOSCOPE_COOKING_POT, event.getDevice());
+    }
+
+    @Test
+    void heldCarrierIsNeverPublishedAsResult() {
+        // takeOutProduct's third parameter is the held shovel/carrier, never
+        // the dish; the adapter must publish the dish result, not the carrier.
+        ItemStack carrier = new ItemStack(Items.BOWL);
+        ItemStack dish = new ItemStack(Items.COOKED_BEEF, 2);
+        try (MockedStatic<QualityUtils> mocked = Mockito.mockStatic(QualityUtils.class)) {
+            mocked.when(() -> QualityUtils.hasQuality(Mockito.any())).thenReturn(false);
+            // The adapter API has no carrier parameter: only the dish is passed.
+            KaleidoscopeDishAdapter.onDishTaken(player, dish, CookingDevice.KALEIDOSCOPE_COOKING_POT,
+                    level, new BlockPos(5, 6, 7));
+        }
+
+        DishCookedEvent event = captured.get();
+        assertEquals(Items.COOKED_BEEF, event.getResult().getItem(), "event result must be the dish");
+        assertTrue(!event.getResult().is(carrier.getItem()), "held/carrier must never be the event result");
+        assertEquals(2, event.getResult().getCount(), "pot result keeps its real count");
+    }
+
+    @Test
+    void qualityIsReadFromDishResultNotFromCarrier() {
+        ItemStack dish = new ItemStack(Items.COOKED_BEEF);
+        try (MockedStatic<QualityUtils> mocked = Mockito.mockStatic(QualityUtils.class)) {
+            mocked.when(() -> QualityUtils.hasQuality(Mockito.any())).thenReturn(true);
+            mocked.when(() -> QualityUtils.getQuality(Mockito.any())).thenReturn(Quality.SUPERB);
+            KaleidoscopeDishAdapter.onDishTaken(player, dish, CookingDevice.KALEIDOSCOPE_STOCKPOT,
+                    level, new BlockPos(0, 0, 0));
+        }
+
+        assertEquals(DishQuality.SUPERB, captured.get().getQuality(),
+                "quality must be mapped from the dish result stack");
+    }
+
+    @Test
+    void notDishesItemIsNotPublished() {
+        // raw_dough (tcth:not_dishes) taken from a steamer must not produce an
+        // event, even though it carries a food component.
+        net.minecraft.core.Holder<Item> holder = Mockito.mock(net.minecraft.core.Holder.class);
+        ItemStack rawDough = Mockito.mock(ItemStack.class);
+        Mockito.when(rawDough.getItemHolder()).thenReturn(holder);
+        Mockito.when(rawDough.isEmpty()).thenReturn(false);
+        Mockito.when(holder.is(Mockito.any(net.minecraft.tags.TagKey.class))).thenReturn(false);
+        Mockito.when(holder.is(com.tanrunn.tcth.impl.classifier.DishClassifier.NOT_DISHES_TAG)).thenReturn(true);
+
+        KaleidoscopeDishAdapter.onDishTaken(player, rawDough, CookingDevice.KALEIDOSCOPE_STEAMER,
+                level, new BlockPos(0, 0, 0));
+
+        assertNull(captured.get(), "not_dishes items must not be published");
     }
 }

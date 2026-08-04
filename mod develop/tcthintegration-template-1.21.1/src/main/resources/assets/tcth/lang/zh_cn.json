@@ -2,5 +2,26 @@
   "tcth.configuration.title": "TCTH Integration 配置",
   "tcth.configuration.section.tcth.common.toml": "TCTH Integration 配置",
   "tcth.configuration.section.tcth.common.toml.title": "TCTH Integration 配置",
-  "tcth.configuration.enabled": "启用"
+  "tcth.configuration.enabled": "启用",
+  "tcth.configuration.jobsPlusRewardsEnabled": "启用 Jobs+ 奖励",
+  "tcth.configuration.maxEventsPerTickPerPlayer": "每玩家每刻最大 Action 数",
+
+  "tcth.condition.dish_tier.name": "料理等级",
+  "tcth.condition.dish_tier.desc": "料理等级为 %s",
+  "tcth.condition.dish_quality.name": "料理品质",
+  "tcth.condition.dish_quality.desc": "料理品质属于：%s",
+  "tcth.condition.cooking_device.name": "烹饪设备",
+  "tcth.condition.cooking_device.desc": "烹饪设备属于：%s",
+  "tcth.condition.automated.name": "自动化",
+  "tcth.condition.automated.desc": "自动化生产为 %s",
+
+  "jobsplus.job.tcth.chef.name": "厨师",
+  "jobsplus.job.tcth.chef.description": "料理一日三餐，钻研各地风味，在灶火与宴席间磨炼手艺。",
+
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.name": "庖厨心得 I",
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.description": "厨师职业经验提升至 1.5 倍。",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.name": "庖厨心得 II",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.description": "厨师职业经验提升至 2 倍。",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.name": "庖厨心得 III",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.description": "厨师职业经验提升至 2.5 倍。"
 }

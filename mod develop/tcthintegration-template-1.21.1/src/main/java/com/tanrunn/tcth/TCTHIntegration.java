@@ -27,6 +27,11 @@ public class TCTHIntegration {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us.
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
+        // Register the conditional Jobs+ module descriptor BEFORE init.
+        // The implementation class is only loaded when Jobs+ is installed.
+        CompatLoader.register("jobsplus",
+                "com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModule");
+
         // Bootstrap the conditional compat module loader.
         // Modules themselves are registered in later phases (see com.tanrunn.tcth.impl.compat).
         CompatLoader.init(modEventBus);

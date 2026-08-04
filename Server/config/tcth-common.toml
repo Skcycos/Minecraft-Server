@@ -1,0 +1,16 @@
+#Master switch for the TCTH integration framework.
+#When false, the dish-cooked event dispatcher posts no events
+#and compat modules must not perform business logic.
+enabled = true
+#Send tcth:on_dish_cooked dish actions (Jobs+ rewards).
+#Does NOT gate the separate arc:on_eat taste_meal action:
+#with the tcth-chef data pack enabled, eating #tcth:chef_meals
+#grants 1 XP even when this is false.
+#Default off. Only enable after on-server verification of the
+#seven player take-out scenarios (workbench, furnace, smoker,
+#FD cooking pot, KC pot, KC stockpot, KC steamer).
+jobsPlusRewardsEnabled = true
+#Maximum dish actions sent per player per tick (rate limit).
+# Default: 20
+# Range: 1 ~ 1000
+maxEventsPerTickPerPlayer = 20

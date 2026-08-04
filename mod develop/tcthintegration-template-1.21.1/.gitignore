@@ -42,3 +42,10 @@ repo/
 ### Local third-party mod jars (development only, never committed) ###
 libs/
 dev-mods/
+
+### Python tooling ###
+__pycache__/
+*.pyc
+
+### Local runtime logs ###
+logs/

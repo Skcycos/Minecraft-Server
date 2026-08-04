@@ -35,6 +35,7 @@ jobs:
           mkdir -p dev-mods
           curl -fL -o dev-mods/farmersdelight-1.3.2.jar "https://cdn.modrinth.com/data/R2OftAxM/versions/GbNuOZ4S/FarmersDelight-1.21.1-1.3.2.jar"
           curl -fL -o dev-mods/kaleidoscopecookery-1.4.1.jar "https://cdn.modrinth.com/data/v17FatAc/versions/TqaHu4Ma/kaleidoscopecookery-1.4.1-neoforge%2Bmc1.21.1.jar"
+          curl -fL -o dev-mods/arc-9.0.0.jar "https://cdn.modrinth.com/data/H3eKhxi7/versions/gTreBhs6/arc-9.0.0-neoforge.jar"
 
       - name: Build with Gradle
         run: ./gradlew build

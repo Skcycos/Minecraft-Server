@@ -62,6 +62,13 @@ public final class CompatLoader {
      */
     private static ClassResolver classResolver = Class::forName;
 
+    /**
+     * Framework master switch supplier. Injected for tests; production reads
+     * {@link Config#ENABLED}.
+     */
+    private static java.util.function.BooleanSupplier frameworkEnabledSupplier =
+            () -> Config.ENABLED.get();
+
     private CompatLoader() {
     }
 
@@ -160,7 +167,7 @@ public final class CompatLoader {
      * entry point in phase 1.
      */
     public static boolean isFrameworkEnabled() {
-        return Config.ENABLED.get();
+        return frameworkEnabledSupplier.getAsBoolean();
     }
 
     private static void loadModule(ModuleDescriptor descriptor) {
@@ -217,6 +224,10 @@ public final class CompatLoader {
         classResolver = resolver;
     }
 
+    static void setFrameworkEnabledSupplierForTesting(java.util.function.BooleanSupplier supplier) {
+        frameworkEnabledSupplier = supplier;
+    }
+
     static List<CompatModule> loadedModulesForTesting() {
         return List.copyOf(MODULES);
     }
@@ -232,6 +243,7 @@ public final class CompatLoader {
         modBus = null;
         modPresence = CompatLoader::defaultModPresence;
         classResolver = Class::forName;
+        frameworkEnabledSupplier = () -> Config.ENABLED.get();
     }
 
     @FunctionalInterface

@@ -1,0 +1,14 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:chef/culinary_experience_iii"
+  },
+  "type": "jobsplus:on_job_exp",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp_multiplier",
+      "job": "tcth:chef",
+      "multiplier": 2.5
+    }
+  ]
+}

@@ -31,6 +31,35 @@ public class Config {
                     "and compat modules must not perform business logic.")
             .define("enabled", true);
 
+    /**
+     * Jobs+ dish-cooking experience rewards module.
+     *
+     * <p>Default OFF. Controls whether the {@code tcth:on_dish_cooked} Arc
+     * action is sent for dish events. Note: the preset's {@code taste_meal}
+     * action is a separate {@code arc:on_eat} action — as soon as the
+     * {@code tcth-chef} data pack is enabled, eating {@code #tcth:chef_meals}
+     * grants 1 XP regardless of this flag. During zero-reward drills, do not
+     * eat those dishes.
+     */
+    public static final ModConfigSpec.BooleanValue JOBS_PLUS_REWARDS_ENABLED = BUILDER
+            .comment("Send tcth:on_dish_cooked dish actions (Jobs+ rewards).",
+                    "Does NOT gate the separate arc:on_eat taste_meal action:",
+                    "with the tcth-chef data pack enabled, eating #tcth:chef_meals",
+                    "grants 1 XP even when this is false.",
+                    "Default off. Only enable after on-server verification of the",
+                    "seven player take-out scenarios (workbench, furnace, smoker,",
+                    "FD cooking pot, KC pot, KC stockpot, KC steamer).")
+            .define("jobsPlusRewardsEnabled", false);
+
+    /**
+     * Rate limit: maximum dish events settled per player per tick. Guards
+     * against short bursts of automated/bulk production flooding the reward
+     * pipeline. Only successfully sent actions count against the limit.
+     */
+    public static final ModConfigSpec.IntValue MAX_EVENTS_PER_TICK_PER_PLAYER = BUILDER
+            .comment("Maximum dish actions sent per player per tick (rate limit).")
+            .defineInRange("maxEventsPerTickPerPlayer", 20, 1, 1000);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

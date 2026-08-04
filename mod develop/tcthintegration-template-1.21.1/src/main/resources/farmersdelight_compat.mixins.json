@@ -4,7 +4,8 @@
   "package": "com.tanrunn.tcth.mixin.farmersdelight",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "CookingPotResultSlotMixin"
+    "CookingPotResultSlotMixin",
+    "CookingPotBlockEntityAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

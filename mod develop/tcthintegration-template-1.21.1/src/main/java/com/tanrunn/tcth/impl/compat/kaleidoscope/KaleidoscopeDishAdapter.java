@@ -6,6 +6,7 @@ import com.github.ysbbbbbb.kaleidoscopecookery.item.quality.Quality;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.quality.QualityUtils;
 import com.tanrunn.tcth.api.cooking.CookingDevice;
 import com.tanrunn.tcth.api.cooking.DishQuality;
+import com.tanrunn.tcth.impl.classifier.DishClassifier;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
 
 import net.minecraft.core.BlockPos;
@@ -49,6 +50,11 @@ public final class KaleidoscopeDishAdapter {
     /**
      * Publishes a dish event for one real take-out.
      *
+     * <p>Only items classified as dishes by {@link DishClassifier} are
+     * published — the data-driven {@code tcth:not_dishes} tag (e.g.
+     * {@code kaleidoscope_cookery:raw_dough}, an uncooked steamer ingredient)
+     * is honoured here, so no item id is hardcoded in the mixin or adapter.
+     *
      * @param player the taking player, or {@code null} for automated actors
      * @param result the taken dish stack
      * @param device the producing KC device
@@ -57,6 +63,9 @@ public final class KaleidoscopeDishAdapter {
      */
     public static void onDishTaken(@Nullable ServerPlayer player, ItemStack result, CookingDevice device,
                                    ServerLevel level, BlockPos pos) {
+        if (!DishClassifier.isDish(result)) {
+            return; // e.g. raw dough taken out of a steamer
+        }
         DishCookedEventDispatcher.publish(player, null, result, device, mapQuality(result), player == null, level, pos);
     }
 }

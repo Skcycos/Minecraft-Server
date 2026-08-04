@@ -79,4 +79,26 @@ class DishClassifierTest {
 
         assertFalse(DishClassifier.isDish(stack), "exclusion tag has priority over the dishes tag");
     }
+
+    @Test
+    void notDishesExclusionWinsOverFoodComponent() {
+        // Raw dough carries a FOOD component but is explicitly excluded: the
+        // exclusion tag must win over the food component.
+        Holder<Item> holder = Mockito.mock(Holder.class);
+        ItemStack stack = Mockito.mock(ItemStack.class);
+        Mockito.when(stack.getItemHolder()).thenReturn(holder);
+        Mockito.when(stack.has(DataComponents.FOOD)).thenReturn(true);
+        Mockito.when(holder.is(DishClassifier.NOT_DISHES_TAG)).thenReturn(true);
+
+        assertFalse(DishClassifier.isDish(stack),
+                "raw dough must be excluded even though it has a food component");
+    }
+
+    @Test
+    void notDishesTagFileContainsRawDough() throws Exception {
+        String json = java.nio.file.Files.readString(
+                java.nio.file.Path.of("src/main/resources/data/tcth/tags/item/not_dishes.json"));
+        assertTrue(json.contains("kaleidoscope_cookery:raw_dough"),
+                "raw dough must be excluded via the data tag, not hardcoded");
+    }
 }

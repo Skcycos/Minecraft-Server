@@ -22,9 +22,17 @@ import net.minecraft.world.level.block.entity.BlockEntity;
  * Fires a TCTH dish event when a dish is really taken out of a Kaleidoscope
  * Cookery stockpot.
  *
- * <p>{@code takeOutProduct} returns {@code false} when nothing was taken
- * (lid on, wrong status, empty result); the event is only posted when the HEAD
- * status was {@code FINISHED} and the RETURN value is {@code true}.
+ * <p>{@code takeOutProduct(Level, LivingEntity, ItemStack)} — the third
+ * parameter is the <em>held carrier</em>, <strong>not</strong> the dish. The
+ * actual dish is captured at HEAD from {@code StockpotBlockEntity.getResult()}
+ * (defensive copy). A stockpot serves one portion per take-out, so the event
+ * carries {@code copyWithCount(1)}. The event is only posted when:
+ * <ul>
+ *   <li>the HEAD status was {@code FINISHED};</li>
+ *   <li>the RETURN value is {@code true} (a real take-out happened);</li>
+ *   <li>the result snapshot is non-empty.</li>
+ * </ul>
+ * The snapshot is always cleared at the end of the RETURN handler.
  *
  * <p>Applied only when {@code kaleidoscope_cookery} is installed.
  */
@@ -34,25 +42,35 @@ public abstract class StockpotBlockEntityMixin {
     @Unique
     private int tcth$status = -1;
 
+    @Unique
+    private ItemStack tcth$resultSnapshot = null;
+
     @Inject(method = "takeOutProduct", at = @At("HEAD"))
-    private void tcth$captureStatus(Level level, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        this.tcth$status = ((IStockpot) (Object) this).getStatus();
+    private void tcth$captureStatusAndResult(Level level, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+        StockpotBlockEntity self = (StockpotBlockEntity) (Object) this;
+        this.tcth$status = ((IStockpot) self).getStatus();
+        this.tcth$resultSnapshot = this.tcth$status == IStockpot.FINISHED ? self.getResult().copy() : null;
     }
 
     @Inject(method = "takeOutProduct", at = @At("RETURN"))
     private void tcth$afterTake(Level level, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (!cir.getReturnValue()) {
-            return;
+        try {
+            if (!cir.getReturnValue()) {
+                return;
+            }
+            if (this.tcth$status != IStockpot.FINISHED || this.tcth$resultSnapshot == null || this.tcth$resultSnapshot.isEmpty()) {
+                return;
+            }
+            BlockEntity self = (BlockEntity) (Object) this;
+            if (!(self.getLevel() instanceof ServerLevel serverLevel)) {
+                return;
+            }
+            ServerPlayer player = entity instanceof ServerPlayer sp ? sp : null;
+            KaleidoscopeDishAdapter.onDishTaken(player, this.tcth$resultSnapshot.copyWithCount(1),
+                    CookingDevice.KALEIDOSCOPE_STOCKPOT, serverLevel, self.getBlockPos());
+        } finally {
+            this.tcth$resultSnapshot = null;
+            this.tcth$status = -1;
         }
-        if (this.tcth$status != IStockpot.FINISHED) {
-            return;
-        }
-        BlockEntity self = (BlockEntity) (Object) this;
-        if (!(self.getLevel() instanceof ServerLevel serverLevel)) {
-            return;
-        }
-        ServerPlayer player = entity instanceof ServerPlayer sp ? sp : null;
-        KaleidoscopeDishAdapter.onDishTaken(player, stack, CookingDevice.KALEIDOSCOPE_STOCKPOT,
-                serverLevel, self.getBlockPos());
     }
 }

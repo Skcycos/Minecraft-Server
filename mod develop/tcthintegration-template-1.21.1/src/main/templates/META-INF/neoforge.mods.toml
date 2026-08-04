@@ -100,6 +100,23 @@ requiredMods=["kaleidoscope_cookery"]
     ordering="NONE"
     side="BOTH"
 
+# Jobs+ dish-reward module (optional; loaded only when the mod is installed).
+[[dependencies.${mod_id}]]
+    modId="jobsplus"
+    type="optional"
+    versionRange="[9.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+# Arc is the mandatory dependency of Jobs+ and is required for the dish action
+# bridge; TCTH declares it optional because TCTH itself runs without it.
+[[dependencies.${mod_id}]]
+    modId="arc"
+    type="optional"
+    versionRange="[9.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.

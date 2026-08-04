@@ -54,6 +54,12 @@
 
 后续阶段新增的每个联动功能都会拥有独立开关，可单独关闭任意集成。
 
+**奖励开关语义**：`jobsPlusRewardsEnabled` 控制是否发送
+`tcth:on_dish_cooked` 料理 Action。它**不**控制预设的 `taste_meal`
+Action——那是独立的 `arc:on_eat` Action：只要 `tcth-chef` 数据包启用，
+食用 `#tcth:chef_meals` 就会获得 1 XP，即使
+`jobsPlusRewardsEnabled=false`。零奖励演练期间不得进食这些料理。
+
 ## 源码构建
 
 ```bash

@@ -208,6 +208,30 @@ class CompatLoaderTest {
         assertTrue(CompatLoader.loadedModulesForTesting().isEmpty());
     }
 
+    @Test
+    void jobsPlusModuleNotResolvedWhenJobsPlusMissing() {
+        CountingResolver resolver = new CountingResolver();
+        CompatLoader.setModPresenceForTesting(modId -> false);
+        CompatLoader.setClassResolverForTesting(resolver);
+
+        CompatLoader.register("jobsplus",
+                "com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModule");
+        CompatLoader.init(bus);
+
+        assertEquals(0, resolver.resolveCalls,
+                "the Jobs+ implementation class must never be resolved without Jobs+");
+        assertTrue(CompatLoader.loadedModulesForTesting().isEmpty());
+    }
+
+    @Test
+    void jobsPlusModuleClassIsInstantiableAndReportsModId() throws Exception {
+        // Verifies the descriptor target is a valid CompatModule without
+        // invoking onModConstruction (which needs a live Arc/FML environment).
+        Class<?> clazz = Class.forName("com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModule");
+        CompatModule module = (CompatModule) clazz.getDeclaredConstructor().newInstance();
+        assertEquals("jobsplus", module.modId());
+    }
+
     // ---- test doubles ----
 
     /** Minimal healthy module; static counters let tests observe lifecycle calls. */

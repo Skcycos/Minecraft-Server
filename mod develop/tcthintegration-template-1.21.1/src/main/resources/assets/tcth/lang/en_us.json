@@ -2,5 +2,26 @@
   "tcth.configuration.title": "TCTH Integration Configs",
   "tcth.configuration.section.tcth.common.toml": "TCTH Integration Configs",
   "tcth.configuration.section.tcth.common.toml.title": "TCTH Integration Configs",
-  "tcth.configuration.enabled": "Enabled"
+  "tcth.configuration.enabled": "Enabled",
+  "tcth.configuration.jobsPlusRewardsEnabled": "Jobs+ Rewards Enabled",
+  "tcth.configuration.maxEventsPerTickPerPlayer": "Max Actions Per Tick Per Player",
+
+  "tcth.condition.dish_tier.name": "Dish Tier",
+  "tcth.condition.dish_tier.desc": "Dish tier is %s",
+  "tcth.condition.dish_quality.name": "Dish Quality",
+  "tcth.condition.dish_quality.desc": "Dish quality is one of: %s",
+  "tcth.condition.cooking_device.name": "Cooking Device",
+  "tcth.condition.cooking_device.desc": "Cooking device is one of: %s",
+  "tcth.condition.automated.name": "Automated",
+  "tcth.condition.automated.desc": "Automated production is %s",
+
+  "jobsplus.job.tcth.chef.name": "Chef",
+  "jobsplus.job.tcth.chef.description": "Cook daily meals, study regional cuisines, and hone your craft between stove and feast.",
+
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.name": "Culinary Experience I",
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.description": "Increases chef job experience gain to 1.5x.",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.name": "Culinary Experience II",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.description": "Increases chef job experience gain to 2x.",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.name": "Culinary Experience III",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.description": "Increases chef job experience gain to 2.5x."
 }
