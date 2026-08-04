@@ -1,12 +1,12 @@
 {
   "replace": true,
   "content": {
-    "gold_coin_high_tier": {
+    "cook_gold_coin_high_tier": {
       "type": "item",
       "content": "lightmanscurrency:coin_gold",
       "amount": {
         "min": 1,
-        "max": 18
+        "max": 6
       },
       "unitWorth": 100,
       "rarity": "RARE",

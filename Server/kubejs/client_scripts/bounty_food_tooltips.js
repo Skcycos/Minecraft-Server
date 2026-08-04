@@ -43,9 +43,6 @@ ItemEvents.modifyTooltips(event => {
       Text.of(`§7收购价：§f${e.unitWorth} §7铜币/个`),
       Text.of(`§8常见数量：${e.amountMin}～${e.amountMax}`)
     ]
-    if (e.repRequired && e.repRequired > 0) {
-      lines.push(Text.of(`§8告示板声望要求：${e.repRequired}+`))
-    }
     lines.push(Text.of(hint))
 
     try {

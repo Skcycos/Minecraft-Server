@@ -10,8 +10,7 @@
       },
       "unitWorth": 313,
       "weightMult": 0.18,
-      "rarity": "RARE",
-      "repRequired": 10
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_golden_salad": {
       "type": "item",
@@ -20,10 +19,9 @@
         "min": 1,
         "max": 2
       },
-      "unitWorth": 166,
+      "unitWorth": 524,
       "weightMult": 0.18,
-      "rarity": "RARE",
-      "repRequired": 10
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_spicy_blood_stew": {
       "type": "item",
@@ -34,8 +32,7 @@
       },
       "unitWorth": 156,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_fried_spring_roll": {
       "type": "item",
@@ -46,8 +43,7 @@
       },
       "unitWorth": 141,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_frost_lamb_chop": {
       "type": "item",
@@ -58,8 +54,7 @@
       },
       "unitWorth": 141,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_blaze_lamb_chop": {
       "type": "item",
@@ -70,8 +65,7 @@
       },
       "unitWorth": 133,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_buddha_jumps_over_the_wall": {
       "type": "item",
@@ -82,8 +76,7 @@
       },
       "unitWorth": 133,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_fondant_pie": {
       "type": "item",
@@ -94,8 +87,7 @@
       },
       "unitWorth": 113,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_crystal_lamb_chop": {
       "type": "item",
@@ -106,8 +98,7 @@
       },
       "unitWorth": 110,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "farmersdelight_roasted_mutton_chops": {
       "type": "item",
@@ -116,10 +107,9 @@
         "min": 1,
         "max": 2
       },
-      "unitWorth": 102,
+      "unitWorth": 91,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "farmersdelight_pumpkin_soup": {
       "type": "item",
@@ -128,10 +118,9 @@
         "min": 1,
         "max": 3
       },
-      "unitWorth": 93,
+      "unitWorth": 85,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_grilled_salmon": {
       "type": "item",
@@ -142,8 +131,7 @@
       },
       "unitWorth": 91,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_donkey_burger": {
       "type": "item",
@@ -154,8 +142,7 @@
       },
       "unitWorth": 90,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_noodle_soup": {
       "type": "item",
@@ -166,8 +153,7 @@
       },
       "unitWorth": 88,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_pasta_with_meatballs": {
       "type": "item",
@@ -178,8 +164,7 @@
       },
       "unitWorth": 82,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_vegetable_noodles": {
       "type": "item",
@@ -190,8 +175,7 @@
       },
       "unitWorth": 82,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_squid_ink_pasta": {
       "type": "item",
@@ -202,8 +186,7 @@
       },
       "unitWorth": 79,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "farmersdelight_baked_cod_stew": {
       "type": "item",
@@ -214,8 +197,7 @@
       },
       "unitWorth": 77,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_pan_seared_knight_steak": {
       "type": "item",
@@ -226,8 +208,7 @@
       },
       "unitWorth": 63,
       "weightMult": 0.4,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_dongpo_pork": {
       "type": "item",
@@ -293,8 +274,7 @@
       },
       "unitWorth": 120,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_cold_style_sashimi": {
       "type": "item",
@@ -305,8 +285,7 @@
       },
       "unitWorth": 147,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_desert_style_sashimi": {
       "type": "item",
@@ -317,8 +296,7 @@
       },
       "unitWorth": 118,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_tundra_style_sashimi": {
       "type": "item",
@@ -329,8 +307,7 @@
       },
       "unitWorth": 132,
       "weightMult": 0.28,
-      "rarity": "RARE",
-      "repRequired": 8
+      "rarity": "RARE"
     },
     "kaleidoscope_cookery_fearsome_thick_soup": {
       "type": "item",
@@ -352,8 +329,7 @@
       },
       "unitWorth": 108,
       "weightMult": 0.35,
-      "rarity": "RARE",
-      "repRequired": 5
+      "rarity": "RARE"
     }
   }
 }

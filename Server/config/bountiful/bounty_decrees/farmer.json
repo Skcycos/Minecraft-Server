@@ -4,12 +4,11 @@
     "farmer"
   ],
   "objectives": [
-    "farmer_objs",
-    "food_common_objs"
+    "farmer_objs"
   ],
   "rewards": [
     "_all_rews",
-    "gold_currency_rews"
+    "farmer_gold_currency_rews"
   ],
   "canSpawn": true,
   "canReveal": true,

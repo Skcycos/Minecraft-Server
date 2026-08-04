@@ -55,7 +55,7 @@
         "min": 4,
         "max": 24
       },
-      "unitWorth": 7
+      "unitWorth": 5
     },
     "farmersdelight_cooked_cod_slice": {
       "type": "item",
@@ -64,7 +64,7 @@
         "min": 4,
         "max": 24
       },
-      "unitWorth": 6
+      "unitWorth": 5
     },
     "kaleidoscope_cookery_cooked_rice": {
       "type": "item",
@@ -82,7 +82,7 @@
         "min": 1,
         "max": 6
       },
-      "unitWorth": 51,
+      "unitWorth": 8,
       "weightMult": 0.35,
       "rarity": "UNCOMMON"
     },
@@ -93,7 +93,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 11,
+      "unitWorth": 7,
       "weightMult": 0.85
     },
     "kaleidoscope_cookery_cooked_cut_small_meats": {
@@ -103,7 +103,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 14,
+      "unitWorth": 5,
       "weightMult": 0.85
     },
     "kaleidoscope_cookery_cooked_pork_belly": {
@@ -113,7 +113,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 14,
+      "unitWorth": 10,
       "weightMult": 0.85
     },
     "kaleidoscope_cookery_fried_egg": {
@@ -132,7 +132,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 14,
+      "unitWorth": 10,
       "weightMult": 0.85
     },
     "farmersdelight_cooked_chicken_cuts": {
@@ -142,7 +142,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 14,
+      "unitWorth": 5,
       "weightMult": 0.85
     },
     "farmersdelight_pumpkin_slice": {
@@ -152,7 +152,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 19,
+      "unitWorth": 5,
       "weightMult": 0.85
     },
     "minecraft_baked_potato": {
@@ -287,7 +287,7 @@
         "min": 1,
         "max": 6
       },
-      "unitWorth": 168,
+      "unitWorth": 90,
       "weightMult": 0.4,
       "rarity": "UNCOMMON"
     },
@@ -309,7 +309,7 @@
         "min": 2,
         "max": 8
       },
-      "unitWorth": 41,
+      "unitWorth": 10,
       "weightMult": 0.55,
       "rarity": "UNCOMMON"
     },
@@ -320,7 +320,7 @@
         "min": 2,
         "max": 8
       },
-      "unitWorth": 41,
+      "unitWorth": 10,
       "weightMult": 0.55,
       "rarity": "UNCOMMON"
     },
@@ -331,7 +331,7 @@
         "min": 2,
         "max": 8
       },
-      "unitWorth": 37,
+      "unitWorth": 9,
       "weightMult": 0.55,
       "rarity": "UNCOMMON"
     },
@@ -342,7 +342,7 @@
         "min": 2,
         "max": 12
       },
-      "unitWorth": 35,
+      "unitWorth": 9,
       "weightMult": 0.7
     },
     "farmersdelight_egg_sandwich": {
@@ -372,7 +372,7 @@
         "min": 2,
         "max": 12
       },
-      "unitWorth": 28,
+      "unitWorth": 61,
       "weightMult": 0.7
     },
     "kaleidoscope_cookery_lamb_and_radish_soup": {
@@ -522,7 +522,7 @@
         "min": 3,
         "max": 16
       },
-      "unitWorth": 14,
+      "unitWorth": 5,
       "weightMult": 0.85
     },
     "kaleidoscope_cookery_egg_fried_rice": {
@@ -659,7 +659,7 @@
         "min": 1,
         "max": 6
       },
-      "unitWorth": 18,
+      "unitWorth": 12,
       "weightMult": 0.85
     },
     "kaleidoscope_cookery_tomato_platter": {

@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.farmersdelight",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CookingPotResultSlotMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

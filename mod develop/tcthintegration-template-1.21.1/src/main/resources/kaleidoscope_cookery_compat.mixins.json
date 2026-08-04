@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.kaleidoscope",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PotBlockEntityMixin",
+    "StockpotBlockEntityMixin",
+    "SteamerBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
