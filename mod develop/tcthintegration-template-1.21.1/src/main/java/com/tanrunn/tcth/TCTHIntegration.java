@@ -6,11 +6,13 @@ import com.mojang.logging.LogUtils;
 import com.tanrunn.tcth.impl.compat.CompatLoader;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
+import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(TCTHIntegration.MODID)
@@ -41,5 +43,8 @@ public class TCTHIntegration {
 
         // Register the cooking-event debug listener (disabled by default).
         CookingDebug.init();
+
+        // Per-player cooking statistics archive (independent of Jobs+/Arc).
+        CookingStatsTracker.init(NeoForge.EVENT_BUS);
     }
 }

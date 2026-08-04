@@ -15,7 +15,6 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcher;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
@@ -84,7 +83,6 @@ public final class JobsPlusRewardModule {
         gameBus.addListener(JobsPlusRewardModule::onDishCooked);
         gameBus.addListener(JobsPlusRewardModule::onServerTick);
         gameBus.addListener(JobsPlusRewardModule::onServerStopping);
-        gameBus.addListener(JobsPlusRewardModule::onAddReloadListeners);
         TCTHIntegration.LOGGER.debug("[TCTH] Jobs+ reward module registered (disabled by default)");
     }
 
@@ -145,10 +143,6 @@ public final class JobsPlusRewardModule {
         }
         ACTIONS_THIS_TICK.clear();
         currentTick = 0;
-    }
-
-    static void onAddReloadListeners(AddReloadListenerEvent event) {
-        event.addListener(new DishTierManager());
     }
 
     /**

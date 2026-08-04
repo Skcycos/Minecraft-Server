@@ -4,6 +4,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
+import com.tanrunn.tcth.impl.stats.CookingStatsCommand;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -30,6 +31,7 @@ public final class TcthCommands {
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
+        CookingStatsCommand.register(dispatcher);
         dispatcher.register(Commands.literal("tcth")
                 .then(Commands.literal("debug")
                         .requires(src -> src.hasPermission(PERMISSION_LEVEL))

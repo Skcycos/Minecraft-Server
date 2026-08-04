@@ -60,6 +60,16 @@ public class Config {
             .comment("Maximum dish actions sent per player per tick (rate limit).")
             .defineInRange("maxEventsPerTickPerPlayer", 20, 1, 1000);
 
+    /**
+     * Cooking-statistics module (per-player cooking archive).
+     *
+     * <p>Independent of Jobs+/Arc and of the reward switch. Default ON.
+     */
+    public static final ModConfigSpec.BooleanValue COOKING_STATS_ENABLED = BUILDER
+            .comment("Enable the per-player cooking statistics archive.",
+                    "Independent of jobsPlusRewardsEnabled and of Jobs+/Arc.")
+            .define("cookingStatsEnabled", true);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

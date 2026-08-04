@@ -14,3 +14,6 @@ jobsPlusRewardsEnabled = true
 # Default: 20
 # Range: 1 ~ 1000
 maxEventsPerTickPerPlayer = 20
+#Enable the per-player cooking statistics archive.
+#Independent of jobsPlusRewardsEnabled and of Jobs+/Arc.
+cookingStatsEnabled = true
