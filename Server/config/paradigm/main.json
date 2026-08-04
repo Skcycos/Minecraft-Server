@@ -13,7 +13,7 @@
   },
   "restartEnable": {
     "description": "Enable or disable the scheduled server Restart module.",
-    "value": true
+    "value": false
   },
   "debugEnable": {
     "description": "Enable or disable debug logging for Paradigm modules. This can be very verbose.",
