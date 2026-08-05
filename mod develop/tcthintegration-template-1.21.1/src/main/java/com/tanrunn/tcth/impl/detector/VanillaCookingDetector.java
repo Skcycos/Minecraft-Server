@@ -7,6 +7,7 @@ import com.tanrunn.tcth.api.cooking.CookingDevice;
 import com.tanrunn.tcth.api.cooking.DishQuality;
 import com.tanrunn.tcth.impl.classifier.DishClassifier;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
+import com.tanrunn.tcth.impl.signature.DishSignatureService;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -47,6 +48,9 @@ public final class VanillaCookingDetector {
         if (!DishClassifier.isDish(result)) {
             return;
         }
+        // Sign the real crafted stack before the event is published; the
+        // event's defensive copy then carries the signature.
+        DishSignatureService.sign(player, result);
         publishDish(player, result, CookingDevice.CRAFTING);
     }
 
@@ -59,6 +63,8 @@ public final class VanillaCookingDetector {
         if (!DishClassifier.isDish(result)) {
             return;
         }
+        // Sign the real smelted stack before the event is published.
+        DishSignatureService.sign(player, result);
         publishDish(player, result, deviceForSmelting(player));
     }
 

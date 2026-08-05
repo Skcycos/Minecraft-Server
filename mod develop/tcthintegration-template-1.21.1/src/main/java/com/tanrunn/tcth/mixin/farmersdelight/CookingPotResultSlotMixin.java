@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapter;
 import com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightRecipeIds;
+import com.tanrunn.tcth.impl.signature.DishSignatureService;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -45,6 +46,11 @@ public abstract class CookingPotResultSlotMixin {
         CookingPotBlockEntity pot = slot.cookingPot;
         this.tcth$recipeIdSnapshot = FarmersDelightRecipeIds.resolveRecipeId(
                 ((CookingPotBlockEntityAccessor) (Object) pot).tcth$getUsedRecipeTracker());
+        // Sign the real onTake stack BEFORE the super call hands it to the
+        // player, so the delivered dish carries the signature.
+        if (player instanceof ServerPlayer serverPlayer) {
+            DishSignatureService.sign(serverPlayer, stack);
+        }
     }
 
     @Inject(method = "onTake", at = @At("RETURN"))

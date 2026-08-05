@@ -6,6 +6,16 @@
   "tcth.configuration.jobsPlusRewardsEnabled": "Jobs+ Rewards Enabled",
   "tcth.configuration.maxEventsPerTickPerPlayer": "Max Actions Per Tick Per Player",
   "tcth.configuration.fieldGuideCookbookEnabled": "Unlock Field Guide Entries on Dish Take-out",
+  "tcth.configuration.dishSignaturesEnabled": "Sign Dishes with Chef Signature",
+
+  "tooltip.tcth.cooking_signature": "Chef: %s",
+
+  "command.tcth.chef.inspect.dish": "Dish: %s",
+  "command.tcth.chef.inspect.chef": "Chef: %s",
+  "command.tcth.chef.inspect.valid": "Signature: valid",
+  "command.tcth.chef.inspect.unsigned": "This dish has no chef signature.",
+  "command.tcth.chef.inspect.notDish": "This is not a dish; it has no chef signature.",
+  "command.tcth.chef.inspect.playerRequired": "This command must be run by a player holding a dish.",
 
   "tcth.condition.dish_tier.name": "Dish Tier",
   "tcth.condition.dish_tier.desc": "Dish tier is %s",

@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.tanrunn.tcth.impl.compat.CompatLoader;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
+import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
 
 import net.neoforged.bus.api.IEventBus;
@@ -28,6 +29,10 @@ public class TCTHIntegration {
     public TCTHIntegration(IEventBus modEventBus, ModContainer modContainer) {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us.
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        // Register the tcth:cooking_signature data component (persistent +
+        // network synchronized).
+        CookingSignatureComponents.DATA_COMPONENTS.register(modEventBus);
 
         // Register the conditional Jobs+ module descriptor BEFORE init.
         // The implementation class is only loaded when Jobs+ is installed.

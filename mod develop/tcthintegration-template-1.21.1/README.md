@@ -138,3 +138,29 @@ Tanrunn. The original NeoForged MDK template license is retained in
 ---
 
 中文说明见 [README_zh_CN.md](README_zh_CN.md)。
+
+## Dish signing (phase 3C)
+
+Newly taken-out dishes carry the `tcth:cooking_signature` component
+(`chefId` = chef UUID, `chefName` = name snapshot at signing time) and show a
+single low-key `Chef: <name>` tooltip line on the client. `/tcth chef inspect`
+is a read-only inspector for the held dish.
+
+- Toggle: `dishSignaturesEnabled` (default `true`). Only affects signing of
+  NEWLY produced dishes; disabling it does not remove existing signatures and
+  does not affect cooking stats, Field Guide unlocks or Jobs+/Arc.
+- When: the player personally takes the dish out (crafting table, furnace,
+  smoker, FD cooking pot, KC wok/stockpot/steamer) — the REAL delivered stack
+  is signed. Automated extraction, failed take-outs, bowls/shovels/containers,
+  ingredients and `raw_dough` are never signed. Bulk results are signed as a
+  whole; re-processing by the same chef keeps the signature consistent.
+- Stacking: dishes by the same chef (same UUID + same name) stack together;
+  dishes by different chefs do not. After a rename, new dishes stack
+  separately from old-name signatures — a historical snapshot, expected
+  behaviour, not an error.
+- Security boundary: the signature is provenance/display data, NOT a trusted
+  economic credential. Creative mode, admin commands or third-party mods can
+  construct items with any component; future gold/experience/order settlement
+  must never trust the signature alone — rewards stay keyed to real server-side
+  `DishCookedEvent`s, order state and idempotent records. No reward is granted
+  from signatures in this phase.

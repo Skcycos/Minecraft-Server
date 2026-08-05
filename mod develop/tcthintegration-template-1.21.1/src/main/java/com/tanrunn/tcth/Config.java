@@ -86,6 +86,21 @@ public class Config {
                     "Default true. No effect when Field Guide is not installed.")
             .define("fieldGuideCookbookEnabled", true);
 
+    /**
+     * Dish signing (chef signature component).
+     *
+     * <p>Controls ONLY whether newly produced dishes get the
+     * {@code tcth:cooking_signature} component. Disabling it does not remove
+     * existing signatures, does not affect cooking stats, Field Guide unlocks,
+     * or Jobs+/Arc rewards, and does not affect unsigned dishes.
+     */
+    public static final ModConfigSpec.BooleanValue DISH_SIGNATURES_ENABLED = BUILDER
+            .comment("Sign finished dishes with the chef's tcth:cooking_signature component.",
+                    "Only controls signing of NEWLY produced dishes; does not remove",
+                    "existing signatures, and does not affect cooking stats, Field Guide,",
+                    "or Jobs+/Arc. Default true.")
+            .define("dishSignaturesEnabled", true);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

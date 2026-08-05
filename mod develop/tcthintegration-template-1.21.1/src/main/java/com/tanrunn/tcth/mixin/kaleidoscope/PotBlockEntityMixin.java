@@ -10,6 +10,9 @@ import com.github.ysbbbbbb.kaleidoscopecookery.api.blockentity.IPot;
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.PotBlockEntity;
 import com.tanrunn.tcth.api.cooking.CookingDevice;
 import com.tanrunn.tcth.impl.compat.kaleidoscope.KaleidoscopeDishAdapter;
+import com.tanrunn.tcth.impl.signature.CookingSignature;
+import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
+import com.tanrunn.tcth.impl.signature.DishSignatureService;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -45,17 +48,39 @@ public abstract class PotBlockEntityMixin {
     @Unique
     private ItemStack tcth$resultSnapshot = null;
 
+    @Unique
+    private CookingSignature tcth$previousSignature = null;
+
+    @Unique
+    private boolean tcth$hadPreviousSignature = false;
+
     @Inject(method = "takeOutProduct", at = @At("HEAD"))
     private void tcth$captureStatusAndResult(Level level, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         PotBlockEntity self = (PotBlockEntity) (Object) this;
         this.tcth$status = ((IPot) self).getStatus();
-        this.tcth$resultSnapshot = this.tcth$status == IPot.FINISHED ? self.getResult().copy() : null;
+        ItemStack liveResult = self.getResult();
+        if (this.tcth$status == IPot.FINISHED && liveResult != null && !liveResult.isEmpty()) {
+            // Order matters: 1) save any previous signature, 2) sign the live
+            // result, 3) THEN copy the signed result as the event snapshot so
+            // the DishCookedEvent carries the same signature as the delivered
+            // stack. On a failed take the previous signature is restored.
+            this.tcth$previousSignature = liveResult.get(CookingSignatureComponents.type());
+            this.tcth$hadPreviousSignature = this.tcth$previousSignature != null;
+            if (entity instanceof ServerPlayer serverPlayer) {
+                DishSignatureService.sign(serverPlayer, liveResult);
+            }
+            this.tcth$resultSnapshot = liveResult.copy();
+        }
     }
 
     @Inject(method = "takeOutProduct", at = @At("RETURN"))
     private void tcth$afterTake(Level level, LivingEntity entity, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         try {
             if (!cir.getReturnValue()) {
+                // Failed take: the result was NOT delivered. Restore the
+                // signature state from before this take-out (previous chef's
+                // signature if there was one, otherwise remove ours).
+                restorePreviousSignature();
                 return;
             }
             if (this.tcth$status != IPot.FINISHED || this.tcth$resultSnapshot == null || this.tcth$resultSnapshot.isEmpty()) {
@@ -71,6 +96,22 @@ public abstract class PotBlockEntityMixin {
         } finally {
             this.tcth$resultSnapshot = null;
             this.tcth$status = -1;
+            this.tcth$previousSignature = null;
+            this.tcth$hadPreviousSignature = false;
+        }
+    }
+
+    @Unique
+    private void restorePreviousSignature() {
+        PotBlockEntity self = (PotBlockEntity) (Object) this;
+        ItemStack live = self.getResult();
+        if (live == null || live.isEmpty()) {
+            return;
+        }
+        if (this.tcth$hadPreviousSignature) {
+            live.set(CookingSignatureComponents.type(), this.tcth$previousSignature);
+        } else {
+            live.remove(CookingSignatureComponents.type());
         }
     }
 }
