@@ -3,6 +3,10 @@
 Server/.DS_Store
 .~*.docx
 
+# Reasonix local workspace state
+.reasonix/
+reasonix.toml
+
 # NeoForge/runtime downloads and generated state
 Server/libraries/
 Server/cache/
