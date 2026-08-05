@@ -25,18 +25,32 @@ target mod is installed.
 
 | Mod | Mod ID | Tested version | Status |
 |---|---|---|---|
-| Jobs+ | `jobsplus` | 9.0.0 | planned |
-| Arc | `arc` | 9.0.0 | planned |
-| Kaleidoscope Cookery | `kaleidoscope_cookery` | 1.4.1 | planned |
-| Farmer's Delight | `farmersdelight` | 1.3.2 | planned |
-| Bountiful | `bountiful` | 8.0.0-beta.2 | planned |
-| Order to Cook | `ordertocook` | 1.3.5 | planned |
-| Lightman's Currency | `lightmanscurrency` | 2.3.0.5 | planned |
-| Kaleidoscope Compat | `kaleidoscope_compat` | 2.9.7 | planned |
+| Jobs+ | `jobsplus` | 9.0.0 | 已实现：厨师职业、料理经验、四路线能力树 |
+| Arc | `arc` | 9.0.0 | 已实现：料理 Action、条件和能力奖励 |
+| Kaleidoscope Cookery | `kaleidoscope_cookery` | 1.4.1 | 已实现：炒锅/汤锅/蒸笼出锅、品质与署名 |
+| Farmer's Delight | `farmersdelight` | 1.3.2 | 已实现：烹饪锅出锅、recipeId 与署名 |
+| Field Guide | `fieldguide` | 1.13.4 | 已实现：166 道料理图鉴与出锅解锁 |
+| Bountiful | `bountiful` | 8.0.0-beta.2 | 规划中 |
+| Order to Cook | `ordertocook` | 1.3.5 | 规划中 |
+| Lightman's Currency | `lightmanscurrency` | 2.3.0.5 | 规划中 |
+| Kaleidoscope Compat | `kaleidoscope_compat` | 2.9.7 | 已实现：`#c:tools/knife` 厨刀标签纳入刀工路线（4 种厨刀） |
 
-No compat feature is implemented yet; the table above lists the integration
-targets and the exact versions verified against the test server. Features are
-added one module at a time and are documented here as they land.
+Implemented integrations (English original):
+
+- **Jobs+**: chef job (`tcth:chef`), dish experience rewards, and the four-route
+  ability tree (knife / hearth / tasting / study).
+- **Arc**: dish-cooked actions and conditions, plus the ability-tree rewards
+  (tasting effects, fire damage multiplier, durability cancel).
+- **Kaleidoscope Cookery**: pot/stockpot/steamer take-out detection, quality
+  grading and chef signature.
+- **Farmer's Delight**: cooking-pot take-out detection, recipeId mapping and
+  chef signature.
+- **Field Guide**: 166-dish chef cookbook with unlock-on-take-out.
+- **Kaleidoscope Compat**: its `#c:tools/knife` tag feeds the knife route.
+
+The table above lists the integration targets and the exact versions verified
+against the test server. Features are added one module at a time and are
+documented here as they land.
 
 ## Installation
 
@@ -120,6 +134,21 @@ published, repeatable source. The rules are:
   license and redistribution rules. Third-party mod JARs are **never**
   committed to this repository and **never** bundled into the released TCTH
   JAR.
+
+### CI workflow template status
+
+`.github/workflows/build.yml` is a **template for the future standalone TCTH
+repository**. It downloads the five optional-mod dev jars (Farmer's Delight,
+Kaleidoscope Cookery, Arc, Jobs+, Field Guide) from pinned Modrinth CDN URLs and
+verifies each against the SHA-256 of the exact server JAR before running
+`./gradlew clean build --no-daemon`.
+
+> The current source lives at `mod develop/tcthintegration-template-1.21.1/`
+> inside the Minecraft-Server repository. GitHub only executes workflows from
+> the repository root, so this **nested workflow is not executed** by the
+> current Minecraft-Server repository and **no claim of a passing GitHub
+> Actions run is made**. Move it to the root of the standalone TCTH repository
+> (and commit the template) before relying on it.
 
 ## Links
 

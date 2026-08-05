@@ -101,7 +101,7 @@ class ChefPresetTest {
     // ---- powerups ----
 
     @Test
-    void powerupIHasMultiplier15AndExcludesHigherTiers() throws Exception {
+    void powerupIHasMultiplier125AndExcludesHigherTiers() throws Exception {
         JsonObject json = preset("arc/chef/powerup/culinary_experience_i.json");
         assertEquals("jobsplus:powerup", json.getAsJsonObject("holder").get("type").getAsString());
         assertEquals("tcth:chef/culinary_experience_i",
@@ -110,35 +110,40 @@ class ChefPresetTest {
         JsonObject reward = json.getAsJsonArray("rewards").get(0).getAsJsonObject();
         assertEquals("jobsplus:job_exp_multiplier", reward.get("type").getAsString());
         assertEquals("tcth:chef", reward.get("job").getAsString());
-        assertEquals(1.5, reward.get("multiplier").getAsDouble(), 0.0001);
+        assertEquals(1.25, reward.get("multiplier").getAsDouble(), 0.0001);
 
         JsonArray conditions = json.getAsJsonArray("conditions");
-        assertEquals(2, conditions.size(), "I must exclude II and III");
+        assertEquals(3, conditions.size(), "I must carry the master switch plus exclude II and III");
+        assertTrue(conditions.toString().contains("tcth:chef_abilities_enabled"));
         assertTrue(conditions.toString().contains("culinary_experience_ii"));
         assertTrue(conditions.toString().contains("culinary_experience_iii"));
     }
 
     @Test
-    void powerupIIHasMultiplier20AndExcludesIII() throws Exception {
+    void powerupIIHasMultiplier15AndExcludesIII() throws Exception {
         JsonObject json = preset("arc/chef/powerup/culinary_experience_ii.json");
         JsonObject reward = json.getAsJsonArray("rewards").get(0).getAsJsonObject();
-        assertEquals(2.0, reward.get("multiplier").getAsDouble(), 0.0001);
-        assertEquals(1, json.getAsJsonArray("conditions").size(), "II must exclude III only");
+        assertEquals(1.5, reward.get("multiplier").getAsDouble(), 0.0001);
+        assertEquals(2, json.getAsJsonArray("conditions").size(), "II must carry the master switch plus exclude III only");
         assertTrue(json.getAsJsonArray("conditions").toString().contains("culinary_experience_iii"));
     }
 
     @Test
-    void powerupIIIHasMultiplier25WithoutExclusions() throws Exception {
+    void powerupIIIHasMultiplier20WithOnlyMasterSwitch() throws Exception {
         JsonObject json = preset("arc/chef/powerup/culinary_experience_iii.json");
         JsonObject reward = json.getAsJsonArray("rewards").get(0).getAsJsonObject();
-        assertEquals(2.5, reward.get("multiplier").getAsDouble(), 0.0001);
-        assertTrue(!json.has("conditions") || json.getAsJsonArray("conditions").isEmpty(),
-                "III must not carry exclusion conditions");
+        assertEquals(2.0, reward.get("multiplier").getAsDouble(), 0.0001);
+        JsonArray conditions = json.getAsJsonArray("conditions");
+        assertEquals(1, conditions.size(), "III must carry only the master-switch condition");
+        assertTrue(conditions.toString().contains("tcth:chef_abilities_enabled"),
+                "III must be stoppable by the master switch");
+        assertFalse(conditions.toString().contains("powerup_not_active"),
+                "III must not exclude any higher tier");
     }
 
     @Test
     void powerupMultpliersMatchDescriptions() throws Exception {
-        double[] multipliers = {1.5, 2.0, 2.5};
+        double[] multipliers = {1.25, 1.5, 2.0};
         JsonObject en = GSON.fromJson(Files.readString(Path.of(
                 "src/main/resources/assets/tcth/lang/en_us.json"), StandardCharsets.UTF_8), JsonObject.class);
         for (int i = 0; i < 3; i++) {
@@ -256,15 +261,11 @@ class ChefPresetTest {
 
     // ---- translation keys (provided by the TCTH mod, not the preset) ----
 
-    private static final String[] EIGHT_KEYS = {
-            "jobsplus.job.tcth.chef.name",
-            "jobsplus.job.tcth.chef.description",
-            "jobsplus.powerup.tcth.chef.culinary_experience_i.name",
-            "jobsplus.powerup.tcth.chef.culinary_experience_i.description",
-            "jobsplus.powerup.tcth.chef.culinary_experience_ii.name",
-            "jobsplus.powerup.tcth.chef.culinary_experience_ii.description",
-            "jobsplus.powerup.tcth.chef.culinary_experience_iii.name",
-            "jobsplus.powerup.tcth.chef.culinary_experience_iii.description"
+    private static final String[] NODE_IDS = {
+            "knife_basic", "knife_adept", "knife_expert",
+            "hearth_basic", "hearth_master", "hearth_expert",
+            "tasting_basic", "tasting_nourishing", "tasting_feast",
+            "culinary_experience_i", "culinary_experience_ii", "culinary_experience_iii"
     };
 
     private JsonObject mainLang(String file) throws Exception {
@@ -273,13 +274,19 @@ class ChefPresetTest {
     }
 
     @Test
-    void mainModLangContainsAllEightKeysInBothLanguages() throws Exception {
+    void mainModLangContainsAllPowerupKeysInBothLanguages() throws Exception {
         JsonObject en = mainLang("en_us.json");
         JsonObject zh = mainLang("zh_cn.json");
-        for (String key : EIGHT_KEYS) {
-            assertTrue(en.has(key), "en_us missing " + key);
-            assertTrue(zh.has(key), "zh_cn missing " + key);
+        for (String id : NODE_IDS) {
+            assertTrue(en.has("jobsplus.powerup.tcth.chef." + id + ".name"), "en_us missing name " + id);
+            assertTrue(en.has("jobsplus.powerup.tcth.chef." + id + ".description"), "en_us missing description " + id);
+            assertTrue(zh.has("jobsplus.powerup.tcth.chef." + id + ".name"), "zh_cn missing name " + id);
+            assertTrue(zh.has("jobsplus.powerup.tcth.chef." + id + ".description"), "zh_cn missing description " + id);
         }
+        assertTrue(en.has("jobsplus.job.tcth.chef.name"));
+        assertTrue(en.has("jobsplus.job.tcth.chef.description"));
+        assertTrue(zh.has("jobsplus.job.tcth.chef.name"));
+        assertTrue(zh.has("jobsplus.job.tcth.chef.description"));
     }
 
     @Test
@@ -292,11 +299,11 @@ class ChefPresetTest {
     void presetJobAndPowerupsHaveNoInlineNames() throws Exception {
         assertNull(preset("jobsplus/jobs/chef.json").get("name"));
         assertNull(preset("jobsplus/jobs/chef.json").get("description"));
-        for (String id : new String[]{"i", "ii", "iii"}) {
-            JsonObject ui = preset("jobsplus/powerups/chef/culinary_experience_" + id + ".json");
-            assertNull(ui.get("name"), "UI powerup must not embed name");
-            assertNull(ui.get("description"), "UI powerup must not embed description");
-            JsonObject arc = preset("arc/chef/powerup/culinary_experience_" + id + ".json");
+        for (String id : NODE_IDS) {
+            JsonObject ui = preset("jobsplus/powerups/chef/" + id + ".json");
+            assertNull(ui.get("name"), "UI powerup must not embed name: " + id);
+            assertNull(ui.get("description"), "UI powerup must not embed description: " + id);
+            JsonObject arc = preset("arc/chef/powerup/" + id + ".json");
             assertNull(arc.get("name"));
             assertNull(arc.get("description"));
         }
@@ -308,10 +315,12 @@ class ChefPresetTest {
         String i = zh.get("jobsplus.powerup.tcth.chef.culinary_experience_i.description").getAsString();
         String ii = zh.get("jobsplus.powerup.tcth.chef.culinary_experience_ii.description").getAsString();
         String iii = zh.get("jobsplus.powerup.tcth.chef.culinary_experience_iii.description").getAsString();
-        assertTrue(i.contains("1.5 倍"), "I must read 1.5x, got: " + i);
+        assertTrue(i.contains("1.25 倍"), "I must read 1.25x, got: " + i);
         assertTrue(!i.contains("2 倍"), "I must not be written as 2x");
-        assertTrue(ii.contains("2 倍"), "II must read 2x, got: " + ii);
-        assertTrue(iii.contains("2.5 倍"), "III must read 2.5x, got: " + iii);
+        assertTrue(ii.contains("1.5 倍"), "II must read 1.5x, got: " + ii);
+        assertTrue(!ii.contains("2 倍"), "II must not be written as 2x");
+        assertTrue(iii.contains("2 倍"), "III must read 2x, got: " + iii);
+        assertTrue(!iii.contains("2.5"), "III must not read 2.5x");
     }
 
     @Test

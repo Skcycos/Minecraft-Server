@@ -1,0 +1,8 @@
+{
+  "job": "tcth:chef",
+  "icon": {
+    "id": "minecraft:campfire"
+  },
+  "price": 5,
+  "required_level": 10
+}

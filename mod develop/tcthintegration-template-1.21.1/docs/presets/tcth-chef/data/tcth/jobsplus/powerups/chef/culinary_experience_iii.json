@@ -4,6 +4,6 @@
     "id": "minecraft:experience_bottle"
   },
   "price": 15,
-  "required_level": 70,
+  "required_level": 75,
   "parent": "tcth:chef/culinary_experience_ii"
 }

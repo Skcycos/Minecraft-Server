@@ -101,6 +101,70 @@ public class Config {
                     "or Jobs+/Arc. Default true.")
             .define("dishSignaturesEnabled", true);
 
+    /**
+     * Chef ability tree master switch (phase 3D).
+     *
+     * <p>When {@code false}, the four chef ability routes (knife, hearth,
+     * tasting, study) must all stop their business effects. The study-route
+     * multipliers are driven by Arc data, so the preset's Arc actions carry
+     * TCTH conditions that read this switch. Job data loading and the Jobs+
+     * GUI are never affected.
+     */
+    public static final ModConfigSpec.BooleanValue CHEF_ABILITIES_ENABLED = BUILDER
+            .comment("Master switch for the chef ability tree (knife / hearth / tasting / study routes).",
+                    "When false, all four routes stop applying their effects.",
+                    "Does not delete purchased powerups and does not affect Jobs+ GUI.",
+                    "Default true.")
+            .define("chefAbilitiesEnabled", true);
+
+    /**
+     * Tasting-route effects toggle (phase 3D).
+     *
+     * <p>Controls the regeneration/resistance/speed effects granted after
+     * eating a {@code #tcth:chef_meals} dish. Independent of
+     * {@link #CHEF_ABILITIES_ENABLED} (both must be true for the effects).
+     */
+    public static final ModConfigSpec.BooleanValue TASTING_EFFECTS_ENABLED = BUILDER
+            .comment("Tasting route: grant short status effects after eating #tcth:chef_meals.",
+                    "Default true.")
+            .define("tastingEffectsEnabled", true);
+
+    /**
+     * Hearth-route fire resistance toggle (phase 3D).
+     *
+     * <p>Controls the {@code minecraft:is_fire} damage reduction (15/30/50%).
+     * Independent of {@link #CHEF_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue FIRE_RESISTANCE_ABILITIES_ENABLED = BUILDER
+            .comment("Hearth route: reduce fire damage (#minecraft:is_fire) by 15/30/50%.",
+                    "Default true.")
+            .define("fireResistanceAbilitiesEnabled", true);
+
+    /**
+     * Knife-route durability toggle (phase 3D).
+     *
+     * <p>Controls the chance to skip durability loss on {@code #c:tools/knife}
+     * items (10/20/35%). Independent of {@link #CHEF_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue KNIFE_DURABILITY_ABILITIES_ENABLED = BUILDER
+            .comment("Knife route: chance to skip durability loss on #c:tools/knife items.",
+                    "Default true.")
+            .define("knifeDurabilityAbilitiesEnabled", true);
+
+    /**
+     * Tasting-route per-player cooldown in ticks (phase 3D).
+     *
+     * <p>Once a tasting effect set has been granted, further grants for the
+     * same player are blocked for this many ticks. Shared between all three
+     * tasting nodes. Never written to player NBT; cleared on logout and on
+     * server stop.
+     */
+    public static final ModConfigSpec.IntValue TASTING_EFFECT_COOLDOWN_TICKS = BUILDER
+            .comment("Tasting route anti-farm cooldown in ticks (default 400 = 20 s).",
+                    "Per-player, in-memory only, shared by all tasting nodes.",
+                    "Default: 400. Range: 1 ~ 72000.")
+            .defineInRange("tastingEffectCooldownTicks", 400, 1, 72000);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

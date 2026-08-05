@@ -139,10 +139,12 @@ dependencies {
     compileOnly "blank:farmersdelight:1.3.2"
     compileOnly "blank:kaleidoscopecookery:1.4.1"
     compileOnly "blank:arc:9.0.0"
+    compileOnly "blank:jobsplus:9.0.0"
     compileOnly "blank:fieldguide:1.13.4"
     testImplementation "blank:farmersdelight:1.3.2"
     testImplementation "blank:kaleidoscopecookery:1.4.1"
     testImplementation "blank:arc:9.0.0"
+    testImplementation "blank:jobsplus:9.0.0"
     testImplementation "blank:fieldguide:1.13.4"
 
     // Example optional mod dependency with JEI

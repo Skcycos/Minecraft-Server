@@ -4,12 +4,21 @@ import com.daqem.arc.api.action.data.type.ActionDataType;
 import com.daqem.arc.api.action.data.type.IActionDataType;
 import com.daqem.arc.api.action.type.ActionType;
 import com.daqem.arc.api.condition.type.ConditionType;
+import com.daqem.arc.api.reward.type.IRewardType;
+import com.daqem.arc.api.reward.type.RewardType;
 import com.daqem.arc.registry.ArcRegistry;
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.AutomatedCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilitiesEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.CookingDeviceCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishQualityCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishTierCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireDamageCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireResistanceEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.KnifeDurabilityEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingCooldownCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingEffectsEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsReward;
 
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -65,6 +74,24 @@ public final class TcthArcRegistrar {
     public static final ConditionType<AutomatedCondition> AUTOMATED_CONDITION =
             ConditionType.register(id("automated"), new AutomatedCondition.Serializer());
 
+    // ---- phase 3D: chef ability tree conditions ----
+    public static final ConditionType<ChefAbilitiesEnabledCondition> CHEF_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("chef_abilities_enabled"), new ChefAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<TastingEffectsEnabledCondition> TASTING_EFFECTS_ENABLED_CONDITION =
+            ConditionType.register(id("tasting_effects_enabled"), new TastingEffectsEnabledCondition.Serializer());
+    public static final ConditionType<FireResistanceEnabledCondition> FIRE_RESISTANCE_ENABLED_CONDITION =
+            ConditionType.register(id("fire_resistance_enabled"), new FireResistanceEnabledCondition.Serializer());
+    public static final ConditionType<KnifeDurabilityEnabledCondition> KNIFE_DURABILITY_ENABLED_CONDITION =
+            ConditionType.register(id("knife_durability_enabled"), new KnifeDurabilityEnabledCondition.Serializer());
+    public static final ConditionType<FireDamageCondition> FIRE_DAMAGE_CONDITION =
+            ConditionType.register(id("fire_damage"), new FireDamageCondition.Serializer());
+    public static final ConditionType<TastingCooldownCondition> TASTING_COOLDOWN_CONDITION =
+            ConditionType.register(id("tasting_cooldown"), new TastingCooldownCondition.Serializer());
+
+    // ---- phase 3D: chef ability tree rewards ----
+    public static final IRewardType<TastingEffectsReward> TASTING_EFFECTS =
+            RewardType.register(id("tasting_effects"), new TastingEffectsReward.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -87,6 +114,17 @@ public final class TcthArcRegistrar {
         checkDataType(QUALITY, "quality");
         checkDataType(TIER, "tier");
         checkDataType(AUTOMATED, "automated");
+
+        // Phase 3D: chef ability tree condition types.
+        checkInRegistry(ArcRegistry.CONDITION, id("chef_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("tasting_effects_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("fire_resistance_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("knife_durability_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("fire_damage"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("tasting_cooldown"), "condition type");
+
+        // Phase 3D: chef ability tree reward type.
+        checkInRegistry(ArcRegistry.REWARD, id("tasting_effects"), "reward type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

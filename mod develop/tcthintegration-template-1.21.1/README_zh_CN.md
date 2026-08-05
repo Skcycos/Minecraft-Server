@@ -23,17 +23,27 @@
 
 | 模组 | Mod ID | 已验证版本 | 状态 |
 |---|---|---|---|
-| Jobs+ | `jobsplus` | 9.0.0 | 规划中 |
-| Arc | `arc` | 9.0.0 | 规划中 |
-| Kaleidoscope Cookery | `kaleidoscope_cookery` | 1.4.1 | 规划中 |
-| Farmer's Delight | `farmersdelight` | 1.3.2 | 规划中 |
+| Jobs+ | `jobsplus` | 9.0.0 | 已实现：厨师职业、料理经验、四路线能力树 |
+| Arc | `arc` | 9.0.0 | 已实现：料理 Action、条件和能力奖励 |
+| Kaleidoscope Cookery | `kaleidoscope_cookery` | 1.4.1 | 已实现：炒锅/汤锅/蒸笼出锅、品质与署名 |
+| Farmer's Delight | `farmersdelight` | 1.3.2 | 已实现：烹饪锅出锅、recipeId 与署名 |
+| Field Guide | `fieldguide` | 1.13.4 | 已实现：166 道料理图鉴与出锅解锁 |
 | Bountiful | `bountiful` | 8.0.0-beta.2 | 规划中 |
 | Order to Cook | `ordertocook` | 1.3.5 | 规划中 |
 | Lightman's Currency | `lightmanscurrency` | 2.3.0.5 | 规划中 |
-| Kaleidoscope Compat | `kaleidoscope_compat` | 2.9.7 | 规划中 |
+| Kaleidoscope Compat | `kaleidoscope_compat` | 2.9.7 | 已实现：`#c:tools/knife` 厨刀标签纳入刀工路线（4 种厨刀） |
 
-目前尚未实现任何联动功能；上表列出的是联动目标及在测试服务器上核对过的
-精确版本。功能将逐模块落地，并在文档中如实登记。
+已实现功能一览：
+
+- **Jobs+**：厨师职业（`tcth:chef`）、料理经验奖励、四路线能力树（刀工/炉火/品鉴/研修）。
+- **Arc**：料理出锅 Action 与条件，以及能力树奖励（品鉴效果、火焰伤害倍率、耐久取消）。
+- **Kaleidoscope Cookery**：炒锅/汤锅/蒸笼出锅识别、品质分级与主厨署名。
+- **Farmer's Delight**：烹饪锅出锅识别、recipeId 映射与主厨署名。
+- **Field Guide**：166 道料理厨师图鉴与出锅解锁。
+- **Kaleidoscope Compat**：其 `#c:tools/knife` 标签为刀工路线提供厨刀集合。
+
+上表列出的是联动目标及在测试服务器上核对过的精确版本。功能将逐模块落地，
+并在文档中如实登记。
 
 ## 安装方法
 
@@ -94,6 +104,19 @@ GitHub Actions 在干净的运行器上构建，**没有本地 `Server/mods/`，
   替代构建期依赖方案。**
 - CI 中直接下载第三方 JAR 必须遵守对应项目的许可证与再分发规则。第三方模组
   JAR **绝不**提交到本仓库，也**绝不**打包进 TCTH 发布 JAR。
+
+### CI 工作流模板状态
+
+`.github/workflows/build.yml` 是**未来独立 TCTH 仓库使用的工作流模板**：从
+固定的 Modrinth CDN 链接下载五个可选模组开发 JAR（Farmer's Delight、
+Kaleidoscope Cookery、Arc、Jobs+、Field Guide），并逐一用服务器实际 JAR 的
+SHA-256 校验后执行 `./gradlew clean build --no-daemon`。
+
+> 当前源码位于 Minecraft-Server 仓库子目录
+> `mod develop/tcthintegration-template-1.21.1/`。GitHub 只执行仓库根目录的
+> workflow，因此该**嵌套工作流不会被当前 Minecraft-Server 仓库执行**，也
+> **不得声称 GitHub Actions 已实际通过**。迁移到独立 TCTH 仓库根目录后再
+> 依赖它。
 
 ## 链接
 

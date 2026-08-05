@@ -1,0 +1,9 @@
+{
+  "job": "tcth:chef",
+  "icon": {
+    "id": "minecraft:golden_apple"
+  },
+  "price": 18,
+  "required_level": 55,
+  "parent": "tcth:chef/tasting_nourishing"
+}

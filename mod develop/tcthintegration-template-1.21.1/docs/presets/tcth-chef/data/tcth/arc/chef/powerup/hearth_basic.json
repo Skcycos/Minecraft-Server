@@ -1,0 +1,19 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:chef/hearth_basic"
+  },
+  "type": "arc:on_get_hurt",
+  "rewards": [
+    {
+      "type": "arc:damage_multiplier",
+      "multiplier": 0.85
+    }
+  ],
+  "conditions": [
+    { "type": "tcth:fire_damage" },
+    { "type": "tcth:fire_resistance_enabled" },
+    { "type": "jobsplus:powerup_not_active", "powerup": "tcth:chef/hearth_master" },
+    { "type": "jobsplus:powerup_not_active", "powerup": "tcth:chef/hearth_expert" }
+  ]
+}

@@ -8,7 +8,10 @@
     {
       "type": "jobsplus:job_exp_multiplier",
       "job": "tcth:chef",
-      "multiplier": 2.5
+      "multiplier": 2.0
     }
+  ],
+  "conditions": [
+    { "type": "tcth:chef_abilities_enabled" }
   ]
 }
