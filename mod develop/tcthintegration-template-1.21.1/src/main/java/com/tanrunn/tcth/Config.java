@@ -70,6 +70,22 @@ public class Config {
                     "Independent of jobsPlusRewardsEnabled and of Jobs+/Arc.")
             .define("cookingStatsEnabled", true);
 
+    /**
+     * Field Guide cookbook unlock module.
+     *
+     * <p>Controls ONLY whether TCTH unlocks Field Guide entries when a dish is
+     * taken out of a cooking device ({@code DishCookedEvent}). It does not
+     * control the Field Guide mod itself, does not affect cooking statistics,
+     * and does not affect Jobs+/Arc experience rewards. Default ON; has no
+     * effect when Field Guide is not installed.
+     */
+    public static final ModConfigSpec.BooleanValue FIELD_GUIDE_COOKBOOK_ENABLED = BUILDER
+            .comment("Unlock Field Guide entries when a dish is cooked (take-out).",
+                    "Only controls the TCTH dish-cooked unlock; does not control the",
+                    "Field Guide mod itself, cooking stats, or Jobs+/Arc rewards.",
+                    "Default true. No effect when Field Guide is not installed.")
+            .define("fieldGuideCookbookEnabled", true);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

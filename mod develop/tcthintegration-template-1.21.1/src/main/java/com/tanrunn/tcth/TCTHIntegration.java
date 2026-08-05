@@ -34,6 +34,11 @@ public class TCTHIntegration {
         CompatLoader.register("jobsplus",
                 "com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModule");
 
+        // Field Guide cookbook unlock module (optional; loaded only when the
+        // Field Guide mod is installed).
+        CompatLoader.register("fieldguide",
+                "com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModule");
+
         // Bootstrap the conditional compat module loader.
         // Modules themselves are registered in later phases (see com.tanrunn.tcth.impl.compat).
         CompatLoader.init(modEventBus);

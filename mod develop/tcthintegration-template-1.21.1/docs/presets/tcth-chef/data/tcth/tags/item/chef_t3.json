@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "farmersdelight:baked_cod_stew",
+    "farmersdelight:grilled_salmon",
+    "farmersdelight:noodle_soup",
+    "farmersdelight:pasta_with_meatballs",
+    "farmersdelight:pumpkin_soup",
+    "farmersdelight:roasted_mutton_chops",
+    "farmersdelight:squid_ink_pasta",
+    "farmersdelight:vegetable_noodles",
+    "kaleidoscope_cookery:blaze_lamb_chop",
+    "kaleidoscope_cookery:buddha_jumps_over_the_wall",
+    "kaleidoscope_cookery:chorus_fried_egg",
+    "kaleidoscope_cookery:crimson_fungus_pot_soup",
+    "kaleidoscope_cookery:crystal_lamb_chop",
+    "kaleidoscope_cookery:dongpo_pork",
+    "kaleidoscope_cookery:donkey_burger",
+    "kaleidoscope_cookery:end_style_sashimi",
+    "kaleidoscope_cookery:fondant_pie",
+    "kaleidoscope_cookery:fried_spring_roll",
+    "kaleidoscope_cookery:frost_lamb_chop",
+    "kaleidoscope_cookery:golden_salad",
+    "kaleidoscope_cookery:pan_seared_knight_steak",
+    "kaleidoscope_cookery:spicy_blood_stew",
+    "kaleidoscope_cookery:spicy_chicken",
+    "kaleidoscope_cookery:warped_fungus_pot_soup"
+  ]
+}

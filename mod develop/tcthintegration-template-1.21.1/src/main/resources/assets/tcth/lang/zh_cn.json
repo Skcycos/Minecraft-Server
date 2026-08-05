@@ -5,6 +5,7 @@
   "tcth.configuration.enabled": "启用",
   "tcth.configuration.jobsPlusRewardsEnabled": "启用 Jobs+ 奖励",
   "tcth.configuration.maxEventsPerTickPerPlayer": "每玩家每刻最大 Action 数",
+  "tcth.configuration.fieldGuideCookbookEnabled": "出锅解锁 Field Guide 图鉴条目",
 
   "tcth.condition.dish_tier.name": "料理等级",
   "tcth.condition.dish_tier.desc": "料理等级为 %s",
@@ -23,5 +24,9 @@
   "jobsplus.powerup.tcth.chef.culinary_experience_ii.name": "庖厨心得 II",
   "jobsplus.powerup.tcth.chef.culinary_experience_ii.description": "厨师职业经验提升至 2 倍。",
   "jobsplus.powerup.tcth.chef.culinary_experience_iii.name": "庖厨心得 III",
-  "jobsplus.powerup.tcth.chef.culinary_experience_iii.description": "厨师职业经验提升至 2.5 倍。"
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.description": "厨师职业经验提升至 2.5 倍。",
+
+  "category.tcth.fieldguide.chef_common": "厨师图鉴 · 简餐",
+  "category.tcth.fieldguide.chef_t2": "厨师图鉴 · 家常",
+  "category.tcth.fieldguide.chef_t3": "厨师图鉴 · 珍馐"
 }
