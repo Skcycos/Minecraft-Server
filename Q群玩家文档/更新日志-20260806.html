@@ -16,6 +16,7 @@
     --border: #2a2a4a;
     --green: #4ecdc4;
     --orange: #ff6b35;
+    --purple: #a855f7;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -26,10 +27,7 @@
     padding: 20px;
     min-height: 100vh;
   }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+  .container { max-width: 800px; margin: 0 auto; }
   .header {
     text-align: center;
     padding: 40px 20px;
@@ -42,10 +40,8 @@
   .header::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
     animation: pulse 4s ease-in-out infinite;
   }
@@ -53,18 +49,8 @@
     0%, 100% { transform: scale(1); opacity: 0.5; }
     50% { transform: scale(1.1); opacity: 0.8; }
   }
-  .header h1 {
-    font-size: 2em;
-    font-weight: 800;
-    position: relative;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  }
-  .header .subtitle {
-    color: rgba(255,255,255,0.85);
-    margin-top: 8px;
-    font-size: 0.95em;
-    position: relative;
-  }
+  .header h1 { font-size: 2em; font-weight: 800; position: relative; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+  .header .subtitle { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 0.95em; position: relative; }
   .badge {
     display: inline-block;
     padding: 4px 12px;
@@ -77,6 +63,7 @@
   .badge-update { background: var(--gold); color: #1a1a2e; }
   .badge-fix { background: var(--green); color: #1a1a2e; }
   .badge-warn { background: var(--orange); color: white; }
+  .badge-client { background: var(--purple); color: white; }
 
   .card {
     background: var(--card-bg);
@@ -86,10 +73,7 @@
     border: 1px solid var(--border);
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
   .card-title {
     font-size: 1.3em;
     font-weight: 700;
@@ -99,12 +83,7 @@
     gap: 10px;
   }
   .card-title .icon { font-size: 1.4em; }
-  .divider {
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    margin: 20px 0;
-    border-radius: 1px;
-  }
+  .divider { height: 2px; background: linear-gradient(90deg, var(--accent), transparent); margin: 20px 0; border-radius: 1px; }
 
   .section { margin-bottom: 20px; }
   .section h3 {
@@ -124,31 +103,13 @@
     border-radius: 0 8px 8px 0;
     margin: 12px 0;
   }
-  .highlight-box.gold {
-    background: rgba(245, 166, 35, 0.1);
-    border-left-color: var(--gold);
-  }
-  .highlight-box.green {
-    background: rgba(78, 205, 196, 0.1);
-    border-left-color: var(--green);
-  }
+  .highlight-box.gold { background: rgba(245, 166, 35, 0.1); border-left-color: var(--gold); }
+  .highlight-box.green { background: rgba(78, 205, 196, 0.1); border-left-color: var(--green); }
+  .highlight-box.purple { background: rgba(168, 85, 247, 0.1); border-left-color: var(--purple); }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
-    font-size: 0.9em;
-  }
-  th {
-    background: var(--accent2);
-    padding: 10px 12px;
-    text-align: left;
-    font-weight: 600;
-  }
-  td {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-  }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
+  th { background: var(--accent2); padding: 10px 12px; text-align: left; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
   tr:hover td { background: rgba(255,255,255,0.03); }
 
   .tag {
@@ -163,69 +124,30 @@
   .tag.fire { color: var(--orange); }
   .tag.chef { color: var(--gold); }
   .tag.farmer { color: var(--green); }
+  .tag.client { color: var(--purple); }
 
-  .timeline {
-    position: relative;
-    padding-left: 24px;
-  }
+  .timeline { position: relative; padding-left: 24px; }
   .timeline::before {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 4px;
-    bottom: 4px;
+    left: 7px; top: 4px; bottom: 4px;
     width: 2px;
     background: linear-gradient(180deg, var(--accent), var(--green));
   }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 16px;
-    padding-left: 16px;
-  }
+  .timeline-item { position: relative; margin-bottom: 16px; padding-left: 16px; }
   .timeline-item::before {
     content: "";
     position: absolute;
-    left: -21px;
-    top: 8px;
-    width: 10px;
-    height: 10px;
+    left: -21px; top: 8px;
+    width: 10px; height: 10px;
     border-radius: 50%;
     background: var(--accent);
     border: 2px solid var(--card-bg);
   }
-  .timeline-item .time {
-    font-size: 0.8em;
-    color: var(--text-muted);
-    margin-bottom: 2px;
-  }
-  .timeline-item .content {
-    font-size: 0.95em;
-  }
+  .timeline-item .time { font-size: 0.8em; color: var(--text-muted); margin-bottom: 2px; }
+  .timeline-item .content { font-size: 0.95em; }
 
-  .footer {
-    text-align: center;
-    padding: 24px;
-    color: var(--text-muted);
-    font-size: 0.85em;
-  }
-  .footer a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: var(--accent);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: 600;
-    margin-top: 8px;
-    transition: background 0.2s;
-  }
-  .btn:hover { background: #d63a52; }
+  .footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.85em; }
 
   @media (max-width: 600px) {
     body { padding: 12px; }
@@ -247,19 +169,72 @@
       <span class="badge badge-new">TCTH 0.2.0</span>
       <span class="badge badge-update">模组扩充</span>
       <span class="badge badge-fix">枪械调整</span>
+      <span class="badge badge-client">客户端增强</span>
     </div>
   </div>
 
   <!-- 更新概览 -->
   <div class="card">
     <div class="card-title"><span class="icon">📋</span> 更新概览</div>
-    <p>更新区间：<strong>2026-08-05 19:49</strong> ～ <strong>2026-08-06 13:48</strong>，共 <strong>7</strong> 个提交。</p>
-    <p style="margin-top: 8px; color: var(--text-muted);">核心：TCTH 职业模组 0.1.0 → <strong style="color: var(--accent);">0.2.0</strong>，服务器模组扩充与新玩法部署，枪械体系平衡调整。</p>
+    <p>更新区间：<strong>2026-08-05 19:49</strong> ～ <strong>2026-08-06 14:49</strong>，共 <strong>8</strong> 个提交。</p>
+    <p style="margin-top: 8px; color: var(--text-muted);">核心：TCTH 职业模组 0.1.0 → <strong style="color: var(--accent);">0.2.0</strong>，服务器模组扩充、枪械体系平衡调整、客户端体验大幅增强。</p>
   </div>
 
-  <!-- 最新调整 -->
+  <!-- 最新调整：客户端增强 -->
   <div class="card">
-    <div class="card-title"><span class="icon">🔫</span> 最新调整 <span class="badge badge-warn">08-06 13:48</span></div>
+    <div class="card-title"><span class="icon">🖥️</span> 客户端增强 <span class="badge badge-client">08-06 14:49</span></div>
+    <p>通过 AutoModpack 自动分发，新增 <strong>19 个客户端模组</strong>，涵盖性能、视觉、操作、搜索等方面：</p>
+
+    <div class="section" style="margin-top: 16px;">
+      <h3>⚡ 性能优化</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Sodium</td><td>高性能渲染优化，大幅提升帧率与渲染效率</td></tr>
+        <tr><td>Sodium Extra</td><td>补充 OptiFine 风格的视觉选项（动画、粒子、天空等控制）</td></tr>
+        <tr><td>Reese's Sodium Options</td><td>更紧凑、可搜索的 Sodium 替代视频设置界面</td></tr>
+        <tr><td>Entity Culling</td><td>异步路径追踪隐藏不可见实体与方块实体，提升帧率</td></tr>
+        <tr><td>Cloth Config API</td><td>通用配置界面库，供其他模组快速生成设置屏幕</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>🎬 视觉与镜头</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Iris 光影加载器</td><td>现代着色器模组，兼容多数 OptiFine 光影包</td></tr>
+        <tr><td>Camera Overhaul</td><td>根据移动、转向、跳跃、爆炸等添加倾斜、晃动等电影感效果</td></tr>
+        <tr><td>Smooth F5</td><td>平滑第三人称视角切换，F5 过渡更电影化</td></tr>
+        <tr><td>AAA Particles</td><td>用 Effekseer 特效替换部分世界粒子（爆炸、火光、萤火虫等）</td></tr>
+        <tr><td>Reactions</td><td>玩家面部动画，添加眨眼、望远镜瞄准闭眼等表情与动态面部效果</td></tr>
+        <tr><td>Cinematic Respawn</td><td>用平滑过场替换原版死亡画面并自动重生</td></tr>
+        <tr><td>Female Gender Mod</td><td>女性身体模型定制，为玩家模型添加可调节的胸部等女性化外观选项</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>🖱️ 操作与搜索</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Mouse Tweaks</td><td>增强库存鼠标操作（拖拽、滚轮快速移动物品等）</td></tr>
+        <tr><td>Just Enough Characters</td><td>为 JEI 等搜索界面添加中文拼音搜索支持</td></tr>
+        <tr><td>IMBlocker</td><td>根据游戏状态（聊天、搜索等）自动启用/禁用输入法</td></tr>
+        <tr><td>Packed Packs</td><td>资源包/数据包管理增强，支持配置文件、多选、拖拽、搜索、过滤等</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>📚 前置库</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Kotlin For Forge</td><td>Kotlin 语言支持前置库，为 Forge/NeoForge 提供 Kotlin 运行时、协程、序列化等</td></tr>
+        <tr><td>SuperMartijn642 Config Lib</td><td>配置库，简化模组配置文件的创建、重载、同步与生成</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 枪械体系调整 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🔫</span> 枪械体系调整 <span class="badge badge-warn">08-06 13:48</span></div>
     <div class="section">
       <h3>枪械体系</h3>
       <div class="highlight-box">
@@ -326,7 +301,7 @@
       <tr><td>Waves 海浪 / Biolith</td><td>海洋/海岸与生物群系扩展</td></tr>
       <tr><td>Caverns & Chasms 深渊与裂隙</td><td>洞穴生物群系全面升级</td></tr>
       <tr><td>Ping-Wheel 标记轮盘</td><td>服务器内置信号标记（右键呼出）</td></tr>
-      <tr><td>Shellbound 飞艇</td><td>主世界<strong>自然生成的空中飞艇结构</strong>（内含探索内容与战利品，不是可驾驶的）</td></tr>
+      <tr><td>Shellbound 飞艇</td><td>主世界自然生成的空中飞艇结构（内含探索内容与战利品）</td></tr>
       <tr><td>Vercte Satchels 随身挎包</td><td>额外随身背包</td></tr>
       <tr><td>Display Delight</td><td>料理食物可视化展示</td></tr>
       <tr><td>GD656 Killicon 击杀图标</td><td>击杀反馈图标</td></tr>
@@ -380,6 +355,14 @@
   <div class="card">
     <div class="card-title"><span class="icon">📜</span> 提交记录</div>
     <div class="timeline">
+      <div class="timeline-item">
+        <div class="time">08-06 14:49</div>
+        <div class="content"><span class="badge badge-client">客户端</span> 同步 automodpack 整合包分发资产（19 个客户端模组）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 14:49</div>
+        <div class="content"><span class="badge badge-fix">修复</span> 移除误提交的 temp_en_us.json 并加入忽略规则</div>
+      </div>
       <div class="timeline-item">
         <div class="time">08-06 13:48</div>
         <div class="content"><span class="badge badge-fix">修复</span> 停用 tacz 枪械、更新 scguns 配置并新增更新日志</div>

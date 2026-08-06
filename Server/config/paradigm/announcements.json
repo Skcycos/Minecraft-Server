@@ -17,7 +17,7 @@
   },
   "prefix": {
     "description": "Prefix prepended to all announcement messages. Use {prefix} placeholder in messages to apply.",
-    "value": "<bold><gradient:#22D3EE:#A78BFA>[Paradigm]</gradient></bold>"
+    "value": "<bold><gradient:#22D3EE:#A78BFA>[食韵筑家]</gradient></bold>"
   },
   "header": {
     "description": "The header message sent before a global announcement. Supports colors, gradients, bold, etc.",
@@ -34,15 +34,15 @@
   "globalMessages": {
     "description": "List of messages to be broadcast in global chat. Supports colors, gradients, bold, italic, underline, etc.",
     "value": [
-      "<bold><gradient:#22D3EE:#A78BFA>[Paradigm]</gradient></bold> <color:#F8FAFC>Welcome!</color> <color:#94A3B8>Type </color><click:suggest_command:/paradigm help><gradient:#38BDF8:#3A86FF><bold><underline>/paradigm help</underline></bold></gradient></click><color:#94A3B8> to see available commands.</color>",
-      "<bold><gradient:#FF006E:#8338EC>[Paradigm]</gradient></bold> <color:#F8FAFC>Links in chat are clickable:</color> <click:open_url:https://example.com><gradient:#C4B5FD:#A78BFA><underline>https://example.com</underline></gradient></click>",
-      "<bold><gradient:#3A86FF:#FB5607>[Paradigm]</gradient></bold> <color:#F8FAFC>Tip:</color> <gradient:#F472B6:#FF006E>Use a group chat</gradient><color:#94A3B8> with </color><click:suggest_command:/groupchat><gradient:#22D3EE:#3A86FF><bold><underline>/groupchat</underline></bold></gradient></click><color:#94A3B8> to keep things organized.</color>",
-      "<bold><gradient:#FFD700:#FB5607>[Paradigm]</gradient></bold> <gradient:#06D6A0:#1ABC9C>Server is running smoothly!</gradient>"
+      "<bold><gradient:#22D3EE:#A78BFA>[食韵筑家]</gradient></bold> <color:#F8FAFC>欢迎来到食韵筑家！</color> <color:#94A3B8>输入 </color><click:suggest_command:/paradigm help><gradient:#38BDF8:#3A86FF><bold><underline>/paradigm help</underline></bold></gradient></click><color:#94A3B8> 查看可用命令。</color>",
+      "<bold><gradient:#FF006E:#8338EC>[食韵筑家]</gradient></bold> <color:#F8FAFC>在这里，</color><gradient:#C4B5FD:#A78BFA>种植料理、经营餐馆</gradient><color:#F8FAFC>，</color><gradient:#C4B5FD:#A78BFA>筑屋聚村、交易共生</gradient><color:#F8FAFC>。</color>",
+      "<bold><gradient:#3A86FF:#FB5607>[食韵筑家]</gradient></bold> <color:#F8FAFC>加入玩家交流群：</color><click:copy:903730159><gradient:#22D3EE:#3A86FF><bold><underline>903730159</underline></bold></gradient></click><color:#94A3B8> 点击复制群号</color>",
+      "<bold><gradient:#FFD700:#FB5607>[食韵筑家]</gradient></bold> <gradient:#06D6A0:#1ABC9C>不追赶战力，用自己的节奏，把每一天过成家。</gradient>"
     ]
   },
   "actionbarEnable": {
     "description": "Enable or disable announcements shown on the action bar.",
-    "value": true
+    "value": false
   },
   "actionbarInterval": {
     "description": "The interval in seconds between each action bar announcement.",
@@ -58,7 +58,7 @@
   },
   "titleEnable": {
     "description": "Enable or disable announcements shown as a screen title.",
-    "value": true
+    "value": false
   },
   "titleInterval": {
     "description": "The interval in seconds between each title announcement.",
@@ -74,7 +74,7 @@
   },
   "bossbarEnable": {
     "description": "Enable or disable announcements shown as a temporary boss bar.",
-    "value": true
+    "value": false
   },
   "bossbarInterval": {
     "description": "The interval in seconds between each boss bar announcement.",
