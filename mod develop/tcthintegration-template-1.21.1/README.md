@@ -82,6 +82,14 @@ soon as the `tcth-chef` data pack is enabled, eating `#tcth:chef_meals` grants
 1 XP even when `jobsPlusRewardsEnabled=false`. During zero-reward drills, do
 not eat those dishes.
 
+**Farmer switches (phase 4A.2):** `farmerIntegrationEnabled` controls the
+unified crop-harvest event framework (`CropHarvestedEvent` detection and
+posting: break detector + right-click harvest mixins). `farmerRewardsEnabled`
+controls ONLY the `tcth:on_crop_harvested` Jobs+/Arc farmer rewards and is
+independent of `jobsPlusRewardsEnabled` (chef). Both default as follows:
+`farmerIntegrationEnabled=true`, `farmerRewardsEnabled=false` (enable only
+after live verification).
+
 ## Client requirement
 
 When Jobs+/Arc integration or the `tcth-chef` preset is enabled, **the server

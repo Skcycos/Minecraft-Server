@@ -1,0 +1,43 @@
+{
+  "holder": {
+    "type": "jobsplus:job",
+    "id": "tcth:farmer"
+  },
+  "type": "arc:on_interact_entity",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp",
+      "chance": 100,
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "conditions": [
+    {
+      "type": "arc:entity_type",
+      "entity_type": "minecraft:sheep"
+    },
+    {
+      "type": "arc:ready_for_shearing"
+    },
+    {
+      "type": "arc:or",
+      "conditions": [
+        {
+          "type": "arc:item_in_hand",
+          "hand": "MAIN_HAND",
+          "item": {
+            "id": "minecraft:shears"
+          }
+        },
+        {
+          "type": "arc:item_in_hand",
+          "hand": "OFF_HAND",
+          "item": {
+            "id": "minecraft:shears"
+          }
+        }
+      ]
+    }
+  ]
+}

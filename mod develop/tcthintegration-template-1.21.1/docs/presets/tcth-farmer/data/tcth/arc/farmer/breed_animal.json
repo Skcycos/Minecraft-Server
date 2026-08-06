@@ -1,0 +1,15 @@
+{
+  "holder": {
+    "type": "jobsplus:job",
+    "id": "tcth:farmer"
+  },
+  "type": "arc:on_breed_animal",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp",
+      "chance": 100,
+      "min": 3,
+      "max": 5
+    }
+  ]
+}

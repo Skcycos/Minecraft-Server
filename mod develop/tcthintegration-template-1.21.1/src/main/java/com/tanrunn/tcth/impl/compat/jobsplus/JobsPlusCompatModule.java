@@ -48,10 +48,12 @@ public final class JobsPlusCompatModule implements CompatModule {
         TcthArcRegistrar.DISH_COOKED.getLocation();
         TcthArcRegistrar.verifyRegistrations();
         JobsPlusRewardModule.init(NeoForge.EVENT_BUS);
+        FarmerRewardModule.init(NeoForge.EVENT_BUS);
         // Tasting anti-farm cooldown lifecycle (logout/stop cleanup). The
         // cooldown itself is committed by the tcth:tasting_effects reward.
         ChefTastingCooldown.instance().registerLifecycle(NeoForge.EVENT_BUS);
         TCTHIntegration.LOGGER.info("[TCTH] Jobs+ dish reward module active (rewards disabled by default)");
+        TCTHIntegration.LOGGER.info("[TCTH] Farmer crop-harvest reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Chef ability tree active (knife / hearth / tasting / study routes)");
     }
 

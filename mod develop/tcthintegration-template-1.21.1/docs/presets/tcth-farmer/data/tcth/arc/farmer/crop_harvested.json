@@ -1,0 +1,21 @@
+{
+  "holder": {
+    "type": "jobsplus:job",
+    "id": "tcth:farmer"
+  },
+  "type": "tcth:on_crop_harvested",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp",
+      "chance": 100,
+      "min": 1,
+      "max": 2
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tcth:automated",
+      "value": false
+    }
+  ]
+}

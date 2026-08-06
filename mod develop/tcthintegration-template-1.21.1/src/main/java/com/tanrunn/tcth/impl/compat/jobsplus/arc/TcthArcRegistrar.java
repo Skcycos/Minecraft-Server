@@ -54,6 +54,8 @@ public final class TcthArcRegistrar {
     // ---- action type ----
     public static final ActionType<DishCookedAction> DISH_COOKED =
             ActionType.register(id("on_dish_cooked"), new DishCookedAction.Serializer());
+    public static final ActionType<CropHarvestedAction> CROP_HARVESTED =
+            ActionType.register(id("on_crop_harvested"), new CropHarvestedAction.Serializer());
 
     // ---- action data types (no registry — validated by id in verify) ----
     public static final IActionDataType<String> RESULT_ITEM_ID = ActionDataType.register(id("result_item_id"));
@@ -63,6 +65,10 @@ public final class TcthArcRegistrar {
     public static final IActionDataType<String> QUALITY = ActionDataType.register(id("quality"));
     public static final IActionDataType<String> TIER = ActionDataType.register(id("tier"));
     public static final IActionDataType<Boolean> AUTOMATED = ActionDataType.register(id("automated"));
+
+    // ---- phase 4A.2: farming action data types ----
+    public static final IActionDataType<String> CROP_ID = ActionDataType.register(id("crop_id"));
+    public static final IActionDataType<String> HARVEST_METHOD = ActionDataType.register(id("harvest_method"));
 
     // ---- condition types ----
     public static final ConditionType<DishTierCondition> DISH_TIER =
@@ -102,6 +108,7 @@ public final class TcthArcRegistrar {
      */
     public static void verifyRegistrations() {
         checkInRegistry(ArcRegistry.ACTION, id("on_dish_cooked"), "action type");
+        checkInRegistry(ArcRegistry.ACTION, id("on_crop_harvested"), "action type");
         checkInRegistry(ArcRegistry.CONDITION, id("dish_tier"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("dish_quality"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("cooking_device"), "condition type");
@@ -114,6 +121,8 @@ public final class TcthArcRegistrar {
         checkDataType(QUALITY, "quality");
         checkDataType(TIER, "tier");
         checkDataType(AUTOMATED, "automated");
+        checkDataType(CROP_ID, "crop_id");
+        checkDataType(HARVEST_METHOD, "harvest_method");
 
         // Phase 3D: chef ability tree condition types.
         checkInRegistry(ArcRegistry.CONDITION, id("chef_abilities_enabled"), "condition type");

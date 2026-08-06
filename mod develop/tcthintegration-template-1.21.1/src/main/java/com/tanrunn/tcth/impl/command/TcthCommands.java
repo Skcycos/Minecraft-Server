@@ -4,6 +4,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
+import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.signature.CookingSignature;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsCommand;
@@ -48,7 +49,14 @@ public final class TcthCommands {
                                 .then(Commands.literal("off")
                                         .executes(TcthCommands::disableCookingDebug))
                                 .then(Commands.literal("status")
-                                        .executes(TcthCommands::cookingDebugStatus)))));
+                                        .executes(TcthCommands::cookingDebugStatus)))
+                        .then(Commands.literal("farming")
+                                .then(Commands.literal("on")
+                                        .executes(TcthCommands::enableFarmingDebug))
+                                .then(Commands.literal("off")
+                                        .executes(TcthCommands::disableFarmingDebug))
+                                .then(Commands.literal("status")
+                                        .executes(TcthCommands::farmingDebugStatus)))));
     }
 
     /**
@@ -92,6 +100,24 @@ public final class TcthCommands {
     private static int cookingDebugStatus(CommandContext<CommandSourceStack> ctx) {
         boolean enabled = CookingDebug.isEnabled();
         ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] cooking debug is " + (enabled ? "enabled" : "disabled")), false);
+        return 1;
+    }
+
+    private static int enableFarmingDebug(CommandContext<CommandSourceStack> ctx) {
+        FarmingDebug.setEnabled(true);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] farming debug enabled"), false);
+        return 1;
+    }
+
+    private static int disableFarmingDebug(CommandContext<CommandSourceStack> ctx) {
+        FarmingDebug.setEnabled(false);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] farming debug disabled"), false);
+        return 1;
+    }
+
+    private static int farmingDebugStatus(CommandContext<CommandSourceStack> ctx) {
+        boolean enabled = FarmingDebug.isEnabled();
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] farming debug is " + (enabled ? "enabled" : "disabled")), false);
         return 1;
     }
 }

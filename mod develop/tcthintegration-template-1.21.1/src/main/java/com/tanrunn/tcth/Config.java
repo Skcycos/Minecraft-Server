@@ -165,6 +165,39 @@ public class Config {
                     "Default: 400. Range: 1 ~ 72000.")
             .defineInRange("tastingEffectCooldownTicks", 400, 1, 72000);
 
+    /**
+     * Unified farming framework switch (phase 4A.2).
+     *
+     * <p>Controls the detection and posting of {@code CropHarvestedEvent}
+     * (break detector + right-click harvest mixins). When {@code false},
+     * nothing is detected or posted. Independent of the reward switch and of
+     * the cooking framework.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_INTEGRATION_ENABLED = BUILDER
+            .comment("Unified crop-harvest event detection and posting (CropHarvestedEvent).",
+                    "When false, no farming events are detected or posted.",
+                    "Independent of farmerRewardsEnabled and of the cooking framework.",
+                    "Default true.")
+            .define("farmerIntegrationEnabled", true);
+
+    /**
+     * Farmer job reward switch (phase 4A.2).
+     *
+     * <p>Controls ONLY whether the {@code tcth:on_crop_harvested} Arc action
+     * is sent for {@code CropHarvestedEvent}s (Jobs+/Arc experience rewards).
+     * It does not gate event detection itself (see
+     * {@link #FARMER_INTEGRATION_ENABLED}) and must not be confused with
+     * {@link #JOBS_PLUS_REWARDS_ENABLED}, which only controls the chef dish
+     * rewards. Default OFF — enable only after live verification.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_REWARDS_ENABLED = BUILDER
+            .comment("Send tcth:on_crop_harvested Arc actions (farmer job rewards).",
+                    "Only controls the Jobs+/Arc farmer reward settlement; does not",
+                    "gate farming event detection (farmerIntegrationEnabled).",
+                    "Independent of jobsPlusRewardsEnabled (chef dish rewards).",
+                    "Default off. Enable only after live player verification.")
+            .define("farmerRewardsEnabled", false);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

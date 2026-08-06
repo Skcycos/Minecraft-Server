@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CookingPotResultSlotMixin",
-    "CookingPotBlockEntityAccessor"
+    "CookingPotBlockEntityAccessor",
+    "TomatoBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

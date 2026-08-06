@@ -70,6 +70,13 @@ Action——那是独立的 `arc:on_eat` Action：只要 `tcth-chef` 数据包�
 食用 `#tcth:chef_meals` 就会获得 1 XP，即使
 `jobsPlusRewardsEnabled=false`。零奖励演练期间不得进食这些料理。
 
+**农夫开关（阶段 4A.2）**：`farmerIntegrationEnabled` 控制统一农事收获
+事件框架（`CropHarvestedEvent` 的检测与发布：破坏检测器 + 右键采摘
+Mixin）。`farmerRewardsEnabled` **只**控制 `tcth:on_crop_harvested` 的
+Jobs+/Arc 农夫奖励，与 `jobsPlusRewardsEnabled`（厨师）相互独立。默认值：
+`farmerIntegrationEnabled=true`、`farmerRewardsEnabled=false`（联测通过后
+再开启）。
+
 ## 源码构建
 
 ```bash

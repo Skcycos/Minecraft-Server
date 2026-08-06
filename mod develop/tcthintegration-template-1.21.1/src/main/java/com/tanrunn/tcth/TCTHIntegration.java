@@ -5,6 +5,9 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import com.tanrunn.tcth.impl.compat.CompatLoader;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
+import com.tanrunn.tcth.impl.debug.FarmingDebug;
+import com.tanrunn.tcth.impl.detector.farming.CropBreakDetector;
+import com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcher;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
@@ -53,6 +56,12 @@ public class TCTHIntegration {
 
         // Register the cooking-event debug listener (disabled by default).
         CookingDebug.init();
+
+        // Unified farming framework (phase 4A.2): break detector + right-click
+        // harvest mixins publish CropHarvestedEvent through the dispatcher.
+        CropHarvestedEventDispatcher.init(NeoForge.EVENT_BUS);
+        CropBreakDetector.init(NeoForge.EVENT_BUS);
+        FarmingDebug.init();
 
         // Per-player cooking statistics archive (independent of Jobs+/Arc).
         CookingStatsTracker.init(NeoForge.EVENT_BUS);

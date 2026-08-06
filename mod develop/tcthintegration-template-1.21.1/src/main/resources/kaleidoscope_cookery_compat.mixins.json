@@ -6,7 +6,9 @@
   "mixins": [
     "PotBlockEntityMixin",
     "StockpotBlockEntityMixin",
-    "SteamerBlockEntityMixin"
+    "SteamerBlockEntityMixin",
+    "KcBaseCropBlockMixin",
+    "KcChiliCropBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

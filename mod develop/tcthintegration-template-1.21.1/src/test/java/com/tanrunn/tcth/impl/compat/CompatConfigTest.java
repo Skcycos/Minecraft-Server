@@ -42,9 +42,15 @@ class CompatConfigTest {
     }
 
     @Test
-    void mainMixinConfigStaysEmpty() throws IOException {
+    void mainMixinConfigContainsOnlyVanillaMixins() throws IOException {
         String json = readResource("tcth.mixins.json");
-        assertTrue(json.contains("\"mixins\": []"), "the main mixin config must remain empty");
+        // 主配置（原版必需）只允许放原版目标的 mixin；可选模组 mixin 必须在
+        // requiredMods 隔离的条件配置里。
+        assertFalse(json.contains("farmersdelight"), "main config must not contain FD mixins");
+        assertFalse(json.contains("kaleidoscope"), "main config must not contain KC mixins");
+        assertFalse(json.contains("\"mixins\": []"), "main config must not be empty after phase 4A.2");
+        assertTrue(json.contains("SweetBerryBushBlockMixin"),
+                "vanilla sweet-berry harvest mixin belongs to the main config");
     }
 
     @Test
