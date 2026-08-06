@@ -1,0 +1,8 @@
+#Whether the game should log something when a menu is opened.
+log_opened_menu = false
+#The menus that the Satchel can have its contents injected into.
+#Format: resource:location [xOffset YOffset] [overlayXOffset overlayYOffset]
+#Example: minecraft:beacon 28 53 28 0
+#          minecraft:generic_9x6 0 55
+#          minecraft:crafting
+allowed_menus = ["minecraft:inventory", "minecraft:crafting", "minecraft:crafter_3x3", "minecraft:generic_9x1 0 -35 0 -1", "minecraft:generic_9x2 0 -17 0 -1", "minecraft:generic_9x3 0 1 0 -1", "minecraft:generic_9x4 0 19 0 -1", "minecraft:generic_9x5 0 37 0 -1", "minecraft:generic_9x6 0 55 0 -1", "minecraft:shulker_box 0 0 0 -1", "minecraft:furnace", "minecraft:smoker", "minecraft:blast_furnace", "minecraft:cartography_table", "minecraft:smithing", "minecraft:loom", "minecraft:stonecutter", "minecraft:enchantment", "minecraft:anvil", "minecraft:grindstone", "minecraft:brewing_stand", "minecraft:hopper 0 -33", "minecraft:merchant 100 0 100 0", "minecraft:beacon 28 53 28 0", "farmersdelight:cooking_pot", "curios:curios_container", "accessories:original_menu", "create:schematic_table 30 23 30 -8", "create:schematicannon 29 77 29 -8", "create:toolbox 0 81 0 -8", "create:package_port 30 24 30 0", "supplementaries:sack", "slag:melter", "slag:interface", "slag:forge", "brewinandchewin:keg"]

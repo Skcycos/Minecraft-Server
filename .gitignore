@@ -43,3 +43,11 @@ Server/config/*.bak
 # 配方表生成脚本的中间产物
 配方与经济管理/统一配方表/scripts/_work/
 配方与经济管理/统一配方表/scripts/__pycache__/
+
+# Runtime artifacts (Minecraft server)
+Server/.mixin.out/
+Server/automodpack/
+Server/**/*.tmp
+
+# tacz runtime export cache
+Server/tacz/
