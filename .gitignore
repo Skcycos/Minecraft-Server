@@ -46,7 +46,7 @@ Server/config/*.bak
 
 # Runtime artifacts (Minecraft server)
 Server/.mixin.out/
-Server/automodpack/
+Server/automodpack/.private/
 Server/**/*.tmp
 
 # tacz runtime export cache

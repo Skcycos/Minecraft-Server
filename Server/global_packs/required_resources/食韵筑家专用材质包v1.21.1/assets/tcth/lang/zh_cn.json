@@ -1,0 +1,32 @@
+{
+  "jobsplus.job.tcth.chef.name": "厨师",
+  "jobsplus.job.tcth.chef.description": "料理一日三餐，钻研各地风味，在灶火与宴席间磨炼手艺。",
+
+  "jobsplus.powerup.tcth.chef.knife_basic.name": "刀工入门",
+  "jobsplus.powerup.tcth.chef.knife_basic.description": "使用厨刀时，有 10% 概率不消耗耐久。",
+  "jobsplus.powerup.tcth.chef.knife_adept.name": "游刃有余",
+  "jobsplus.powerup.tcth.chef.knife_adept.description": "使用厨刀时，有 20% 概率不消耗耐久。",
+  "jobsplus.powerup.tcth.chef.knife_expert.name": "庖丁解牛",
+  "jobsplus.powerup.tcth.chef.knife_expert.description": "使用厨刀时，有 35% 概率不消耗耐久。",
+
+  "jobsplus.powerup.tcth.chef.hearth_basic.name": "熟悉灶火",
+  "jobsplus.powerup.tcth.chef.hearth_basic.description": "受到的火焰伤害降低 15%。",
+  "jobsplus.powerup.tcth.chef.hearth_expert.name": "掌控炉温",
+  "jobsplus.powerup.tcth.chef.hearth_expert.description": "受到的火焰伤害降低 50%。",
+  "jobsplus.powerup.tcth.chef.hearth_master.name": "炉火纯青",
+  "jobsplus.powerup.tcth.chef.hearth_master.description": "受到的火焰伤害降低 30%。",
+
+  "jobsplus.powerup.tcth.chef.tasting_basic.name": "细品百味",
+  "jobsplus.powerup.tcth.chef.tasting_basic.description": "食用料理后获得生命恢复 I，持续 5 秒。",
+  "jobsplus.powerup.tcth.chef.tasting_nourishing.name": "食补调和",
+  "jobsplus.powerup.tcth.chef.tasting_nourishing.description": "食用料理后获得生命恢复 I（5 秒）与抗性提升 I（8 秒）。",
+  "jobsplus.powerup.tcth.chef.tasting_feast.name": "宴席余韵",
+  "jobsplus.powerup.tcth.chef.tasting_feast.description": "食用料理后获得生命恢复 I（5 秒）、抗性提升 I（8 秒）与速度 I（15 秒）。",
+
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.name": "庖厨研修 I",
+  "jobsplus.powerup.tcth.chef.culinary_experience_i.description": "厨师职业经验获取提升至 1.25 倍。",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.name": "庖厨研修 II",
+  "jobsplus.powerup.tcth.chef.culinary_experience_ii.description": "厨师职业经验获取提升至 1.5 倍。",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.name": "庖厨研修 III",
+  "jobsplus.powerup.tcth.chef.culinary_experience_iii.description": "厨师职业经验获取提升至 2 倍。"
+}

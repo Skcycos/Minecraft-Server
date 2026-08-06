@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>食韵筑家III · 烟火长歌 — 服务器更新日志</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --card-bg: #16213e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --gold: #f5a623;
+    --text: #eaeaea;
+    --text-muted: #a0a0b0;
+    --border: #2a2a4a;
+    --green: #4ecdc4;
+    --orange: #ff6b35;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 100%);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+  .header h1 {
+    font-size: 2em;
+    font-weight: 800;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .header .subtitle {
+    color: rgba(255,255,255,0.85);
+    margin-top: 8px;
+    font-size: 0.95em;
+    position: relative;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin: 2px;
+  }
+  .badge-new { background: var(--accent); color: white; }
+  .badge-update { background: var(--gold); color: #1a1a2e; }
+  .badge-fix { background: var(--green); color: #1a1a2e; }
+  .badge-warn { background: var(--orange); color: white; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+  .card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-title .icon { font-size: 1.4em; }
+  .divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    margin: 20px 0;
+    border-radius: 1px;
+  }
+
+  .section { margin-bottom: 20px; }
+  .section h3 {
+    color: var(--accent);
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+  }
+  .section ul { padding-left: 20px; }
+  .section li { margin-bottom: 6px; }
+
+  .highlight-box {
+    background: rgba(233, 69, 96, 0.1);
+    border-left: 4px solid var(--accent);
+    padding: 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+  .highlight-box.gold {
+    background: rgba(245, 166, 35, 0.1);
+    border-left-color: var(--gold);
+  }
+  .highlight-box.green {
+    background: rgba(78, 205, 196, 0.1);
+    border-left-color: var(--green);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9em;
+  }
+  th {
+    background: var(--accent2);
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:hover td { background: rgba(255,255,255,0.03); }
+
+  .tag {
+    display: inline-block;
+    background: var(--accent2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin-right: 4px;
+  }
+  .tag.fire { color: var(--orange); }
+  .tag.chef { color: var(--gold); }
+  .tag.farmer { color: var(--green); }
+
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--green));
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 16px;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -21px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--card-bg);
+  }
+  .timeline-item .time {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .timeline-item .content {
+    font-size: 0.95em;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 0.85em;
+  }
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #d63a52; }
+
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .header h1 { font-size: 1.5em; }
+    .card { padding: 16px; }
+    table { font-size: 0.8em; }
+    td, th { padding: 8px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 顶部标题区 -->
+  <div class="header">
+    <h1>🏰 食韵筑家III · 烟火长歌</h1>
+    <div class="subtitle">服务器更新日志 · 2026-08-06</div>
+    <div style="margin-top: 12px;">
+      <span class="badge badge-new">TCTH 0.2.0</span>
+      <span class="badge badge-update">模组扩充</span>
+      <span class="badge badge-fix">枪械调整</span>
+    </div>
+  </div>
+
+  <!-- 更新概览 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📋</span> 更新概览</div>
+    <p>更新区间：<strong>2026-08-05 19:49</strong> ～ <strong>2026-08-06 13:48</strong>，共 <strong>7</strong> 个提交。</p>
+    <p style="margin-top: 8px; color: var(--text-muted);">核心：TCTH 职业模组 0.1.0 → <strong style="color: var(--accent);">0.2.0</strong>，服务器模组扩充与新玩法部署，枪械体系平衡调整。</p>
+  </div>
+
+  <!-- 最新调整 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🔫</span> 最新调整 <span class="badge badge-warn">08-06 13:48</span></div>
+    <div class="section">
+      <h3>枪械体系</h3>
+      <div class="highlight-box">
+        <strong>TACZ 枪械2 暂时停用</strong>（文件保留，平衡/兼容排查中）<br>
+        当前枪械由 <strong style="color: var(--orange);">烈焰枪械 ScorchedGuns</strong> 承担。
+      </div>
+      <ul>
+        <li>全局伤害倍率 <code>0.2</code> → <code style="color: var(--accent);">0.5</code></li>
+        <li>炮塔各弹药伤害 <strong>×2.5</strong>（铜弹/进阶弹/霰弹等全部上调）</li>
+        <li>敌人子弹伤害同步提高（避免我方火力碾压后失衡）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TCTH 0.2.0 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🎉</span> TCTH 职业模组 0.2.0 <span class="badge badge-new">自研模组</span></div>
+
+    <div class="section">
+      <h3>🍳 新职业：厨师 <span class="tag chef">tcth:chef</span></h3>
+      <div class="highlight-box gold">
+        <strong>统一烹饪事件</strong>：原版合成/熔炉、农夫乐事（Farmers Delight）烹饪锅、万花筒烹饪（Kaleidoscope Cookery）锅/汤锅/蒸笼——七种烹饪设备全部纳入一套奖励体系。
+      </div>
+      <p><strong>料理等级体系</strong>：数据驱动三档料理——<span class="tag">简餐</span> / <span class="tag">家常</span> / <span class="tag">珍馐</span>，互斥分档。</p>
+      <table>
+        <tr><th>路线</th><th>效果</th></tr>
+        <tr><td>庖厨研修</td><td>职业经验 <code>×1.25 / ×1.5 / ×2</code></td></tr>
+        <tr><td>刀工</td><td>厨刀不耗耐久概率 <code>10% → 20% → 35%</code></td></tr>
+        <tr><td>炉火</td><td>火焰伤害减免 <code>15% → 50% → 30%</code></td></tr>
+        <tr><td>品鉴</td><td>吃正餐获得生命恢复/抗性/速度增益（冷却 20 秒）</td></tr>
+      </table>
+      <ul>
+        <li><strong>Field Guide 图鉴</strong>：166 道菜，<span style="color: var(--accent);">亲手做出来才解锁</span>（简餐/家常/珍馐三个分类页）</li>
+        <li><strong>料理署名</strong>：出锅的菜会带上主厨签名，手持料理可用命令查验"这菜谁做的"</li>
+        <li>厨师经验上限封顶 1.25×/1.5×/2×，高等级能力自动覆盖低等级</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h3>🌾 新职业：农夫 <span class="tag farmer">tcth:farmer</span></h3>
+      <div class="highlight-box green">
+        <strong>统一收获事件</strong>：成熟作物无论是<span style="color: var(--green);">打掉</span>还是<span style="color: var(--green);">右键采摘</span>都算收获，支持原版 + 农夫乐事 + 万花筒烹饪作物。
+      </div>
+      <ul>
+        <li><strong>四类奖励</strong>：种田收获、动物繁殖、驯服动物、剪羊毛</li>
+        <li>修了甜浆果右键采摘、辣椒动态判定、稻米移除型收获等实机问题</li>
+        <li>南瓜/西瓜奖励已移除（无法区分放置块与自然生长，防刷）</li>
+      </ul>
+      <div class="highlight-box" style="border-left-color: var(--orange); background: rgba(255,107,53,0.1);">
+        <strong>⚠️ 注意</strong>：农夫职业奖励默认关闭（<code>farmerRewardsEnabled=false</code>），等待实机验证后再开放——群里测试后我再开。
+      </div>
+    </div>
+  </div>
+
+  <!-- 服务器新模组 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🧩</span> 服务器新模组</div>
+    <table>
+      <tr><th>模组</th><th>说明</th></tr>
+      <tr><td>烈焰枪械 ScorchedGuns</td><td>当前主枪械体系（TACZ 暂停）</td></tr>
+      <tr><td>Nomansland 无人之地</td><td>新地形、植被、生物群系丰富度大增</td></tr>
+      <tr><td>Waves 海浪 / Biolith</td><td>海洋/海岸与生物群系扩展</td></tr>
+      <tr><td>Caverns & Chasms 深渊与裂隙</td><td>洞穴生物群系全面升级</td></tr>
+      <tr><td>Ping-Wheel 标记轮盘</td><td>服务器内置信号标记（右键呼出）</td></tr>
+      <tr><td>Shellbound 飞艇</td><td>主世界<strong>自然生成的空中飞艇结构</strong>（内含探索内容与战利品，不是可驾驶的）</td></tr>
+      <tr><td>Vercte Satchels 随身挎包</td><td>额外随身背包</td></tr>
+      <tr><td>Display Delight</td><td>料理食物可视化展示</td></tr>
+      <tr><td>GD656 Killicon 击杀图标</td><td>击杀反馈图标</td></tr>
+      <tr><td>Blueprint</td><td>蓝图/建筑辅助库</td></tr>
+      <tr><td>Globalpacks 全局数据包</td><td>支撑 TCTH 职业数据包全局加载</td></tr>
+      <tr><td>AutoModpack 自动更新</td><td>客户端自动同步模组包</td></tr>
+    </table>
+    <div class="section" style="margin-top: 16px;">
+      <h3>其他调整</h3>
+      <ul>
+        <li>AlmostUnified 统一化整理：统一中文前缀、移除重复副本</li>
+        <li><strong>Tectonic 地形模组暂时停用</strong>（与现有地形方案冲突排查中）</li>
+        <li>Jobs+ 原版默认职业<strong>关闭</strong>，切换为 TCTH 自研职业体系</li>
+        <li>材质包新增 TCTH 完整简体中文汉化（含能力树、图鉴、配置界面）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 服务器管理 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">⚙️</span> 服务器管理调整</div>
+    <ul>
+      <li><code>run.bat</code> 改为<strong>崩溃自动重启</strong>（停止后 5 秒重启，Ctrl+C 两次可退出循环）</li>
+      <li>开启命令方块；游戏模式切换为创造（调试/建造用）</li>
+      <li>完善 git 忽略规则与行尾规范化（<code>.gitattributes</code>），仓库工程化整理</li>
+    </ul>
+  </div>
+
+  <!-- 版本与质量 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📦</span> 版本与质量</div>
+    <div class="highlight-box green">
+      ✅ TCTH 模组升级至 <strong>0.2.0</strong>（SHA-256：<code>3a87a3e0...34b1</code>）<br>
+      ✅ 自动化测试 <strong>380 项全部通过</strong>，含真实服务器冒烟测试<br>
+      ✅ 服务器已部署 <code>tcth-0.2.0.jar</code> + chef/farmer 全局数据包
+    </div>
+  </div>
+
+  <!-- 待开放 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">⏳</span> 待开放 / 待验证</div>
+    <ul>
+      <li>菜品 <strong>优秀/绝佳品质奖励（+2~4 XP）</strong>：数据已就绪，实机结算待验证</li>
+      <li>农夫奖励开关（见上方说明）</li>
+      <li>农夫与 Create 收割机、FakePlayer、领地保护的兼容边界待实测</li>
+      <li><strong>TACZ 枪械2</strong> 停用排查中，恢复时间待定</li>
+    </ul>
+  </div>
+
+  <!-- 提交时间线 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📜</span> 提交记录</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="time">08-06 13:48</div>
+        <div class="content"><span class="badge badge-fix">修复</span> 停用 tacz 枪械、更新 scguns 配置并新增更新日志</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 11:55</div>
+        <div class="content"><span class="badge badge-new">新功能</span> 部署 TCTH 全局数据包、新增 globalpacks/pingwheel mod 与配置更新</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 11:04</div>
+        <div class="content"><span class="badge badge-update">维护</span> 完善 git 忽略规则与行尾规范化(.gitattributes)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 10:59</div>
+        <div class="content"><span class="badge badge-update">维护</span> 更新服务器模组至 0.2.0</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 10:46</div>
+        <div class="content"><span class="badge badge-new">新功能</span> 新增模组、TCTH 厨师职业汉化与服务器配置更新</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 09:56</div>
+        <div class="content"><span class="badge badge-update">维护</span> 发布 0.2.0 版本</div>
+      </div>
+      <div class="timeline-item">
+        <div class="time">08-06 09:52</div>
+        <div class="content"><span class="badge badge-new">新功能</span> 完成农夫职业与统一收获事件</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>🏠 <strong>食韵筑家III · 烟火长歌</strong></p>
+    <p style="margin-top: 8px;">感谢每一位群友的支持与陪伴，我们游戏里见！</p>
+  </div>
+
+</div>
+</body>
+</html>
