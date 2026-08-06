@@ -51,3 +51,9 @@ Server/**/*.tmp
 
 # tacz runtime export cache
 Server/tacz/
+
+# IDE
+.idea/
+
+# Log files
+Server/**/*.log
