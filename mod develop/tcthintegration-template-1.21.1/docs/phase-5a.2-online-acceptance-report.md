@@ -130,13 +130,14 @@ gunnerBossCooldownTicks = 1200
 |---|---|
 | 构建产物 | `mod develop/tcthintegration-template-1.21.1/build/libs/tcth-0.2.1.jar` |
 | 部署产物 | `Server/mods/tcth-0.2.1.jar` |
-| 大小 | 243,956 字节(构建与部署一致) |
-| SHA-256(最终验收版) | `f9efbbacf31ebfd6cd446d6105215b7a870447716a9c04aec6c4b2a4d61534d5`(**构建=部署 ✅**) |
-| 5A.2 初次验收版 SHA(已弃,含无条件 death 日志) | `1e6f5ab52e7101159ed121f0dc04ea3940d705c059fcaee2df790789a562009a` |
+| 大小 | 243,893 字节(构建与部署一致) |
+| SHA-256(最终验收版) | `7ebf9a127ee7fb89423b64ff7e761e47702151a8abfa5c7f7b46378f3d75ae55`(**构建=部署 ✅**) |
+| 5A.2 初版(含无条件 death 日志,已弃) | `1e6f5ab52e7101159ed121f0dc04ea3940d705c059fcaee2df790789a562009a` |
+| 5A.2 二版(含无条件 REJECT 日志,已弃) | `f9efbbacf31ebfd6cd446d6105215b7a870447716a9c04aec6c4b2a4d61534d5` |
 | 5A.1 交付版 SHA(备份) | `bed5d610b20715ff699daa133948be8dc2e2f8289ef7ece3f6d0120e09969b39` |
 | 第三方纯净性 | JAR 内 `top/ribs/scguns/`、`org/mods/gd656/`、`com/daqem/` 类计数 0,无嵌套 JAR |
 
-> 复审修正:上一版报告的 SHA `1e6f5ab5…` 属于含无条件 per-death 日志的初次验收版,已按复审意见替换为开关版 `f9efbbac…`(唯一差异:新增 `/tcth debug gunner` 内存开关,日志默认关闭,行为零变更)。
+> 复审修正(第二次):上一版 SHA `f9efbbac…` 仍含 `publishKill()` 对未分级目标的无条件 `REJECT` 日志(开关关闭时也会写)。已删除该拒绝日志——三处 `[TCTH][GUN]` 日志(confirm/event/stats)现全部受 `GunDebug.isEnabled()` 控制,开关关闭时**零** `[TCTH][GUN]` 输出。
 
 ## 6. XML 实际测试汇总
 
@@ -164,7 +165,7 @@ suites=64  tests=528  failures=0  errors=0  skipped=0
 
 ## 10. 复审修正与暂存/提交状态
 
-- **调试日志清理**(5A.2 review 必改项):删除 `ScorchedGunsCompatModule.onLivingDeath` 对每次非玩家死亡的无条件 DEBUG(刷怪塔会膨胀 debug.log);三处枪客日志(confirm / event / stats)全部改为内存开关 `/tcth debug gunner on|off|status` 控制,**默认关闭**,且只记录确认后的枪械事件。新增 `GunDebug` 开关类与 `GunDebugTest`。
+- **调试日志清理**(5A.2 review 必改项):删除 `ScorchedGunsCompatModule.onLivingDeath` 对每次非玩家死亡的无条件 DEBUG;删除 `publishKill()` 对未分级目标的无条件 REJECT 日志(二次复审)。三处枪客日志(confirm / event / stats)全部改为内存开关 `/tcth debug gunner on|off|status` 控制,**默认关闭**——开关关闭时 `[TCTH][GUN]` 输出为零,开启时仅记录确认后的枪械事件。新增 `GunDebug` 开关类与 `GunDebugTest`。
 - 开关命令冒烟验证:`status→disabled`、`on→enabled`、`off→disabled`(accept5a2_4.out),启动期 `[TCTH][GUN]` 日志为 0。
 - 已提交:`cd5da284`(5A)、`bcfb8cb7`(5A.1);未 push。
 - 本轮 5A.2 改动(调试开关 + 报告)按复审指示**提交**(见提交记录),未 push。

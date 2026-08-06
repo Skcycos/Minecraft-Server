@@ -341,9 +341,10 @@ public final class ScorchedGunsCompatModule implements CompatModule {
                                        ServerLevel level) {
         GunTargetTier tier = tierResolver.resolve(victim);
         if (tier == null) {
-            TCTHIntegration.LOGGER.debug("[TCTH][GUN] victim={} REJECT reason=unclassified",
-                    victim.getUUID());
-            return false; // unclassified target: no event
+            // Unclassified target: no event. No log here — the debug switch
+            // only covers confirmed gun kills (review 5A.2: a REJECT log would
+            // be written even with the switch off).
+            return false;
         }
         float distance = (float) player.distanceTo(victim);
         ResourceLocation weaponId = BuiltInRegistries.ITEM.getKey(weapon.getItem());
