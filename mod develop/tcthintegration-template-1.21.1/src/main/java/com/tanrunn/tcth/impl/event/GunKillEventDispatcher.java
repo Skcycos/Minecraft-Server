@@ -119,10 +119,13 @@ public final class GunKillEventDispatcher {
             RECENT_VICTIMS.put(victimUuid, currentTick);
             pruneExpiredLocked(currentTick);
         }
-        // 5A.2 acceptance debug output (log-only; DEBUG level).
-        TCTHIntegration.LOGGER.debug("[TCTH][GUN] event={} weapon={} target={} tier={} dist={} player={} auto={} result=POSTED",
-                eventId, event.getWeaponId(), event.getTargetId(), event.getTargetTier(),
-                event.getDistance(), event.getPlayer().getUUID(), event.isAutomated());
+        // Gunner debug output (INFO, in-memory switch, default off) — only
+        // logged for successfully posted kill events.
+        if (com.tanrunn.tcth.impl.debug.GunDebug.isEnabled()) {
+            TCTHIntegration.LOGGER.info("[TCTH][GUN] event={} weapon={} target={} tier={} dist={} player={} auto={} result=POSTED",
+                    eventId, event.getWeaponId(), event.getTargetId(), event.getTargetTier(),
+                    event.getDistance(), event.getPlayer().getUUID(), event.isAutomated());
+        }
         return Result.POSTED;
     }
 

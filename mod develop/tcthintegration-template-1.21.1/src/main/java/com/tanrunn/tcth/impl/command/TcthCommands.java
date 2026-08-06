@@ -5,6 +5,7 @@ import com.mojang.brigadier.context.CommandContext;
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
 import com.tanrunn.tcth.impl.debug.FarmingDebug;
+import com.tanrunn.tcth.impl.debug.GunDebug;
 import com.tanrunn.tcth.impl.signature.CookingSignature;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsCommand;
@@ -58,7 +59,14 @@ public final class TcthCommands {
                                 .then(Commands.literal("off")
                                         .executes(TcthCommands::disableFarmingDebug))
                                 .then(Commands.literal("status")
-                                        .executes(TcthCommands::farmingDebugStatus)))));
+                                        .executes(TcthCommands::farmingDebugStatus)))
+                        .then(Commands.literal("gunner")
+                                .then(Commands.literal("on")
+                                        .executes(TcthCommands::enableGunnerDebug))
+                                .then(Commands.literal("off")
+                                        .executes(TcthCommands::disableGunnerDebug))
+                                .then(Commands.literal("status")
+                                        .executes(TcthCommands::gunnerDebugStatus)))));
     }
 
     /**
@@ -120,6 +128,24 @@ public final class TcthCommands {
     private static int farmingDebugStatus(CommandContext<CommandSourceStack> ctx) {
         boolean enabled = FarmingDebug.isEnabled();
         ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] farming debug is " + (enabled ? "enabled" : "disabled")), false);
+        return 1;
+    }
+
+    private static int enableGunnerDebug(CommandContext<CommandSourceStack> ctx) {
+        GunDebug.setEnabled(true);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] gunner debug enabled"), false);
+        return 1;
+    }
+
+    private static int disableGunnerDebug(CommandContext<CommandSourceStack> ctx) {
+        GunDebug.setEnabled(false);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] gunner debug disabled"), false);
+        return 1;
+    }
+
+    private static int gunnerDebugStatus(CommandContext<CommandSourceStack> ctx) {
+        boolean enabled = GunDebug.isEnabled();
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] gunner debug is " + (enabled ? "enabled" : "disabled")), false);
         return 1;
     }
 }

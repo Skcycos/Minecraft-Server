@@ -137,10 +137,12 @@ public final class GunnerStatsTracker {
             RECENT_EVENT_IDS.put(event.getEventId(), currentTick);
             pruneExpiredLocked();
         }
-        // 5A.2 acceptance debug output (log-only; DEBUG level).
-        TCTHIntegration.LOGGER.debug("[TCTH][GUN] stats event={} player={} weapon={} tier={} dist={} total={}",
-                event.getEventId(), event.getPlayer().getUUID(), event.getWeaponId(),
-                event.getTargetTier(), event.getDistance(), stats.getTotalGunKills());
+        // Gunner debug output (INFO, in-memory switch, default off).
+        if (com.tanrunn.tcth.impl.debug.GunDebug.isEnabled()) {
+            TCTHIntegration.LOGGER.info("[TCTH][GUN] stats event={} player={} weapon={} tier={} dist={} total={}",
+                    event.getEventId(), event.getPlayer().getUUID(), event.getWeaponId(),
+                    event.getTargetTier(), event.getDistance(), stats.getTotalGunKills());
+        }
     }
 
     /** Framework + gunner integration + stats switches, fail-closed. */

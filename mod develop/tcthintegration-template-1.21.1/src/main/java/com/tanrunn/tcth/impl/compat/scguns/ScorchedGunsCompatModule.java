@@ -216,14 +216,6 @@ public final class ScorchedGunsCompatModule implements CompatModule {
             return; // no PvP settlement (defence in depth; also excluded via tags)
         }
 
-        // 5A.2 acceptance debug output (log-only; DEBUG level).
-        TCTHIntegration.LOGGER.debug("[TCTH][GUN] death victim={} type={} direct={} causing={} bullet={}",
-                victim.getUUID(), BuiltInRegistries.ENTITY_TYPE.getKey(victim.getType()),
-                source.getDirectEntity() == null ? "null"
-                        : source.getDirectEntity().getClass().getName(),
-                source.getEntity() == null ? "null" : source.getEntity().getClass().getName(),
-                source.is(ModDamageTypes.BULLET));
-
         // 1. SG ProjectileEntity path (bullets, shells, explosions, …).
         if (tryConfirmProjectileKill(source, victim, level)) {
             return;
@@ -360,8 +352,12 @@ public final class ScorchedGunsCompatModule implements CompatModule {
         GunKillEvent event = new GunKillEvent(
                 java.util.UUID.randomUUID(), player, weaponId, weapon.copy(),
                 targetId, victim.getUUID(), tier, distance, false, level, pos);
-        TCTHIntegration.LOGGER.debug("[TCTH][GUN] confirm path={} victim={} weapon={} tier={} dist={} player={}",
-                path, victim.getUUID(), weaponId, tier, distance, player.getUUID());
+        // Gunner debug output (INFO, in-memory switch, default off) — only for
+        // confirmed kills, never for unrelated deaths.
+        if (com.tanrunn.tcth.impl.debug.GunDebug.isEnabled()) {
+            TCTHIntegration.LOGGER.info("[TCTH][GUN] confirm path={} victim={} weapon={} tier={} dist={} player={}",
+                    path, victim.getUUID(), weaponId, tier, distance, player.getUUID());
+        }
         GunKillEventDispatcher.publish(event);
         return true;
     }
