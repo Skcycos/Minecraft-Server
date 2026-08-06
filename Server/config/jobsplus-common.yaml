@@ -1,7 +1,7 @@
 jobs:
   #if true, the default jobs are enabled. WARNING: setting this to false will erase all the stats for these jobs
   #Default value: true
-  enable_default_jobs: true
+  enable_default_jobs: false
   #the amount of free jobs a player can have
   #Minimum value: 0, Maximum value: 2147483647, Default value: 2
   amount_of_free_jobs: 2

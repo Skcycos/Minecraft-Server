@@ -1,0 +1,8 @@
+{
+  "job": "tcth:chef",
+  "icon": {
+    "id": "minecraft:golden_apple"
+  },
+  "price": 8,
+  "required_level": 15
+}

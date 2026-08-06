@@ -17,3 +17,44 @@ maxEventsPerTickPerPlayer = 20
 #Enable the per-player cooking statistics archive.
 #Independent of jobsPlusRewardsEnabled and of Jobs+/Arc.
 cookingStatsEnabled = true
+#Unlock Field Guide entries when a dish is cooked (take-out).
+#Only controls the TCTH dish-cooked unlock; does not control the
+#Field Guide mod itself, cooking stats, or Jobs+/Arc rewards.
+#Default true. No effect when Field Guide is not installed.
+fieldGuideCookbookEnabled = true
+#Sign finished dishes with the chef's tcth:cooking_signature component.
+#Only controls signing of NEWLY produced dishes; does not remove
+#existing signatures, and does not affect cooking stats, Field Guide,
+#or Jobs+/Arc. Default true.
+dishSignaturesEnabled = true
+#Master switch for the chef ability tree (knife / hearth / tasting / study routes).
+#When false, all four routes stop applying their effects.
+#Does not delete purchased powerups and does not affect Jobs+ GUI.
+#Default true.
+chefAbilitiesEnabled = true
+#Tasting route: grant short status effects after eating #tcth:chef_meals.
+#Default true.
+tastingEffectsEnabled = true
+#Hearth route: reduce fire damage (#minecraft:is_fire) by 15/30/50%.
+#Default true.
+fireResistanceAbilitiesEnabled = true
+#Knife route: chance to skip durability loss on #c:tools/knife items.
+#Default true.
+knifeDurabilityAbilitiesEnabled = true
+#Tasting route anti-farm cooldown in ticks (default 400 = 20 s).
+#Per-player, in-memory only, shared by all tasting nodes.
+#Default: 400. Range: 1 ~ 72000.
+# Default: 400
+# Range: 1 ~ 72000
+tastingEffectCooldownTicks = 400
+#Unified crop-harvest event detection and posting (CropHarvestedEvent).
+#When false, no farming events are detected or posted.
+#Independent of farmerRewardsEnabled and of the cooking framework.
+#Default true.
+farmerIntegrationEnabled = true
+#Send tcth:on_crop_harvested Arc actions (farmer job rewards).
+#Only controls the Jobs+/Arc farmer reward settlement; does not
+#gate farming event detection (farmerIntegrationEnabled).
+#Independent of jobsPlusRewardsEnabled (chef dish rewards).
+#Default off. Enable only after live player verification.
+farmerRewardsEnabled = false

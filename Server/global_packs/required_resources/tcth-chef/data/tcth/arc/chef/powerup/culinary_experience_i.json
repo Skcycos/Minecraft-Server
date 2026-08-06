@@ -1,0 +1,19 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:chef/culinary_experience_i"
+  },
+  "type": "jobsplus:on_job_exp",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp_multiplier",
+      "job": "tcth:chef",
+      "multiplier": 1.25
+    }
+  ],
+  "conditions": [
+    { "type": "tcth:chef_abilities_enabled" },
+    { "type": "jobsplus:powerup_not_active", "powerup": "tcth:chef/culinary_experience_ii" },
+    { "type": "jobsplus:powerup_not_active", "powerup": "tcth:chef/culinary_experience_iii" }
+  ]
+}

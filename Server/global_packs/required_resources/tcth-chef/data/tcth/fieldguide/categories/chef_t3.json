@@ -1,0 +1,222 @@
+{
+  "contents": [
+    {
+      "id": "item:farmersdelight/baked_cod_stew",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/grilled_salmon",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/noodle_soup",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/pasta_with_meatballs",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/pumpkin_soup",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/roasted_mutton_chops",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/squid_ink_pasta",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:farmersdelight/vegetable_noodles",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/blaze_lamb_chop",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/buddha_jumps_over_the_wall",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/chorus_fried_egg",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/crimson_fungus_pot_soup",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/crystal_lamb_chop",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/dongpo_pork",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/donkey_burger",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/end_style_sashimi",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/fondant_pie",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/fried_spring_roll",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/frost_lamb_chop",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/golden_salad",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/pan_seared_knight_steak",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/spicy_blood_stew",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/spicy_chicken",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:kaleidoscope_cookery/warped_fungus_pot_soup",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    }
+  ],
+  "icon": "tcth:textures/gui/fieldguide/chef_t3.png",
+  "sort_index": 3
+}

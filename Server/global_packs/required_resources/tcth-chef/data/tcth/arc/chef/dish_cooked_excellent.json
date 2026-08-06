@@ -1,0 +1,9 @@
+{
+  "holder": { "type": "jobsplus:job", "id": "tcth:chef" },
+  "type": "tcth:on_dish_cooked",
+  "rewards": [ { "type": "jobsplus:job_exp", "chance": 100, "min": 2, "max": 4 } ],
+  "conditions": [
+    { "type": "tcth:dish_quality", "quality": ["EXCELLENT", "SUPERB"] },
+    { "type": "tcth:automated", "value": false }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:chef/knife_expert"
+  },
+  "type": "arc:on_hurt_item",
+  "rewards": [
+    {
+      "type": "arc:cancel_action",
+      "chance": 35
+    }
+  ],
+  "conditions": [
+    { "type": "arc:items", "items": ["#c:tools/knife"] },
+    { "type": "tcth:knife_durability_enabled" }
+  ]
+}
