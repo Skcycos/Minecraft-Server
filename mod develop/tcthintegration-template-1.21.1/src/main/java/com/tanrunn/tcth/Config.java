@@ -198,6 +198,71 @@ public class Config {
                     "Default off. Enable only after live player verification.")
             .define("farmerRewardsEnabled", false);
 
+    // ---- phase 5A: gunner profession ----
+
+    /**
+     * Gunner profession master switch (phase 5A).
+     *
+     * <p>When {@code false}, the Scorched Guns compat module is not initialised:
+     * no {@code GunKillEvent} detection, no posting, no stats, no reward. Does
+     * not affect chef or farmer.
+     */
+    public static final ModConfigSpec.BooleanValue GUNNER_INTEGRATION_ENABLED = BUILDER
+            .comment("Gunner profession master switch (Scorched Guns firearm kills).",
+                    "When false, no firearm-kill events are detected or posted.",
+                    "Independent of chef/farmer and of Jobs+/Arc.",
+                    "Default true.")
+            .define("gunnerIntegrationEnabled", true);
+
+    /**
+     * Gunner reward switch (phase 5A).
+     *
+     * <p>Controls ONLY whether the {@code tcth:on_gun_kill} Arc action is sent
+     * for {@code GunKillEvent}s (Jobs+/Arc experience rewards). It does not gate
+     * event detection or statistics. Default OFF — enable only after live
+     * verification.
+     */
+    public static final ModConfigSpec.BooleanValue GUNNER_REWARDS_ENABLED = BUILDER
+            .comment("Send tcth:on_gun_kill Arc actions (gunner job rewards).",
+                    "Only controls the Jobs+/Arc gunner reward settlement; does not",
+                    "gate firearm-kill detection (gunnerIntegrationEnabled) or stats",
+                    "(gunnerStatsEnabled). Independent of jobsPlusRewardsEnabled",
+                    "(chef) and farmerRewardsEnabled.",
+                    "Default off. Enable only after live player verification.")
+            .define("gunnerRewardsEnabled", false);
+
+    /**
+     * Gunner statistics switch (phase 5A).
+     *
+     * <p>Controls ONLY whether per-player gunner statistics
+     * ({@code world/data/tcth_gunner_stats.dat}) are updated. Independent of
+     * the reward switch. Default ON.
+     */
+    public static final ModConfigSpec.BooleanValue GUNNER_STATS_ENABLED = BUILDER
+            .comment("Update per-player gunner statistics (tcth_gunner_stats.dat).",
+                    "Independent of gunnerRewardsEnabled. Default true.")
+            .define("gunnerStatsEnabled", true);
+
+    /**
+     * Rate limit: maximum gun-kill actions settled per player per tick.
+     */
+    public static final ModConfigSpec.IntValue MAX_GUN_KILL_ACTIONS_PER_TICK = BUILDER
+            .comment("Maximum gun-kill actions sent per player per tick (rate limit).")
+            .defineInRange("maxGunKillActionsPerTick", 10, 1, 1000);
+
+    /**
+     * BOSS-tier target cooldown (phase 5A).
+     *
+     * <p>After a BOSS-tier kill, further BOSS-tier kills by the same player are
+     * blocked for this many ticks. Prevents boss-respawn farming. Per-player,
+     * in-memory only.
+     */
+    public static final ModConfigSpec.IntValue GUNNER_BOSS_COOLDOWN_TICKS = BUILDER
+            .comment("BOSS-tier gun-kill cooldown per player in ticks (default 1200 = 60 s).",
+                    "Per-player, in-memory only, prevents boss-respawn farming.",
+                    "Default: 1200. Range: 0 ~ 72000.")
+            .defineInRange("gunnerBossCooldownTicks", 1200, 0, 72000);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

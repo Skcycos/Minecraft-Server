@@ -1,0 +1,10 @@
+{
+  "price": 10,
+  "max_level": 100,
+  "color": "#C0392B",
+  "icon": {
+    "id": "scguns:defender_pistol"
+  },
+  "background": "minecraft:textures/block/iron_block.png",
+  "is_default": false
+}

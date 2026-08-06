@@ -70,5 +70,18 @@
   "jobsplus.powerup.tcth.chef.tasting_nourishing.name": "Nourishing Harmony",
   "jobsplus.powerup.tcth.chef.tasting_nourishing.description": "Eating a meal grants Regeneration I (5 s) and Resistance I (8 s) (20 s cooldown).",
   "jobsplus.powerup.tcth.chef.tasting_feast.name": "Banquet Afterglow",
-  "jobsplus.powerup.tcth.chef.tasting_feast.description": "Eating a meal grants Regeneration I (5 s), Resistance I (8 s) and Speed I (15 s) (20 s cooldown)."
+  "jobsplus.powerup.tcth.chef.tasting_feast.description": "Eating a meal grants Regeneration I (5 s), Resistance I (8 s) and Speed I (15 s) (20 s cooldown).",
+  "jobsplus.job.tcth.gunner.name": "Gunner",
+  "jobsplus.job.tcth.gunner.description": "Protect settlements and hone your marksmanship by defeating threats with firearms.",
+  "tcth.configuration.gunnerIntegrationEnabled": "Gunner Firearm-Kill Detection",
+  "tcth.configuration.gunnerRewardsEnabled": "Gunner Job Rewards Enabled",
+  "tcth.configuration.gunnerStatsEnabled": "Gunner Statistics Enabled",
+  "tcth.configuration.maxGunKillActionsPerTick": "Max Gun-Kill Actions Per Tick Per Player",
+  "tcth.configuration.gunnerBossCooldownTicks": "BOSS-Tier Gun-Kill Cooldown (ticks)",
+  "tcth.condition.gun_target_tier.name": "Gun Target Tier",
+  "tcth.condition.gun_target_tier.desc": "Gun target tier is %s",
+  "tcth.condition.gun_kill_distance.name": "Gun Kill Distance",
+  "tcth.condition.gun_kill_distance.desc": "Gun kill distance is between %s and %s blocks",
+  "tcth.condition.gunner_rewards_enabled.name": "Gunner Rewards Enabled",
+  "tcth.condition.gunner_rewards_enabled.desc": "Gunner job rewards are enabled in config"
 }

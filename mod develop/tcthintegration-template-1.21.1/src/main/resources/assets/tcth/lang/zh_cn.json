@@ -70,5 +70,18 @@
   "jobsplus.powerup.tcth.chef.tasting_nourishing.name": "食补调和",
   "jobsplus.powerup.tcth.chef.tasting_nourishing.description": "食用正餐后获得生命恢复 I（5 秒）与抗性提升 I（8 秒）（冷却 20 秒）。",
   "jobsplus.powerup.tcth.chef.tasting_feast.name": "宴席余韵",
-  "jobsplus.powerup.tcth.chef.tasting_feast.description": "食用正餐后获得生命恢复 I（5 秒）、抗性提升 I（8 秒）与速度 I（15 秒）（冷却 20 秒）。"
+  "jobsplus.powerup.tcth.chef.tasting_feast.description": "食用正餐后获得生命恢复 I（5 秒）、抗性提升 I（8 秒）与速度 I（15 秒）（冷却 20 秒）。",
+  "jobsplus.job.tcth.gunner.name": "枪客",
+  "jobsplus.job.tcth.gunner.description": "以枪械清剿威胁、守护聚落，在一次次实战中磨炼判断与枪法。",
+  "tcth.configuration.gunnerIntegrationEnabled": "枪客枪械击杀检测开关",
+  "tcth.configuration.gunnerRewardsEnabled": "枪客职业经验奖励开关",
+  "tcth.configuration.gunnerStatsEnabled": "枪客统计开关",
+  "tcth.configuration.maxGunKillActionsPerTick": "每玩家每刻最大枪械击杀 Action 数",
+  "tcth.configuration.gunnerBossCooldownTicks": "BOSS 级枪械击杀冷却（tick）",
+  "tcth.condition.gun_target_tier.name": "枪械目标等级",
+  "tcth.condition.gun_target_tier.desc": "枪械目标等级为 %s",
+  "tcth.condition.gun_kill_distance.name": "枪械击杀距离",
+  "tcth.condition.gun_kill_distance.desc": "枪械击杀距离在 %s 到 %s 格之间",
+  "tcth.condition.gunner_rewards_enabled.name": "枪客奖励开关",
+  "tcth.condition.gunner_rewards_enabled.desc": "配置中枪客职业经验奖励已启用"
 }

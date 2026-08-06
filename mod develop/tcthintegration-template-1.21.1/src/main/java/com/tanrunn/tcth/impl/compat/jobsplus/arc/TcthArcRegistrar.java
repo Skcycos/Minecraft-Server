@@ -15,6 +15,9 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishQualityCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishTierCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireDamageCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireResistanceEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunKillDistanceCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunTargetTierCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunnerRewardsEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.KnifeDurabilityEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingCooldownCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingEffectsEnabledCondition;
@@ -98,6 +101,24 @@ public final class TcthArcRegistrar {
     public static final IRewardType<TastingEffectsReward> TASTING_EFFECTS =
             RewardType.register(id("tasting_effects"), new TastingEffectsReward.Serializer());
 
+    // ---- phase 5A: gunner action type ----
+    public static final ActionType<GunKillAction> GUN_KILL =
+            ActionType.register(id("on_gun_kill"), new GunKillAction.Serializer());
+
+    // ---- phase 5A: gunner action data types ----
+    public static final IActionDataType<String> WEAPON_ID = ActionDataType.register(id("weapon_id"));
+    public static final IActionDataType<String> TARGET_ID = ActionDataType.register(id("target_id"));
+    public static final IActionDataType<String> TARGET_TIER = ActionDataType.register(id("target_tier"));
+    public static final IActionDataType<Float> GUN_KILL_DISTANCE = ActionDataType.register(id("gun_kill_distance"));
+
+    // ---- phase 5A: gunner condition types ----
+    public static final ConditionType<GunTargetTierCondition> GUN_TARGET_TIER =
+            ConditionType.register(id("gun_target_tier"), new GunTargetTierCondition.Serializer());
+    public static final ConditionType<GunKillDistanceCondition> GUN_KILL_DISTANCE_CONDITION =
+            ConditionType.register(id("gun_kill_distance"), new GunKillDistanceCondition.Serializer());
+    public static final ConditionType<GunnerRewardsEnabledCondition> GUNNER_REWARDS_ENABLED_CONDITION =
+            ConditionType.register(id("gunner_rewards_enabled"), new GunnerRewardsEnabledCondition.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -134,6 +155,16 @@ public final class TcthArcRegistrar {
 
         // Phase 3D: chef ability tree reward type.
         checkInRegistry(ArcRegistry.REWARD, id("tasting_effects"), "reward type");
+
+        // Phase 5A: gunner action type, data types and conditions.
+        checkInRegistry(ArcRegistry.ACTION, id("on_gun_kill"), "action type");
+        checkDataType(WEAPON_ID, "weapon_id");
+        checkDataType(TARGET_ID, "target_id");
+        checkDataType(TARGET_TIER, "target_tier");
+        checkDataType(GUN_KILL_DISTANCE, "gun_kill_distance");
+        checkInRegistry(ArcRegistry.CONDITION, id("gun_target_tier"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("gun_kill_distance"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("gunner_rewards_enabled"), "condition type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

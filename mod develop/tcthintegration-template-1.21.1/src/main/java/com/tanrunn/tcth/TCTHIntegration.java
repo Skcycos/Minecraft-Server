@@ -9,8 +9,10 @@ import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.detector.farming.CropBreakDetector;
 import com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcher;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
+import com.tanrunn.tcth.impl.event.GunKillEventDispatcher;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
+import com.tanrunn.tcth.impl.stats.GunnerStatsTracker;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -47,6 +49,12 @@ public class TCTHIntegration {
         CompatLoader.register("fieldguide",
                 "com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModule");
 
+        // Scorched Guns firearm-kill compat module (optional; loaded only when
+        // Scorched Guns is installed). The implementation class is only loaded
+        // when scguns is present.
+        CompatLoader.register("scguns",
+                "com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModule");
+
         // Bootstrap the conditional compat module loader.
         // Modules themselves are registered in later phases (see com.tanrunn.tcth.impl.compat).
         CompatLoader.init(modEventBus);
@@ -65,5 +73,12 @@ public class TCTHIntegration {
 
         // Per-player cooking statistics archive (independent of Jobs+/Arc).
         CookingStatsTracker.init(NeoForge.EVENT_BUS);
+
+        // Phase 5A: gunner profession — firearm-kill event dispatcher,
+        // statistics tracker and Scorched Guns compat module registration.
+        // The Scorched Guns module is a CompatModule; its init() is called
+        // from the compat module's onModConstruction hook.
+        GunKillEventDispatcher.init(NeoForge.EVENT_BUS);
+        GunnerStatsTracker.init(NeoForge.EVENT_BUS);
     }
 }

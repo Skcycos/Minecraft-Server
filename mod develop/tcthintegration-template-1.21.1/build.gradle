@@ -141,11 +141,17 @@ dependencies {
     compileOnly "blank:arc:9.0.0"
     compileOnly "blank:jobsplus:9.0.0"
     compileOnly "blank:fieldguide:1.13.4"
+    // Scorched Guns 1.5 (fixed version, from dev-mods/): compileOnly gives the
+    // conditional compat module real compile-time signature checks (a changed
+    // SG API fails the build instead of silently breaking at runtime). Never
+    // bundled into the released JAR. Tests use the same JAR (testImplementation).
+    compileOnly "blank:scguns:1.5"
     testImplementation "blank:farmersdelight:1.3.2"
     testImplementation "blank:kaleidoscopecookery:1.4.1"
     testImplementation "blank:arc:9.0.0"
     testImplementation "blank:jobsplus:9.0.0"
     testImplementation "blank:fieldguide:1.13.4"
+    testImplementation "blank:scguns:1.5"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

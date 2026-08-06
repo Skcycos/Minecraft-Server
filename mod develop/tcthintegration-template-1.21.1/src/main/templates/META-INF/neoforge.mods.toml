@@ -65,6 +65,12 @@ requiredMods=["farmersdelight"]
 config="kaleidoscope_cookery_compat.mixins.json"
 requiredMods=["kaleidoscope_cookery"]
 
+# Scorched Guns Niami arrow birth-registration mixin (phase 5A.1). Only applied
+# when Scorched Guns is installed; never falls back to a heuristic.
+[[mixins]]
+config="scguns_compat.mixins.json"
+requiredMods=["scguns"]
+
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
 #[[accessTransformers]]
@@ -122,6 +128,17 @@ requiredMods=["kaleidoscope_cookery"]
     modId="fieldguide"
     type="optional"
     versionRange="[1.13.4,)"
+    ordering="NONE"
+    side="BOTH"
+
+# Scorched Guns firearm-kill detection for the tcth:gunner profession (optional;
+# loaded only when installed via the conditional CompatLoader descriptor).
+# GD656 Kill Icon is deliberately NOT declared: the gunner pipeline is fully
+# independent of it (TCTH never reads/writes GD656 data).
+[[dependencies.${mod_id}]]
+    modId="scguns"
+    type="optional"
+    versionRange="[1.5,)"
     ordering="NONE"
     side="BOTH"
 

@@ -8,6 +8,7 @@ import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.signature.CookingSignature;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.CookingStatsCommand;
+import com.tanrunn.tcth.impl.stats.GunnerStatsCommand;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -37,6 +38,7 @@ public final class TcthCommands {
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
         CookingStatsCommand.register(dispatcher);
+        GunnerStatsCommand.register(dispatcher);
         dispatcher.register(Commands.literal("tcth")
                 .then(Commands.literal("chef")
                         .then(Commands.literal("inspect")
