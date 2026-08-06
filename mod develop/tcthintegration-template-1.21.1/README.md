@@ -56,7 +56,7 @@ documented here as they land.
 
 1. Install Minecraft 1.21.1 with NeoForge **21.1.247** (or newer compatible
    loader).
-2. Copy `tcth-0.1.0.jar` (or the current version) into the `mods/` folder.
+2. Copy `tcth-0.2.0.jar` (or the current version) into the `mods/` folder.
 3. Start the server / game once to generate the default config file at
    `config/tcth-common.toml`.
 

@@ -276,7 +276,7 @@ class FarmerPresetTest {
                             + presetNamespaceDir);
         }
         // 构建产物（若存在）也不得包含预设数据。
-        Path jar = Path.of("build/libs/tcth-0.1.0.jar");
+        Path jar = Path.of("build/libs/tcth-0.2.0.jar");
         if (Files.exists(jar)) {
             Process p = new ProcessBuilder("unzip", "-l", jar.toString()).redirectErrorStream(true).start();
             String listing = new String(p.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
