@@ -57,3 +57,6 @@ Server/tacz/
 
 # Log files
 Server/**/*.log
+
+# temp language extraction
+Server/mods/temp_*.json
