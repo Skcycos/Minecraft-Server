@@ -1,0 +1,6 @@
+[general]
+	#Cookie for Netease Music
+	Cookie = ""
+	#Music quality level
+	#Allowed Values: STANDARD, HIGHER, EXHIGH, LOSSLESS, HIRES
+	Level = "HIGHER"

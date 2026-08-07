@@ -62,8 +62,9 @@
   .badge-new { background: var(--accent); color: white; }
   .badge-update { background: var(--gold); color: #1a1a2e; }
   .badge-fix { background: var(--green); color: #1a1a2e; }
-  .badge-warn { background: var(--orange); color: white; }
   .badge-client { background: var(--purple); color: white; }
+  .badge-server { background: var(--orange); color: white; }
+  .badge-combat { background: #d63384; color: white; }
 
   .card {
     background: var(--card-bg);
@@ -83,7 +84,15 @@
     gap: 10px;
   }
   .card-title .icon { font-size: 1.4em; }
-  .divider { height: 2px; background: linear-gradient(90deg, var(--accent), transparent); margin: 20px 0; border-radius: 1px; }
+  .commit-hash {
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-size: 0.75em;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: auto;
+  }
 
   .section { margin-bottom: 20px; }
   .section h3 {
@@ -106,6 +115,7 @@
   .highlight-box.gold { background: rgba(245, 166, 35, 0.1); border-left-color: var(--gold); }
   .highlight-box.green { background: rgba(78, 205, 196, 0.1); border-left-color: var(--green); }
   .highlight-box.purple { background: rgba(168, 85, 247, 0.1); border-left-color: var(--purple); }
+  .highlight-box.orange { background: rgba(255, 107, 53, 0.1); border-left-color: var(--orange); }
 
   table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
   th { background: var(--accent2); padding: 10px 12px; text-align: left; font-weight: 600; }
@@ -121,31 +131,6 @@
     color: var(--text-muted);
     margin-right: 4px;
   }
-  .tag.fire { color: var(--orange); }
-  .tag.chef { color: var(--gold); }
-  .tag.farmer { color: var(--green); }
-  .tag.client { color: var(--purple); }
-
-  .timeline { position: relative; padding-left: 24px; }
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 7px; top: 4px; bottom: 4px;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent), var(--green));
-  }
-  .timeline-item { position: relative; margin-bottom: 16px; padding-left: 16px; }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -21px; top: 8px;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 2px solid var(--card-bg);
-  }
-  .timeline-item .time { font-size: 0.8em; color: var(--text-muted); margin-bottom: 2px; }
-  .timeline-item .content { font-size: 0.95em; }
 
   .footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.85em; }
 
@@ -167,79 +152,177 @@
     <div class="subtitle">服务器更新日志 · 2026-08-06</div>
     <div style="margin-top: 12px;">
       <span class="badge badge-new">TCTH 0.2.0</span>
-      <span class="badge badge-update">模组扩充</span>
-      <span class="badge badge-fix">枪械调整</span>
-      <span class="badge badge-client">客户端增强</span>
+      <span class="badge badge-server">服务端</span>
+      <span class="badge badge-client">客户端</span>
+      <span class="badge badge-combat">战斗系统</span>
     </div>
   </div>
 
-  <!-- 更新概览 -->
+  <!-- 提交 1: 6602ec2 完成农夫职业 -->
   <div class="card">
-    <div class="card-title"><span class="icon">📋</span> 更新概览</div>
-    <p>更新区间：<strong>2026-08-05 19:49</strong> ～ <strong>2026-08-06 14:49</strong>，共 <strong>8</strong> 个提交。</p>
-    <p style="margin-top: 8px; color: var(--text-muted);">核心：TCTH 职业模组 0.1.0 → <strong style="color: var(--accent);">0.2.0</strong>，服务器模组扩充、枪械体系平衡调整、客户端体验大幅增强。</p>
-  </div>
-
-  <!-- 最新调整：客户端增强 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🖥️</span> 客户端增强 <span class="badge badge-client">08-06 14:49</span></div>
-    <p>通过 AutoModpack 自动分发，新增 <strong>19 个客户端模组</strong>，涵盖性能、视觉、操作、搜索等方面：</p>
-
-    <div class="section" style="margin-top: 16px;">
-      <h3>⚡ 性能优化</h3>
-      <table>
-        <tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Sodium</td><td>高性能渲染优化，大幅提升帧率与渲染效率</td></tr>
-        <tr><td>Sodium Extra</td><td>补充 OptiFine 风格的视觉选项（动画、粒子、天空等控制）</td></tr>
-        <tr><td>Reese's Sodium Options</td><td>更紧凑、可搜索的 Sodium 替代视频设置界面</td></tr>
-        <tr><td>Entity Culling</td><td>异步路径追踪隐藏不可见实体与方块实体，提升帧率</td></tr>
-        <tr><td>Cloth Config API</td><td>通用配置界面库，供其他模组快速生成设置屏幕</td></tr>
-      </table>
+    <div class="card-title">
+      <span class="icon">🌾</span>
+      完成农夫职业与统一收获事件
+      <span class="commit-hash">6602ec2</span>
     </div>
-
     <div class="section">
-      <h3>🎬 视觉与镜头</h3>
-      <table>
-        <tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Iris 光影加载器</td><td>现代着色器模组，兼容多数 OptiFine 光影包</td></tr>
-        <tr><td>Camera Overhaul</td><td>根据移动、转向、跳跃、爆炸等添加倾斜、晃动等电影感效果</td></tr>
-        <tr><td>Smooth F5</td><td>平滑第三人称视角切换，F5 过渡更电影化</td></tr>
-        <tr><td>AAA Particles</td><td>用 Effekseer 特效替换部分世界粒子（爆炸、火光、萤火虫等）</td></tr>
-        <tr><td>Reactions</td><td>玩家面部动画，添加眨眼、望远镜瞄准闭眼等表情与动态面部效果</td></tr>
-        <tr><td>Cinematic Respawn</td><td>用平滑过场替换原版死亡画面并自动重生</td></tr>
-        <tr><td>Female Gender Mod</td><td>女性身体模型定制，为玩家模型添加可调节的胸部等女性化外观选项</td></tr>
-      </table>
-    </div>
-
-    <div class="section">
-      <h3>🖱️ 操作与搜索</h3>
-      <table>
-        <tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Mouse Tweaks</td><td>增强库存鼠标操作（拖拽、滚轮快速移动物品等）</td></tr>
-        <tr><td>Just Enough Characters</td><td>为 JEI 等搜索界面添加中文拼音搜索支持</td></tr>
-        <tr><td>IMBlocker</td><td>根据游戏状态（聊天、搜索等）自动启用/禁用输入法</td></tr>
-        <tr><td>Packed Packs</td><td>资源包/数据包管理增强，支持配置文件、多选、拖拽、搜索、过滤等</td></tr>
-      </table>
-    </div>
-
-    <div class="section">
-      <h3>📚 前置库</h3>
-      <table>
-        <tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Kotlin For Forge</td><td>Kotlin 语言支持前置库，为 Forge/NeoForge 提供 Kotlin 运行时、协程、序列化等</td></tr>
-        <tr><td>SuperMartijn642 Config Lib</td><td>配置库，简化模组配置文件的创建、重载、同步与生成</td></tr>
-      </table>
+      <h3><span class="badge badge-server">服务端</span> TCTH 模组开发</h3>
+      <ul>
+        <li>新增 <code>tcth:farmer</code> 独立职业预设</li>
+        <li>统一收获事件：成熟作物无论<strong>打掉</strong>还是<strong>右键采摘</strong>都计入收获</li>
+        <li>兼容原版、农夫乐事（Farmers Delight）、万花筒烹饪（Kaleidoscope Cookery）作物</li>
+        <li>四类奖励：种田收获、动物繁殖、驯服动物、剪羊毛</li>
+        <li>修复甜浆果右键采摘、辣椒动态判定、稻米移除型收获等实机问题</li>
+        <li>南瓜/西瓜奖励已移除（无法区分放置块与自然生长，防刷）</li>
+        <li>新增 FakePlayer 边界、成熟度规则、幂等保护</li>
+      </ul>
+      <div class="highlight-box green">
+        ✅ 验证：380 项测试通过；在线确认主要作物事件及 1-2 XP 单次结算
+      </div>
     </div>
   </div>
 
-  <!-- 枪械体系调整 -->
+  <!-- 提交 2: 816804b 发布 0.2.0 -->
   <div class="card">
-    <div class="card-title"><span class="icon">🔫</span> 枪械体系调整 <span class="badge badge-warn">08-06 13:48</span></div>
+    <div class="card-title">
+      <span class="icon">🚀</span>
+      发布 TCTH 0.2.0 版本
+      <span class="commit-hash">816804b</span>
+    </div>
     <div class="section">
-      <h3>枪械体系</h3>
-      <div class="highlight-box">
+      <h3><span class="badge badge-server">服务端</span> 版本与文档</h3>
+      <ul>
+        <li>TCTH Integration 版本从 <code>0.1.0</code> 提升至 <code>0.2.0</code></li>
+        <li>重写 CHANGELOG 发行记录，纳入厨师与农夫职业、统一料理和收获事件、Field Guide 图鉴、料理署名、职业统计及四路线能力树</li>
+        <li>同步中英文安装文档与版本相关测试</li>
+      </ul>
+      <div class="highlight-box green">
+        ✅ 验证：clean build 成功，380 项测试全部通过；生成 <code>tcth-0.2.0.jar</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提交 3: b455334 新增模组与汉化 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🧩</span>
+      新增模组、TCTH 厨师职业汉化与服务器配置
+      <span class="commit-hash">b455334</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 新增模组</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>TACZ 枪械2</td><td>现代枪械与枪械配件体系</td></tr>
+        <tr><td>Nomansland 无人之地</td><td>新地形、植被、生物群系丰富度大增</td></tr>
+        <tr><td>Waves 海浪 / Biolith</td><td>海洋/海岸与生物群系扩展</td></tr>
+        <tr><td>Caverns & Chasms 深渊与裂隙</td><td>洞穴生物群系全面升级</td></tr>
+        <tr><td>Ping-Wheel 标记轮盘</td><td>服务器内置信号标记（右键呼出）</td></tr>
+        <tr><td>Shellbound 飞艇</td><td>主世界自然生成的空中飞艇结构（内含探索内容与战利品）</td></tr>
+        <tr><td>Vercte Satchels 随身挎包</td><td>额外随身背包</td></tr>
+        <tr><td>Display Delight</td><td>料理食物可视化展示</td></tr>
+        <tr><td>GD656 Killicon 击杀图标</td><td>击杀反馈图标</td></tr>
+        <tr><td>Blueprint</td><td>蓝图/建筑辅助库</td></tr>
+        <tr><td>AutoModpack 自动更新</td><td>客户端自动同步模组包</td></tr>
+      </table>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 配置与汉化</h3>
+      <ul>
+        <li>材质包新增 <code>assets/tcth/lang/zh_cn.json</code>（68 键完整汉化）</li>
+        <li><code>tcth-0.1.0.jar</code> 内置完整中文语言</li>
+        <li>新增 <code>tacz/blueprint/nomansland/waves</code> 等配置文件</li>
+        <li>更新 <code>server.properties</code>、<code>run.bat</code></li>
+        <li>AlmostUnified 统一化整理：统一中文前缀、移除重复副本</li>
+        <li><strong>Tectonic 地形模组暂时停用</strong>（与现有地形方案冲突排查中）</li>
+        <li>Jobs+ 原版默认职业<strong>关闭</strong>，切换为 TCTH 自研职业体系</li>
+        <li>新增 <code>analyze_mods.py</code>、<code>patch_tcth_lang.py</code> 工具脚本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 提交 4: def2ce2 更新服务器模组至 0.2.0 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">📦</span>
+      更新服务器模组至 0.2.0
+      <span class="commit-hash">def2ce2</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 模组替换</h3>
+      <ul>
+        <li><code>tcth-0.1.0.jar</code> → <code>tcth-0.2.0.jar</code></li>
+        <li>新 JAR SHA-256：<code>3a87a3e0c5d7ec6b1d2dd16c04bcfa1322f81200785e92a13ad7bc6ef53408b1</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 提交 5: cfd4512 git 忽略与行尾规范化 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🔧</span>
+      完善 git 忽略规则与行尾规范化
+      <span class="commit-hash">cfd4512</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 仓库工程化</h3>
+      <ul>
+        <li>.gitignore：新增 <code>.idea/</code>、<code>Server/**/*.log</code></li>
+        <li>.gitattributes：文本统一 LF、bat 用 CRLF、jar/图片等标记 binary</li>
+        <li>Renormalize：pack.mcmeta/CSV 等 7 文件行尾规范化</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 提交 6: e847ba8 部署 TCTH 全局数据包 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🎉</span>
+      部署 TCTH 全局数据包、新增模组与配置
+      <span class="commit-hash">e847ba8</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 全局数据包部署</h3>
+      <ul>
+        <li>部署 <code>tcth-chef</code> 厨师数据包（required_resources）</li>
+        <li>部署 <code>tcth-farmer</code> 农夫数据包（required_resources）</li>
+        <li>新增 <code>globalpacks</code>、<code>pingwheel</code> 模组</li>
+        <li>新增配置：<code>global_packs.toml</code>、<code>pingwheel.server.json</code>、<code>tcth-common.toml</code></li>
+        <li>更新 <code>server.properties</code>、<code>jobsplus-common.yaml</code></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 厨师职业能力树上线</h3>
+      <table>
+        <tr><th>路线</th><th>效果</th></tr>
+        <tr><td>庖厨研修</td><td>职业经验 <code>×1.25 / ×1.5 / ×2</code></td></tr>
+        <tr><td>刀工</td><td>厨刀不耗耐久概率 <code>10% → 20% → 35%</code></td></tr>
+        <tr><td>炉火</td><td>火焰伤害减免 <code>15% → 30% → 50%</code></td></tr>
+        <tr><td>品鉴</td><td>吃正餐获得生命恢复/抗性/速度增益（冷却 20 秒）</td></tr>
+      </table>
+      <ul>
+        <li>Field Guide 图鉴：166 道菜，<strong>亲手做出来才解锁</strong></li>
+        <li>料理署名：出锅的菜带主厨签名，可查验出处</li>
+        <li>配置项：能力开关、火焰减伤开关、品鉴冷却、农夫奖励开关等</li>
+      </ul>
+      <div class="highlight-box orange">
+        ⚠️ 注意：农夫职业奖励默认关闭（<code>farmerRewardsEnabled=false</code>），等待实机验证后再开放
+      </div>
+    </div>
+  </div>
+
+  <!-- 提交 7: 580fbc7 停用 tacz 枪械 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🔫</span>
+      停用 TACZ 枪械、更新 ScorchedGuns 配置
+      <span class="commit-hash">580fbc7</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 枪械体系调整</h3>
+      <div class="highlight-box orange">
         <strong>TACZ 枪械2 暂时停用</strong>（文件保留，平衡/兼容排查中）<br>
-        当前枪械由 <strong style="color: var(--orange);">烈焰枪械 ScorchedGuns</strong> 承担。
+        当前枪械由 <strong>烈焰枪械 ScorchedGuns</strong> 承担
       </div>
       <ul>
         <li>全局伤害倍率 <code>0.2</code> → <code style="color: var(--accent);">0.5</code></li>
@@ -249,148 +332,129 @@
     </div>
   </div>
 
-  <!-- TCTH 0.2.0 -->
+  <!-- 提交 8: 37a3d38 同步 automodpack -->
   <div class="card">
-    <div class="card-title"><span class="icon">🎉</span> TCTH 职业模组 0.2.0 <span class="badge badge-new">自研模组</span></div>
-
+    <div class="card-title">
+      <span class="icon">🖥️</span>
+      同步 AutoModpack 整合包分发资产
+      <span class="commit-hash">37a3d38</span>
+    </div>
     <div class="section">
-      <h3>🍳 新职业：厨师 <span class="tag chef">tcth:chef</span></h3>
-      <div class="highlight-box gold">
-        <strong>统一烹饪事件</strong>：原版合成/熔炉、农夫乐事（Farmers Delight）烹饪锅、万花筒烹饪（Kaleidoscope Cookery）锅/汤锅/蒸笼——七种烹饪设备全部纳入一套奖励体系。
-      </div>
-      <p><strong>料理等级体系</strong>：数据驱动三档料理——<span class="tag">简餐</span> / <span class="tag">家常</span> / <span class="tag">珍馐</span>，互斥分档。</p>
+      <h3><span class="badge badge-client">客户端</span> 整合包配置</h3>
+      <ul>
+        <li>新增 <code>automodpack-server.json</code>：服务端配置（同步文件列表、客户端强制校验）</li>
+        <li>新增 <code>automodpack-client.json</code>：客户端配置（自动更新、模组包选择）</li>
+        <li>新增 <code>automodpack-content.json</code>：完整客户端模组清单（SHA-1 校验）</li>
+        <li>同步文件范围：<code>/global_packs/**</code>、<code>/mods/*.jar</code>、<code>/kubejs/**</code>、<code>/emotes/*</code> 等</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-client">客户端</span> 新增 19 个模组</h3>
       <table>
-        <tr><th>路线</th><th>效果</th></tr>
-        <tr><td>庖厨研修</td><td>职业经验 <code>×1.25 / ×1.5 / ×2</code></td></tr>
-        <tr><td>刀工</td><td>厨刀不耗耐久概率 <code>10% → 20% → 35%</code></td></tr>
-        <tr><td>炉火</td><td>火焰伤害减免 <code>15% → 50% → 30%</code></td></tr>
-        <tr><td>品鉴</td><td>吃正餐获得生命恢复/抗性/速度增益（冷却 20 秒）</td></tr>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Sodium</td><td>高性能渲染优化，大幅提升帧率与渲染效率</td></tr>
+        <tr><td>Sodium Extra</td><td>补充 OptiFine 风格的视觉选项（动画、粒子、天空等控制）</td></tr>
+        <tr><td>Reese's Sodium Options</td><td>更紧凑、可搜索的 Sodium 替代视频设置界面</td></tr>
+        <tr><td>Entity Culling</td><td>异步路径追踪隐藏不可见实体与方块实体，提升帧率</td></tr>
+        <tr><td>Cloth Config API</td><td>通用配置界面库，供其他模组快速生成设置屏幕</td></tr>
+        <tr><td>Iris 光影加载器</td><td>现代着色器模组，兼容多数 OptiFine 光影包</td></tr>
+        <tr><td>Camera Overhaul</td><td>根据移动、转向、跳跃、爆炸等添加倾斜、晃动等电影感效果</td></tr>
+        <tr><td>Smooth F5</td><td>平滑第三人称视角切换，F5 过渡更电影化</td></tr>
+        <tr><td>AAA Particles</td><td>用 Effekseer 特效替换部分世界粒子（爆炸、火光、萤火虫等）</td></tr>
+        <tr><td>Reactions</td><td>玩家面部动画，添加眨眼、望远镜瞄准闭眼等表情与动态面部效果</td></tr>
+        <tr><td>Cinematic Respawn</td><td>用平滑过场替换原版死亡画面并自动重生</td></tr>
+        <tr><td>Female Gender Mod</td><td>女性身体模型定制，为玩家模型添加可调节的女性化外观选项</td></tr>
+        <tr><td>Mouse Tweaks</td><td>增强库存鼠标操作（拖拽、滚轮快速移动物品等）</td></tr>
+        <tr><td>Just Enough Characters</td><td>为 JEI 等搜索界面添加中文拼音搜索支持</td></tr>
+        <tr><td>IMBlocker</td><td>根据游戏状态（聊天、搜索等）自动启用/禁用输入法</td></tr>
+        <tr><td>Packed Packs</td><td>资源包/数据包管理增强，支持配置文件、多选、拖拽、搜索、过滤等</td></tr>
+        <tr><td>Kotlin For Forge</td><td>Kotlin 语言支持前置库，为 Forge/NeoForge 提供 Kotlin 运行时</td></tr>
+        <tr><td>SuperMartijn642 Config Lib</td><td>配置库，简化模组配置文件的创建、重载、同步与生成</td></tr>
       </table>
-      <ul>
-        <li><strong>Field Guide 图鉴</strong>：166 道菜，<span style="color: var(--accent);">亲手做出来才解锁</span>（简餐/家常/珍馐三个分类页）</li>
-        <li><strong>料理署名</strong>：出锅的菜会带上主厨签名，手持料理可用命令查验"这菜谁做的"</li>
-        <li>厨师经验上限封顶 1.25×/1.5×/2×，高等级能力自动覆盖低等级</li>
-      </ul>
     </div>
+  </div>
 
-    <div class="divider"></div>
-
+  <!-- 提交 9: 761c2b6 清理误提交 -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon">🧹</span>
+      移除误提交的临时文件并加入忽略规则
+      <span class="commit-hash">761c2b6</span>
+    </div>
     <div class="section">
-      <h3>🌾 新职业：农夫 <span class="tag farmer">tcth:farmer</span></h3>
-      <div class="highlight-box green">
-        <strong>统一收获事件</strong>：成熟作物无论是<span style="color: var(--green);">打掉</span>还是<span style="color: var(--green);">右键采摘</span>都算收获，支持原版 + 农夫乐事 + 万花筒烹饪作物。
-      </div>
+      <h3><span class="badge badge-server">服务端</span> 仓库清理</h3>
       <ul>
-        <li><strong>四类奖励</strong>：种田收获、动物繁殖、驯服动物、剪羊毛</li>
-        <li>修了甜浆果右键采摘、辣椒动态判定、稻米移除型收获等实机问题</li>
-        <li>南瓜/西瓜奖励已移除（无法区分放置块与自然生长，防刷）</li>
-      </ul>
-      <div class="highlight-box" style="border-left-color: var(--orange); background: rgba(255,107,53,0.1);">
-        <strong>⚠️ 注意</strong>：农夫职业奖励默认关闭（<code>farmerRewardsEnabled=false</code>），等待实机验证后再开放——群里测试后我再开。
-      </div>
-    </div>
-  </div>
-
-  <!-- 服务器新模组 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🧩</span> 服务器新模组</div>
-    <table>
-      <tr><th>模组</th><th>说明</th></tr>
-      <tr><td>烈焰枪械 ScorchedGuns</td><td>当前主枪械体系（TACZ 暂停）</td></tr>
-      <tr><td>Nomansland 无人之地</td><td>新地形、植被、生物群系丰富度大增</td></tr>
-      <tr><td>Waves 海浪 / Biolith</td><td>海洋/海岸与生物群系扩展</td></tr>
-      <tr><td>Caverns & Chasms 深渊与裂隙</td><td>洞穴生物群系全面升级</td></tr>
-      <tr><td>Ping-Wheel 标记轮盘</td><td>服务器内置信号标记（右键呼出）</td></tr>
-      <tr><td>Shellbound 飞艇</td><td>主世界自然生成的空中飞艇结构（内含探索内容与战利品）</td></tr>
-      <tr><td>Vercte Satchels 随身挎包</td><td>额外随身背包</td></tr>
-      <tr><td>Display Delight</td><td>料理食物可视化展示</td></tr>
-      <tr><td>GD656 Killicon 击杀图标</td><td>击杀反馈图标</td></tr>
-      <tr><td>Blueprint</td><td>蓝图/建筑辅助库</td></tr>
-      <tr><td>Globalpacks 全局数据包</td><td>支撑 TCTH 职业数据包全局加载</td></tr>
-      <tr><td>AutoModpack 自动更新</td><td>客户端自动同步模组包</td></tr>
-    </table>
-    <div class="section" style="margin-top: 16px;">
-      <h3>其他调整</h3>
-      <ul>
-        <li>AlmostUnified 统一化整理：统一中文前缀、移除重复副本</li>
-        <li><strong>Tectonic 地形模组暂时停用</strong>（与现有地形方案冲突排查中）</li>
-        <li>Jobs+ 原版默认职业<strong>关闭</strong>，切换为 TCTH 自研职业体系</li>
-        <li>材质包新增 TCTH 完整简体中文汉化（含能力树、图鉴、配置界面）</li>
+        <li>移除误提交的 <code>Server/mods/temp_en_us.json</code></li>
+        <li>.gitignore：新增对临时文件的忽略规则</li>
       </ul>
     </div>
   </div>
 
-  <!-- 服务器管理 -->
+  <!-- 提交 10: c768844 新增战斗/客户端 mod 与更多材质包汉化 -->
   <div class="card">
-    <div class="card-title"><span class="icon">⚙️</span> 服务器管理调整</div>
-    <ul>
-      <li><code>run.bat</code> 改为<strong>崩溃自动重启</strong>（停止后 5 秒重启，Ctrl+C 两次可退出循环）</li>
-      <li>开启命令方块；游戏模式切换为创造（调试/建造用）</li>
-      <li>完善 git 忽略规则与行尾规范化（<code>.gitattributes</code>），仓库工程化整理</li>
-    </ul>
-  </div>
-
-  <!-- 版本与质量 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📦</span> 版本与质量</div>
-    <div class="highlight-box green">
-      ✅ TCTH 模组升级至 <strong>0.2.0</strong>（SHA-256：<code>3a87a3e0...34b1</code>）<br>
-      ✅ 自动化测试 <strong>380 项全部通过</strong>，含真实服务器冒烟测试<br>
-      ✅ 服务器已部署 <code>tcth-0.2.0.jar</code> + chef/farmer 全局数据包
+    <div class="card-title">
+      <span class="icon">⚔️</span>
+      新增战斗/客户端 mod 与更多材质包汉化
+      <span class="commit-hash">c768844</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 新增战斗系统</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Better Combat</td><td>改进战斗系统：连击、双持、武器动作优化</td></tr>
+        <tr><td>BC Particle</td><td>为 Better Combat 添加战斗粒子特效加成</td></tr>
+        <tr><td>Player Animator</td><td>轻量级玩家动画库，驱动角色动作表现</td></tr>
+        <tr><td>BetterF3</td><td>增强型 F3 调试界面，显示更多服务器/性能信息</td></tr>
+      </table>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-client">客户端</span> 新增模组</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>GUI Tween</td><td>平滑的 GUI 过渡动画效果</td></tr>
+        <tr><td>New Visual Keybing</td><td>可视化按键绑定显示</td></tr>
+      </table>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-update">汉化</span> 材质包新增语言文件</h3>
+      <table>
+        <tr><th>模组</th><th>说明</th></tr>
+        <tr><td>Jobs+</td><td>职业+ 完整简体中文翻译（480 行）</td></tr>
+        <tr><td>Open Parties and Claims</td><td>队伍与领地 完整简体中文翻译（516 行）</td></tr>
+        <tr><td>Reactions</td><td>面部动画 简体中文翻译（33 行）</td></tr>
+        <tr><td>Wildfire Gender</td><td>女性模型 简体中文翻译（61 行）</td></tr>
+      </table>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> Paradigm 公告板定制</h3>
+      <ul>
+        <li>前缀改为 <code>[食韵筑家]</code>，替换默认的 <code>[Paradigm]</code></li>
+        <li>公告内容汉化并加入服务器主题：种植料理、经营餐馆、筑屋聚村</li>
+        <li>加入玩家群号 <code>903730159</code>（点击可复制）</li>
+        <li>新增 <code>/back</code>、<code>/spawn</code> 冷却配置</li>
+      </ul>
     </div>
   </div>
 
-  <!-- 待开放 -->
+  <!-- 此前已部署内容 -->
   <div class="card">
-    <div class="card-title"><span class="icon">⏳</span> 待开放 / 待验证</div>
-    <ul>
-      <li>菜品 <strong>优秀/绝佳品质奖励（+2~4 XP）</strong>：数据已就绪，实机结算待验证</li>
-      <li>农夫奖励开关（见上方说明）</li>
-      <li>农夫与 Create 收割机、FakePlayer、领地保护的兼容边界待实测</li>
-      <li><strong>TACZ 枪械2</strong> 停用排查中，恢复时间待定</li>
-    </ul>
-  </div>
-
-  <!-- 提交时间线 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📜</span> 提交记录</div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="time">08-06 14:49</div>
-        <div class="content"><span class="badge badge-client">客户端</span> 同步 automodpack 整合包分发资产（19 个客户端模组）</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 14:49</div>
-        <div class="content"><span class="badge badge-fix">修复</span> 移除误提交的 temp_en_us.json 并加入忽略规则</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 13:48</div>
-        <div class="content"><span class="badge badge-fix">修复</span> 停用 tacz 枪械、更新 scguns 配置并新增更新日志</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 11:55</div>
-        <div class="content"><span class="badge badge-new">新功能</span> 部署 TCTH 全局数据包、新增 globalpacks/pingwheel mod 与配置更新</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 11:04</div>
-        <div class="content"><span class="badge badge-update">维护</span> 完善 git 忽略规则与行尾规范化(.gitattributes)</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 10:59</div>
-        <div class="content"><span class="badge badge-update">维护</span> 更新服务器模组至 0.2.0</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 10:46</div>
-        <div class="content"><span class="badge badge-new">新功能</span> 新增模组、TCTH 厨师职业汉化与服务器配置更新</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 09:56</div>
-        <div class="content"><span class="badge badge-update">维护</span> 发布 0.2.0 版本</div>
-      </div>
-      <div class="timeline-item">
-        <div class="time">08-06 09:52</div>
-        <div class="content"><span class="badge badge-new">新功能</span> 完成农夫职业与统一收获事件</div>
-      </div>
+    <div class="card-title">
+      <span class="icon">📌</span>
+      此前已部署内容（8 月 5 日及之前）
+      <span class="commit-hash">b0d5984</span>
+    </div>
+    <div class="section">
+      <h3><span class="badge badge-server">服务端</span> 服务器基础</h3>
+      <ul>
+        <li>NeoForge 21.1.247 服务端核心</li>
+        <li>职业+（Jobs+）、自然图鉴（Field Guide）、农夫乐事（Farmers Delight）、万花筒烹饪（Kaleidoscope Cookery）</li>
+        <li>机械动力（Create）、泰拉瑞斯（Terralith）、传送石碑、Jade 信息提示、JEI 物品管理</li>
+        <li>莱特曼货币悬赏、节气、队伍与领地、禁用聊天举报</li>
+        <li>性能优化：Lithium、FerriteCore、ModernFix、C2ME、Spark 分析</li>
+        <li>沉浸式建筑：沉浸式家具、手工家具、结构建造师、蓝图</li>
+        <li>宠物与生态：收藏家商队、蝴蝶物语、Longwings、动物生态</li>
+        <li>经济：悬赏系统、料理订单、土豆商店、万花筒烹饪兼容</li>
+      </ul>
     </div>
   </div>
 
