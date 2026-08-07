@@ -84,9 +84,14 @@ class GunnerPresetTest {
     @Test
     void fourRewardFilesExistAndMatchContract() throws IOException {
         Set<String> tiersSeen = new HashSet<>();
+        // Base kill rewards live directly under arc/gunner/*.json; the phase-5B
+        // study-route powerup actions live in the powerup/ subdirectory.
+        List<Path> files;
         try (Stream<Path> walk = Files.walk(PRESET.resolve("data/tcth/arc/gunner"))) {
-            List<Path> files = walk.filter(p -> p.getFileName().toString().endsWith(".json")).toList();
-            assertEquals(4, files.size(), "exactly four base rewards (COMMON/ELITE/HEAVY/BOSS)");
+            files = walk.filter(p -> p.getFileName().toString().endsWith(".json")
+                    && !p.toString().replace('\\', '/').contains("/powerup/")).toList();
+        }
+        assertEquals(4, files.size(), "exactly four base rewards (COMMON/ELITE/HEAVY/BOSS)");
             for (Path f : files) {
                 String tier = tierOf(f.getFileName().toString());
                 assertTrue(TIER_XP.containsKey(tier), "unknown tier file " + f);
@@ -117,10 +122,8 @@ class GunnerPresetTest {
                 assertNotNull(autoCond, tier + " must gate on tcth:automated");
                 assertFalse(autoCond.get("value").getAsBoolean(), "automated must be false");
             }
-        }
         assertEquals(4, tiersSeen.size());
     }
-
     @Test
     void tierTagsAreStrictlyMutuallyExclusive() throws IOException {
         // Each entity type may appear in at most ONE tier tag (elite/heavy/

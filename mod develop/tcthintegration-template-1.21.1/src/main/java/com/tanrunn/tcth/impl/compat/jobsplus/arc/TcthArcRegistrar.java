@@ -13,6 +13,7 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilitiesEnabledC
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.CookingDeviceCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishQualityCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishTierCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunnerExperienceAbilitiesEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireDamageCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireResistanceEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunKillDistanceCondition;
@@ -119,6 +120,11 @@ public final class TcthArcRegistrar {
     public static final ConditionType<GunnerRewardsEnabledCondition> GUNNER_REWARDS_ENABLED_CONDITION =
             ConditionType.register(id("gunner_rewards_enabled"), new GunnerRewardsEnabledCondition.Serializer());
 
+    // ---- phase 5B: gunner ability-route condition types ----
+    public static final ConditionType<GunnerExperienceAbilitiesEnabledCondition> GUNNER_EXPERIENCE_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("gunner_experience_abilities_enabled"),
+                    new GunnerExperienceAbilitiesEnabledCondition.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -165,6 +171,9 @@ public final class TcthArcRegistrar {
         checkInRegistry(ArcRegistry.CONDITION, id("gun_target_tier"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("gun_kill_distance"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("gunner_rewards_enabled"), "condition type");
+
+        // Phase 5B: gunner ability-route condition types.
+        checkInRegistry(ArcRegistry.CONDITION, id("gunner_experience_abilities_enabled"), "condition type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

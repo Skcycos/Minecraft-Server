@@ -156,6 +156,21 @@ public final class NiamiArrowRegistry {
         }
     }
 
+    /**
+     * Read-only presence check used by {@link SgDamageEvidence} (phase 5B):
+     * whether the arrow is currently registered and unexpired. Never consumes
+     * the record — the kill settlement still goes through {@link #take}.
+     */
+    public static boolean isRegistered(UUID arrowUuid) {
+        if (arrowUuid == null) {
+            return false;
+        }
+        synchronized (ARROWS) {
+            ArrowRecord record = ARROWS.get(arrowUuid);
+            return record != null && currentTick - record.spawnTick() <= ARROW_TTL_TICKS;
+        }
+    }
+
     /** Removes every record whose shooter logged out. */
     public static void removeForShooter(UUID shooterUuid) {
         if (shooterUuid == null) {

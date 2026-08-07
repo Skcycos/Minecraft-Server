@@ -4,10 +4,11 @@
   "package": "com.tanrunn.tcth.impl.compat.scguns.mixin",
   "compatibilityLevel": "JAVA_21",
   "requiredMods": [
-    "scguns"
+    "scguns",
+    "jobsplus"
   ],
   "mixins": [
-    "NiamiArrowSpawnMixin"
+    "AmmoSaverMixin"
   ],
   "injectors": {
     "defaultRequire": 1

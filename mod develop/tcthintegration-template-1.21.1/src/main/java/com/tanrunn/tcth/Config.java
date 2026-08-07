@@ -244,6 +244,20 @@ public class Config {
             .define("gunnerStatsEnabled", true);
 
     /**
+     * Personal chat announcement when a gunner medal is newly unlocked (phase 5C).
+     *
+     * <p>When false, medals still unlock and persist; only the chat line is
+     * suppressed. Re-enabling never re-announces historical unlocks. Config
+     * read failures fail closed (no announce).
+     */
+    public static final ModConfigSpec.BooleanValue GUNNER_MEDAL_ANNOUNCEMENTS_ENABLED = BUILDER
+            .comment("Chat the player when a gunner battlefield medal unlocks.",
+                    "Medals still unlock and persist when this is false.",
+                    "Historical / migrated medals are never announced.",
+                    "Default: true.")
+            .define("gunnerMedalAnnouncementsEnabled", true);
+
+    /**
      * Rate limit: maximum gun-kill actions settled per player per tick.
      */
     public static final ModConfigSpec.IntValue MAX_GUN_KILL_ACTIONS_PER_TICK = BUILDER
@@ -262,6 +276,58 @@ public class Config {
                     "Per-player, in-memory only, prevents boss-respawn farming.",
                     "Default: 1200. Range: 0 ~ 72000.")
             .defineInRange("gunnerBossCooldownTicks", 1200, 0, 72000);
+
+    // ---- gunner ability routes (phase 5B) ----
+
+    /**
+     * Master switch for the four gunner ability routes. When false, no gunner
+     * ability has any effect (damage, ammo, defense, experience).
+     */
+    public static final ModConfigSpec.BooleanValue GUNNER_ABILITIES_ENABLED = BUILDER
+            .comment("Master switch for the tcth:gunner ability tree (4 routes).",
+                    "When false, no gunner ability takes effect.",
+                    "Default: true.")
+            .define("gunnerAbilitiesEnabled", true);
+
+    /**
+     * Marksmanship route: SG firearm damage dealt to non-player targets
+     * (×1.05 / ×1.10 / ×1.15). Requires {@link #GUNNER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue GUN_DAMAGE_ABILITIES_ENABLED = BUILDER
+            .comment("Marksmanship route: SG firearm damage dealt to non-player targets",
+                    "×1.05 / ×1.10 / ×1.15. Requires gunnerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("gunDamageAbilitiesEnabled", true);
+
+    /**
+     * Ammo-saver route: chance to not consume ammo on a successful shot
+     * (5% / 10% / 15%). Requires {@link #GUNNER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue GUN_AMMO_ABILITIES_ENABLED = BUILDER
+            .comment("Ammo-saver route: chance not to consume ammo on a successful shot",
+                    "5% / 10% / 15%. Requires gunnerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("gunAmmoAbilitiesEnabled", true);
+
+    /**
+     * Battlefield-defense route: SG firearm/explosion damage taken by the
+     * player (×0.90 / ×0.80 / ×0.70). Requires {@link #GUNNER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue GUN_DEFENSE_ABILITIES_ENABLED = BUILDER
+            .comment("Battlefield-defense route: SG firearm damage taken by the player",
+                    "×0.90 / ×0.80 / ×0.70. Requires gunnerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("gunDefenseAbilitiesEnabled", true);
+
+    /**
+     * Gunner-study route: tcth:gunner job experience multiplier
+     * (×1.15 / ×1.35 / ×1.60). Requires {@link #GUNNER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue GUN_EXPERIENCE_ABILITIES_ENABLED = BUILDER
+            .comment("Gunner-study route: tcth:gunner job experience",
+                    "×1.15 / ×1.35 / ×1.60. Requires gunnerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("gunExperienceAbilitiesEnabled", true);
 
     static final ModConfigSpec SPEC = BUILDER.build();
 

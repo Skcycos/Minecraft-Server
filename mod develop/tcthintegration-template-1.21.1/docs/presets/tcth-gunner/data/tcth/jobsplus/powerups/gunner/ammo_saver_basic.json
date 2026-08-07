@@ -1,0 +1,8 @@
+{
+  "job": "tcth:gunner",
+  "icon": {
+    "id": "scguns:defender_pistol"
+  },
+  "price": 5,
+  "required_level": 10
+}

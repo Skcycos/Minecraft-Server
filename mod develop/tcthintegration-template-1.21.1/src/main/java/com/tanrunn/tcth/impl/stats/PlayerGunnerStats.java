@@ -1,21 +1,28 @@
 package com.tanrunn.tcth.impl.stats;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.tanrunn.tcth.api.guncombat.GunTargetTier;
 
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
 
 /**
  * Per-player gunner statistics (server-authoritative).
  *
  * <p>Stored in {@link GunnerStatsData} and serialized to NBT. Only
- * {@link ResourceLocation} strings, numbers and necessary plain text are
- * persisted — never full ItemStack / NBT. All integer counters use saturated
- * addition.
+ * {@link net.minecraft.resources.ResourceLocation} strings, numbers and
+ * necessary plain text are persisted — never full ItemStack / NBT. All integer
+ * counters use saturated addition.
+ *
+ * <p>Phase 5C reuses the 5A counters (totals, tiers, weapon map,
+ * {@code maxDistance}) and adds permanent medal unlock state. No second stats
+ * map is introduced for kills, weapons, tiers or distance.
  */
 public final class PlayerGunnerStats {
 
@@ -32,6 +39,18 @@ public final class PlayerGunnerStats {
     private static final String KEY_LAST_TIER = "lastTier";
     private static final String KEY_FIRST_KILL = "firstGunKillAt";
     private static final String KEY_LAST_KILL = "lastGunKillAt";
+    private static final String KEY_UNLOCKED_MEDALS = "unlockedMedals";
+
+    /** Hard cap on persisted medal entries (safety). */
+    public static final int MAX_MEDALS = 128;
+
+    /**
+     * Weapon ranking: kill count descending, then full {@code namespace:path}
+     * ascending. Independent of HashMap / NBT iteration order.
+     */
+    private static final Comparator<Map.Entry<String, Integer>> WEAPON_RANK =
+            Comparator.<Map.Entry<String, Integer>>comparingInt(Map.Entry::getValue).reversed()
+                    .thenComparing(Map.Entry::getKey);
 
     private int totalGunKills;
     private int commonKills;
@@ -46,6 +65,8 @@ public final class PlayerGunnerStats {
     private String lastTier = "";
     private long firstGunKillAt;
     private long lastGunKillAt;
+    /** medalId → unlockedAtEpochMillis (0 = historical / unknown). */
+    private final Map<String, Long> unlockedMedals = new LinkedHashMap<>();
 
     PlayerGunnerStats() {
     }
@@ -56,7 +77,7 @@ public final class PlayerGunnerStats {
      * @param weaponId item id of the firearm
      * @param targetId entity type id of the killed target
      * @param tier     difficulty tier of the target
-     * @param distance distance of the kill
+     * @param distance distance of the kill (non-finite / negative ignored for max)
      * @param timestamp epoch millis
      */
     public void record(String weaponId, String targetId, GunTargetTier tier, float distance, long timestamp) {
@@ -78,12 +99,12 @@ public final class PlayerGunnerStats {
                 uniqueWeapons = saturateAdd(uniqueWeapons, 1);
             }
         }
-        if (distance > maxDistance) {
+        if (Float.isFinite(distance) && distance >= 0.0f && distance > maxDistance) {
             maxDistance = distance;
         }
-        lastWeapon = weaponId;
-        lastTarget = targetId;
-        lastTier = tier.name();
+        lastWeapon = weaponId != null ? weaponId : "";
+        lastTarget = targetId != null ? targetId : "";
+        lastTier = tier != null ? tier.name() : "";
         if (firstGunKillAt == 0L) {
             firstGunKillAt = timestamp;
         }
@@ -143,18 +164,96 @@ public final class PlayerGunnerStats {
     }
 
     /**
-     * Returns the most-used weapon id, or {@code ""} if no kills recorded.
+     * Most-used weapon id, or {@code ""} if none. Ties broken by full id
+     * lexicographic ascending order.
      */
     public String getMostUsedWeapon() {
-        String topWeapon = "";
-        int topCount = 0;
+        List<Map.Entry<String, Integer>> ranked = rankedWeaponSnapshots();
+        return ranked.isEmpty() ? "" : ranked.getFirst().getKey();
+    }
+
+    /**
+     * Kill count of the most-used weapon, or {@code 0} if none.
+     */
+    public int getMostUsedWeaponKills() {
+        List<Map.Entry<String, Integer>> ranked = rankedWeaponSnapshots();
+        return ranked.isEmpty() ? 0 : ranked.getFirst().getValue();
+    }
+
+    /**
+     * Top-{@code n} weapons: count desc, id asc. Returns an unmodifiable list of
+     * <em>immutable</em> {@link Map#entry} snapshots — callers cannot
+     * {@code setValue} into the internal weapon map.
+     */
+    public List<Map.Entry<String, Integer>> getTopWeapons(int n) {
+        if (n <= 0 || weaponKills.isEmpty()) {
+            return List.of();
+        }
+        List<Map.Entry<String, Integer>> ranked = rankedWeaponSnapshots();
+        if (ranked.size() <= n) {
+            return List.copyOf(ranked);
+        }
+        return List.copyOf(ranked.subList(0, n));
+    }
+
+    /**
+     * Sorted weapon snapshots (immutable entries). Safe to expose externally.
+     */
+    private List<Map.Entry<String, Integer>> rankedWeaponSnapshots() {
+        if (weaponKills.isEmpty()) {
+            return List.of();
+        }
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(weaponKills.size());
         for (Map.Entry<String, Integer> e : weaponKills.entrySet()) {
-            if (e.getValue() > topCount) {
-                topCount = e.getValue();
-                topWeapon = e.getKey();
+            // Snapshot: Map.entry is immutable; setValue throws UnsupportedOperationException.
+            list.add(Map.entry(e.getKey(), e.getValue()));
+        }
+        list.sort(WEAPON_RANK);
+        return list;
+    }
+
+    /**
+     * Unmodifiable view of unlocked medals ({@code medalId → unlockedAt}).
+     */
+    public Map<String, Long> getUnlockedMedals() {
+        return Collections.unmodifiableMap(unlockedMedals);
+    }
+
+    public boolean hasMedal(GunnerMedal medal) {
+        return medal != null && unlockedMedals.containsKey(medal.id());
+    }
+
+    /**
+     * Permanently unlocks {@code medal} if not already held and under the
+     * safety cap. Once unlocked, never revoked.
+     *
+     * @return {@code true} if this call newly unlocked the medal
+     */
+    public boolean tryUnlock(GunnerMedal medal, long unlockedAtEpochMillis) {
+        if (medal == null) {
+            return false;
+        }
+        if (unlockedMedals.containsKey(medal.id())) {
+            return false;
+        }
+        if (unlockedMedals.size() >= MAX_MEDALS) {
+            return false;
+        }
+        unlockedMedals.put(medal.id(), unlockedAtEpochMillis);
+        return true;
+    }
+
+    /**
+     * Unlocked medals in fixed definition order (only those present).
+     */
+    public List<GunnerMedal> getUnlockedMedalsInOrder() {
+        List<GunnerMedal> ordered = new ArrayList<>();
+        for (GunnerMedal medal : GunnerMedal.values()) {
+            if (unlockedMedals.containsKey(medal.id())) {
+                ordered.add(medal);
             }
         }
-        return topWeapon;
+        return List.copyOf(ordered);
     }
 
     // ---- NBT ----
@@ -176,6 +275,9 @@ public final class PlayerGunnerStats {
         tag.putString(KEY_LAST_TIER, lastTier);
         tag.putLong(KEY_FIRST_KILL, firstGunKillAt);
         tag.putLong(KEY_LAST_KILL, lastGunKillAt);
+        CompoundTag medalsTag = new CompoundTag();
+        unlockedMedals.forEach(medalsTag::putLong);
+        tag.put(KEY_UNLOCKED_MEDALS, medalsTag);
         return tag;
     }
 
@@ -194,13 +296,37 @@ public final class PlayerGunnerStats {
             stats.weaponKills.put(key, weaponsTag.getInt(key));
         }
         stats.uniqueWeapons = tag.getInt(KEY_UNIQUE_WEAPONS);
-        stats.maxDistance = tag.getFloat(KEY_MAX_DISTANCE);
+        stats.maxDistance = sanitizeDistance(tag.getFloat(KEY_MAX_DISTANCE));
         stats.lastWeapon = tag.getString(KEY_LAST_WEAPON);
         stats.lastTarget = tag.getString(KEY_LAST_TARGET);
         stats.lastTier = tag.getString(KEY_LAST_TIER);
         stats.firstGunKillAt = tag.getLong(KEY_FIRST_KILL);
         stats.lastGunKillAt = tag.getLong(KEY_LAST_KILL);
+        if (tag.contains(KEY_UNLOCKED_MEDALS)) {
+            CompoundTag medalsTag = tag.getCompound(KEY_UNLOCKED_MEDALS);
+            for (String key : medalsTag.getAllKeys()) {
+                if (stats.unlockedMedals.size() >= MAX_MEDALS) {
+                    break;
+                }
+                GunnerMedal.byId(key).ifPresent(medal -> {
+                    // Unknown ids already filtered by byId; merge duplicates by first win.
+                    if (!stats.unlockedMedals.containsKey(medal.id())) {
+                        stats.unlockedMedals.put(medal.id(), medalsTag.getLong(key));
+                    }
+                });
+            }
+        }
+        // Silent consistency: stats may already satisfy medals missing from NBT
+        // (v1 archives or partial writes). Never announces.
+        GunnerMedalEvaluator.reconcileSilent(stats);
         return stats;
+    }
+
+    static float sanitizeDistance(float distance) {
+        if (!Float.isFinite(distance) || distance < 0.0f) {
+            return 0.0f;
+        }
+        return distance;
     }
 
     private static int saturateAdd(int a, int b) {

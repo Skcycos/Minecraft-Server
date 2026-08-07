@@ -7,6 +7,7 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.TcthArcRegistrar;
 import com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldown;
 
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.NeoForge;
 
 /**
@@ -50,6 +51,19 @@ public final class JobsPlusCompatModule implements CompatModule {
         JobsPlusRewardModule.init(NeoForge.EVENT_BUS);
         FarmerRewardModule.init(NeoForge.EVENT_BUS);
         GunnerRewardModule.init(NeoForge.EVENT_BUS);
+        // Phase 5B: gunner ability routes. The pure Jobs+ tier-query / study
+        // route is registered unconditionally (Jobs+ is present here). The
+        // SG-dependent routes (marksmanship damage, battlefield defense, ammo
+        // saver) are only registered when Scorched Guns is actually loaded, so
+        // Jobs+/Arc without SG never resolves SgDamageEvidence. The ammo-saver
+        // mixin config additionally requires jobsplus, keeping every path
+        // dependency-explicit (no NoClassDefFoundError capture).
+        if (ModList.get().isLoaded("scguns")) {
+            com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerAbilityModule.init(NeoForge.EVENT_BUS);
+        } else {
+            TCTHIntegration.LOGGER.info(
+                    "[TCTH] Gunner SG-dependent ability routes (marksmanship / defense / ammo) skipped: Scorched Guns not loaded");
+        }
         // Tasting anti-farm cooldown lifecycle (logout/stop cleanup). The
         // cooldown itself is committed by the tcth:tasting_effects reward.
         ChefTastingCooldown.instance().registerLifecycle(NeoForge.EVENT_BUS);
@@ -57,6 +71,7 @@ public final class JobsPlusCompatModule implements CompatModule {
         TCTHIntegration.LOGGER.info("[TCTH] Farmer crop-harvest reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Gunner firearm-kill reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Chef ability tree active (knife / hearth / tasting / study routes)");
+        TCTHIntegration.LOGGER.info("[TCTH] Gunner ability tree active (marksmanship / ammo / defense / study routes)");
     }
 
     boolean isArcAvailableForTesting() {

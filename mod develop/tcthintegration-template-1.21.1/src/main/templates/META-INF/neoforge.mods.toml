@@ -71,6 +71,14 @@ requiredMods=["kaleidoscope_cookery"]
 config="scguns_compat.mixins.json"
 requiredMods=["scguns"]
 
+# Scorched Guns ammo-saver mixin (phase 5B/5B.1): ordinary-shot deduction
+# (handleShoot Math.max redirect) + beam consumption period (consumeAmmo HEAD).
+# Requires BOTH Scorched Guns (the target class) and Jobs+ (the powerup query);
+# skipped entirely when either is absent so the mixin classes are never resolved.
+[[mixins]]
+config="scguns_ammo_compat.mixins.json"
+requiredMods=["scguns", "jobsplus"]
+
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
 #[[accessTransformers]]

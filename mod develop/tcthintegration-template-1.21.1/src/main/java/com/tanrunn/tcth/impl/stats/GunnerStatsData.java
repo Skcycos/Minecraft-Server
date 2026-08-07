@@ -18,14 +18,16 @@ import net.minecraft.world.level.saveddata.SavedData;
  * ({@code world/data/tcth_gunner_stats.dat}) — never written into the vanilla
  * playerdata. Keyed by player UUID so a name change does not affect data.
  *
- * <p>Format carries a {@code dataVersion} for future migrations; loading is
- * defensive: missing/unknown fields fall back to defaults and never fail the
- * world load. All integer counters use saturated addition.
+ * <p>Format carries a {@code dataVersion} for migrations. Phase 5C bumps the
+ * version to {@code 2} for permanent medal unlock state. Loading is defensive:
+ * missing/unknown fields fall back to defaults and never fail the world load.
+ * All integer counters use saturated addition.
  */
 public final class GunnerStatsData extends SavedData {
 
     public static final String NAME = "tcth_gunner_stats";
-    private static final int DATA_VERSION = 1;
+    /** Schema version: 1 = 5A counters; 2 = + medals (5C). */
+    public static final int DATA_VERSION = 2;
     private static final String KEY_VERSION = "dataVersion";
     private static final String KEY_PLAYERS = "players";
 
@@ -87,17 +89,30 @@ public final class GunnerStatsData extends SavedData {
             return data;
         }
         CompoundTag playersTag = tag.getCompound(KEY_PLAYERS);
+        boolean needsRewrite = version < DATA_VERSION;
         for (String key : playersTag.getAllKeys()) {
             if (data.players.size() >= MAX_TRACKED_PLAYERS) {
                 break; // enforce player cap on load too
             }
             try {
                 UUID uuid = UUID.fromString(key);
-                PlayerGunnerStats stats = PlayerGunnerStats.load(playersTag.getCompound(key));
+                CompoundTag playerTag = playersTag.getCompound(key);
+                // Detect silent medal reconcile by comparing medal map size after load.
+                int medalsBefore = playerTag.contains("unlockedMedals")
+                        ? playerTag.getCompound("unlockedMedals").size()
+                        : 0;
+                PlayerGunnerStats stats = PlayerGunnerStats.load(playerTag);
+                if (stats.getUnlockedMedals().size() > medalsBefore) {
+                    needsRewrite = true;
+                }
                 data.players.put(uuid, stats);
             } catch (IllegalArgumentException e) {
                 // Unparseable uuid or entry: skip, never fail world load.
             }
+        }
+        // v1 → v2 (or silent medal fill) must persist on next save.
+        if (needsRewrite) {
+            data.setDirty();
         }
         return data;
     }

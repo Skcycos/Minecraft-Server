@@ -64,6 +64,27 @@ class PlayerGunnerStatsTest {
     }
 
     @Test
+    void nonFiniteOrNegativeDistanceDoesNotUpdateMax() {
+        PlayerGunnerStats stats = new PlayerGunnerStats();
+        stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, 12.0f, 1000L);
+        stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, Float.NaN, 2000L);
+        stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, Float.POSITIVE_INFINITY, 3000L);
+        stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, -5.0f, 4000L);
+        assertEquals(12.0f, stats.getMaxDistance());
+    }
+
+    @Test
+    void nbtLoadSanitizesBadMaxDistance() {
+        PlayerGunnerStats stats = new PlayerGunnerStats();
+        stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, 10.0f, 1000L);
+        net.minecraft.nbt.CompoundTag tag = stats.save();
+        tag.putFloat("maxDistance", Float.NaN);
+        assertEquals(0.0f, PlayerGunnerStats.load(tag).getMaxDistance());
+        tag.putFloat("maxDistance", -3.0f);
+        assertEquals(0.0f, PlayerGunnerStats.load(tag).getMaxDistance());
+    }
+
+    @Test
     void mostUsedWeaponIsReturned() {
         PlayerGunnerStats stats = new PlayerGunnerStats();
         stats.record(WEAPON_A, TARGET_ZOMBIE, GunTargetTier.COMMON, 10.0f, 1000L);

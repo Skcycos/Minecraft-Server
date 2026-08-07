@@ -103,6 +103,8 @@ weaponId / targetId / targetTier / distance / player / automated=false 全部正
 
 ## 3. 延期项目(不计入 PASS,需后续补验)
 
+> **状态(5B): 5A.3 在线负例补验标记为 DEFERRED**。以下项目列入 5A.3 补验清单,在补验完成前不计 PASS;测试服现有枪客奖励(`gunnerRewardsEnabled=true`)保持开启观察。
+
 1. E2:子弹打伤后燃烧/岩浆/中毒/凋零死亡 → 0 事件
 2. E3:手持枪械近战(枪托)击杀 → 0 事件
 3. E4:命中但未死亡 → 0 事件

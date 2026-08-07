@@ -1,6 +1,7 @@
 package com.tanrunn.tcth.impl.stats;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.BooleanSupplier;
@@ -10,13 +11,14 @@ import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.api.guncombat.GunKillEvent;
 import com.tanrunn.tcth.impl.compat.CompatLoader;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 /**
- * Gunner-statistics tracker (phase 5A.1).
+ * Gunner-statistics tracker (phase 5A.1 / 5C).
  *
  * <p>Listens to {@link GunKillEvent} and records per-player statistics. Only
  * counts events with a real player, {@code automated=false}, and a
@@ -28,16 +30,16 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
  *   <li>player/automated checks;</li>
  *   <li>event-id duplicate check (no write yet);</li>
  *   <li>fetch SavedData, get/create player stats;</li>
- *   <li>successfully {@code record()} + {@code setDirty()};</li>
- *   <li>only now commit the event id.</li>
+ *   <li>successfully {@code record()} + medal unlock + {@code setDirty()};</li>
+ *   <li>only now commit the event id;</li>
+ *   <li>optional personal medal announcement (never rolls back stats/medals).</li>
  * </ol>
  *
  * <p>Every event is processed in isolation: a {@link RuntimeException} or
  * {@link LinkageError} is logged (throttled) and never propagates to the event
- * bus, so a single stats failure can neither break the death event nor the
- * server tick, and the event id stays free for a safe retry.
+ * bus. Medal announcement failures cannot undo counters or unlocks.
  *
- * <p>Independent from Jobs+/Arc: this module references no third-party types.
+ * <p>Independent from Jobs+/Arc/GD656: this module references no third-party types.
  */
 public final class GunnerStatsTracker {
 
@@ -60,8 +62,13 @@ public final class GunnerStatsTracker {
     private static BooleanSupplier frameworkEnabledSupplier = CompatLoader::isFrameworkEnabled;
     private static BooleanSupplier integrationEnabledSupplier =
             () -> Config.GUNNER_INTEGRATION_ENABLED.get();
+    private static BooleanSupplier medalAnnounceSupplier =
+            () -> Config.GUNNER_MEDAL_ANNOUNCEMENTS_ENABLED.get();
     private static java.util.function.Function<net.minecraft.server.level.ServerLevel, GunnerStatsData> dataProvider =
             GunnerStatsData::current;
+    /** Test seam: capture announce Component without needing a live player. */
+    private static java.util.function.BiConsumer<ServerPlayer, Component> announceSink =
+            GunnerStatsTracker::sendChat;
 
     private GunnerStatsTracker() {
     }
@@ -85,7 +92,6 @@ public final class GunnerStatsTracker {
             settle(event);
         } catch (RuntimeException | LinkageError e) {
             // Single-event isolation: never break the death event or the tick.
-            // Log throttled so a failing store cannot spam the log.
             errorThrottled("[TCTH] Gunner stats failed for event {}, player {}, weapon {}: {}",
                     safeEventId(event), safePlayerUuid(event), safeWeaponId(event), e.toString());
         }
@@ -106,7 +112,7 @@ public final class GunnerStatsTracker {
         if (!switchesEnabled()) {
             return;
         }
-        if (!(event.getPlayer() instanceof ServerPlayer)) {
+        if (!(event.getPlayer() instanceof ServerPlayer player)) {
             return; // no actor
         }
         if (event.isAutomated()) {
@@ -131,18 +137,52 @@ public final class GunnerStatsTracker {
                 event.getTargetTier(),
                 event.getDistance(),
                 System.currentTimeMillis());
+        List<GunnerMedal> newlyUnlocked =
+                GunnerMedalEvaluator.unlockNewlyMet(stats, System.currentTimeMillis());
         data.setDirty();
         // Commit the idempotency ONLY after a successful write.
         synchronized (RECENT_EVENT_IDS) {
             RECENT_EVENT_IDS.put(event.getEventId(), currentTick);
             pruneExpiredLocked();
         }
+        // Announcements never roll back counters / unlocks.
+        try {
+            if (!newlyUnlocked.isEmpty() && medalAnnouncementsEnabled()) {
+                announceSink.accept(player, formatMedalAnnouncement(newlyUnlocked));
+            }
+        } catch (RuntimeException | LinkageError e) {
+            errorThrottled("[TCTH] Gunner medal announcement failed for player {}: {}",
+                    player.getUUID(), e.toString());
+        }
         // Gunner debug output (INFO, in-memory switch, default off).
         if (com.tanrunn.tcth.impl.debug.GunDebug.isEnabled()) {
-            TCTHIntegration.LOGGER.info("[TCTH][GUN] stats event={} player={} weapon={} tier={} dist={} total={}",
+            TCTHIntegration.LOGGER.info("[TCTH][GUN] stats event={} player={} weapon={} tier={} dist={} total={} medals+={}",
                     event.getEventId(), event.getPlayer().getUUID(), event.getWeaponId(),
-                    event.getTargetTier(), event.getDistance(), stats.getTotalGunKills());
+                    event.getTargetTier(), event.getDistance(), stats.getTotalGunKills(),
+                    newlyUnlocked.size());
         }
+    }
+
+    private static boolean medalAnnouncementsEnabled() {
+        try {
+            return medalAnnounceSupplier.getAsBoolean();
+        } catch (RuntimeException | LinkageError e) {
+            return false; // fail-closed: unlocks already persisted
+        }
+    }
+
+    /**
+     * Merged unlock notice as a single {@link Component#translatable} tree.
+     * The server never reads the player's language; the client resolves keys.
+     */
+    static Component formatMedalAnnouncement(List<GunnerMedal> medals) {
+        return Component.translatable(
+                "tcth.gunner.medal.unlocked",
+                GunnerMedalEvaluator.joinMedalNames(medals));
+    }
+
+    private static void sendChat(ServerPlayer player, Component message) {
+        player.sendSystemMessage(message);
     }
 
     /** Framework + gunner integration + stats switches, fail-closed. */
@@ -205,6 +245,14 @@ public final class GunnerStatsTracker {
         integrationEnabledSupplier = supplier;
     }
 
+    static void setMedalAnnounceSupplierForTesting(BooleanSupplier supplier) {
+        medalAnnounceSupplier = supplier;
+    }
+
+    static void setAnnounceSinkForTesting(java.util.function.BiConsumer<ServerPlayer, Component> sink) {
+        announceSink = sink != null ? sink : GunnerStatsTracker::sendChat;
+    }
+
     static void setDataProviderForTesting(java.util.function.Function<net.minecraft.server.level.ServerLevel, GunnerStatsData> provider) {
         dataProvider = provider;
     }
@@ -220,7 +268,9 @@ public final class GunnerStatsTracker {
         enabledSupplier = () -> Config.GUNNER_STATS_ENABLED.get();
         frameworkEnabledSupplier = CompatLoader::isFrameworkEnabled;
         integrationEnabledSupplier = () -> Config.GUNNER_INTEGRATION_ENABLED.get();
+        medalAnnounceSupplier = () -> Config.GUNNER_MEDAL_ANNOUNCEMENTS_ENABLED.get();
         dataProvider = GunnerStatsData::current;
+        announceSink = GunnerStatsTracker::sendChat;
         synchronized (RECENT_EVENT_IDS) {
             RECENT_EVENT_IDS.clear();
         }
