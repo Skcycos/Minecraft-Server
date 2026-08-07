@@ -6,7 +6,8 @@
   "mixins": [
     "CookingPotResultSlotMixin",
     "CookingPotBlockEntityAccessor",
-    "TomatoBlockMixin"
+    "TomatoBlockMixin",
+    "MushroomColonyBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.mynethersdelight",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PowderyCaneBlockMixin",
+    "PowderyCannonBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

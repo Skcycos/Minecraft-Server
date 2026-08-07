@@ -277,7 +277,14 @@ class GunnerDependencyMatrixTest {
 
     @Test
     void builtJarDeclaresBothMixinConfigsWhenPresent() throws Exception {
-        Path jar = Path.of("build/libs/tcth-0.2.1.jar");
+        String version;
+        try (var lines = Files.lines(Path.of("gradle.properties"), StandardCharsets.UTF_8)) {
+            version = lines.filter(line -> line.startsWith("mod_version="))
+                    .map(line -> line.substring("mod_version=".length()).trim())
+                    .findFirst()
+                    .orElseThrow(() -> new AssertionError("gradle.properties missing mod_version"));
+        }
+        Path jar = Path.of("build/libs/tcth-" + version + ".jar");
         if (!Files.exists(jar)) {
             // clean test-only runs may not have packaged yet; skip soft.
             return;

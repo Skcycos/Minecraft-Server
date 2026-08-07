@@ -65,6 +65,18 @@ requiredMods=["farmersdelight"]
 config="kaleidoscope_cookery_compat.mixins.json"
 requiredMods=["kaleidoscope_cookery"]
 
+# Neapolitan farming right-click harvest (strawberry bush + mint). Gated so
+# StrawberryBushBlock / MintBlock are never resolved without Neapolitan.
+[[mixins]]
+config="neapolitan_farming_compat.mixins.json"
+requiredMods=["neapolitan"]
+
+# My Nether's Delight powdery cane / powdery cannon special-case harvest.
+# Gated so PowderyCaneBlock / PowderyCannonBlock are never resolved without MND.
+[[mixins]]
+config="mynethersdelight_farming_compat.mixins.json"
+requiredMods=["mynethersdelight"]
+
 # Scorched Guns Niami arrow birth-registration mixin (phase 5A.1). Only applied
 # when Scorched Guns is installed; never falls back to a heuristic.
 [[mixins]]
@@ -147,6 +159,33 @@ requiredMods=["scguns", "jobsplus"]
     modId="scguns"
     type="optional"
     versionRange="[1.5,)"
+    ordering="NONE"
+    side="BOTH"
+
+# Neapolitan crop harvest (optional; mixins gated by requiredMods).
+# Upper bound excludes unvalidated 6.1.x (server JAR is exactly 6.0.1).
+[[dependencies.${mod_id}]]
+    modId="neapolitan"
+    type="optional"
+    versionRange="[6.0.1,6.1.0)"
+    ordering="NONE"
+    side="BOTH"
+
+# Dungeons Delight crop harvest via block tags only (optional; no Java mixins).
+# Upper bound excludes unvalidated 1.6.x (server JAR is exactly 1.5.0).
+[[dependencies.${mod_id}]]
+    modId="dungeonsdelight"
+    type="optional"
+    versionRange="[1.5.0,1.6.0)"
+    ordering="NONE"
+    side="BOTH"
+
+# My Nether's Delight powdery / colony harvest (optional; mixins gated by requiredMods).
+# Upper bound excludes unvalidated 1.11.x (server JAR is exactly 1.10.4).
+[[dependencies.${mod_id}]]
+    modId="mynethersdelight"
+    type="optional"
+    versionRange="[1.10.4,1.11.0)"
     ordering="NONE"
     side="BOTH"
 

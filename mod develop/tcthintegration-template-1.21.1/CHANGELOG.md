@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-08-07
+
+### 4A.4 / 4A.4.1 — farmer crop compatibility expansion
+
+- Added mature harvest detection for Neapolitan strawberry bushes, mint and
+  adzuki sprouts, plus Dungeons Delight rotbulb crops.
+- Added conditional right-click harvest detection for My Nether's Delight
+  powdery cane, powdery cannon and the two fungus colonies.
+- Kept crop identity tied to world block IDs under Kaleidoscope Compat UNITE
+  mode; no duplicate Arc action, reward value change or new currency payout.
+- Added fail-closed exclusions for placeable or maturity-ambiguous plants and
+  normalized double-height rotbulb positions before idempotency checks.
+- Pinned the new optional development JARs and Scorched Guns in the standalone
+  CI template with exact download URLs and SHA-256 verification.
+- Bounded optional dependency ranges to the server-verified version families.
+
 ### 5C / 5C.1 — gunner battlefield profile and medals
 
 - Reuses 5A `PlayerGunnerStats` counters (no second kill/weapon/tier/distance

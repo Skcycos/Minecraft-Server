@@ -156,9 +156,50 @@ class FarmerPresetTest {
     @Test
     void farmingBlockTagsArePresent() throws Exception {
         for (String tag : new String[]{"farmer_harvestables",
-                "farmer_vertical_crops", "farmer_excluded"}) {
+                "farmer_vertical_crops", "farmer_excluded", "farmer_colony_harvestables"}) {
             assertTrue(Files.exists(Path.of(PRESET, "tags/block/" + tag + ".json")),
                     "block tag tcth:" + tag + " must exist in the preset");
+        }
+    }
+
+    @Test
+    void phase4a4OptionalCropsInHarvestablesTag() throws Exception {
+        String harvestables = Files.readString(Path.of(PRESET, "tags/block/farmer_harvestables.json"),
+                StandardCharsets.UTF_8);
+        assertTrue(harvestables.contains("neapolitan:strawberry_bush"));
+        assertTrue(harvestables.contains("neapolitan:mint"));
+        assertTrue(harvestables.contains("neapolitan:adzuki_sprouts"));
+        assertTrue(harvestables.contains("dungeonsdelight:rotbulb_crop"));
+        assertTrue(harvestables.contains("\"required\": false")
+                        || harvestables.contains("\"required\":false"),
+                "optional mod entries must use required:false");
+        // Special-interaction MND crops must NOT use generic max-age harvestables.
+        assertFalse(harvestables.contains("powdery_cane"));
+        assertFalse(harvestables.contains("powdery_cannon"));
+        assertFalse(harvestables.contains("fungus_colony"));
+    }
+
+    @Test
+    void phase4a4ColonyTagOnlyMndColonies() throws Exception {
+        String colony = Files.readString(Path.of(PRESET, "tags/block/farmer_colony_harvestables.json"),
+                StandardCharsets.UTF_8);
+        assertTrue(colony.contains("mynethersdelight:warped_fungus_colony"));
+        assertTrue(colony.contains("mynethersdelight:crimson_fungus_colony"));
+        assertFalse(colony.contains("farmersdelight:"),
+                "FD own colonies must not be in the TCTH colony tag");
+    }
+
+    @Test
+    void phase4a4ExclusionsCoverPlaceBreakFarmRisk() throws Exception {
+        String excluded = Files.readString(Path.of(PRESET, "tags/block/farmer_excluded.json"),
+                StandardCharsets.UTF_8);
+        for (String id : new String[]{
+                "neapolitan:vanilla_vine", "neapolitan:banana_bundle", "neapolitan:magic_beans",
+                "dungeonsdelight:rotten_crop", "dungeonsdelight:rotbulb_plant",
+                "dungeonsdelight:wormroot_stalk", "mynethersdelight:bullet_pepper",
+                "mynethersdelight:powdery_chubby_sapling"
+        }) {
+            assertTrue(excluded.contains(id), "excluded must list " + id);
         }
     }
 

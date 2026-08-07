@@ -36,8 +36,10 @@ jobs:
         run: chmod +x ./gradlew
 
       # Optional-mod dev jars used as compileOnly/testOnly by the build.
-      # Pinned to the exact versions installed on the test server; every
-      # download is verified against the SHA-256 of the server JAR.
+      # Pinned Modrinth CDN URLs (no "latest"); every download is verified
+      # against the SHA-256 of the exact JAR installed on the test server.
+      # Phase 4A.4.1: added neapolitan / dungeonsdelight / mynethersdelight /
+      # scguns (previously compileOnly in build.gradle but missing here).
       - name: Download and verify optional-mod dev jars
         run: |
           set -euo pipefail
@@ -57,6 +59,20 @@ jobs:
 
           curl -fL -o dev-mods/fieldguide-1.13.4.jar "https://cdn.modrinth.com/data/72RRCWM6/versions/6EZPXuN5/fieldguide-neoforge-1.21.1-1.13.4.jar"
           echo "a5ca90728ac3c210b6a27b4451c1ab75df62650da32545d034073ead04e4a531  dev-mods/fieldguide-1.13.4.jar" | sha256sum -c -
+
+          # Scorched Guns 1.5 (server: ScorchedGuns-Neoforge-1.5.jar)
+          curl -fL -o dev-mods/scguns-1.5.jar "https://cdn.modrinth.com/data/GwtIopV4/versions/8pMPZhvI/ScorchedGuns-1.5.jar"
+          echo "6a4237c518fa36a56d3bf2a269fad508e2f4053a51e9c43381709b09806c2001  dev-mods/scguns-1.5.jar" | sha256sum -c -
+
+          # Phase 4A.4 farming crop compat (exact server JAR versions)
+          curl -fL -o dev-mods/neapolitan-6.0.1.jar "https://cdn.modrinth.com/data/InYMuiQt/versions/RQ5qgaUC/neapolitan-1.21.1-6.0.1.jar"
+          echo "82e104afc49887134fb0f74e6b3d3bc827fe1f88ea3d14836c2701218a1071d9  dev-mods/neapolitan-6.0.1.jar" | sha256sum -c -
+
+          curl -fL -o dev-mods/dungeonsdelight-1.5.0.jar "https://cdn.modrinth.com/data/qPfNr476/versions/aFluEQDH/neoforge-dungeonsdelight-1.21.1-1.5.0.jar"
+          echo "90342848adb6b98569a53a1d34fabbd7042f80ee530b23b7e378e329c5a1c5cd  dev-mods/dungeonsdelight-1.5.0.jar" | sha256sum -c -
+
+          curl -fL -o dev-mods/mynethersdelight-1.10.4.jar "https://cdn.modrinth.com/data/O53VhQoZ/versions/OdH19ieD/MyNethersDelight-1.21.1-1.10.4.jar"
+          echo "fe246d086dcb87c7d2163fbbff09fd7e164f206238e52700fe0b3e34fb343432  dev-mods/mynethersdelight-1.10.4.jar" | sha256sum -c -
 
       - name: Build with Gradle
         run: ./gradlew clean build --no-daemon

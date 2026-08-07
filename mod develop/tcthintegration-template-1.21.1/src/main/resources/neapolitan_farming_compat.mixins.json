@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.neapolitan",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "StrawberryBushBlockMixin",
+    "MintBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

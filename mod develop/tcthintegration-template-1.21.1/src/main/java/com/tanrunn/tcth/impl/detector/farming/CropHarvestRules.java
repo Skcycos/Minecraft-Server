@@ -34,8 +34,6 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
  *   <li>the explicit harvestables tag ({@code tcth:farmer_harvestables}) —
  *       blocks with an {@code age} property must be at the legal maximum,
  *       blocks without one are treated as mature;</li>
- *   <li>{@code CropBlock} — maturity via the block's own max age
- *       ({@link CropBlock#isMaxAge(BlockState)});</li>
  *   <li>anything else is not harvestable (fail-closed: decorative plants,
  *       flowers, leaves, grass, logs…).</li>
  * </ol>
@@ -55,6 +53,13 @@ public final class CropHarvestRules {
     /** Hard exclusions (crop stems, decorative plants, non-harvest blocks). */
     public static final TagKey<Block> FARMER_EXCLUDED =
             TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("tcth", "farmer_excluded"));
+    /**
+     * Right-click colony harvest allow-list (My Nether's Delight fungus
+     * colonies using Farmer's Delight {@code MushroomColonyBlock}). Not used
+     * by break detection — only by the conditional colony mixin.
+     */
+    public static final TagKey<Block> FARMER_COLONY_HARVESTABLES =
+            TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("tcth", "farmer_colony_harvestables"));
 
     private CropHarvestRules() {
     }

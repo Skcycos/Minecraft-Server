@@ -4,10 +4,15 @@ import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.api.farming.HarvestMethod;
 import com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcher;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.util.FakePlayer;
@@ -75,14 +80,39 @@ public final class CropBreakDetector {
         if (!(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        CropHarvestRules.Assessment assessment =
-                CropHarvestRules.assess(level, event.getPos(), event.getState());
+        BlockState state = event.getState();
+        BlockPos pos = event.getPos();
+        CropHarvestRules.Assessment assessment = CropHarvestRules.assess(level, pos, state);
         if (!assessment.harvestable || !assessment.fullyGrown) {
             return; // immature or not a crop: 0 events
         }
-        ResourceLocation cropId = BuiltInRegistries.BLOCK.getKey(event.getState().getBlock());
-        CropHarvestedEventDispatcher.publish(player, cropId, event.getState(), event.getPos(),
+        // Double-plant crops (e.g. dungeonsdelight:rotbulb_crop / PitcherCropBlock):
+        // NeoForge may deliver the player's BreakEvent on either half. Normalize
+        // the published position to the lower half so upper+lower never produce
+        // two events (dispatcher idempotency keys on position). The secondary
+        // half is often removed via setBlock without a second BreakEvent, but
+        // position normalization does not rely on that alone.
+        pos = normalizeDoublePlantPosition(pos, state);
+        ResourceLocation cropId = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+        CropHarvestedEventDispatcher.publish(player, cropId, state, pos,
                 level, HarvestMethod.BREAK, true);
+    }
+
+    /**
+     * If {@code state} has a {@code half=upper} double-block property, returns
+     * {@code pos.below()}; otherwise returns {@code pos} unchanged.
+     */
+    static BlockPos normalizeDoublePlantPosition(BlockPos pos, BlockState state) {
+        for (Property<?> property : state.getProperties()) {
+            if ("half".equals(property.getName()) && property instanceof EnumProperty<?> enumProp) {
+                Comparable<?> value = state.getValue(enumProp);
+                if (value == DoubleBlockHalf.UPPER) {
+                    return pos.below();
+                }
+                return pos;
+            }
+        }
+        return pos;
     }
 
     static boolean isInitializedForTesting() {
