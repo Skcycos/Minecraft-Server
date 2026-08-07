@@ -218,6 +218,8 @@
 	FixBiomePrecipitation = true
 	#Show crop growth diagnostics in Jade or TOP.
 	ShowCropGrowthInfoInProbe = false
+	#Enables winter-themed Level of Detail (LOD) textures for Distant Horizons to ensure visual consistency at long distances.
+	DistantHorizonsWinterLOD = true
 
 [Debug]
 	#Force using server synchronized config when joining a multiplayer server.

@@ -118,6 +118,15 @@
       "sha1": "cebb0f71e1d295c16dfacfac9763b31891404684"
     },
     {
+      "file": "/mods/[客户端][纳-中文翻译]sclp-neoforge-3.6.2.jar",
+      "size": "117411",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "cf3ba2cde546ca8b5ebd024781fa0ccabba4a177",
+      "murmur": "1367161711"
+    },
+    {
       "file": "/mods/[客户端][钠-扩展]sodium-extra-neoforge-0.9.3+mc1.21.1.jar",
       "size": "465013",
       "type": "mod",
@@ -167,6 +176,14 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
+      "file": "/global_packs/required_resources/Nature X - 12.2 [1.21.1].zip",
+      "size": "1802203",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "d26216e5cb9118bd036652b893daf3572d0782de"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/raw_noodles.json",
       "size": "20",
       "type": "other",
@@ -175,12 +192,13 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_resources/Nature X - 12.2 [1.21.1].zip",
-      "size": "1802203",
-      "type": "other",
+      "file": "/mods/[客户端][脚步]PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar",
+      "size": "7096988",
+      "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "d26216e5cb9118bd036652b893daf3572d0782de"
+      "sha1": "71bd6de2b01441d92be1e109879b76b7750bd787",
+      "murmur": "2136896080"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/tomato_seed.json",
@@ -191,14 +209,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sweet_and_sour_pork_rice_bowl.json",
-      "size": "16",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/fried_rice.json",
       "size": "16",
       "type": "other",
@@ -207,12 +217,12 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/chorus_fried_egg.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sweet_and_sour_pork_rice_bowl.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
-      "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/cooked_lamb_chops.json",
@@ -221,6 +231,14 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/chorus_fried_egg.json",
+      "size": "16",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/chopping_board.json",
@@ -287,20 +305,20 @@
       "sha1": "688fc7f0ba2473135a1f4bb5720c1d1281ce88b1"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/raw_pork_belly.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/config/scguns-server.toml",
       "size": "2858",
       "type": "config",
       "editable": true,
       "forceCopy": false,
       "sha1": "62cdfb179e6bb3341c1f0110c3e563b5a046e57e"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/raw_pork_belly.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/pumpkin_pie.json",
@@ -335,14 +353,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/book.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/green_hanging_canvas_sign.json",
       "size": "20",
       "type": "other",
@@ -351,7 +361,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/black_canvas_sign.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/book.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -360,6 +370,14 @@
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_beef.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/black_canvas_sign.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -381,6 +399,15 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[那不勒斯风味]neapolitan-1.21.1-6.0.1.jar",
+      "size": "4966177",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "998d7e4251c51c841010ddac4c5311188e630a8d",
+      "murmur": "3301961734"
     },
     {
       "file": "/mods/[生物控制]incontrol-1.21-10.2.6.jar",
@@ -425,20 +452,20 @@
       "murmur": "933317947"
     },
     {
-      "file": "/global_packs/required_resources/食韵筑家专用材质包v1.21.1/assets/spudaciousshops/lang/zh_cn.json",
-      "size": "9018",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e5bd07f436d677690d140029f1345aba0aff7dc5"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/tasting_feast.json",
       "size": "169",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "c85df2e1a0a49221c4217ea90bfb761db23ca3f2"
+    },
+    {
+      "file": "/global_packs/required_resources/食韵筑家专用材质包v1.21.1/assets/spudaciousshops/lang/zh_cn.json",
+      "size": "9018",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e5bd07f436d677690d140029f1345aba0aff7dc5"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fondant_pie.json",
@@ -465,14 +492,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/egg_fried_rice.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/mods/[资源库]resourcefullib-neoforge-1.21-3.0.12.jar",
       "size": "484332",
       "type": "mod",
@@ -480,6 +499,14 @@
       "forceCopy": false,
       "sha1": "24389c8e48ff0e8594e4686b750c494c66a5f8df",
       "murmur": "539815838"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/egg_fried_rice.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/lapis_lazuli.json",
@@ -615,14 +642,6 @@
       "murmur": "3982344233"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/full_tatami_mat.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/mods/[莱特曼货币悬赏]Lightmans-Currency-Bounties-1.0-serverfix.2.jar",
       "size": "4805",
       "type": "mod",
@@ -630,6 +649,14 @@
       "forceCopy": false,
       "sha1": "bbb9f78a7637536950f8e5ee50aef8a0142853c0",
       "murmur": "2607993042"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/full_tatami_mat.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/mutton_wrap.json",
@@ -902,7 +929,16 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/blue_dye.json",
+      "file": "/mods/[玩家动画库]PlayerAnimationLibNeoforge-1.1.5+mc.1.21.1.jar",
+      "size": "1157594",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "b3d92b62406a73cb504c2099bc3d2ad4cdc8a40b",
+      "murmur": "4258657195"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/canvas_sign.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -910,7 +946,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/canvas_sign.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/blue_dye.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -926,6 +962,14 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_bamboo.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/mods/[客户端][快捷键管理]New Visual Keybing-1.21.1-neoforge-0.6.16.jar",
       "size": "449183",
       "type": "mod",
@@ -933,14 +977,6 @@
       "forceCopy": false,
       "sha1": "19e9ece8b58df07833896e53624f126365cbc7ac",
       "murmur": "4248711344"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_bamboo.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/smoked_ham.json",
@@ -1064,6 +1100,15 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/mods/[请坐]takeaseat-1.0.1.jar",
+      "size": "52686",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "d199e2dce20a1343bf2ec90c3a0e47e9d5d82ec4",
+      "murmur": "1080549586"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/arc/chef/dish_cooked_t3.json",
       "size": "309",
       "type": "other",
@@ -1073,6 +1118,14 @@
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/cooked_cow_offal.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sashimi.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1095,14 +1148,6 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sashimi.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/dark_oak_planks.json",
@@ -1137,6 +1182,14 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/berry_platter.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/mods/[Teal前置库]teallib-1.3.teal.jar",
       "size": "262609",
       "type": "mod",
@@ -1144,14 +1197,6 @@
       "forceCopy": false,
       "sha1": "b186cdfd311158858429e494ecd11e2157274eff",
       "murmur": "1173304807"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/berry_platter.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[蝴蝶物语]Longwings-v0.9.5-1.21.1-NeoForge.jar",
@@ -1220,20 +1265,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-farmer/pack.mcmeta",
-      "size": "107",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "56a6d5f4891d4f18f2c11b381e0086df3da97722"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/chicken_sandwich.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-farmer/pack.mcmeta",
+      "size": "107",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "56a6d5f4891d4f18f2c11b381e0086df3da97722"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fearsome_thick_soup.json",
@@ -1268,6 +1313,15 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/mods/[客户端][越肩视角]ShoulderSurfing-NeoForge-1.21.1-5.0.9.jar",
+      "size": "399793",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "c8e343d1f7368b4645c911d21866a55b5491991f",
+      "murmur": "1362665685"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/golden_salad.json",
       "size": "16",
       "type": "other",
@@ -1284,20 +1338,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/half_tatami_mat.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/culinary_experience_ii.json",
       "size": "177",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "34d287eb444c6e268eb03951f02b76a834cbaee6"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/half_tatami_mat.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[客户端][输入法冲突修复]IMBlocker-5.5.4-neoforge+1.20.6-1.21.8.jar",
@@ -1342,12 +1396,12 @@
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/tnt.json",
-      "size": "20",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/hamburger.json",
+      "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
       "file": "/mods/[不够用的配方书]Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar",
@@ -1359,12 +1413,12 @@
       "murmur": "3012964192"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/hamburger.json",
-      "size": "16",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/tnt.json",
+      "size": "20",
       "type": "other",
       "editable": false,
       "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/acacia_cabinet.json",
@@ -1434,15 +1488,6 @@
       "murmur": "2859800241"
     },
     {
-      "file": "/mods/[丰收]bountiful-neoforge-8.0.0-beta.2.jar",
-      "size": "721006",
-      "type": "mod",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "8c1786d2850bd15c3a2dd0f50fccfda09125faa5",
-      "murmur": "3276654734"
-    },
-    {
       "file": "/mods/[界面库]uilib-9.0.0-neoforge.jar",
       "size": "249736",
       "type": "mod",
@@ -1452,12 +1497,30 @@
       "murmur": "3784072307"
     },
     {
+      "file": "/mods/[丰收]bountiful-neoforge-8.0.0-beta.2.jar",
+      "size": "721006",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "8c1786d2850bd15c3a2dd0f50fccfda09125faa5",
+      "murmur": "3276654734"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/mushroom_rice.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/mods/[客户端][提升音效来源数量]rsls-neoforge-1.1.16.jar",
+      "size": "57134",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "7b67ecb584d21e9790a034ffe72a20e0033fd007",
+      "murmur": "2238869023"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/oil.json",
@@ -1484,7 +1547,7 @@
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/rice_panicle.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/rope.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1492,7 +1555,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/rope.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/rice_panicle.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1573,14 +1636,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_resources/食韵筑家专用材质包v1.21.1/assets/openpartiesandclaims/lang/zh_cn.json",
-      "size": "47843",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "d186ea7df100fcf5a96599f162c16050c8318edb"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_dark_oak.json",
       "size": "20",
       "type": "other",
@@ -1589,12 +1644,12 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/green_canvas_sign.json",
-      "size": "20",
+      "file": "/global_packs/required_resources/食韵筑家专用材质包v1.21.1/assets/openpartiesandclaims/lang/zh_cn.json",
+      "size": "47843",
       "type": "other",
       "editable": false,
       "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+      "sha1": "d186ea7df100fcf5a96599f162c16050c8318edb"
     },
     {
       "file": "/mods/[JavaScript引擎]rhino-2101.2.8-build.91.jar",
@@ -1604,6 +1659,14 @@
       "forceCopy": false,
       "sha1": "56eab1d464ed0811c64040c64bd047df5cbc3aad",
       "murmur": "287190858"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/green_canvas_sign.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[锂]lithium-neoforge-0.15.4+mc1.21.1.jar",
@@ -1638,6 +1701,15 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[客户端][自然音效]AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "size": "84811632",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "c79ab328b2c46068effebdcb3f26e98dc4404cb0",
+      "murmur": "169092502"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/empty_cup.json",
@@ -1802,7 +1874,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/light_blue_dye.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/polished_deepslate.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1810,7 +1882,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/polished_deepslate.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/light_blue_dye.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1859,7 +1931,7 @@
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/magenta_dye.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sticky_candy.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1867,7 +1939,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sticky_candy.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/magenta_dye.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -1900,14 +1972,6 @@
       "murmur": "2265622898"
     },
     {
-      "file": "/config/scguns-common.toml",
-      "size": "14978",
-      "type": "config",
-      "editable": true,
-      "forceCopy": false,
-      "sha1": "bb0e4d750523f62f8b0881e9d5a997eb60f3c756"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cherry_cabinet.json",
       "size": "20",
       "type": "other",
@@ -1916,13 +1980,39 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/mods/[标记]Ping-Wheel-1.12.2-neoforge-1.21.1.jar",
-      "size": "153528",
+      "file": "/config/scguns-common.toml",
+      "size": "14978",
+      "type": "config",
+      "editable": true,
+      "forceCopy": false,
+      "sha1": "bb0e4d750523f62f8b0881e9d5a997eb60f3c756"
+    },
+    {
+      "file": "/mods/[配置界面库]yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "size": "1118651",
       "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "bfc416a7bc2edde6ff98672a7df43a3d9930a396",
-      "murmur": "797996057"
+      "sha1": "fe270c9f6e0a8142cf316944087f5109cef08bbb",
+      "murmur": "1474701975"
+    },
+    {
+      "file": "/mods/[静谧花丛]SereneShrubbery-NeoForge-1.21.1-v2.4.0.jar",
+      "size": "841114",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "298d456b9520a9b883af0f9fb4fbf71806594f60",
+      "murmur": "3577616132"
+    },
+    {
+      "file": "/mods/[烘焙坊]bakeries-1.21.1-NeoForge-1.0.1.jar",
+      "size": "2653025",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "8e5b07af0c84df89b7e94197ee029b302da19e78",
+      "murmur": "264898419"
     },
     {
       "file": "/mods/[农夫乐事]FarmersDelight-1.21.1-1.3.2.jar",
@@ -1934,12 +2024,13 @@
       "murmur": "2979096389"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/milk_bottle.json",
-      "size": "20",
-      "type": "other",
+      "file": "/mods/[标记]Ping-Wheel-1.12.2-neoforge-1.21.1.jar",
+      "size": "153528",
+      "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+      "sha1": "bfc416a7bc2edde6ff98672a7df43a3d9930a396",
+      "murmur": "797996057"
     },
     {
       "file": "/mods/[结构建造师]structure_crafter-1.21.1neoforge-0.2.9.1.jar",
@@ -1949,6 +2040,14 @@
       "forceCopy": false,
       "sha1": "4238bb4e2032659a0b302c6c50d78b8fbc55a4fc",
       "murmur": "4235828707"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/milk_bottle.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fondant_spider_eye.json",
@@ -1983,6 +2082,14 @@
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/lead.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/lime_hanging_canvas_sign.json",
       "size": "20",
       "type": "other",
@@ -1991,7 +2098,16 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/lead.json",
+      "file": "/mods/[前置库]PuzzlesLib-v21.1.52-1.21.1-NeoForge.jar",
+      "size": "1425176",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "66182c3affb9f99624d1d770ca168d2a63af83f6",
+      "murmur": "2149074619"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stockpot.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2005,14 +2121,6 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stockpot.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[标签统一]almostunified-neoforge-1.21.1-1.4.2.jar",
@@ -2056,20 +2164,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/lime_canvas_sign.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/tags/item/chef_meals.json",
       "size": "229",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "2226e0c4dab39702dc671ae1101ff008f3428607"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/lime_canvas_sign.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/arc/chef/powerup/tasting_basic.json",
@@ -2232,20 +2340,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/honey_glazed_ham_block.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-farmer/data/tcth/jobsplus/jobs/farmer.json",
       "size": "205",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "6ca34f80530515aff29ff5429be464de2db7f5b5"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/honey_glazed_ham_block.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/arc/chef/powerup/tasting_nourishing.json",
@@ -2272,14 +2380,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/tasting_basic.json",
-      "size": "123",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e58d99ac859764b975f4b3a91969572cd1315f32"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/rice_bag.json",
       "size": "20",
       "type": "other",
@@ -2288,7 +2388,39 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/tasting_basic.json",
+      "size": "123",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e58d99ac859764b975f4b3a91969572cd1315f32"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/chair_oak.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stir_fried_pork_with_peppers.json",
+      "size": "16",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/kubejs/client_scripts/disabled_craft_tooltips.js",
+      "size": "1656",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "3e4ef8f4c80586fece193784fd295a9fbc68b32b"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/hopper.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2302,30 +2434,6 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
-    },
-    {
-      "file": "/kubejs/client_scripts/disabled_craft_tooltips.js",
-      "size": "1656",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "3e4ef8f4c80586fece193784fd295a9fbc68b32b"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stir_fried_pork_with_peppers.json",
-      "size": "16",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/hopper.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/smooth_sandstone.json",
@@ -2378,14 +2486,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-farmer/data/tcth/tags/block/farmer_excluded.json",
-      "size": "295",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "a68d70030a4a5188820b9753e4186eb820986ec9"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/zongzi.json",
       "size": "16",
       "type": "other",
@@ -2394,7 +2494,23 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
+      "file": "/global_packs/required_data/tcth-farmer/data/tcth/tags/block/farmer_excluded.json",
+      "size": "295",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "a68d70030a4a5188820b9753e4186eb820986ec9"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/shengjian_mantou.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/safety_net.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2408,14 +2524,6 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "64b8833a870fc5457db1db83956b1754bd953199"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/safety_net.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/popped_chorus_fruit.json",
@@ -2533,20 +2641,20 @@
       "murmur": "1313912180"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fruit_basket.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/braised_pork_ribs.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fruit_basket.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/shepherds_pie_block.json",
@@ -2581,7 +2689,7 @@
       "sha1": "329c761f5d3ad90a08dc2faa80bf6edee5f2b825"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_salmon.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cyan_hanging_canvas_sign.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2589,7 +2697,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cyan_hanging_canvas_sign.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_salmon.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2695,20 +2803,20 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/tomato_sauce.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/red_mushroom_pot_soup.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/tomato_sauce.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[铁氧体核心]ferritecore-7.0.3-neoforge.jar",
@@ -2753,7 +2861,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/string.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stuffed_dough_food.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2761,7 +2869,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/stuffed_dough_food.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/string.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2951,7 +3059,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_warped.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_rabbit.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2959,7 +3067,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_rabbit.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_warped.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -2973,6 +3081,15 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[农夫乐事-地牢乐事]neoforge-dungeonsdelight-1.21.1-1.5.0.jar",
+      "size": "6932716",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "4af9a593d66594e7b5d4b17a567c5819050d0083",
+      "murmur": "1534318405"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/tomato_platter.json",
@@ -2991,6 +3108,14 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/cooked_meatball.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/mods/[客户端][重生动画]cinematic_respawn-1.21.1-neoforge-1.2.0.jar",
       "size": "26071",
       "type": "mod",
@@ -2998,14 +3123,6 @@
       "forceCopy": false,
       "sha1": "31c5fbe4d77cfee4e4b9f9e58487a5376906ca03",
       "murmur": "4092990672"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/cooked_meatball.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cabbage_rolls.json",
@@ -3104,14 +3221,6 @@
       "sha1": "60155e399f08fd38f625c9a8709a19d42dcbd6e4"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/baozi_plate.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/flint.json",
       "size": "20",
       "type": "other",
@@ -3120,7 +3229,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cake_slice.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/baozi_plate.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -3136,7 +3245,7 @@
       "sha1": "1f9e8cdbafc295653e188d4a67d8b4bf9b8e3ad9"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/pumpkin_pie_slice.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/cake_slice.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -3150,6 +3259,14 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "8104ed039732e101463b9d2c309d2089d0e8b171"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/pumpkin_pie_slice.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/beef_patty.json",
@@ -3200,6 +3317,15 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/mods/[农夫乐事-饮酒作乐]BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+      "size": "1575450",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "bc86c776779b16dec386f4b667ff46d9e2ecb88d",
+      "murmur": "1027207807"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/redstone.json",
       "size": "20",
       "type": "other",
@@ -3225,6 +3351,14 @@
       "murmur": "3926185248"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/oil_splashed_fish.json",
+      "size": "16",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/blue_hanging_canvas_sign.json",
       "size": "20",
       "type": "other",
@@ -3239,14 +3373,6 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/oil_splashed_fish.json",
-      "size": "16",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/rope_fence_gate.json",
@@ -3298,6 +3424,14 @@
       "murmur": "190689013"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/birch_cabinet.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/dough_drop_soup.json",
       "size": "20",
       "type": "other",
@@ -3306,12 +3440,13 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/birch_cabinet.json",
-      "size": "20",
-      "type": "other",
+      "file": "/mods/[家禽游戏]fowlplay-1.2.3+1.21.1-neoforge.jar",
+      "size": "2614463",
+      "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+      "sha1": "6c2d872bb014c84d8bd0f892140928d8f278764b",
+      "murmur": "2194998453"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/wild_mushroom_rabbit_soup.json",
@@ -3354,14 +3489,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/yellow_dye.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/mods/[信息提示扩展]JadeAddons-1.21.1-NeoForge-6.1.0.jar",
       "size": "74419",
       "type": "mod",
@@ -3369,6 +3496,14 @@
       "forceCopy": false,
       "sha1": "d0aef07e67f9e2dd7ae68f9f27d845511d8eaff3",
       "murmur": "2483268990"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/yellow_dye.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/polished_basalt.json",
@@ -3409,6 +3544,24 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[农夫乐事-下界乐事]MyNethersDelight-1.21.1-1.10.4.jar",
+      "size": "904388",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "6f2803d6a84d296e07382dd2f6c13c3b4fd57cbd",
+      "murmur": "3016604963"
+    },
+    {
+      "file": "/mods/[农夫乐事][下界乐事][前置库]neoforge-runiclib-1.21.1-5.0.7.jar",
+      "size": "175793",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "f0422c70689d5b31b65ef5a84c1d5eb2d7536d4c",
+      "murmur": "1023344927"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/carrot_crate.json",
@@ -3558,7 +3711,7 @@
       "sha1": "34aa63f68f2821b7796a780b4f8e63f059c24e40"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/polished_granite.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/pumpkin.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -3566,7 +3719,7 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/pumpkin.json",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/polished_granite.json",
       "size": "20",
       "type": "other",
       "editable": false,
@@ -3673,20 +3826,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/udon_noodle.json",
-      "size": "16",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
-    },
-    {
       "file": "/global_packs/required_data/tcth-farmer/data/tcth/tags/block/farmer_vertical_crops.json",
       "size": "100",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "b2e3d13c696ec2482d8ff6a43bd7877d854b27f5"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/udon_noodle.json",
+      "size": "16",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
       "file": "/mods/[农夫乐事-食物可视化]displaydelight-1.6.0.jar",
@@ -3696,6 +3849,15 @@
       "forceCopy": false,
       "sha1": "a53384fc7e66b1ed25f34fe8b168ba8174b69b2f",
       "murmur": "3119143294"
+    },
+    {
+      "file": "/mods/[可视化工作台]VisualWorkbench-v21.1.1-1.21.1-NeoForge.jar",
+      "size": "81945",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "74941456944461f39b10504ec9aed8c1e0fb7276",
+      "murmur": "456740859"
     },
     {
       "file": "/mods/[章鱼库]OctoLib-NEOFORGE-0.6.2+1.21.jar",
@@ -3756,20 +3918,20 @@
       "murmur": "522093599"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_cod.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/four_joy_meatball_soup.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cooked_cod.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/chair_crimson.json",
@@ -3788,15 +3950,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/mods/[旋律前置库]melody_neoforge_1.0.10_MC_1.21.jar",
-      "size": "36096",
-      "type": "mod",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e83052a92c4ca0016bcfe7f0207273983dc84698",
-      "murmur": "2029427820"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/light_gray_canvas_sign.json",
       "size": "20",
       "type": "other",
@@ -3811,6 +3964,15 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[旋律前置库]melody_neoforge_1.0.10_MC_1.21.jar",
+      "size": "36096",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e83052a92c4ca0016bcfe7f0207273983dc84698",
+      "murmur": "2029427820"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/sickle.json",
@@ -3854,6 +4016,14 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/smooth_stone.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/mods/[物品限制]itemrestrictions-9.0.0-neoforge.jar",
       "size": "76498",
       "type": "mod",
@@ -3861,14 +4031,6 @@
       "forceCopy": false,
       "sha1": "20e5c45f8b153a8fb85daaddd5a935af16d10029",
       "murmur": "3467696379"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/smooth_stone.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/hearth_basic.json",
@@ -3912,6 +4074,15 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
+      "file": "/mods/[客户端][精美的进度]fancytoasts-neoforge-1.21.1-1.4.7.jar",
+      "size": "372782",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "f484d2aa960475fddd2c15a276c3328ea8feb62e",
+      "murmur": "1477519538"
+    },
+    {
       "file": "/mods/[随身挎包]vercte-satchels-1.2.0.jar",
       "size": "284809",
       "type": "mod",
@@ -3919,6 +4090,15 @@
       "forceCopy": false,
       "sha1": "cff3eb46e0bae990e851738d16dcb80ee40c3b60",
       "murmur": "1019909114"
+    },
+    {
+      "file": "/mods/[智能大脑库]SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
+      "size": "391053",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "0310135a01eeceefbc7f1ab017498a65f3ad6836",
+      "murmur": "1164716210"
     },
     {
       "file": "/mods/OELib-neoforge-1.21.1-0.2.3.jar",
@@ -4036,6 +4216,15 @@
       "sha1": "c98f6380d6178c68ce123e49beb49aef228f5769"
     },
     {
+      "file": "/mods/[客户端][游戏缩放]justzoom_neoforge_2.1.0_MC_1.21.1.jar",
+      "size": "43798",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "328da50972fa693b8e6f337d4a9560d4a6170ac3",
+      "murmur": "927338680"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/cobblestone.json",
       "size": "20",
       "type": "other",
@@ -4077,6 +4266,14 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/light_gray_hanging_canvas_sign.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/packed_mud.json",
       "size": "20",
       "type": "other",
@@ -4085,12 +4282,13 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/light_gray_hanging_canvas_sign.json",
-      "size": "20",
-      "type": "other",
+      "file": "/mods/[客户端][自然音效前置库]CreativeCore_NEOFORGE_v2.13.41_mc1.21.1.jar",
+      "size": "1218640",
+      "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+      "sha1": "4b666b4668b77fdc1ac34a183aae58a432999970",
+      "murmur": "3043399915"
     },
     {
       "file": "/kubejs/config/web_server.json",
@@ -4109,20 +4307,20 @@
       "sha1": "48d9bd19eeda2a11d054fb7821536afee3ed6970"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/tags/item/chef_t3.json",
-      "size": "1108",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "5ed959f0af13850fb845f552493d606eb787b0b7"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/straw_block.json",
       "size": "20",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/tags/item/chef_t3.json",
+      "size": "1108",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "5ed959f0af13850fb845f552493d606eb787b0b7"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/light_blue_hanging_canvas_sign.json",
@@ -4194,20 +4392,20 @@
       "murmur": "1578423412"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/barley_tea.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/pasta_with_mutton_chop.json",
       "size": "16",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/barley_tea.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/laba_congee.json",
@@ -4343,20 +4541,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/chocolate_pie.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/jobsplus/powerups/chef/culinary_experience_iii.json",
       "size": "178",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "f097c49a9da01129f2859b7ec3d0f543281528e5"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/chocolate_pie.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/beetroot.json",
@@ -4391,20 +4589,20 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/enamel_basin.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/arc/chef/taste_meal.json",
       "size": "351",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "84daba5f4324c0b27af0c11c20671b83c9afae27"
+    },
+    {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/enamel_basin.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/fish_flavored_shredded_pork.json",
@@ -4429,6 +4627,15 @@
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[遥远的地平线]DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+      "size": "30207268",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "df25e8cfe06917963778723a1d9a60610dd21bec",
+      "murmur": "4200228399"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/trash_can.json",
@@ -4480,15 +4687,6 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
-      "file": "/mods/[范式]Paradigm-neoforge-1.21.1-2.3.0b.jar",
-      "size": "1419445",
-      "type": "mod",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "007c384b3588ccc8ddff1700eddd5abd29b8741d",
-      "murmur": "700598272"
-    },
-    {
       "file": "/mods/[地形-前置]biolith-neoforge-3.0.14.jar",
       "size": "218062",
       "type": "mod",
@@ -4496,6 +4694,15 @@
       "forceCopy": false,
       "sha1": "8b041bce1cd0c5f5223c285784a3e8498273d6ea",
       "murmur": "932611292"
+    },
+    {
+      "file": "/mods/[范式]Paradigm-neoforge-1.21.1-2.3.0b.jar",
+      "size": "1419445",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "007c384b3588ccc8ddff1700eddd5abd29b8741d",
+      "murmur": "700598272"
     },
     {
       "file": "/kubejs/startup_scripts/bounty_food_registry.js",
@@ -4523,6 +4730,14 @@
       "sha1": "698803a40d613389600d63fda20ae128a6200899"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_oak.json",
+      "size": "20",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/chicken_soup.json",
       "size": "16",
       "type": "other",
@@ -4538,14 +4753,6 @@
       "forceCopy": false,
       "sha1": "07452242e389975e8a88b97066f4bae6a4ebe574",
       "murmur": "1923939184"
-    },
-    {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/table_oak.json",
-      "size": "20",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
       "file": "/mods/[跨平台架构]architectury-13.0.11-neoforge.jar",
@@ -4582,14 +4789,6 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/braised_beef_rice_bowl.json",
-      "size": "16",
-      "type": "other",
-      "editable": false,
-      "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
-    },
-    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/hot_cocoa.json",
       "size": "20",
       "type": "other",
@@ -4598,12 +4797,29 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/braised_beef_rice_bowl.json",
+      "size": "16",
+      "type": "other",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+    },
+    {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/minecraft/emerald.json",
       "size": "20",
       "type": "other",
       "editable": false,
       "forceCopy": false,
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
+    },
+    {
+      "file": "/mods/[客户端-氯化钠增强]chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
+      "size": "527889",
+      "type": "mod",
+      "editable": false,
+      "forceCopy": false,
+      "sha1": "50454011525e2862678b15d94484fd32a5a54dfb",
+      "murmur": "960747248"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/crystal_lamb_chop.json",
@@ -4762,13 +4978,12 @@
       "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
-      "file": "/mods/[脚本支持]kubejs-neoforge-2101.7.2-build.368.jar",
-      "size": "2281720",
-      "type": "mod",
+      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/kelp_roll.json",
+      "size": "16",
+      "type": "other",
       "editable": false,
       "forceCopy": false,
-      "sha1": "edf131afd474151afe076ea975ce5fec5a206ad8",
-      "murmur": "235886233"
+      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/oak_cabinet.json",
@@ -4779,12 +4994,13 @@
       "sha1": "110b35f392d086b93b656222c18bedfaaa07e732"
     },
     {
-      "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/farmersdelight/kelp_roll.json",
-      "size": "16",
-      "type": "other",
+      "file": "/mods/[脚本支持]kubejs-neoforge-2101.7.2-build.368.jar",
+      "size": "2281720",
+      "type": "mod",
       "editable": false,
       "forceCopy": false,
-      "sha1": "e664b2887567de0adcdca4b27b53a38ce9466ac0"
+      "sha1": "edf131afd474151afe076ea975ce5fec5a206ad8",
+      "murmur": "235886233"
     },
     {
       "file": "/global_packs/required_data/tcth-chef/data/tcth/dish_tiers/items/kaleidoscope_cookery/tieguanyin.json",
