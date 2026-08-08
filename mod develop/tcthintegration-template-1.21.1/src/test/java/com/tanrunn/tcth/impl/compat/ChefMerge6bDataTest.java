@@ -45,12 +45,12 @@ class ChefMerge6bDataTest {
     @Test
     void itemTierAre572WithExpectedDistribution() throws Exception {
         Map<String, String> tiers = loadItemTiers();
-        assertEquals(572, tiers.size());
+        assertEquals(575, tiers.size()); // 6D.1: +3 plate_of_stuffed_hoglin T2
         long common = tiers.values().stream().filter(t -> t.equals("COMMON")).count();
         long t2 = tiers.values().stream().filter(t -> t.equals("T2")).count();
         long t3 = tiers.values().stream().filter(t -> t.equals("T3")).count();
         assertEquals(353, common);
-        assertEquals(195, t2);
+        assertEquals(198, t2); // 6D.1: +3 plate_of_stuffed_hoglin T2
         assertEquals(24, t3);
     }
 
@@ -69,7 +69,7 @@ class ChefMerge6bDataTest {
         Set<String> t2 = tagValues("chef_t2.json");
         Set<String> t3 = tagValues("chef_t3.json");
         assertEquals(122, common.size());
-        assertEquals(187, t2.size());
+        assertEquals(190, t2.size()); // 6D.1: +3 plate_of_stuffed_hoglin T2
         assertEquals(24, t3.size());
         assertTrue(common.stream().noneMatch(t2::contains));
         assertTrue(t2.stream().noneMatch(t3::contains));
@@ -77,7 +77,7 @@ class ChefMerge6bDataTest {
         assertFalse(common.contains("kaleidoscope_cookery:raw_dough"));
 
         Map<String, String> entryToCat = loadFgEntryCategories();
-        assertEquals(333, entryToCat.size());
+        assertEquals(336, entryToCat.size()); // 6D.1: +3 plate_of_stuffed_hoglin T2
     }
 
     @Test
@@ -100,7 +100,7 @@ class ChefMerge6bDataTest {
             authCounts.merge(id, 1, Integer::sum);
             authLevel.put(id, r[0].trim());
         }
-        assertEquals(595, authCounts.size(), "authority unique ids");
+        assertEquals(598, authCounts.size(), "authority unique ids"); // 6D.2: +3 plate_of_stuffed_hoglin T2
 
         Map<String, String> itemTiers = loadItemTiers();
         Map<String, String> entryToCat = loadFgEntryCategories();

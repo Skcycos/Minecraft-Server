@@ -40,6 +40,12 @@ public enum CookingDevice {
      * do not emit until a dedicated mixin is live.
      */
     BAKERIES_BLENDER,
+    /**
+     * Feast/platter portioning: a player takes one real serving (e.g. with a
+     * plate/bowl) out of a placed whole dish. Published once per actual
+     * serving delivered into the player inventory.
+     */
+    PORTIONING,
     /** Any device not covered above. */
     OTHER
 }

@@ -1459,6 +1459,33 @@
       }
     },
     {
+      "id": "item:mynethersdelight/plate_of_stuffed_hoglin",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/plate_of_stuffed_hoglin_ham",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/plate_of_stuffed_hoglin_snout",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
       "id": "item:mynethersdelight/rock_soup",
       "type": "entry",
       "unlock": {

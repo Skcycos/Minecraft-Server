@@ -88,6 +88,8 @@ class FarmingMixinConfigTest {
         JsonObject mnd = mixins("mynethersdelight_farming_compat.mixins.json");
         assertTrue(mnd.getAsJsonArray("mixins").toString().contains("PowderyCaneBlockMixin"));
         assertTrue(mnd.getAsJsonArray("mixins").toString().contains("PowderyCannonBlockMixin"));
+        assertTrue(mnd.getAsJsonArray("mixins").toString().contains("StuffedHoglinTakeServingMixin"),
+                "phase 6D portioning mixin must be registered in the mnd conditional config");
         JsonObject fd = mixins("farmersdelight_compat.mixins.json");
         assertTrue(fd.getAsJsonArray("mixins").toString().contains("MushroomColonyBlockMixin"));
         String toml = modsToml();

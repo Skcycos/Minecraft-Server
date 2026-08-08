@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "bakeries:country_bread",
+    "brewinandchewin:pizza",
+    "dungeonsdelight:monster_cake",
+    "dungeonsdelight:polterghast_pizza",
+    "dungeonsdelight:spider_donut",
+    "dungeonsdelight:spider_pie",
+    "minecraft:cake",
+    "mynethersdelight:magma_cake_block",
+    "mynethersdelight:roast_stuffed_hoglin",
+    "neapolitan:adzuki_cake",
+    "neapolitan:adzuki_ice_cream_block",
+    "neapolitan:banana_cake",
+    "neapolitan:banana_ice_cream_block",
+    "neapolitan:chocolate_cake",
+    "neapolitan:chocolate_ice_cream_block",
+    "neapolitan:mint_cake",
+    "neapolitan:mint_ice_cream_block",
+    "neapolitan:strawberry_cake",
+    "neapolitan:strawberry_ice_cream_block",
+    "neapolitan:vanilla_cake",
+    "neapolitan:vanilla_ice_cream_block"
+  ]
+}

@@ -99,7 +99,7 @@ class FieldGuideDataTest {
                 "catalog must reference exactly the three tier tags");
         assertEquals(union.size(), union.stream().distinct().count(), "catalog must have no duplicates");
         // Phase 6B: 166 legacy + 167 NEW food-mod dishes = 333
-        assertEquals(333, union.size(), "expected 333 dishes after 6B merge (122 COMMON / 187 T2 / 24 T3)");
+        assertEquals(336, union.size(), "6B 333 + 6D.1 3 plate_of_stuffed_hoglin T2");
     }
 
     // ---- 18. raw_dough 被排除 ----
@@ -118,7 +118,7 @@ class FieldGuideDataTest {
     void categoryJsonParsesWithEntryPerItemAndIcon() throws IOException {
         Map<String, Integer> expected = Map.of(
                 "chef_common", 122,
-                "chef_t2", 187,
+                "chef_t2", 190, // 6D.1: +3
                 "chef_t3", 24);
         for (Map.Entry<String, Integer> en : expected.entrySet()) {
             Path cat = PRESET.resolve("fieldguide/categories/" + en.getKey() + ".json");
