@@ -5,9 +5,9 @@
   "generateModpackOnStart": true,
   "syncedFiles": [
     "/global_packs/**",
+    "!/mods/DistantHorizons*",
     "!/kubejs/server_scripts/**",
     "/mods/*.jar",
-    "!/mods/*DistantHorizons*",
     "/config/scguns*",
     "/config/gun_scaling/**",
     "/kubejs/**",
