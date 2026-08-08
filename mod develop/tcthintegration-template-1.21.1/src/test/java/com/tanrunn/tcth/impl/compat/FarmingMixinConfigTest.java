@@ -41,6 +41,8 @@ class FarmingMixinConfigTest {
     void fdTomatoMixinRegisteredAndGatedByRequiredMods() throws Exception {
         JsonObject fd = mixins("farmersdelight_compat.mixins.json");
         assertTrue(fd.getAsJsonArray("mixins").toString().contains("TomatoBlockMixin"));
+        assertTrue(fd.getAsJsonArray("mixins").toString().contains("CookingPotMenuShiftTakeMixin"),
+                "FD shift-click take-out fix must be registered (phase 6B.2)");
         String toml = modsToml();
         int configIdx = toml.indexOf("farmersdelight_compat.mixins.json");
         assertTrue(configIdx >= 0, "FD mixin config must be declared");

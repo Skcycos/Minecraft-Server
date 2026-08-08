@@ -2,6 +2,8 @@ package com.tanrunn.tcth.impl.signature;
 
 import com.tanrunn.tcth.TCTHIntegration;
 
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -51,6 +53,21 @@ public final class CookingSignatureComponents {
         }
         return (DataComponentType<CookingSignature>) BuiltInRegistries.DATA_COMPONENT_TYPE
                 .get(ResourceLocation.fromNamespaceAndPath(TCTHIntegration.MODID, COMPONENT_ID));
+    }
+
+    /**
+     * Resolves the component type without requiring the Minecraft registry:
+     * returns the test override when set, otherwise the registered type, or
+     * {@code null} when neither is available. Prefer this in logic that must
+     * behave identically under unit tests and in-game.
+     */
+    @Nullable
+    public static DataComponentType<CookingSignature> tryType() {
+        DataComponentType<CookingSignature> override = typeOverride;
+        if (override != null) {
+            return override;
+        }
+        return isRegistered() ? type() : null;
     }
 
     /** @return {@code true} once the registry is loaded (server or client). */

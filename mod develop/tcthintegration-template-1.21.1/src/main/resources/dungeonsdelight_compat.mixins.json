@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "MonsterPotResultSlotMixin",
-    "MonsterPotBlockEntityAccessor"
+    "MonsterPotBlockEntityAccessor",
+    "MonsterPotMenuShiftTakeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

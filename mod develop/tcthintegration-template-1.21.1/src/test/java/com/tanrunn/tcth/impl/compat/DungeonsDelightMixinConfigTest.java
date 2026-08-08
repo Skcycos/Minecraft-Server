@@ -28,6 +28,8 @@ class DungeonsDelightMixinConfigTest {
         String mixins = cfg.getAsJsonArray("mixins").toString();
         assertTrue(mixins.contains("MonsterPotResultSlotMixin"));
         assertTrue(mixins.contains("MonsterPotBlockEntityAccessor"));
+        assertTrue(mixins.contains("MonsterPotMenuShiftTakeMixin"),
+                "shift-click take-out fix must be registered (phase 6B.2)");
     }
 
     @Test

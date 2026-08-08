@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.compat.cooking.RecipeTrackerSnapshot;
+import com.tanrunn.tcth.impl.compat.cooking.ShiftTakeSuppression;
 import com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapter;
 import com.tanrunn.tcth.impl.signature.CookingSignature;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
@@ -64,10 +65,16 @@ public abstract class CookingPotResultSlotMixin {
 
     /**
      * Sign the real delivery stack only. Do not re-resolve tracker here —
-     * after Shift-click the tracker is often already empty.
+     * after Shift-click the tracker is often already empty. Skipped entirely
+     * while a Shift-click take is in progress (the menu mixin already signed
+     * the real stack before the move; signing again would overwrite the
+     * restored previous signature on a partial move).
      */
     @Inject(method = "onTake", at = @At("HEAD"))
     private void tcth$signOnTake(Player player, ItemStack stack, CallbackInfo ci) {
+        if (isShiftTakeSuppressed(player)) {
+            return;
+        }
         this.tcth$previousSignature = null;
         if (CookingSignatureComponents.isRegistered() && stack != null && !stack.isEmpty()) {
             this.tcth$previousSignature = stack.get(CookingSignatureComponents.type());
@@ -80,6 +87,11 @@ public abstract class CookingPotResultSlotMixin {
     @Inject(method = "onTake", at = @At("RETURN"))
     private void tcth$onDishTaken(Player player, ItemStack stack, CallbackInfo ci) {
         try {
+            // While a Shift-click take is in progress the menu mixin is the
+            // sole publisher; skip only the publish, never the cleanup below.
+            if (isShiftTakeSuppressed(player)) {
+                return;
+            }
             CookingPotResultSlot slot = (CookingPotResultSlot) (Object) this;
             CookingPotBlockEntity pot = slot.cookingPot;
             Level level = pot.getLevel();
@@ -92,10 +104,20 @@ public abstract class CookingPotResultSlotMixin {
             restorePreviousSignature(stack);
             TCTHIntegration.LOGGER.error("[TCTH] Cooking pot dish publish failed: {}", e.toString());
         } finally {
-            // Must clear after every take so the next take does not inherit.
+            // Must clear after EVERY take (including suppressed Shift-click
+            // and non-server paths) so the next take never inherits a stale
+            // recipe id or signature snapshot.
             this.tcth$recipeIdSnapshot = null;
             this.tcth$previousSignature = null;
         }
+    }
+
+    @Unique
+    private static boolean isShiftTakeSuppressed(Player player) {
+        if (player == null || player.containerMenu == null) {
+            return false;
+        }
+        return ShiftTakeSuppression.isSuppressed(player.containerMenu);
     }
 
     @Unique
