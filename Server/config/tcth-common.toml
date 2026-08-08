@@ -58,3 +58,53 @@ farmerIntegrationEnabled = true
 #Independent of jobsPlusRewardsEnabled (chef dish rewards).
 #Default off. Enable only after live player verification.
 farmerRewardsEnabled = false
+#Gunner profession master switch (Scorched Guns firearm kills).
+#When false, no firearm-kill events are detected or posted.
+#Independent of chef/farmer and of Jobs+/Arc.
+#Default true.
+gunnerIntegrationEnabled = true
+#Send tcth:on_gun_kill Arc actions (gunner job rewards).
+#Only controls the Jobs+/Arc gunner reward settlement; does not
+#gate firearm-kill detection (gunnerIntegrationEnabled) or stats
+#(gunnerStatsEnabled). Independent of jobsPlusRewardsEnabled
+#(chef) and farmerRewardsEnabled.
+#Default off. Enable only after live player verification.
+gunnerRewardsEnabled = false
+#Update per-player gunner statistics (tcth_gunner_stats.dat).
+#Independent of gunnerRewardsEnabled. Default true.
+gunnerStatsEnabled = true
+#Chat the player when a gunner battlefield medal unlocks.
+#Medals still unlock and persist when this is false.
+#Historical / migrated medals are never announced.
+#Default: true.
+gunnerMedalAnnouncementsEnabled = true
+#Maximum gun-kill actions sent per player per tick (rate limit).
+# Default: 10
+# Range: 1 ~ 1000
+maxGunKillActionsPerTick = 10
+#BOSS-tier gun-kill cooldown per player in ticks (default 1200 = 60 s).
+#Per-player, in-memory only, prevents boss-respawn farming.
+#Default: 1200. Range: 0 ~ 72000.
+# Default: 1200
+# Range: 0 ~ 72000
+gunnerBossCooldownTicks = 1200
+#Master switch for the tcth:gunner ability tree (4 routes).
+#When false, no gunner ability takes effect.
+#Default: true.
+gunnerAbilitiesEnabled = true
+#Marksmanship route: SG firearm damage dealt to non-player targets
+#×1.05 / ×1.10 / ×1.15. Requires gunnerAbilitiesEnabled.
+#Default: true.
+gunDamageAbilitiesEnabled = true
+#Ammo-saver route: chance not to consume ammo on a successful shot
+#5% / 10% / 15%. Requires gunnerAbilitiesEnabled.
+#Default: true.
+gunAmmoAbilitiesEnabled = true
+#Battlefield-defense route: SG firearm damage taken by the player
+#×0.90 / ×0.80 / ×0.70. Requires gunnerAbilitiesEnabled.
+#Default: true.
+gunDefenseAbilitiesEnabled = true
+#Gunner-study route: tcth:gunner job experience
+#×1.15 / ×1.35 / ×1.60. Requires gunnerAbilitiesEnabled.
+#Default: true.
+gunExperienceAbilitiesEnabled = true
