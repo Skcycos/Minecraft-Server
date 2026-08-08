@@ -3,605 +3,784 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>食韵筑家III · 烟火长歌 — 服务器更新日志</title>
+<title>食韵筑家 III · 烟火长歌 — 更新日志</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700;10..72,900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #1a1a2e;
-    --card-bg: #16213e;
-    --accent: #e94560;
-    --accent2: #0f3460;
-    --gold: #f5a623;
-    --text: #eaeaea;
-    --text-muted: #a0a0b0;
-    --border: #2a2a4a;
-    --green: #4ecdc4;
-    --orange: #ff6b35;
-    --purple: #a855f7;
-    --pink: #d63384;
-    --cyan: #06b6d4;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    padding: 20px;
-    min-height: 100vh;
-  }
-  .container { max-width: 840px; margin: 0 auto; }
-  .header {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 100%);
-    border-radius: 16px;
-    margin-bottom: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  .header::before {
-    content: "";
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
-    animation: pulse 4s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-  }
-  .header h1 { font-size: 2em; font-weight: 800; position: relative; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-  .header .subtitle { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 0.95em; position: relative; }
-  .badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75em;
-    font-weight: 600;
-    margin: 2px;
-  }
-  .badge-new { background: var(--accent); color: white; }
-  .badge-update { background: var(--gold); color: #1a1a2e; }
-  .badge-fix { background: var(--green); color: #1a1a2e; }
-  .badge-client { background: var(--purple); color: white; }
-  .badge-server { background: var(--orange); color: white; }
-  .badge-combat { background: var(--pink); color: white; }
-  .badge-perf { background: var(--cyan); color: #1a1a2e; }
+/* ============================================================
+   食韵筑家更新日志 · Hallmark 生成
+   macrostructure: Newsprint · theme: Custom (Mend DNA)
+   paper: oklch(96% 0.01 80) · accent: oklch(55% 0.18 35) · warm
+   display: Big Shoulders · body: Fraunces · mono: JetBrains Mono
+   ============================================================ */
 
-  .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
-  .card-title {
-    font-size: 1.25em;
-    font-weight: 700;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .card-title .icon { font-size: 1.4em; }
-  .commit-hash {
-    font-family: "SF Mono", "Fira Code", monospace;
-    font-size: 0.75em;
-    color: var(--text-muted);
-    background: rgba(255,255,255,0.05);
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: auto;
+:root {
+  /* Color */
+  --color-paper: oklch(96% 0.01 80);
+  --color-paper-2: oklch(93% 0.015 80);
+  --color-ink: oklch(18% 0.02 80);
+  --color-ink-2: oklch(35% 0.02 80);
+  --color-accent: oklch(55% 0.18 35);
+  --color-accent-2: oklch(90% 0.05 35);
+  --color-line: oklch(80% 0.01 80);
+  --color-line-heavy: oklch(60% 0.02 80);
+
+  /* Typography */
+  --font-display: "Big Shoulders", "PingFang SC", sans-serif;
+  --font-body: "Fraunces", "PingFang SC", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { overflow-x: clip; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   Header / Masthead
+   ============================================================ */
+
+.masthead {
+  border-bottom: 3px solid var(--color-ink);
+  padding: var(--space-lg) var(--space-lg) var(--space-xl);
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-2);
+  margin-bottom: var(--space-lg);
+}
+
+.masthead-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.masthead-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-ink-2);
+  margin-top: var(--space-sm);
+  max-width: 60ch;
+}
+
+/* ============================================================
+   Edition marker (ordinal number + rule)
+   ============================================================ */
+
+.edition {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) var(--space-lg);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.edition:last-of-type { border-bottom: none; }
+
+.edition-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.edition-ordinal {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(4rem, 12vw, 8rem);
+  line-height: 0.85;
+  color: var(--color-accent);
+  letter-spacing: -0.03em;
+}
+
+.edition-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.edition-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-2);
+  margin-top: var(--space-sm);
+}
+
+.edition-meta .dot { margin: 0 var(--space-sm); }
+
+.edition-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+/* ============================================================
+   Callout / highlight box
+   ============================================================ */
+
+.pull {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--space-md);
+  color: var(--color-ink-2);
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-ink);
+  display: inline-block;
+}
+
+.status--pass { background: oklch(95% 0.08 145); border-color: oklch(50% 0.15 145); }
+.status--warn { background: oklch(95% 0.08 80); border-color: oklch(55% 0.15 80); }
+.status--info { background: var(--color-paper-2); }
+
+/* ============================================================
+   Item list
+   ============================================================ */
+
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px dotted var(--color-line);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+}
+
+.item-list li:last-child { border-bottom: none; }
+
+.item-list .item-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-2);
+}
+
+.item-list .item-value {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Mod table (simple)
+   ============================================================ */
+
+.mod-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.mod-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-2);
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.mod-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-line);
+  vertical-align: top;
+}
+
+.mod-table tr:hover td { background: var(--color-paper-2); }
+
+.mod-table .mod-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   Stats grid (asymmetric)
+   ============================================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.stat {
+  background: var(--color-paper);
+  padding: var(--space-md);
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-2);
+  margin-top: var(--space-xs);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.footer {
+  border-top: 3px solid var(--color-ink);
+  padding: var(--space-xl) var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-2);
+  text-align: center;
+}
+
+.footer strong {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+  color: var(--color-ink);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (min-width: 768px) {
+  .edition {
+    grid-template-columns: 2fr 5fr;
+    gap: var(--space-2xl);
+    padding: var(--space-3xl) var(--space-xl);
   }
 
-  .section { margin-bottom: 20px; }
-  .section h3 {
-    color: var(--accent);
-    font-size: 1.05em;
-    margin-bottom: 12px;
-    border-left: 4px solid var(--accent);
-    padding-left: 12px;
+  .masthead {
+    padding: var(--space-xl) var(--space-xl) var(--space-2xl);
   }
-  .section ul { padding-left: 20px; }
-  .section li { margin-bottom: 6px; }
 
-  .highlight-box {
-    background: rgba(233, 69, 96, 0.1);
-    border-left: 4px solid var(--accent);
-    padding: 16px;
-    border-radius: 0 8px 8px 0;
-    margin: 12px 0;
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
   }
-  .highlight-box.gold { background: rgba(245, 166, 35, 0.1); border-left-color: var(--gold); }
-  .highlight-box.green { background: rgba(78, 205, 196, 0.1); border-left-color: var(--green); }
-  .highlight-box.purple { background: rgba(168, 85, 247, 0.1); border-left-color: var(--purple); }
-  .highlight-box.orange { background: rgba(255, 107, 53, 0.1); border-left-color: var(--orange); }
-  .highlight-box.cyan { background: rgba(6, 182, 212, 0.1); border-left-color: var(--cyan); }
+}
 
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85em; }
-  th { background: var(--accent2); padding: 10px; text-align: left; font-weight: 600; }
-  td { padding: 10px; border-bottom: 1px solid var(--border); }
-  tr:hover td { background: rgba(255,255,255,0.03); }
-
-  .footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.85em; }
-
-  @media (max-width: 600px) {
-    body { padding: 12px; }
-    .header h1 { font-size: 1.5em; }
-    .card { padding: 16px; }
-    table { font-size: 0.75em; }
-    td, th { padding: 8px 6px; }
+@media (min-width: 1024px) {
+  .edition {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-3xl);
+    padding: var(--space-3xl);
   }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .masthead { padding: var(--space-md); }
+  .edition { padding: var(--space-xl) var(--space-md); }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
+
+/* No horizontal scroll */
+html, body { overflow-x: clip; }
+
+/* Two-line clickable text prevention */
+a, button { max-width: 100%; word-break: break-word; }
+
+/* Display headers never italic */
+h1, h2, h3, h4 { font-style: normal; }
+
+/* Focus visible ring */
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
 </style>
 </head>
 <body>
-<div class="container">
 
-  <div class="header">
-    <h1>🏰 食韵筑家III · 烟火长歌</h1>
-    <div class="subtitle">服务器更新日志 · 2026-08-06 ~ 2026-08-07</div>
-    <div style="margin-top: 12px;">
-      <span class="badge badge-new">TCTH 0.2.2</span>
-      <span class="badge badge-server">服务端</span>
-      <span class="badge badge-client">客户端</span>
-      <span class="badge badge-combat">战斗系统</span>
-      <span class="badge badge-perf">性能优化</span>
+<!-- ============================================================
+     MASTHEAD
+     ============================================================ -->
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span>食韵筑家 III · 烟火长歌</span>
+    <span>更新日志</span>
+  </div>
+  <h1 class="masthead-title">更新日志</h1>
+  <p class="masthead-sub">服务器模组扩充、TCTH 职业模组开发、客户端增强。按提交时间排列，最新在上。</p>
+</header>
+
+<!-- ============================================================
+     EDITION 21 (latest)
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">21</span>
+    <div>
+      <h2 class="edition-title">战利品共享与多态合成</h2>
+      <p class="edition-meta">
+        <span>96a1dcb</span>
+        <span class="dot">·</span>
+        <span>08-07 18:35</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <div class="pull">玩家独立战利品箱 — 每个玩家打开同一个箱子获得不同内容，不再有"先下手为强"的争夺。合成冲突时让玩家自己选产物。</div>
+    <ul class="item-list">
+      <li>
+        <span class="item-label">战利品共享 · lootr</span>
+        <span class="item-value">玩家独立战利品，每个玩家获得独特箱子内容，防止抢夺</span>
+      </li>
+      <li>
+        <span class="item-label">战利品脚本 · lootjs</span>
+        <span class="item-value">KubeJS 战利品修改扩展，允许用脚本自定义战利品</span>
+      </li>
+      <li>
+        <span class="item-label">战利品扩充 · betterloot-zibura</span>
+        <span class="item-value">战利品表扩展，添加更多战利品变体</span>
+      </li>
+      <li>
+        <span class="item-label">多态合成 · polymorph</span>
+        <span class="item-value">解决合成冲突，同一材料多配方时让玩家选择产物</span>
+      </li>
+      <li>
+        <span class="item-label">KubeJS 加载器 · kubeloader</span>
+        <span class="item-value">KubeJS 启动加载器，提供运行环境</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
-  <!-- 提交 1: 6602ec2 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🌾</span>完成农夫职业与统一收获事件<span class="commit-hash">6602ec2</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> TCTH 模组开发</h3>
-      <ul>
-        <li>新增 <code>tcth:farmer</code> 独立职业预设</li>
-        <li>统一收获事件：成熟作物无论打掉还是右键采摘都计入收获</li>
-        <li>兼容原版、农夫乐事、万花筒烹饪作物</li>
-        <li>四类奖励：种田收获、动物繁殖、驯服动物、剪羊毛</li>
-        <li>修复甜浆果右键采摘、辣椒动态判定、稻米移除型收获</li>
-        <li>南瓜/西瓜奖励已移除（防刷）</li>
-      </ul>
-      <div class="highlight-box green">✅ 380 项测试通过；在线确认 1-2 XP 单次结算</div>
+<!-- ============================================================
+     EDITION 20
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">20</span>
+    <div>
+      <h2 class="edition-title">客户端性能优化集合</h2>
+      <p class="edition-meta">
+        <span>b4b341d</span>
+        <span class="dot">·</span>
+        <span>08-07 18:07</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <div class="pull">19 个客户端性能模组一并推送 — GPU 加速、实体剔除、异步日志、AI 优化。低配玩家帧率应有明显提升。</div>
 
-  <!-- 提交 2: 816804b -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🚀</span>发布 TCTH 0.2.0 版本<span class="commit-hash">816804b</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 版本与文档</h3>
-      <ul>
-        <li>版本从 <code>0.1.0</code> 提升至 <code>0.2.0</code></li>
-        <li>重写 CHANGELOG，纳入厨师/农夫职业、Field Guide 图鉴、料理署名等</li>
-      </ul>
-      <div class="highlight-box green">✅ clean build 成功，380 项测试全部通过</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">19</div><div class="stat-label">新增模组</div></div>
+      <div class="stat"><div class="stat-num">8</div><div class="stat-label">性能优化</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">渲染/实体</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">网络/AI</div></div>
+    </div>
+
+    <table class="mod-table">
+      <thead><tr><th>模组</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">GPUTape</td><td>GPU 加速（DSA/VBO/EBO/FBO/Textures 优化）</td></tr>
+        <tr><td class="mod-name">BadOptimizations</td><td>微优化集合（光贴图缓存、天空颜色优化）</td></tr>
+        <tr><td class="mod-name">iris-flywheel-compat</td><td>光影和飞轮兼容优化</td></tr>
+        <tr><td class="mod-name">acceleratedrendering</td><td>加速渲染</td></tr>
+        <tr><td class="mod-name">bbe</td><td>Better Block Entities（方块实体渲染优化）</td></tr>
+        <tr><td class="mod-name">asynclogger</td><td>异步日志记录</td></tr>
+        <tr><td class="mod-name">smart_particles</td><td>智能粒子</td></tr>
+        <tr><td class="mod-name">modelfix</td><td>模型空隙修复</td></tr>
+        <tr><td class="mod-name">alternate_current</td><td>红石优化（非位置性红石实现）</td></tr>
+        <tr><td class="mod-name">AI-Improvements</td><td>AI 优化（减少实体 AI 计算开销）</td></tr>
+        <tr><td class="mod-name">NumFlux</td><td>服务端优化（GPUBooster 服务端部分）</td></tr>
+        <tr><td class="mod-name">immersive_optimization</td><td>沉浸式优化</td></tr>
+        <tr><td class="mod-name">structure_layout_optimizer</td><td>结构布局优化</td></tr>
+        <tr><td class="mod-name">resourcefulconfig</td><td>配置库</td></tr>
+        <tr><td class="mod-name">NotEnoughBandwidth</td><td>网络优化，流量降至原来 15%~20%</td></tr>
+        <tr><td class="mod-name">does_it_tick</td><td>远处无人看到的实体停止更新</td></tr>
+        <tr><td class="mod-name">chunkactivitytracker</td><td>区块活动热力图，为 Does It Tick? 提供数据</td></tr>
+      </tbody>
+    </table>
+
+    <span class="status status--warn">⚡ 建议低配玩家重点关注本轮更新</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 19
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">19</span>
+    <div>
+      <h2 class="edition-title">农夫作物兼容扩展 · TCTH 0.2.2</h2>
+      <p class="edition-meta">
+        <span>e9bbddf</span>
+        <span class="dot">·</span>
+        <span>08-07 17:28</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 657 项测试通过 · 真实服务器验证通过</span>
 
-  <!-- 提交 3: b455334 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🧩</span>新增模组、TCTH 厨师职业汉化与服务器配置<span class="commit-hash">b455334</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>TACZ 枪械2</td><td>现代枪械与枪械配件体系</td></tr>
-        <tr><td>Nomansland 无人之地</td><td>新地形、植被、生物群系丰富度大增</td></tr>
-        <tr><td>Waves 海浪 / Biolith</td><td>海洋/海岸与生物群系扩展</td></tr>
-        <tr><td>Caverns &amp; Chasms 深渊与裂隙</td><td>洞穴生物群系全面升级</td></tr>
-        <tr><td>Ping-Wheel 标记轮盘</td><td>服务器内置信号标记（右键呼出）</td></tr>
-        <tr><td>Shellbound 飞艇</td><td>主世界自然生成的空中飞艇结构</td></tr>
-        <tr><td>Vercte Satchels 随身挎包</td><td>额外随身背包</td></tr>
-        <tr><td>Display Delight</td><td>料理食物可视化展示</td></tr>
-        <tr><td>GD656 Killicon 击杀图标</td><td>击杀反馈图标</td></tr>
-        <tr><td>Blueprint</td><td>蓝图/建筑辅助库</td></tr>
-        <tr><td>AutoModpack 自动更新</td><td>客户端自动同步模组包</td></tr>
-      </table>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 配置与汉化</h3>
-      <ul>
-        <li>材质包新增 <code>assets/tcth/lang/zh_cn.json</code>（68 键完整汉化）</li>
-        <li>新增 tacz/blueprint/nomansland/waves 等配置文件</li>
-        <li>Tectonic 地形模组暂时停用（冲突排查中）</li>
-        <li>Jobs+ 原版默认职业关闭，切换为 TCTH 自研职业体系</li>
-      </ul>
+    <ul class="item-list">
+      <li>
+        <span class="item-label">Neapolitan 作物</span>
+        <span class="item-value">草莓丛、薄荷、赤豆芽的成熟收获检测</span>
+      </li>
+      <li>
+        <span class="item-label">Dungeons Delight 作物</span>
+        <span class="item-value">腐 bulb 作物检测</span>
+      </li>
+      <li>
+        <span class="item-label">My Nether's Delight</span>
+        <span class="item-value">粉化甘蔗、粉化炮、两种菌落的右键收获检测</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 18
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">18</span>
+    <div>
+      <h2 class="edition-title">新增配置与静谧花丛汉化</h2>
+      <p class="edition-meta">
+        <span>45ea478</span>
+        <span class="dot">·</span>
+        <span>08-07 16:41</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li>
+        <span class="item-label">新增配置</span>
+        <span class="item-value">DistantHorizons / bakeries / brewinandchewin / dungeonsdelight / fowlplay / mynethersdelight / neapolitan / runiclib / visualworkbench / yacl</span>
+      </li>
+      <li>
+        <span class="item-label">汉化</span>
+        <span class="item-value">静谧花丛（serene_shrubbery）材质包简体中文</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
-  <!-- 提交 4: def2ce2 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📦</span>更新服务器模组至 0.2.0<span class="commit-hash">def2ce2</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 模组替换</h3>
-      <ul>
-        <li><code>tcth-0.1.0.jar</code> → <code>tcth-0.2.0.jar</code></li>
-        <li>新 JAR SHA-256：<code>3a87a3e0...3408b1</code></li>
-      </ul>
+<!-- ============================================================
+     EDITION 17
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">17</span>
+    <div>
+      <h2 class="edition-title">枪客能力树与战地档案</h2>
+      <p class="edition-meta">
+        <span>7b23b32</span>
+        <span class="dot">·</span>
+        <span>08-07 15:48</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 77 个测试套件 · 630 项测试全部通过</span>
 
-  <!-- 提交 5: cfd4512 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🔧</span>完善 git 忽略规则与行尾规范化<span class="commit-hash">cfd4512</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 仓库工程化</h3>
-      <ul>
-        <li>.gitignore：新增 <code>.idea/</code>、<code>Server/**/*.log</code></li>
-        <li>.gitattributes：文本统一 LF、bat 用 CRLF、jar/图片等标记 binary</li>
-      </ul>
+    <div class="pull">四条能力路线：枪术、弹药节省、防护、研修。五枚永久勋章、Top-3 武器排行、战地档案页面。</div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">能力路线</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">永久勋章</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Top 武器</div></div>
+      <div class="stat"><div class="stat-num">630</div><div class="stat-label">测试通过</div></div>
     </div>
   </div>
+</article>
 
-  <!-- 提交 6: e847ba8 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🎉</span>部署 TCTH 全局数据包、新增模组与配置<span class="commit-hash">e847ba8</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 全局数据包部署</h3>
-      <ul>
-        <li>部署 <code>tcth-chef</code> 厨师数据包</li>
-        <li>部署 <code>tcth-farmer</code> 农夫数据包</li>
-        <li>新增 globalpacks、pingwheel 模组</li>
-        <li>新增配置：<code>global_packs.toml</code>、<code>pingwheel.server.json</code>、<code>tcth-common.toml</code></li>
-      </ul>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 厨师职业能力树上线</h3>
-      <table><tr><th>路线</th><th>效果</th></tr>
-        <tr><td>庖厨研修</td><td>职业经验 ×1.25 / ×1.5 / ×2</td></tr>
-        <tr><td>刀工</td><td>厨刀不耗耐久 10% → 20% → 35%</td></tr>
-        <tr><td>炉火</td><td>火焰伤害减免 15% → 30% → 50%</td></tr>
-        <tr><td>品鉴</td><td>吃正餐获得生命恢复/抗性/速度增益</td></tr>
-      </table>
-      <div class="highlight-box orange">⚠️ 农夫奖励默认关闭，等待实机验证</div>
+<!-- ============================================================
+     EDITION 16
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">16</span>
+    <div>
+      <h2 class="edition-title">大量新模组与客户端增强</h2>
+      <p class="edition-meta">
+        <span>9d0d3d3</span>
+        <span class="dot">·</span>
+        <span>08-07 14:47</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <div class="pull">15 个服务端模组 + 10 个客户端模组一并推送 — 下界烹饪、酒馆酿酒、远景加载、网络音乐、越肩视角。</div>
 
-  <!-- 提交 7: 580fbc7 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🔫</span>停用 TACZ 枪械、更新 ScorchedGuns 配置<span class="commit-hash">580fbc7</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 枪械体系调整</h3>
-      <div class="highlight-box orange">TACZ 枪械2 暂时停用，当前枪械由 ScorchedGuns 承担</div>
-      <ul>
-        <li>全局伤害倍率 <code>0.2</code> → <code>0.5</code></li>
-        <li>炮塔各弹药伤害 ×2.5</li>
-        <li>敌人子弹伤害同步提高</li>
-      </ul>
+    <table class="mod-table">
+      <thead><tr><th>模组</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">My Nether's Delight</td><td>农夫乐事下界扩展</td></tr>
+        <tr><td class="mod-name">Brewin' And Chewin'</td><td>农夫乐事酿酒扩展</td></tr>
+        <tr><td class="mod-name">Dungeons Delight</td><td>农夫乐事地牢扩展</td></tr>
+        <tr><td class="mod-name">Neapolitan</td><td>六种风味冰淇淋、蛋糕</td></tr>
+        <tr><td class="mod-name">Bakeries</td><td>可放置的面包、蛋糕</td></tr>
+        <tr><td class="mod-name">Kaleidoscope Tavern</td><td>酿酒系统 + 酒馆装饰</td></tr>
+        <tr><td class="mod-name">Serene Shrubbery</td><td>花卉种植与育种</td></tr>
+        <tr><td class="mod-name">Fowl Play</td><td>添加多种鸟类</td></tr>
+        <tr><td class="mod-name">Visual Workbench</td><td>工作台可视化</td></tr>
+        <tr><td class="mod-name">Distant Horizons</td><td>远景 LOD 加载</td></tr>
+        <tr><td class="mod-name">Net Music</td><td>网络音乐点唱机</td></tr>
+        <tr><td class="mod-name">Take a Seat</td><td>请坐，可坐在楼梯、半砖上</td></tr>
+        <tr><td class="mod-name">Smart Brain Lib</td><td>优化生物 AI</td></tr>
+        <tr><td class="mod-name">Chloride</td><td>氯化钠增强（Sodium 扩展）</td></tr>
+        <tr><td class="mod-name">Shoulder Surfing</td><td>越肩视角相机</td></tr>
+      </tbody>
+    </table>
+
+    <span class="status status--info">另有：RSLS / Just Zoom / Fancy Toasts / SCLP / Presence Footsteps / Ambient Sounds / Creative Core / IMBlocker / Packed Packs / BetterF3</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 15
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">15</span>
+    <div>
+      <h2 class="edition-title">新增前置库</h2>
+      <p class="edition-meta">
+        <span>8d27f64</span>
+        <span class="dot">·</span>
+        <span>08-07 14:57</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">RunicLib</span><span class="item-value">符文库，多加载器工具库</span></li>
+      <li><span class="item-label">Player Animation Lib</span><span class="item-value">玩家动画库</span></li>
+      <li><span class="item-label">YACL</span><span class="item-value">YetAnotherConfigLib 配置库</span></li>
+    </ul>
+  </div>
+</article>
 
-  <!-- 提交 8: 37a3d38 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🖥️</span>同步 AutoModpack 整合包分发资产<span class="commit-hash">37a3d38</span></div>
-    <div class="section">
-      <h3><span class="badge badge-client">客户端</span> 新增 19 个模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Sodium</td><td>高性能渲染优化，大幅提升帧率</td></tr>
-        <tr><td>Sodium Extra</td><td>补充 OptiFine 风格视觉选项</td></tr>
-        <tr><td>Reese's Sodium Options</td><td>紧凑可搜索的 Sodium 视频设置界面</td></tr>
-        <tr><td>Entity Culling</td><td>异步路径追踪隐藏不可见实体，提升帧率</td></tr>
-        <tr><td>Cloth Config API</td><td>通用配置界面库</td></tr>
-        <tr><td>Iris 光影加载器</td><td>现代着色器模组，兼容 OptiFine 光影包</td></tr>
-        <tr><td>Camera Overhaul</td><td>镜头晃动、倾斜等电影感效果</td></tr>
-        <tr><td>Smooth F5</td><td>平滑第三人称切换</td></tr>
-        <tr><td>AAA Particles</td><td>Effekseer 世界粒子特效</td></tr>
-        <tr><td>Reactions</td><td>玩家面部动画（眨眼、闭眼等）</td></tr>
-        <tr><td>Cinematic Respawn</td><td>电影化重生过场</td></tr>
-        <tr><td>Female Gender Mod</td><td>女性身体模型定制</td></tr>
-        <tr><td>Mouse Tweaks</td><td>库存鼠标操作增强</td></tr>
-        <tr><td>Just Enough Characters</td><td>JEI 拼音搜索</td></tr>
-        <tr><td>IMBlocker</td><td>输入法自动开关</td></tr>
-        <tr><td>Packed Packs</td><td>资源包管理增强</td></tr>
-        <tr><td>Kotlin For Forge</td><td>Kotlin 运行时</td></tr>
-        <tr><td>SuperMartijn642 Config Lib</td><td>配置工具库</td></tr>
-      </table>
+<!-- ============================================================
+     EDITION 14
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">14</span>
+    <div>
+      <h2 class="edition-title">枪客在线验收通过</h2>
+      <p class="edition-meta">
+        <span>2fa0ba8</span>
+        <span class="dot">·</span>
+        <span>08-06 22:40</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 在线验收通过</span>
 
-  <!-- 提交 9: 761c2b6 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🧹</span>移除误提交的临时文件<span class="commit-hash">761c2b6</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 仓库清理</h3>
-      <ul>
-        <li>移除误提交的 <code>Server/mods/temp_en_us.json</code></li>
-        <li>.gitignore：新增对临时文件的忽略规则</li>
-      </ul>
+    <ul class="item-list">
+      <li><span class="item-label">普通弹丸</span><span class="item-value">通过</span></li>
+      <li><span class="item-label">爆炸</span><span class="item-value">通过</span></li>
+      <li><span class="item-label">光束</span><span class="item-value">通过</span></li>
+      <li><span class="item-label">Niami 换枪快照</span><span class="item-value">通过</span></li>
+      <li><span class="item-label">环境死亡负例</span><span class="item-value">通过</span></li>
+    </ul>
+
+    <div class="pull">四档经验 1 / 3·7·7 / 17 全部在预设范围，playerdata Experience=41.0 与事件总和吻合。</div>
+
+    <span class="status status--warn">⏳ 延期项：燃烧/岩浆/枪托近战/原版弓弩/FakePlayer 炮塔需补验</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 13
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">13</span>
+    <div>
+      <h2 class="edition-title">击杀归因重构与模块加固</h2>
+      <p class="edition-meta">
+        <span>bafbc4a</span>
+        <span class="dot">·</span>
+        <span>08-06 21:39</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">LivingDeathEvent</span><span class="item-value">强证据四路径统一</span></li>
+      <li><span class="item-label">Niami Arrow</span><span class="item-value">条件 Mixin 注册</span></li>
+      <li><span class="item-label">防刷</span><span class="item-value">eventId + victim 幂等、TTL、容量</span></li>
+    </ul>
+  </div>
+</article>
 
-  <!-- 提交 10: c768844 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">⚔️</span>新增战斗/客户端 mod 与更多材质包汉化<span class="commit-hash">c768844</span></div>
-    <div class="section">
-      <h3><span class="badge badge-combat">战斗系统</span> 新增模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Better Combat</td><td>改进战斗系统：连击、双持、武器动作优化</td></tr>
-        <tr><td>BC Particle</td><td>Better Combat 粒子特效加成</td></tr>
-        <tr><td>Player Animator</td><td>轻量级玩家动画库</td></tr>
-        <tr><td>BetterF3</td><td>增强型 F3 调试界面</td></tr>
-      </table>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-client">客户端</span> 新增模组</h3>
-      <ul>
-        <li>GUI Tween — 平滑的 GUI 过渡动画效果</li>
-        <li>New Visual Keybing — 可视化按键绑定显示</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-update">汉化</span> 材质包新增语言文件</h3>
-      <ul>
-        <li>Jobs+ / Open Parties and Claims / Reactions / Wildfire Gender</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> Paradigm 公告板定制</h3>
-      <ul>
-        <li>前缀改为 <code>[食韵筑家]</code></li>
-        <li>公告内容汉化并加入服务器主题</li>
-        <li>加入玩家群号 <code>903730159</code>（点击可复制）</li>
-      </ul>
+<!-- ============================================================
+     EDITION 12
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">12</span>
+    <div>
+      <h2 class="edition-title">Scorched Guns 击杀结算 · TCTH 0.2.1</h2>
+      <p class="edition-meta">
+        <span>6cb3304</span>
+        <span class="dot">·</span>
+        <span>08-06 21:38</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <div class="pull">枪客职业上线 — 四档基础奖励（1-2 / 3-5 / 6-10 / 12-20）、独立权威统计、数据包预设与中英翻译。</div>
 
-  <!-- 提交 11: 6cb3304 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🔫</span>阶段5A：枪客职业与 Scorched Guns 击杀结算 (0.2.1)<span class="commit-hash">6cb3304</span></div>
-    <div class="section">
-      <h3><span class="badge badge-combat">服务端</span> TCTH 0.2.1 枪客职业</h3>
-      <ul>
-        <li>新增 <code>tcth:gunner</code> 枪客职业预设</li>
-        <li>公共 API <code>guncombat</code>（GunKillEvent / GunTargetTier）</li>
-        <li>Scorched Guns 条件兼容模块</li>
-        <li>GunKillEventDispatcher 防刷（eventId + victim 幂等、TTL、容量）</li>
-        <li>Jobs+/Arc <code>tcth:on_gun_kill</code> 四档基础奖励（1-2 / 3-5 / 6-10 / 12-20）</li>
-        <li>GunnerStats 独立权威统计（<code>/tcth gunner stats</code>）</li>
-        <li>数据包预设与中英翻译</li>
-      </ul>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">奖励档位</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="item-label">条件判断</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-label">新职业</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">语言支持</div></div>
     </div>
   </div>
+</article>
 
-  <!-- 提交 12: bafbc4a -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🔧</span>阶段5A.1：Scorched Guns 击杀归因重构与枪客模块加固<span class="commit-hash">bafbc4a</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 击杀归因重构</h3>
-      <ul>
-        <li>统一 LivingDeathEvent 强证据四路径</li>
-        <li>Niami Arrow 条件 Mixin</li>
-        <li>SG 改 compileOnly 编译期签名检查</li>
-        <li>GunnerStatsTracker 成功后提交 eventId + 异常隔离</li>
-        <li>GunnerRewardsEnabledCondition 三开关组合且异常 fail-closed</li>
-      </ul>
+<!-- ============================================================
+     EDITION 11
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">11</span>
+    <div>
+      <h2 class="edition-title">战斗系统与更多汉化</h2>
+      <p class="edition-meta">
+        <span>c768844</span>
+        <span class="dot">·</span>
+        <span>08-06 20:54</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">Better Combat</span><span class="item-value">连击、双持、武器动作优化</span></li>
+      <li><span class="item-label">BC Particle</span><span class="item-value">战斗粒子特效</span></li>
+      <li><span class="item-label">Player Animator</span><span class="item-value">玩家动画库</span></li>
+      <li><span class="item-label">BetterF3</span><span class="item-value">F3 调试界面增强</span></li>
+    </ul>
 
-  <!-- 提交 13: 2fa0ba8 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">✅</span>阶段5A.2：枪客在线玩家验收与调试日志开关<span class="commit-hash">2fa0ba8</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 在线验收（真人玩家）</h3>
-      <ul>
-        <li>A 普通弹丸 / B 爆炸 / C 光束 / D Niami 换枪快照 / E1 环境死亡负例 全部通过</li>
-        <li>四档经验 1 / 3·7·7 / 17 全部在预设范围</li>
-        <li>playerdata Experience=41.0 与事件总和吻合；重启持久化一致</li>
-      </ul>
-      <div class="highlight-box green">✅ 在线验收通过：四档经验结算正确，持久化一致</div>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 调试日志开关</h3>
-      <ul>
-        <li>删除对每次非玩家死亡的无条件 DEBUG</li>
-        <li>三处枪客日志改为内存开关 <code>/tcth debug gunner on|off|status</code></li>
-      </ul>
-      <div class="highlight-box orange">⏳ 延期项（E2 燃烧/岩浆 / E3 枪托近战 / E4 命中未死等）正式发布前需补验</div>
+    <span class="status status--info">Paradigm 公告板前缀改为 [食韵筑家] · 群号 903730159 可点击复制</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 10
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">10</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 整合包分发</h2>
+      <p class="edition-meta">
+        <span>37a3d38</span>
+        <span class="dot">·</span>
+        <span>08-06 14:49</span>
+      </p>
     </div>
   </div>
+  <div class="edition-body">
+    <div class="pull">19 个客户端模组首次推送 — Sodium 渲染优化、Iris 光影、镜头晃动、拼音搜索、资源包管理。</div>
 
-  <!-- 提交 14: 3ac6fee -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🔇</span>删除未分级目标的无条件 REJECT 调试日志<span class="commit-hash">3ac6fee</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 日志清理</h3>
-      <ul>
-        <li><code>publishKill()</code> 在目标无枪客档次时不再写任何日志</li>
-        <li>三处 [TCTH][GUN] 日志现全部受 <code>/tcth debug gunner</code> 开关控制</li>
-      </ul>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">19</div><div class="stat-label">新增模组</div></div>
+      <div class="stat"><div class="stat-num">7</div><div class="stat-label">视觉/操作</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">性能优化</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">前置/库</div></div>
     </div>
   </div>
+</article>
 
-  <!-- 提交 15: 4c555b4 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📝</span>补交枪客目标分级解析器<span class="commit-hash">4c555b4</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 遗漏文件补交</h3>
-      <ul>
-        <li>补充 <code>GunTargetResolver</code> 源文件</li>
-        <li>负责按数据标签解析 COMMON、ELITE、HEAVY 与 BOSS 目标等级</li>
-      </ul>
-    </div>
-  </div>
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 
-  <!-- 提交 16: 9d0d3d3 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🧩</span>更新客户端 mod 集合与配置<span class="commit-hash">9d0d3d3</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增模组（食物/装饰/生态）</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>My Nether's Delight</td><td>农夫乐事下界扩展，添加下界烹饪内容</td></tr>
-        <tr><td>Brewin' And Chewin'</td><td>农夫乐事酿酒扩展，添加酒桶、发酵、奶酪等</td></tr>
-        <tr><td>Dungeons Delight</td><td>农夫乐事地牢扩展，怪物烹饪与怪物效果</td></tr>
-        <tr><td>Neapolitan</td><td>六种风味冰淇淋、蛋糕、奶昔</td></tr>
-        <tr><td>Bakeries</td><td>可放置的面包、蛋糕与新烹饪机制</td></tr>
-        <tr><td>Kaleidoscope Tavern</td><td>酿酒系统 + 酒馆装饰</td></tr>
-        <tr><td>Serene Shrubbery</td><td>花卉种植与育种</td></tr>
-        <tr><td>Fowl Play</td><td>添加多种鸟类（鹰、鸽子、企鹅、鸭子等）</td></tr>
-        <tr><td>Visual Workbench</td><td>工作台可视化，物品保留并渲染在台上</td></tr>
-        <tr><td>Distant Horizons</td><td>远景 LOD 加载，大幅增加可视距离</td></tr>
-        <tr><td>Net Music</td><td>网络音乐点唱机</td></tr>
-        <tr><td>NMBL</td><td>网易云登录</td></tr>
-        <tr><td>Take a Seat</td><td>请坐，可坐在楼梯、半砖等方块上</td></tr>
-        <tr><td>Smart Brain Lib</td><td>智能大脑库，优化生物 AI</td></tr>
-        <tr><td>Puzzles Lib</td><td>Fuzss 系列模组前置库</td></tr>
-      </table>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-client">客户端</span> 新增模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>Chloride</td><td>氯化钠增强（Sodium 性能/画质扩展）</td></tr>
-        <tr><td>RSLS</td><td>提升音效来源数量</td></tr>
-        <tr><td>Just Zoom</td><td>游戏缩放</td></tr>
-        <tr><td>Fancy Toasts</td><td>精美进度提示</td></tr>
-        <tr><td>SCLP</td><td>钠相关中文翻译</td></tr>
-        <tr><td>Presence Footsteps</td><td>脚步声增强</td></tr>
-        <tr><td>Ambient Sounds</td><td>自然音效</td></tr>
-        <tr><td>Creative Core</td><td>CreativeMD 核心库（自然音效前置）</td></tr>
-        <tr><td>Shoulder Surfing</td><td>越肩视角相机</td></tr>
-      </table>
-    </div>
-  </div>
+<footer class="footer">
+  <strong>食韵筑家 III · 烟火长歌</strong>
+  感谢每一位群友的支持与陪伴 · 我们游戏里见
+</footer>
 
-  <!-- 提交 17: 8d27f64 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📚</span>新增前置库 mod<span class="commit-hash">8d27f64</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增前置库</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>RunicLib</td><td>符文库，多加载器工具库（Azurune 项目前置）</td></tr>
-        <tr><td>Player Animation Lib</td><td>玩家动画库（NeoForge 版）</td></tr>
-        <tr><td>YACL</td><td>YetAnotherConfigLib，构建器式配置库</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- 提交 18: e9bbddf -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🌱</span>扩展农夫作物兼容并发布 0.2.2<span class="commit-hash">e9bbddf</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> TCTH 0.2.2 农夫扩展</h3>
-      <ul>
-        <li>新增 Neapolitan 草莓丛、薄荷、赤豆芽的成熟收获检测</li>
-        <li>新增 Dungeons Delight 腐 bulb 作物检测</li>
-        <li>新增 My Nether's Delight 粉化甘蔗、粉化炮、两种菌落的右键收获检测</li>
-        <li>菌落白名单、双格规范化、fail-closed 排除规则</li>
-        <li>固定版本范围、CI 下载哈希和回归测试</li>
-      </ul>
-      <div class="highlight-box green">✅ 全量 657 项测试通过，部署真实服务器验证启动/保存/停服正常</div>
-    </div>
-  </div>
-
-  <!-- 提交 19: 45ea478 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">⚙️</span>新增 mod 配置与 serene_shrubbery 汉化<span class="commit-hash">45ea478</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增配置</h3>
-      <ul>
-        <li>DistantHorizons / bakeries / brewinandchewin / dungeonsdelight</li>
-        <li>fowlplay / mynethersdelight / neapolitan / runiclib / visualworkbench / yacl</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-update">汉化</span> serene_shrubbery</h3>
-      <ul><li>静谧花丛材质包简体中文翻译</li></ul>
-    </div>
-  </div>
-
-  <!-- 提交 21: 96a1dcb -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🎁</span>新增战利品/合成相关 mod 与配置<span class="commit-hash">96a1dcb</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>[战利品共享]lootr</td><td>玩家独立战利品，每个玩家获得独特箱子内容，防止抢夺</td></tr>
-        <tr><td>[战利品脚本]lootjs</td><td>KubeJS 战利品修改扩展，允许用 KubeJS 脚本自定义战利品</td></tr>
-        <tr><td>[战利品扩充]betterloot-zibura</td><td>战利品表扩展，添加更多战利品变体</td></tr>
-        <tr><td>[多态合成]polymorph</td><td>解决合成冲突，同一材料多配方时让玩家选择产物</td></tr>
-        <tr><td>[kubejs加载器]kubeloader</td><td>KubeJS 启动加载器，提供 KubeJS 运行环境</td></tr>
-      </table>
-    </div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 新增配置</h3>
-      <ul>
-        <li>aiimprovements / chunkactivitytracker / does_it_tick / immersive_optimization</li>
-        <li>lootr / structure_layout_optimizer / kubeloader</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 提交 22: 30f195c 最新 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🚫</span>停用 super_resolution 客户端 mod<span class="commit-hash">30f195c</span></div>
-    <div class="section">
-      <h3><span class="badge badge-client">客户端</span> 模组停用</h3>
-      <ul>
-        <li><strong>super_resolution 超分辨率</strong>暂时停用（排查兼容性问题）</li>
-        <li>运行时配置更新：automodpack / jade / server.properties</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 提交 20: b4b341d -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🚀</span>新增客户端性能优化 mod 集合<span class="commit-hash">b4b341d</span></div>
-    <div class="section">
-      <h3><span class="badge badge-perf">客户端</span> 新增 19 个性能优化模组</h3>
-      <table><tr><th>模组</th><th>说明</th></tr>
-        <tr><td>GPUTape</td><td>GPU 加速（DSA/VBO/EBO/FBO/Textures 优化）</td></tr>
-        <tr><td>BadOptimizations</td><td>微优化集合（光贴图缓存、天空颜色优化等）</td></tr>
-        <tr><td>iris-flywheel-compat</td><td>光影和飞轮兼容优化</td></tr>
-        <tr><td>acceleratedrendering</td><td>加速渲染</td></tr>
-        <tr><td>bbe</td><td>Better Block Entities（方块实体渲染优化）</td></tr>
-        <tr><td>asynclogger</td><td>异步日志记录</td></tr>
-        <tr><td>smart_particles</td><td>智能粒子</td></tr>
-        <tr><td>modelfix</td><td>模型空隙修复</td></tr>
-        <tr><td>alternate_current</td><td>红石优化（非位置性红石实现，降低 MSPT 30 倍）</td></tr>
-        <tr><td>super_resolution</td><td>超分辨率</td></tr>
-        <tr><td>AI-Improvements</td><td>AI 优化（减少实体 AI 计算开销）</td></tr>
-        <tr><td>NumFlux</td><td>服务端优化（GPUBooster 服务端部分）</td></tr>
-        <tr><td>immersive_optimization</td><td>沉浸式优化</td></tr>
-        <tr><td>structure_layout_optimizer</td><td>结构布局优化</td></tr>
-        <tr><td>resourcefulconfig</td><td>配置库</td></tr>
-        <tr><td>[战利品共享]lootr</td><td>玩家独立战利品，每个玩家获得独特箱子内容，防止抢夺</td></tr>
-        <tr><td>[战利品脚本]lootjs</td><td>KubeJS 战利品修改扩展，允许用 KubeJS 脚本自定义战利品</td></tr>
-        <tr><td>[战利品扩充]betterloot-zibura</td><td>战利品表扩展，添加更多战利品变体</td></tr>
-        <tr><td>[多态合成]polymorph</td><td>解决合成冲突，同一材料多配方时让玩家选择产物</td></tr>
-        <tr><td>[kubejs加载器]kubeloader</td><td>KubeJS 启动加载器，提供 KubeJS 运行环境</td></tr>
-        <tr><td>NotEnoughBandwidth</td><td>网络优化，大幅减少流量消耗（压缩/精简包头/小包聚合），服务器出站流量可降至原来的 15%~20%</td></tr>
-        <tr><td>does_it_tick</td><td>实体 Tick 优化，远处没人看到的实体停止更新，大幅降低服务器负载</td></tr>
-        <tr><td>chunkactivitytracker</td><td>区块活动热力图，记录玩家活动数据，为 Does It Tick? 等模组提供智能优化数据</td></tr>
-      </table>
-      <div class="highlight-box cyan">⚡ 本轮更新后客户端帧率与渲染效率将大幅提升，建议低配玩家重点关注</div>
-    </div>
-  </div>
-
-  <!-- 此前已部署 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📌</span>此前已部署内容（8 月 5 日及之前）<span class="commit-hash">b0d5984</span></div>
-    <div class="section">
-      <h3><span class="badge badge-server">服务端</span> 服务器基础</h3>
-      <ul>
-        <li>NeoForge 21.1.247 服务端核心</li>
-        <li>职业+（Jobs+）、自然图鉴（Field Guide）、农夫乐事（Farmers Delight）、万花筒烹饪（Kaleidoscope Cookery）</li>
-        <li>机械动力（Create）、泰拉瑞斯（Terralith）、传送石碑、Jade 信息提示、JEI 物品管理</li>
-        <li>莱特曼货币悬赏、节气、队伍与领地、禁用聊天举报</li>
-        <li>性能优化：Lithium、FerriteCore、ModernFix、C2ME、Spark 分析</li>
-        <li>沉浸式建筑：沉浸式家具、手工家具、结构建造师、蓝图</li>
-        <li>宠物与生态：收藏家商队、蝴蝶物语、Longwings、动物生态</li>
-        <li>经济：悬赏系统、料理订单、土豆商店、万花筒烹饪兼容</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>🏠 <strong>食韵筑家III · 烟火长歌</strong></p>
-    <p style="margin-top: 8px;">感谢每一位群友的支持与陪伴，我们游戏里见！</p>
-  </div>
-
-</div>
 </body>
 </html>

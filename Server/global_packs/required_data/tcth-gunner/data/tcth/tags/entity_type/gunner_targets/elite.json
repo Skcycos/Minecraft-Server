@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pillager",
+    "minecraft:vindicator",
+    "minecraft:evoker",
+    "minecraft:witch",
+    "minecraft:illusioner",
+    "minecraft:ravager",
+    {
+      "id": "scguns:blunderer",
+      "required": false
+    },
+    {
+      "id": "scguns:adjudicator",
+      "required": false
+    },
+    {
+      "id": "scguns:subjugator",
+      "required": false
+    },
+    {
+      "id": "scguns:finforcer",
+      "required": false
+    }
+  ]
+}

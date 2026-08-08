@@ -5,7 +5,7 @@
   "generateModpackOnStart": true,
   "syncedFiles": [
     "/global_packs/**",
-    "!/mods/DistantHorizons*",
+    "!/mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
     "!/kubejs/server_scripts/**",
     "/mods/*.jar",
     "/config/scguns*",

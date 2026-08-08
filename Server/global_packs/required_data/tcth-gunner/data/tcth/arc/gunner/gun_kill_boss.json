@@ -1,0 +1,28 @@
+{
+  "holder": {
+    "type": "jobsplus:job",
+    "id": "tcth:gunner"
+  },
+  "type": "tcth:on_gun_kill",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp",
+      "chance": 100,
+      "min": 12,
+      "max": 20
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tcth:gunner_rewards_enabled"
+    },
+    {
+      "type": "tcth:gun_target_tier",
+      "tier": "BOSS"
+    },
+    {
+      "type": "tcth:automated",
+      "value": false
+    }
+  ]
+}

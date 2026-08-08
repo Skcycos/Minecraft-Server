@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:elder_guardian",
+    "minecraft:ender_dragon",
+    "minecraft:warden",
+    "minecraft:wither",
+    {
+      "id": "scguns:mother_ghast",
+      "required": false
+    }
+  ]
+}
