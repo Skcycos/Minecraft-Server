@@ -49,7 +49,7 @@
 
 	[items.zirconia]
 		#If Zirconia can be used as a universal repair material
-		"Zirconia universal repairing" = true
+		"Zirconia universal repairing" = false
 
 [tweaks]
 	#Chainmail armor increases the user's attack damage
