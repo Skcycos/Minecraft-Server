@@ -7,6 +7,7 @@
     "/global_packs/**",
     "!/kubejs/server_scripts/**",
     "/mods/*.jar",
+    "!/mods/*DistantHorizons*",
     "/config/scguns*",
     "/config/gun_scaling/**",
     "/kubejs/**",

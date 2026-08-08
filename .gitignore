@@ -60,3 +60,12 @@ Server/**/*.log
 
 # temp language extraction
 Server/mods/temp_*.json
+
+# jar 解压工作产物 (mods 目录)
+Server/mods/.cache/
+Server/mods/META-INF/
+Server/mods/assets/
+Server/mods/com/
+Server/mods/data/
+Server/mods/logo.png
+Server/mods/*.mixins.json
