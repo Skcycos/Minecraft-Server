@@ -69,3 +69,6 @@ Server/mods/com/
 Server/mods/data/
 Server/mods/logo.png
 Server/mods/*.mixins.json
+
+# automodpack runtime content manifest (regenerated on server start)
+Server/automodpack/host-modpack/automodpack-content.json
