@@ -1,6 +1,105 @@
 {
   "contents": [
     {
+      "id": "item:bakeries/bake_sliced_toast",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/cooked_taro",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/quiche_slice",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/bubblegunk",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/cooked_sniffer_shank",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/cooked_snifferwurst",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/fried_ghast_calamari",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/slicorice",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/slime_bar",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/smoked_spider_meat",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/soft_serve_sniffer_egg",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
       "id": "item:farmersdelight/apple_pie_slice",
       "type": "entry",
       "unlock": {
@@ -631,6 +730,15 @@
       }
     },
     {
+      "id": "item:minecraft/bread",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
       "id": "item:minecraft/carrot",
       "type": "entry",
       "unlock": {
@@ -749,6 +857,240 @@
     },
     {
       "id": "item:minecraft/rabbit_stew",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/boiled_egg",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/burnt_roll",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/cooked_loin",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/dried_ghast_with_milk",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/fried_hoglin_chop",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/hot_wings_bucket",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/hotdog",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/red_loin_on_a_stick",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/roasted_sausage",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/spicy_cotton",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/tear_popsicle",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:mynethersdelight/toasts",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/adzuki_bun",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/chocolate_bar",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/chocolate_spider_eye",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/chocolate_strawberries",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/cooked_mint_chops",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/dried_banana",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/dried_vanilla_pods",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/mint_candies",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/mint_chocolate",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/mint_chops",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/roasted_adzuki_beans",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/strawberry_bean_bonbons",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/vanilla_chocolate_fingers",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:chef_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/vanilla_fudge",
       "type": "entry",
       "unlock": {
         "prerequisites": [

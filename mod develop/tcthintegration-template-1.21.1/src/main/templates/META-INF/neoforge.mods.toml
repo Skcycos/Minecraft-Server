@@ -77,6 +77,12 @@ requiredMods=["neapolitan"]
 config="mynethersdelight_farming_compat.mixins.json"
 requiredMods=["mynethersdelight"]
 
+# Dungeon's Delight monster pot take-out (phase 6B). Gated so MonsterPot*
+# classes are never resolved without the optional mod.
+[[mixins]]
+config="dungeonsdelight_compat.mixins.json"
+requiredMods=["dungeonsdelight"]
+
 # Scorched Guns Niami arrow birth-registration mixin (phase 5A.1). Only applied
 # when Scorched Guns is installed; never falls back to a heuristic.
 [[mixins]]

@@ -98,7 +98,8 @@ class FieldGuideDataTest {
         assertEquals(Set.of("#tcth:chef_common", "#tcth:chef_t2", "#tcth:chef_t3"), refs,
                 "catalog must reference exactly the three tier tags");
         assertEquals(union.size(), union.stream().distinct().count(), "catalog must have no duplicates");
-        assertEquals(166, union.size(), "expected 166 dishes (84 COMMON / 58 T2 / 24 T3)");
+        // Phase 6B: 166 legacy + 167 NEW food-mod dishes = 333
+        assertEquals(333, union.size(), "expected 333 dishes after 6B merge (122 COMMON / 187 T2 / 24 T3)");
     }
 
     // ---- 18. raw_dough 被排除 ----
@@ -116,8 +117,8 @@ class FieldGuideDataTest {
     @Test
     void categoryJsonParsesWithEntryPerItemAndIcon() throws IOException {
         Map<String, Integer> expected = Map.of(
-                "chef_common", 84,
-                "chef_t2", 58,
+                "chef_common", 122,
+                "chef_t2", 187,
                 "chef_t3", 24);
         for (Map.Entry<String, Integer> en : expected.entrySet()) {
             Path cat = PRESET.resolve("fieldguide/categories/" + en.getKey() + ".json");
@@ -182,8 +183,18 @@ class FieldGuideDataTest {
             } else {
                 assertTrue(rl.getPath().matches("[a-z0-9/._-]+"),
                         "mod item id has invalid path: " + id);
-                assertTrue(List.of("farmersdelight", "kaleidoscope_cookery", "minecraft")
-                        .contains(rl.getNamespace()),
+                assertTrue(List.of(
+                                "farmersdelight",
+                                "kaleidoscope_cookery",
+                                "minecraft",
+                                "bakeries",
+                                "brewinandchewin",
+                                "dungeonsdelight",
+                                "mynethersdelight",
+                                "neapolitan",
+                                "kaleidoscope_tavern",
+                                "fowlplay"
+                        ).contains(rl.getNamespace()),
                         "unexpected namespace in catalog: " + id);
             }
         }

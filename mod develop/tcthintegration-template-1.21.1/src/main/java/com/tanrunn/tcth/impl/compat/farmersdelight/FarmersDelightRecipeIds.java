@@ -26,12 +26,12 @@ public final class FarmersDelightRecipeIds {
      * @param tracker the cooking pot's used-recipe tracker
      * @return the single tracked recipe id, or {@code null} when the tracker
      *         is empty or holds multiple (ambiguous) entries
+     * @deprecated Prefer {@link com.tanrunn.tcth.impl.compat.cooking.RecipeTrackerSnapshot#resolve}
+     *             so FD/DD share one non-overwriting capture policy.
      */
+    @Deprecated(since = "0.2.2", forRemoval = false)
     @Nullable
     public static ResourceLocation resolveRecipeId(@Nullable Object2IntOpenHashMap<ResourceLocation> tracker) {
-        if (tracker == null || tracker.size() != 1) {
-            return null;
-        }
-        return tracker.keySet().iterator().next();
+        return com.tanrunn.tcth.impl.compat.cooking.RecipeTrackerSnapshot.resolve(tracker);
     }
 }

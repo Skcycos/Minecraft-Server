@@ -6,8 +6,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.tanrunn.tcth.TCTHIntegration;
+import com.tanrunn.tcth.impl.compat.cooking.RecipeTrackerSnapshot;
 import com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapter;
-import com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightRecipeIds;
+import com.tanrunn.tcth.impl.signature.CookingSignature;
+import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.signature.DishSignatureService;
 
 import net.minecraft.resources.ResourceLocation;
@@ -23,16 +26,19 @@ import vectorwing.farmersdelight.common.block.entity.container.CookingPotResultS
  * Fires a TCTH dish event when a player takes a meal out of a Farmer's Delight
  * cooking pot.
  *
- * <p>{@code onTake(Player, ItemStack)} is invoked only after a real successful
- * take-out. The recipe id is captured at HEAD from the pot's internal
- * {@code usedRecipeTracker} (before {@code awardUsedRecipes} clears it) and is
- * only reported when the tracker holds exactly one entry; ambiguous/missing
- * ids become {@code null}. The RETURN handler publishes the actual onTake
- * stack together with the HEAD-captured id and always clears the snapshot
- * (including on failure paths), so no state leaks into later calls.
+ * <p>JAR lifecycle (FD 1.3.2 / same pattern as DD 1.5.0):
+ * <ul>
+ *   <li>Shift-click: {@code onQuickCraft} → {@code checkTakeAchievements} →
+ *       {@code awardUsedRecipes} (clears tracker) → later {@code onTake}</li>
+ *   <li>Normal click: {@code onTake} → {@code checkTakeAchievements} → clear</li>
+ * </ul>
+ * Recipe id is captured at {@code checkTakeAchievements} HEAD via
+ * {@link RecipeTrackerSnapshot}. {@code onTake} HEAD only signs the real
+ * delivery stack; {@code onTake} RETURN is the sole publish site. Snapshot is
+ * cleared in {@code finally} after publish.
  *
  * <p>Applied only when {@code farmersdelight} is installed
- * ({@code requiredMods=["farmersdelight"]} on this config).
+ * ({@code requiredMods=["farmersdelight"]}).
  */
 @Mixin(CookingPotResultSlot.class)
 public abstract class CookingPotResultSlotMixin {
@@ -40,14 +46,32 @@ public abstract class CookingPotResultSlotMixin {
     @Unique
     private ResourceLocation tcth$recipeIdSnapshot = null;
 
-    @Inject(method = "onTake", at = @At("HEAD"))
-    private void tcth$captureRecipeId(Player player, ItemStack stack, CallbackInfo ci) {
+    @Unique
+    private CookingSignature tcth$previousSignature = null;
+
+    /**
+     * Capture recipe id before awardUsedRecipes clears the tracker (covers
+     * Shift-click where this runs from onQuickCraft before onTake).
+     */
+    @Inject(method = "checkTakeAchievements", at = @At("HEAD"))
+    private void tcth$captureRecipeIdOnAchievements(ItemStack stack, CallbackInfo ci) {
         CookingPotResultSlot slot = (CookingPotResultSlot) (Object) this;
         CookingPotBlockEntity pot = slot.cookingPot;
-        this.tcth$recipeIdSnapshot = FarmersDelightRecipeIds.resolveRecipeId(
+        this.tcth$recipeIdSnapshot = RecipeTrackerSnapshot.capture(
+                this.tcth$recipeIdSnapshot,
                 ((CookingPotBlockEntityAccessor) (Object) pot).tcth$getUsedRecipeTracker());
-        // Sign the real onTake stack BEFORE the super call hands it to the
-        // player, so the delivered dish carries the signature.
+    }
+
+    /**
+     * Sign the real delivery stack only. Do not re-resolve tracker here —
+     * after Shift-click the tracker is often already empty.
+     */
+    @Inject(method = "onTake", at = @At("HEAD"))
+    private void tcth$signOnTake(Player player, ItemStack stack, CallbackInfo ci) {
+        this.tcth$previousSignature = null;
+        if (CookingSignatureComponents.isRegistered() && stack != null && !stack.isEmpty()) {
+            this.tcth$previousSignature = stack.get(CookingSignatureComponents.type());
+        }
         if (player instanceof ServerPlayer serverPlayer) {
             DishSignatureService.sign(serverPlayer, stack);
         }
@@ -64,8 +88,29 @@ public abstract class CookingPotResultSlotMixin {
             }
             ServerPlayer serverPlayer = player instanceof ServerPlayer sp ? sp : null;
             FarmersDelightDishAdapter.onDishTaken(serverPlayer, stack, this.tcth$recipeIdSnapshot, pot, serverLevel);
+        } catch (RuntimeException | LinkageError e) {
+            restorePreviousSignature(stack);
+            TCTHIntegration.LOGGER.error("[TCTH] Cooking pot dish publish failed: {}", e.toString());
         } finally {
+            // Must clear after every take so the next take does not inherit.
             this.tcth$recipeIdSnapshot = null;
+            this.tcth$previousSignature = null;
+        }
+    }
+
+    @Unique
+    private void restorePreviousSignature(ItemStack stack) {
+        if (stack == null || stack.isEmpty() || !CookingSignatureComponents.isRegistered()) {
+            return;
+        }
+        try {
+            if (this.tcth$previousSignature == null) {
+                stack.remove(CookingSignatureComponents.type());
+            } else {
+                stack.set(CookingSignatureComponents.type(), this.tcth$previousSignature);
+            }
+        } catch (RuntimeException | LinkageError ignored) {
+            // best-effort
         }
     }
 }

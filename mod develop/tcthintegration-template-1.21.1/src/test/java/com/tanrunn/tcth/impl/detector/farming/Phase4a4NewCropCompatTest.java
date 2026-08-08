@@ -227,7 +227,12 @@ class Phase4a4NewCropCompatTest {
                         assertTrue(path.contains("/mixin/mynethersdelight/"),
                                 "MND import only allowed in mixin.mynethersdelight: " + path);
                     }
-                    assertFalse(dd, "DD must not be imported anywhere (tag-only): " + path);
+                    // Phase 6B: DD monster-pot mixins may import yirmiri types only in
+                    // mixin.dungeonsdelight (still gated by requiredMods).
+                    if (dd) {
+                        assertTrue(path.contains("/mixin/dungeonsdelight/"),
+                                "DD import only allowed in mixin.dungeonsdelight: " + path);
+                    }
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

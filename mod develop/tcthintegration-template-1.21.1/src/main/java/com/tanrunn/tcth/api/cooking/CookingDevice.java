@@ -28,6 +28,18 @@ public enum CookingDevice {
     KALEIDOSCOPE_STOCKPOT,
     /** Kaleidoscope Cookery steamer. */
     KALEIDOSCOPE_STEAMER,
+    /** Dungeon's Delight monster cooking pot (optional mod). */
+    DUNGEONS_DELIGHT_MONSTER_POT,
+    /**
+     * Bakeries oven (optional mod). Reserved for a proven player-take path;
+     * do not emit until a dedicated mixin is live.
+     */
+    BAKERIES_OVEN,
+    /**
+     * Bakeries blender (optional mod). Reserved for a proven player-take path;
+     * do not emit until a dedicated mixin is live.
+     */
+    BAKERIES_BLENDER,
     /** Any device not covered above. */
     OTHER
 }

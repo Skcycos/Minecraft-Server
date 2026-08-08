@@ -1,0 +1,85 @@
+产物ID,最终内容类型,最终建议档次,决策证据,是否允许厨师经验,是否允许Field Guide,是否属于整盘料理,备注
+dungeonsdelight:sculk_mayo,INGREDIENT,不进入厨师,饥饿1/饱和0.4/虚弱副作用；被devilish_eggs等后续使用；酱料非宴席,否,否,否,6A.2驳回T3候选
+dungeonsdelight:wardenzola,INGREDIENT,不进入厨师,仅sculk_polyp×2+milk；被polterghast_pizza使用；奶酪中间产物,否,否,否,6A.2驳回T3候选
+bakeries:cheese_cream,INGREDIENT,不进入厨师,搅拌机奶油中间产物,否,否,否,保持INGREDIENT
+bakeries:foamed_cream,INGREDIENT,不进入厨师,发泡奶油中间产物,否,否,否,保持INGREDIENT
+bakeries:fresh_cheese_cube,INGREDIENT,不进入厨师,芝士立方中间产物,否,否,否,保持INGREDIENT
+bakeries:mashed_taro,INGREDIENT,不进入厨师,芋泥馅料,否,否,否,保持INGREDIENT
+bakeries:meat_floss,INGREDIENT,不进入厨师,肉松馅料,否,否,否,保持INGREDIENT
+bakeries:pineapple_oil,INGREDIENT,不进入厨师,油脂原料,否,否,否,保持INGREDIENT
+brewinandchewin:flaxen_cheese_wedge,INGREDIENT,不进入厨师,奶酪楔切割产物,否,否,否,保持INGREDIENT
+brewinandchewin:scarlet_cheese_wedge,INGREDIENT,不进入厨师,奶酪楔切割产物,否,否,否,保持INGREDIENT
+dungeonsdelight:cleaved_ancient_egg,INGREDIENT,不进入厨师,切割中间产物,否,否,否,保持INGREDIENT
+dungeonsdelight:creeperilla_squib,INGREDIENT,不进入厨师,切割中间产物,否,否,否,保持INGREDIENT
+dungeonsdelight:ghast_calamari,INGREDIENT,不进入厨师,切割中间产物,否,否,否,保持INGREDIENT
+dungeonsdelight:rotgourd_slice,INGREDIENT,不进入厨师,切割中间产物,否,否,否,保持INGREDIENT
+dungeonsdelight:rotten_tripe,INGREDIENT,不进入厨师,切割中间产物,否,否,否,保持INGREDIENT
+dungeonsdelight:wardenzola_crumbles,INGREDIENT,不进入厨师,奶酪碎屑切割产物,否,否,否,保持INGREDIENT
+farmersdelight:pumpkin_slice,INGREDIENT,不进入厨师,南瓜片原料,否,否,否,保持INGREDIENT
+mynethersdelight:ghast_dough,INGREDIENT,不进入厨师,面团中间产物,否,否,否,保持INGREDIENT
+mynethersdelight:hot_cream,INGREDIENT,不进入厨师,奶油酱料,否,否,否,保持INGREDIENT
+mynethersdelight:minced_strider,INGREDIENT,不进入厨师,绞肉中间产物,否,否,否,保持INGREDIENT
+mynethersdelight:strider_egg,INGREDIENT,不进入厨师,切割/原料蛋,否,否,否,保持INGREDIENT
+bakeries:egg_tart_shell,INGREDIENT,不进入厨师,蛋挞皮生坯/壳；无FOOD,否,否,否,禁止dishStrong误判
+bakeries:raw_egg_tart,INGREDIENT,不进入厨师,未烘焙蛋挞；无FOOD,否,否,否,禁止dishStrong误判
+mynethersdelight:raw_stuffed_hoglin,INGREDIENT,不进入厨师,整盘生坯；无FOOD；需烹饪,否,否,否,生坯非SERVING_DISH
+mynethersdelight:roast_stuffed_hoglin,SERVING_DISH,不进入厨师,StuffedHoglinBlock.SERVINGS+useItemOn分食；无FOOD组件,否,是,是,javap:SERVINGS分食；防双算待6B
+minecraft:cake,SERVING_DISH,不进入厨师,原版CakeBlock分食；无Item FOOD,否,是,是,原版蛋糕
+brewinandchewin:pizza,SERVING_DISH,不进入厨师,PizzaBlock.SERVINGS+useWithoutItem；无FOOD,否,是,是,javap:PizzaBlock
+dungeonsdelight:polterghast_pizza,SERVING_DISH,不进入厨师,PolterghastPizzaBlock整盘分食；无FOOD,否,是,是,整盘披萨
+dungeonsdelight:monster_cake,SERVING_DISH,不进入厨师,可放置蛋糕类；无FOOD,否,是,是,整盘蛋糕
+neapolitan:adzuki_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice；无Item FOOD,否,是,是,javap:FlavoredCakeBlock
+neapolitan:banana_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice,否,是,是,
+neapolitan:chocolate_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice,否,是,是,
+neapolitan:mint_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice,否,是,是,
+neapolitan:strawberry_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice,否,是,是,
+neapolitan:vanilla_cake,SERVING_DISH,不进入厨师,FlavoredCakeBlock.eatSlice,否,是,是,
+neapolitan:adzuki_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块可放置分食；无FOOD,否,是,是,
+neapolitan:banana_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块,否,是,是,
+neapolitan:chocolate_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块,否,是,是,
+neapolitan:mint_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块,否,是,是,
+neapolitan:strawberry_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块,否,是,是,
+neapolitan:vanilla_ice_cream_block,SERVING_DISH,不进入厨师,冰淇淋方块,否,是,是,
+mynethersdelight:magma_cake_block,SERVING_DISH,不进入厨师,岩浆蛋糕方块；无FOOD,否,是,是,
+kaleidoscope_tavern:tartaric_acid_painting,NON_FOOD,不进入厨师,装饰画；tart误匹配已修复,否,否,否,禁止substring tart
+neapolitan:roasted_adzuki_crate,NON_FOOD,不进入厨师,箱装方块；roast误匹配已修复,否,否,否,禁止substring roast
+kaleidoscope_tavern:base_sandwich_board,NON_FOOD,不进入厨师,SandwichBoardBlock装饰/花变换；无分食SERVINGS,否,否,否,javap:deco非整盘料理
+kaleidoscope_tavern:allium_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:azure_bluet_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:cornflower_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:grass_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:orchid_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:peony_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:pink_petals_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:pitcher_plant_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:poppy_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:sunflower_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:torchflower_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:tulip_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+kaleidoscope_tavern:wither_rose_sandwich_board,NON_FOOD,不进入厨师,装饰三明治板,否,否,否,
+neapolitan:banana,RAW_FOOD,不进入厨师,可食用原料香蕉,否,否,否,边界产物
+mynethersdelight:bullet_pepper,RAW_FOOD,不进入厨师,可食用原料辣椒,否,否,否,边界产物
+neapolitan:mint_leaves,RAW_FOOD,不进入厨师,薄荷叶原料,否,否,否,边界产物
+dungeonsdelight:bubblegunk,DISH,COMMON,可食用成品小吃；饥饿0但成品；非关键中间料,是,是,否,边界→COMMON小吃
+dungeonsdelight:slicorice,DISH,COMMON,可食用成品零食,是,是,否,边界→COMMON小吃
+dungeonsdelight:slime_bar,DISH,COMMON,可食用成品零食,是,是,否,边界→COMMON小吃
+mynethersdelight:spicy_cotton,DISH,COMMON,可食用成品；火焰抗性buff；非中间料,是,是,否,边界→COMMON小吃
+neapolitan:mint_chops,DISH,COMMON,简单烹饪肉类；berserking效果；复杂度低,是,是,否,边界→COMMON
+mynethersdelight:dried_ghast_with_milk,DISH,COMMON,最终可食用餐食；饥饿6；简单合成,是,是,否,边界→COMMON
+neapolitan:chocolate_spider_eye,DISH,COMMON,可食用成品；sugar_rush效果；简单合成,是,是,否,边界→COMMON
+bakeries:bagel_filled_sauce,DISH,T2,FOOD nutrition=12 saturation=9.6; recipe id=bakeries:bagel_filled_sauce (shapeless bagel+bearnaise); 夹馅成品,是,是,否,Bakeries;6A.3原REVIEW→DISH T2
+bakeries:baguette_with_filling,DISH,T2,FOOD nutrition=13 saturation=10.4; recipe id=bakeries:baguette_with_filling (baguette+tomato+cooked_pork)×2; 夹馅成品,是,是,否,Bakeries;6A.3原REVIEW→DISH T2
+bakeries:meat_floss_bread_roll,DISH,T2,FOOD nutrition=7 saturation=10.5; recipe id=bakeries:meat_floss_bread_roll (sliced_toast×4+meat_floss×4+bearnaise)×4; 多原料点心,是,是,否,Bakeries;6A.3原REVIEW→DISH T2
+dungeonsdelight:sculk_apple,DISH,T2,FOOD nutrition=5 saturation=5; recipe id=dungeonsdelight:sculk_apple (apple+sculk_polyp×2+honey_bottle); 加工特殊料理,是,是,否,Dungeon's Delight;6A.3原REVIEW→DISH T2
+mynethersdelight:bleeding_tartar,DISH,T2,FOOD nutrition=6 saturation=9 effects=fire_resistance+nourishment; recipe id=mynethersdelight:crafting/bleeding_tartar (minced_strider×2+egg+bowl); 碗装复合,是,是,否,My Nether's Delight;6A.3原REVIEW→DISH T2
+mynethersdelight:hot_cream_cone,DISH,T2,FOOD nutrition=4 saturation=8 effects=g_pungent+fire_resistance; recipe id=mynethersdelight:crafting/hotcream_cone (hot_cream+powder_cannon×3)×3; HotCreamConeItem; 复合甜品,是,是,否,My Nether's Delight;6A.3原REVIEW→DISH T2
+mynethersdelight:stuffed_pepper,DISH,T2,FOOD nutrition=8 saturation=12.8 effect=b_pungent; recipe id=mynethersdelight:crafting/stuffed_pepper (bullet_pepper+cooked_pork+milk); 复合正餐,是,是,否,My Nether's Delight;6A.3原REVIEW→DISH T2
+neapolitan:chocolate_strawberries,DISH,COMMON,FOOD nutrition=4 saturation=0.8 effect=sugar_rush; recipe id=neapolitan:chocolate_strawberries (strawberry+chocolate_bar); 简单加工甜点,是,是,否,Neapolitan;6A.3原REVIEW→DISH COMMON
+neapolitan:strawberry_scones,DISH,T2,FOOD nutrition=5 saturation=1; recipe id=neapolitan:strawberry_scones (wheat×2+strawberry+sugar)×2; 烘焙点心,是,是,否,Neapolitan;6A.3原REVIEW→DISH T2
+neapolitan:strawberries,RAW_FOOD,不进入厨师,FOOD nutrition=3; recipe id=neapolitan:strawberries 拆 basket×1→strawberries×9; 原始水果非厨师料理,否,否,否,Neapolitan;6A.3原REVIEW→RAW_FOOD
+neapolitan:white_strawberries,RAW_FOOD,不进入厨师,FOOD nutrition=5; recipe id=neapolitan:white_strawberries 拆 white_strawberry_basket→×9; 原始水果,否,否,否,Neapolitan;6A.3原REVIEW→RAW_FOOD
+bakeries:country_bread,SERVING_DISH,不进入厨师,无Item FOOD; javap class=CountryBreadBlock extends AKnifeCutBlock; getSliceItem=COUNTRY_BREAD_SLICE getMaxSlice=4; useItemOn knife cut; recipe id=bakeries:oven/country_bread (dough→country_bread); bread_knife recipe→country_bread_slice×6; 整盘切片非整盘手持料理,否,是,是,Bakeries;6A.3原REVIEW→SERVING_DISH; FG仅未来展示意图
+dungeonsdelight:spider_donut,SERVING_DISH,不进入厨师,无Item FOOD; javap class=SpiderDonutBlock DONUTS property getMaxServings=4; useWithoutItem→eat() FoodData.eat(3,0.3f)+POUNCING; DDBlocks registers SpiderDonutBlock; recipe id=dungeonsdelight:monster_cooking/spider_donut; 放置后分食非整盘手持,否,是,是,Dungeon's Delight;6A.3原REVIEW→SERVING_DISH; FG仅未来意图防双算
+dungeonsdelight:spider_pie,SERVING_DISH,不进入厨师,无Item FOOD; javap class=EXPPieBlock extends vectorwing.farmersdelight.common.block.PieBlock; consumeBite+EXP; DDBlocks.SPIDER_PIE; recipe id=dungeonsdelight:spider_pie; cutting recipe→spider_pie_slice×4; 可分食PieBlock,否,是,是,Dungeon's Delight;6A.3原REVIEW→SERVING_DISH; FG仅未来意图
+bakeries:mould_toast,INGREDIENT,不进入厨师,无FOOD; javap class=MouldToastBlock implements IMouldBlock; demouldItem take()给出脱模内容; recipe id=bakeries:oven/toast dough→mould_toast; bread_knife 切片输入是 bakeries:toast 非本物品; 模具中间态不进入普通厨师档,否,否,否,Bakeries;6A.3原REVIEW→INGREDIENT 保守不进厨师
+bakeries:mould_cheese_cocoa_toast,INGREDIENT,不进入厨师,无FOOD; javap class=MouldToastBlock implements IMouldBlock; demould take→cheese_cocoa_toast; recipe id=bakeries:oven/cheese_cocoa_toast; bread_knife ingredient=cheese_cocoa_toast 非mould; 模具中间态,否,否,否,Bakeries;6A.3原REVIEW→INGREDIENT 不进入普通厨师档
