@@ -108,3 +108,18 @@ gunExperienceAbilitiesEnabled = true
 #Historical / migrated medals are never announced.
 #Default: true.
 gunnerMedalAnnouncementsEnabled = true
+#Brewer (Mystic Brewer) beverage integration switch.
+#Default off. When false, no BeveragePreparedEvent is posted
+#and brewing compat modules must not perform detection logic.
+brewerIntegrationEnabled = true
+#Brewer (Mystic Brewer) experience rewards switch.
+#Default off. When false, no tcth:on_beverage_prepared Arc
+#action is sent and no brewer rewards settle. Requires
+#enabled + brewerIntegrationEnabled as well. No gold.
+brewerRewardsEnabled = true
+#Maximum brewer reward actions settled per player per tick.
+#Default 20. Protects against event storms; excess events are
+#dropped (they never occupy idempotency or rate-limit state).
+# Default: 20
+# Range: 1 ~ 1000
+maxBrewerRewardsPerTickPerPlayer = 20
