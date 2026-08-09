@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.tanrunn.tcth.impl.compat.CompatLoader;
+import com.tanrunn.tcth.impl.debug.BrewingDebug;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
 import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.detector.farming.CropBreakDetector;
@@ -18,6 +19,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import com.tanrunn.tcth.impl.brewing.TcthDataReloads;
 import net.neoforged.neoforge.common.NeoForge;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -62,8 +64,15 @@ public class TCTHIntegration {
         // Bootstrap the unified cooking-event dispatcher (central guard).
         DishCookedEventDispatcher.init();
 
+        // Register data-pack reload listeners (dish tiers + brewer tiers, 7B.1).
+        // Idempotent; independent of the cooking stats tracker.
+        TcthDataReloads.register(NeoForge.EVENT_BUS);
+
         // Register the cooking-event debug listener (disabled by default).
         CookingDebug.init();
+
+        // Register the brewing-event debug listener (disabled by default, 7B).
+        BrewingDebug.init();
 
         // Unified farming framework (phase 4A.2): break detector + right-click
         // harvest mixins publish CropHarvestedEvent through the dispatcher.

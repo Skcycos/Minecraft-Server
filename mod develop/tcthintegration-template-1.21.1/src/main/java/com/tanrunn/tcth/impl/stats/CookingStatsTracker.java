@@ -15,7 +15,6 @@ import com.tanrunn.tcth.impl.compat.jobsplus.DishTierManager;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.event.AddReloadListenerEvent;
 
 /**
  * Cooking-statistics tracker.
@@ -57,7 +56,6 @@ public final class CookingStatsTracker {
         }
         initialized = true;
         gameBus.addListener(CookingStatsTracker::onDishCooked);
-        gameBus.addListener(CookingStatsTracker::onAddReloadListeners);
         TCTHIntegration.LOGGER.debug("[TCTH] Cooking stats tracker registered");
     }
 
@@ -100,12 +98,6 @@ public final class CookingStatsTracker {
                 event.getResult().getItem().builtInRegistryHolder().key().location().toString(),
                 count, System.currentTimeMillis());
         data.setDirty();
-    }
-
-    static void onAddReloadListeners(AddReloadListenerEvent event) {
-        // Load dish_tiers even without the Jobs+ module so tier stats work.
-        // Single registration point (the Jobs+ module no longer registers it).
-        event.addListener(new DishTierManager());
     }
 
     // ---- test hooks ----

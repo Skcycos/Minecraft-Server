@@ -128,5 +128,7 @@
   "jobsplus.powerup.tcth.gunner.gunner_experience_ii.name": "实战心得 II",
   "jobsplus.powerup.tcth.gunner.gunner_experience_ii.description": "枪客职业经验获取 ×1.35。",
   "jobsplus.powerup.tcth.gunner.gunner_experience_iii.name": "实战心得 III",
-  "jobsplus.powerup.tcth.gunner.gunner_experience_iii.description": "枪客职业经验获取 ×1.60。"
+  "jobsplus.powerup.tcth.gunner.gunner_experience_iii.description": "枪客职业经验获取 ×1.60。",
+  "jobsplus.job.tcth.brewer.name": "魔酿师",
+  "jobsplus.job.tcth.brewer.description": "调制饮品、掌握发酵工艺，并在一次次斟饮中探索奇妙风味。"
 }

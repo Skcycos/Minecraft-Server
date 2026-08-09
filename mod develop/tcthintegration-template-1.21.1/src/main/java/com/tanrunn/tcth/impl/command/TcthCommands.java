@@ -3,6 +3,7 @@ package com.tanrunn.tcth.impl.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.tanrunn.tcth.TCTHIntegration;
+import com.tanrunn.tcth.impl.debug.BrewingDebug;
 import com.tanrunn.tcth.impl.debug.CookingDebug;
 import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.debug.GunDebug;
@@ -66,7 +67,14 @@ public final class TcthCommands {
                                 .then(Commands.literal("off")
                                         .executes(TcthCommands::disableGunnerDebug))
                                 .then(Commands.literal("status")
-                                        .executes(TcthCommands::gunnerDebugStatus)))));
+                                        .executes(TcthCommands::gunnerDebugStatus)))
+                        .then(Commands.literal("brewing")
+                                .then(Commands.literal("on")
+                                        .executes(TcthCommands::enableBrewingDebug))
+                                .then(Commands.literal("off")
+                                        .executes(TcthCommands::disableBrewingDebug))
+                                .then(Commands.literal("status")
+                                        .executes(TcthCommands::brewingDebugStatus)))));
     }
 
     /**
@@ -146,6 +154,24 @@ public final class TcthCommands {
     private static int gunnerDebugStatus(CommandContext<CommandSourceStack> ctx) {
         boolean enabled = GunDebug.isEnabled();
         ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] gunner debug is " + (enabled ? "enabled" : "disabled")), false);
+        return 1;
+    }
+
+    private static int enableBrewingDebug(CommandContext<CommandSourceStack> ctx) {
+        BrewingDebug.setEnabled(true);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] brewing debug enabled"), false);
+        return 1;
+    }
+
+    private static int disableBrewingDebug(CommandContext<CommandSourceStack> ctx) {
+        BrewingDebug.setEnabled(false);
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] brewing debug disabled"), false);
+        return 1;
+    }
+
+    private static int brewingDebugStatus(CommandContext<CommandSourceStack> ctx) {
+        boolean enabled = BrewingDebug.isEnabled();
+        ctx.getSource().sendSuccess(() -> Component.literal("[TCTH] brewing debug is " + (enabled ? "enabled" : "disabled")), false);
         return 1;
     }
 }

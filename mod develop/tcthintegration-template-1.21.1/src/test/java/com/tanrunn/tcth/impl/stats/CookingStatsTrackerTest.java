@@ -134,11 +134,14 @@ class CookingStatsTrackerTest {
     }
 
     @Test
-    void tierDataReloadRegisteredExactlyOnce() {
+    void tierDataReloadRegisteredByTcthDataReloads() {
+        // Reload listeners moved out of CookingStatsTracker (7B.1): the
+        // brewer/cook tier data reload is registered by TcthDataReloads and is
+        // independent of the cooking stats tracker.
         net.neoforged.neoforge.event.AddReloadListenerEvent evt =
                 Mockito.mock(net.neoforged.neoforge.event.AddReloadListenerEvent.class);
-        CookingStatsTracker.onAddReloadListeners(evt);
-        Mockito.verify(evt, Mockito.times(1)).addListener(Mockito.any());
+        com.tanrunn.tcth.impl.brewing.TcthDataReloads.onAddReloadListeners(evt);
+        Mockito.verify(evt, Mockito.times(2)).addListener(Mockito.any());
     }
 
     @Test

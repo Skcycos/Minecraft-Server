@@ -32,6 +32,42 @@ public class Config {
             .define("enabled", true);
 
     /**
+     * Brewer (Mystic Brewer) beverage integration switch (phase 7B).
+     *
+     * <p>Default OFF. Controls whether {@code BeveragePreparedEvent}s are
+     * published by the brewing dispatcher and whether brewing compat modules
+     * may perform detection logic. Independent of the master {@link #ENABLED}
+     * switch; both must be true for an event to be posted.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_INTEGRATION_ENABLED = BUILDER
+            .comment("Brewer (Mystic Brewer) beverage integration switch.",
+                    "Default off. When false, no BeveragePreparedEvent is posted",
+                    "and brewing compat modules must not perform detection logic.")
+            .define("brewerIntegrationEnabled", false);
+
+    /**
+     * Brewer experience rewards module.
+     *
+     * <p>Default OFF. Controls whether the {@code tcth:on_beverage_prepared}
+     * Arc action is sent for beverage events (and thus whether brewer rewards
+     * settle). Requires {@link #ENABLED} and
+     * {@link #BREWER_INTEGRATION_ENABLED} to also be true. No gold rewards.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_REWARDS_ENABLED = BUILDER
+            .comment("Brewer (Mystic Brewer) experience rewards switch.",
+                    "Default off. When false, no tcth:on_beverage_prepared Arc",
+                    "action is sent and no brewer rewards settle. Requires",
+                    "enabled + brewerIntegrationEnabled as well. No gold.")
+            .define("brewerRewardsEnabled", false);
+
+    /** Per-player per-tick cap on brewer reward actions (phase 7C). */
+    public static final ModConfigSpec.IntValue MAX_BREWER_REWARDS_PER_TICK_PER_PLAYER = BUILDER
+            .comment("Maximum brewer reward actions settled per player per tick.",
+                    "Default 20. Protects against event storms; excess events are",
+                    "dropped (they never occupy idempotency or rate-limit state).")
+            .defineInRange("maxBrewerRewardsPerTickPerPlayer", 20, 1, 1000);
+
+    /**
      * Jobs+ dish-cooking experience rewards module.
      *
      * <p>Default OFF. Controls whether the {@code tcth:on_dish_cooked} Arc

@@ -51,6 +51,12 @@ public final class JobsPlusCompatModule implements CompatModule {
         JobsPlusRewardModule.init(NeoForge.EVENT_BUS);
         FarmerRewardModule.init(NeoForge.EVENT_BUS);
         GunnerRewardModule.init(NeoForge.EVENT_BUS);
+        // Phase 7C: brewer (Mystic Brewer) Arc action/conditions + reward
+        // module. Lives under the jobsplus mod id; only loads when Arc is
+        // present (guaranteed here). Rewards disabled by default.
+        com.tanrunn.tcth.impl.compat.brewer.arc.BrewerArcRegistrar.ON_BEVERAGE_PREPARED.getLocation();
+        com.tanrunn.tcth.impl.compat.brewer.arc.BrewerArcRegistrar.verifyRegistrations();
+        com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModule.init(NeoForge.EVENT_BUS);
         // Phase 5B: gunner ability routes. The pure Jobs+ tier-query / study
         // route is registered unconditionally (Jobs+ is present here). The
         // SG-dependent routes (marksmanship damage, battlefield defense, ammo

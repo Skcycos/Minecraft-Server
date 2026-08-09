@@ -57,7 +57,7 @@ farmerIntegrationEnabled = true
 #gate farming event detection (farmerIntegrationEnabled).
 #Independent of jobsPlusRewardsEnabled (chef dish rewards).
 #Default off. Enable only after live player verification.
-farmerRewardsEnabled = false
+farmerRewardsEnabled = true
 #Gunner profession master switch (Scorched Guns firearm kills).
 #When false, no firearm-kill events are detected or posted.
 #Independent of chef/farmer and of Jobs+/Arc.
@@ -69,15 +69,10 @@ gunnerIntegrationEnabled = true
 #(gunnerStatsEnabled). Independent of jobsPlusRewardsEnabled
 #(chef) and farmerRewardsEnabled.
 #Default off. Enable only after live player verification.
-gunnerRewardsEnabled = false
+gunnerRewardsEnabled = true
 #Update per-player gunner statistics (tcth_gunner_stats.dat).
 #Independent of gunnerRewardsEnabled. Default true.
 gunnerStatsEnabled = true
-#Chat the player when a gunner battlefield medal unlocks.
-#Medals still unlock and persist when this is false.
-#Historical / migrated medals are never announced.
-#Default: true.
-gunnerMedalAnnouncementsEnabled = true
 #Maximum gun-kill actions sent per player per tick (rate limit).
 # Default: 10
 # Range: 1 ~ 1000
@@ -108,3 +103,23 @@ gunDefenseAbilitiesEnabled = true
 #×1.15 / ×1.35 / ×1.60. Requires gunnerAbilitiesEnabled.
 #Default: true.
 gunExperienceAbilitiesEnabled = true
+#Chat the player when a gunner battlefield medal unlocks.
+#Medals still unlock and persist when this is false.
+#Historical / migrated medals are never announced.
+#Default: true.
+gunnerMedalAnnouncementsEnabled = true
+#Brewer (Mystic Brewer) beverage integration switch.
+#Default off. When false, no BeveragePreparedEvent is posted
+#and brewing compat modules must not perform detection logic.
+brewerIntegrationEnabled = true
+#Brewer (Mystic Brewer) experience rewards switch.
+#Default off. When false, no tcth:on_beverage_prepared Arc
+#action is sent and no brewer rewards settle. Requires
+#enabled + brewerIntegrationEnabled as well. No gold.
+brewerRewardsEnabled = true
+#Maximum brewer reward actions settled per player per tick.
+#Default 20. Protects against event storms; excess events are
+#dropped (they never occupy idempotency or rate-limit state).
+# Default: 20
+# Range: 1 ~ 1000
+maxBrewerRewardsPerTickPerPlayer = 20

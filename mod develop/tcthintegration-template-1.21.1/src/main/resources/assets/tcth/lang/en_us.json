@@ -128,5 +128,7 @@
   "jobsplus.powerup.tcth.gunner.gunner_experience_ii.name": "Gunner Experience II",
   "jobsplus.powerup.tcth.gunner.gunner_experience_ii.description": "tcth:gunner job experience ×1.35.",
   "jobsplus.powerup.tcth.gunner.gunner_experience_iii.name": "Gunner Experience III",
-  "jobsplus.powerup.tcth.gunner.gunner_experience_iii.description": "tcth:gunner job experience ×1.60."
+  "jobsplus.powerup.tcth.gunner.gunner_experience_iii.description": "tcth:gunner job experience ×1.60.",
+  "jobsplus.job.tcth.brewer.name": "Mystic Brewer",
+  "jobsplus.job.tcth.brewer.description": "Mix drinks, master fermentation, and uncover strange flavors one pour at a time."
 }

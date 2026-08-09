@@ -83,6 +83,12 @@ requiredMods=["mynethersdelight"]
 config="dungeonsdelight_compat.mixins.json"
 requiredMods=["dungeonsdelight"]
 
+# Brewin' and Chewin' Keg pouring detection (phase 7B). Gated so KegBlock*
+# classes are never resolved without the optional mod.
+[[mixins]]
+config="brewinandchewin_compat.mixins.json"
+requiredMods=["brewinandchewin"]
+
 # Scorched Guns Niami arrow birth-registration mixin (phase 5A.1). Only applied
 # when Scorched Guns is installed; never falls back to a heuristic.
 [[mixins]]
