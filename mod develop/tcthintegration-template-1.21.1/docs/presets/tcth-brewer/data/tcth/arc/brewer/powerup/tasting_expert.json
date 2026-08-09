@@ -1,0 +1,27 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:brewer/tasting_expert"
+  },
+  "type": "arc:on_drink",
+  "rewards": [
+    {
+      "type": "tcth:brewer_tasting_effects",
+      "tier": 3
+    }
+  ],
+  "conditions": [
+    {
+      "type": "arc:items",
+      "items": [
+        "#tcth:brewer_drinks"
+      ]
+    },
+    {
+      "type": "tcth:brewer_drink_cooldown"
+    },
+    {
+      "type": "tcth:brewer_tasting_abilities_enabled"
+    }
+  ]
+}

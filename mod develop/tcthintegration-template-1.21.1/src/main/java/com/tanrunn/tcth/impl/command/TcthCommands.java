@@ -9,6 +9,7 @@ import com.tanrunn.tcth.impl.debug.FarmingDebug;
 import com.tanrunn.tcth.impl.debug.GunDebug;
 import com.tanrunn.tcth.impl.signature.CookingSignature;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
+import com.tanrunn.tcth.impl.stats.BrewingStatsCommand;
 import com.tanrunn.tcth.impl.stats.CookingStatsCommand;
 import com.tanrunn.tcth.impl.stats.GunnerStatsCommand;
 
@@ -41,6 +42,7 @@ public final class TcthCommands {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
         CookingStatsCommand.register(dispatcher);
         GunnerStatsCommand.register(dispatcher);
+        BrewingStatsCommand.register(dispatcher);
         dispatcher.register(Commands.literal("tcth")
                 .then(Commands.literal("chef")
                         .then(Commands.literal("inspect")

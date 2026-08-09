@@ -73,11 +73,19 @@ public final class JobsPlusCompatModule implements CompatModule {
         // Tasting anti-farm cooldown lifecycle (logout/stop cleanup). The
         // cooldown itself is committed by the tcth:tasting_effects reward.
         ChefTastingCooldown.instance().registerLifecycle(NeoForge.EVENT_BUS);
+        // Phase 7E: brewer (Mystic Brewer) ability routes. The tier query and
+        // the Java-driven routes (brewing effects on BeveragePreparedEvent,
+        // resistance on LivingDamageEvent) plus the tasting cooldown lifecycle
+        // register unconditionally here (Jobs+ is present). The study route is
+        // data-driven via Arc (on_job_exp + job_exp_multiplier); its conditions
+        // are registered by TcthArcRegistrar above.
+        com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModule.init(NeoForge.EVENT_BUS);
         TCTHIntegration.LOGGER.info("[TCTH] Jobs+ dish reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Farmer crop-harvest reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Gunner firearm-kill reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Chef ability tree active (knife / hearth / tasting / study routes)");
         TCTHIntegration.LOGGER.info("[TCTH] Gunner ability tree active (marksmanship / ammo / defense / study routes)");
+        TCTHIntegration.LOGGER.info("[TCTH] Brewer ability tree active (brewing / tasting / resistance / study routes)");
     }
 
     boolean isArcAvailableForTesting() {
