@@ -72,3 +72,6 @@ Server/mods/*.mixins.json
 
 # automodpack runtime content manifest (regenerated on server start)
 Server/automodpack/host-modpack/automodpack-content.json
+
+# FUSE temp files (open handle leftovers)
+.fuse_hidden*
