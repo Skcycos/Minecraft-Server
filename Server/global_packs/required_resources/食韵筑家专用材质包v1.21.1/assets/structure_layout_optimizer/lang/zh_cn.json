@@ -1,0 +1,8 @@
+{
+  "config.structure_layout_optimizer.title": "结构布局优化器",
+  "config.structure_layout_optimizer.desc": "尝试优化拼图（Jigsaw）结构的生成",
+  "config.structure_layout_optimizer.link.bug_report": "报告 Bug",
+  "config.structure_layout_optimizer.link.license": "许可证",
+  "config.structure_layout_optimizer.deduplicate_shuffled_template_pool_element_list": "去重打乱后的模板池元素列表",
+  "config.structure_layout_optimizer.deduplicate_shuffled_template_pool_element_list.desc": "是否使用备选策略，使结构布局比本模组对模板池权重提供的默认优化生成得稍快一些。该备选策略通过更改结构从模板池收集的部件列表，使其不再包含重复条目。\n这不会破坏结构的生成，但会使结构布局与关闭此配置时不同（破坏原版种子一致性）。在大规模整合包中，许多结构模组的模板池使用了非常高的权重值，此时以速度为代价或许是值得的。\n\n优点：让高权重模板池结构获得更多的性能提升。\n缺点：失去与原版种子在结构布局上的一致性。（结构布局并未损坏，只是不同而已）"
+}

@@ -371,6 +371,206 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 37
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">37</span>
+    <div>
+      <h2 class="edition-title">新增声学物理模组</h2>
+      <p class="edition-meta">
+        <span>b60aafd</span>
+        <span class="dot">·</span>
+        <span>08-09 16:36</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 客户端 + 服务端</span>
+
+    <div class="pull">Sound Physics Remastered 1.4.10 — 真实声学物理：声音随距离、遮挡自然衰减并产生回响，音效更有沉浸感。</div>
+
+    <span class="status status--info">随附 c2me 与 server.properties 运行时配置更新</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 36
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">36</span>
+    <div>
+      <h2 class="edition-title">sclp 钠/Embeddium 汉化包升级</h2>
+      <p class="edition-meta">
+        <span>306a8d8</span>
+        <span class="dot">·</span>
+        <span>08-09 04:07</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">sclp</span><span class="item-value">3.6.2 → 3.11.2.1（Sodium/Embeddium 简体中文汉化包升级）</span></li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 35
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">35</span>
+    <div>
+      <h2 class="edition-title">整盘料理分食与防双算 · 阶段 6D</h2>
+      <p class="edition-meta">
+        <span>93b5c8e</span>
+        <span class="dot">·</span>
+        <span>08-09 00:20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ BUILD PASS · 708 项测试通过</span>
+
+    <div class="pull">My Nether's Delight 烤猪灵整盘现在可以真正"分食"：每次端出一份都结算一次厨师经验并署名，绝无双算。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">分食支持 · PORTIONING</span>
+        <span class="item-value">整盘料理（roast_stuffed_hoglin → plate_of_stuffed_hoglin/猪鼻/火腿）取出单份结算</span>
+      </li>
+      <li>
+        <span class="item-label">防双算</span>
+        <span class="item-value">整盘容器用 serving_dish_containers tag 标记，仅 takeServing 路径发布事件，刀切不结算</span>
+      </li>
+      <li>
+        <span class="item-label">署名与图鉴</span>
+        <span class="item-value">分食产物带主厨签名；Field Guide 解锁单份料理，整盘容器不解锁</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 34
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">34</span>
+    <div>
+      <h2 class="edition-title">NotEnoughBandwidth 停用</h2>
+      <p class="edition-meta">
+        <span>7ed6f8d</span>
+        <span class="dot">·</span>
+        <span>08-08 23:10</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">NotEnoughBandwidth</span><span class="item-value">网络优化模组停用（保留文件待评估），并同步更新运行时配置</span></li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 33
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">33</span>
+    <div>
+      <h2 class="edition-title">修正料理锅快捷取餐事务</h2>
+      <p class="edition-meta">
+        <span>6272c8e</span>
+        <span class="dot">·</span>
+        <span>08-08 22:57</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <div class="pull">料理锅 Shift 一键取餐不再"跳过"结算 — 事务化改造后，快捷取出的料理照常计入厨师经验与署名。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">农夫乐事料理锅</span>
+        <span class="item-value">Shift 快捷取餐补上烹饪事件结算</span>
+      </li>
+      <li>
+        <span class="item-label">地牢乐事料理锅</span>
+        <span class="item-value">怪物炖锅结果槽同步事务化处理</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 32
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">32</span>
+    <div>
+      <h2 class="edition-title">扩展新食物模组厨师兼容</h2>
+      <p class="edition-meta">
+        <span>9f22ae5</span>
+        <span class="dot">·</span>
+        <span>08-08 19:59</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 阶段 6A 审计 + 6B 集成</span>
+
+    <div class="pull">五大新食物模组的全部料理接入厨师分档与图鉴体系，产出与配方逐一审计，杜绝重复结算。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>模组</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">Bakeries</td><td>面包房料理分档接入（新增 28 档）</td></tr>
+        <tr><td class="mod-name">Brewin' And Chewin'</td><td>酿酒料理分档接入</td></tr>
+        <tr><td class="mod-name">Dungeons Delight</td><td>地牢料理分档接入（50 档）</td></tr>
+        <tr><td class="mod-name">My Nether's Delight</td><td>下界料理分档接入（35 档）</td></tr>
+        <tr><td class="mod-name">Neapolitan</td><td>冰淇淋/蛋糕料理分档接入（25 档）</td></tr>
+      </tbody>
+    </table>
+
+    <span class="status status--info">新增配方导出审计工具（export_phase6a_audit.mjs）</span>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 31
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">31</span>
+    <div>
+      <h2 class="edition-title">发布 TCTH 0.2.2 模组文件</h2>
+      <p class="edition-meta">
+        <span>d560b2e</span>
+        <span class="dot">·</span>
+        <span>08-08 18:24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <ul class="item-list">
+      <li><span class="item-label">tcth</span><span class="item-value">0.2.0 → 0.2.2 模组 JAR 部署至服务器</span></li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 30
      ============================================================ -->
 
