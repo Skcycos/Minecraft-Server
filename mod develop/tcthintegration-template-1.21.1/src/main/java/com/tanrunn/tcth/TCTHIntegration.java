@@ -12,6 +12,7 @@ import com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcher;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
 import com.tanrunn.tcth.impl.event.GunKillEventDispatcher;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
+import com.tanrunn.tcth.impl.stats.BrewingStatsTracker;
 import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
 import com.tanrunn.tcth.impl.stats.GunnerStatsTracker;
 
@@ -82,6 +83,10 @@ public class TCTHIntegration {
 
         // Per-player cooking statistics archive (independent of Jobs+/Arc).
         CookingStatsTracker.init(NeoForge.EVENT_BUS);
+
+        // Per-player brewing statistics archive (phase 7D, independent of
+        // Jobs+/Arc and of brewer rewards).
+        BrewingStatsTracker.init(NeoForge.EVENT_BUS);
 
         // Phase 5A: gunner profession — firearm-kill event dispatcher,
         // statistics tracker and Scorched Guns compat module registration.

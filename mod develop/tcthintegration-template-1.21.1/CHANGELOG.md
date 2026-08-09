@@ -7,6 +7,65 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 7E — brewer ability tree (brewing / tasting / resistance / study)
+
+- Added the four-route Mystic Brewer ability tree with 12 powerup nodes.
+  - Brewing (调饮, 5/20/45): preparing a graded beverage grants Speed I 5 s
+    (I), Speed I + Luck I 8 s (II), Speed I + Luck I 12 s (III); higher tier
+    overwrites, never stacks.
+  - Tasting (品鉴, 15/35/55): drinking `#tcth:brewer_drinks` grants
+    Regeneration I 5 s (I), + Resistance I 8 s (II), + Speed I 15 s (III),
+    sharing a 20 s cooldown committed only on success.
+  - Resistance (魔酿耐受, 10/30/60): magical / indirect-magical / wither
+    damage taken reduced 10% / 20% / 35% (never full immunity; fire, fall,
+    melee and projectile damage unaffected).
+  - Study (研修, 25/50/75): `tcth:brewer` job experience ×1.15 / ×1.35 / ×1.60
+    via `jobsplus:on_job_exp` + `job_exp_multiplier`; only the highest active
+    tier applies (no stacking).
+- Added `brewerAbilitiesEnabled` master switch plus four per-route switches;
+  all config reads fail closed (never flipped by inverted conditions) and
+  high-frequency warnings are throttled (60 s).
+- Added the shared `BrewerDrinkCooldown` (20 s, logout/stop cleanup) and Arc
+  condition/reward registrations (`brewer_study_abilities_enabled`,
+  `brewer_tasting_abilities_enabled`, `brewer_drink_cooldown`,
+  `brewer_tasting_effects`).
+- Only real, non-automated, graded events trigger brewing effects; automated /
+  UNKNOWN / T3 never do. Tasting unlocks only on a completed drink of a
+  `#tcth:brewer_drinks` beverage (canceled drinks never fire).
+- Added zh_cn / en_us names and descriptions for all 12 powerups plus the new
+  config/condition/reward keys.
+- No gold, extra drops, beverage duplication or second XP pipeline; 7B/7C
+  event and reward values unchanged.
+
+### 7D.1 — brewer stats / Field Guide hardening
+
+- `fieldGuideBrewerEnabled` now composes with the framework switch and the new
+  `fieldGuideEnabled` master switch; every config read fails closed.
+- Brewing-stats event-id cache gained expiry (40 ticks), logout and server-stop
+  cleanup, and hard cap (4096) with success-driven commit.
+- Unlock-failure logs throttled to 60 s; NBT load rejects negative counters,
+  malformed resource locations and unknown enums (counters stay saturated).
+- The most-prepared beverage tie-break is deterministic (full item id asc).
+
+### 7D — brewer statistics archive + Field Guide brewer catalogue
+
+- Added `PlayerBrewingStats` / `BrewingStatsData` (world/data/tcth_brewing_stats.dat,
+  dataVersion 1, fixed overworld storage, UUID-keyed, 1024-player cap).
+- Added `/tcth brewer stats [player]` (permission ≥ 3 for others), read-only.
+- Added Field Guide brewer categories (brew_common 18 / brew_t2 46 explicit
+  entries) unlocked only by real `BeveragePreparedEvent`s; pickup/drink/give
+  never unlock (gate prerequisite `tcth:brewer_cookbook_gate`).
+- Added `scripts/generate_brewer_field_guide.py` (deterministic, stale-cleaned,
+  strict resource-location validation, no T3).
+
+### 7C.2.1 — Keg delivery fix + regression guards
+
+- Fixed the Keg `@Inject` handler parameter binding: the setItemInHand and
+  drop handlers now publish the actually-delivered beverage (`deliveredStack`),
+  not the original held stack, restoring events/XP for the hand-replacement and
+  full-inventory drop branches.
+- Added reflection-based regression tests for the two handlers (4 cases).
+
 ## [0.2.2] - 2026-08-07
 
 ### 4A.4 / 4A.4.1 — farmer crop compatibility expansion

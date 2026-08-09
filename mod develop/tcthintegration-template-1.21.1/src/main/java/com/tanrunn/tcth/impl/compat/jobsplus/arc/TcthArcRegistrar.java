@@ -9,6 +9,9 @@ import com.daqem.arc.api.reward.type.RewardType;
 import com.daqem.arc.registry.ArcRegistry;
 import com.tanrunn.tcth.TCTHIntegration;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.AutomatedCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.BrewerDrinkCooldownCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.BrewerStudyAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.BrewerTastingAbilitiesEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilitiesEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.CookingDeviceCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.DishQualityCondition;
@@ -22,6 +25,7 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunnerRewardsEnabledC
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.KnifeDurabilityEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingCooldownCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingEffectsEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.BrewerTastingEffectsReward;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsReward;
 
 import net.minecraft.core.Registry;
@@ -125,6 +129,21 @@ public final class TcthArcRegistrar {
             ConditionType.register(id("gunner_experience_abilities_enabled"),
                     new GunnerExperienceAbilitiesEnabledCondition.Serializer());
 
+    // ---- phase 7E: brewer ability-tree condition types ----
+    public static final ConditionType<BrewerStudyAbilitiesEnabledCondition> BREWER_STUDY_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("brewer_study_abilities_enabled"),
+                    new BrewerStudyAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<BrewerTastingAbilitiesEnabledCondition> BREWER_TASTING_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("brewer_tasting_abilities_enabled"),
+                    new BrewerTastingAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<BrewerDrinkCooldownCondition> BREWER_DRINK_COOLDOWN_CONDITION =
+            ConditionType.register(id("brewer_drink_cooldown"),
+                    new BrewerDrinkCooldownCondition.Serializer());
+
+    // ---- phase 7E: brewer ability-tree reward type ----
+    public static final IRewardType<BrewerTastingEffectsReward> BREWER_TASTING_EFFECTS =
+            RewardType.register(id("brewer_tasting_effects"), new BrewerTastingEffectsReward.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -174,6 +193,12 @@ public final class TcthArcRegistrar {
 
         // Phase 5B: gunner ability-route condition types.
         checkInRegistry(ArcRegistry.CONDITION, id("gunner_experience_abilities_enabled"), "condition type");
+
+        // Phase 7E: brewer ability-tree condition types and reward type.
+        checkInRegistry(ArcRegistry.CONDITION, id("brewer_study_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("brewer_tasting_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("brewer_drink_cooldown"), "condition type");
+        checkInRegistry(ArcRegistry.REWARD, id("brewer_tasting_effects"), "reward type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

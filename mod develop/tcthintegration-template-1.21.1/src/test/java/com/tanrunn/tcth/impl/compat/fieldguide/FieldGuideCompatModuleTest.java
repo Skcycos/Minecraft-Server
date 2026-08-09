@@ -50,6 +50,7 @@ class FieldGuideCompatModuleTest {
         module = new FieldGuideCompatModule();
         api = new FakeApi();
         module.setApiForTesting(api);
+        module.setFieldGuideEnabledSupplierForTesting(() -> true);
         module.setCookbookEnabledSupplierForTesting(() -> true);
         module.setFrameworkEnabledSupplierForTesting(() -> true);
         module.setCatalogPredicateForTesting(holder -> true);

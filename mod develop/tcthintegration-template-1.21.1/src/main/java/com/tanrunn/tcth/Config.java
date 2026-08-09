@@ -68,6 +68,104 @@ public class Config {
             .defineInRange("maxBrewerRewardsPerTickPerPlayer", 20, 1, 1000);
 
     /**
+     * Brewer (Mystic Brewer) ability-tree master switch (phase 7E).
+     *
+     * <p>When false, all four brewer ability routes stop applying their
+     * effects. Does not delete purchased powerups and does not affect the Jobs+
+     * GUI or brewer experience rewards.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_ABILITIES_ENABLED = BUILDER
+            .comment("Master switch for the brewer ability tree (brewing / tasting /",
+                    "resistance / study routes). When false, all four routes stop",
+                    "applying their effects. Does not delete purchased powerups and",
+                    "does not affect the Jobs+ GUI or brewer rewards.")
+            .define("brewerAbilitiesEnabled", true);
+
+    /**
+     * 调饮路线 (brewing route): preparing a graded beverage grants a short
+     * status package — I: Speed I 5 s; II: Speed I 8 s + Luck I 8 s;
+     * III: Speed I 12 s + Luck I 12 s. Higher tier overwrites, never stacks.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_BREWING_ABILITIES_ENABLED = BUILDER
+            .comment("Brewing route: beverage preparation grants short status effects",
+                    "I: Speed I 5s; II: Speed I 8s + Luck I 8s; III: Speed I 12s + Luck I 12s.",
+                    "Higher tier overwrites, never stacks. Requires brewerAbilitiesEnabled.")
+            .define("brewerBrewingAbilitiesEnabled", true);
+
+    /**
+     * 品鉴路线 (tasting route): drinking {@code #tcth:brewer_drinks} grants a
+     * status package with a shared 20 s cooldown — I: Regeneration I 5 s;
+     * II: Regeneration I 5 s + Resistance I 8 s;
+     * III: Regeneration I 5 s + Resistance I 8 s + Speed I 15 s.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_TASTING_ABILITIES_ENABLED = BUILDER
+            .comment("Tasting route: drinking #tcth:brewer_drinks grants status effects",
+                    "I: Regeneration I 5s; II: Regeneration I 5s + Resistance I 8s;",
+                    "III: Regeneration I 5s + Resistance I 8s + Speed I 15s. Shared 20s",
+                    "cooldown. Requires brewerAbilitiesEnabled.")
+            .define("brewerTastingAbilitiesEnabled", true);
+
+    /**
+     * 魔酿耐受路线 (resistance route): reliably-recognised magical /
+     * indirect-magical / wither damage to the player is reduced by
+     * 10% / 20% / 35%. Never full immunity; fire, fall, melee and projectile
+     * damage are unaffected.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_RESISTANCE_ABILITIES_ENABLED = BUILDER
+            .comment("Resistance route: magical / indirect-magical / wither damage taken",
+                    "is reduced by 10% / 20% / 35%. Never full immunity; fire, fall,",
+                    "melee and projectile damage are unaffected.",
+                    "Requires brewerAbilitiesEnabled.")
+            .define("brewerResistanceAbilitiesEnabled", true);
+
+    /**
+     * 研修路线 (study route): tcth:brewer job experience multiplier
+     * ×1.15 / ×1.35 / ×1.60. Only the highest active tier applies (no
+     * multiplicative stacking).
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_STUDY_ABILITIES_ENABLED = BUILDER
+            .comment("Study route: tcth:brewer job experience multiplier",
+                    "1.15 / 1.35 / 1.60. Only the highest active tier applies,",
+                    "never stacked. Requires brewerAbilitiesEnabled.")
+            .define("brewerStudyAbilitiesEnabled", true);
+
+    /**
+     * 品鉴路线共享冷却（tick；默认 400 = 20 s）。
+     */
+    public static final ModConfigSpec.IntValue BREWER_DRINK_COOLDOWN_TICKS = BUILDER
+            .comment("Tasting-route shared anti-farm cooldown in ticks (default 400 = 20 s).",
+                    "Per-player, in-memory only, shared by all three tasting nodes.",
+                    "Range 1 ~ 72000.")
+            .defineInRange("brewerDrinkCooldownTicks", 400, 1, 72000);
+
+    /**
+     * Brewer statistics archive (phase 7D).
+     *
+     * <p>Independent of Jobs+/Arc and of brewer rewards. When false, no
+     * {@code BeveragePreparedEvent} is recorded into {@code tcth_brewing_stats.dat}.
+     */
+    public static final ModConfigSpec.BooleanValue BREWER_STATS_ENABLED = BUILDER
+            .comment("Enable the per-player brewing statistics archive.",
+                    "Independent of brewerRewardsEnabled and of Jobs+/Arc.",
+                    "Default true.")
+            .define("brewerStatsEnabled", true);
+
+    /**
+     * Field Guide brewer beverage catalogue (phase 7D).
+     *
+     * <p>When true, real-player {@code BeveragePreparedEvent}s unlock the
+     * {@code item:*} entries of the two brewer categories (COMMON 18 / T2 46)
+     * in the Field Guide. Default true. No effect when Field Guide is not
+     * installed; the implementation classes are not loaded then.
+     */
+    public static final ModConfigSpec.BooleanValue FIELD_GUIDE_BREWER_ENABLED = BUILDER
+            .comment("Unlock Field Guide brewer beverage entries when a beverage",
+                    "is prepared (real player, non-automated).",
+                    "Independent of the chef cookbook and of Jobs+/Arc.",
+                    "Default true. No effect when Field Guide is not installed.")
+            .define("fieldGuideBrewerEnabled", true);
+
+    /**
      * Jobs+ dish-cooking experience rewards module.
      *
      * <p>Default OFF. Controls whether the {@code tcth:on_dish_cooked} Arc
@@ -105,6 +203,22 @@ public class Config {
             .comment("Enable the per-player cooking statistics archive.",
                     "Independent of jobsPlusRewardsEnabled and of Jobs+/Arc.")
             .define("cookingStatsEnabled", true);
+
+    /**
+     * Field Guide integration master switch.
+     *
+     * <p>Master switch for ALL TCTH → Field Guide unlocks (chef cookbook and
+     * brewer catalogue). When false, neither dish take-out nor beverage
+     * preparation unlocks any Field Guide entry. Independent of the Field
+     * Guide mod itself, of cooking/brewing statistics, and of Jobs+/Arc.
+     * Default true; no effect when Field Guide is not installed.
+     */
+    public static final ModConfigSpec.BooleanValue FIELD_GUIDE_ENABLED = BUILDER
+            .comment("Master switch for TCTH Field Guide unlocks (chef cookbook +",
+                    "brewer catalogue). When false, no dish or beverage unlock is",
+                    "sent to Field Guide. Default true. No effect when Field Guide",
+                    "is not installed.")
+            .define("fieldGuideEnabled", true);
 
     /**
      * Field Guide cookbook unlock module.

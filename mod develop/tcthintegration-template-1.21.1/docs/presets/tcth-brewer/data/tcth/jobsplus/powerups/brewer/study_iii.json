@@ -1,0 +1,9 @@
+{
+  "job": "tcth:brewer",
+  "icon": {
+    "id": "brewinandchewin:keg"
+  },
+  "price": 18,
+  "required_level": 75,
+  "parent": "tcth:brewer/study_ii"
+}
