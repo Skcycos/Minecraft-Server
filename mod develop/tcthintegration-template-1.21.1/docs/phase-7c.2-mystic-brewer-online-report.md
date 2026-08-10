@@ -64,6 +64,7 @@
 - J 键打开 Jobs+ GUI(需客户端安装同版 TCTH + AutoModpack 同步 0.2.3)。
 - `tcth:brewer` 显示「魔酿师 / Mystic Brewer」并成功加入。
 - 加入前等级 0 经验 0;`job debug` 服务器端确认 `tcth:brewer actions: 2`。
+- **勘误(2026-08-10,阶段 7F)**:本项 PASS 属间歇性误判。brew_common/brew_t2 当时已含 `tcth:brewer_rewards_enabled` / `tcth:beverage_tier` 两个 Serializer 漏写 inverted 的缺陷 condition(详见 `docs/phase-7f-jkey-gui-serialization-fix-report.md`),客户端 J 键 GUI 会随 `arc:clientbound_update_actions` 整包错位而间歇性打不开。修复后同结构全量数据(186 actions)实测稳定 PASS。
 
 ### 测试 B:Keg 单容器交付 ✅ PASS(修复后复测)
 - 玩家手持 1 空 tankard,从含啤酒的 Keg 灌装;啤酒替换手中。

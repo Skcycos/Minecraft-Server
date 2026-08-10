@@ -1,0 +1,35 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:brewer/tasting_basic"
+  },
+  "type": "arc:on_drink",
+  "rewards": [
+    {
+      "type": "tcth:brewer_tasting_effects",
+      "tier": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "arc:items",
+      "items": [
+        "#tcth:brewer_drinks"
+      ]
+    },
+    {
+      "type": "tcth:brewer_drink_cooldown"
+    },
+    {
+      "type": "tcth:brewer_tasting_abilities_enabled"
+    },
+    {
+      "type": "jobsplus:powerup_not_active",
+      "powerup": "tcth:brewer/tasting_adept"
+    },
+    {
+      "type": "jobsplus:powerup_not_active",
+      "powerup": "tcth:brewer/tasting_expert"
+    }
+  ]
+}

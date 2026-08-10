@@ -1,0 +1,168 @@
+{
+  "contents": [
+    {
+      "id": "item:bakeries/brown_sugar_latte",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/cream_bingle_coffee",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/iced_american",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/iced_latte",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/matcha_latte",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:bakeries/taro_milk",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:create/builders_tea",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/putrid_spice_latte",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/spider_bubble_tea",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:dungeonsdelight/taro_milk_tea",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:minecraft/honey_bottle",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/adzuki_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/banana_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/chocolate_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/mint_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/strawberry_banana_smoothie",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/strawberry_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:neapolitan/vanilla_milkshake",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    }
+  ],
+  "icon": "tcth:textures/gui/fieldguide/brew_common.png",
+  "sort_index": 4
+}

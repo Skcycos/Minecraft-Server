@@ -105,6 +105,7 @@ public class BrewerRewardsEnabledCondition extends AbstractCondition {
 
         @Override
         public void toNetwork(RegistryFriendlyByteBuf buf, BrewerRewardsEnabledCondition condition) {
+            IConditionSerializer.super.toNetwork(buf, condition);
         }
     }
 }

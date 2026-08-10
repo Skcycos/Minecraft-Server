@@ -368,7 +368,106 @@ h1, h2, h3, h4 { font-style: normal; }
   </div>
   <h1 class="masthead-title">更新日志</h1>
   <p class="masthead-sub">服务器模组扩充、TCTH 职业模组开发、客户端增强。按提交时间排列，最新在上。</p>
-</header>
+ </header>
+
+<!-- ============================================================
+     EDITION 43
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">43</span>
+    <div>
+      <h2 class="edition-title">魔酿师阶段收官：J 键 GUI 序列化修复与在线验收（0.2.6）</h2>
+      <p class="edition-meta">
+        <span>7F</span>
+        <span class="dot">·</span>
+        <span>08-10 20:41</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 缺陷修复 + 在线验收通过</span>
+
+    <div class="pull">修复 Jobs+/Arc 职业 GUI 间歇性打不开的序列化缺陷，版本升至 0.2.6；魔酿师四路线能力树与 Keg 调饮在线验收全部通过，魔酿师基础功能正式收官。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">J 键 GUI 修复</td><td>BrewerRewardsEnabledCondition / BeverageTierCondition 序列化漏写 inverted 布尔，导致含酒酿 action 的整包字节错位；修复后 186 条 action 全量加载正常</td></tr>
+        <tr><td class="mod-name">在线验收</td><td>Keg COMMON/T2 单次结算、/tcth brewer stats、图鉴解锁正负例、调饮/品鉴/耐受/研修四路线三档与高档互斥、品鉴 20s 冷却全部 PASS</td></tr>
+        <tr><td class="mod-name">版本</td><td>0.2.4（部署构建）→ 0.2.5（7E 正式提交）→ 0.2.6（本修复），110 suites / 867 tests 全绿</td></tr>
+      </tbody>
+    </table>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 42
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">42</span>
+    <div>
+      <h2 class="edition-title">魔酿师四路线能力树与饮品图鉴（0.2.5）</h2>
+      <p class="edition-meta">
+        <span>2914dc13</span>
+        <span class="dot">·</span>
+        <span>08-09 23:46</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 新功能</span>
+
+    <div class="pull">魔酿师统计档案、64 种饮品 tier 图鉴分类（18 COMMON / 46 T2）与四路线 12 节点能力树上线。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">调饮路线</td><td>调制分级饮品后速度 I 5s / 速度 I+幸运 I 8s / 12s（高档覆盖，不叠乘）</td></tr>
+        <tr><td class="mod-name">品鉴路线</td><td>饮用后生命恢复 I / +抗性提升 I / +速度 I 15s，共享 20 秒冷却</td></tr>
+        <tr><td class="mod-name">耐受路线</td><td>魔法/间接魔法/凋零伤害减免 10% / 20% / 35%（火、摔落不受影响）</td></tr>
+        <tr><td class="mod-name">研修路线</td><td>魔酿师经验 ×1.15 / ×1.35 / ×1.60（只取最高档）</td></tr>
+        <tr><td class="mod-name">统计与图鉴</td><td>/tcth brewer stats 档案、Field Guide 酒酿分类（18 + 46 条目）、Keg 交付解锁图鉴</td></tr>
+      </tbody>
+    </table>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 41
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">41</span>
+    <div>
+      <h2 class="edition-title">魔酿师职业上线：Keg 调饮与职业经验（0.2.3）</h2>
+      <p class="edition-meta">
+        <span>d8af56ca</span>
+        <span class="dot">·</span>
+        <span>08-09 21:21</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 新职业</span>
+
+    <div class="pull">第四职业「魔酿师（tcth:brewer）」正式上线：Keg 调饮事件、tier 分级与职业经验结算，在线验收通过。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">Keg 调饮</td><td>手持酒杯从 Keg 灌装，按饮品 tier 结算经验：COMMON +1~2、T2 +3~5，单次只结算一次</td></tr>
+        <tr><td class="mod-name">64 种饮品</td><td>beverage_tiers 全量分级（18 COMMON / 46 T2），覆盖啤酒、蜂蜜、奶昔、咖啡等</td></tr>
+        <tr><td class="mod-name">Arc 联动</td><td>tcth:on_beverage_prepared 动作、beverage_tier / brewer_rewards_enabled 条件与职业经验奖励</td></tr>
+        <tr><td class="mod-name">在线验收</td><td>Keg 单容器/多容器/背包满掉落三交付分支与 COMMON 档补验全部 PASS</td></tr>
+      </tbody>
+    </table>
+  </div>
+</article>
 
 <!-- ============================================================
      EDITION 43

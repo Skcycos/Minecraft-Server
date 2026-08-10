@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 7F — J-key job GUI fix (Arc condition network serialization)
+
+- Fixed client-side job GUI crash (`ResourceLocationException` on
+  `arc:clientbound_update_actions`): `BrewerRewardsEnabledCondition` and
+  `BeverageTierCondition` serializers omitted the `inverted` boolean that
+  Arc's network reader always expects, shifting every condition's byte
+  stream by 1 byte whenever brew_common/brew_t2 actions were loaded
+  (intermittent historical issue, now stable-reproduced under version
+  isolation + full 186-action datapack).
+- Both serializers now call `IConditionSerializer.super.toNetwork` before
+  writing their own data, restoring strict read/write symmetry for all 14
+  TCTH conditions; verified via javap on the deployed JAR.
+- Version bump 0.2.5 → 0.2.6.
+- Brewer live acceptance (phase 7F) PASSED on 0.2.6: Keg COMMON/T2 single
+  settlement, `/tcth brewer stats`, Field Guide unlock (give/pickup/drink
+  never unlocks, Keg delivery does), brewing/tasting/resistance/study tier
+  I–III effects with highest-tier-only stacking, tasting 20s cooldown,
+  resistance negative cases; see docs/phase-7f-brewer-online-report.md.
+- Version history note (7F.1): 0.2.4 (7D.1/7E deployment build, not
+  committed) → 0.2.5 (7D.1/7E official commit 2914dc13) → 0.2.6 (7F fix).
+  7F.1 clean build: 110 suites / 867 tests / 0 failures;
+  JAR SHA-256 `6bcbf7c15a6aa78827c4fc5366a7a8381d284321152cf45f0909a1a2879cee9d`
+  (415,740 B), identical to the deployed Server/mods copy.
+
 ### 7E — brewer ability tree (brewing / tasting / resistance / study)
 
 - Added the four-route Mystic Brewer ability tree with 12 powerup nodes.

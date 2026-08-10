@@ -78,6 +78,7 @@ public class BeverageTierCondition extends AbstractCondition {
 
         @Override
         public void toNetwork(RegistryFriendlyByteBuf buf, BeverageTierCondition condition) {
+            IConditionSerializer.super.toNetwork(buf, condition);
             buf.writeUtf(condition.tier);
         }
     }

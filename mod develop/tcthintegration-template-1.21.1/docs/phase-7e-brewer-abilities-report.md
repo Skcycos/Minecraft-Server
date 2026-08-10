@@ -165,6 +165,7 @@ brewerDrinkCooldownTicks = 400            # 品鉴共享冷却(20 s)
 
 ## 九、PLAYER LIVE NOT TESTED
 
+- **补记(2026-08-10,阶段 7F)**:四路线在线验收已完成,全部 PASS(调饮/品鉴/耐受/研修三档、高档互斥、品鉴 20s 冷却、耐受负例、研修不叠乘),详见 `docs/phase-7f-brewer-online-report.md`。
 - 四路线效果(调饮/品鉴/耐受/研修)均为运行时行为,本阶段未在线玩家验收。
 - 逻辑均由单元测试覆盖;部署后需按后续阶段做在线玩家验证:
   - 调饮:真实调制后速度/幸运效果与时长。
@@ -188,6 +189,6 @@ brewerDrinkCooldownTicks = 400            # 品鉴共享冷却(20 s)
 
 ## 十二、阶段结论
 
-**BUILD PASS(110 suites / 867 tests / 0 failures);PLAYER LIVE NOT TESTED。**
+**BUILD PASS(110 suites / 867 tests / 0 failures);PLAYER LIVE NOT TESTED(7F 已补在线验收,全部 PASS,见 `docs/phase-7f-brewer-online-report.md`)。**
 
 魔酿师四路线能力树的代码/数据/测试已完成;以服务器实际 JAR 的 javap 为权威审计了 `arc:on_drink`(完成触发/取消不触发)、`DamageTypes`(魔法/间接魔法/凋零可可靠识别,毒无独立类型)、`on_job_exp`+`job_exp_multiplier`;复用厨师/枪客能力树架构,公共 API 零第三方引用,Jobs+/Arc 缺失时不解析实现类;配置 fail-closed + 60s 节流;12 powerup 保留 parent/required_level/price 且用 `powerup_not_active` 保证每路线只生效最高档。本阶段不部署、不启动服务器、不烟雾、不在线测试,等待复审。
