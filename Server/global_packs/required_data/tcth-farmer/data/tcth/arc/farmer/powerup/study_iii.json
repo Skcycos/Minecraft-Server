@@ -1,0 +1,19 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:farmer/study_iii"
+  },
+  "type": "jobsplus:on_job_exp",
+  "rewards": [
+    {
+      "type": "jobsplus:job_exp_multiplier",
+      "job": "tcth:farmer",
+      "multiplier": 1.6
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tcth:farmer_study_abilities_enabled"
+    }
+  ]
+}

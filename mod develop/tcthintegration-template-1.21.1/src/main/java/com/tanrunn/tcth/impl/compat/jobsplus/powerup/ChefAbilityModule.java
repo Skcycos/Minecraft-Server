@@ -7,6 +7,7 @@ import com.daqem.jobsplus.player.job.Job;
 import com.daqem.jobsplus.player.job.powerup.JobPowerupManager;
 import com.daqem.jobsplus.player.job.powerup.Powerup;
 import com.daqem.jobsplus.player.job.powerup.PowerupState;
+import com.tanrunn.tcth.Config;
 import com.tanrunn.tcth.TCTHIntegration;
 
 import net.minecraft.server.level.ServerPlayer;
@@ -68,9 +69,12 @@ public final class ChefAbilityModule extends ChefPowerupAccess {
             boolean iii = isActive(powerupManager, route.nodeLocation(route.nodeIII()));
             return highestActive(i, ii, iii);
         } catch (RuntimeException | LinkageError e) {
-            // Isolated: a broken query must never interrupt a tick.
-            TCTHIntegration.LOGGER.warn("[TCTH] Chef powerup query failed for route {}: {}",
-                    route, e.toString());
+            // Isolated: a broken query must never interrupt a tick; the warn is
+            // throttled (60 s) because this path runs inside the per-durability
+            // mixin — a persistent failure would otherwise spam the log on
+            // every tool use.
+            warnThrottled(LAST_POWERUP_QUERY_WARN_NANOS,
+                    "[TCTH] Chef powerup query failed for route " + route + ": " + e);
             return ChefPowerupTier.NONE;
         }
     }
@@ -85,13 +89,117 @@ public final class ChefAbilityModule extends ChefPowerupAccess {
         return powerup.map(p -> p.getState() == PowerupState.ACTIVE).orElse(false);
     }
 
+    // ---- knife route (durability skip, Java-driven since 4C) ----
+
+    /** The {@code #c:tools/knife} tag provided by Farmer's Delight etc. */
+    public static final net.minecraft.tags.TagKey<net.minecraft.world.item.Item> KNIVES_TAG =
+            net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM,
+                    net.minecraft.resources.ResourceLocation.parse("c:tools/knife"));
+
+    /** Skip-durability chance percent per tier (10 / 20 / 35). */
+    public static int knifeChancePct(ChefPowerupTier tier) {
+        return switch (tier) {
+            case I -> 10;
+            case II -> 20;
+            case III -> 35;
+            case NONE -> 0;
+        };
+    }
+
+    /** Random percent source; injectable for tests (0..99). */
+    private static java.util.function.IntSupplier randomPctSupplier =
+            () -> net.minecraft.util.RandomSource.create().nextInt(100);
+
+    /** Knife-route gate: framework + chef master + knife route switches, fail-closed. */
+    private static java.util.function.BooleanSupplier knifeEnabledSupplier =
+            ChefAbilityModule::defaultKnifeEnabled;
+
+    private static final long WARN_THROTTLE_NS = 60_000_000_000L; // 60 s
+    private static final java.util.concurrent.atomic.AtomicLong LAST_POWERUP_QUERY_WARN_NANOS =
+            new java.util.concurrent.atomic.AtomicLong(0L);
+    private static final java.util.concurrent.atomic.AtomicLong LAST_KNIFE_HANDLER_WARN_NANOS =
+            new java.util.concurrent.atomic.AtomicLong(0L);
+
+    private static boolean defaultKnifeEnabled() {
+        return Config.ENABLED.get()
+                && Config.CHEF_ABILITIES_ENABLED.get()
+                && Config.KNIFE_DURABILITY_ABILITIES_ENABLED.get();
+    }
+
+    public static boolean knifeEnabled() {
+        try {
+            return knifeEnabledSupplier.getAsBoolean();
+        } catch (RuntimeException | LinkageError e) {
+            warnThrottled(LAST_KNIFE_HANDLER_WARN_NANOS,
+                    "[TCTH] Knife toggle config read failed; abilities fail-closed (disabled): " + e);
+            return false;
+        }
+    }
+
+    /**
+     * Whether this durability loss should be skipped for the player's knife.
+     * Same NeoForge-21.1 rationale as the farmer tilling mixin (see
+     * {@code ItemStackDurabilityMixin}): the Arc data-driven knife route
+     * ({@code arc:on_hurt_item}) never fires because Arc injects the unused
+     * ServerPlayer wrapper overload.
+     */
+    public static boolean shouldSkipKnifeDurability(ServerPlayer player, net.minecraft.world.item.ItemStack stack) {
+        if (!knifeEnabled()) {
+            return false;
+        }
+        if (player == null || stack == null || stack.isEmpty()) {
+            return false;
+        }
+        if (!stack.is(KNIVES_TAG)) {
+            return false; // never affects non-knives
+        }
+        if (player.getAbilities() != null && player.getAbilities().instabuild) {
+            return false;
+        }
+        try {
+            ChefPowerupTier tier = INSTANCE.highestActiveTier(player, ChefAbilityRoute.KNIFE);
+            int pct = knifeChancePct(tier);
+            if (pct <= 0) {
+                return false;
+            }
+            return randomPctSupplier.getAsInt() < pct;
+        } catch (RuntimeException | LinkageError e) {
+            warnThrottled(LAST_KNIFE_HANDLER_WARN_NANOS,
+                    "[TCTH] Chef knife durability query failed: " + e);
+            return false; // fail-closed: never skip on a broken query
+        }
+    }
+
+    /** 60-second warn throttle for the per-durability mixin path (see farmer). */
+    static void warnThrottled(java.util.concurrent.atomic.AtomicLong lastNanos, String message) {
+        long now = System.nanoTime();
+        long last = lastNanos.get();
+        if (last != 0L && now - last < WARN_THROTTLE_NS) {
+            return;
+        }
+        lastNanos.set(now);
+        TCTHIntegration.LOGGER.warn(message);
+    }
+
     // ---- test hooks ----
 
     static void setPowerupResolverForTesting(PowerupInstanceResolver resolver) {
         INSTANCE.powerupResolver = resolver;
     }
 
+    static void setRandomPctForTesting(java.util.function.IntSupplier supplier) {
+        randomPctSupplier = supplier;
+    }
+
+    static void setKnifeEnabledSupplierForTesting(java.util.function.BooleanSupplier supplier) {
+        knifeEnabledSupplier = supplier;
+    }
+
     static void resetForTesting() {
         INSTANCE.powerupResolver = PowerupInstance::of;
+        randomPctSupplier = () -> net.minecraft.util.RandomSource.create().nextInt(100);
+        knifeEnabledSupplier = ChefAbilityModule::defaultKnifeEnabled;
+        LAST_POWERUP_QUERY_WARN_NANOS.set(0L);
+        LAST_KNIFE_HANDLER_WARN_NANOS.set(0L);
     }
 }

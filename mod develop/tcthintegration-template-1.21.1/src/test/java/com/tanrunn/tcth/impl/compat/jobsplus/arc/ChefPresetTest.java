@@ -303,6 +303,9 @@ class ChefPresetTest {
             JsonObject ui = preset("jobsplus/powerups/chef/" + id + ".json");
             assertNull(ui.get("name"), "UI powerup must not embed name: " + id);
             assertNull(ui.get("description"), "UI powerup must not embed description: " + id);
+            if (id.startsWith("knife_")) {
+                continue; // knife route is Java-driven since 4C: no arc file
+            }
             JsonObject arc = preset("arc/chef/powerup/" + id + ".json");
             assertNull(arc.get("name"));
             assertNull(arc.get("description"));

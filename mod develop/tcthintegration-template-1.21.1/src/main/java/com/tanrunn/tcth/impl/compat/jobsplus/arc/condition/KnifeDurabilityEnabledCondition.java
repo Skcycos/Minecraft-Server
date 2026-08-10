@@ -17,7 +17,13 @@ import net.minecraft.network.chat.Component;
  * }</pre>
  *
  * <p>Reads {@code enabled} and {@code knifeDurabilityAbilitiesEnabled}.
+ *
+ * @deprecated since 4C — kept registered for data compatibility only. The
+ * knife route is Java-driven via {@code ItemStackDurabilityMixin}
+ * ({@code arc:on_hurt_item} never fires on NeoForge 21.1.247); no current
+ * datapack action references this condition. Do not use in new data.
  */
+@Deprecated
 public class KnifeDurabilityEnabledCondition extends RouteEnabledCondition {
 
     private static BooleanSupplier masterSupplier = KnifeDurabilityEnabledCondition::defaultMaster;

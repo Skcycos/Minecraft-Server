@@ -94,6 +94,10 @@ class ChefAbilityTreePresetTest {
                 JsonObject ui = preset("jobsplus/powerups/chef/" + node + ".json");
                 assertNotNull(ui, "powerup " + node + " must exist");
                 assertEquals("tcth:chef", ui.get("job").getAsString(), node);
+                if ("knife".equals(route.getKey())) {
+                    // Java-driven since 4C: no arc powerup file for the knife route.
+                    continue;
+                }
                 JsonObject arc = preset("arc/chef/powerup/" + node + ".json");
                 assertNotNull(arc, "arc action " + node + " must exist");
                 assertEquals("jobsplus:powerup", arc.getAsJsonObject("holder").get("type").getAsString(), node);
@@ -161,6 +165,9 @@ class ChefAbilityTreePresetTest {
     @Test
     void eachRouteIExcludesIIAndIII() throws Exception {
         for (Map.Entry<String, String[]> route : ROUTES.entrySet()) {
+            if ("knife".equals(route.getKey())) {
+                continue; // Java-driven route has no arc powerup files
+            }
             String[] nodes = route.getValue();
             JsonObject i = preset("arc/chef/powerup/" + nodes[0] + ".json");
             List<String> excluded = excludedPowerups(i);
@@ -172,6 +179,9 @@ class ChefAbilityTreePresetTest {
     @Test
     void eachRouteIIExcludesIIIOnly() throws Exception {
         for (Map.Entry<String, String[]> route : ROUTES.entrySet()) {
+            if ("knife".equals(route.getKey())) {
+                continue; // Java-driven route has no arc powerup files
+            }
             String[] nodes = route.getValue();
             JsonObject ii = preset("arc/chef/powerup/" + nodes[1] + ".json");
             List<String> excluded = excludedPowerups(ii);
@@ -182,6 +192,9 @@ class ChefAbilityTreePresetTest {
     @Test
     void eachRouteIIINeverExcludesAnything() throws Exception {
         for (Map.Entry<String, String[]> route : ROUTES.entrySet()) {
+            if ("knife".equals(route.getKey())) {
+                continue; // Java-driven route has no arc powerup files
+            }
             String[] nodes = route.getValue();
             JsonObject iii = preset("arc/chef/powerup/" + nodes[2] + ".json");
             assertTrue(excludedPowerups(iii).isEmpty(), route.getKey() + " III must not exclude higher nodes");
@@ -213,20 +226,19 @@ class ChefAbilityTreePresetTest {
         }
     }
 
-    // ---- 刀工 ----
+    // ---- 刀工（Java 驱动 mixin，无 arc 文件，4C 修复） ----
 
     @Test
-    void knifeCancelsAt10_20_35WithKnifeTag() throws Exception {
+    void knifeRouteIsJavaDrivenWithoutArcPowerup() throws Exception {
         String[] nodes = ROUTES.get("knife");
-        double[] chances = {10, 20, 35};
-        for (int i = 0; i < 3; i++) {
-            JsonObject arc = preset("arc/chef/powerup/" + nodes[i] + ".json");
-            assertEquals("arc:on_hurt_item", arc.get("type").getAsString());
-            JsonObject reward = arc.getAsJsonArray("rewards").get(0).getAsJsonObject();
-            assertEquals("arc:cancel_action", reward.get("type").getAsString());
-            assertEquals(chances[i], reward.get("chance").getAsDouble(), 0.0001, nodes[i]);
-            assertTrue(arc.toString().contains("#c:tools/knife"), nodes[i] + " must target #c:tools/knife");
-            assertTrue(conditions(arc).contains("tcth:knife_durability_enabled"), nodes[i]);
+        for (String node : nodes) {
+            assertTrue(preset("jobsplus/powerups/chef/" + node + ".json") != null,
+                    node + " powerup must exist");
+            // Knife durability skip is Java-driven via ItemStackDurabilityMixin
+            // (Arc on_hurt_item targets the unused NeoForge ServerPlayer wrapper);
+            // no arc powerup file.
+            assertFalse(Files.exists(Path.of(PRESET, "arc/chef/powerup/" + node + ".json")),
+                    node + " must NOT carry an arc powerup file");
         }
     }
 

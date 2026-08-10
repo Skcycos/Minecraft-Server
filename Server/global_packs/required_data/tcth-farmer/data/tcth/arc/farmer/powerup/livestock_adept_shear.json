@@ -1,0 +1,51 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:farmer/livestock_adept"
+  },
+  "type": "arc:on_interact_entity",
+  "rewards": [
+    {
+      "type": "tcth:farmer_livestock_effects",
+      "tier": 2
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tcth:farmer_livestock_abilities_enabled"
+    },
+    {
+      "type": "tcth:farmer_livestock_cooldown"
+    },
+    {
+      "type": "arc:entity_type",
+      "entity_type": "minecraft:sheep"
+    },
+    {
+      "type": "arc:ready_for_shearing"
+    },
+    {
+      "type": "arc:or",
+      "conditions": [
+        {
+          "type": "arc:item_in_hand",
+          "hand": "MAIN_HAND",
+          "item": {
+            "id": "minecraft:shears"
+          }
+        },
+        {
+          "type": "arc:item_in_hand",
+          "hand": "OFF_HAND",
+          "item": {
+            "id": "minecraft:shears"
+          }
+        }
+      ]
+    },
+    {
+      "type": "jobsplus:powerup_not_active",
+      "powerup": "tcth:farmer/livestock_expert"
+    }
+  ]
+}
