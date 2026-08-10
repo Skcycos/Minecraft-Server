@@ -22,10 +22,15 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FireResistanceEnabled
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunKillDistanceCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunTargetTierCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.GunnerRewardsEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerLivestockAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerLivestockCooldownCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerStudyAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.HoeDurabilityEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.KnifeDurabilityEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingCooldownCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingEffectsEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.BrewerTastingEffectsReward;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.FarmerLivestockEffectsReward;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsReward;
 
 import net.minecraft.core.Registry;
@@ -144,6 +149,24 @@ public final class TcthArcRegistrar {
     public static final IRewardType<BrewerTastingEffectsReward> BREWER_TASTING_EFFECTS =
             RewardType.register(id("brewer_tasting_effects"), new BrewerTastingEffectsReward.Serializer());
 
+    // ---- phase 4B: farmer ability-tree condition types ----
+    public static final ConditionType<HoeDurabilityEnabledCondition> HOE_DURABILITY_ENABLED_CONDITION =
+            ConditionType.register(id("hoe_durability_enabled"),
+                    new HoeDurabilityEnabledCondition.Serializer());
+    public static final ConditionType<FarmerStudyAbilitiesEnabledCondition> FARMER_STUDY_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("farmer_study_abilities_enabled"),
+                    new FarmerStudyAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<FarmerLivestockAbilitiesEnabledCondition> FARMER_LIVESTOCK_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("farmer_livestock_abilities_enabled"),
+                    new FarmerLivestockAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<FarmerLivestockCooldownCondition> FARMER_LIVESTOCK_COOLDOWN_CONDITION =
+            ConditionType.register(id("farmer_livestock_cooldown"),
+                    new FarmerLivestockCooldownCondition.Serializer());
+
+    // ---- phase 4B: farmer ability-tree reward type ----
+    public static final IRewardType<FarmerLivestockEffectsReward> FARMER_LIVESTOCK_EFFECTS =
+            RewardType.register(id("farmer_livestock_effects"), new FarmerLivestockEffectsReward.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -199,6 +222,13 @@ public final class TcthArcRegistrar {
         checkInRegistry(ArcRegistry.CONDITION, id("brewer_tasting_abilities_enabled"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("brewer_drink_cooldown"), "condition type");
         checkInRegistry(ArcRegistry.REWARD, id("brewer_tasting_effects"), "reward type");
+
+        // Phase 4B: farmer ability-tree condition types and reward type.
+        checkInRegistry(ArcRegistry.CONDITION, id("hoe_durability_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("farmer_study_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("farmer_livestock_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("farmer_livestock_cooldown"), "condition type");
+        checkInRegistry(ArcRegistry.REWARD, id("farmer_livestock_effects"), "reward type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

@@ -1,0 +1,9 @@
+{
+  "job": "tcth:farmer",
+  "icon": {
+    "id": "minecraft:experience_bottle"
+  },
+  "price": 18,
+  "required_level": 75,
+  "parent": "tcth:farmer/study_ii"
+}

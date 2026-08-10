@@ -1,0 +1,9 @@
+{
+  "job": "tcth:farmer",
+  "icon": {
+    "id": "minecraft:honey_bottle"
+  },
+  "price": 18,
+  "required_level": 55,
+  "parent": "tcth:farmer/livestock_adept"
+}

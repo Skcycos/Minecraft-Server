@@ -1,0 +1,9 @@
+{
+  "job": "tcth:farmer",
+  "icon": {
+    "id": "minecraft:enchanted_book"
+  },
+  "price": 12,
+  "required_level": 50,
+  "parent": "tcth:farmer/study_i"
+}

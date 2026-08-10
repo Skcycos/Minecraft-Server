@@ -1,0 +1,9 @@
+{
+  "job": "tcth:farmer",
+  "icon": {
+    "id": "minecraft:diamond_hoe"
+  },
+  "price": 18,
+  "required_level": 45,
+  "parent": "tcth:farmer/tilling_adept"
+}

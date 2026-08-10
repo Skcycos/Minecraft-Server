@@ -1,0 +1,21 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:farmer/livestock_expert"
+  },
+  "type": "arc:on_breed_animal",
+  "rewards": [
+    {
+      "type": "tcth:farmer_livestock_effects",
+      "tier": 3
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tcth:farmer_livestock_abilities_enabled"
+    },
+    {
+      "type": "tcth:farmer_livestock_cooldown"
+    }
+  ]
+}

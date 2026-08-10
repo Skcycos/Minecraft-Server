@@ -1,11 +1,14 @@
 package com.tanrunn.tcth.impl.compat.jobsplus.powerup;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Optional;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -33,6 +36,11 @@ class ChefAbilityModuleTest {
     @BeforeAll
     static void bootstrapMinecraft() {
         MinecraftTestBootstrap.bootStrap();
+    }
+
+    @BeforeEach
+    void setUp() {
+        ChefAbilityModule.setKnifeEnabledSupplierForTesting(() -> true);
     }
 
     @AfterEach
@@ -117,5 +125,137 @@ class ChefAbilityModuleTest {
                 .thenThrow(new IllegalStateException("jobsplus data corrupt"));
         assertEquals(ChefPowerupTier.NONE,
                 ChefAbilityModule.instance().highestActiveTier(Mockito.mock(ServerPlayer.class), ChefAbilityRoute.HEARTH));
+    }
+
+    // ---- knife route durability skip (Java-driven since 4C) ----
+
+    @Test
+    void knifeChancePctMatchesSpec() {
+        assertEquals(10, ChefAbilityModule.knifeChancePct(ChefPowerupTier.I));
+        assertEquals(20, ChefAbilityModule.knifeChancePct(ChefPowerupTier.II));
+        assertEquals(35, ChefAbilityModule.knifeChancePct(ChefPowerupTier.III));
+        assertEquals(0, ChefAbilityModule.knifeChancePct(ChefPowerupTier.NONE));
+    }
+
+    @Test
+    void knifeTagIsCToolsKnife() {
+        assertEquals("c", ChefAbilityModule.KNIVES_TAG.location().getNamespace());
+        assertEquals("tools/knife", ChefAbilityModule.KNIVES_TAG.location().getPath());
+    }
+
+    @Test
+    void knifeSkipsOnlyOnTaggedToolsAndActiveTier() {
+        ServerPlayer player = Mockito.mock(ServerPlayer.class,
+                Mockito.withSettings().extraInterfaces(JobsServerPlayer.class));
+        Mockito.when(player.getUUID()).thenReturn(java.util.UUID.randomUUID());
+        net.minecraft.world.entity.player.Abilities abilities = Mockito.mock(net.minecraft.world.entity.player.Abilities.class);
+        Mockito.when(player.getAbilities()).thenReturn(abilities);
+        JobsServerPlayer jobsPlayer = (JobsServerPlayer) player;
+        Job job = Mockito.mock(Job.class);
+        JobPowerupManager manager = Mockito.mock(JobPowerupManager.class);
+        Mockito.when(job.getPowerupManager()).thenReturn(manager);
+        Mockito.when(jobsPlayer.jobsplus$getJob(JobInstance.of(ChefPowerupAccess.CHEF_JOB))).thenReturn(job);
+        ChefAbilityModule.setPowerupResolverForTesting(ChefAbilityModuleTest::instanceOf);
+        Mockito.when(manager.getPowerup(Mockito.any())).thenAnswer(invocation -> {
+            PowerupInstance instance = invocation.getArgument(0);
+            return Optional.ofNullable(STATES.get(instance.getLocation().getPath()))
+                    .map(state -> {
+                        Powerup p = Mockito.mock(Powerup.class);
+                        Mockito.when(p.getState()).thenReturn(state);
+                        return p;
+                    });
+        });
+        STATES.put("chef/knife_basic", PowerupState.ACTIVE);
+        ChefAbilityModule.setRandomPctForTesting(() -> 0); // always hit
+
+        ItemStack knife = Mockito.mock(ItemStack.class);
+        Mockito.when(knife.isEmpty()).thenReturn(false);
+        Mockito.when(knife.is(ChefAbilityModule.KNIVES_TAG)).thenReturn(true);
+        assertTrue(ChefAbilityModule.shouldSkipKnifeDurability(player, knife),
+                "knife (in #c:tools/knife) with active tier must skip");
+
+        ItemStack sword = Mockito.mock(ItemStack.class);
+        Mockito.when(sword.isEmpty()).thenReturn(false);
+        Mockito.when(sword.is(ChefAbilityModule.KNIVES_TAG)).thenReturn(false);
+        assertFalse(ChefAbilityModule.shouldSkipKnifeDurability(player, sword),
+                "non-knife items must never skip");
+
+        assertFalse(ChefAbilityModule.shouldSkipKnifeDurability(player, ItemStack.EMPTY));
+        assertFalse(ChefAbilityModule.shouldSkipKnifeDurability(null, knife));
+        ChefAbilityModule.resetForTesting();
+        STATES.clear();
+    }
+
+    @Test
+    void knifeSkipsOnlyWithinChanceWindow() {
+        ServerPlayer player = Mockito.mock(ServerPlayer.class,
+                Mockito.withSettings().extraInterfaces(JobsServerPlayer.class));
+        Mockito.when(player.getUUID()).thenReturn(java.util.UUID.randomUUID());
+        net.minecraft.world.entity.player.Abilities abilities = Mockito.mock(net.minecraft.world.entity.player.Abilities.class);
+        Mockito.when(player.getAbilities()).thenReturn(abilities);
+        JobsServerPlayer jobsPlayer = (JobsServerPlayer) player;
+        Job job = Mockito.mock(Job.class);
+        JobPowerupManager manager = Mockito.mock(JobPowerupManager.class);
+        Mockito.when(job.getPowerupManager()).thenReturn(manager);
+        Mockito.when(jobsPlayer.jobsplus$getJob(JobInstance.of(ChefPowerupAccess.CHEF_JOB))).thenReturn(job);
+        ChefAbilityModule.setPowerupResolverForTesting(ChefAbilityModuleTest::instanceOf);
+        Mockito.when(manager.getPowerup(Mockito.any())).thenAnswer(invocation -> {
+            PowerupInstance instance = invocation.getArgument(0);
+            return Optional.ofNullable(STATES.get(instance.getLocation().getPath()))
+                    .map(state -> {
+                        Powerup p = Mockito.mock(Powerup.class);
+                        Mockito.when(p.getState()).thenReturn(state);
+                        return p;
+                    });
+        });
+        STATES.put("chef/knife_expert", PowerupState.ACTIVE);
+        ItemStack knife = Mockito.mock(ItemStack.class);
+        Mockito.when(knife.isEmpty()).thenReturn(false);
+        Mockito.when(knife.is(ChefAbilityModule.KNIVES_TAG)).thenReturn(true);
+        // 35%: 0..34 skip, 35..99 don't.
+        ChefAbilityModule.setRandomPctForTesting(() -> 34);
+        assertTrue(ChefAbilityModule.shouldSkipKnifeDurability(player, knife));
+        ChefAbilityModule.setRandomPctForTesting(() -> 35);
+        assertFalse(ChefAbilityModule.shouldSkipKnifeDurability(player, knife));
+        ChefAbilityModule.resetForTesting();
+        STATES.clear();
+    }
+
+    // ---- 日志节流（4C.1：60 秒，防止高频耐久链刷日志） ----
+
+    @Test
+    void warnThrottleIsSixtySeconds() throws Exception {
+        java.lang.reflect.Field f = ChefAbilityModule.class.getDeclaredField("WARN_THROTTLE_NS");
+        f.setAccessible(true);
+        assertEquals(Long.valueOf(60_000_000_000L), Long.valueOf(f.getLong(null)),
+                "ChefAbilityModule warn throttle must be 60 s");
+    }
+
+    @Test
+    void repeatedFailuresStayFailClosedAcrossThrottleWindow() {
+        ServerPlayer player = Mockito.mock(ServerPlayer.class,
+                Mockito.withSettings().extraInterfaces(JobsServerPlayer.class));
+        Mockito.when(player.getUUID()).thenReturn(java.util.UUID.randomUUID());
+        net.minecraft.world.entity.player.Abilities abilities = Mockito.mock(net.minecraft.world.entity.player.Abilities.class);
+        Mockito.when(player.getAbilities()).thenReturn(abilities);
+        JobsServerPlayer jobsPlayer = (JobsServerPlayer) player;
+        Job job = Mockito.mock(Job.class);
+        JobPowerupManager manager = Mockito.mock(JobPowerupManager.class);
+        Mockito.when(job.getPowerupManager()).thenReturn(manager);
+        Mockito.when(jobsPlayer.jobsplus$getJob(JobInstance.of(ChefPowerupAccess.CHEF_JOB))).thenReturn(job);
+        ChefAbilityModule.setPowerupResolverForTesting(ChefAbilityModuleTest::instanceOf);
+        Mockito.when(manager.getPowerup(Mockito.any()))
+                .thenThrow(new IllegalStateException("jobsplus data corrupt"));
+        ChefAbilityModule.setKnifeEnabledSupplierForTesting(() -> true);
+        ItemStack knife = Mockito.mock(ItemStack.class);
+        Mockito.when(knife.isEmpty()).thenReturn(false);
+        Mockito.when(knife.is(ChefAbilityModule.KNIVES_TAG)).thenReturn(true);
+        // Many evaluations within one throttle window: still fail-closed every time.
+        for (int i = 0; i < 100; i++) {
+            assertFalse(ChefAbilityModule.shouldSkipKnifeDurability(player, knife),
+                    "repeated failures must stay fail-closed");
+        }
+        ChefAbilityModule.resetForTesting();
+        STATES.clear();
     }
 }

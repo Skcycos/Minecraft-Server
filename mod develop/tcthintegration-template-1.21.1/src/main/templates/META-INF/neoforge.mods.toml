@@ -89,6 +89,15 @@ requiredMods=["dungeonsdelight"]
 config="brewinandchewin_compat.mixins.json"
 requiredMods=["brewinandchewin"]
 
+# Farmer tilling-route durability mixin (phase 4B/4C). Injects the real
+# ItemStack.hurtAndBreak(ServerLevel, LivingEntity, Consumer) overload that
+# NeoForge 21.1 uses (Arc's on_hurt_item targets the unused ServerPlayer
+# wrapper). Requires Jobs+ for the powerup tier query; skipped entirely when
+# Jobs+ is absent so the mixin class is never resolved.
+[[mixins]]
+config="tcth_farmer_abilities.mixins.json"
+requiredMods=["jobsplus"]
+
 # Scorched Guns Niami arrow birth-registration mixin (phase 5A.1). Only applied
 # when Scorched Guns is installed; never falls back to a heuristic.
 [[mixins]]

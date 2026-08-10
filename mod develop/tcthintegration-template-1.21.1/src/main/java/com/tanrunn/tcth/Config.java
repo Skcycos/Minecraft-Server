@@ -348,6 +348,95 @@ public class Config {
                     "Default off. Enable only after live player verification.")
             .define("farmerRewardsEnabled", false);
 
+    // ---- phase 4B: farmer ability routes ----
+
+    /**
+     * Master switch for the four farmer ability routes (tilling / harvest /
+     * livestock / study). When false, no farmer ability has any effect.
+     * Does not delete purchased powerups and does not affect the Jobs+ GUI.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_ABILITIES_ENABLED = BUILDER
+            .comment("Master switch for the farmer ability tree (4 routes).",
+                    "When false, no farmer ability takes effect.",
+                    "Does not delete purchased powerups and does not affect the Jobs+ GUI.",
+                    "Default: true.")
+            .define("farmerAbilitiesEnabled", true);
+
+    /**
+     * Tilling route: chance to skip hoe durability loss on break/use of a
+     * {@code #minecraft:hoes} tool (10% / 20% / 35%). Requires
+     * {@link #FARMER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue TILLING_DURABILITY_ABILITIES_ENABLED = BUILDER
+            .comment("Tilling route: chance to skip durability loss on #minecraft:hoes",
+                    "tools 10% / 20% / 35%. Requires farmerAbilitiesEnabled.",
+                    "Never repairs, copies or affects non-hoe items.",
+                    "Default: true.")
+            .define("tillingDurabilityAbilitiesEnabled", true);
+
+    /**
+     * Harvest route: a real successful {@code CropHarvestedEvent} grants
+     * short status effects I: Haste I 5 s; II: Haste I + Speed I 8 s;
+     * III: Haste I + Speed I 12 s. Higher tier overwrites, never stacks;
+     * automated / fake-player / immature / failed harvests never trigger;
+     * shared 10 s cooldown committed only on success.
+     * Requires {@link #FARMER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_HARVEST_ABILITIES_ENABLED = BUILDER
+            .comment("Harvest route: real CropHarvestedEvent grants short effects",
+                    "I: Haste I 5s; II: Haste I + Speed I 8s; III: Haste I + Speed I 12s.",
+                    "Higher tier overwrites, never stacks; automated/fake/immature",
+                    "harvests never trigger; shared 10s cooldown, success-driven.",
+                    "Requires farmerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("farmerHarvestAbilitiesEnabled", true);
+
+    /**
+     * Livestock route: successful breeding, taming or shearing grants
+     * I: Regeneration I 5 s; II: Regeneration I 5 s + Resistance I 8 s;
+     * III: Regeneration I 5 s + Resistance I 8 s + Speed I 15 s. Shared 20 s
+     * cooldown; failed operations, non-player actors and mechanical paths
+     * never trigger. Requires {@link #FARMER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_LIVESTOCK_ABILITIES_ENABLED = BUILDER
+            .comment("Livestock route: breeding/taming/shearing grants short effects",
+                    "I: Regeneration I 5s; II: + Resistance I 8s; III: + Speed I 15s.",
+                    "Shared 20s cooldown; failed ops, non-player actors and",
+                    "mechanical paths never trigger.",
+                    "Requires farmerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("farmerLivestockAbilitiesEnabled", true);
+
+    /**
+     * Farmer-study route: tcth:farmer job experience multiplier
+     * (×1.15 / ×1.35 / ×1.60). Requires {@link #FARMER_ABILITIES_ENABLED}.
+     */
+    public static final ModConfigSpec.BooleanValue FARMER_STUDY_ABILITIES_ENABLED = BUILDER
+            .comment("Farmer-study route: tcth:farmer job experience",
+                    "×1.15 / ×1.35 / ×1.60. Requires farmerAbilitiesEnabled.",
+                    "Default: true.")
+            .define("farmerStudyAbilitiesEnabled", true);
+
+    /**
+     * Harvest-route shared anti-farm cooldown in ticks (default 200 = 10 s).
+     * Per-player, in-memory only, shared by all three harvest nodes.
+     */
+    public static final ModConfigSpec.IntValue FARMER_HARVEST_COOLDOWN_TICKS = BUILDER
+            .comment("Harvest-route shared anti-farm cooldown in ticks (default 200 = 10 s).",
+                    "Per-player, in-memory only, shared by all three harvest nodes.",
+                    "Range 1 ~ 72000.")
+            .defineInRange("farmerHarvestCooldownTicks", 200, 1, 72000);
+
+    /**
+     * Livestock-route shared anti-farm cooldown in ticks (default 400 = 20 s).
+     * Per-player, in-memory only, shared by all three livestock nodes.
+     */
+    public static final ModConfigSpec.IntValue FARMER_LIVESTOCK_COOLDOWN_TICKS = BUILDER
+            .comment("Livestock-route shared anti-farm cooldown in ticks (default 400 = 20 s).",
+                    "Per-player, in-memory only, shared by all three livestock nodes.",
+                    "Range 1 ~ 72000.")
+            .defineInRange("farmerLivestockCooldownTicks", 400, 1, 72000);
+
     // ---- phase 5A: gunner profession ----
 
     /**

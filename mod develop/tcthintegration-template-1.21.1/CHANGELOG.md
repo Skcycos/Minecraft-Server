@@ -7,6 +7,93 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 4C.1 — durability-mixin hardening (throttle + exclusive routing)
+
+- Chef knife-route failures now warn at most once per 60 s
+  (`ChefAbilityModule` gained the farmer-style throttled warn; the path runs
+  inside the per-durability mixin, so an unthrottled persistent failure would
+  spam the log on every tool use); repeated-failure fail-closed behaviour is
+  covered by a 100-call test plus a 60 s constant assertion.
+- Durability routing is now mutually exclusive (`shouldSkipDurability`):
+  a stack is classified once — hoe → farmer route only and the decision ends
+  there, otherwise knife → chef route only. An item in BOTH
+  `#minecraft:hoes` and `#c:tools/knife` can never roll both probabilities;
+  each route reads its combined gate once and rolls its random once.
+  Covered by routing tests (double-tag item, knife-only, neither-tag).
+- Stale docs corrected: `FarmerAbilityModule` javadoc and
+  `JobsPlusCompatModule` comments now describe the Java-driven tilling design
+  (the `arc:on_hurt_item` data design is marked as abandoned in 4C), and the
+  4B changelog entry no longer claims Arc-driven tilling.
+- `tcth:hoe_durability_enabled` / `tcth:knife_durability_enabled` condition
+  types are kept registered for data compatibility and marked `@Deprecated`
+  (no datapack action references them since 4C).
+
+### 4C — farmer ability tree deployment (0.2.7)
+
+- Version bump 0.2.6 → 0.2.7; deployed together with the tcth-farmer
+  datapack powerups (12 nodes / 15 arc actions) for the 4B farmer ability
+  tree. Online acceptance performed on a single server start (see
+  docs/phase-4c-farmer-abilities-online-report.md).
+- **Root cause found during acceptance: `arc:on_hurt_item` never fires on
+  NeoForge 21.1.247.** NeoForge's ItemStack patch moved the real durability
+  logic into `hurtAndBreak(int, ServerLevel, LivingEntity, Consumer)` (a
+  NeoForge-added overload that the LivingEntity+EquipmentSlot entry point
+  delegates to), while Arc 9.0.0 injects the thin ServerPlayer wrapper which
+  hoes, mining and knives never call. Both the farmer tilling route and the
+  chef knife route (same data-driven mechanism) were silently ineffective.
+- **Fix: Java-driven durability mixin.** New `ItemStackDurabilityMixin`
+  injects the real LivingEntity overload at HEAD (cancellable) and skips the
+  durability loss with the audited probabilities — tilling 10% / 20% / 35%
+  on `#minecraft:hoes`, knife 10% / 20% / 35% on `#c:tools/knife`, highest
+  active tier only. Loaded via `tcth_farmer_abilities.mixins.json`
+  (requiredMods: jobsplus). The tilling/knife arc data files were removed
+  (Java-driven, like the harvest route); the enabled-condition types stay
+  registered.
+- Tilling/knife probabilities, tag gating, chance windows, gates and
+  fail-closed behaviour covered by unit tests; mixin contract tests assert
+  the config registration and the LivingEntity target.
+- Online acceptance passed: GUI tree, tilling 10%/26%/34% (50 hoe strokes
+  each), harvest I-III with 10s cooldown and immature negative, livestock
+  I-III across breed/tame/shear with 20s cooldown, study ×1.15/×1.35/×1.60
+  no-stacking (temporary fixed-XP action, restored afterwards), and the
+  fixed knife route 10%/20%/~25% (40 knife uses each).
+
+### 4B — farmer ability tree (tilling / harvest / livestock / study)
+
+- Added the four-route Farmer ability tree with 12 powerup nodes.
+  - Tilling (耕作, 5/20/45): using a `#minecraft:hoes` tool skips durability
+    loss with 10% / 20% / 35% chance (Java-driven via
+    `ItemStackDurabilityMixin`; the original `arc:on_hurt_item` data design
+    was abandoned in 4C — Arc 9.0.0 injects the unused NeoForge ServerPlayer
+    wrapper overload, see docs/phase-4c-farmer-abilities-online-report.md;
+    never repairs or copies tools).
+  - Harvest (丰收, 10/30/60): a real successful `CropHarvestedEvent` grants
+    Haste I 5 s (I), Haste I + Speed I 8 s (II), Haste I + Speed I 12 s (III);
+    higher tier overwrites, never stacks; automated / fake-player / immature
+    harvests never trigger; shared 10 s cooldown committed only on success.
+  - Livestock (畜牧, 15/35/55): successful breeding, taming or shearing
+    grants Regeneration I 5 s (I), + Resistance I 8 s (II), + Speed I 15 s
+    (III); shared 20 s cooldown; failed ops / non-player actors / mechanical
+    paths never trigger.
+  - Study (研修, 25/50/75): `tcth:farmer` job experience ×1.15 / ×1.35 /
+    ×1.60 via `jobsplus:on_job_exp` + `job_exp_multiplier`; only the highest
+    active tier applies (no stacking).
+- Added `farmerAbilitiesEnabled` master switch plus four per-route switches
+  and two cooldown lengths (harvest 200 ticks / livestock 400 ticks); all
+  config reads fail closed (never flipped by inverted conditions) with 60 s
+  warn throttling.
+- Added Arc condition/reward registrations (`hoe_durability_enabled`,
+  `farmer_study_abilities_enabled`, `farmer_livestock_abilities_enabled`,
+  `farmer_livestock_cooldown`, `farmer_livestock_effects`) plus the shared
+  Java-driven harvest handler with per-player in-memory cooldowns cleared on
+  logout/stop (never written to playerdata).
+- Added zh_cn / en_us names and descriptions for all 12 powerups plus the new
+  config/condition/reward keys.
+- No extra crops, animal products, gold or second XP pipeline; study applies
+  only to the existing jobsplus job_exp settlement.
+- Audit note: `#c:tools/hoes` does not exist on the server (only
+  `#minecraft:hoes`, extended by mods); tilling targets `#minecraft:hoes`.
+
 ### 7F — J-key job GUI fix (Arc condition network serialization)
 
 - Fixed client-side job GUI crash (`ResourceLocationException` on
