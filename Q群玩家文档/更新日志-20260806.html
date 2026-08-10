@@ -368,7 +368,51 @@ h1, h2, h3, h4 { font-style: normal; }
   </div>
   <h1 class="masthead-title">更新日志</h1>
   <p class="masthead-sub">服务器模组扩充、TCTH 职业模组开发、客户端增强。按提交时间排列，最新在上。</p>
- </header>
+</header>
+
+<!-- ============================================================
+     EDITION 45
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">45</span>
+    <div>
+      <h2 class="edition-title">农夫四路线能力树 · TCTH 0.2.7</h2>
+      <p class="edition-meta">
+        <span>a4476f1</span>
+        <span class="dot">·</span>
+        <span>08-11 02:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">✅ 阶段 4B/4C · 在线验收通过</span>
+
+    <div class="pull">农夫能力树正式成型：耕作 / 丰收 / 畜牧 / 研修四路线 12 节点，并顺带修复了厨师刀工的耐久能力。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>路线</th><th>效果</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">耕作</td><td>锄头耐久免损 10% / 20% / 35%（Java 驱动）</td></tr>
+        <tr><td class="mod-name">丰收</td><td>收获后急迫 I 5s / 急迫+速度 I 8s / 12s（10s 冷却）</td></tr>
+        <tr><td class="mod-name">畜牧</td><td>繁殖/驯服/剪毛得恢复 / +抗性 / +速度（20s 冷却）</td></tr>
+        <tr><td class="mod-name">研修</td><td>农夫经验 ×1.15 / ×1.35 / ×1.60</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">工具耐久修复</span>
+        <span class="item-value">原 Arc on_hurt_item 事件从不触发（javap 根因确认），改用 ItemStackDurabilityMixin Java 驱动；厨师刀工路线一并修复</span>
+      </li>
+      <li>
+        <span class="item-label">在线验收</span>
+        <span class="item-value">GUI、耕作/丰收/畜牧/研修四路线与刀工正负例全部 PASS</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
 <!-- ============================================================
      EDITION 44
