@@ -371,6 +371,50 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 46
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">46</span>
+    <div>
+      <h2 class="edition-title">影窃者事务框架：真实资产转移安全基础</h2>
+      <p class="edition-meta">
+        <span>6aa91c60</span>
+        <span class="dot">·</span>
+        <span>08-13 02:01</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🛠️ 开发框架完成 · 默认关闭 · 在线验收延期</span>
+
+    <div class="pull">新增影窃者（tcth:shadow_thief）的玩家影窃事务基础：潜行空手接近目标后由服务端随机判定物品、生命、饱食度或正面效果，并以审计、回滚和保护机制约束真实资产变化。该职业尚未正式开放。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">事务安全</td><td>prepare / commit / rollback 三阶段；eventId 幂等、PENDING→FINAL 审计、异常恢复与 fail-closed 存档校验</td></tr>
+        <tr><td class="mod-name">保护机制</td><td>出生点与领地保护、新玩家保护、全局/目标冷却、同一受害者每日物品损失上限</td></tr>
+        <tr><td class="mod-name">资产类型</td><td>物品 / 生命 / 饱食度 / 正面效果事务引擎已完成；钱币、生物影窃、职业经验与能力树尚未实现</td></tr>
+        <tr><td class="mod-name">验证状态</td><td>140 suites / 1344 tests 全绿；服务器 LOAD PASS，玩家真实资产在线验收由服主决定延期</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">当前状态</span>
+        <span class="item-value">影窃者集成、玩家影窃、生物影窃与真实资产转移四个开关全部关闭，不影响当前正式服玩法</span>
+      </li>
+      <li>
+        <span class="item-label">已知边界</span>
+        <span class="item-value">仅确认模组可加载；ITEM / HEALTH / HUNGER / EFFECT 均不声称 PLAYER LIVE PASS</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 45
      ============================================================ -->
 
