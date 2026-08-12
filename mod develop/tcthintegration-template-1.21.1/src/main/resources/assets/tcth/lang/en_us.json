@@ -202,5 +202,21 @@
   "tcth.condition.farmer_livestock_cooldown.name": "Livestock Effects Cooldown",
   "tcth.condition.farmer_livestock_cooldown.desc": "Player is not inside the livestock effects cooldown",
   "tcth.reward.farmer_livestock_effects.name": "Livestock Effects",
-  "tcth.reward.farmer_livestock_effects.desc": "Grant farmer livestock effects (tier %s)"
+  "tcth.reward.farmer_livestock_effects.desc": "Grant farmer livestock effects (tier %s)",
+  "tcth.shadow.feedback.success.self.item": "You pickpocketed %sx %s",
+  "tcth.shadow.feedback.success.self.health": "You stole %s health",
+  "tcth.shadow.feedback.success.self.hunger": "You stole %s hunger",
+  "tcth.shadow.feedback.success.self.effect": "You stole %s seconds of %s",
+  "tcth.shadow.feedback.success.victim.item": "Something is missing from your pockets (%sx %s)",
+  "tcth.shadow.feedback.success.victim.health": "You feel a little weaker (%s health drained)",
+  "tcth.shadow.feedback.success.victim.hunger": "Your stomach feels emptier (%s hunger drained)",
+  "tcth.shadow.feedback.success.victim.effect": "A beneficial effect faded away (%s seconds of %s)",
+  "tcth.shadow.feedback.fail.victim": "%s tried to rob you!",
+  "tcth.shadow.feedback.fail.self": "The theft failed... and you were spotted!",
+  "tcth.shadow.feedback.expose.nearby": "%s just tried to pick someone's pocket!",
+  "tcth.shadow.feedback.no_candidate": "There is nothing to steal.",
+  "tcth.shadow.feedback.protected": "That target is protected.",
+  "tcth.shadow.feedback.cooldown": "You are not ready to steal again.",
+  "tcth.shadow.feedback.transfer_failed": "The theft failed.",
+  "tcth.shadow.feedback.technical_error": "Something went wrong."
 }

@@ -202,5 +202,21 @@
   "tcth.condition.farmer_livestock_cooldown.name": "畜牧效果冷却",
   "tcth.condition.farmer_livestock_cooldown.desc": "玩家不在畜牧效果冷却中",
   "tcth.reward.farmer_livestock_effects.name": "畜牧效果",
-  "tcth.reward.farmer_livestock_effects.desc": "授予畜牧路线效果（档位 %s）"
+  "tcth.reward.farmer_livestock_effects.desc": "授予畜牧路线效果（档位 %s）",
+  "tcth.shadow.feedback.success.self.item": "你偷到了 %sx %s",
+  "tcth.shadow.feedback.success.self.health": "你窃取了 %s 点生命",
+  "tcth.shadow.feedback.success.self.hunger": "你窃取了 %s 点饥饿",
+  "tcth.shadow.feedback.success.self.effect": "你窃取了 %s 秒的 %s",
+  "tcth.shadow.feedback.success.victim.item": "你口袋里的东西好像少了（%sx %s）",
+  "tcth.shadow.feedback.success.victim.health": "你感觉有些虚弱（%s 点生命被抽走）",
+  "tcth.shadow.feedback.success.victim.hunger": "你的肚子更饿了（%s 点饥饿被抽走）",
+  "tcth.shadow.feedback.success.victim.effect": "一个增益效果消失了（%s 秒的 %s）",
+  "tcth.shadow.feedback.fail.victim": "%s 想偷你的东西！",
+  "tcth.shadow.feedback.fail.self": "偷窃失败了……而且你被发现了！",
+  "tcth.shadow.feedback.expose.nearby": "%s 刚刚试图偷别人的东西！",
+  "tcth.shadow.feedback.no_candidate": "无物可窃。",
+  "tcth.shadow.feedback.protected": "该目标受到保护。",
+  "tcth.shadow.feedback.cooldown": "你还不能再次偷窃。",
+  "tcth.shadow.feedback.transfer_failed": "偷窃失败了。",
+  "tcth.shadow.feedback.technical_error": "出了点问题。"
 }

@@ -7,8 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefAbilityModule;
-import com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModule;
+import com.tanrunn.tcth.impl.compat.jobsplus.powerup.DurabilityAbilityRouter;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -35,12 +34,12 @@ import net.minecraft.world.item.ItemStack;
  * {@code arc:cancel_action} semantics. Loaded only when Jobs+ is installed
  * ({@code tcth_farmer_abilities.mixins.json}).
  *
- * <p><strong>Mutual exclusion (4C.1):</strong> {@link #shouldSkipDurability}
- * classifies the item once — a hoe routes exclusively through the farmer
- * tilling route and returns immediately, so an item that is somehow in BOTH
- * {@code #minecraft:hoes} and {@code #c:tools/knife} can never roll both
- * probabilities. Each route reads its combined gate once and rolls its
- * random once.
+ * <p><strong>Mutual exclusion (4C.1):</strong> classification is delegated to
+ * {@link DurabilityAbilityRouter} — a hoe routes exclusively through the
+ * farmer tilling route and returns immediately, so an item that is somehow in
+ * BOTH {@code #minecraft:hoes} and {@code #c:tools/knife} can never roll both
+ * probabilities. Each route reads its combined gate once and rolls its random
+ * once.
  */
 @Mixin(ItemStack.class)
 public abstract class ItemStackDurabilityMixin {
@@ -58,18 +57,15 @@ public abstract class ItemStackDurabilityMixin {
     }
 
     /**
-     * One-pass classification + mutually exclusive routing. A hoe takes the
-     * farmer route and the decision ends there (never falls through to the
-     * chef route); otherwise a knife takes the chef route. Neither route
-     * re-reads the other's gate.
+     * Thin private delegate to {@link DurabilityAbilityRouter} (8C.3.1).
+     *
+     * <p><strong>Must stay {@code private static}:</strong> the 8C.3 first
+     * deployment failed with a Sponge Mixin FATAL because this was
+     * {@code public static} — Sponge Mixin rejects non-private static methods
+     * in mixin classes (they would be merged into the target class with a
+     * name collision). Only this mixin calls it.
      */
-    public static boolean shouldSkipDurability(ServerPlayer player, ItemStack stack) {
-        if (stack.is(FarmerAbilityModule.HOES_TAG)) {
-            return FarmerAbilityModule.shouldSkipHoeDurability(player, stack);
-        }
-        if (stack.is(ChefAbilityModule.KNIVES_TAG)) {
-            return ChefAbilityModule.shouldSkipKnifeDurability(player, stack);
-        }
-        return false;
+    private static boolean shouldSkipDurability(ServerPlayer player, ItemStack stack) {
+        return DurabilityAbilityRouter.shouldSkipDurability(player, stack);
     }
 }

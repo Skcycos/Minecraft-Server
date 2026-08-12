@@ -153,6 +153,7 @@ dependencies {
     compileOnly "blank:dungeonsdelight:1.5.0"
     // Brewin' and Chewin' 4.5.0 Keg (phase 7B — compileOnly, never packaged).
     compileOnly "blank:brewinandchewin:4.5.0"
+    compileOnly "blank:openpartiesandclaims:0.29.3"
     testImplementation "blank:farmersdelight:1.3.2"
     testImplementation "blank:kaleidoscopecookery:1.4.1"
     testImplementation "blank:arc:9.0.0"
@@ -163,6 +164,7 @@ dependencies {
     testImplementation "blank:mynethersdelight:1.10.4"
     testImplementation "blank:dungeonsdelight:1.5.0"
     testImplementation "blank:brewinandchewin:4.5.0"
+    testImplementation "blank:openpartiesandclaims:0.29.3"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

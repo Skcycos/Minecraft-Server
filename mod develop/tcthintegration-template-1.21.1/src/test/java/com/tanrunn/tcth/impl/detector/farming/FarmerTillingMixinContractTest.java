@@ -12,11 +12,12 @@ import org.junit.jupiter.api.Test;
 import com.tanrunn.tcth.test.MinecraftTestBootstrap;
 
 /**
- * Phase 4C: the farmer tilling-route mixin contract — the mixin config is
- * registered in neoforge.mods.toml, gated on jobsplus, its @Inject target
- * matches the NeoForge 21.1 runtime durability overload (the LivingEntity
- * variant that Arc 9.0.0 misses). Routing mutual exclusion is tested in
- * {@code FarmerTillingRoutingTest}.
+ * Phase 4C / 8C.3.1: the farmer tilling-route mixin contract — the mixin
+ * config is registered in neoforge.mods.toml, gated on jobsplus, its @Inject
+ * target matches the NeoForge 21.1 runtime durability overload (the
+ * LivingEntity variant that Arc 9.0.0 misses). Routing mutual exclusion is
+ * tested behaviourally in {@code FarmerTillingRoutingTest}; the assertions
+ * here are static contracts only.
  */
 class FarmerTillingMixinContractTest {
 
@@ -45,10 +46,9 @@ class FarmerTillingMixinContractTest {
                 "mixin must target the LivingEntity (NeoForge runtime) variant");
         assertTrue(mixin.contains("cancellable = true"),
                 "mixin must be cancellable to skip the durability loss");
-        assertTrue(mixin.contains("FarmerAbilityModule.shouldSkipHoeDurability"),
-                "mixin must delegate to the tilling logic");
-        assertTrue(mixin.contains("ChefAbilityModule.shouldSkipKnifeDurability"),
-                "mixin must also delegate to the chef knife logic");
+        assertTrue(mixin.contains("DurabilityAbilityRouter.shouldSkipDurability(player, stack)"),
+                "mixin (8C.3.1) must delegate to the plain routing class, never to the "
+                        + "routes directly (non-private statics are rejected by Sponge Mixin)");
         assertTrue(mixin.contains("shouldSkipDurability(player, (ItemStack) (Object) this)"),
                 "mixin must route through the single classification entry point");
     }

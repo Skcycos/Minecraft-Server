@@ -11,6 +11,10 @@ import com.tanrunn.tcth.impl.detector.farming.CropBreakDetector;
 import com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcher;
 import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
 import com.tanrunn.tcth.impl.event.GunKillEventDispatcher;
+import com.tanrunn.tcth.impl.shadow.PlayerInteractHandler;
+import com.tanrunn.tcth.impl.shadow.ShadowCooldownTracker;
+import com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTracker;
+import com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcher;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
 import com.tanrunn.tcth.impl.stats.BrewingStatsTracker;
 import com.tanrunn.tcth.impl.stats.CookingStatsTracker;
@@ -94,5 +98,16 @@ public class TCTHIntegration {
         // from the compat module's onModConstruction hook.
         GunKillEventDispatcher.init(NeoForge.EVENT_BUS);
         GunnerStatsTracker.init(NeoForge.EVENT_BUS);
+
+        // Phase 8B-8C.2: shadow thief framework lifecycle listeners, the
+        // interaction entry and the composite protection. The real
+        // transaction engine is wired into ShadowAttemptCoordinator.defaults()
+        // but stays INERT until an operator enables BOTH the framework
+        // switches AND shadowRealAssetTransfersEnabled (default off). The
+        // audit log is a plain SavedData, not an fsync WAL.
+        ShadowCooldownTracker.SHARED.init(NeoForge.EVENT_BUS);
+        ShadowIdempotencyTracker.SHARED.init(NeoForge.EVENT_BUS);
+        ShadowTheftEventDispatcher.init(NeoForge.EVENT_BUS);
+        PlayerInteractHandler.init(NeoForge.EVENT_BUS);
     }
 }

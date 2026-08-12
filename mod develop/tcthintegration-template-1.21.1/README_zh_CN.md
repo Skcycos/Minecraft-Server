@@ -77,6 +77,29 @@ Jobs+/Arc 农夫奖励，与 `jobsPlusRewardsEnabled`（厨师）相互独立。
 `farmerIntegrationEnabled=true`、`farmerRewardsEnabled=false`（联测通过后
 再开启）。
 
+**影窃者开关（阶段 8B，框架骨架）**：`shadowThiefIntegrationEnabled`、
+`shadowPlayerTheftEnabled`、`shadowEntityTheftEnabled` 全部默认 **false**。
+本阶段只是可执行但不产生任何真实转移的框架骨架：
+- 不监听 `PlayerInteractEvent.EntityInteract`，没有 ITEM/COIN/HEALTH/HUNGER/EFFECT
+  真实事务，不调用 Lightman's Currency，不引用领地模组，也没有职业数据包；
+- 即使手动把开关改为 `true`，空候选 provider、no-op 转移执行器与全拒保护
+  也会在协调器早期短路，**不可能转移任何玩家资产**；
+- COIN 类型仍被硬阻断（Lightman's Currency 2.3.0.5 无原子转账 API，见
+  docs/phase-8a-shadow-thief-authoritative-audit.md §5.2）；
+- 审计日志默认开启（`shadowAuditEnabled=true`，写 `world/data/tcth_shadow_audit.dat`）；
+  审计可用性在一切候选/随机/资产操作**之前**强制：审计禁用或不可用 → `AUDIT_FAILED`
+  拒绝，绝不执行转移；转移走两阶段事务（prepare → commit → rollback），
+  `SUCCESS` 只在「commit 成功 + 最终审计写入成功」后发布——最终审计失败触发
+  一次回滚（`ROLLED_BACK`），回滚失败进入 `RECOVERY_REQUIRED` 严重状态（携带已
+  提交收据供人工恢复），绝不伪报成功。
+- **真实转移受独立总闸控制**：事务引擎已接入生产协调器，但必须同时满足
+  `enabled` + `shadowThiefIntegrationEnabled` + `shadowPlayerTheftEnabled` +
+  `shadowRealAssetTransfersEnabled`（最后一项默认 **false**）才会真正转移资产；
+  闸关闭时在候选池/随机/审计/执行器之前即拒绝，资产绝无变化。审计日志是普通
+  SavedData，**不是 fsync WAL**——预写与最终写入之间的崩溃会留下
+  `RECOVERY_REQUIRED` 窗口；正式服启用真实转移前需运营确认，且尚未进行任何
+  在线玩家验收。
+
 ## 源码构建
 
 ```bash

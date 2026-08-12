@@ -568,6 +568,204 @@ public class Config {
                     "Default: true.")
             .define("gunExperienceAbilitiesEnabled", true);
 
+    // ---- phase 8B: shadow thief (framework only) ----
+
+    /**
+     * Shadow thief framework master switch (phase 8B).
+     *
+     * <p>Default OFF. When false, the attempt coordinator and the event
+     * dispatcher refuse every attempt. Even when true, the phase-8B defaults
+     * (empty candidate provider, no-op transfer executor, deny-all
+     * protection) make real transfers impossible.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_THIEF_INTEGRATION_ENABLED = BUILDER
+            .comment("Master switch for the shadow thief framework.",
+                    "Default off. When false, no attempt is ever coordinated",
+                    "and no ShadowTheftEvent is posted. Even with this and",
+                    "shadowPlayerTheftEnabled on, REAL asset transfers stay",
+                    "locked behind shadowRealAssetTransfersEnabled (default",
+                    "off); the audit log is a plain SavedData, not an fsync",
+                    "WAL — live enablement needs operator confirmation.")
+            .define("shadowThiefIntegrationEnabled", false);
+
+    /**
+     * Player-target theft switch (phase 8B).
+     *
+     * <p>Default OFF. When false, attempts against player targets are refused
+     * with {@code INVALID_CONTEXT} before any further processing.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_PLAYER_THEFT_ENABLED = BUILDER
+            .comment("Allow shadow theft attempts against player targets.",
+                    "Default off. When false, player-target attempts are",
+                    "rejected at context validation. Real transfers still",
+                    "require shadowRealAssetTransfersEnabled.")
+            .define("shadowPlayerTheftEnabled", false);
+
+    /**
+     * Entity-target theft switch (phase 8B).
+     *
+     * <p>Default OFF. When false, attempts against non-player entity targets
+     * are refused with {@code INVALID_CONTEXT} before any further processing.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_ENTITY_THEFT_ENABLED = BUILDER
+            .comment("Allow shadow theft attempts against entity targets.",
+                    "Default off. When false, entity-target attempts are",
+                    "rejected at context validation.")
+            .define("shadowEntityTheftEnabled", false);
+
+    /**
+     * Shadow theft audit log switch (phase 8B).
+     *
+     * <p>Default ON. A {@code SUCCESS} outcome is only ever posted after the
+     * audit record was written; when audit is disabled (or the write fails)
+     * the attempt ends in {@code AUDIT_FAILED} and never reports success.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_AUDIT_ENABLED = BUILDER
+            .comment("Write shadow theft attempts to tcth_shadow_audit.dat.",
+                    "Default true. SUCCESS is only posted after a successful",
+                    "audit write; disabling audit therefore blocks SUCCESS",
+                    "outcomes (fail closed).")
+            .define("shadowAuditEnabled", true);
+
+    /**
+     * Base success chance of a shadow theft attempt (phase 8B, stage 8A §10).
+     *
+     * <p>Default 0.35. Clamped into [shadowMinSuccessChance,
+     * shadowMaxSuccessChance]; non-finite values fail closed.
+     */
+    public static final ModConfigSpec.DoubleValue SHADOW_BASE_SUCCESS_CHANCE = BUILDER
+            .comment("Base success chance of a shadow theft attempt (default 0.35).",
+                    "Final balance is decided in a later phase; the value is",
+                    "clamped into [shadowMinSuccessChance, shadowMaxSuccessChance].",
+                    "Range: 0.0 ~ 1.0.")
+            .defineInRange("shadowBaseSuccessChance", 0.35d, 0.0d, 1.0d);
+
+    /**
+     * Lower clamp of the success chance (phase 8B, stage 8A §10).
+     *
+     * <p>Default 0.05. A success chance never goes below this value, and a
+     * non-finite calculation fails closed to this value.
+     */
+    public static final ModConfigSpec.DoubleValue SHADOW_MIN_SUCCESS_CHANCE = BUILDER
+            .comment("Lower clamp of the shadow theft success chance (default 0.05).",
+                    "A non-finite chance calculation fails closed to this value.",
+                    "Range: 0.0 ~ 1.0.")
+            .defineInRange("shadowMinSuccessChance", 0.05d, 0.0d, 1.0d);
+
+    /**
+     * Upper clamp of the success chance (phase 8B, stage 8A §10).
+     *
+     * <p>Default 0.85. A success chance never reaches 100%.
+     */
+    public static final ModConfigSpec.DoubleValue SHADOW_MAX_SUCCESS_CHANCE = BUILDER
+            .comment("Upper clamp of the shadow theft success chance (default 0.85).",
+                    "A success chance never reaches 100%.",
+                    "Range: 0.0 ~ 1.0.")
+            .defineInRange("shadowMaxSuccessChance", 0.85d, 0.0d, 1.0d);
+
+    /**
+     * Per-thief global action cooldown in ticks (phase 8B).
+     *
+     * <p>Committed after a successful theft. In-memory only; tick-based;
+     * never written to player NBT.
+     */
+    public static final ModConfigSpec.LongValue SHADOW_GLOBAL_COOLDOWN_TICKS = BUILDER
+            .comment("Per-thief global action cooldown after a successful theft,",
+                    "in ticks (default 200 = 10 s). In-memory, tick-based only.",
+                    "Range: 0 ~ 1728000.")
+            .defineInRange("shadowGlobalCooldownTicks", 200L, 0L, 1_728_000L);
+
+    /**
+     * Short per-thief cooldown after an empty-candidate attempt (phase 8B).
+     */
+    public static final ModConfigSpec.LongValue SHADOW_NO_CANDIDATE_COOLDOWN_TICKS = BUILDER
+            .comment("Short per-thief cooldown after an empty-candidate attempt,",
+                    "in ticks (default 40 = 2 s). In-memory, tick-based only.",
+                    "Range: 0 ~ 1728000.")
+            .defineInRange("shadowNoCandidateCooldownTicks", 40L, 0L, 1_728_000L);
+
+    /**
+     * Per-thief cooldown after a failed roll or a failed transfer (phase 8B).
+     */
+    public static final ModConfigSpec.LongValue SHADOW_FAILURE_COOLDOWN_TICKS = BUILDER
+            .comment("Per-thief cooldown after a failed roll or a failed transfer,",
+                    "in ticks (default 400 = 20 s). In-memory, tick-based only.",
+                    "Range: 0 ~ 1728000.")
+            .defineInRange("shadowFailureCooldownTicks", 400L, 0L, 1_728_000L);
+
+    /**
+     * Per-victim grace period after a successful theft (phase 8B).
+     */
+    public static final ModConfigSpec.LongValue SHADOW_VICTIM_PROTECTION_TICKS = BUILDER
+            .comment("Per-victim grace period after a successful theft, in ticks",
+                    "(default 1200 = 60 s). In-memory, tick-based only.",
+                    "Range: 0 ~ 1728000.")
+            .defineInRange("shadowVictimProtectionTicks", 1_200L, 0L, 1_728_000L);
+
+    /**
+     * Per-target alert window in ticks (phase 8B).
+     *
+     * <p>Set after a failed roll or a failed transfer ("exposure"); while
+     * active the target is considered alerted and the success chance is
+     * reduced.
+     */
+    public static final ModConfigSpec.LongValue SHADOW_ALERT_TICKS = BUILDER
+            .comment("Per-target alert window after a failed attempt (exposure),",
+                    "in ticks (default 100 = 5 s). While active the target is",
+                    "considered alerted (-0.20 success chance).",
+                    "In-memory, tick-based only. Range: 0 ~ 1728000.")
+            .defineInRange("shadowAlertTicks", 100L, 0L, 1_728_000L);
+
+    /**
+     * New-player protection threshold in ticks of verified play time (phase
+     * 8C.0).
+     *
+     * <p>A player target whose server-side {@code Stats.PLAY_TIME} is below
+     * this value is protected from shadow theft
+     * ({@code DENIED_NEW_PLAYER}). The time source is the verified play-time
+     * stat, never wall-clock guesses. Default 72 000 ticks = 1 hour.
+     */
+    public static final ModConfigSpec.LongValue SHADOW_NEW_PLAYER_PROTECTION_TICKS = BUILDER
+            .comment("New-player protection: a player target whose verified",
+                    "play time (Stats.PLAY_TIME, server ticks) is below this",
+                    "value is protected from shadow theft.",
+                    "Default 72000 = 1 hour. Range: 0 ~ 1728000.")
+            .defineInRange("shadowNewPlayerProtectionTicks", 72_000L, 0L, 1_728_000L);
+
+    /**
+     * Master gate for REAL asset transfers (phase 8C.2).
+     *
+     * <p>Default OFF. The transaction engine is wired into the production
+     * coordinator, but no item, health, hunger or effect may move until an
+     * operator explicitly enables this switch (together with
+     * {@code enabled} + {@code shadowThiefIntegrationEnabled} +
+     * {@code shadowPlayerTheftEnabled}). A config read failure fails closed.
+     * Enabling on the live server requires operator confirmation — the audit
+     * log is a plain SavedData, not an fsync WAL.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_REAL_ASSET_TRANSFERS_ENABLED = BUILDER
+            .comment("Master gate for REAL shadow theft asset transfers.",
+                    "Default off. Even with the framework and player switches",
+                    "on, no item/health/hunger/effect may move until this is",
+                    "explicitly enabled by an operator. Fail-closed on config",
+                    "read errors. Live-server enablement needs operator",
+                    "confirmation (the audit log is not an fsync WAL).")
+            .define("shadowRealAssetTransfersEnabled", false);
+
+    /**
+     * Per-victim daily successful-ITEM theft cap (phase 8C.2).
+     *
+     * <p>Keyed by victim UUID + UTC date; when the cap is reached the ITEM
+     * type is removed from the candidate pool for that victim (HEALTH /
+     * HUNGER / EFFECT stay available). Conservative default 3.
+     */
+    public static final ModConfigSpec.LongValue SHADOW_DAILY_ITEM_LOSS_LIMIT = BUILDER
+            .comment("Per-victim daily cap on successful ITEM thefts (default 3).",
+                    "Keyed by victim UUID + UTC date; at the cap the ITEM",
+                    "type is removed from the victim's candidates.",
+                    "Range: 1 ~ 10000.")
+            .defineInRange("shadowDailyItemLossLimit", 3L, 1L, 10_000L);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

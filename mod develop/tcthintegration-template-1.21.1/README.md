@@ -90,6 +90,39 @@ independent of `jobsPlusRewardsEnabled` (chef). Both default as follows:
 `farmerIntegrationEnabled=true`, `farmerRewardsEnabled=false` (enable only
 after live verification).
 
+**Shadow thief switches (phase 8B, framework skeleton):**
+`shadowThiefIntegrationEnabled`, `shadowPlayerTheftEnabled` and
+`shadowEntityTheftEnabled` all default to **false**. Phase 8B ships an
+executable but completely inert framework:
+- No `PlayerInteractEvent.EntityInteract` listener, no real
+  ITEM/COIN/HEALTH/HUNGER/EFFECT transaction, no Lightman's Currency calls,
+  no claims-mod reference and no profession data pack;
+- Even with the switches manually flipped to `true`, the empty candidate
+  provider, the no-op transfer executor and the deny-all protection
+  short-circuit the coordinator early — **no player asset can ever move**;
+- The COIN type stays hard-blocked (Lightman's Currency 2.3.0.5 has no atomic
+  transfer API; see docs/phase-8a-shadow-thief-authoritative-audit.md §5.2);
+- Audit is on by default (`shadowAuditEnabled=true`, written to
+  `world/data/tcth_shadow_audit.dat`); audit availability is enforced
+  <em>before</em> any candidate/random/asset operation — disabled or
+  unavailable audit refuses with `AUDIT_FAILED` and nothing ever moves. The
+  transfer is a two-phase transaction (prepare → commit → rollback) and
+  `SUCCESS` is only posted after both the commit and the final audit write
+  succeed — a failed final audit write triggers exactly one rollback
+  (`ROLLED_BACK`), and a failed rollback enters the `RECOVERY_REQUIRED` severe
+  state (committed receipt reported for operator recovery), never a fake
+  success.
+- **Real transfers are gated.** The transaction engine is wired into the
+  production coordinator but stays inert until `enabled` +
+  `shadowThiefIntegrationEnabled` + `shadowPlayerTheftEnabled` +
+  `shadowRealAssetTransfersEnabled` are ALL on (the last one defaults to
+  `false`). With the gate off, attempts are refused before any candidate,
+  random, audit or executor call and no asset can ever move. The audit log is
+  a plain SavedData, <strong>not an fsync WAL</strong> — a crash between the
+  pre-write and the final write can leave an unresolved `RECOVERY_REQUIRED`
+  window; enabling real transfers on a live server requires operator
+  confirmation. No live player acceptance has been performed.
+
 ## Client requirement
 
 When Jobs+/Arc integration or the `tcth-chef` preset is enabled, **the server

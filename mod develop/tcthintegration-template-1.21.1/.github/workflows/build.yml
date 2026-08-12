@@ -74,5 +74,15 @@ jobs:
           curl -fL -o dev-mods/mynethersdelight-1.10.4.jar "https://cdn.modrinth.com/data/O53VhQoZ/versions/OdH19ieD/MyNethersDelight-1.21.1-1.10.4.jar"
           echo "fe246d086dcb87c7d2163fbbff09fd7e164f206238e52700fe0b3e34fb343432  dev-mods/mynethersdelight-1.10.4.jar" | sha256sum -c -
 
+          # Phase 8C.0.1: brewers' kitchen (Brewin' and Chewin') and the
+          # shadow-thief protection layer (Open Parties and Claims) — pinned
+          # Modrinth CDN URLs, SHA-verified against the exact JARs installed
+          # on the test server.
+          curl -fL -o dev-mods/brewinandchewin-4.5.0.jar "https://cdn.modrinth.com/data/hIu9KJTT/versions/MbcR48Ou/BrewinAndChewin-neoforge-4.5.0%2B1.21.1.jar"
+          echo "9f6581823c2449dde4ac1e9b4f5a7cc226c42e058e656741ab392f714f443971  dev-mods/brewinandchewin-4.5.0.jar" | sha256sum -c -
+
+          curl -fL -o dev-mods/openpartiesandclaims-0.29.3.jar "https://cdn.modrinth.com/data/gF3BGWvG/versions/h4aUy171/open-parties-and-claims-neoforge-1.21.1-0.29.3.jar"
+          echo "a49d18f92dcde9489a1938012bd5a3e4ba13ed7ea4ba1ec25dc0b1a28f886028  dev-mods/openpartiesandclaims-0.29.3.jar" | sha256sum -c -
+
       - name: Build with Gradle
         run: ./gradlew clean build --no-daemon

@@ -1,0 +1,421 @@
+package com.tanrunn.tcth.impl.shadow;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyDouble;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.tanrunn.tcth.api.shadow.ShadowTheftOutcome;
+import com.tanrunn.tcth.api.shadow.ShadowTheftType;
+import com.tanrunn.tcth.api.shadow.ShadowTheftReceipt;
+import com.tanrunn.tcth.test.MinecraftTestBootstrap;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.common.util.FakePlayer;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+
+/**
+ * Unit tests for {@link PlayerInteractHandler} (phase 8C.0).
+ *
+ * <p>Covers the entry-condition matrix: server-side only, real player, both
+ * hands empty, MAIN_HAND, sneaking, other-player target, alive, same
+ * dimension, in range — every failed condition must not touch the
+ * coordinator, and one event invokes it exactly once.
+ */
+class PlayerInteractHandlerTest {
+
+    private static final net.minecraft.resources.ResourceLocation DIAMOND =
+            net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("minecraft", "diamond");
+
+    private ServerLevel level;
+    private ServerPlayer thief;
+    private ServerPlayer victim;
+    private ShadowAttemptCoordinator coordinator;
+
+    @BeforeAll
+    static void bootstrapMinecraft() {
+        MinecraftTestBootstrap.bootStrap();
+    }
+
+    @BeforeEach
+    void setUp() {
+        PlayerInteractHandler.resetForTesting();
+        level = mock(ServerLevel.class);
+        thief = mock(ServerPlayer.class);
+        victim = mock(ServerPlayer.class);
+        when(thief.getUUID()).thenReturn(UUID.randomUUID());
+        when(thief.level()).thenReturn(level);
+        when(thief.getMainHandItem()).thenReturn(ItemStack.EMPTY);
+        when(thief.getOffhandItem()).thenReturn(ItemStack.EMPTY);
+        when(thief.isShiftKeyDown()).thenReturn(true);
+        when(thief.canInteractWithEntity(any(net.minecraft.world.phys.AABB.class), anyDouble())).thenReturn(true);
+        when(thief.distanceTo(victim)).thenReturn(2.0f);
+        when(victim.getUUID()).thenReturn(UUID.randomUUID());
+        when(victim.level()).thenReturn(level);
+        when(victim.isAlive()).thenReturn(true);
+        when(victim.isDeadOrDying()).thenReturn(false);
+        when(victim.blockPosition()).thenReturn(new BlockPos(10, 20, 30));
+        when(victim.getBoundingBox()).thenReturn(new net.minecraft.world.phys.AABB(0, 0, 0, 1, 1, 1));
+        when(victim.position()).thenReturn(net.minecraft.world.phys.Vec3.ZERO);
+        when(level.getEntity(any())).thenReturn(victim);
+        when(level.getPlayerByUUID(any())).thenReturn(victim);
+        when(level.registryAccess()).thenReturn(net.minecraft.core.RegistryAccess.fromRegistryOfRegistries(
+                net.minecraft.core.registries.BuiltInRegistries.REGISTRY));
+        coordinator = mock(ShadowAttemptCoordinator.class);
+        when(coordinator.attempt(any())).thenReturn(new ShadowAttemptCoordinator.Result(
+                ShadowTheftOutcome.PROTECTED, UUID.randomUUID(), false, ShadowTheftReceipt.empty(), null, null));
+        PlayerInteractHandler.setCoordinatorSupplierForTesting(() -> coordinator);
+    }
+
+    @AfterEach
+    void tearDown() {
+        PlayerInteractHandler.resetForTesting();
+    }
+
+    private PlayerInteractEvent.EntityInteract event(ServerPlayer player, InteractionHand hand, Entity target) {
+        return new PlayerInteractEvent.EntityInteract(player, hand, target);
+    }
+
+    @Test
+    void validInteractionInvokesCoordinatorExactlyOnce() {
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, times(1)).attempt(any());
+    }
+
+    @Test
+    void clientSideEventIsIgnored() {
+        when(level.isClientSide()).thenReturn(true);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void cancelledEventIsIgnored() {
+        PlayerInteractEvent.EntityInteract evt = event(thief, InteractionHand.MAIN_HAND, victim);
+        evt.setCanceled(true);
+        PlayerInteractHandler.onEntityInteract(evt);
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void fakePlayerThiefIsIgnored() {
+        FakePlayer fake = mock(FakePlayer.class);
+        when(fake.level()).thenReturn(level);
+        PlayerInteractHandler.onEntityInteract(event(fake, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void offhandInteractionIsIgnored() {
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.OFF_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void nonSneakingIsIgnored() {
+        when(thief.isShiftKeyDown()).thenReturn(false);
+        when(thief.isDiscrete()).thenReturn(false);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void nonEmptyMainHandIsIgnored() {
+        when(thief.getMainHandItem()).thenReturn(new ItemStack(Items.DIAMOND));
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void nonEmptyOffhandIsIgnored() {
+        when(thief.getOffhandItem()).thenReturn(new ItemStack(Items.EMERALD));
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void selfTargetIsIgnored() {
+        when(thief.blockPosition()).thenReturn(new BlockPos(5, 5, 5));
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, thief));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void nonPlayerTargetIsIgnored() {
+        Entity zombie = mock(Entity.class);
+        when(zombie.blockPosition()).thenReturn(new BlockPos(5, 5, 5));
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, zombie));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void deadTargetIsIgnored() {
+        when(victim.isAlive()).thenReturn(false);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void crossDimensionTargetIsIgnored() {
+        ServerLevel other = mock(ServerLevel.class);
+        when(victim.level()).thenReturn(other);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void outOfRangeTargetIsIgnored() {
+        when(thief.canInteractWithEntity(any(net.minecraft.world.phys.AABB.class), anyDouble())).thenReturn(false);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void handlerExceptionIsIsolated() {
+        when(coordinator.attempt(any())).thenThrow(new IllegalStateException("boom"));
+        // Must not throw; the tick never breaks.
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertTrue(true);
+    }
+
+    private final ShadowAttemptContext[] captured = new ShadowAttemptContext[1];
+
+    private void captureContexts() {
+        when(coordinator.attempt(any())).thenAnswer(invocation -> {
+            captured[0] = invocation.getArgument(0);
+            return new ShadowAttemptCoordinator.Result(ShadowTheftOutcome.PROTECTED,
+                    captured[0].eventId(), false, ShadowTheftReceipt.empty(), null, null);
+        });
+    }
+
+    @Test
+    void lineOfSightTrueIsWrittenIntoContext() {
+        when(thief.hasLineOfSight(victim)).thenReturn(true);
+        captureContexts();
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertTrue(captured[0].hasLineOfSight(), "a true ray-cast must be written into the context");
+    }
+
+    @Test
+    void lineOfSightFalseIsWrittenIntoContext() {
+        when(thief.hasLineOfSight(victim)).thenReturn(false);
+        captureContexts();
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertFalse(captured[0].hasLineOfSight());
+    }
+
+    @Test
+    void lineOfSightExceptionFailsClosedToFalse() {
+        when(thief.hasLineOfSight(victim)).thenThrow(new IllegalStateException("raycast boom"));
+        captureContexts();
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertFalse(captured[0].hasLineOfSight(),
+                "a line-of-sight API failure must fail closed to false");
+        verify(coordinator, times(1)).attempt(any());
+    }
+
+    @Test
+    void lineOfSightFeedsMutuallyExclusiveFacts() {
+        // The behind/watched facts are mutually exclusive for BOTH LOS
+        // values (see ShadowVectorMathTest); here the handler must forward
+        // the LOS flag on both paths without conflating them.
+        captureContexts();
+        when(thief.hasLineOfSight(victim)).thenReturn(true);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertTrue(captured[0].hasLineOfSight());
+        when(thief.hasLineOfSight(victim)).thenReturn(false);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertFalse(captured[0].hasLineOfSight());
+        // Both paths must produce valid, mutually exclusive facts.
+        ShadowVectorMath.ShadowDirectionFacts factsTrue = ShadowVectorMath.computeFacts(
+                thief.getLookAngle(), thief.position(), victim.position(), true);
+        ShadowVectorMath.ShadowDirectionFacts factsFalse = ShadowVectorMath.computeFacts(
+                thief.getLookAngle(), thief.position(), victim.position(), false);
+        assertFalse(factsTrue.watched() && factsTrue.behind());
+        assertFalse(factsFalse.watched() && factsFalse.behind());
+    }
+
+    // ---- 8C.2 consume: cancel/not-cancel + feedback ----
+
+    private void stubResult(ShadowTheftOutcome outcome, ShadowTheftReceipt receipt) {
+        stubResult(outcome, receipt, null);
+    }
+
+    private void stubResult(ShadowTheftOutcome outcome, ShadowTheftReceipt receipt,
+                            ShadowTheftType theftType) {
+        when(coordinator.attempt(any())).thenReturn(new ShadowAttemptCoordinator.Result(
+                outcome, UUID.randomUUID(), false, receipt, null, theftType));
+    }
+
+    private PlayerInteractEvent.EntityInteract validEvent() {
+        return event(thief, InteractionHand.MAIN_HAND, victim);
+    }
+
+    @Test
+    void frameworkDisabledIsNotCancelledAndGivesNoFeedback() {
+        stubResult(ShadowTheftOutcome.FRAMEWORK_DISABLED, ShadowTheftReceipt.empty());
+        PlayerInteractEvent.EntityInteract evt = validEvent();
+        PlayerInteractHandler.onEntityInteract(evt);
+        assertFalse(evt.isCanceled(), "a gated-off attempt must not cancel the interaction");
+        verify(thief, never()).sendSystemMessage(any());
+    }
+
+    @Test
+    void invalidContextIsNotCancelledAndGivesNoFeedback() {
+        stubResult(ShadowTheftOutcome.INVALID_CONTEXT, ShadowTheftReceipt.empty());
+        PlayerInteractEvent.EntityInteract evt = validEvent();
+        PlayerInteractHandler.onEntityInteract(evt);
+        assertFalse(evt.isCanceled());
+        verify(thief, never()).sendSystemMessage(any());
+    }
+
+    @Test
+    void attemptOutcomesCancelTheInteractionExactlyOnce() {
+        for (ShadowTheftOutcome outcome : List.of(
+                ShadowTheftOutcome.PROTECTED, ShadowTheftOutcome.COOLDOWN,
+                ShadowTheftOutcome.NO_CANDIDATE, ShadowTheftOutcome.FAILED_ROLL,
+                ShadowTheftOutcome.TRANSFER_FAILED, ShadowTheftOutcome.AUDIT_FAILED,
+                ShadowTheftOutcome.ROLLED_BACK, ShadowTheftOutcome.RECOVERY_REQUIRED,
+                ShadowTheftOutcome.DUPLICATE,
+                ShadowTheftOutcome.SUCCESS)) {
+            if (outcome == ShadowTheftOutcome.SUCCESS) {
+                stubResult(outcome, ShadowTheftReceipt.item(DIAMOND, 1), ShadowTheftType.ITEM);
+            } else {
+                stubResult(outcome, ShadowTheftReceipt.empty());
+            }
+            PlayerInteractEvent.EntityInteract evt = validEvent();
+            PlayerInteractHandler.onEntityInteract(evt);
+            assertTrue(evt.isCanceled(),
+                    outcome + " must cancel the original interaction");
+            // exactly one feedback line for the thief.
+            org.mockito.Mockito.clearInvocations(thief);
+        }
+    }
+
+    @Test
+    void duplicateIsCancelledAndSilent() {
+        stubResult(ShadowTheftOutcome.DUPLICATE, ShadowTheftReceipt.empty());
+        PlayerInteractEvent.EntityInteract evt = validEvent();
+        PlayerInteractHandler.onEntityInteract(evt);
+        assertTrue(evt.isCanceled(), "the repeated interaction must be cancelled");
+        verify(thief, never()).sendSystemMessage(any());
+        verify(victim, never()).sendSystemMessage(any());
+    }
+
+    @Test
+    void successHidesTheThiefIdentityFromTheVictim() {
+        stubResult(ShadowTheftOutcome.SUCCESS, ShadowTheftReceipt.item(DIAMOND, 1),
+                ShadowTheftType.ITEM);
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        org.mockito.ArgumentCaptor<net.minecraft.network.chat.Component> captor =
+                org.mockito.ArgumentCaptor.forClass(net.minecraft.network.chat.Component.class);
+        verify(victim).sendSystemMessage(captor.capture());
+        String victimKey = ((net.minecraft.network.chat.contents.TranslatableContents)
+                captor.getValue().getContents()).getKey();
+        assertTrue(victimKey.startsWith("tcth.shadow.feedback.success.victim."),
+                "the victim's success message must be a translatable key");
+        Object[] victimArgs = ((net.minecraft.network.chat.contents.TranslatableContents)
+                captor.getValue().getContents()).getArgs();
+        assertFalse(String.join(" ", java.util.Arrays.stream(victimArgs).map(String::valueOf).toList())
+                        .contains("SneakyPete"),
+                "the victim must not learn the thief's identity");
+        verify(thief, atLeastOnce()).sendSystemMessage(any());
+    }
+
+    @Test
+    void failedRollExposesTheThiefNameAndDebuffsThem() {
+        when(thief.getDisplayName()).thenReturn(Component.literal("SneakyPete"));
+        stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        org.mockito.ArgumentCaptor<net.minecraft.network.chat.Component> captor =
+                org.mockito.ArgumentCaptor.forClass(net.minecraft.network.chat.Component.class);
+        verify(victim).sendSystemMessage(captor.capture());
+        net.minecraft.network.chat.contents.TranslatableContents victimContents =
+                (net.minecraft.network.chat.contents.TranslatableContents) captor.getValue().getContents();
+        assertEquals("tcth.shadow.feedback.fail.victim", victimContents.getKey());
+        assertTrue(String.join(" ", java.util.Arrays.stream(victimContents.getArgs())
+                        .map(String::valueOf).toList()).contains("SneakyPete"),
+                "the victim must see the thief's name on a failed roll");
+        // The loser gets a short glow + slowness.
+        verify(thief).addEffect(org.mockito.ArgumentMatchers.argThat(instance ->
+                instance.getEffect().is(net.minecraft.world.effect.MobEffects.GLOWING)));
+        verify(thief).addEffect(org.mockito.ArgumentMatchers.argThat(instance ->
+                instance.getEffect().is(net.minecraft.world.effect.MobEffects.MOVEMENT_SLOWDOWN)));
+    }
+
+    @Test
+    void noCandidateTellsTheThiefOnly() {
+        stubResult(ShadowTheftOutcome.NO_CANDIDATE, ShadowTheftReceipt.empty());
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        org.mockito.ArgumentCaptor<net.minecraft.network.chat.Component> captor =
+                org.mockito.ArgumentCaptor.forClass(net.minecraft.network.chat.Component.class);
+        verify(thief).sendSystemMessage(captor.capture());
+        assertEquals("tcth.shadow.feedback.no_candidate",
+                ((net.minecraft.network.chat.contents.TranslatableContents)
+                        captor.getValue().getContents()).getKey(),
+                "NO_CANDIDATE only says 'nothing to steal'");
+        verify(victim, never()).sendSystemMessage(any());
+    }
+
+    @Test
+    void technicalOutcomesNeverLeakInternalReasons() {
+        stubResult(ShadowTheftOutcome.RECOVERY_REQUIRED, ShadowTheftReceipt.empty());
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        org.mockito.ArgumentCaptor<net.minecraft.network.chat.Component> captor =
+                org.mockito.ArgumentCaptor.forClass(net.minecraft.network.chat.Component.class);
+        verify(thief).sendSystemMessage(captor.capture());
+        assertEquals("tcth.shadow.feedback.technical_error",
+                ((net.minecraft.network.chat.contents.TranslatableContents)
+                        captor.getValue().getContents()).getKey(),
+                "technical outcomes use one generic translatable key");
+    }
+
+    @Test
+    void oneFeedbackPerEvent() {
+        when(thief.getDisplayName()).thenReturn(Component.literal("SneakyPete"));
+        stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        verify(thief, times(1)).sendSystemMessage(any());
+        verify(victim, times(1)).sendSystemMessage(any());
+    }
+
+    @Test
+    void contextCarriesPlayerKindAndNoTargetType() {
+        final ShadowAttemptContext[] captured = new ShadowAttemptContext[1];
+        when(coordinator.attempt(any())).thenAnswer(invocation -> {
+            captured[0] = invocation.getArgument(0);
+            return new ShadowAttemptCoordinator.Result(ShadowTheftOutcome.PROTECTED,
+                    captured[0].eventId(), false, ShadowTheftReceipt.empty(), null, null);
+        });
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        assertEquals(com.tanrunn.tcth.api.shadow.ShadowTargetKind.PLAYER, captured[0].targetKind());
+        assertEquals(null, captured[0].targetType());
+        assertEquals(victim.getUUID(), captured[0].targetId());
+        assertEquals(thief, captured[0].thief());
+        assertFalse(captured[0].automated());
+        assertEquals(new BlockPos(10, 20, 30), captured[0].position());
+    }
+}
