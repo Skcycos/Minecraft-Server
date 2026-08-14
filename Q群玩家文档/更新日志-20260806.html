@@ -371,6 +371,50 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 47
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">47</span>
+    <div>
+      <h2 class="edition-title">影窃者生物影窃与一次性战利品</h2>
+      <p class="edition-meta">
+        <span>8bd98599</span>
+        <span class="dot">·</span>
+        <span>08-14 17:33</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🧪 生物路径实机通过 · 默认关闭 · 职业尚未开放</span>
+
+    <div class="pull">影窃者现可对经过审计的低风险生物执行一次性“影窃”：服务端独立抽取额外掉落，并以实体持久标记、精确槽位事务和审计回滚防止重复获利。</div>
+
+    <table class="mod-table">
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="mod-name">首批目标</td><td>鸡 → 鸡蛋×1、猪 → 生猪排×1、兔 → 兔肉×1；不复制完整死亡掉落表</td></tr>
+        <tr><td class="mod-name">一次性保护</td><td>AVAILABLE / PENDING / LOOTED / CORRUPT 状态随实体 NBT 持久，卸载和重启后仍阻止重复搜刮</td></tr>
+        <tr><td class="mod-name">硬排除</td><td>Wither、末影龙、远古守卫者与 Warden 始终禁止；首批不开放 L3 怪物</td></tr>
+        <tr><td class="mod-name">验证</td><td>145 suites / 1443 tests 全绿；鸡/猪/兔交付、失败、冷却、去重、硬排除和重启持久在线验证</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">加载修复</span>
+        <span class="item-value">启动首次 reload 直接读取 3 个定义，不再需要玩家手动 /reload</span>
+      </li>
+      <li>
+        <span class="item-label">安全边界</span>
+        <span class="item-value">影窃者集成、玩家/生物目标与真实资产开关仍全部关闭；职业经验与能力树尚未实现</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 46
      ============================================================ -->
 
