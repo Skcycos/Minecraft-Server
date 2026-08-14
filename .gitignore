@@ -73,5 +73,26 @@ Server/mods/*.mixins.json
 # automodpack runtime content manifest (regenerated on server start)
 Server/automodpack/host-modpack/automodpack-content.json
 
+# 测试运行产物（accept/smoke 验收脚本输出与 PID）
+Server/accept*.out
+Server/accept*.pid
+Server/smoke*.out
+Server/smoke*.pid
+
+# 部署前备份目录
+Server/backup-*/
+
+# 本地开发 / 临时目录
+/.gradle-home/
+/tmp/
+/mod develop/源码参考/
+
+# 未启用的模组文件（禁用占位 / 副本）
+Server/mods/*.disabled
+Server/mods/*副本*.jar
+
+# 配方表生成中间产物
+配方与经济管理/统一配方表/魔酿师饮品分类表.csv
+
 # FUSE temp files (open handle leftovers)
 .fuse_hidden*
