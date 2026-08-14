@@ -1,0 +1,436 @@
+{
+  "phase": "6A.3",
+  "generated_at": "2026-08-08T08:35:39.860Z",
+  "note": "6A.3 最终语义收口：REVIEW=0；6A.1 的 203 DISH 与未收口的 6A.2 REVIEW 已废止。禁止进入 6B。",
+  "jars": [
+    {
+      "display": "Neapolitan",
+      "file": "[那不勒斯风味]neapolitan-1.21.1-6.0.1.jar",
+      "version": "6.0.1",
+      "sha256": "82e104afc49887134fb0f74e6b3d3bc827fe1f88ea3d14836c2701218a1071d9",
+      "raw_recipe_count": 111,
+      "types": {
+        "minecraft:crafting_shapeless": 51,
+        "minecraft:crafting_shaped": 36,
+        "minecraft:stonecutting": 11,
+        "minecraft:smelting": 4,
+        "minecraft:campfire_cooking": 4,
+        "minecraft:smoking": 4,
+        "minecraft:smithing_trim": 1
+      }
+    },
+    {
+      "display": "Dungeon's Delight",
+      "file": "[农夫乐事-地牢乐事]neoforge-dungeonsdelight-1.21.1-1.5.0.jar",
+      "version": "1.5.0",
+      "sha256": "90342848adb6b98569a53a1d34fabbd7042f80ee530b23b7e378e329c5a1c5cd",
+      "raw_recipe_count": 203,
+      "types": {
+        "minecraft:crafting_shapeless": 21,
+        "minecraft:crafting_shaped": 61,
+        "minecraft:campfire_cooking": 5,
+        "minecraft:smelting": 4,
+        "minecraft:smoking": 7,
+        "farmersdelight:cooking": 9,
+        "farmersdelight:cutting": 18,
+        "dungeonsdelight:monster_cooking": 70,
+        "minecraft:stonecutting": 7,
+        "minecraft:smithing_transform": 1
+      }
+    },
+    {
+      "display": "My Nether's Delight",
+      "file": "[农夫乐事-下界乐事]MyNethersDelight-1.21.1-1.10.4.jar",
+      "version": "1.10.4",
+      "sha256": "fe246d086dcb87c7d2163fbbff09fd7e164f206238e52700fe0b3e34fb343432",
+      "raw_recipe_count": 133,
+      "types": {
+        "brewinandchewin:fermenting": 1,
+        "farmersdelight:cutting": 20,
+        "minecraft:crafting_shapeless": 39,
+        "farmersdelight:food_serving": 1,
+        "minecraft:smelting": 6,
+        "minecraft:campfire_cooking": 4,
+        "minecraft:smoking": 6,
+        "farmersdelight:cooking": 21,
+        "minecraft:crafting_shaped": 30,
+        "mynethersdelight:blazier_cooling": 1,
+        "mynethersdelight:blazier_heating": 1,
+        "minecraft:stonecutting": 3
+      }
+    },
+    {
+      "display": "Brewin' and Chewin'",
+      "file": "[农夫乐事-饮酒作乐]BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+      "version": "4.5.0",
+      "sha256": "9f6581823c2449dde4ac1e9b4f5a7cc226c42e058e656741ab392f714f443971",
+      "raw_recipe_count": 74,
+      "types": {
+        "minecraft:crafting_shaped": 12,
+        "minecraft:crafting_shapeless": 1,
+        "farmersdelight:cooking": 9,
+        "farmersdelight:cutting": 4,
+        "brewinandchewin:fermenting": 23,
+        "brewinandchewin:keg_pouring": 24,
+        "brewinandchewin:create_potion_pouring": 1
+      }
+    },
+    {
+      "display": "Bakeries",
+      "file": "[烘焙坊]bakeries-1.21.1-NeoForge-1.0.1.jar",
+      "version": "1.0.1",
+      "sha256": "a36e34607c79d33217575524c0caf9405a28aaf74ed8c51a65f656cdd7e76947",
+      "raw_recipe_count": 178,
+      "types": {
+        "minecraft:crafting_shapeless": 22,
+        "minecraft:campfire_cooking": 2,
+        "minecraft:crafting_shaped": 37,
+        "bakeries:blender": 14,
+        "bakeries:bread_knife": 5,
+        "minecraft:smelting": 5,
+        "create:cutting": 8,
+        "create:mixing": 32,
+        "minecraft:smoking": 1,
+        "bakeries:dough_crafting_table": 14,
+        "bakeries:drink": 6,
+        "bakeries:fermentation_box": 4,
+        "bakeries:flour_sieve": 4,
+        "create:milling": 6,
+        "create:pressing": 1,
+        "create:sequenced_assembly": 1,
+        "bakeries:oven": 16
+      }
+    },
+    {
+      "display": "Kaleidoscope Tavern",
+      "file": "[森罗物语-酒馆]kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
+      "version": "1.2.0",
+      "sha256": "03f35e1e614953b22cd1f5e34345613f3a6a283bf1b1c99659b57d58970edeff",
+      "raw_recipe_count": 156,
+      "types": {
+        "minecraft:crafting_shapeless": 36,
+        "minecraft:crafting_shaped": 78,
+        "kaleidoscope_tavern:barrel": 24,
+        "kaleidoscope_tavern:pressing_tub": 6,
+        "kaleidoscope_tavern:shaker": 12
+      }
+    },
+    {
+      "display": "Fowl Play",
+      "file": "[家禽游戏]fowlplay-1.2.3+1.21.1-neoforge.jar",
+      "version": "1.2.3",
+      "sha256": "41974c76071bd960e1d6d9268fe0327680da6f751239368d5fe77c1810001198",
+      "raw_recipe_count": 1,
+      "types": {
+        "minecraft:crafting_shaped": 1
+      }
+    },
+    {
+      "display": "Kaleidoscope Compat",
+      "file": "[森罗物语-兼容]kaleidoscope_compat-2.9.7-neoforge+mc1.21.1.jar",
+      "version": "2.9.7",
+      "sha256": "a9cb2a9176c42bd15ad29b283eecdd408889f7faa0be8651544d6ad2e8cd3974",
+      "raw_recipe_count": 170,
+      "types": {
+        "bakeries:blender": 3,
+        "minecraft:crafting_shapeless": 39,
+        "create:mixing": 7,
+        "kaleidoscope_cookery:pot": 16,
+        "kaleidoscope_cookery:stockpot": 10,
+        "minecraft:campfire_cooking": 3,
+        "minecraft:crafting_shaped": 13,
+        "minecraft:smelting": 5,
+        "minecraft:smoking": 5,
+        "farm_and_charm:pot_cooking": 1,
+        "farm_and_charm:roaster": 5,
+        "farm_and_charm:stove": 4,
+        "kaleidoscope_cookery:chopping_board": 15,
+        "farmersdelight:cooking": 1,
+        "farmersdelight:cutting": 5,
+        "kaleidoscope_cookery:millstone": 5,
+        "kaleidoscope_cookery:steamer": 1,
+        "farm_and_charm:drying": 12,
+        "farm_and_charm:mincer": 10,
+        "create:milling": 5,
+        "bakeries:flour_sieve": 1,
+        "create:splashing": 1,
+        "crafting_shapeless": 2,
+        "farm_and_charm:crafting_bowl": 1
+      }
+    }
+  ],
+  "pack_recipe_counts": {
+    "always": 78,
+    "compat": 15,
+    "disable_farm_and_charm_cooking_pot": 1,
+    "disable_farmersdelight_cooking_pot": 3,
+    "disable_farmersdelight_cutting_board": 1,
+    "disable_vinery_fermentation_barrel": 2,
+    "disable_youkaisfeasts_steamer_pot": 3,
+    "unite_bakeries": 1,
+    "unite_create": 9,
+    "unite_farm_and_charm": 25,
+    "unite_farmersdelight": 32
+  },
+  "runtime_export_recipes": 1809,
+  "audit_recipe_rows": 856,
+  "runtime_valid_in_audit": 784,
+  "unite_add_count": 0,
+  "unite_override_count": 3,
+  "unite_disable_count": 1,
+  "content_type_counts_recipe_rows": {
+    "DISH": 200,
+    "SERVING_DISH": 25,
+    "DRINK": 108,
+    "INGREDIENT": 135,
+    "RAW_FOOD": 7,
+    "ANIMAL_FOOD": 0,
+    "NON_FOOD": 370,
+    "REVIEW": 11
+  },
+  "product_content_type_counts": {
+    "DISH": 167,
+    "SERVING_DISH": 21,
+    "DRINK": 86,
+    "INGREDIENT": 87,
+    "RAW_FOOD": 7,
+    "ANIMAL_FOOD": 0,
+    "NON_FOOD": 265,
+    "REVIEW": 0
+  },
+  "dish_food_true": 167,
+  "serving_dish_count": 21,
+  "ingredient_count": 87,
+  "drink_count": 86,
+  "raw_food_count": 7,
+  "non_food_count": 265,
+  "review_count": 0,
+  "dish_tier_counts": {
+    "COMMON": 38,
+    "T2": 129,
+    "T3候选": 0
+  },
+  "manual_override_entries": 84,
+  "manual_override_applied_products": 84,
+  "manual_override_applied_recipes": 109,
+  "valid_unique_products": 633,
+  "inactive_only_products": 46,
+  "unique_edible_products": 236,
+  "tier_suggestion_counts": {
+    "COMMON": 38,
+    "T2": 129,
+    "T3候选": 0,
+    "不进入厨师": 466,
+    "待复审": 0
+  },
+  "edible_but_ingredient_or_review": [
+    {
+      "productId": "bakeries:cheese_cream",
+      "name": "Cheese Cream",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;搅拌机奶油中间产物",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "bakeries:foamed_cream",
+      "name": "Foamed Cream",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;发泡奶油中间产物",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "bakeries:fresh_cheese_cube",
+      "name": "Fresh Cheese Cube",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;芝士立方中间产物",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "bakeries:mashed_taro",
+      "name": "Mashed Taro",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;芋泥馅料",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "bakeries:meat_floss",
+      "name": "Meat Floss",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;肉松馅料",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "bakeries:pineapple_oil",
+      "name": "Pineapple Oil",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;油脂原料",
+      "confidence": "HIGH",
+      "nutrition": 8
+    },
+    {
+      "productId": "brewinandchewin:flaxen_cheese_wedge",
+      "name": "Flaxen Cheese Wedge",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;奶酪楔切割产物",
+      "confidence": "HIGH",
+      "nutrition": 4
+    },
+    {
+      "productId": "brewinandchewin:scarlet_cheese_wedge",
+      "name": "Scarlet Cheese Wedge",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;奶酪楔切割产物",
+      "confidence": "HIGH",
+      "nutrition": 4
+    },
+    {
+      "productId": "dungeonsdelight:cleaved_ancient_egg",
+      "name": "Cleaved Ancient Egg",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割中间产物",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "dungeonsdelight:creeperilla_squib",
+      "name": "Creeperilla Squib",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割中间产物",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "dungeonsdelight:ghast_calamari",
+      "name": "Ghast Calamari",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割中间产物",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "dungeonsdelight:rotgourd_slice",
+      "name": "Rotgourd Slice",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割中间产物",
+      "confidence": "HIGH",
+      "nutrition": 3
+    },
+    {
+      "productId": "dungeonsdelight:rotten_tripe",
+      "name": "Rotten Tripe",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割中间产物",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "dungeonsdelight:sculk_mayo",
+      "name": "Sculk Mayo",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;饥饿1/饱和0.4/虚弱副作用；被devilish_eggs等后续使用；酱料非宴席",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "dungeonsdelight:sculk_tart_slice",
+      "name": "Slice of Sculk Tart",
+      "contentType": "INGREDIENT",
+      "evidence": "ingredient_process=farmersdelight:cutting",
+      "confidence": "MEDIUM",
+      "nutrition": 3
+    },
+    {
+      "productId": "dungeonsdelight:wardenzola",
+      "name": "Wardenzola",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;仅sculk_polyp×2+milk；被polterghast_pizza使用；奶酪中间产物",
+      "confidence": "HIGH",
+      "nutrition": 4
+    },
+    {
+      "productId": "dungeonsdelight:wardenzola_crumbles",
+      "name": "Wardenzola Crumbles",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;奶酪碎屑切割产物",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "farmersdelight:pumpkin_slice",
+      "name": "Pumpkin Slice",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;南瓜片原料",
+      "confidence": "HIGH",
+      "nutrition": 3
+    },
+    {
+      "productId": "mynethersdelight:ghast_dough",
+      "name": "Ghast Dough",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;面团中间产物",
+      "confidence": "HIGH",
+      "nutrition": 3
+    },
+    {
+      "productId": "mynethersdelight:hot_cream",
+      "name": "Hot Cream",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;奶油酱料",
+      "confidence": "HIGH",
+      "nutrition": 1
+    },
+    {
+      "productId": "mynethersdelight:minced_strider",
+      "name": "Minced Strider",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;绞肉中间产物",
+      "confidence": "HIGH",
+      "nutrition": 2
+    },
+    {
+      "productId": "mynethersdelight:strider_egg",
+      "name": "Strider Egg",
+      "contentType": "INGREDIENT",
+      "evidence": "manual_override;切割/原料蛋",
+      "confidence": "HIGH",
+      "nutrition": 3
+    }
+  ],
+  "dish_event_coverage_note": {
+    "campfire": "未覆盖（仅枚举，无检测）",
+    "furnace_smoker_crafting": "已覆盖",
+    "blasting": "ItemSmelted 可能触发但不适合料理",
+    "create": "自动化不记玩家",
+    "cutting": "非出锅"
+  },
+  "outputs": {
+    "auditPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组配方审计表.csv",
+    "productPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组产物待分级表.csv",
+    "inactivePath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组未加载产物附表.csv",
+    "t3Path": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组T3候选复审表.csv",
+    "handheldPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组普通手持料理清单.csv",
+    "servingPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组整盘料理清单.csv",
+    "drinkPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组饮品清单.csv",
+    "ingredientPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组中间产物清单.csv",
+    "reviewPath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组待复审清单.csv",
+    "overridePath": "/Users/a1111/Desktop/Minecraft-Server/配方与经济管理/统一配方表/新增食物模组人工分类覆盖.csv",
+    "summaryPath": "/Users/a1111/Desktop/Minecraft-Server/Server/kubejs/config/phase6a_audit_summary.json"
+  },
+  "deterministic_files": [
+    "新增食物模组配方审计表.csv",
+    "新增食物模组产物待分级表.csv",
+    "新增食物模组未加载产物附表.csv",
+    "新增食物模组T3候选复审表.csv",
+    "新增食物模组普通手持料理清单.csv",
+    "新增食物模组整盘料理清单.csv",
+    "新增食物模组饮品清单.csv",
+    "新增食物模组中间产物清单.csv",
+    "新增食物模组待复审清单.csv",
+    "新增食物模组人工分类覆盖.csv"
+  ]
+}

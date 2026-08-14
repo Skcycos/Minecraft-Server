@@ -123,3 +123,179 @@ brewerRewardsEnabled = true
 # Default: 20
 # Range: 1 ~ 1000
 maxBrewerRewardsPerTickPerPlayer = 20
+#Master switch for the brewer ability tree (brewing / tasting /
+#resistance / study routes). When false, all four routes stop
+#applying their effects. Does not delete purchased powerups and
+#does not affect the Jobs+ GUI or brewer rewards.
+brewerAbilitiesEnabled = true
+#Brewing route: beverage preparation grants short status effects
+#I: Speed I 5s; II: Speed I 8s + Luck I 8s; III: Speed I 12s + Luck I 12s.
+#Higher tier overwrites, never stacks. Requires brewerAbilitiesEnabled.
+brewerBrewingAbilitiesEnabled = true
+#Tasting route: drinking #tcth:brewer_drinks grants status effects
+#I: Regeneration I 5s; II: Regeneration I 5s + Resistance I 8s;
+#III: Regeneration I 5s + Resistance I 8s + Speed I 15s. Shared 20s
+#cooldown. Requires brewerAbilitiesEnabled.
+brewerTastingAbilitiesEnabled = true
+#Resistance route: magical / indirect-magical / wither damage taken
+#is reduced by 10% / 20% / 35%. Never full immunity; fire, fall,
+#melee and projectile damage are unaffected.
+#Requires brewerAbilitiesEnabled.
+brewerResistanceAbilitiesEnabled = true
+#Study route: tcth:brewer job experience multiplier
+#1.15 / 1.35 / 1.60. Only the highest active tier applies,
+#never stacked. Requires brewerAbilitiesEnabled.
+brewerStudyAbilitiesEnabled = true
+#Tasting-route shared anti-farm cooldown in ticks (default 400 = 20 s).
+#Per-player, in-memory only, shared by all three tasting nodes.
+#Range 1 ~ 72000.
+# Default: 400
+# Range: 1 ~ 72000
+brewerDrinkCooldownTicks = 400
+#Enable the per-player brewing statistics archive.
+#Independent of brewerRewardsEnabled and of Jobs+/Arc.
+#Default true.
+brewerStatsEnabled = true
+#Unlock Field Guide brewer beverage entries when a beverage
+#is prepared (real player, non-automated).
+#Independent of the chef cookbook and of Jobs+/Arc.
+#Default true. No effect when Field Guide is not installed.
+fieldGuideBrewerEnabled = true
+#Master switch for TCTH Field Guide unlocks (chef cookbook +
+#brewer catalogue). When false, no dish or beverage unlock is
+#sent to Field Guide. Default true. No effect when Field Guide
+#is not installed.
+fieldGuideEnabled = true
+#Master switch for the farmer ability tree (4 routes).
+#When false, no farmer ability takes effect.
+#Does not delete purchased powerups and does not affect the Jobs+ GUI.
+#Default: true.
+farmerAbilitiesEnabled = true
+#Tilling route: chance to skip durability loss on #minecraft:hoes
+#tools 10% / 20% / 35%. Requires farmerAbilitiesEnabled.
+#Never repairs, copies or affects non-hoe items.
+#Default: true.
+tillingDurabilityAbilitiesEnabled = true
+#Harvest route: real CropHarvestedEvent grants short effects
+#I: Haste I 5s; II: Haste I + Speed I 8s; III: Haste I + Speed I 12s.
+#Higher tier overwrites, never stacks; automated/fake/immature
+#harvests never trigger; shared 10s cooldown, success-driven.
+#Requires farmerAbilitiesEnabled.
+#Default: true.
+farmerHarvestAbilitiesEnabled = true
+#Livestock route: breeding/taming/shearing grants short effects
+#I: Regeneration I 5s; II: + Resistance I 8s; III: + Speed I 15s.
+#Shared 20s cooldown; failed ops, non-player actors and
+#mechanical paths never trigger.
+#Requires farmerAbilitiesEnabled.
+#Default: true.
+farmerLivestockAbilitiesEnabled = true
+#Farmer-study route: tcth:farmer job experience
+#×1.15 / ×1.35 / ×1.60. Requires farmerAbilitiesEnabled.
+#Default: true.
+farmerStudyAbilitiesEnabled = true
+#Harvest-route shared anti-farm cooldown in ticks (default 200 = 10 s).
+#Per-player, in-memory only, shared by all three harvest nodes.
+#Range 1 ~ 72000.
+# Default: 200
+# Range: 1 ~ 72000
+farmerHarvestCooldownTicks = 200
+#Livestock-route shared anti-farm cooldown in ticks (default 400 = 20 s).
+#Per-player, in-memory only, shared by all three livestock nodes.
+#Range 1 ~ 72000.
+# Default: 400
+# Range: 1 ~ 72000
+farmerLivestockCooldownTicks = 400
+#Master switch for the shadow thief framework.
+#Default off. When false, no attempt is ever coordinated
+#and no ShadowTheftEvent is posted. Even with this and
+#shadowPlayerTheftEnabled on, REAL asset transfers stay
+#locked behind shadowRealAssetTransfersEnabled (default
+#off); the audit log is a plain SavedData, not an fsync
+#WAL — live enablement needs operator confirmation.
+shadowThiefIntegrationEnabled = false
+#Allow shadow theft attempts against player targets.
+#Default off. When false, player-target attempts are
+#rejected at context validation. Real transfers still
+#require shadowRealAssetTransfersEnabled.
+shadowPlayerTheftEnabled = false
+#Allow shadow theft attempts against entity targets.
+#Default off. When false, entity-target attempts are
+#rejected at context validation.
+shadowEntityTheftEnabled = false
+#Write shadow theft attempts to tcth_shadow_audit.dat.
+#Default true. SUCCESS is only posted after a successful
+#audit write; disabling audit therefore blocks SUCCESS
+#outcomes (fail closed).
+shadowAuditEnabled = true
+#Master gate for REAL shadow theft asset transfers.
+#Default off. Even with the framework and player switches
+#on, no item/health/hunger/effect may move until this is
+#explicitly enabled by an operator. Fail-closed on config
+#read errors. Live-server enablement needs operator
+#confirmation (the audit log is not an fsync WAL).
+shadowRealAssetTransfersEnabled = false
+#Base success chance of a shadow theft attempt (default 0.35).
+#Final balance is decided in a later phase; the value is
+#clamped into [shadowMinSuccessChance, shadowMaxSuccessChance].
+#Range: 0.0 ~ 1.0.
+# Default: 0.35
+# Range: 0.0 ~ 1.0
+shadowBaseSuccessChance = 0.35
+#Lower clamp of the shadow theft success chance (default 0.05).
+#A non-finite chance calculation fails closed to this value.
+#Range: 0.0 ~ 1.0.
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+shadowMinSuccessChance = 0.05
+#Upper clamp of the shadow theft success chance (default 0.85).
+#A success chance never reaches 100%.
+#Range: 0.0 ~ 1.0.
+# Default: 0.85
+# Range: 0.0 ~ 1.0
+shadowMaxSuccessChance = 0.85
+#Per-victim daily cap on successful ITEM thefts (default 3).
+#Keyed by victim UUID + UTC date; at the cap the ITEM
+#type is removed from the victim's candidates.
+#Range: 1 ~ 10000.
+# Default: 3
+# Range: 1 ~ 10000
+shadowDailyItemLossLimit = 3
+#Per-thief global action cooldown after a successful theft,
+#in ticks (default 200 = 10 s). In-memory, tick-based only.
+#Range: 0 ~ 1728000.
+# Default: 200
+# Range: 0 ~ 1728000
+shadowGlobalCooldownTicks = 200
+#Short per-thief cooldown after an empty-candidate attempt,
+#in ticks (default 40 = 2 s). In-memory, tick-based only.
+#Range: 0 ~ 1728000.
+# Default: 40
+# Range: 0 ~ 1728000
+shadowNoCandidateCooldownTicks = 40
+#Per-thief cooldown after a failed roll or a failed transfer,
+#in ticks (default 400 = 20 s). In-memory, tick-based only.
+#Range: 0 ~ 1728000.
+# Default: 400
+# Range: 0 ~ 1728000
+shadowFailureCooldownTicks = 400
+#Per-victim grace period after a successful theft, in ticks
+#(default 1200 = 60 s). In-memory, tick-based only.
+#Range: 0 ~ 1728000.
+# Default: 1200
+# Range: 0 ~ 1728000
+shadowVictimProtectionTicks = 1200
+#Per-target alert window after a failed attempt (exposure),
+#in ticks (default 100 = 5 s). While active the target is
+#considered alerted (-0.20 success chance).
+#In-memory, tick-based only. Range: 0 ~ 1728000.
+# Default: 100
+# Range: 0 ~ 1728000
+shadowAlertTicks = 100
+#New-player protection: a player target whose verified
+#play time (Stats.PLAY_TIME, server ticks) is below this
+#value is protected from shadow theft.
+#Default 72000 = 1 hour. Range: 0 ~ 1728000.
+# Default: 72000
+# Range: 0 ~ 1728000
+shadowNewPlayerProtectionTicks = 72000
