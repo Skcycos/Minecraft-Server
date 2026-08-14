@@ -371,6 +371,44 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 50
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">50</span>
+    <div>
+      <h2 class="edition-title">gitignore 排除测试产物与本地杂项</h2>
+      <p class="edition-meta">
+        <span>7380ab52</span>
+        <span class="dot">·</span>
+        <span>08-14 18:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🧹 仓库维护 · 无玩法影响</span>
+
+    <div class="pull">验收脚本输出、部署前备份、本地开发目录与未启用模组文件统一加入忽略规则，工作区不再出现无关未跟踪文件。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">运行产物</span>
+        <span class="item-value">Server/accept*.out/.pid 与 Server/smoke*.out/.pid 全部忽略</span>
+      </li>
+      <li>
+        <span class="item-label">备份与本地</span>
+        <span class="item-value">Server/backup-*/、/.gradle-home/、/tmp/、/mod develop/源码参考/ 不再入库</span>
+      </li>
+      <li>
+        <span class="item-label">未启用模组</span>
+        <span class="item-value">Server/mods/*.disabled 与 *副本*.jar 忽略；已跟踪文件（如 tacz 停用占位）不受影响</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 49
      ============================================================ -->
 
