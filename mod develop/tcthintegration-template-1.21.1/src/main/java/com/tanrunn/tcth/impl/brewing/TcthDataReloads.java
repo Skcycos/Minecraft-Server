@@ -34,6 +34,11 @@ public final class TcthDataReloads {
         event.addListener(new DishTierManager());
         // brewer per-item tier mapping (phase 7B.1).
         event.addListener(new BeverageTierManager());
+        // shadow_loot definitions (entity loot, 8D.1 §3, 8D.3.1 §1): a NEW
+        // bound listener per reload, carrying the RegistryAccess frozen for
+        // THIS reload (initial startup and /reload share the exact path).
+        event.addListener(new com.tanrunn.tcth.impl.shadow.ShadowLootReloadListener(
+                event.getRegistryAccess()));
     }
 
     /** Test hook: resets the idempotency flag. */

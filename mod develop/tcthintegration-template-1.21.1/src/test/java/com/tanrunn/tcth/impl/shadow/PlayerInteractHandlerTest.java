@@ -31,6 +31,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -97,6 +98,113 @@ class PlayerInteractHandlerTest {
 
     private PlayerInteractEvent.EntityInteract event(ServerPlayer player, InteractionHand hand, Entity target) {
         return new PlayerInteractEvent.EntityInteract(player, hand, target);
+    }
+
+    // ---- 8D.1 entity split ----
+
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    private net.minecraft.world.entity.EntityType<?> entityType() {
+        return (net.minecraft.world.entity.EntityType) net.minecraft.world.entity.EntityType.COW;
+    }
+
+    private Entity nonPlayerTarget() {
+        Entity entity = mock(Entity.class);
+        when(entity.getUUID()).thenReturn(UUID.randomUUID());
+        when(entity.isAlive()).thenReturn(true);
+        when(entity.isRemoved()).thenReturn(false);
+        when(entity.level()).thenReturn(level);
+        when(entity.blockPosition()).thenReturn(new BlockPos(5, 5, 5));
+        org.mockito.Mockito.doReturn(entityType()).when(entity).getType();
+        when(entity.getBoundingBox()).thenReturn(new net.minecraft.world.phys.AABB(0, 0, 0, 1, 1, 1));
+        when(thief.distanceTo(entity)).thenReturn(2.0f);
+        return entity;
+    }
+
+    @Test
+    void entityTargetRoutesToTheEntityCoordinator() {
+        ShadowEntityAttemptCoordinator entityCoordinator = mock(ShadowEntityAttemptCoordinator.class);
+        when(entityCoordinator.attempt(any())).thenReturn(new ShadowEntityAttemptCoordinator.Result(
+                ShadowTheftOutcome.FRAMEWORK_DISABLED, UUID.randomUUID(), false,
+                ShadowTheftReceipt.empty(), null,
+                ResourceLocation.fromNamespaceAndPath("minecraft", "cow")));
+        PlayerInteractHandler.setEntityCoordinatorSupplierForTesting(() -> entityCoordinator);
+        Entity entity = nonPlayerTarget();
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, entity));
+        org.mockito.ArgumentCaptor<ShadowAttemptContext> captor =
+                org.mockito.ArgumentCaptor.forClass(ShadowAttemptContext.class);
+        verify(entityCoordinator).attempt(captor.capture());
+        assertEquals(com.tanrunn.tcth.api.shadow.ShadowTargetKind.ENTITY, captor.getValue().targetKind());
+        assertEquals(ResourceLocation.fromNamespaceAndPath("minecraft", "cow"),
+                captor.getValue().targetType());
+        assertEquals(entity.getUUID(), captor.getValue().targetId());
+        verify(coordinator, never()).attempt(any());
+    }
+
+
+    // ---- 8D.1.3 entity feedback matrix: every outcome ----
+
+    @Test
+    void entityFeedbackMatrixCoversEveryOutcome() {
+        ShadowEntityAttemptCoordinator entityCoordinator = mock(ShadowEntityAttemptCoordinator.class);
+        PlayerInteractHandler.setEntityCoordinatorSupplierForTesting(() -> entityCoordinator);
+        Entity entity = nonPlayerTarget();
+        java.util.Map<ShadowTheftOutcome, Integer> expectMessages = new java.util.LinkedHashMap<>();
+        expectMessages.put(ShadowTheftOutcome.FRAMEWORK_DISABLED, 0);
+        expectMessages.put(ShadowTheftOutcome.INVALID_CONTEXT, 0);
+        expectMessages.put(ShadowTheftOutcome.DUPLICATE, 0);
+        expectMessages.put(ShadowTheftOutcome.SUCCESS, 1);
+        expectMessages.put(ShadowTheftOutcome.NO_CANDIDATE, 1);
+        expectMessages.put(ShadowTheftOutcome.PROTECTED, 1);
+        expectMessages.put(ShadowTheftOutcome.COOLDOWN, 1);
+        expectMessages.put(ShadowTheftOutcome.FAILED_ROLL, 1);
+        expectMessages.put(ShadowTheftOutcome.TRANSFER_FAILED, 1);
+        expectMessages.put(ShadowTheftOutcome.FAILED_CLEAN, 1);
+        expectMessages.put(ShadowTheftOutcome.AUDIT_FAILED, 1);
+        expectMessages.put(ShadowTheftOutcome.ROLLED_BACK, 1);
+        expectMessages.put(ShadowTheftOutcome.RECOVERY_REQUIRED, 1);
+        for (ShadowTheftOutcome outcome : expectMessages.keySet()) {
+            org.mockito.Mockito.reset(entityCoordinator);
+            org.mockito.Mockito.clearInvocations(thief);
+            ShadowTheftReceipt receipt = outcome == ShadowTheftOutcome.SUCCESS
+                    ? ShadowTheftReceipt.item(
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "cobblestone"), 1)
+                    : ShadowTheftReceipt.empty();
+            when(entityCoordinator.attempt(any())).thenReturn(new ShadowEntityAttemptCoordinator.Result(
+                    outcome, UUID.randomUUID(), false, receipt, null,
+                    ResourceLocation.fromNamespaceAndPath("minecraft", "cow")));
+            PlayerInteractEvent.EntityInteract evt = event(thief, InteractionHand.MAIN_HAND, entity);
+            PlayerInteractHandler.onEntityInteract(evt);
+            int expected = expectMessages.get(outcome);
+            verify(thief, times(expected)).sendSystemMessage(any());
+            if (outcome == ShadowTheftOutcome.FRAMEWORK_DISABLED
+                    || outcome == ShadowTheftOutcome.INVALID_CONTEXT) {
+                assertFalse(evt.isCanceled(), outcome + " must NOT cancel the interaction");
+            } else {
+                assertTrue(evt.isCanceled(), outcome + " must cancel the interaction");
+            }
+        }
+    }
+
+
+    @Test
+    void playerTargetStillRoutesToThePlayerCoordinator() {
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, victim));
+        verify(coordinator).attempt(any());
+    }
+
+    @Test
+    void clientSideEntityInteractIsIgnored() {
+        when(level.isClientSide()).thenReturn(true);
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, nonPlayerTarget()));
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
+    void entityTargetWithUnregisteredTypeIsIgnored() {
+        Entity entity = nonPlayerTarget();
+        when(entity.getType()).thenReturn(mock(net.minecraft.world.entity.EntityType.class));
+        PlayerInteractHandler.onEntityInteract(event(thief, InteractionHand.MAIN_HAND, entity));
+        verify(coordinator, never()).attempt(any());
     }
 
     @Test

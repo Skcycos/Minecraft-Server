@@ -51,6 +51,9 @@ public enum ShadowTheftOutcome {
     /** The transfer failed (prepare or commit) and nothing was committed; no
      *  other type was drawn. */
     TRANSFER_FAILED,
+    /** A failed entity loot whose delivered assets AND marker were fully
+     *  restored (8D.1 §5). */
+    FAILED_CLEAN,
     /** The audit is disabled or unavailable (or the pre-write record could
      *  not be written) and the attempt was refused <em>before</em> any
      *  provider / random / asset operation. No receipt, no event: this is a

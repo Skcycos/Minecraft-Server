@@ -12,6 +12,7 @@ import com.tanrunn.tcth.impl.debug.ShadowDebug;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -57,6 +58,8 @@ public final class PlayerInteractHandler {
 
     private static Supplier<ShadowAttemptCoordinator> coordinatorSupplier =
             ShadowAttemptCoordinator::defaults;
+    private static Supplier<ShadowEntityAttemptCoordinator> entityCoordinatorSupplier =
+            ShadowEntityAttemptCoordinator::defaults;
     private static boolean initialized = false;
 
     private PlayerInteractHandler() {
@@ -83,6 +86,8 @@ public final class PlayerInteractHandler {
     }
 
     private static void attempt(PlayerInteractEvent.EntityInteract event) {
+        // Public entry checks (8D.1 §4) — target-independent, completed before
+        // the PLAYER/ENTITY split.
         if (event.getSide() != LogicalSide.SERVER) {
             return;
         }
@@ -104,29 +109,40 @@ public final class PlayerInteractHandler {
         if (!thief.getMainHandItem().isEmpty() || !thief.getOffhandItem().isEmpty()) {
             return;
         }
-        if (!(event.getTarget() instanceof ServerPlayer victim)) {
+        if (!(event.getLevel() instanceof ServerLevel level) || level.isClientSide()) {
             return;
         }
+        Entity target = event.getTarget();
+        if (target == null || !target.isAlive() || target.isRemoved()
+                || target.level() != level) {
+            return;
+        }
+        if (!thief.canInteractWithEntity(target.getBoundingBox(), thief.entityInteractionRange())) {
+            return;
+        }
+        boolean hasLineOfSight;
+        try {
+            hasLineOfSight = thief.hasLineOfSight(target);
+        } catch (RuntimeException | LinkageError e) {
+            hasLineOfSight = false;
+        }
+        // ---- split: PLAYER target → existing player path (unchanged);
+        //      any other entity → the entity loot path (8D.1 §4) ----
+        if (target instanceof ServerPlayer victim) {
+            attemptPlayer(event, thief, victim, level, hasLineOfSight);
+        } else {
+            attemptEntity(event, thief, target, level, hasLineOfSight);
+        }
+    }
+
+    /** The unchanged 8C.x player-target path. */
+    private static void attemptPlayer(PlayerInteractEvent.EntityInteract event, ServerPlayer thief,
+                                      ServerPlayer victim, ServerLevel level, boolean hasLineOfSight) {
         if (victim == thief || victim instanceof FakePlayer) {
             return;
         }
         if (!victim.isAlive() || victim.isDeadOrDying()) {
             return;
-        }
-        if (!(event.getLevel() instanceof ServerLevel level) || level.isClientSide()) {
-            return;
-        }
-        if (victim.level() != level) {
-            return;
-        }
-        if (!thief.canInteractWithEntity(victim.getBoundingBox(), thief.entityInteractionRange())) {
-            return;
-        }
-        boolean hasLineOfSight;
-        try {
-            hasLineOfSight = thief.hasLineOfSight(victim);
-        } catch (RuntimeException | LinkageError e) {
-            hasLineOfSight = false;
         }
         ShadowAttemptContext context = new ShadowAttemptContext(
                 UUID.randomUUID(), thief, ShadowTargetKind.PLAYER, victim.getUUID(), null,
@@ -139,6 +155,70 @@ public final class PlayerInteractHandler {
                     result.failureReason() != null ? result.failureReason() : "-");
         }
         consume(event, context, result);
+    }
+
+    /** The 8D.1 entity-target loot path: gate combination does NOT read
+     *  shadowPlayerTheftEnabled (checked inside the entity coordinator). */
+    private static void attemptEntity(PlayerInteractEvent.EntityInteract event, ServerPlayer thief,
+                                      Entity target, ServerLevel level, boolean hasLineOfSight) {
+        ResourceLocation entityType = level.registryAccess()
+                .registryOrThrow(net.minecraft.core.registries.Registries.ENTITY_TYPE)
+                .getKey(target.getType());
+        if (entityType == null) {
+            return; // unregistered type: cannot be a loot target
+        }
+        ShadowAttemptContext context = new ShadowAttemptContext(
+                UUID.randomUUID(), thief, ShadowTargetKind.ENTITY, target.getUUID(), entityType,
+                level, target.blockPosition().immutable(), level.getGameTime(), false,
+                thief.distanceTo(target), hasLineOfSight);
+        ShadowEntityAttemptCoordinator.Result result =
+                entityCoordinatorSupplier.get().attempt(context);
+        if (ShadowDebug.isEnabled()) {
+            TCTHIntegration.LOGGER.info("[TCTH][SHADOW] entity={} event={} outcome={} reason={}",
+                    entityType, result.eventId(), result.outcome(),
+                    result.failureReason() != null ? result.failureReason() : "-");
+        }
+        consumeEntity(event, context, result);
+    }
+
+    /** Consumes an entity-path result: cancel for every attempt-stage outcome,
+     *  exactly one translatable feedback, DUPLICATE silent. */
+    private static void consumeEntity(PlayerInteractEvent.EntityInteract event,
+                                      ShadowAttemptContext context,
+                                      ShadowEntityAttemptCoordinator.Result result) {
+        ShadowTheftOutcome outcome = result.outcome();
+        if (outcome == ShadowTheftOutcome.FRAMEWORK_DISABLED
+                || outcome == ShadowTheftOutcome.INVALID_CONTEXT) {
+            return; // gates off or invalid context: no cancel, no feedback
+        }
+        event.setCanceled(true);
+        event.setCancellationResult(InteractionResult.SUCCESS);
+        ServerPlayer thief = context.thief();
+        switch (outcome) {
+            case SUCCESS -> thief.sendSystemMessage(Component.translatable(
+                    "tcth.shadow.feedback.success.self.item",
+                    result.receipt().itemCount(),
+                    Component.literal(String.valueOf(result.receipt().itemId()))));
+            case NO_CANDIDATE ->
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.no_candidate"));
+            case PROTECTED ->
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.protected"));
+            case COOLDOWN ->
+                    // existing cooldown translation (8D.1.3 §5)
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.cooldown"));
+            case FAILED_ROLL ->
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.fail.self"));
+            case TRANSFER_FAILED ->
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.transfer_failed"));
+            case FAILED_CLEAN ->
+                    // explicit technical failure feedback (8D.1.3 §5)
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.technical_error"));
+            case AUDIT_FAILED, ROLLED_BACK, RECOVERY_REQUIRED ->
+                    thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.technical_error"));
+            case DUPLICATE, FRAMEWORK_DISABLED, INVALID_CONTEXT -> {
+                // DUPLICATE cancels but is silent; gates off never reach here
+            }
+        }
     }
 
     /**
@@ -294,8 +374,14 @@ public final class PlayerInteractHandler {
         coordinatorSupplier = supplier;
     }
 
+    static void setEntityCoordinatorSupplierForTesting(
+            Supplier<ShadowEntityAttemptCoordinator> supplier) {
+        entityCoordinatorSupplier = supplier;
+    }
+
     static void resetForTesting() {
         initialized = false;
         coordinatorSupplier = ShadowAttemptCoordinator::defaults;
+        entityCoordinatorSupplier = ShadowEntityAttemptCoordinator::defaults;
     }
 }

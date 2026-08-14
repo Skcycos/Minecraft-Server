@@ -7,6 +7,296 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 8D.3.2 — pre-commit finalization (BUILD-only, version stays 0.2.8)
+
+- **Atomic throttle**: the decision now runs inside
+  `ConcurrentHashMap.compute` and `logger.warn` executes only after the
+  atomic pass — concurrent same-template callers log exactly once
+  (multi-thread start-gate test); identical negative clock values (same
+  `Long.MIN_VALUE`) are throttled (zero difference); `Math.subtractExact`
+  guards overflow (overflow treated as a full window), clock rollback passes
+  and resets; all previous boundary tests kept.
+- **Single parsing implementation**: `ShadowLootReloadListener.prepare`
+  delegates to `ShadowLootLoader.prepare(manager)` (duplicate code and dead
+  imports removed) — production and the priority/no-fallback tests share it.
+- **Listener-based hardening tests**: highest-priority override through the
+  real listener, corrupt highest-priority no-fallback, two distinct non-null
+  registries in consecutive reloads without cross-talk, null registry keeps
+  clearing old definitions.
+- Full `./gradlew clean build`: **suites=145 tests=1443 failures=0
+  errors=0 skipped=0** (was 1436 at 8D.3.1). New JAR SHA recorded; the
+  server keeps the INITIAL-RELOAD-PASSED `2d843575…` 0.2.8 build — the new
+  artifact is BUILD PASS only; PLAYER LIVE conclusions unchanged; 8E not
+  entered; no deploy/commit/push.
+
+### 8D.3.1 — initial-reload registry source & log throttling fix (0.2.8)
+
+- **Root cause corrected**: 8D.3's empty definitions on first startup came
+  from `ShadowLootLoader.apply()` reading the registry via
+  `ServerLifecycleHooks.getCurrentServer()` (null during the initial resource
+  reload) — the unproven "global_packs not yet in the resource stack" claim
+  is withdrawn. The loader now uses `AddReloadListenerEvent.getRegistryAccess()`
+  bound to a per-reload immutable listener (`ShadowLootReloadListener`);
+  initial startup and `/reload` share one path; null/throwing registries
+  still fail closed to an empty map; priority/containsKey/hard-exclusion/
+  atomic-swap semantics kept. A low-rate INFO proves the initial load
+  (`Shadow loot definitions loaded: N entities`).
+- **ShadowLogThrottle fixed**: the single global timestamp with
+  `Long.MIN_VALUE` overflow suppressed the FIRST warning permanently
+  (8D.3's "0 TCTH WARN" evidence is void and re-verified here). Now
+  per-format buckets, first message passes, 60 s window per template, clock
+  rollback and long boundaries handled without overflow, bounded cache,
+  full reset. 7 boundary tests.
+- **Loading behaviour tests** (behavioural, not string scans): initial
+  reload with a bound event registry, two reloads with distinct registries
+  without cross-talk, null → cleared, current-manager listener reuse,
+  TcthDataReloads reads the event registry and registers the bound listener.
+- Full `./gradlew clean build`: **suites=145 tests=1436 failures=0
+  errors=0 skipped=0**. JAR pure (no third-party class / nested JAR / no
+  shadow_loot JSON in main resources). PLAYER LIVE NOT REPEATED (8D.3
+  evidence stands); 8E not entered; no commit/push.
+
+### 8D.3 — entity shadow-loot controlled deployment & online acceptance
+
+- Deployed `tcth-0.2.7.jar` (`f6f6d3ec…`) to `Server/mods` + AutoModpack
+  (hashes identical) and the first shadow-loot preset
+  (`docs/presets/...` → `Server/global_packs/required_data/tcth-shadow-entity-loot`).
+- **LOAD PASS** (RUN1): Done 7.6s, 0 FATAL, 0 TCTH ERROR; data pack loaded;
+  all four shadow gates OFF; clean stop.
+- **ENTITY PLAYER LIVE PASS** (RUN2, one real player): chicken→egg×1,
+  pig→porkchop×1, rabbit→rabbit×1 all SUCCESS with matching audit eventIds;
+  repeated interaction → silent DUPLICATE (0 gain); FAILED_ROLL delivers
+  nothing and triggers the failure cooldown (3× COOLDOWN while active);
+  cow/sheep (undefined), zombie (L3) and Wither (hard-excluded) all →
+  NO_CANDIDATE with 0 audit records; `shadowPlayerTheftEnabled=false` held
+  the whole session.
+- **Restart persistence PASS** (RUN3): the looted t1 chicken (UUID d93c1426)
+  stayed blocked after a restart — audit unchanged, silent DUPLICATE.
+- Full-inventory delivery refusal was SKIPPED by the operator (the empty-hand
+  entry condition makes the "full inventory" state unreachable for the
+  trigger; the refusal itself is unit-tested).
+- **Known issue recorded**: `global_packs` data packs are not yet in the
+  resource stack at the first reload — `shadow_loot` definitions were empty
+  until a manual `/reload` (loader works afterwards). Fix pending.
+- Config restored to all gates OFF; server stopped; no 8E, no commit/push.
+
+### 8D.2.3 — pre-commit micro-finalization (BUILD-only)
+
+- **CSV parser AFTER_QUOTE state**: after a closing quote only a comma or
+  the end of the line is legal — `"value"x`, `"value" ` and a second quote
+  right after closing are all rejected; the standard `""` escape is kept.
+  Positive (escaped literal quote) and negative (trailing characters) tests
+  added.
+- **Docs**: the phase-8d.2 file list now says "3 实体 JSON"; the old
+  5-item conclusions appear only inside the labelled HISTORY block; economic
+  decisions, drop JSONs, values and pack_format are untouched.
+- Full `./gradlew clean build`: **suites=144 tests=1425 failures=0
+  errors=0 skipped=0** (was 1423 at 8D.2.2). PLAYER LIVE NOT TESTED; 8E not
+  entered; no deploy/commit/push.
+
+### 8D.2.2 — data generator & docs finalization (BUILD-only)
+
+- **Strict decision enum**: only APPROVED / REJECTED; case variants, stray
+  whitespace (decisions are NOT trimmed) and any other content fail fast.
+- **Whole-table entity uniqueness**: every row's entityId must exist and be
+  valid; a REJECTED row for an already-APPROVED entity also fails; REJECTED
+  rows may leave the candidate item/count empty but a filled item must be a
+  valid ResourceLocation.
+- **Authoritative ResourceLocations**: validated via
+  `ResourceLocation.tryParse`, explicit `namespace:path`, strictly lowercase,
+  no `..`/absolute paths; legal nested paths are supported safely.
+- **Standard CSV parsing**: `""` quote escapes; unclosed quotes, quotes in
+  illegal positions and column counts != 10 all fail fast.
+- **Docs finalized**: phase-8d.1 §13 rewritten to the 8D.2.1/8D.2.2
+  conclusions (the old 5-item conclusions live in an explicitly labelled
+  HISTORY block); the 8d.2 file list says 3 entity JSONs; rabbit=12 stays a
+  guessed price — keeping rabbit is an operator-accepted low-risk pilot
+  decision, not authoritative pricing.
+- Full `./gradlew clean build`: **suites=144 tests=1423 failures=0
+  errors=0 skipped=0** (was 1418 at 8D.2.1). Two-run generation SHA identical;
+  JAR pure, no shadow_loot in main resources. PLAYER LIVE NOT TESTED; 8E not
+  entered; no deploy/commit/push.
+- **The 8D.2.1 BUILD PASS is finalized by this revision.**
+
+### 8D.2.1 — first shadow-loot preset blocker fixes (BUILD-only)
+
+- **pack_format 48** in the generator and the checked-in pack.mcmeta, with an
+  exact-assert test (not just mutual consistency).
+- **Audit facts corrected**: prices are graded as defined (eggs=5, raw_pork=15)
+  vs guessed (raw_rabbit=12, leather=8) vs unpriced (white_wool); wolf/cat
+  drop NO items (removed the wrong "bones" claim); ghast_tear IS renewable
+  (slow farm) but still a rare material; pig/rabbit/egg can enter the
+  Bountiful demand chain via cooking (indirect loop, low risk — no "no loop"
+  claim). cow→leather and sheep→white_wool re-evaluated to REJECTED
+  (guessed price / unpriced + the schema does not distinguish wool colours);
+  the first preset keeps chicken/pig/rabbit (3) — no forced approvals.
+- **Generator fail-fast**: header/column/decision/ResourceLocation/count==1/
+  duplicate entityId/path-traversal are all strictly validated; a malformed
+  APPROVED row throws instead of being silently skipped; generated JSON count
+  must equal the APPROVED count.
+- **Cleanup boundary**: stale removal applies ONLY to
+  `data/tcth/shadow_loot/`; pack.mcmeta is rewritten; READMEs and other data
+  trees (e.g. a future `data/tcth/jobsplus/`) are preserved.
+- **Wording**: the registry test asserts existence in the VANILLA bootstrap
+  registries only — not the full server mod registry; the first preset is
+  all-`minecraft:` namespaced (stated).
+- Full `./gradlew clean build`: **suites=144 tests=1418 failures=0
+  errors=0 skipped=0** (was 1413 at 8D.2). PLAYER LIVE NOT TESTED; 8E not
+  entered; no deploy/commit/push.
+- **The 8D.2 BUILD PASS is superseded by this revision.**
+
+### 8D.2 — shadow-loot economy audit & first data preset (BUILD-only)
+
+- **Economy audit** against the server's real registries, the raw-material
+  price CSV (raw_pork=15 / raw_rabbit=12 / eggs=5 / bones=8 copper anchors),
+  Bountiful bounty pools (demand is cooked foods, not raw materials) and
+  Lightman's Currency config → `docs/影窃者生物掉落经济审计表.csv`.
+- **APPROVED (5)**: cow→leather, sheep→white_wool, chicken→egg, pig→porkchop,
+  rabbit→rabbit — all 8D.0 L1/L2, renewable, ≤15 copper, no bounty-farm loop.
+  **REJECTED (5)**: wolf/cat (no suitable candidate), iron_golem/blaze/ghast
+  (core materials / rare / non-renewable). L3, Warden, Elder Guardian, Wither,
+  Ender Dragon stay banned (code-level + data).
+- **First preset** `docs/presets/tcth-shadow-entity-loot/` (NOT in the main
+  JAR; no shadow_thief job/xp/ability tree): single pool, single entry,
+  count=1, no currency/containers/equipment/enchants/dynamic components/
+  rare materials.
+- **Deterministic generator** (`ShadowLootPresetGenerator`, test-only) + 8
+  preset-gate tests: byte-identical two-run SHA, stale cleanup, checked-in
+  preset == generator output, production schema, real-registry existence,
+  hard-exclusion/L3 = 0, count = 1, no shadow_loot JSON in main resources.
+- Full `./gradlew clean build`: **suites=144 tests=1413 failures=0
+  errors=0 skipped=0** (was 1405 at 8D.1.3). PLAYER LIVE NOT TESTED; 8E not
+  entered; no deploy/commit/push.
+
+### 8D.1.3 — final entity-transaction blocker fixes (BUILD-only)
+
+- **Post-commit clock hole closed**: `buildAuditRecord` takes the timestamp
+  explicitly; ONE stable positive time snapshot is taken before the PENDING
+  audit and reused everywhere — the time source is never read again after the
+  asset commit. Any post-commit construction/clock failure rolls back the
+  item and marker and returns ROLLED_BACK (or RECOVERY_REQUIRED with the
+  exact receipt) — NEVER INVALID_CONTEXT. Sequence test: positive then
+  throwing clock → SUCCESS, one clock read, no "assets moved but
+  INVALID_CONTEXT".
+- **Post-commit settlement hardened**: the SUCCESS path reuses the
+  attempt-initial `settings`; cooldown/idempotency/event settlement is fully
+  exception-isolated and never overrides SUCCESS/ROLLED_BACK/
+  RECOVERY_REQUIRED or the receipt (regression tests with throwing trackers).
+- **SlotItemTransaction.rollback** re-reads and classifies even when
+  `setItem` throws (before → PRE success, after → COMMITTED failure,
+  else FOREIGN); test: a rollback write that lands despite throwing restores
+  cleanly.
+- **Path determinism**: only `data/tcth/shadow_loot/...` is authoritative;
+  other outer namespaces are ignored (no traversal-order race with the
+  canonical files); LOW→HIGH priority and no-fallback semantics kept;
+  cross-namespace conflict tests.
+- **Entity feedback matrix**: `consumeEntity` now handles COOLDOWN (existing
+  translation) and FAILED_CLEAN (explicit technical failure); a full-outcome
+  matrix test verifies cancel flags AND `sendSystemMessage` counts.
+- Full `./gradlew clean build`: **suites=143 tests=1405 failures=0
+  errors=0 skipped=0** (was 1399 at 8D.1.2). PLAYER LIVE NOT TESTED.
+- **The 8D.1.2 BUILD PASS is superseded by this revision.** Still BUILD-only.
+
+### 8D.1.2 — pre-commit blocker hardening (BUILD-only)
+
+- **SlotItemTransaction real states PRE/COMMITTED/FOREIGN**: commit always
+  re-reads the slot even when getItem/setItem throws (equal before → PRE,
+  equal after → COMMITTED, else FOREIGN); exceptions never escape to the
+  coordinator; rollback only restores from a fully COMMITTED slot and NEVER
+  overwrites FOREIGN; no-op/wrong writes never report success.
+- **AttachmentAccess strict transitions**: reads use `getExistingDataOrNull`
+  (no AVAILABLE attachment created on read); restore requires the current
+  state to equal the expected one written by this transaction (wrong state,
+  no-op removal, exceptions all fail); an unclear state keeps the blocking
+  marker — entities are never reopened.
+- **Independent item+marker recovery** (no `&&` short-circuit), both verified
+  by re-reads before FAILED_CLEAN; a FINAL SUCCESS audit failure with a
+  successful rollback is now ROLLED_BACK (failure → RECOVERY_REQUIRED with
+  receipt); `finaliseClean` failing is never claimed as a clean close.
+- **Loader**: null/throwing registry access publishes an EMPTY map
+  (fail-closed); coordinator uses containsKey before get (Registry.get falls
+  back to a default entry); weight/min/max must be mathematical integers
+  (1.5/NaN/overflow rejected); resource-stack order wording corrected
+  (highest priority = last element).
+- **Result.eventPosted**: SUCCESS carries the real postEvent boolean; failure
+  paths are false. **Clock**: unavailable/non-positive time refuses BEFORE
+  any PENDING audit record.
+- Full `./gradlew clean build`: **suites=143 tests=1399 failures=0
+  errors=0 skipped=0** (was 1389 at 8D.1.1). PLAYER LIVE NOT TESTED.
+- **The 8D.1.1 BUILD PASS is superseded by this revision.**
+
+### 8D.1.1 — entity transaction & data-loading blocker fixes (BUILD-only)
+
+- **Explicit-slot delivery** (`SlotItemTransaction`): one main slot that can
+  fully receive the stack; snapshots of before/after/delivery stacks; commit
+  requires the slot to equal beforeStack and the re-read to equal afterStack;
+  rollback only accepts the afterStack slot (external mutations refuse and
+  never delete other matching items); PRE-phase rollback touches nothing;
+  `Inventory.add` and scan-and-shrink are gone. Attachment and item
+  restoration are always attempted independently (no `&&` short-circuit);
+  a failed PENDING-marker restore is RECOVERY_REQUIRED.
+- **Audit state**: `auditEnabled` checked before ANY random/marker/asset op;
+  cleanly recoverable failures after PENDING write a FINAL FAILED_CLEAN (no
+  PENDING residue); only the FINAL write itself failing may keep PENDING;
+  RECOVERY_REQUIRED with a known delivered count carries the receipt. Every
+  failure path asserts outcome, audit state+appends, attachment state and
+  inventory content.
+- **Data-pack semantics**: highest-priority resource only (last element of
+  the resource stack; corrupt JSON or invalid schema at the top never falls
+  back); reload-time registry validation via `containsKey` (entity registered,
+  every item registered, non-AIR, non-empty stack) — any unknown entry rejects
+  the WHOLE file; the coordinator never discovers unknown items after the
+  random draw.
+- **Strict attachment schema**: count 1..4; per-state field whitelists
+  (AVAILABLE/CORRUPT = version+state; PENDING/LOOTED exact sets); unknown
+  fields, zero/negative timestamps, bad RLs and future/zero/negative versions
+  all read as CORRUPT without throwing; write/read symmetric (required fields
+  always written).
+- **Entity context & anti-farm**: real entity type re-resolved and must equal
+  context.targetType; hard exclusions keyed on the REAL type; entity path now
+  uses the global cooldowns + attempt idempotency (eventId + thief+target+tick,
+  idempotency checked before cooldowns like the player path); failure cooldown
+  blocks instant re-rolls; LOOTED marker stays the permanent per-entity
+  authority.
+- **Reaction fix**: `setTarget(thief)` + `getTarget()==thief` comparison only
+  for explicit hostile Enemy Mob/Monster; animals stay DEFERRED; cancelled
+  reactions never change the outcome.
+- **Fixed random order**: gates/audit/protection/real-type/attachment →
+  definition → pool(1) → entry(1) → count(1, even min==max) → slot feasibility
+  → success roll(1) → PENDING audit → PENDING marker → commit → LOOTED marker
+  → FINAL audit → single event.
+- Full `./gradlew clean build`: **suites=143 tests=1389 failures=0
+  errors=0 skipped=0** (was 1378 at 8D.1). PLAYER LIVE NOT TESTED.
+- **The 8D.1 initial BUILD PASS is superseded by this revision.**
+
+### 8D.1 — entity shadow-loot state, data loading & transaction framework (BUILD-only)
+
+- **Authoritative attachment `tcth:shadow_loot_state`** (AVAILABLE / PENDING /
+  LOOTED / CORRUPT) with a strict custom `IAttachmentSerializer` that never
+  throws (corrupt payloads read as CORRUPT, never "skipped" into missing);
+  PENDING/LOOTED/CORRUPT all block further attempts; no `copyOnDeath`; the
+  marker is the ONLY authority for "may this entity be looted again".
+- **`shadow_loot` data loader**: strict schema (1..8 pools, 1..32 entries,
+  weight 1..1,000,000 with long sums, min/max count 1..4), atomic reload with
+  stale cleanup and throttled WARN, per-file fail-closed, code-level hard
+  exclusions (Wither / Ender Dragon / Elder Guardian / Warden), one random
+  call per layer (pool → entry → count).
+- **PLAYER/ENTITY split** in `PlayerInteractHandler`: public entry checks
+  first, then the unchanged player path vs the new entity path whose gate
+  combination NEVER reads `shadowPlayerTheftEnabled`.
+- **Entity item transaction** (`EntityLootTransferPlan` + 10-step coordinator):
+  full-stack delivery only, PENDING audit → attachment PENDING (verified) →
+  deliver → attachment LOOTED (verified) → FINAL audit → single event;
+  rollback-once rules, FAILED_CLEAN / RECOVERY_REQUIRED, PENDING never
+  auto-restored, no crash-level exactly-once claim (non-atomic save windows
+  documented), no partial delivery, no ground drops.
+- **Hostile reaction**: `Mob.setTarget` + read-back on failure (cancelled
+  reactions never affect the transaction); non-Mob skipped; animal panic stays
+  DEFERRED; no boss/high-risk strengthening.
+- NO formal `shadow_loot` reward data ships (tests use in-memory JSON).
+- Full `./gradlew clean build`: **suites=143 tests=1378 failures=0
+  errors=0 skipped=0** (was 1344 at 8C.3.1). PLAYER LIVE NOT TESTED.
+
 ### 8C.3.1 — Mixin FATAL fix, pre-commit finalization (BUILD-only, not deployed)
 
 - **Root cause (from 8C.3 first deployment):** the `tcth-0.2.7.jar` built at

@@ -48,7 +48,8 @@ class ShadowBoundaryGuardTest {
                 "PlayerAssetTransferExecutor.java", "EffectPlan.java", "ShadowFeasibility.java",
                 "PlayerInteractHandler.java"));
         ALLOWED_FILES.put("net.minecraft.world.entity.player.Inventory",
-                List.of("PlayerReadonlyCandidateProvider.java", "PlayerAssetTransferExecutor.java"));
+                List.of("PlayerReadonlyCandidateProvider.java", "PlayerAssetTransferExecutor.java",
+                        "SlotItemTransaction.java"));
         ALLOWED_FILES.put("getFoodData", List.of("PlayerReadonlyCandidateProvider.java",
                 "PlayerAssetTransferExecutor.java", "ShadowFeasibility.java"));
         ALLOWED_FILES.put("getActiveEffects", List.of("PlayerReadonlyCandidateProvider.java",
@@ -59,7 +60,8 @@ class ShadowBoundaryGuardTest {
         ALLOWED_FILES.put("removeEffect", List.of("PlayerAssetTransferExecutor.java"));
         ALLOWED_FILES.put("forceAddEffect", List.of("PlayerAssetTransferExecutor.java"));
         ALLOWED_FILES.put("heal(", List.of("PlayerAssetTransferExecutor.java"));
-        ALLOWED_FILES.put("setItem", List.of("PlayerAssetTransferExecutor.java"));
+        ALLOWED_FILES.put("setItem", List.of("PlayerAssetTransferExecutor.java",
+                "SlotItemTransaction.java"));
         ALLOWED_FILES.put("removeItem", List.of("PlayerAssetTransferExecutor.java"));
     }
 

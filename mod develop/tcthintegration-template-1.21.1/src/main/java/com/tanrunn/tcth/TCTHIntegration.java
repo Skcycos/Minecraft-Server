@@ -46,6 +46,9 @@ public class TCTHIntegration {
         // network synchronized).
         CookingSignatureComponents.DATA_COMPONENTS.register(modEventBus);
 
+        // Register the tcth:shadow_loot_state entity attachment (8D.1).
+        com.tanrunn.tcth.impl.shadow.TcthShadowAttachments.ATTACHMENT_TYPES.register(modEventBus);
+
         // Register the conditional Jobs+ module descriptor BEFORE init.
         // The implementation class is only loaded when Jobs+ is installed.
         CompatLoader.register("jobsplus",

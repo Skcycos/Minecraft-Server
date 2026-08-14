@@ -141,7 +141,8 @@ class CookingStatsTrackerTest {
         net.neoforged.neoforge.event.AddReloadListenerEvent evt =
                 Mockito.mock(net.neoforged.neoforge.event.AddReloadListenerEvent.class);
         com.tanrunn.tcth.impl.brewing.TcthDataReloads.onAddReloadListeners(evt);
-        Mockito.verify(evt, Mockito.times(2)).addListener(Mockito.any());
+        // dish tiers + brewer tiers + shadow_loot (8D.1 §3).
+        Mockito.verify(evt, Mockito.times(3)).addListener(Mockito.any());
     }
 
     @Test

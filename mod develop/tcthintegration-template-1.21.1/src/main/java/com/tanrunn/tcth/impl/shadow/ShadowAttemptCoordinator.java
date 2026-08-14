@@ -198,7 +198,7 @@ public final class ShadowAttemptCoordinator {
                 ShadowDailyLimitStore::today);
     }
 
-    private static long newPlayerProtectionTicks() {
+    static long newPlayerProtectionTicks() {
         try {
             return com.tanrunn.tcth.Config.SHADOW_NEW_PLAYER_PROTECTION_TICKS.get();
         } catch (RuntimeException | LinkageError e) {
