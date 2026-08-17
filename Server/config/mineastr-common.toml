@@ -1,0 +1,123 @@
+#是否启用 MineAstr 并连接到 AstrBot。
+#不想转发聊天时改成 false。
+enabled = true
+#AstrBot minecraft 平台适配器的 WebSocket 地址。
+#本机运行 AstrBot 时通常保持 ws://127.0.0.1:8765/ws。
+#AstrBot 在另一台机器时，把 127.0.0.1 改成那台机器的 IP 或域名。
+websocketUrl = "ws://127.0.0.1:8764/ws"
+#AstrBot 插件校验的 Bearer Token。
+#这里的值必须与 AstrBot minecraft 平台适配器中的 token 完全一致。
+#建议把 change-me 改成较长随机字符串，并同时填到 AstrBot 侧。
+token = "tcth20261976400250"
+#发送给 AstrBot 的稳定服务器 ID。
+#只有接入多个 Minecraft 服务器时才需要改；单服通常保持 minecraft。
+serverId = "minecraft"
+#发送给 AstrBot 的服务器显示名称。
+#用于日志和识别，可以写成你的服务器名称。
+serverName = "Minecraft 服务器"
+#服务器官网或介绍页。仅独立服务器会把此地址交给 AstrBot 建立服务器介绍知识库。
+#留空表示禁用；建议使用无登录信息的公网 HTTPS 地址。此项不会显示在单人模式配置界面。
+serverIntroductionUrl = ""
+#AstrBot 消息广播到 Minecraft 时显示的名称。
+#游戏内会显示为 [名称] 回复内容。
+botDisplayName = "AstrBot"
+#WebSocket 断开后的重连间隔，单位为秒。
+#网络不稳定时可以适当调大。
+# Default: 5
+# Range: 1 ~ 300
+reconnectSeconds = 30
+#转发到 AstrBot 的单条玩家聊天最大长度。
+#超过这个长度的消息会被截断。
+# Default: 1000
+# Range: 1 ~ 4096
+maxMessageLength = 1000
+#是否把玩家加入和离开服务器的公开事件推送给 AstrBot。
+#推送包含玩家名和 UUID，但不包含 IP 地址或精确位置。
+enablePlayerPresencePush = true
+#是否把玩家死亡消息推送给 AstrBot。
+#推送的是服务器已经生成的公开死亡消息，不额外发送坐标。
+enablePlayerDeathPush = true
+#是否把玩家完成的公开进度、目标和挑战推送给 AstrBot。
+#隐藏的配方解锁等技术进度不会推送。
+enableAdvancementPush = true
+#是否允许 MineAstr 扫描服务器 Mod、注册表、标签和运行时配方，供 AstrBot 按需检索。
+#扫描结果只包含公开注册数据和配方，不读取世界存档、玩家数据或方块实体 NBT。
+enableKnowledgeScan = true
+#是否允许 AstrBot 查询在线玩家的生命、位置、维度、经验和状态效果。
+enablePlayerStateTool = true
+#是否允许 AstrBot 查询在线玩家的背包、快捷栏、护甲和副手。
+#查询只返回物品 ID、显示名、数量和耐久，不返回完整 NBT。
+enableInventoryTool = true
+#是否允许 AstrBot 查询玩家附近的实体摘要。
+enableNearbyEntitiesTool = true
+#是否允许 AstrBot 分析已加载区域的方块与建筑特征。
+#分析不会强制加载新区块，也不会读取容器内容或方块实体 NBT。
+enableRegionTool = true
+#单次区域特征分析最多扫描多少个方块。
+# Default: 32768
+# Range: 4096 ~ 131072
+regionMaxBlocks = 32768
+#是否统计玩家在各区块的活动时长，以周期性生成服务器地区摘要。
+#服务器提供者负责提供适用的隐私与合规告知；玩家可用 /mineastr tracking optout 退出。
+enableActivityTracking = true
+#玩家活动区块采样间隔（秒）。
+# Default: 60
+# Range: 10 ~ 3600
+activitySampleSeconds = 60
+#活动区块环境摘要采样间隔（分钟）；不会强制加载区块。
+# Default: 30
+# Range: 5 ~ 1440
+environmentSampleMinutes = 30
+#是否在环境摘要采样时统计玩家周边的建筑与机器特征。
+#只扫描已加载区块，不读取容器、告示牌、方块实体 NBT 或精确建筑形状。
+enableAutomaticRegionFeatureScan = true
+#自动地区特征采样的水平半径（格）。
+# Default: 8
+# Range: 2 ~ 24
+automaticRegionScanHorizontalRadius = 8
+#自动地区特征采样的垂直半径（格）。
+# Default: 6
+# Range: 2 ~ 16
+automaticRegionScanVerticalRadius = 6
+#地区活动分析周期（天）。
+# Default: 28
+# Range: 1 ~ 365
+activityAnalysisDays = 28
+#可归属于玩家的原始活动数据保存天数。
+# Default: 84
+# Range: 7 ~ 730
+activityRetentionDays = 84
+#一组相连区块成为活动地区所需的最少累计活动分钟数。
+# Default: 30
+# Range: 1 ~ 10080
+minimumRegionMinutes = 30
+#单个区块进入地区聚类所需的最少累计活动分钟数。
+# Default: 2
+# Range: 1 ~ 1440
+minimumRegionChunkMinutes = 2
+#是否在玩家首次加入以及告知版本变化时显示简要数据告知。
+#关闭内置告知不免除服务器提供者自行履行适用规则的责任。
+enablePrivacyNotice = true
+#加入服务器时显示的简要告知；可使用 \n 换行，最长 2000 字符。
+#支持 {server_name} 和 {retention_days} 占位符。
+privacyNoticeText = "本服使用 MineAstr 按区块统计活动，并摘要采集玩家周边已加载方块的类型与建筑特征，由 AI 生成地区介绍；普通聊天以及玩家上下线、死亡和公开成就事件也可转发给 AstrBot。不读取容器内容、告示牌文字或完整建筑蓝图。原始活动最多保存 {retention_days} 天。使用 /mineastr privacy 查看详情，/mineastr tracking optout 可退出并删除可识别活动数据。"
+#简要告知版本。修改后，所有玩家下次加入时会重新看到告知。
+privacyNoticeVersion = "3"
+#是否允许 AstrBot 请求执行服务器命令。默认关闭。
+#即使启用，仍必须同时通过 trustedCommandUsers 与 allowedCommandRules 检查。
+enableCommandTool = false
+#允许通过 AstrBot 命令工具发起请求的可信用户 ID、Minecraft UUID 或玩家名。
+#匹配不区分大小写；建议优先填写稳定 UUID。空列表表示没有任何可信人员。
+trustedCommandUsers = []
+#命令工具允许执行的规则。普通条目只允许精确命令；以 ' *' 结尾表示允许该前缀及参数。
+#例如 'time query daytime' 只允许这一条；'say *' 允许 say 的任意参数；'*' 明确允许所有命令。
+#默认只开放少量只读命令。
+allowedCommandRules = ["list", "seed", "time query day", "time query daytime", "time query gametime"]
+#命令工具执行命令时使用的权限等级。白名单检查始终优先执行。
+# Default: 4
+# Range: 0 ~ 4
+commandPermissionLevel = 4
+#命令工具允许的最大命令长度。
+# Default: 256
+# Range: 1 ~ 1024
+commandMaxLength = 256
