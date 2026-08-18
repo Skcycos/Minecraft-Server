@@ -31,4 +31,8 @@ ServerEvents.recipes(event => {
   })
 
   console.info(`[食韵筑家] 禁用合成输出：处理 ${removed} 项，跳过 ${skipped} 项`)
+
+  // 潜影盒：正则禁用所有颜色
+  event.remove({ output: 'minecraft:shulker_box' })
+  event.remove({ output: /minecraft:.*_shulker_box/ })
 })

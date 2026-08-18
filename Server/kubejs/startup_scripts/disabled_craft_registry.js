@@ -92,25 +92,7 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'minecraft:tnt', reason: '炸药，破坏建筑' },
   { id: 'minecraft:tnt_minecart', reason: 'TNT 矿车，破坏建筑' },
   { id: 'minecraft:end_crystal', reason: '末地水晶，高爆破坏' },
-  { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' },
-
-  // —— 原版：禁用所有颜色潜影盒合成 ——
-  { id: 'minecraft:white_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:orange_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:magenta_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:light_blue_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:yellow_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:lime_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:pink_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:gray_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:light_gray_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:cyan_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:purple_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:blue_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:brown_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:green_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:red_shulker_box', reason: '禁用潜影盒合成' },
-  { id: 'minecraft:black_shulker_box', reason: '禁用潜影盒合成' }
+  { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' }
 ]
 
 // 挂到 global，供 server / client 脚本读取
