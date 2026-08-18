@@ -53,6 +53,6 @@
   },
   "customChatFormat": {
     "description": "Custom chat message format. Supports TAG formatting and placeholders: {player_name}, {player_uuid}, {player_level}, {player_prefix}, {player_suffix}, {player_group}, {player_groups}, {prefix}, {suffix}, {group}, {player_health}, {max_player_health}. Use {message} for the chat text. Note: to preserve colors from permission prefix/suffix, do not wrap {prefix}/{suffix} in an outer color tag.",
-    "value": "{prefix}<color:gold>{player_name}</color> <color:dark_gray>»</color> <color:white>{message}</color>"
+    "value": "<color:gold>{player_name}</color> <color:dark_gray>»</color> <color:white>{message}</color>"
   }
 }
