@@ -21,7 +21,7 @@
   },
   "defaultLanguage": {
     "description": "The default language for translatable messages. E.g., 'en', 'de', 'es'.",
-    "value": "en"
+    "value": "zh_cn"
   },
   "commandManagerEnable": {
     "description": "Enable or disable the custom Command Manager for custom commands.",
