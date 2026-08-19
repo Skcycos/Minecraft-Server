@@ -17,11 +17,11 @@ REM ============================================================
 
 echo.
 echo ============================================================
-echo  [%date% %time%] Starting NeoForge 21.1.247 server ...
+echo  [%date% %time%] Starting NeoForge 21.1.248 server ...
 echo  (auto-restart 5s after the server stops)
 echo ============================================================
 
-java @user_jvm_args.txt @libraries/net/neoforged/neoforge/21.1.247/win_args.txt nogui %*
+java @user_jvm_args.txt @libraries/net/neoforged/neoforge/21.1.248/win_args.txt nogui %*
 
 echo.
 echo  [%date% %time%] Server stopped. Restarting in 5 seconds ...
