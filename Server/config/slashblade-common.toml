@@ -60,7 +60,7 @@
 	#Blade Damage: Base Damage × Multiplier.[Default: 1.0D]
 	# Default: 1.0
 	# Range: 0.0 ~ 1024.0
-	slashblade_damage_multiplier = 1.0
+	slashblade_damage_multiplier = 0.75
 	#S-Rank Refine Bonus: Each Refine × Multiplier'value Damage.[Default: 1.D]
 	# Default: 1.0
 	# Range: 0.0 ~ 1024.0
