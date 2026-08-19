@@ -1,0 +1,17 @@
+{
+  "id": "lime_wool",
+  "item": "minecraft:lime_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "黄绿色羊毛",
+  "description": "羊毛 - 黄绿色",
+  "enabled": true,
+  "sort": 8
+}

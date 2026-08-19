@@ -1,0 +1,17 @@
+{
+  "id": "spruce_log",
+  "item": "minecraft:spruce_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "云杉木原木",
+  "description": "深色针叶木材",
+  "enabled": true,
+  "sort": 1
+}

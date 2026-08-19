@@ -1,0 +1,17 @@
+{
+  "id": "verdant_froglight",
+  "item": "minecraft:verdant_froglight",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "翠绿色蛙明灯",
+  "description": "翠绿色的发光方块",
+  "enabled": true,
+  "sort": 2
+}

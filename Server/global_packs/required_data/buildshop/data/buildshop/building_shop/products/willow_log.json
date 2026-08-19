@@ -1,0 +1,17 @@
+{
+  "id": "willow_log",
+  "item": "nomansland:willow_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "柳木原木",
+  "description": "No Man's Land 柳木",
+  "enabled": true,
+  "sort": 11
+}

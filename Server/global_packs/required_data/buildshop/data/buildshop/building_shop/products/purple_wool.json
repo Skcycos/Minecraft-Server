@@ -1,0 +1,17 @@
+{
+  "id": "purple_wool",
+  "item": "minecraft:purple_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "紫色羊毛",
+  "description": "羊毛 - 紫色",
+  "enabled": true,
+  "sort": 11
+}

@@ -17,3 +17,6 @@ serverMaxPerRequest = 2304
 purchaseCooldownTicks = 4
 #Hide categories that contain no products in the shop UI
 hideEmptyCategories = true
+#Enable the built-in example Building Shop datapack.
+#Disable this if you provide your own shop data through external datapacks.
+enableBuiltinExampleDatapack = false

@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_frosted_glass",
+  "item": "caverns_and_chasms:frosted_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "磨砂玻璃",
+  "description": "Caverns & Chasms 磨砂玻璃",
+  "enabled": true,
+  "sort": 33
+}

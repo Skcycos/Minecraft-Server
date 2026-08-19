@@ -1,0 +1,17 @@
+{
+  "id": "mangrove_roots",
+  "item": "minecraft:mangrove_roots",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "红树根",
+  "description": "红树林的盘根",
+  "enabled": true,
+  "sort": 17
+}

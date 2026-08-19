@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_ornate_glass",
+  "item": "caverns_and_chasms:ornate_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "雕花玻璃",
+  "description": "Caverns & Chasms 雕花玻璃",
+  "enabled": true,
+  "sort": 35
+}

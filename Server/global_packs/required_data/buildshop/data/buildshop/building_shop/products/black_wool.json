@@ -1,0 +1,17 @@
+{
+  "id": "black_wool",
+  "item": "minecraft:black_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "黑色羊毛",
+  "description": "羊毛 - 黑色",
+  "enabled": true,
+  "sort": 3
+}

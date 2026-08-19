@@ -1,0 +1,17 @@
+{
+  "id": "tinted_glass",
+  "item": "minecraft:tinted_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "遮光玻璃",
+  "description": "不透光的玻璃",
+  "enabled": true,
+  "sort": 28
+}

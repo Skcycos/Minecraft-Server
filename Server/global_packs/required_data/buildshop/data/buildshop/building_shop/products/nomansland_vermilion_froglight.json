@@ -1,0 +1,17 @@
+{
+  "id": "nomansland_vermilion_froglight",
+  "item": "nomansland:vermilion_froglight",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "朱红色蛙明灯",
+  "description": "No Man's Land 朱红色发光方块",
+  "enabled": true,
+  "sort": 1
+}

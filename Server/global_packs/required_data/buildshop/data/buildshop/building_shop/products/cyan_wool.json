@@ -1,0 +1,17 @@
+{
+  "id": "cyan_wool",
+  "item": "minecraft:cyan_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "青色羊毛",
+  "description": "羊毛 - 青色",
+  "enabled": true,
+  "sort": 14
+}

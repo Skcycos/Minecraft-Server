@@ -1,0 +1,17 @@
+{
+  "id": "oak_log",
+  "item": "minecraft:oak_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "橡木原木",
+  "description": "经典的基础木材",
+  "enabled": true,
+  "sort": 0
+}

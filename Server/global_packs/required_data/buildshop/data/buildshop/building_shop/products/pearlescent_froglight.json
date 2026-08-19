@@ -1,0 +1,17 @@
+{
+  "id": "pearlescent_froglight",
+  "item": "minecraft:pearlescent_froglight",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "珠光色蛙明灯",
+  "description": "淡蓝紫色的发光方块",
+  "enabled": true,
+  "sort": 3
+}

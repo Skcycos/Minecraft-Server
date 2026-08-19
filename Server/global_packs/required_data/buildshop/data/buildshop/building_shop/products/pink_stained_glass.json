@@ -1,0 +1,17 @@
+{
+  "id": "pink_stained_glass",
+  "item": "minecraft:pink_stained_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "粉红色染色玻璃",
+  "description": "玻璃 - 粉红色",
+  "enabled": true,
+  "sort": 23
+}

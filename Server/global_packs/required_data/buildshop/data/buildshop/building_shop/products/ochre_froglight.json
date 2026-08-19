@@ -1,0 +1,17 @@
+{
+  "id": "ochre_froglight",
+  "item": "minecraft:ochre_froglight",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "赭色蛙明灯",
+  "description": "暖黄色的发光方块",
+  "enabled": true,
+  "sort": 0
+}

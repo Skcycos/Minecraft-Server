@@ -1,0 +1,17 @@
+{
+  "id": "lime_stained_glass",
+  "item": "minecraft:lime_stained_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "黄绿色染色玻璃",
+  "description": "玻璃 - 黄绿色",
+  "enabled": true,
+  "sort": 20
+}

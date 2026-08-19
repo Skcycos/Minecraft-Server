@@ -1,0 +1,17 @@
+{
+  "id": "pine_log",
+  "item": "nomansland:pine_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "松木原木",
+  "description": "No Man's Land 松木",
+  "enabled": true,
+  "sort": 8
+}

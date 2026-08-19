@@ -1,0 +1,17 @@
+{
+  "id": "maple_log",
+  "item": "nomansland:maple_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "枫木原木",
+  "description": "No Man's Land 枫木",
+  "enabled": true,
+  "sort": 10
+}

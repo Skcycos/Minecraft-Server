@@ -1,0 +1,7 @@
+{
+  "id": "lighting",
+  "name": "照明",
+  "icon": "minecraft:ochre_froglight",
+  "sort": 30,
+  "enabled": true
+}

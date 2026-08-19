@@ -1,0 +1,17 @@
+{
+  "id": "gray_wool",
+  "item": "minecraft:gray_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "灰色羊毛",
+  "description": "羊毛 - 灰色",
+  "enabled": true,
+  "sort": 0
+}
