@@ -52,7 +52,37 @@
     "value": true
   },
   "customChatFormat": {
-    "description": "Custom chat message format. Supports TAG formatting and placeholders: {player_name}, {player_uuid}, {player_level}, {player_prefix}, {player_suffix}, {player_group}, {player_groups}, {prefix}, {suffix}, {group}, {player_health}, {max_player_health}. Use {message} for the chat text. Note: to preserve colors from permission prefix/suffix, do not wrap {prefix}/{suffix} in an outer color tag.",
+    "description": "Custom chat message format. Supports TAG formatting and placeholders: {player_name}, {player_uuid}, {player_level}, {player_prefix}, {player_suffix}, {player_group}, {player_groups}, {prefix}, {suffix}, {group}, {player_health}, {max_player_health}, {player_world}, {player_dimension}, {player_ping}. Use {message} for the chat text. Note: to preserve colors from permission prefix/suffix, do not wrap {prefix}/{suffix} in an outer color tag.",
     "value": "<color:gold>{player_name}</color> <color:dark_gray>»</color> <color:white>{message}</color>"
+  },
+  "enablePlayerNameHover": {
+    "description": "Shows playerNameHover text when a player hovers the sender name in a custom-formatted chat message. Requires enableCustomChatFormat.",
+    "value": true
+  },
+  "playerNameFormat": {
+    "description": "How the interactive name itself is rendered inside customChatFormat. Supports TAG formatting and the same placeholders as customChatFormat.",
+    "value": "{player_name}"
+  },
+  "playerNameHover": {
+    "description": "Hover lines shown over the player name. One entry per line. Supports TAG formatting and placeholders: {player_name}, {player_uuid}, {player_group}, {player_groups}, {player_prefix}, {player_suffix}, {player_world}, {player_dimension}, {player_ping}, {player_level}, {player_health}, {max_player_health}.",
+    "value": [
+      "<color:aqua><bold>{player_name}</bold></color>",
+      "<color:dark_gray><strikethrough>                    </strikethrough></color>",
+      "<color:gray>Group</color> <color:dark_gray>»</color> <color:white>{player_group}</color>",
+      "<color:gray>World</color> <color:dark_gray>»</color> <color:white>{player_dimension}</color>",
+      "<color:gray>Ping</color> <color:dark_gray>»</color> <color:white>{player_ping}ms</color>"
+    ]
+  },
+  "playerNameHoverVariants": {
+    "description": "Optional permission-gated hover overrides, evaluated in order. The first variant whose permission the sender holds wins; otherwise playerNameHover is used.",
+    "value": []
+  },
+  "playerNameClickAction": {
+    "description": "Click action attached to the player name: none, run_command, or suggest_command.",
+    "value": "suggest_command"
+  },
+  "playerNameClickValue": {
+    "description": "Command used by playerNameClickAction. Must start with / and supports placeholders such as {player_name}. Ignored when the action is none.",
+    "value": "/msg {player_name} "
   }
 }
