@@ -37,7 +37,7 @@
 		#Damage dealt by the Enemy Guns
 		# Default: 4.5
 		# Range: 0.0 ~ 1.7976931348623157E308
-		enemyBulletDamage = 2.25
+		enemyBulletDamage = 3.375
 		#Energy produced per tick by the Polar Generator. Adjust this value to balance the generator's output.
 		# Default: 50
 		# Range: > 1
@@ -49,7 +49,7 @@
 		#Global multiplier for all gun damage. 1.0 = normal damage, 0.5 = half damage, 2.0 = double damage. Affects all projectile damage from guns.
 		# Default: 1.0
 		# Range: 0.01 ~ 10.0
-		globalDamageMultiplier = 0.5
+		globalDamageMultiplier = 0.75
 		#If true, the Brass Mask ritual will never spawn villagers. When disabled, it will spawn Dissidents instead based on the spawn chance below.
 		disableVillagerSpawning = false
 		#When villager spawning is disabled, this is the chance (0.0 to 1.0) that a Dissident will spawn. If a Dissident doesn't spawn, nothing will be created from the ritual.
@@ -200,14 +200,14 @@
 		#The max distance which the explosion is effective to
 		# Default: 4.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		explosionRadius = 2.0
+		explosionRadius = 3.0
 
 	#Properties relating to grenades
 	[common.grenades]
 		#The max distance which the explosion is effective to
 		# Default: 5.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		explosionRadius = 2.5
+		explosionRadius = 3.75
 
 	#Properties relating to stun grenades
 	[common.stun_grenades]
@@ -286,35 +286,35 @@
 		#Base damage for STANDARD_COPPER_ROUND turret projectile
 		# Default: 6.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		standard_copper_round_damage = 3.0
+		standard_copper_round_damage = 4.5
 		#Base damage for ADVANCED_ROUND turret projectile
 		# Default: 8.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		advanced_round_damage = 4.0
+		advanced_round_damage = 6.0
 		#Base damage for GIBBS_ROUND turret projectile
 		# Default: 10.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		gibbs_round_damage = 5.0
+		gibbs_round_damage = 7.5
 		#Base damage for COMPACT_COPPER_ROUND turret projectile
 		# Default: 5.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		compact_copper_round_damage = 2.5
+		compact_copper_round_damage = 3.75
 		#Base damage for COMPACT_ADVANCED_ROUND turret projectile
 		# Default: 6.5
 		# Range: 0.0 ~ 1.7976931348623157E308
-		compact_advanced_round_damage = 3.25
+		compact_advanced_round_damage = 4.875
 		#Base damage for HOG_ROUND turret projectile
 		# Default: 7.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		hog_round_damage = 3.5
+		hog_round_damage = 5.25
 		#Base damage for SHOTGUN_SHELL turret projectile
 		# Default: 22.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		shotgun_shell_damage = 11.0
+		shotgun_shell_damage = 16.5
 		#Base damage for BEARPACK_SHELL turret projectile
 		# Default: 28.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		bearpack_shell_damage = 14.0
+		bearpack_shell_damage = 21.0
 		#If true, turret damage will scale over time
 		enable_damage_scaling = false
 		#The rate at which turret damage increases per day

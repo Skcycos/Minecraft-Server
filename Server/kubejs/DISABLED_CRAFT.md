@@ -15,6 +15,19 @@
 - `id`：物品 ID（必填）
 - `reason`：鼠标悬停时显示的原因（可选）
 
+### 正则匹配条目
+
+想用正则批量禁用（例如带 NBT 的药水变体、某模组一类物品），用 `pattern` 字段：
+
+```js
+{ pattern: /caverns_and_chasms:.*_potion/, reason: '禁用全部 potion（含 NBT 变体）' },
+{ id: 'caverns_and_chasms:tether_potion[potion_contents={potion:"minecraft:night_vision"}]', reason: '只禁用夜视 tether' },
+```
+
+- `pattern`：JS 正则，删除配方与 tooltip 都会按此匹配（`/regex/` 对象）
+- `id`：仍支持带 NBT 的完整字符串，只精确匹配该变体
+- 同一个数组里 `id` 和 `pattern` 可以混用；正则条目无法用 `Item.of` 校验物品是否存在，会直接作为 Ingredient 添加
+
 ## 会自动同步什么？
 
 | 脚本 | 作用 |

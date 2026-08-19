@@ -4,7 +4,7 @@
 
 ServerEvents.recipes(event => {
   const registry = global.SYDisabledCraft
-  if (!registry || !registry.ids || registry.ids.length === 0) {
+  if (!registry || (!registry.ids && !registry.patterns)) {
     console.warn('[食韵筑家] SYDisabledCraft 为空，跳过配方禁用')
     return
   }
@@ -12,7 +12,8 @@ ServerEvents.recipes(event => {
   let removed = 0
   let skipped = 0
 
-  registry.ids.forEach(id => {
+  // 精确 id
+  ;(registry.ids || []).forEach(id => {
     try {
       // 无物品形态时跳过，避免异常
       if (Item.of(id).isEmpty()) {
@@ -30,9 +31,16 @@ ServerEvents.recipes(event => {
     removed++
   })
 
-  console.info(`[食韵筑家] 禁用合成输出：处理 ${removed} 项，跳过 ${skipped} 项`)
+  // 正则 pattern（如带 NBT 的 potion 变体）
+  ;(registry.patterns || []).forEach(pattern => {
+    try {
+      event.remove({ output: pattern })
+      removed++
+    } catch (e) {
+      console.warn(`[食韵筑家] 正则配方删除失败: ${pattern} → ${e}`)
+      skipped++
+    }
+  })
 
-  // 潜影盒：正则禁用所有颜色
-  event.remove({ output: 'minecraft:shulker_box' })
-  event.remove({ output: /minecraft:.*_shulker_box/ })
+  console.info(`[食韵筑家] 禁用合成输出：处理 ${removed} 项，跳过 ${skipped} 项`)
 })
