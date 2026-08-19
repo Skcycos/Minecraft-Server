@@ -371,8 +371,68 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-69（本地上新：自研商业系列 + 禁用合成增强）
+     EDITION 68-71（本地上新：自研商业系列 + 禁用合成增强 + NeoForge 248）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">71</span>
+    <div>
+      <h2 class="edition-title">禁用 Beyond Dimensions 自动化物品；拔刀剑伤害降至 75%</h2>
+      <p class="edition-meta">
+        <span>2a1ff744</span>
+        <span class="dot">·</span>
+        <span>08-20 01:40</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 禁制系统与平衡调整</span>
+
+    <div class="pull">禁用合成清单新增正则条目，封禁 Beyond Dimensions 四个自动化物流/经验交换物品；拔刀剑基础伤害倍率下调至 75%。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">Beyond Dimensions 禁用</span>
+        <span class="item-value">正则 /beyonddimensions:(xp_exchange_item|net_restocker_item|net_feeder_item|net_magnet_item)/ 禁用经验交换与自动补给器/磁铁等自动化物品（reason: 自动化内容禁用），删除配方与 tooltip 同步生效</span>
+      </li>
+      <li>
+        <span class="item-label">拔刀剑平衡</span>
+        <span class="item-value">slashblade_damage_multiplier 1.0 → 0.75，基础伤害降至默认 75%</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">70</span>
+    <div>
+      <h2 class="edition-title">NeoForge 更新至 21.1.248，补充自研 Mod 配置文件</h2>
+      <p class="edition-meta">
+        <span>151a7f4d</span>
+        <span class="dot">·</span>
+        <span>08-20 01:27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🔧 服务器核心更新</span>
+
+    <div class="pull">服务端 NeoForge 由 21.1.247 升级到 21.1.248，并补充四个自研 Mod 的默认配置文件。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">NeoForge</span>
+        <span class="item-value">21.1.247 → 21.1.248（官方 installer --installServer 升级，冒烟测试 Done 通过）</span>
+      </li>
+      <li>
+        <span class="item-label">自研 Mod 配置</span>
+        <span class="item-value">新增 buildshop-common.toml、chinese_oracle-common.toml、stockmarket-common.toml 默认配置</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
@@ -380,9 +440,9 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">自研商业系列上线：建筑商店 · 黄历运势 · 股市风云 · Pad 菜单</h2>
       <p class="edition-meta">
-        <span>本地待提交</span>
+        <span>b28aae34</span>
         <span class="dot">·</span>
-        <span>08-20</span>
+        <span>08-20 01:18</span>
       </p>
     </div>
   </div>
