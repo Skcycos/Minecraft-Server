@@ -371,8 +371,38 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-71（本地上新：自研商业系列 + 禁用合成增强 + NeoForge 248）
+     EDITION 68-72（本地上新：自研商业系列 + 禁用合成增强 + NeoForge 248）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">72</span>
+    <div>
+      <h2 class="edition-title">新增 OP 背包导出命令 /exportinv</h2>
+      <p class="edition-meta">
+        <span>待提交</span>
+        <span class="dot">·</span>
+        <span>08-20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛠️ 管理工具</span>
+
+    <div class="pull">KubeJS 新增 /exportinv 命令（OP 2 级），将玩家原版背包完整导出为 JSON，含物品 Data Components。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">导出范围</span>
+        <span class="item-value">快捷栏 + 主背包 + 护甲 + 副手共 41 槽，不含末影箱 / 饰品槽 / 模组背包</span>
+      </li>
+      <li>
+        <span class="item-label">输出</span>
+        <span class="item-value">kubejs/inventory_exports/&lt;玩家名&gt;_&lt;时间戳&gt;.json，每槽记录 id/count/itemString/components（含附魔、耐久、自定义名等 Data Components），导出文件不入 git 库</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
