@@ -371,6 +371,82 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 68-69（本地上新：自研商业系列 + 禁用合成增强）
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">69</span>
+    <div>
+      <h2 class="edition-title">自研商业系列上线：建筑商店 · 黄历运势 · 股市风云 · Pad 菜单</h2>
+      <p class="edition-meta">
+        <span>本地待提交</span>
+        <span class="dot">·</span>
+        <span>08-20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🏛️ 四个自研 Mod 首发 · 均服务端权威 + ApricityUI 客户端界面</span>
+
+    <div class="pull">本服自研四个新模组全部部署：建筑商店、黄历运势、股市风云，并由 Pad 菜单统一入口串联。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">建筑商店</span>
+        <span class="item-value">数据包驱动建材商品目录，服务端权威购买（虚拟金币/物品货币），支持有限库存持久化、商品搜索/分类/排序，中式纸张风格 AUI 界面；新手初始 1000 虚拟金币</span>
+      </li>
+      <li>
+        <span class="item-label">黄历运势</span>
+        <span class="item-value">每天零点确定性加权抽签（九等吉凶 + 五行 + 宜忌 + 四句签诗），宜忌真实影响挖矿/战斗/交易/钓鱼/睡眠（±15%），大凶可回庇护点减罚，烧香可改签；内置春节等 9 大节日，词库数据包化可热重载</span>
+      </li>
+      <li>
+        <span class="item-label">股市风云</span>
+        <span class="item-value">服务端权威证券市场：6 只默认股票（松竹银行/筑家建设/烟火食铺等），市价/限价买卖、K 线/MA5/MA10/成交量、行业与食韵综合指数、分红/拆股/临时停牌，跨 Mod 开放入金出金 API；初始现金 1000</span>
+      </li>
+      <li>
+        <span class="item-label">Pad 菜单</span>
+        <span class="item-value">随身平板（server_menu:tablet）+ /pad 命令，聚合打开以上各业务应用，服务端权威检测各应用安装与连接状态并下发摘要</span>
+      </li>
+      <li>
+        <span class="item-label">配套升级</span>
+        <span class="item-value">ApricityUI 1.2.2-hotfix1 → 1.2.3.1；新增推刀剑·重锋 SlashBlade 2.0.5，其全部合成已按「内部测试」禁用</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">68</span>
+    <div>
+      <h2 class="edition-title">禁用合成支持正则匹配；SC 枪械伤害上调 50%</h2>
+      <p class="edition-meta">
+        <span>a12e6a54</span>
+        <span class="dot">·</span>
+        <span>08-20 01:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 平衡与禁制系统增强</span>
+
+    <div class="pull">禁用合成清单支持正则 pattern 条目（删除配方与 tooltip 同步），并下调 SC 枪械伤害后按 50% 回调。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">正则禁用</span>
+        <span class="item-value">清单新增 /caverns_and_chasms:.*_potion/、/slashblade:.*/ 正则；caverns_and_chasms 三种轨道与全部 17 种潜影盒转为清单条目，保证 tooltip 正常显示</span>
+      </li>
+      <li>
+        <span class="item-label">SC 枪械</span>
+        <span class="item-value">全局伤害 0.5 → 0.75、敌方枪伤 2.25 → 3.375、火箭/手雷爆炸半径上调，炮塔八种弹药伤害全部 ×1.5（即恢复为默认 75%）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 51-67 (pull 后补记远端落后提交 ed17d8d..ae4efe6)
      ============================================================ -->
 
