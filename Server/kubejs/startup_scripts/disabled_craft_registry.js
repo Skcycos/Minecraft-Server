@@ -16,7 +16,6 @@
 const DISABLED_CRAFT_ENTRIES = [
   // —— Create：自动建造、采矿、农业与高阶生产 ——
   { id: 'create:schematicannon', reason: '自动建造，替代建筑职业' },
-  { id: 'create:crushing_wheel', reason: '大规模粉碎/资源处理' },
   { id: 'create:mechanical_drill', reason: '自动采矿' },
   { id: 'create:mechanical_harvester', reason: '自动收割' },
   { id: 'create:mechanical_plough', reason: '自动耕地' },
