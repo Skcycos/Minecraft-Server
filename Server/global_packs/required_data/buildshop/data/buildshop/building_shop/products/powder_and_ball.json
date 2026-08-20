@@ -1,0 +1,17 @@
+{
+  "id": "powder_and_ball",
+  "item": "scguns:powder_and_ball",
+  "categories": [
+    "guns"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 3,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "粉末和球",
+  "description": "前装式火枪弹药",
+  "enabled": true,
+  "sort": 1
+}

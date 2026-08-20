@@ -1,0 +1,7 @@
+{
+  "id": "guns",
+  "name": "枪械",
+  "icon": "scguns:standard_bullet",
+  "sort": 40,
+  "enabled": true
+}

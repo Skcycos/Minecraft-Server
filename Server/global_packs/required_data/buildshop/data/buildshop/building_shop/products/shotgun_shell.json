@@ -1,0 +1,17 @@
+{
+  "id": "shotgun_shell",
+  "item": "scguns:shotgun_shell",
+  "categories": [
+    "guns"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 4,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "霰弹外壳",
+  "description": "霰弹枪弹药",
+  "enabled": true,
+  "sort": 5
+}

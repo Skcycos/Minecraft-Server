@@ -1,0 +1,17 @@
+{
+  "id": "grapeshot",
+  "item": "scguns:grapeshot",
+  "categories": [
+    "guns"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 4,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "霰弹",
+  "description": "葡萄弹，近距火力覆盖",
+  "enabled": true,
+  "sort": 2
+}

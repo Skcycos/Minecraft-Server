@@ -1,0 +1,17 @@
+{
+  "id": "standard_copper_round",
+  "item": "scguns:standard_copper_round",
+  "categories": [
+    "guns"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 2,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "标准铜元",
+  "description": "标准手枪弹药",
+  "enabled": true,
+  "sort": 4
+}
