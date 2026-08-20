@@ -99,3 +99,7 @@ Server/kubejs/inventory_exports/*.json
 
 # FUSE temp files (open handle leftovers)
 .fuse_hidden*
+
+# 本地服务器配置（不跟踪）：端口/性能为本地环境专属，远端用其他值
+Server/server.properties
+Server/config/c2me.toml
