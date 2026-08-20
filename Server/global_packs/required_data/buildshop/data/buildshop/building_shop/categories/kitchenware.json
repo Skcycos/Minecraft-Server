@@ -1,0 +1,7 @@
+{
+  "id": "kitchenware",
+  "name": "厨具",
+  "icon": "handcrafted:white_bowl",
+  "sort": 50,
+  "enabled": true
+}
