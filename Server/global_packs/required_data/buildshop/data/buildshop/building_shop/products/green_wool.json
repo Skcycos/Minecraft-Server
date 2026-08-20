@@ -1,0 +1,17 @@
+{
+  "id": "green_wool",
+  "item": "minecraft:green_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "绿色羊毛",
+  "description": "羊毛 - 绿色",
+  "enabled": true,
+  "sort": 15
+}

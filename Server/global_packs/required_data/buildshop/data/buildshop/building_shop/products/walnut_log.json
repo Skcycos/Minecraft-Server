@@ -1,0 +1,17 @@
+{
+  "id": "walnut_log",
+  "item": "nomansland:walnut_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "胡桃木原木",
+  "description": "No Man's Land 胡桃木",
+  "enabled": true,
+  "sort": 9
+}

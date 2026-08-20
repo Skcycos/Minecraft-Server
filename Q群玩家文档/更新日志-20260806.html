@@ -371,6 +371,688 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
+     EDITION 68-73（本地上新：自研商业系列 + 禁用合成增强 + NeoForge 248）
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">73</span>
+    <div>
+      <h2 class="edition-title">建筑商店正式开业：木材/彩虹/照明三分类，内置示例关闭</h2>
+      <p class="edition-meta">
+        <span>待提交</span>
+        <span class="dot">·</span>
+        <span>08-20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🏛️ 商店内容上线</span>
+
+    <div class="pull">建筑商店 mod 升级支持关闭内置示例数据包；服务器数据包 global_packs/required_data/buildshop 正式提供三分类共 59 种商品。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">内置示例关闭</span>
+        <span class="item-value">buildshop mod 新增 enableBuiltinExampleDatapack 配置（默认开），服务器设为 false，改用自备数据包商品</span>
+      </li>
+      <li>
+        <span class="item-label">木材</span>
+        <span class="item-value">18 种原木/菌柄（含 No Man's Land、Spawn、Caverns &amp; Chasms 变体），单价 8</span>
+      </li>
+      <li>
+        <span class="item-label">彩虹</span>
+        <span class="item-value">16 色羊毛 + 21 种玻璃（含 Caverns &amp; Chasms 磨砂/浮法/雕花玻璃），单价 10</span>
+      </li>
+      <li>
+        <span class="item-label">照明</span>
+        <span class="item-value">4 种蛙明灯（赭色/朱红/翠绿/珠光），单价 15</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">72</span>
+    <div>
+      <h2 class="edition-title">新增 OP 背包导出命令 /exportinv</h2>
+      <p class="edition-meta">
+        <span>待提交</span>
+        <span class="dot">·</span>
+        <span>08-20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛠️ 管理工具</span>
+
+    <div class="pull">KubeJS 新增 /exportinv 命令（OP 2 级），将玩家原版背包完整导出为 JSON，含物品 Data Components。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">导出范围</span>
+        <span class="item-value">快捷栏 + 主背包 + 护甲 + 副手共 41 槽，不含末影箱 / 饰品槽 / 模组背包</span>
+      </li>
+      <li>
+        <span class="item-label">输出</span>
+        <span class="item-value">kubejs/inventory_exports/&lt;玩家名&gt;_&lt;时间戳&gt;.json，每槽记录 id/count/itemString/components（含附魔、耐久、自定义名等 Data Components），导出文件不入 git 库</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">71</span>
+    <div>
+      <h2 class="edition-title">禁用 Beyond Dimensions 自动化物品；拔刀剑伤害降至 75%</h2>
+      <p class="edition-meta">
+        <span>2a1ff744</span>
+        <span class="dot">·</span>
+        <span>08-20 01:40</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 禁制系统与平衡调整</span>
+
+    <div class="pull">禁用合成清单新增正则条目，封禁 Beyond Dimensions 四个自动化物流/经验交换物品；拔刀剑基础伤害倍率下调至 75%。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">Beyond Dimensions 禁用</span>
+        <span class="item-value">正则 /beyonddimensions:(xp_exchange_item|net_restocker_item|net_feeder_item|net_magnet_item)/ 禁用经验交换与自动补给器/磁铁等自动化物品（reason: 自动化内容禁用），删除配方与 tooltip 同步生效</span>
+      </li>
+      <li>
+        <span class="item-label">拔刀剑平衡</span>
+        <span class="item-value">slashblade_damage_multiplier 1.0 → 0.75，基础伤害降至默认 75%</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">70</span>
+    <div>
+      <h2 class="edition-title">NeoForge 更新至 21.1.248，补充自研 Mod 配置文件</h2>
+      <p class="edition-meta">
+        <span>151a7f4d</span>
+        <span class="dot">·</span>
+        <span>08-20 01:27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🔧 服务器核心更新</span>
+
+    <div class="pull">服务端 NeoForge 由 21.1.247 升级到 21.1.248，并补充四个自研 Mod 的默认配置文件。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">NeoForge</span>
+        <span class="item-value">21.1.247 → 21.1.248（官方 installer --installServer 升级，冒烟测试 Done 通过）</span>
+      </li>
+      <li>
+        <span class="item-label">自研 Mod 配置</span>
+        <span class="item-value">新增 buildshop-common.toml、chinese_oracle-common.toml、stockmarket-common.toml 默认配置</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">69</span>
+    <div>
+      <h2 class="edition-title">自研商业系列上线：建筑商店 · 黄历运势 · 股市风云 · Pad 菜单</h2>
+      <p class="edition-meta">
+        <span>b28aae34</span>
+        <span class="dot">·</span>
+        <span>08-20 01:18</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🏛️ 四个自研 Mod 首发 · 均服务端权威 + ApricityUI 客户端界面</span>
+
+    <div class="pull">本服自研四个新模组全部部署：建筑商店、黄历运势、股市风云，并由 Pad 菜单统一入口串联。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">建筑商店</span>
+        <span class="item-value">数据包驱动建材商品目录，服务端权威购买（虚拟金币/物品货币），支持有限库存持久化、商品搜索/分类/排序，中式纸张风格 AUI 界面；新手初始 1000 虚拟金币</span>
+      </li>
+      <li>
+        <span class="item-label">黄历运势</span>
+        <span class="item-value">每天零点确定性加权抽签（九等吉凶 + 五行 + 宜忌 + 四句签诗），宜忌真实影响挖矿/战斗/交易/钓鱼/睡眠（±15%），大凶可回庇护点减罚，烧香可改签；内置春节等 9 大节日，词库数据包化可热重载</span>
+      </li>
+      <li>
+        <span class="item-label">股市风云</span>
+        <span class="item-value">服务端权威证券市场：6 只默认股票（松竹银行/筑家建设/烟火食铺等），市价/限价买卖、K 线/MA5/MA10/成交量、行业与食韵综合指数、分红/拆股/临时停牌，跨 Mod 开放入金出金 API；初始现金 1000</span>
+      </li>
+      <li>
+        <span class="item-label">Pad 菜单</span>
+        <span class="item-value">随身平板（server_menu:tablet）+ /pad 命令，聚合打开以上各业务应用，服务端权威检测各应用安装与连接状态并下发摘要</span>
+      </li>
+      <li>
+        <span class="item-label">配套升级</span>
+        <span class="item-value">ApricityUI 1.2.2-hotfix1 → 1.2.3.1；新增推刀剑·重锋 SlashBlade 2.0.5，其全部合成已按「内部测试」禁用</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">68</span>
+    <div>
+      <h2 class="edition-title">禁用合成支持正则匹配；SC 枪械伤害上调 50%</h2>
+      <p class="edition-meta">
+        <span>a12e6a54</span>
+        <span class="dot">·</span>
+        <span>08-20 01:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 平衡与禁制系统增强</span>
+
+    <div class="pull">禁用合成清单支持正则 pattern 条目（删除配方与 tooltip 同步），并下调 SC 枪械伤害后按 50% 回调。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">正则禁用</span>
+        <span class="item-value">清单新增 /caverns_and_chasms:.*_potion/、/slashblade:.*/ 正则；caverns_and_chasms 三种轨道与全部 17 种潜影盒转为清单条目，保证 tooltip 正常显示</span>
+      </li>
+      <li>
+        <span class="item-label">SC 枪械</span>
+        <span class="item-value">全局伤害 0.5 → 0.75、敌方枪伤 2.25 → 3.375、火箭/手雷爆炸半径上调，炮塔八种弹药伤害全部 ×1.5（即恢复为默认 75%）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
+     EDITION 51-67 (pull 后补记远端落后提交 ed17d8d..ae4efe6)
+     ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">67</span>
+    <div>
+      <h2 class="edition-title">新增 antixray 反透视模组，禁用 MinerTrack</h2>
+      <p class="edition-meta">
+        <span>ae4efe62</span>
+        <span class="dot">·</span>
+        <span>08-19 09:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🛡️ 反作弊 · 模组调整</span>
+
+    <div class="pull">新增 antixray 反透视模组保护矿石资产，并因策略调整停用刚加入的 MinerTrack 挖矿追踪。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">反透视</span>
+        <span class="item-value">antixray-neoforge-1.4.8+1.21.1.jar 加入服务端，缓解矿石被 X-ray 透视的风险</span>
+      </li>
+      <li>
+        <span class="item-label">挖矿追踪</span>
+        <span class="item-value">移除 MinerTrack-2.1.1.1+neoforge.jar（EDITOR 66 刚加入，本轮停用）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">66</span>
+    <div>
+      <h2 class="edition-title">新增 MinerTrack 挖矿追踪模组</h2>
+      <p class="edition-meta">
+        <span>89e28122</span>
+        <span class="dot">·</span>
+        <span>08-19 09:46</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔍 管理模组</span>
+
+    <div class="pull">新增 MinerTrack 挖矿追踪模组用于监控异常挖矿行为（本轮后于 EDITION 67 停用）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">MinerTrack-2.1.1.1+neoforge.jar 加入服务端，排除客户端同步</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">65</span>
+    <div>
+      <h2 class="edition-title">OAPC 圈地限制：最多 1 块，禁止强制加载与子圈地</h2>
+      <p class="edition-meta">
+        <span>85f1b4c1</span>
+        <span class="dot">·</span>
+        <span>08-18 17:40</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🏠 圈地规则收紧</span>
+
+    <div class="pull">OpenPartiesAndClaims 圈地权限收紧：每玩家最多 1 块，禁止强制加载与子圈地。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">配置</span>
+        <span class="item-value">openpartiesandclaims-server.toml 限制最大圈地数 1、关闭强制加载（chunk load）与子圈地</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">64</span>
+    <div>
+      <h2 class="edition-title">移除聊天格式中的权限前缀</h2>
+      <p class="edition-meta">
+        <span>e44e0e59</span>
+        <span class="dot">·</span>
+        <span>08-18 17:38</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">💬 聊天格式</span>
+
+    <div class="pull">Paradigm 聊天格式移除权限组前缀，聊天显示更清爽。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">配置</span>
+        <span class="item-value">paradigm/chat.json 去除权限前缀占位符</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">63</span>
+    <div>
+      <h2 class="edition-title">Paradigm 中文语言包，默认语言设为 zh_cn</h2>
+      <p class="edition-meta">
+        <span>35e433a3</span>
+        <span class="dot">·</span>
+        <span>08-18 17:31</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🌐 本地化</span>
+
+    <div class="pull">为 Paradigm 模组补齐中文语言包，并将服务器默认语言设为 zh_cn。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">语言包</span>
+        <span class="item-value">paradigm/lang/zh_cn.json（343 条）新增，覆盖命令与提示</span>
+      </li>
+      <li>
+        <span class="item-label">默认语言</span>
+        <span class="item-value">paradigm/main.json 与 chat.json 默认语言改为 zh_cn</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">62</span>
+    <div>
+      <h2 class="edition-title">新增 5 个建筑与社交模组</h2>
+      <p class="edition-meta">
+        <span>a820fd63</span>
+        <span class="dot">·</span>
+        <span>08-18 17:18</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏗️ 建筑 / 社交</span>
+
+    <div class="pull">新增对角线墙壁/窗户、前置库、背人、装饰服装共 5 个模组。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">对角线建筑</span>
+        <span class="item-value">DiagonalWalls、DiagonalWindows</span>
+      </li>
+      <li>
+        <span class="item-label">社交</span>
+        <span class="item-value">piggyback 背人模组（含 piggyback.toml）、selfexpression 装饰服装</span>
+      </li>
+      <li>
+        <span class="item-label">前置库</span>
+        <span class="item-value">faewulf_lib 前置库</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">61</span>
+    <div>
+      <h2 class="edition-title">新增 ApricityUI (Aui) 模组；Paradigm 2.3.0 → 2.4.2</h2>
+      <p class="edition-meta">
+        <span>524e1a41</span>
+        <span>·</span>
+        <span>08-18 17:01</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🎨 UI / 前置更新</span>
+
+    <div class="pull">新增 ApricityUI 界面模组，并将 Paradigm 更新至 2.4.2。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">UI</span>
+        <span class="item-value">Aui ApricityUI 1.2.2-hotfix1 加入</span>
+      </li>
+      <li>
+        <span class="item-label">更新</span>
+        <span class="item-value">Paradigm 2.3.0b → 2.4.2b</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">60</span>
+    <div>
+      <h2 class="edition-title">潜影盒禁用改用正则匹配，更简洁</h2>
+      <p class="edition-meta">
+        <span>8f4f3ae5</span>
+        <span class="dot">·</span>
+        <span>08-18 16:12</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 配置优化</span>
+
+    <div class="pull">潜影盒合成禁用规则改用正则匹配，配置更易维护。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">KubeJS</span>
+        <span class="item-value">startup_scripts/disabled_craft_registry.js 改用正则匹配各色潜影盒</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">59</span>
+    <div>
+      <h2 class="edition-title">禁用所有颜色潜影盒合成</h2>
+      <p class="edition-meta">
+        <span>61b09027</span>
+        <span class="dot">·</span>
+        <span>08-18 16:11</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">📦 配方调整</span>
+
+    <div class="pull">禁用全部颜色潜影盒的合成，防止特定绕过手段。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">KubeJS</span>
+        <span class="item-value">server_scripts/disabled_craft_recipes.js 禁用各色潜影盒合成</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">58</span>
+    <div>
+      <h2 class="edition-title">新增 nomending 模组（禁止修复耐久）</h2>
+      <p class="edition-meta">
+        <span>aaac3119</span>
+        <span class="dot">·</span>
+        <span>08-18 16:08</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛡️ 玩法限制</span>
+
+    <div class="pull">新增 nomending 模组禁止修复耐久，遏制无限修复带来的平衡问题。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">nomending-0.9.2.jar 加入（排除客户端同步）</span>
+      </li>
+      <li>
+        <span class="item-label">配置</span>
+        <span class="item-value">nomending-common.toml 新增</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">57</span>
+    <div>
+      <h2 class="edition-title">禁用海浪 (Coastal Waves) 模组</h2>
+      <p class="edition-meta">
+        <span>cd3f0a53</span>
+        <span class="dot">·</span>
+        <span>08-18 15:48</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🌊 模组停用</span>
+
+    <div class="pull">禁用 Coastal Waves（海浪）模组。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">移除</span>
+        <span class="item-value">Waves-1.21.x-1.6.jar 从服务端移除</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">56</span>
+    <div>
+      <h2 class="edition-title">移除 IMBlocker；数学运算加速模组仅保留服务端</h2>
+      <p class="edition-meta">
+        <span>70c21462</span>
+        <span class="dot">·</span>
+        <span>08-18 13:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">⌨️ 模组调整</span>
+
+    <div class="pull">移除 IMBlocker 输入法模组（macOS 下 / 键后无法输入），数学运算加速模组取消客户端同步仅留服务端。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">移除</span>
+        <span class="item-value">IMBlocker 从 automodpack 客户端包移除，避免输入法冲突</span>
+      </li>
+      <li>
+        <span class="item-label">调整</span>
+        <span class="item-value">数学运算加速模组改为仅服务端（取消客户端同步），jade 排序同步更新</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">55</span>
+    <div>
+      <h2 class="edition-title">新增更多嗅探兽花卉 (More Sniffer Flowers)</h2>
+      <p class="edition-meta">
+        <span>55776f79</span>
+        <span class="dot">·</span>
+        <span>08-18 11:04</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌸 内容扩充</span>
+
+    <div class="pull">新增 More Sniffer Flowers 模组，扩展嗅探兽机制与花卉、染色植物。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">MoreSnifferFlowers-1.21.1-neo-6.6.6.jar + moresnifferflowers-server.toml</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">54</span>
+    <div>
+      <h2 class="edition-title">新增超越纬度 (Beyond Dimensions) 存储与工具模组</h2>
+      <p class="edition-meta">
+        <span>13d7369a</span>
+        <span class="dot">·</span>
+        <span>08-18 10:46</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌌 内容扩充</span>
+
+    <div class="pull">新增 Beyond Dimensions 存储与工具模组。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">beyonddimensions-1.21.1-neoforge-0.7.27.jar + beyonddimensions-common/server.toml</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">53</span>
+    <div>
+      <h2 class="edition-title">更新道路模组 roadblck 1.2.2 → 1.2.3</h2>
+      <p class="edition-meta">
+        <span>c301dcc4</span>
+        <span class="dot">·</span>
+        <span>08-18 10:08</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛣️ 模组更新</span>
+
+    <div class="pull">道路模组 roadblck 更新至 1.2.3。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">更新</span>
+        <span class="item-value">ncb_roadblck-1.2.3-neoforge-1.21.1.jar 替换 1.2.2；automodpack 同步</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">52</span>
+    <div>
+      <h2 class="edition-title">更新道路模组 roadblck 1.1.4 → 1.2.2</h2>
+      <p class="edition-meta">
+        <span>593da48f</span>
+        <span class="dot">·</span>
+        <span>08-17 16:23</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛣️ 模组更新</span>
+
+    <div class="pull">道路模组 roadblck 更新至 1.2.2。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">更新</span>
+        <span class="item-value">ncb_roadblck-1.2.2 替换旧版 roadblck-1.1.4；automodpack 同步</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">51</span>
+    <div>
+      <h2 class="edition-title">默认模式改为生存模式，新增 mineastr 机器人对接模组</h2>
+      <p class="edition-meta">
+        <span>ed17d8da</span>
+        <span class="dot">·</span>
+        <span>08-17 16:14</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 服务器设置</span>
+
+    <div class="pull">服务器默认游戏模式改为生存，并新增 mineastr 机器人对接模组。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模式</span>
+        <span class="item-value">server.properties 默认 gamemode 改为 survival</span>
+      </li>
+      <li>
+        <span class="item-label">机器人</span>
+        <span class="item-value">mineastr-0.9.0.jar + mineastr-common.toml 加入；c2me.toml 同步调整</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============================================================
      EDITION 50
      ============================================================ -->
 

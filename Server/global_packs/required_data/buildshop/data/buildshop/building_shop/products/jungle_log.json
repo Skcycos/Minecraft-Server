@@ -1,0 +1,17 @@
+{
+  "id": "jungle_log",
+  "item": "minecraft:jungle_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "丛林木原木",
+  "description": "热带丛林木材",
+  "enabled": true,
+  "sort": 3
+}

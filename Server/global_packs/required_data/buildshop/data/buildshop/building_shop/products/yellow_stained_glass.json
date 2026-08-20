@@ -1,0 +1,17 @@
+{
+  "id": "yellow_stained_glass",
+  "item": "minecraft:yellow_stained_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "黄色染色玻璃",
+  "description": "玻璃 - 黄色",
+  "enabled": true,
+  "sort": 19
+}

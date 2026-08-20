@@ -1,0 +1,17 @@
+{
+  "id": "azalea_log",
+  "item": "caverns_and_chasms:azalea_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "杜鹃木原木",
+  "description": "Caverns & Chasms 杜鹃木",
+  "enabled": true,
+  "sort": 14
+}

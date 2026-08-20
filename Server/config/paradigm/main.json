@@ -21,7 +21,7 @@
   },
   "defaultLanguage": {
     "description": "The default language for translatable messages. E.g., 'en', 'de', 'es'.",
-    "value": "en"
+    "value": "zh_cn"
   },
   "commandManagerEnable": {
     "description": "Enable or disable the custom Command Manager for custom commands.",
@@ -58,10 +58,6 @@
   "telemetryServerId": {
     "description": "Anonymous server ID (auto-generated when empty).",
     "value": "5d15a546-1dd1-4466-9904-fb3d703c1486"
-  },
-  "webEditorTestUrl": {
-    "description": "When enabled, use the local web editor test URL (http://localhost:8083) instead of production.",
-    "value": false
   },
   "spawnWorld": {
     "description": "Global spawn world id (set via /setspawn). Empty means spawn is not configured.",
@@ -146,5 +142,21 @@
   "adminUtilityCommandsEnable": {
     "description": "Enable or disable admin utility commands (/vanish, /god, /invsee, /repair, /sudo, /near, /whois, /top, /jump).",
     "value": true
+  },
+  "rtpCommandsEnable": {
+    "description": "Enable or disable the /rtp command.",
+    "value": true
+  },
+  "rtpMinRadius": {
+    "description": "Minimum distance in blocks from the player's current position for /rtp.",
+    "value": 100
+  },
+  "rtpMaxRadius": {
+    "description": "Maximum distance in blocks from the player's current position for /rtp.",
+    "value": 2500
+  },
+  "rtpMaxAttempts": {
+    "description": "Maximum number of random locations /rtp will try before giving up.",
+    "value": 20
   }
 }

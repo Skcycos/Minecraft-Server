@@ -1,0 +1,17 @@
+{
+  "id": "rotten_log",
+  "item": "spawn:rotten_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "腐木原木",
+  "description": "Spawn 腐木",
+  "enabled": true,
+  "sort": 13
+}

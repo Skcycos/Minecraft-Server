@@ -1,0 +1,17 @@
+{
+  "id": "black_stained_glass",
+  "item": "minecraft:black_stained_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "黑色染色玻璃",
+  "description": "玻璃 - 黑色",
+  "enabled": true,
+  "sort": 25
+}

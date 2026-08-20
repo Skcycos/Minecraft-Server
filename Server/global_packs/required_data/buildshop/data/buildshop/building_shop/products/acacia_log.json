@@ -1,0 +1,17 @@
+{
+  "id": "acacia_log",
+  "item": "minecraft:acacia_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "金合欢木原木",
+  "description": "橙红色调木材",
+  "enabled": true,
+  "sort": 5
+}

@@ -1,0 +1,17 @@
+{
+  "id": "white_wool",
+  "item": "minecraft:white_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "白色羊毛",
+  "description": "羊毛 - 白色",
+  "enabled": true,
+  "sort": 2
+}

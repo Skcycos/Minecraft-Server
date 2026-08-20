@@ -1,0 +1,54 @@
+#Master switch for the stock market mod
+enabled = true
+#Starting cash for every new player account
+# Default: 1000.0
+# Range: 0.0 ~ 1.0E9
+initialCash = 1000.0
+#Trading fee rate (fraction of the order value), e.g. 0.001 = 0.1%
+# Default: 0.001
+# Range: 0.0 ~ 0.1
+feeRate = 0.001
+#How often (in server ticks) the whole market updates its prices, e.g. 100 = every 5 seconds
+# Default: 100
+# Range: 1 ~ 1200
+tickInterval = 100
+#Maximum quantity allowed per order
+# Default: 9999
+# Range: 1 ~ 1000000
+maxOrderQty = 9999
+#Length of one market day/cycle in server ticks; default 24000 matches one Minecraft day
+# Default: 24000
+# Range: 1200 ~ 2400000
+marketCycleTicks = 24000
+#Probability of generating one company news event at each market-cycle boundary
+# Default: 0.25
+# Range: 0.0 ~ 1.0
+newsEventProbability = 0.25
+#Probability of a dividend event at each market-cycle boundary
+# Default: 0.04
+# Range: 0.0 ~ 1.0
+dividendProbability = 0.04
+#Probability of a 2-for-1 stock split at each market-cycle boundary
+# Default: 0.01
+# Range: 0.0 ~ 1.0
+splitProbability = 0.01
+#Probability of a temporary trading halt at each market-cycle boundary
+# Default: 0.015
+# Range: 0.0 ~ 1.0
+haltProbability = 0.015
+#Number of market cycles a temporary halt lasts
+# Default: 1
+# Range: 1 ~ 30
+haltDurationCycles = 1
+#Dividend cash paid per share during a dividend event
+# Default: 0.05
+# Range: 0.0 ~ 1000000.0
+dividendPerShare = 0.05
+#Base value for the equal-weight market index
+# Default: 1000.0
+# Range: 1.0 ~ 1.0E9
+indexBaseValue = 1000.0
+#Maximum absolute news price impact
+# Default: 0.08
+# Range: 0.0 ~ 1.0
+newsImpactMax = 0.08

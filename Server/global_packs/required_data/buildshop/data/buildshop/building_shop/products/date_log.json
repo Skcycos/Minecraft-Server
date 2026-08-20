@@ -1,0 +1,17 @@
+{
+  "id": "date_log",
+  "item": "spawn:date_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "枣椰木原木",
+  "description": "Spawn 枣椰木",
+  "enabled": true,
+  "sort": 12
+}

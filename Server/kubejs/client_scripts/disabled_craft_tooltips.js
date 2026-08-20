@@ -5,7 +5,7 @@
 
 ItemEvents.modifyTooltips(event => {
   const registry = global.SYDisabledCraft
-  if (!registry || !registry.ids || registry.ids.length === 0) {
+  if (!registry || (!registry.ids && !registry.patterns)) {
     console.warn('[食韵筑家] SYDisabledCraft 为空，跳过禁用合成 tooltip')
     return
   }
@@ -17,7 +17,20 @@ ItemEvents.modifyTooltips(event => {
   let ok = 0
   let skipped = 0
 
-  registry.ids.forEach(id => {
+  const makeLines = reason => {
+    const lines = [
+      Text.of(''),
+      Text.of(title)
+    ]
+    if (reason) {
+      lines.push(Text.of(`§8原因：§7${reason}`))
+    }
+    lines.push(Text.of(hint))
+    return lines
+  }
+
+  // 精确 id
+  ;(registry.ids || []).forEach(id => {
     // 无物品形态的方块（如 create 转向架）会在 Ingredient 解析时报错，必须跳过
     try {
       if (Item.of(id).isEmpty()) {
@@ -31,21 +44,23 @@ ItemEvents.modifyTooltips(event => {
       return
     }
 
-    const lines = [
-      Text.of(''),
-      Text.of(title)
-    ]
-    const reason = reasons[id]
-    if (reason) {
-      lines.push(Text.of(`§8原因：§7${reason}`))
-    }
-    lines.push(Text.of(hint))
-
     try {
-      event.add(id, lines)
+      event.add(id, makeLines(reasons[id]))
       ok++
     } catch (e) {
       console.warn(`[食韵筑家] 无法为 ${id} 添加 tooltip: ${e}`)
+      skipped++
+    }
+  })
+
+  // 正则 pattern（正则无法用 Item.of 校验，直接作为 Ingredient 添加）
+  ;(registry.patterns || []).forEach(pattern => {
+    const key = String(pattern)
+    try {
+      event.add(pattern, makeLines(reasons[key]))
+      ok++
+    } catch (e) {
+      console.warn(`[食韵筑家] 无法为正则 ${pattern} 添加 tooltip: ${e}`)
       skipped++
     }
   })

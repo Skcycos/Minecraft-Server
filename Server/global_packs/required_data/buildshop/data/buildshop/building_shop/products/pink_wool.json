@@ -1,0 +1,17 @@
+{
+  "id": "pink_wool",
+  "item": "minecraft:pink_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "粉红色羊毛",
+  "description": "羊毛 - 粉红色",
+  "enabled": true,
+  "sort": 9
+}

@@ -1,0 +1,100 @@
+#Master switch for the mod
+enabled = true
+#Whether to announce the daily fortune in chat when a player receives their sign
+chatAnnounce = true
+#Maximum number of '宜' (recommended) entries per fortune
+# Default: 3
+# Range: 0 ~ 8
+maxYi = 3
+#Maximum number of '忌' (avoided) entries per fortune
+# Default: 2
+# Range: 0 ~ 8
+maxJi = 2
+#Cap on fortune modifiers, e.g. 0.15 means +-15% at most
+# Default: 0.15
+# Range: 0.0 ~ 1.0
+modifierCap = 0.15
+#Max players processed per tick by the day-rollover queue (spreads the day-change spike)
+# Default: 8
+# Range: 1 ~ 64
+rolloverPlayersPerTick = 8
+#If yesterday was 大凶/下下大凶, avoid drawing a bad tier today (continuous bad luck protection)
+badProtection = true
+#Maximum number of /oracle rerolls a player may use per day
+# Default: 1
+# Range: 0 ~ 64
+rerollMaxPerDay = 1
+#Require an incense item to be consumed when a player rerolls their fortune
+rerollRequireItem = true
+#Enable 大凶庇护: reduce penalties while near your bed/respawn point
+shelterEnabled = true
+#Shelter radius (blocks) around the bed/respawn point
+# Default: 48.0
+# Range: 1.0 ~ 512.0
+shelterRadius = 48.0
+#Tier at or worse than which shelter applies, e.g. da_xiong
+shelterBadTierMin = "da_xiong"
+#Fraction of the penalty that remains while sheltered, e.g. 0.35 = only 35% penalty
+# Default: 0.35
+# Range: 0.0 ~ 1.0
+shelterPenaltyScale = 0.35
+#Apply mining action modifiers (break speed)
+enableMining = true
+#Apply combat action modifiers (incoming/outgoing damage)
+enableCombat = true
+#Apply fishing action modifiers (bonus catch chance)
+enableFishing = true
+#Apply trading action modifiers (villager price adjustment while trading)
+enableTrading = true
+#Day rollover source: game_day (overworld day time) | wall_clock_utc (real date UTC) | wall_clock_offset (real date with time zone)
+daySource = "game_day"
+#Time zone offset in hours for daySource=wall_clock_offset, e.g. 8 = UTC+8
+# Default: 8
+# Range: -14 ~ 14
+wallClockOffsetHours = 8
+#Do not draw fortunes for spectators
+skipSpectator = true
+#Creative players are not affected by penalties (still receive a fortune)
+creativeBypass = true
+#Player name prefixes treated as bots/fake players that never draw a fortune
+skipBotNamePrefixes = ["[bot]"]
+#Cooldown (seconds) between /oracle share broadcasts
+# Default: 60
+# Range: 0 ~ 3600
+shareCooldownSeconds = 60
+#Log the rolling average rollover drain time every 30 seconds
+metrics = false
+#Show the current 节气 (solar term) in the fortune display
+showSolarTerm = true
+#Show the current 时辰 in the fortune display
+showShichen = true
+#Apply a tiny event-driven bonus during auspicious 时辰
+shichenBonus = true
+#Auspicious 时辰 bonus strength in percent (e.g. 3 = +3%)
+# Default: 3
+# Range: 0 ~ 50
+shichenBonusPercent = 3
+#Apply a small bonus on festival days
+festivalBonus = true
+#Festival day bonus strength in percent (e.g. 5 = +5%)
+# Default: 5
+# Range: 0 ~ 50
+festivalBonusPercent = 5
+#Weight multiplier for signs whose prefer_yi/prefer_ji match today's entries (0 disables)
+# Default: 3
+# Range: 0 ~ 50
+signPreferWeight = 3
+#Apply a tiny global modifier from the drawn 五行 element
+wuxingEffectEnabled = true
+#五行 effect strength in percent (e.g. 2 = +2% on hooked actions)
+# Default: 2
+# Range: 0 ~ 10
+wuxingEffectPercent = 2
+#Cooldown (seconds) between individual /oracle rerolls
+# Default: 30
+# Range: 0 ~ 3600
+rerollCooldownSeconds = 30
+#Spawn a light vanilla particle burst when a fortune is drawn/rerolled
+drawParticles = true
+#Apply rest action effects (e.g. 安眠 heals on wake-up)
+enableRest = true

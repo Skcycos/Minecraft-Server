@@ -1,0 +1,17 @@
+{
+  "id": "dark_oak_log",
+  "item": "minecraft:dark_oak_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "深色橡木原木",
+  "description": "深褐色的厚重木材",
+  "enabled": true,
+  "sort": 4
+}

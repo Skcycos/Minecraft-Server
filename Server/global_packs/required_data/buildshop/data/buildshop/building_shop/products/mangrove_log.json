@@ -1,0 +1,17 @@
+{
+  "id": "mangrove_log",
+  "item": "minecraft:mangrove_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "红树木原木",
+  "description": "红褐色沼泽木材",
+  "enabled": true,
+  "sort": 6
+}

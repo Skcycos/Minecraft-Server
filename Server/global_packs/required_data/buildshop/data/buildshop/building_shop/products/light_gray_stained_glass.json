@@ -1,0 +1,17 @@
+{
+  "id": "light_gray_stained_glass",
+  "item": "minecraft:light_gray_stained_glass",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "淡灰色染色玻璃",
+  "description": "玻璃 - 淡灰色",
+  "enabled": true,
+  "sort": 30
+}

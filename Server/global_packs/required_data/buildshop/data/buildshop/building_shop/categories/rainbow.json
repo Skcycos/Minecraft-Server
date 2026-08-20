@@ -1,0 +1,7 @@
+{
+  "id": "rainbow",
+  "name": "彩虹",
+  "icon": "minecraft:white_wool",
+  "sort": 20,
+  "enabled": true
+}

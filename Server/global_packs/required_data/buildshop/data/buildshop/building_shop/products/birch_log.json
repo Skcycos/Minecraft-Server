@@ -1,0 +1,17 @@
+{
+  "id": "birch_log",
+  "item": "minecraft:birch_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "白桦木原木",
+  "description": "浅色光滑的木材",
+  "enabled": true,
+  "sort": 2
+}

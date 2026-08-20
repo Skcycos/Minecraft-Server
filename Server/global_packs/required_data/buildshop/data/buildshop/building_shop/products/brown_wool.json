@@ -1,0 +1,17 @@
+{
+  "id": "brown_wool",
+  "item": "minecraft:brown_wool",
+  "categories": [
+    "rainbow"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 10,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "棕色羊毛",
+  "description": "羊毛 - 棕色",
+  "enabled": true,
+  "sort": 4
+}

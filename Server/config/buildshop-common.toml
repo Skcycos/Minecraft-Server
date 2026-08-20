@@ -1,0 +1,22 @@
+#Master switch for the building shop mod
+enabled = true
+#Default currency id shown in the shop header
+#Provided by VirtualCurrencyProvider (virtual_coins) or items:<itemId>
+defaultCurrency = "virtual_coins"
+#Initial balance granted to players on their first login (virtual_coins)
+# Default: 1000
+# Range: 0 ~ 9223372036854775807
+virtualInitialBalance = 1000
+#Hard cap on how many items a single purchase request may buy (Ctrl+left-click upper bound)
+# Default: 2304
+# Range: 1 ~ 4096
+serverMaxPerRequest = 2304
+#Minimum ticks between two purchase requests from the same player (rate limiting)
+# Default: 4
+# Range: 0 ~ 200
+purchaseCooldownTicks = 4
+#Hide categories that contain no products in the shop UI
+hideEmptyCategories = true
+#Enable the built-in example Building Shop datapack.
+#Disable this if you provide your own shop data through external datapacks.
+enableBuiltinExampleDatapack = false

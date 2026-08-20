@@ -92,18 +92,47 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'minecraft:tnt', reason: '炸药，破坏建筑' },
   { id: 'minecraft:tnt_minecart', reason: 'TNT 矿车，破坏建筑' },
   { id: 'minecraft:end_crystal', reason: '末地水晶，高爆破坏' },
-  { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' }
+  { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' },
+
+  // —— 潜影盒：全部颜色禁用（放入清单以同步 tooltip，替代原先的正则删除） ——
+  { id: 'minecraft:shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:white_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:orange_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:magenta_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:light_blue_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:yellow_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:lime_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:pink_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:gray_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:light_gray_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:cyan_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:purple_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:blue_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:brown_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:green_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:red_shulker_box', reason: '潜影盒全部颜色禁用' },
+  { id: 'minecraft:black_shulker_box', reason: '潜影盒全部颜色禁用' },
+
+  // —— 正则 pattern 条目（匹配删除 + tooltip 同步生效） ——
+  { pattern: /caverns_and_chasms:.*_potion/, reason: '不合适' },
+  { pattern: /slashblade:.*/, reason: '内部测试' },
+  { pattern: /beyonddimensions:(xp_exchange_item|net_restocker_item|net_feeder_item|net_magnet_item)/, reason: '自动化内容禁用' },
+  { id: 'caverns_and_chasms:halt_rail', reason: '自动化内容禁用' },
+  { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
+  { id: 'caverns_and_chasms:slaughter_rail', reason: '自动化内容禁用' },
 ]
 
 // 挂到 global，供 server / client 脚本读取
 global.SYDisabledCraft = {
   /** 完整条目（含 reason） */
   entries: DISABLED_CRAFT_ENTRIES,
-  /** 仅 id 列表，方便 forEach */
-  ids: DISABLED_CRAFT_ENTRIES.map(e => e.id),
-  /** id -> reason */
+  /** 仅 id 列表（精确匹配），方便 forEach */
+  ids: DISABLED_CRAFT_ENTRIES.filter(e => e.id).map(e => e.id),
+  /** 正则 pattern 列表（匹配删除 + tooltip），如 /caverns_and_chasms:.*_potion/ */
+  patterns: DISABLED_CRAFT_ENTRIES.filter(e => e.pattern).map(e => e.pattern),
+  /** id 或 pattern -> reason */
   reasons: Object.fromEntries(
-    DISABLED_CRAFT_ENTRIES.map(e => [e.id, e.reason || '服务器已禁用该物品的合成'])
+    DISABLED_CRAFT_ENTRIES.map(e => [e.id || String(e.pattern), e.reason || '服务器已禁用该物品的合成'])
   ),
   /** 默认 tooltip 标题与颜色说明（客户端用） */
   tooltipTitle: '§c✖ 禁止合成',
@@ -111,5 +140,5 @@ global.SYDisabledCraft = {
 }
 
 console.info(
-  `[食韵筑家] 已注册禁用合成 ${global.SYDisabledCraft.ids.length} 项（startup）`
+  `[食韵筑家] 已注册禁用合成 ${global.SYDisabledCraft.ids.length} 项 + 正则 ${global.SYDisabledCraft.patterns.length} 条（startup）`
 )

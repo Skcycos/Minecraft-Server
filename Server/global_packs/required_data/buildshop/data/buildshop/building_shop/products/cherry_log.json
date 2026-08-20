@@ -1,0 +1,17 @@
+{
+  "id": "cherry_log",
+  "item": "minecraft:cherry_log",
+  "categories": [
+    "wood"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 8,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "樱花木原木",
+  "description": "粉嫩的樱花木",
+  "enabled": true,
+  "sort": 7
+}

@@ -94,5 +94,8 @@ Server/mods/*副本*.jar
 # 配方表生成中间产物
 配方与经济管理/统一配方表/魔酿师饮品分类表.csv
 
+# KubeJS 玩家背包导出（含玩家物品数据，不入库）
+Server/kubejs/inventory_exports/*.json
+
 # FUSE temp files (open handle leftovers)
 .fuse_hidden*
