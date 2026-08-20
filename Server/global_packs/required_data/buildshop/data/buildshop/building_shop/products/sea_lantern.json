@@ -1,0 +1,17 @@
+{
+  "id": "sea_lantern",
+  "item": "minecraft:sea_lantern",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "海晶灯",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 36
+}

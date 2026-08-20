@@ -1,0 +1,17 @@
+{
+  "id": "blue_pendant_lamp",
+  "item": "kaleidoscope_tavern:blue_pendant_lamp",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "蓝色吊灯",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 32
+}

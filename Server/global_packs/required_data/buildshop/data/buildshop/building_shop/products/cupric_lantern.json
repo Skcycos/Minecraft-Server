@@ -1,0 +1,17 @@
+{
+  "id": "cupric_lantern",
+  "item": "caverns_and_chasms:cupric_lantern",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "铜锈灯笼",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 33
+}

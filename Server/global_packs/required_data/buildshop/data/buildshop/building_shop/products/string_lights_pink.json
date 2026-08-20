@@ -1,0 +1,17 @@
+{
+  "id": "string_lights_pink",
+  "item": "kaleidoscope_tavern:string_lights_pink",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "virtual_coins",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "粉色串灯",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 30
+}
