@@ -1,0 +1,7 @@
+{
+  "enabledParticleCountInject": true,
+  "enabledParticleAsync": true,
+  "particleCountLimit": 131072,
+  "cparticleCountLimit": 3000000,
+  "calculateThreadCount": 16
+}
