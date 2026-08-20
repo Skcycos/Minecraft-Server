@@ -39,11 +39,16 @@ import net.minecraft.server.level.ServerPlayer;
  * @param distance      the distance in blocks between thief and target
  * @param hasLineOfSight whether the thief can see the target (unobstructed
  *                      ray); unknown/missing must fail closed
+ * @param abilities     the ability snapshot queried ONCE for this attempt
+ *                      (phase 8E); the same snapshot feeds the candidate
+ *                      pool, the success chance, the transfer prepare, the
+ *                      cooldown and the feedback layers — never re-queried
  */
 public record ShadowAttemptContext(UUID eventId, ServerPlayer thief, ShadowTargetKind targetKind,
                                    UUID targetId, @Nullable ResourceLocation targetType, ServerLevel level,
                                    @Nullable BlockPos position, long serverTick, boolean automated,
-                                   double distance, boolean hasLineOfSight) {
+                                   double distance, boolean hasLineOfSight,
+                                   ShadowAbilitySnapshot abilities) {
 
     public ShadowAttemptContext {
         Objects.requireNonNull(eventId, "eventId");
@@ -51,6 +56,7 @@ public record ShadowAttemptContext(UUID eventId, ServerPlayer thief, ShadowTarge
         Objects.requireNonNull(targetKind, "targetKind");
         Objects.requireNonNull(targetId, "targetId");
         Objects.requireNonNull(level, "level");
+        Objects.requireNonNull(abilities, "abilities");
         if (!Double.isFinite(distance) || distance < 0.0d) {
             throw new IllegalArgumentException("distance must be finite and non-negative: " + distance);
         }
@@ -59,5 +65,18 @@ public record ShadowAttemptContext(UUID eventId, ServerPlayer thief, ShadowTarge
         }
         // Defensive immutable copy; never equals-detection against the source.
         position = position == null ? null : position.immutable();
+    }
+
+    /**
+     * Convenience constructor with a {@link ShadowAbilitySnapshot#none()}
+     * snapshot — the fail-closed basic behaviour (no ability active). Used by
+     * tests and by paths that must never touch the ability layer.
+     */
+    public ShadowAttemptContext(UUID eventId, ServerPlayer thief, ShadowTargetKind targetKind,
+                                UUID targetId, @Nullable ResourceLocation targetType, ServerLevel level,
+                                @Nullable BlockPos position, long serverTick, boolean automated,
+                                double distance, boolean hasLineOfSight) {
+        this(eventId, thief, targetKind, targetId, targetType, level, position, serverTick,
+                automated, distance, hasLineOfSight, ShadowAbilitySnapshot.none());
     }
 }

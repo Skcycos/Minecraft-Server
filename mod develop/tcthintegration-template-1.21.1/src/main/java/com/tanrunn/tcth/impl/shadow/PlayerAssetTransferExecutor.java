@@ -128,8 +128,14 @@ public final class PlayerAssetTransferExecutor implements ShadowTransferExecutor
         int victimSlot = victimSlots.get(index);
         int thiefSlot = thiefSlots.get(index);
         ItemStack stack = victimInventory.getItem(victimSlot);
+        // High-value penalty by 妙手 tier (phase 8E): the tag never gets
+        // bypassed — only the penalty magnitude changes (-0.10 / -0.05 / 0).
+        double highValueModifier = stack.is(ShadowTags.HIGH_VALUE_STEALABLE_ITEMS)
+                ? ShadowAbilityValues.highValueModifier(context.abilities().sleight())
+                : 0.0d;
         return new ItemPlan(victimSlot, victimInventory.getItem(victimSlot).copy(), thiefSlot,
-                thiefInventory.getItem(thiefSlot).copy(), stack.copyWithCount(1));
+                thiefInventory.getItem(thiefSlot).copy(), stack.copyWithCount(1),
+                highValueModifier);
     }
 
     private @Nullable ShadowTransferPlan prepareHealth(ShadowAttemptContext context) {
@@ -144,7 +150,10 @@ public final class PlayerAssetTransferExecutor implements ShadowTransferExecutor
                 || thiefHealth >= thiefMax) {
             return null;
         }
-        float transfer = Math.min(HealthPlan.BASE_TRANSFER,
+        // 夺生 tier transfer (1 / 2 / 4, phase 8E) — the SAME shared source
+        // the candidate probe relies on; the protection lines never move.
+        float transfer = Math.min(
+                ShadowAbilityValues.lifeSiphonHealthTransfer(context.abilities().lifeSiphon()),
                 Math.min(victimHealth - PlayerReadonlyCandidateProvider.HEALTH_FLOOR,
                         thiefMax - thiefHealth));
         if (transfer <= 0.0f) {
@@ -158,10 +167,13 @@ public final class PlayerAssetTransferExecutor implements ShadowTransferExecutor
         if (victim == null) {
             return null;
         }
-        // Shared feasibility (8C.1.3 §5): the exact same conserving-plan rule
-        // the candidate probe uses.
+        // Shared feasibility (8C.1.3 §5) with the SAME tier-adjusted transfer
+        // the candidate probe uses (phase 8E: 2 / 3 / 4) — one numeric source,
+        // so a tier change can never make "candidate available" while
+        // prepare (without drift) returns null.
         return ShadowFeasibility.computeHungerPlan(victim.getFoodData(),
-                context.thief().getFoodData());
+                context.thief().getFoodData(),
+                ShadowAbilityValues.lifeSiphonHungerTransfer(context.abilities().lifeSiphon()));
     }
 
     private @Nullable ShadowTransferPlan prepareEffect(ShadowAttemptContext context, RandomSource random) {
@@ -182,7 +194,12 @@ public final class PlayerAssetTransferExecutor implements ShadowTransferExecutor
             return null;
         }
         MobEffectInstance instance = eligible.get(random.nextInt(eligible.size()));
-        int transferTicks = Math.min(EffectPlan.BASE_MAX_TRANSFER_TICKS, instance.getDuration());
+        // 窃法 tier cap (200 / 400 / 600 ticks, phase 8E) — the same shared
+        // max-duration source the candidate layer documents; the receipt
+        // records the REAL transferred duration.
+        int transferTicks = Math.min(
+                ShadowAbilityValues.spellTheftMaxTicks(context.abilities().spellTheft()),
+                instance.getDuration());
         return new EffectPlan(instance.getEffect().unwrapKey().map(ResourceKey::location).orElseThrow(),
                 instance.getAmplifier(), transferTicks, instance, null);
     }

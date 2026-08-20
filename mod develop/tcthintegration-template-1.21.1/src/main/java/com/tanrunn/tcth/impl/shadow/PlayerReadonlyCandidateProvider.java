@@ -66,7 +66,7 @@ public final class PlayerReadonlyCandidateProvider implements ShadowCandidatePro
         if (healthAvailable(target, context.thief())) {
             candidates.add(ShadowCandidate.plain(ShadowTheftType.HEALTH, ShadowCandidatePool.DEFAULT_HEALTH_WEIGHT));
         }
-        if (hungerAvailable(target, context.thief())) {
+        if (hungerAvailable(target, context.thief(), context)) {
             candidates.add(ShadowCandidate.plain(ShadowTheftType.HUNGER, ShadowCandidatePool.DEFAULT_HUNGER_WEIGHT));
         }
         if (effectAvailable(target, context.thief())) {
@@ -119,10 +119,22 @@ public final class PlayerReadonlyCandidateProvider implements ShadowCandidatePro
                 && thief.getHealth() < thief.getMaxHealth();
     }
 
-    private static boolean hungerAvailable(ServerPlayer target, ServerPlayer thief) {
+    private static boolean hungerAvailable(ServerPlayer target, ServerPlayer thief,
+                                           ShadowAttemptContext context) {
         // Shared feasibility (8C.1.3 §5): the same conserving-plan rule the
-        // engine's prepare uses — never two copies of the formula.
-        return ShadowFeasibility.computeHungerPlan(target.getFoodData(), thief.getFoodData()) != null;
+        // engine's prepare uses — never two copies of the formula. The
+        // 夺生-tier transfer (2 / 3 / 4, phase 8E) is the SAME shared numeric
+        // source the engine reads, so an ability-tier change can never make a
+        // candidate "available" while prepare (without drift) returns null.
+        return ShadowFeasibility.computeHungerPlan(target.getFoodData(), thief.getFoodData(),
+                ShadowAbilityValues.lifeSiphonHungerTransfer(thiefTier(context, ShadowAbilityRoute.LIFE_SIPHON))) != null;
+    }
+
+    /** Tier of a route from the attempt's snapshot (NONE for null contexts). */
+    private static ShadowAbilityTier thiefTier(ShadowAttemptContext context, ShadowAbilityRoute route) {
+        return context == null || context.abilities() == null
+                ? ShadowAbilityTier.NONE
+                : context.abilities().tier(route);
     }
 
     private static boolean effectAvailable(ServerPlayer target, ServerPlayer thief) {

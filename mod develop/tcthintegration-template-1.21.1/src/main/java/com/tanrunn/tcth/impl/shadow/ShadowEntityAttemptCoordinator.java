@@ -229,10 +229,13 @@ public final class ShadowEntityAttemptCoordinator {
                         ShadowTheftOutcome.TRANSFER_FAILED);
         }
 
-        // 10. success roll — exactly one.
+        // 10. success roll — exactly one. The 妙手 success bonus (phase 8E)
+        //     applies to entity loot attempts too (+0.05 / +0.10 / +0.15,
+        //     still clamped to the configured range).
         double chance = ShadowSuccessCalculator.calculate(new ShadowSuccessContext(
                 settings.baseSuccessChance(), false, false, false, context.distance(),
-                0.0d, 0.0d, settings.minSuccessChance(), settings.maxSuccessChance()));
+                0.0d, ShadowAbilityValues.sleightSuccessBonus(context.abilities().sleight()),
+                settings.minSuccessChance(), settings.maxSuccessChance()));
         if (!ShadowSuccessCalculator.roll(random, chance)) {
             retaliate(target, context.thief());
             return settle(ShadowTheftOutcome.FAILED_ROLL, context, null, null, audit,
@@ -338,10 +341,21 @@ public final class ShadowEntityAttemptCoordinator {
             }
 
             // 17. success settlement + single event: the Result carries the
-            //     REAL eventPosted boolean (8D.1.2 §5).
+            //     REAL eventPosted boolean (8D.1.2 §5). The escape success
+            //     effects (phase 8E) are applied AFTER the FINAL audit write
+            //     and the event post — best-effort, never affects the
+            //     outcome. The global cooldown is reduced by the 妙手 tier.
             boolean posted = postEvent(context, receipt);
             settleCooldown(ShadowTheftOutcome.SUCCESS, context, settings);
             settleIdempotency(context);
+            try {
+                ShadowEscapeEffects.applySuccess(context.thief(), context.abilities());
+            } catch (RuntimeException | LinkageError e) {
+                // best-effort: a grant failure never changes the outcome
+                ShadowLogThrottle.warnOncePerMinute(TCTHIntegration.LOGGER,
+                        "[TCTH] Shadow escape success effects failed (event {}): {}",
+                        context.eventId(), e.toString());
+            }
             return new Result(ShadowTheftOutcome.SUCCESS, context.eventId(), posted, receipt,
                     null, context.targetType());
         } catch (RuntimeException | LinkageError e) {
@@ -394,7 +408,8 @@ public final class ShadowEntityAttemptCoordinator {
             UUID thiefId = context.thief().getUUID();
             switch (outcome) {
                 case SUCCESS -> cooldownTracker.markGlobalCooldown(thiefId,
-                        settings.globalCooldownTicks());
+                        ShadowAbilityValues.sleightGlobalCooldownTicks(
+                                settings.globalCooldownTicks(), context.abilities().sleight()));
                 case FAILED_ROLL, TRANSFER_FAILED, FAILED_CLEAN, ROLLED_BACK ->
                         cooldownTracker.markFailureCooldown(thiefId,
                                 settings.failureCooldownTicks());

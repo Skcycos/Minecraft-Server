@@ -46,7 +46,7 @@ class ShadowBoundaryGuardTest {
         // read-only probes and tag keys are the only other holders.
         ALLOWED_FILES.put("MobEffect", List.of("PlayerReadonlyCandidateProvider.java", "ShadowTags.java",
                 "PlayerAssetTransferExecutor.java", "EffectPlan.java", "ShadowFeasibility.java",
-                "PlayerInteractHandler.java"));
+                "PlayerInteractHandler.java", "ShadowEscapeEffects.java", "ShadowAbilityValues.java"));
         ALLOWED_FILES.put("net.minecraft.world.entity.player.Inventory",
                 List.of("PlayerReadonlyCandidateProvider.java", "PlayerAssetTransferExecutor.java",
                         "SlotItemTransaction.java"));
@@ -57,8 +57,15 @@ class ShadowBoundaryGuardTest {
         ALLOWED_FILES.put("setHealth", List.of("PlayerAssetTransferExecutor.java"));
         ALLOWED_FILES.put("setFoodLevel", List.of("PlayerAssetTransferExecutor.java"));
         ALLOWED_FILES.put("setSaturation", List.of("PlayerAssetTransferExecutor.java"));
-        ALLOWED_FILES.put("removeEffect", List.of("PlayerAssetTransferExecutor.java"));
+        ALLOWED_FILES.put("removeEffect", List.of("PlayerAssetTransferExecutor.java",
+                "ShadowEscapeEffects.java"));
         ALLOWED_FILES.put("forceAddEffect", List.of("PlayerAssetTransferExecutor.java"));
+        ALLOWED_FILES.put("addEffect", List.of("PlayerAssetTransferExecutor.java",
+                "PlayerInteractHandler.java", "ShadowEscapeEffects.java"));
+        // 8E.1 §3: the escape-route ownership lifecycle listens to the
+        // server-authoritative MobEffectEvent chain — confined to the escape
+        // module alone.
+        ALLOWED_FILES.put("MobEffectEvent", List.of("ShadowEscapeEffects.java"));
         ALLOWED_FILES.put("heal(", List.of("PlayerAssetTransferExecutor.java"));
         ALLOWED_FILES.put("setItem", List.of("PlayerAssetTransferExecutor.java",
                 "SlotItemTransaction.java"));
@@ -85,6 +92,8 @@ class ShadowBoundaryGuardTest {
             "setSaturation",
             "removeEffect",
             "forceAddEffect",
+            "addEffect",
+            "MobEffectEvent",
             "heal(",
             "setItem",
             "removeItem"

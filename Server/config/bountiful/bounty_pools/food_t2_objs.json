@@ -583,6 +583,1326 @@
       },
       "unitWorth": 25,
       "weightMult": 0.7
+    },
+    "bakeries_bagel": {
+      "type": "item",
+      "content": "bakeries:bagel",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_bagel_filled_sauce": {
+      "type": "item",
+      "content": "bakeries:bagel_filled_sauce",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_baguette": {
+      "type": "item",
+      "content": "bakeries:baguette",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_baguette_with_filling": {
+      "type": "item",
+      "content": "bakeries:baguette_with_filling",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_berry_bagel": {
+      "type": "item",
+      "content": "bakeries:berry_bagel",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_brown_sugar_roll": {
+      "type": "item",
+      "content": "bakeries:brown_sugar_roll",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_cheese_cream_bread": {
+      "type": "item",
+      "content": "bakeries:cheese_cream_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_ciabatta": {
+      "type": "item",
+      "content": "bakeries:ciabatta",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_country_bread_slice": {
+      "type": "item",
+      "content": "bakeries:country_bread_slice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_croissant": {
+      "type": "item",
+      "content": "bakeries:croissant",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_dirty_choco_croissant": {
+      "type": "item",
+      "content": "bakeries:dirty_choco_croissant",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_egg_tart": {
+      "type": "item",
+      "content": "bakeries:egg_tart",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_flat_croissant": {
+      "type": "item",
+      "content": "bakeries:flat_croissant",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_focaccia": {
+      "type": "item",
+      "content": "bakeries:focaccia",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_honey_butter_spread_country_bread": {
+      "type": "item",
+      "content": "bakeries:honey_butter_spread_country_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_honey_butter_spread_toast": {
+      "type": "item",
+      "content": "bakeries:honey_butter_spread_toast",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_matcha_parfait": {
+      "type": "item",
+      "content": "bakeries:matcha_parfait",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_meat_floss_bread_roll": {
+      "type": "item",
+      "content": "bakeries:meat_floss_bread_roll",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_pineapple_bun": {
+      "type": "item",
+      "content": "bakeries:pineapple_bun",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_rice_bread": {
+      "type": "item",
+      "content": "bakeries:rice_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_round_bread": {
+      "type": "item",
+      "content": "bakeries:round_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_salmon_sandwich": {
+      "type": "item",
+      "content": "bakeries:salmon_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_salt_croissant": {
+      "type": "item",
+      "content": "bakeries:salt_croissant",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_sliced_cheese_cocoa_toast": {
+      "type": "item",
+      "content": "bakeries:sliced_cheese_cocoa_toast",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_sliced_toast": {
+      "type": "item",
+      "content": "bakeries:sliced_toast",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_taro_salt_yolk_bread": {
+      "type": "item",
+      "content": "bakeries:taro_salt_yolk_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_tomato_cheese_croissant_sandwich": {
+      "type": "item",
+      "content": "bakeries:tomato_cheese_croissant_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "bakeries_whole_wheat_bagel": {
+      "type": "item",
+      "content": "bakeries:whole_wheat_bagel",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_apple_jelly": {
+      "type": "item",
+      "content": "brewinandchewin:apple_jelly",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_cheesy_pasta": {
+      "type": "item",
+      "content": "brewinandchewin:cheesy_pasta",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_creamy_onion_soup": {
+      "type": "item",
+      "content": "brewinandchewin:creamy_onion_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_glow_berry_marmalade": {
+      "type": "item",
+      "content": "brewinandchewin:glow_berry_marmalade",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_ham_and_cheese_sandwich": {
+      "type": "item",
+      "content": "brewinandchewin:ham_and_cheese_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_horror_lasagna": {
+      "type": "item",
+      "content": "brewinandchewin:horror_lasagna",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_pizza_slice": {
+      "type": "item",
+      "content": "brewinandchewin:pizza_slice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_scarlet_pierogi": {
+      "type": "item",
+      "content": "brewinandchewin:scarlet_pierogi",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_sweet_berry_jam": {
+      "type": "item",
+      "content": "brewinandchewin:sweet_berry_jam",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "brewinandchewin_vegetable_omelet": {
+      "type": "item",
+      "content": "brewinandchewin:vegetable_omelet",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_amethyst_rock_candy": {
+      "type": "item",
+      "content": "dungeonsdelight:amethyst_rock_candy",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_au_rotten_potatoes": {
+      "type": "item",
+      "content": "dungeonsdelight:au_rotten_potatoes",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_bloated_baked_potato": {
+      "type": "item",
+      "content": "dungeonsdelight:bloated_baked_potato",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_bloody_mary": {
+      "type": "item",
+      "content": "dungeonsdelight:bloody_mary",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_brains_in_a_brick": {
+      "type": "item",
+      "content": "dungeonsdelight:brains_in_a_brick",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_breeze_cream_cone": {
+      "type": "item",
+      "content": "dungeonsdelight:breeze_cream_cone",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_chicken_jockey_sandwich": {
+      "type": "item",
+      "content": "dungeonsdelight:chicken_jockey_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_chloropasta": {
+      "type": "item",
+      "content": "dungeonsdelight:chloropasta",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_cob_n_candy": {
+      "type": "item",
+      "content": "dungeonsdelight:cob_n_candy",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_croak_monster": {
+      "type": "item",
+      "content": "dungeonsdelight:croak_monster",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_devilish_eggs": {
+      "type": "item",
+      "content": "dungeonsdelight:devilish_eggs",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_echo_rock_candy": {
+      "type": "item",
+      "content": "dungeonsdelight:echo_rock_candy",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_gelled_salad": {
+      "type": "item",
+      "content": "dungeonsdelight:gelled_salad",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_ghast_roll": {
+      "type": "item",
+      "content": "dungeonsdelight:ghast_roll",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_ghastly_spirits": {
+      "type": "item",
+      "content": "dungeonsdelight:ghastly_spirits",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_ghoulash": {
+      "type": "item",
+      "content": "dungeonsdelight:ghoulash",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_gyudon": {
+      "type": "item",
+      "content": "dungeonsdelight:gyudon",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_haggis": {
+      "type": "item",
+      "content": "dungeonsdelight:haggis",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_jelly_beans": {
+      "type": "item",
+      "content": "dungeonsdelight:jelly_beans",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_malicious_sandwich": {
+      "type": "item",
+      "content": "dungeonsdelight:malicious_sandwich",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_marshbellow": {
+      "type": "item",
+      "content": "dungeonsdelight:marshbellow",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_monster_burger": {
+      "type": "item",
+      "content": "dungeonsdelight:monster_burger",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_monster_cake_slice": {
+      "type": "item",
+      "content": "dungeonsdelight:monster_cake_slice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_monster_muffin": {
+      "type": "item",
+      "content": "dungeonsdelight:monster_muffin",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_necronog": {
+      "type": "item",
+      "content": "dungeonsdelight:necronog",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_poi": {
+      "type": "item",
+      "content": "dungeonsdelight:poi",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_poisonous_poutine": {
+      "type": "item",
+      "content": "dungeonsdelight:poisonous_poutine",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_rot_roast": {
+      "type": "item",
+      "content": "dungeonsdelight:rot_roast",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_rotpop": {
+      "type": "item",
+      "content": "dungeonsdelight:rotpop",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_rubaboo": {
+      "type": "item",
+      "content": "dungeonsdelight:rubaboo",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_salt_soaked_stew": {
+      "type": "item",
+      "content": "dungeonsdelight:salt_soaked_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_sculk_apple": {
+      "type": "item",
+      "content": "dungeonsdelight:sculk_apple",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_shiokara": {
+      "type": "item",
+      "content": "dungeonsdelight:shiokara",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_silverfish_fried_rice": {
+      "type": "item",
+      "content": "dungeonsdelight:silverfish_fried_rice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_sinigang": {
+      "type": "item",
+      "content": "dungeonsdelight:sinigang",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_slime_noodles": {
+      "type": "item",
+      "content": "dungeonsdelight:slime_noodles",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_snifferwurst": {
+      "type": "item",
+      "content": "dungeonsdelight:snifferwurst",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_snuffledog": {
+      "type": "item",
+      "content": "dungeonsdelight:snuffledog",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_soaked_skewer": {
+      "type": "item",
+      "content": "dungeonsdelight:soaked_skewer",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_spider_bisque": {
+      "type": "item",
+      "content": "dungeonsdelight:spider_bisque",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_spider_extract": {
+      "type": "item",
+      "content": "dungeonsdelight:spider_extract",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_spider_pie_slice": {
+      "type": "item",
+      "content": "dungeonsdelight:spider_pie_slice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_spider_salmagundi": {
+      "type": "item",
+      "content": "dungeonsdelight:spider_salmagundi",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_spider_tanghulu": {
+      "type": "item",
+      "content": "dungeonsdelight:spider_tanghulu",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_takoyaki": {
+      "type": "item",
+      "content": "dungeonsdelight:takoyaki",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_terrine_loaf": {
+      "type": "item",
+      "content": "dungeonsdelight:terrine_loaf",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_trial_freakshake": {
+      "type": "item",
+      "content": "dungeonsdelight:trial_freakshake",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "dungeonsdelight_wispy_rice_ball": {
+      "type": "item",
+      "content": "dungeonsdelight:wispy_rice_ball",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_bacon-wrapped_sausage_on_a_stick": {
+      "type": "item",
+      "content": "mynethersdelight:bacon-wrapped_sausage_on_a_stick",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_bleeding_tartar": {
+      "type": "item",
+      "content": "mynethersdelight:bleeding_tartar",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_blue_tenderloin_steak": {
+      "type": "item",
+      "content": "mynethersdelight:blue_tenderloin_steak",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_breakfast_sampler": {
+      "type": "item",
+      "content": "mynethersdelight:breakfast_sampler",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_chilidog": {
+      "type": "item",
+      "content": "mynethersdelight:chilidog",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_crimson_stroganoff": {
+      "type": "item",
+      "content": "mynethersdelight:crimson_stroganoff",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_deviled_egg": {
+      "type": "item",
+      "content": "mynethersdelight:deviled_egg",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_egg_soup": {
+      "type": "item",
+      "content": "mynethersdelight:egg_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_fries_ghasta": {
+      "type": "item",
+      "content": "mynethersdelight:fries_ghasta",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_ghast_salad": {
+      "type": "item",
+      "content": "mynethersdelight:ghast_salad",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_giant_takoyaki": {
+      "type": "item",
+      "content": "mynethersdelight:giant_takoyaki",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_hoglin_sausage": {
+      "type": "item",
+      "content": "mynethersdelight:hoglin_sausage",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_hot_cream_cone": {
+      "type": "item",
+      "content": "mynethersdelight:hot_cream_cone",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_hot_wings": {
+      "type": "item",
+      "content": "mynethersdelight:hot_wings",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_hotdog_with_mixed_salad": {
+      "type": "item",
+      "content": "mynethersdelight:hotdog_with_mixed_salad",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_hotdog_with_nether_salad": {
+      "type": "item",
+      "content": "mynethersdelight:hotdog_with_nether_salad",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_magma_cake_slice": {
+      "type": "item",
+      "content": "mynethersdelight:magma_cake_slice",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_nether_burger": {
+      "type": "item",
+      "content": "mynethersdelight:nether_burger",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_rock_soup": {
+      "type": "item",
+      "content": "mynethersdelight:rock_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_sausage_and_potatoes": {
+      "type": "item",
+      "content": "mynethersdelight:sausage_and_potatoes",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_scotch_eggs": {
+      "type": "item",
+      "content": "mynethersdelight:scotch_eggs",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_sizzling_pudding": {
+      "type": "item",
+      "content": "mynethersdelight:sizzling_pudding",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_slices_of_bread": {
+      "type": "item",
+      "content": "mynethersdelight:slices_of_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_spicy_curry": {
+      "type": "item",
+      "content": "mynethersdelight:spicy_curry",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_spicy_hoglin_stew": {
+      "type": "item",
+      "content": "mynethersdelight:spicy_hoglin_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_spicy_noodle_soup": {
+      "type": "item",
+      "content": "mynethersdelight:spicy_noodle_soup",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_spicy_skewer": {
+      "type": "item",
+      "content": "mynethersdelight:spicy_skewer",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_strider_stew": {
+      "type": "item",
+      "content": "mynethersdelight:strider_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_strider_with_grilled_fungus": {
+      "type": "item",
+      "content": "mynethersdelight:strider_with_grilled_fungus",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_stuffed_pepper": {
+      "type": "item",
+      "content": "mynethersdelight:stuffed_pepper",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_twisted_ghasta": {
+      "type": "item",
+      "content": "mynethersdelight:twisted_ghasta",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_adzuki_curry": {
+      "type": "item",
+      "content": "neapolitan:adzuki_curry",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_adzuki_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:adzuki_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_adzuki_stew": {
+      "type": "item",
+      "content": "neapolitan:adzuki_stew",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_banana_bread": {
+      "type": "item",
+      "content": "neapolitan:banana_bread",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_banana_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:banana_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_chocolate_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:chocolate_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_mint_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:mint_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_neapolitan_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:neapolitan_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_strawberry_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:strawberry_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_strawberry_scones": {
+      "type": "item",
+      "content": "neapolitan:strawberry_scones",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_vanilla_ice_cream": {
+      "type": "item",
+      "content": "neapolitan:vanilla_ice_cream",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "neapolitan_vanilla_pudding": {
+      "type": "item",
+      "content": "neapolitan:vanilla_pudding",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_plate_of_stuffed_hoglin": {
+      "type": "item",
+      "content": "mynethersdelight:plate_of_stuffed_hoglin",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_plate_of_stuffed_hoglin_ham": {
+      "type": "item",
+      "content": "mynethersdelight:plate_of_stuffed_hoglin_ham",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
+    },
+    "mynethersdelight_plate_of_stuffed_hoglin_snout": {
+      "type": "item",
+      "content": "mynethersdelight:plate_of_stuffed_hoglin_snout",
+      "amount": {
+        "min": 2,
+        "max": 8
+      },
+      "unitWorth": 35,
+      "weightMult": 0.8
     }
   }
 }

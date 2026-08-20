@@ -1789,4 +1789,170 @@ class ShadowAttemptCoordinatorTest {
             return !unhealthy;
         }
     }
+
+    // ---- phase 8E: ability snapshot integration ----
+
+    private ShadowAttemptContext contextWithAbilities(ShadowAbilitySnapshot abilities) {
+        ServerLevel level = mock(ServerLevel.class);
+        when(level.dimension()).thenReturn(net.minecraft.world.level.Level.OVERWORLD);
+        ServerPlayer thief = mock(ServerPlayer.class);
+        UUID thiefId = UUID.randomUUID();
+        when(thief.getUUID()).thenReturn(thiefId);
+        when(thief.getGameProfile()).thenReturn(new com.mojang.authlib.GameProfile(thiefId, "thief"));
+        when(thief.level()).thenReturn(level);
+        when(thief.getLookAngle()).thenReturn(new Vec3(1.0d, 0.0d, 0.0d));
+        when(thief.position()).thenReturn(Vec3.ZERO);
+        when(thief.canInteractWithEntity(any(net.minecraft.world.phys.AABB.class), anyDouble()))
+                .thenReturn(true);
+        ServerPlayer victim = mock(ServerPlayer.class);
+        UUID victimId = UUID.randomUUID();
+        when(victim.getUUID()).thenReturn(victimId);
+        when(level.getPlayerByUUID(any())).thenReturn(victim);
+        when(victim.isAlive()).thenReturn(true);
+        when(victim.level()).thenReturn(level);
+        when(victim.getBoundingBox()).thenReturn(new net.minecraft.world.phys.AABB(0, 0, 0, 1, 1, 1));
+        return new ShadowAttemptContext(UUID.randomUUID(), thief, ShadowTargetKind.PLAYER,
+                victimId, null, level, BlockPos.ZERO, 1000L, false, 2.0d, true, abilities);
+    }
+
+    @Test
+    void sleightTierRaisesTheSuccessChance() {
+        protection = ctx -> ShadowProtectionResult.ALLOWED;
+        executor = new FixedExecutor() {
+            @Override
+            public ShadowTransferResult commit(ShadowAttemptContext c, ShadowCandidate s,
+                                               ShadowTransferPlan p) {
+                return ShadowTransferResult.committed(ShadowTheftReceipt.item(DIAMOND, 1));
+            }
+        };
+        ShadowAttemptCoordinator coordinator = coordinator();
+        // Base chance 0.35: a roll of 0.4 FAILS without the ability…
+        when(random.nextLong()).thenReturn(0L);
+        when(random.nextDouble()).thenReturn(0.4d);
+        assertEquals(ShadowTheftOutcome.FAILED_ROLL,
+                coordinator.attempt(context()).outcome(), "base 0.35 must fail at 0.4");
+        // …and SUCCEEDS with the 妙手 III bonus (+0.15 → 0.50).
+        ShadowAbilitySnapshot sleight = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        assertEquals(ShadowTheftOutcome.SUCCESS,
+                coordinator.attempt(contextWithAbilities(sleight)).outcome(),
+                "0.35 + 0.15 = 0.50 must succeed at 0.4");
+    }
+
+    @Test
+    void sleightBonusNeverExceedsTheConfiguredMaximum() {
+        protection = ctx -> ShadowProtectionResult.ALLOWED;
+        executor = new FixedExecutor() {
+            @Override
+            public ShadowTransferResult commit(ShadowAttemptContext c, ShadowCandidate s,
+                                               ShadowTransferPlan p) {
+                return ShadowTransferResult.committed(ShadowTheftReceipt.item(DIAMOND, 1));
+            }
+        };
+        ShadowAttemptCoordinator coordinator = coordinator();
+        ShadowAbilitySnapshot sleight = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        // 0.35 + 0.15 = 0.50 < 0.85 → still clamped by the configured max; a
+        // roll just below 0.85 must still fail, proving the bonus never
+        // bypasses the clamp.
+        when(random.nextLong()).thenReturn(0L);
+        when(random.nextDouble()).thenReturn(0.84d);
+        assertEquals(ShadowTheftOutcome.FAILED_ROLL,
+                coordinator.attempt(contextWithAbilities(sleight)).outcome());
+    }
+
+    @Test
+    void sleightTierShortensTheGlobalCooldown() {
+        protection = ctx -> ShadowProtectionResult.ALLOWED;
+        executor = new FixedExecutor() {
+            @Override
+            public ShadowTransferResult commit(ShadowAttemptContext c, ShadowCandidate s,
+                                               ShadowTransferPlan p) {
+                return ShadowTransferResult.committed(ShadowTheftReceipt.item(DIAMOND, 1));
+            }
+        };
+        when(random.nextLong()).thenReturn(0L);
+        when(random.nextDouble()).thenReturn(0.1d);
+
+        // Base: global cooldown 200 ticks.
+        cooldowns = new ShadowCooldownTracker();
+        ShadowAttemptCoordinator coordinator = coordinator();
+        ShadowAttemptContext baseCtx = context();
+        UUID thiefId = baseCtx.thief().getUUID();
+        assertEquals(ShadowTheftOutcome.SUCCESS, coordinator.attempt(baseCtx).outcome());
+        assertTrue(cooldowns.isGlobalCooldownActive(thiefId));
+        for (int i = 0; i < 140; i++) {
+            cooldowns.onServerTick(null);
+        }
+        assertTrue(cooldowns.isGlobalCooldownActive(thiefId), "base 200 must still be active at 140");
+
+        // 妙手 III: global cooldown 140 ticks (fresh tracker + coordinator).
+        cooldowns = new ShadowCooldownTracker();
+        coordinator = coordinator();
+        ShadowAbilitySnapshot sleight = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        ShadowAttemptContext ctx = contextWithAbilities(sleight);
+        assertEquals(ShadowTheftOutcome.SUCCESS, coordinator.attempt(ctx).outcome());
+        assertTrue(cooldowns.isGlobalCooldownActive(ctx.thief().getUUID()));
+        for (int i = 0; i < 140; i++) {
+            cooldowns.onServerTick(null);
+        }
+        assertFalse(cooldowns.isGlobalCooldownActive(ctx.thief().getUUID()),
+                "妙手 III reduces 200 → 140 ticks");
+    }
+
+    @Test
+    void escapeEffectsAreAppliedOnlyAfterFinalSuccess() {
+        protection = ctx -> ShadowProtectionResult.ALLOWED;
+        executor = new FixedExecutor() {
+            @Override
+            public ShadowTransferResult commit(ShadowAttemptContext c, ShadowCandidate s,
+                                               ShadowTransferPlan p) {
+                return ShadowTransferResult.committed(ShadowTheftReceipt.item(DIAMOND, 1));
+            }
+        };
+        ShadowEscapeEffects.resetForTesting();
+        try {
+            ShadowAttemptCoordinator coordinator = coordinator();
+            ShadowAbilitySnapshot escape = new ShadowAbilitySnapshot(ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.II);
+            // A failed roll must NOT grant escape effects.
+            when(random.nextLong()).thenReturn(0L);
+            when(random.nextDouble()).thenReturn(0.9d);
+            ShadowAttemptContext failCtx = contextWithAbilities(escape);
+            assertEquals(ShadowTheftOutcome.FAILED_ROLL, coordinator.attempt(failCtx).outcome());
+            assertEquals(0, ShadowEscapeEffects.markCount(), "FAILED_ROLL grants no escape effects");
+            // A final SUCCESS (after the FINAL audit) grants them.
+            when(random.nextDouble()).thenReturn(0.1d);
+            ShadowAttemptContext okCtx = contextWithAbilities(escape);
+            when(okCtx.thief().addEffect(any(net.minecraft.world.effect.MobEffectInstance.class)))
+                    .thenReturn(true);
+            assertEquals(ShadowTheftOutcome.SUCCESS, coordinator.attempt(okCtx).outcome());
+            assertEquals(1, ShadowEscapeEffects.markCount(),
+                    "SUCCESS with the 潜影 II tier must record the invisibility marker");
+        } finally {
+            ShadowEscapeEffects.resetForTesting();
+        }
+    }
+
+    @Test
+    void noneTierNeverGrantsEscapeEffects() {
+        protection = ctx -> ShadowProtectionResult.ALLOWED;
+        executor = new FixedExecutor() {
+            @Override
+            public ShadowTransferResult commit(ShadowAttemptContext c, ShadowCandidate s,
+                                               ShadowTransferPlan p) {
+                return ShadowTransferResult.committed(ShadowTheftReceipt.item(DIAMOND, 1));
+            }
+        };
+        ShadowEscapeEffects.resetForTesting();
+        try {
+            when(random.nextLong()).thenReturn(0L);
+            when(random.nextDouble()).thenReturn(0.1d);
+            assertEquals(ShadowTheftOutcome.SUCCESS, coordinator().attempt(context()).outcome());
+            assertEquals(0, ShadowEscapeEffects.markCount(), "NONE tier grants nothing");
+        } finally {
+            ShadowEscapeEffects.resetForTesting();
+        }
+    }
 }

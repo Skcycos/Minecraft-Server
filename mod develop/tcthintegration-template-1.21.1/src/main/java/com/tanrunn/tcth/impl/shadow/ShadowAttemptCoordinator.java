@@ -427,12 +427,14 @@ public final class ShadowAttemptCoordinator {
         }
 
         // 13. success chance from immutable facts (LOS-aware, 8B.1 §6) + the
-        //     concrete plan's modifier.
+        //     concrete plan's modifier + the 妙手 success bonus (phase 8E:
+        //     +0.05 / +0.10 / +0.15, still clamped to the configured range).
         ShadowVectorMath.ShadowDirectionFacts facts = computeFacts(context);
         double chance = ShadowSuccessCalculator.calculate(new ShadowSuccessContext(
                 settings.baseSuccessChance(), facts.behind(), facts.watched(),
                 cooldownTracker.isAlerted(context.targetId()), context.distance(),
-                selected.successModifier() + plan.successModifier(), 0.0d,
+                selected.successModifier() + plan.successModifier(),
+                ShadowAbilityValues.sleightSuccessBonus(context.abilities().sleight()),
                 settings.minSuccessChance(), settings.maxSuccessChance()));
 
         // 14. success roll — exactly once
@@ -614,8 +616,11 @@ public final class ShadowAttemptCoordinator {
         // 24. commit cooldowns / victim protection. The FINAL SUCCESS audit
         //     record was written EXACTLY ONCE in step 22 (8C.2.3 §1) — the
         //     settlement below never appends again: it only settles the
-        //     idempotency keys and posts the final event.
-        cooldownTracker.markGlobalCooldown(thiefId, settings.globalCooldownTicks());
+        //     idempotency keys and posts the final event. The global cooldown
+        //     is reduced by the 妙手 tier (200 → 180 / 160 / 140, phase 8E).
+        cooldownTracker.markGlobalCooldown(thiefId,
+                ShadowAbilityValues.sleightGlobalCooldownTicks(settings.globalCooldownTicks(),
+                        context.abilities().sleight()));
         cooldownTracker.markVictimProtection(context.targetId(), settings.victimProtectionTicks());
 
         return finishAfterFinalAudit(context, selected.type(), receipt, audit);
@@ -632,7 +637,12 @@ public final class ShadowAttemptCoordinator {
                                          ShadowTheftReceipt receipt, ShadowAuditWriter audit) {
         idempotencyTracker.markEventId(context.eventId());
         idempotencyTracker.markAttempt(context.thief().getUUID(), context.targetId(), context.serverTick());
-        return result(ShadowTheftOutcome.SUCCESS, context, theftType, receipt, null, true, audit);
+        Result r = result(ShadowTheftOutcome.SUCCESS, context, theftType, receipt, null, true, audit);
+        // 潜影路线 (phase 8E): success effects only AFTER the FINAL audit
+        // write (step 22) — best-effort and exception-isolated, so a grant
+        // failure never rolls back the completed asset transaction.
+        ShadowEscapeEffects.applySuccess(context.thief(), context.abilities());
+        return r;
     }
 
     /**

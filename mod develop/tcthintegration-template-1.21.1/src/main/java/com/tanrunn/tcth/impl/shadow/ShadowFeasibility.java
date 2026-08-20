@@ -58,12 +58,23 @@ public final class ShadowFeasibility {
     }
 
     /**
-     * Computes the conserving HUNGER plan for the given food data, or
-     * {@code null} when no plan can keep {@code 0 <= saturation <= foodLevel}
-     * on both sides within the 1-point saturation budget.
+     * Computes the conserving HUNGER plan for the given food data and the
+     * desired food-point transfer (phase 8E: the tier-adjusted transfer from
+     * {@link ShadowAbilityValues#lifeSiphonHungerTransfer}), or {@code null}
+     * when no plan can keep {@code 0 <= saturation <= foodLevel} on both
+     * sides within the 1-point saturation budget.
+     *
+     * <p>The candidate probe and the engine's {@code prepareHunger} MUST call
+     * this with the SAME desired transfer — the shared numeric source, so an
+     * ability-tier change can never make a candidate "available" while
+     * prepare (without drift) returns {@code null}.
+     *
+     * @param desiredFoodTransfer the tier's desired food-point transfer
+     *                            (positive; e.g. 2 / 3 / 4)
      */
     @Nullable
-    public static HungerPlan computeHungerPlan(FoodData victimFood, FoodData thiefFood) {
+    public static HungerPlan computeHungerPlan(FoodData victimFood, FoodData thiefFood,
+                                               int desiredFoodTransfer) {
         int victimLevel = victimFood.getFoodLevel();
         int thiefLevel = thiefFood.getFoodLevel();
         float victimSat = victimFood.getSaturationLevel();
@@ -75,7 +86,7 @@ public final class ShadowFeasibility {
         if (victimSat > victimLevel || thiefSat > thiefLevel) {
             return null;
         }
-        int foodTransfer = Math.min(HungerPlan.BASE_FOOD_TRANSFER,
+        int foodTransfer = Math.min(Math.max(desiredFoodTransfer, 0),
                 Math.min(victimLevel - HungerPlan.HUNGER_FLOOR,
                         HungerPlan.MAX_FOOD - thiefLevel));
         if (foodTransfer <= 0) {

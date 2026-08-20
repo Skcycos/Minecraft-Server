@@ -196,6 +196,12 @@ class ShadowEntityAttemptCoordinatorTest {
         when(random.nextDouble()).thenReturn(0.1d); // success roll
     }
 
+    /** Stubs only the three draw rolls; the success roll is left to the
+     *  caller (phase 8E success-chance tests). */
+    private void stubPoolEntryCount() {
+        when(random.nextInt(anyInt())).thenReturn(0); // pool, entry, count
+    }
+
     // ---- gates & audit-before-everything (8D.1.1 §2) ----
 
     @Test
@@ -971,6 +977,104 @@ class ShadowEntityAttemptCoordinatorTest {
         @Override
         public boolean isHealthy() {
             return !unhealthy;
+        }
+    }
+
+    // ---- phase 8E: ability snapshot integration on the entity path ----
+
+    private ShadowAttemptContext contextWithAbilities(ServerPlayer thief, Entity target,
+                                                      ResourceLocation type, long tick,
+                                                      ShadowAbilitySnapshot abilities) {
+        UUID targetUuid = UUID.randomUUID();
+        when(target.getUUID()).thenReturn(targetUuid);
+        when(target.isAlive()).thenReturn(true);
+        when(target.isRemoved()).thenReturn(false);
+        when(target.level()).thenReturn(level);
+        when(target.blockPosition()).thenReturn(BlockPos.ZERO);
+        when(level.getEntity(targetUuid)).thenReturn(target);
+        return new ShadowAttemptContext(UUID.randomUUID(), thief, ShadowTargetKind.ENTITY,
+                targetUuid, type, level, BlockPos.ZERO, tick, false, 2.0d, true, abilities);
+    }
+
+    @Test
+    void sleightTierRaisesTheEntitySuccessChance() {
+        stubPoolEntryCount();
+        when(random.nextDouble()).thenReturn(0.4d); // base 0.35 → fail
+        ServerPlayer thief = thiefWithInventory();
+        Entity target = mock(Mob.class);
+        stubType(target, EntityType.COW);
+        ShadowEntityAttemptCoordinator.Result result =
+                coordinator().attempt(context(thief, target, COW, 1000L));
+        assertEquals(ShadowTheftOutcome.FAILED_ROLL, result.outcome(),
+                "base 0.35 must fail at a 0.4 roll");
+        // 妙手 III (+0.15 → 0.50) succeeds at the same roll.
+        stubPoolEntryCount();
+        when(random.nextDouble()).thenReturn(0.4d);
+        ServerPlayer thief2 = thiefWithInventory();
+        Entity target2 = mock(Mob.class);
+        stubType(target2, EntityType.COW);
+        ShadowAbilitySnapshot sleight = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        ShadowEntityAttemptCoordinator.Result ok =
+                coordinator().attempt(contextWithAbilities(thief2, target2, COW, 1000L, sleight));
+        assertEquals(ShadowTheftOutcome.SUCCESS, ok.outcome());
+    }
+
+    @Test
+    void sleightTierShortensTheEntityGlobalCooldown() {
+        stubSuccessRoll();
+        ServerPlayer thief = thiefWithInventory();
+        Entity target = mock(Mob.class);
+        stubType(target, EntityType.COW);
+        ShadowAbilitySnapshot sleight = new ShadowAbilitySnapshot(ShadowAbilityTier.II,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        ShadowAttemptContext ctx = contextWithAbilities(thief, target, COW, 1000L, sleight);
+        assertEquals(ShadowTheftOutcome.SUCCESS, coordinator().attempt(ctx).outcome());
+        UUID thiefId = ctx.thief().getUUID();
+        assertTrue(cooldowns.isGlobalCooldownActive(thiefId));
+        for (int i = 0; i < 160; i++) {
+            cooldowns.onServerTick(null);
+        }
+        assertFalse(cooldowns.isGlobalCooldownActive(thiefId),
+                "妙手 II reduces the entity-path cooldown 200 → 160 ticks");
+    }
+
+    @Test
+    void escapeEffectsAreAppliedOnlyOnEntityFinalSuccess() {
+        stubSuccessRoll();
+        ShadowEscapeEffects.resetForTesting();
+        try {
+            ServerPlayer thief = thiefWithInventory();
+            when(thief.level()).thenReturn(level);
+            UUID thiefUuid = thief.getUUID();
+            when(thief.getGameProfile()).thenReturn(new com.mojang.authlib.GameProfile(thiefUuid, "thief"));
+            when(thief.addEffect(any(net.minecraft.world.effect.MobEffectInstance.class)))
+                    .thenReturn(true);
+            Entity target = mock(Mob.class);
+            stubType(target, EntityType.COW);
+            ShadowAbilitySnapshot escape = new ShadowAbilitySnapshot(ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.II);
+            ShadowEntityAttemptCoordinator.Result result =
+                    coordinator().attempt(contextWithAbilities(thief, target, COW, 1000L, escape));
+            assertEquals(ShadowTheftOutcome.SUCCESS, result.outcome());
+            assertEquals(1, ShadowEscapeEffects.markCount(),
+                    "entity SUCCESS with the 潜影 II tier records the marker");
+            // A FAILED_ROLL never grants escape effects.
+            ShadowEscapeEffects.resetForTesting();
+            stubPoolEntryCount();
+            when(random.nextDouble()).thenReturn(0.9d);
+            ServerPlayer thief2 = thiefWithInventory();
+            when(thief2.level()).thenReturn(level);
+            UUID thief2Uuid = thief2.getUUID();
+            when(thief2.getGameProfile()).thenReturn(new com.mojang.authlib.GameProfile(thief2Uuid, "thief2"));
+            Entity target2 = mock(Mob.class);
+            stubType(target2, EntityType.COW);
+            ShadowEntityAttemptCoordinator.Result failed =
+                    coordinator().attempt(contextWithAbilities(thief2, target2, COW, 1000L, escape));
+            assertEquals(ShadowTheftOutcome.FAILED_ROLL, failed.outcome());
+            assertEquals(0, ShadowEscapeEffects.markCount());
+        } finally {
+            ShadowEscapeEffects.resetForTesting();
         }
     }
 }

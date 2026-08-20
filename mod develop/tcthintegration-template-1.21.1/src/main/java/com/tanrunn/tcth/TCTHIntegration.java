@@ -112,5 +112,9 @@ public class TCTHIntegration {
         ShadowIdempotencyTracker.SHARED.init(NeoForge.EVENT_BUS);
         ShadowTheftEventDispatcher.init(NeoForge.EVENT_BUS);
         PlayerInteractHandler.init(NeoForge.EVENT_BUS);
+        // Phase 8E: 潜影 escape-route marker lifecycle (attack break + logout/
+        // stop cleanup). The ability snapshot provider itself is installed by
+        // the conditional Jobs+ compat module; without Jobs+ it stays NONE.
+        com.tanrunn.tcth.impl.shadow.ShadowEscapeEffects.init(NeoForge.EVENT_BUS);
     }
 }

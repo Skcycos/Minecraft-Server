@@ -1,0 +1,17 @@
+{
+  "holder": {
+    "type": "jobsplus:powerup",
+    "id": "tcth:shadow_thief/sleight_of_hand_ii"
+  },
+  "type": "tcth:on_shadow_theft_success",
+  "rewards": [],
+  "conditions": [
+    {
+      "type": "tcth:shadow_sleight_abilities_enabled"
+    },
+    {
+      "type": "jobsplus:powerup_not_active",
+      "powerup": "tcth:shadow_thief/sleight_of_hand_iii"
+    }
+  ]
+}

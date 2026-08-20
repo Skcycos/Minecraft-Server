@@ -126,18 +126,26 @@ public final class PlayerInteractHandler {
         } catch (RuntimeException | LinkageError e) {
             hasLineOfSight = false;
         }
+        // Phase 8E: the ability snapshot is queried AT MOST ONCE per attempt
+        // and the SAME snapshot feeds the candidate pool, the success chance,
+        // the transfer prepare, the cooldown and the feedback layers.
+        ShadowAbilitySnapshot abilities = ShadowAbilityAccess.snapshotFor(thief);
+        // 潜影路线: starting another theft attempt immediately breaks a
+        // TCTH-granted invisibility — BEFORE any random roll or transaction.
+        ShadowEscapeEffects.breakOnNewAttempt(thief);
         // ---- split: PLAYER target → existing player path (unchanged);
         //      any other entity → the entity loot path (8D.1 §4) ----
         if (target instanceof ServerPlayer victim) {
-            attemptPlayer(event, thief, victim, level, hasLineOfSight);
+            attemptPlayer(event, thief, victim, level, hasLineOfSight, abilities);
         } else {
-            attemptEntity(event, thief, target, level, hasLineOfSight);
+            attemptEntity(event, thief, target, level, hasLineOfSight, abilities);
         }
     }
 
-    /** The unchanged 8C.x player-target path. */
+    /** The 8C.x player-target path (phase 8E: carries the attempt snapshot). */
     private static void attemptPlayer(PlayerInteractEvent.EntityInteract event, ServerPlayer thief,
-                                      ServerPlayer victim, ServerLevel level, boolean hasLineOfSight) {
+                                      ServerPlayer victim, ServerLevel level, boolean hasLineOfSight,
+                                      ShadowAbilitySnapshot abilities) {
         if (victim == thief || victim instanceof FakePlayer) {
             return;
         }
@@ -147,7 +155,7 @@ public final class PlayerInteractHandler {
         ShadowAttemptContext context = new ShadowAttemptContext(
                 UUID.randomUUID(), thief, ShadowTargetKind.PLAYER, victim.getUUID(), null,
                 level, victim.blockPosition().immutable(), level.getGameTime(), false,
-                thief.distanceTo(victim), hasLineOfSight);
+                thief.distanceTo(victim), hasLineOfSight, abilities);
         ShadowAttemptCoordinator.Result result = coordinatorSupplier.get().attempt(context);
         if (ShadowDebug.isEnabled()) {
             TCTHIntegration.LOGGER.info("[TCTH][SHADOW] event={} outcome={} reason={}",
@@ -160,7 +168,8 @@ public final class PlayerInteractHandler {
     /** The 8D.1 entity-target loot path: gate combination does NOT read
      *  shadowPlayerTheftEnabled (checked inside the entity coordinator). */
     private static void attemptEntity(PlayerInteractEvent.EntityInteract event, ServerPlayer thief,
-                                      Entity target, ServerLevel level, boolean hasLineOfSight) {
+                                      Entity target, ServerLevel level, boolean hasLineOfSight,
+                                      ShadowAbilitySnapshot abilities) {
         ResourceLocation entityType = level.registryAccess()
                 .registryOrThrow(net.minecraft.core.registries.Registries.ENTITY_TYPE)
                 .getKey(target.getType());
@@ -170,7 +179,7 @@ public final class PlayerInteractHandler {
         ShadowAttemptContext context = new ShadowAttemptContext(
                 UUID.randomUUID(), thief, ShadowTargetKind.ENTITY, target.getUUID(), entityType,
                 level, target.blockPosition().immutable(), level.getGameTime(), false,
-                thief.distanceTo(target), hasLineOfSight);
+                thief.distanceTo(target), hasLineOfSight, abilities);
         ShadowEntityAttemptCoordinator.Result result =
                 entityCoordinatorSupplier.get().attempt(context);
         if (ShadowDebug.isEnabled()) {
@@ -255,7 +264,10 @@ public final class PlayerInteractHandler {
                             "tcth.shadow.feedback.fail.victim", thief.getDisplayName()));
                 }
                 thief.sendSystemMessage(Component.translatable("tcth.shadow.feedback.fail.self"));
-                exposeThief(thief);
+                // 潜影路线 (phase 8E): the FAILED_ROLL exposure duration is
+                // scaled ×0.8 / ×0.6 / ×0.4 by the escape tier (the same
+                // snapshot that drove the attempt).
+                exposeThief(thief, context.abilities());
                 exposeNearby(thief, victim, context.level());
             }
             case NO_CANDIDATE ->
@@ -321,12 +333,17 @@ public final class PlayerInteractHandler {
         return String.format(java.util.Locale.ROOT, "%.1f", amount);
     }
 
-    /** The loser (thief) of a failed roll gets a short glow + slowness. */
-    private static void exposeThief(ServerPlayer thief) {
+    /** The loser (thief) of a failed roll gets a short glow + slowness; the
+     *  duration is scaled by the 潜影 failure multiplier (phase 8E: ×1.0 /
+     *  ×0.8 / ×0.6 / ×0.4 of the base 100 ticks). */
+    private static void exposeThief(ServerPlayer thief, ShadowAbilitySnapshot abilities) {
         try {
-            thief.addEffect(new MobEffectInstance(MobEffects.GLOWING, EXPOSURE_EFFECT_TICKS, 0,
+            double multiplier = ShadowAbilityValues.escapeFailureMultiplier(
+                    abilities == null ? ShadowAbilityTier.NONE : abilities.shadowEscape());
+            int ticks = Math.max(1, (int) Math.round(EXPOSURE_EFFECT_TICKS * multiplier));
+            thief.addEffect(new MobEffectInstance(MobEffects.GLOWING, ticks, 0,
                     false, true, true));
-            thief.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, EXPOSURE_EFFECT_TICKS, 0,
+            thief.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, ticks, 0,
                     false, true, true));
         } catch (RuntimeException | LinkageError e) {
             // cosmetic only; never break the tick

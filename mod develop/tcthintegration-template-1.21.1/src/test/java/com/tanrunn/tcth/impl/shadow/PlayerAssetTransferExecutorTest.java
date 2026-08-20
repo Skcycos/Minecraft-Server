@@ -211,7 +211,8 @@ class PlayerAssetTransferExecutorTest {
         when(tagged.getCount()).thenReturn(1);
         when(tagged.copy()).thenReturn(tagged);
         when(tagged.is(ShadowTags.HIGH_VALUE_STEALABLE_ITEMS)).thenReturn(true);
-        ItemPlan plan = new ItemPlan(0, victimInventory.getItem(0), 5, ItemStack.EMPTY, tagged);
+        ItemPlan plan = new ItemPlan(0, victimInventory.getItem(0), 5, ItemStack.EMPTY, tagged,
+                ItemPlan.HIGH_VALUE_MODIFIER);
         assertEquals(ItemPlan.HIGH_VALUE_MODIFIER, plan.successModifier());
         ItemPlan plain = (ItemPlan) PlayerAssetTransferExecutor.INSTANCE.prepare(context(),
                 candidate(ShadowTheftType.ITEM), random);
@@ -1689,6 +1690,182 @@ class PlayerAssetTransferExecutorTest {
         @Override
         public boolean isHealthy() {
             return true;
+        }
+    }
+
+    // ---- phase 8E: tier-adjusted transfers (shared numeric source) ----
+
+    private ShadowAttemptContext contextWithAbilities(ShadowAbilitySnapshot abilities) {
+        return new ShadowAttemptContext(UUID.randomUUID(), thief,
+                com.tanrunn.tcth.api.shadow.ShadowTargetKind.PLAYER,
+                victim.getUUID(), null, level, new net.minecraft.core.BlockPos(1, 2, 3),
+                1_000L, false, 1.0d, true, abilities);
+    }
+
+    private ShadowAbilitySnapshot lifeSiphonTier(ShadowAbilityTier tier) {
+        return new ShadowAbilitySnapshot(ShadowAbilityTier.NONE, tier,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+    }
+
+    private ShadowAbilitySnapshot spellTheftTier(ShadowAbilityTier tier) {
+        return new ShadowAbilitySnapshot(ShadowAbilityTier.NONE, ShadowAbilityTier.NONE,
+                tier, ShadowAbilityTier.NONE);
+    }
+
+    @Test
+    void lifeSiphonHealthTransfersPerTier() {
+        healthHarness(20.0f, 10.0f, 20.0f);
+        // NONE/I → 1 point; II → 2; III → 4 (victim floor 2 and thief cap
+        // never move).
+        assertEquals(1.0f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.NONE)).transfer());
+        assertEquals(1.0f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.I)).transfer());
+        assertEquals(2.0f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.II)).transfer());
+        assertEquals(4.0f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.III)).transfer());
+    }
+
+    private HealthPlan healthPlanFor(ShadowAbilitySnapshot abilities) {
+        HealthPlan plan = (HealthPlan) PlayerAssetTransferExecutor.INSTANCE.prepare(
+                contextWithAbilities(abilities), candidate(ShadowTheftType.HEALTH),
+                mock(RandomSource.class));
+        assertNotNull(plan);
+        return plan;
+    }
+
+    @Test
+    void lifeSiphonHealthStillRespectsTheFloorAndCap() {
+        // Victim at 2.5 (floor 2.0): tier III wants 4 but only 0.5 fits.
+        healthHarness(2.5f, 10.0f, 20.0f);
+        assertEquals(0.5f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.III)).transfer(),
+                "the victim floor still caps the transfer");
+        // Thief at 19.5 (max 20): only 0.5 fits.
+        healthHarness(20.0f, 19.5f, 20.0f);
+        assertEquals(0.5f, healthPlanFor(lifeSiphonTier(ShadowAbilityTier.III)).transfer(),
+                "the thief max-health cap still applies");
+        // Victim at the floor → no plan.
+        healthHarness(2.0f, 10.0f, 20.0f);
+        assertNull(PlayerAssetTransferExecutor.INSTANCE.prepare(contextWithAbilities(
+                lifeSiphonTier(ShadowAbilityTier.III)), candidate(ShadowTheftType.HEALTH),
+                mock(RandomSource.class)));
+    }
+
+    @Test
+    void lifeSiphonHungerTransfersPerTier() {
+        FoodData vf = foodOf(victim);
+        FoodData tf = foodOf(thief);
+        vf.setFoodLevel(20);
+        vf.setSaturation(0.0f);
+        tf.setFoodLevel(0);
+        tf.setSaturation(0.0f);
+        // NONE/I → 2 points; II → 3; III → 4 (floor 4 and thief cap hold).
+        assertEquals(2, hungerPlanFor(lifeSiphonTier(ShadowAbilityTier.NONE)).foodTransfer());
+        assertEquals(2, hungerPlanFor(lifeSiphonTier(ShadowAbilityTier.I)).foodTransfer());
+        assertEquals(3, hungerPlanFor(lifeSiphonTier(ShadowAbilityTier.II)).foodTransfer());
+        assertEquals(4, hungerPlanFor(lifeSiphonTier(ShadowAbilityTier.III)).foodTransfer());
+    }
+
+    private HungerPlan hungerPlanFor(ShadowAbilitySnapshot abilities) {
+        HungerPlan plan = (HungerPlan) PlayerAssetTransferExecutor.INSTANCE.prepare(
+                contextWithAbilities(abilities), candidate(ShadowTheftType.HUNGER),
+                mock(RandomSource.class));
+        assertNotNull(plan);
+        return plan;
+    }
+
+    @Test
+    void lifeSiphonHungerNeverBreaksTheFloorOrCap() {
+        FoodData vf = foodOf(victim);
+        FoodData tf = foodOf(thief);
+        vf.setFoodLevel(6);
+        tf.setFoodLevel(18);
+        // Tier III wants 4, but only 2 fit (victim floor 4, thief cap 20).
+        assertEquals(2, hungerPlanFor(lifeSiphonTier(ShadowAbilityTier.III)).foodTransfer());
+        // Victim at the floor → no plan even at tier III.
+        vf.setFoodLevel(4);
+        assertNull(PlayerAssetTransferExecutor.INSTANCE.prepare(contextWithAbilities(
+                lifeSiphonTier(ShadowAbilityTier.III)), candidate(ShadowTheftType.HUNGER),
+                mock(RandomSource.class)));
+    }
+
+    @Test
+    void spellTheftCapsPerTier() {
+        Map<ResourceLocation, MobEffectInstance> victimEffects = new HashMap<>();
+        Map<ResourceLocation, MobEffectInstance> thiefEffects = new HashMap<>();
+        effectHarness(victimEffects, thiefEffects);
+        Holder<MobEffect> regen = mockEffectHolder(REGENERATION, true, false);
+        victimEffects.put(REGENERATION, new MobEffectInstance(regen, 10_000, 1, false, true, true));
+        RandomSource random = mock(RandomSource.class);
+        when(random.nextInt(1)).thenReturn(0);
+        // NONE/I → 200 ticks; II → 400; III → 600; amplifier never raised.
+        assertEquals(200, effectPlanFor(spellTheftTier(ShadowAbilityTier.NONE), random).transferTicks());
+        assertEquals(200, effectPlanFor(spellTheftTier(ShadowAbilityTier.I), random).transferTicks());
+        assertEquals(400, effectPlanFor(spellTheftTier(ShadowAbilityTier.II), random).transferTicks());
+        assertEquals(600, effectPlanFor(spellTheftTier(ShadowAbilityTier.III), random).transferTicks());
+    }
+
+    private EffectPlan effectPlanFor(ShadowAbilitySnapshot abilities, RandomSource random) {
+        EffectPlan plan = (EffectPlan) PlayerAssetTransferExecutor.INSTANCE.prepare(
+                contextWithAbilities(abilities), candidate(ShadowTheftType.EFFECT), random);
+        assertNotNull(plan);
+        assertEquals(1, plan.amplifier(), "the amplifier is never raised");
+        return plan;
+    }
+
+    @Test
+    void spellTheftCapIsStillCappedByRemainingTime() {
+        Map<ResourceLocation, MobEffectInstance> victimEffects = new HashMap<>();
+        Map<ResourceLocation, MobEffectInstance> thiefEffects = new HashMap<>();
+        effectHarness(victimEffects, thiefEffects);
+        Holder<MobEffect> regen = mockEffectHolder(REGENERATION, true, false);
+        victimEffects.put(REGENERATION, new MobEffectInstance(regen, 100, 1, false, true, true));
+        RandomSource random = mock(RandomSource.class);
+        when(random.nextInt(1)).thenReturn(0);
+        assertEquals(100, effectPlanFor(spellTheftTier(ShadowAbilityTier.III), random).transferTicks(),
+                "the transfer is capped by the victim's remaining time (100 < 600)");
+    }
+
+    @Test
+    void highValueModifierBySleightTier() {
+        // The 妙手 tier scales the high-value penalty (-0.10 / -0.05 / 0)
+        // through the shared source; the plan bakes it in at prepare time.
+        ItemStack tagged = new ItemStack(Items.NETHERITE_INGOT, 1);
+        assertEquals(ItemPlan.HIGH_VALUE_MODIFIER,
+                ShadowAbilityValues.highValueModifier(ShadowAbilityTier.NONE));
+        assertEquals(ItemPlan.HIGH_VALUE_MODIFIER,
+                ShadowAbilityValues.highValueModifier(ShadowAbilityTier.I));
+        assertEquals(-0.05d, ShadowAbilityValues.highValueModifier(ShadowAbilityTier.II));
+        assertEquals(0.0d, ShadowAbilityValues.highValueModifier(ShadowAbilityTier.III));
+        ItemPlan planN = new ItemPlan(0, victimInventory.getItem(0), 5, ItemStack.EMPTY, tagged,
+                ShadowAbilityValues.highValueModifier(ShadowAbilityTier.NONE));
+        assertEquals(ItemPlan.HIGH_VALUE_MODIFIER, planN.successModifier());
+        ItemPlan planII = new ItemPlan(0, victimInventory.getItem(0), 5, ItemStack.EMPTY, tagged,
+                ShadowAbilityValues.highValueModifier(ShadowAbilityTier.II));
+        assertEquals(-0.05d, planII.successModifier());
+        ItemPlan planIII = new ItemPlan(0, victimInventory.getItem(0), 5, ItemStack.EMPTY, tagged,
+                ShadowAbilityValues.highValueModifier(ShadowAbilityTier.III));
+        assertEquals(0.0d, planIII.successModifier());
+    }
+
+    @Test
+    void candidatePresentImpliesPrepareNonNullAcrossTiers() {
+        // 8C.1.3 §5 consistency, extended to the tier values: whenever the
+        // shared feasibility says a candidate exists, prepare must NOT return
+        // null without drift — for every tier.
+        FoodData vf = foodOf(victim);
+        FoodData tf = foodOf(thief);
+        for (ShadowAbilityTier tier : ShadowAbilityTier.values()) {
+            vf.setFoodLevel(20);
+            vf.setSaturation(0.0f);
+            tf.setFoodLevel(0);
+            tf.setSaturation(0.0f);
+            ShadowAbilitySnapshot abilities = lifeSiphonTier(tier);
+            boolean candidate = PlayerReadonlyCandidateProvider.INSTANCE.provide(
+                    contextWithAbilities(abilities)).stream()
+                    .anyMatch(c -> c.type() == ShadowTheftType.HUNGER);
+            HungerPlan plan = (HungerPlan) PlayerAssetTransferExecutor.INSTANCE.prepare(
+                    contextWithAbilities(abilities), candidate(ShadowTheftType.HUNGER),
+                    mock(RandomSource.class));
+            assertEquals(candidate, plan != null,
+                    "tier " + tier + ": candidate availability must match prepare");
         }
     }
 }

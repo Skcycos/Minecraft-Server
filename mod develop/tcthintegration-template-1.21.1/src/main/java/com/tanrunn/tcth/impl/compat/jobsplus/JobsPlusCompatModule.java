@@ -90,6 +90,14 @@ public final class JobsPlusCompatModule implements CompatModule {
         // on_job_exp + job_exp_multiplier. Harvest cooldown + livestock
         // cooldown lifecycles register here (Jobs+ is present).
         com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModule.init(NeoForge.EVENT_BUS);
+        // Phase 8E: shadow thief — the ability snapshot query service and the
+        // job-experience reward settlement. The ability module is a pure
+        // query service (installed into ShadowAbilityAccess, queried at most
+        // once per theft attempt); the reward module listens to
+        // ShadowTheftEvent and sends the tcth:on_shadow_theft_success Arc
+        // action (rewards disabled by default).
+        com.tanrunn.tcth.impl.compat.jobsplus.powerup.ShadowAbilityModule.install();
+        ShadowRewardModule.init(NeoForge.EVENT_BUS);
         TCTHIntegration.LOGGER.info("[TCTH] Jobs+ dish reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Farmer crop-harvest reward module active (rewards disabled by default)");
         TCTHIntegration.LOGGER.info("[TCTH] Gunner firearm-kill reward module active (rewards disabled by default)");
@@ -97,6 +105,8 @@ public final class JobsPlusCompatModule implements CompatModule {
         TCTHIntegration.LOGGER.info("[TCTH] Gunner ability tree active (marksmanship / ammo / defense / study routes)");
         TCTHIntegration.LOGGER.info("[TCTH] Brewer ability tree active (brewing / tasting / resistance / study routes)");
         TCTHIntegration.LOGGER.info("[TCTH] Farmer ability tree active (tilling / harvest / livestock / study routes)");
+        TCTHIntegration.LOGGER.info("[TCTH] Shadow ability tree active (sleight / life-siphon / spell-theft / escape routes)");
+        TCTHIntegration.LOGGER.info("[TCTH] Shadow thief reward module active (rewards disabled by default)");
     }
 
     boolean isArcAvailableForTesting() {

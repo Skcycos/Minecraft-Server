@@ -526,4 +526,95 @@ class PlayerInteractHandlerTest {
         assertFalse(captured[0].automated());
         assertEquals(new BlockPos(10, 20, 30), captured[0].position());
     }
+
+    // ---- phase 8E: ability snapshot integration ----
+
+    @Test
+    void abilitySnapshotIsQueriedExactlyOncePerAttemptAndFlowsIntoTheContext() {
+        ShadowAbilityAccess.resetForTesting();
+        try {
+            ShadowAbilitySnapshot snapshot = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                    ShadowAbilityTier.I, ShadowAbilityTier.II, ShadowAbilityTier.NONE);
+            int[] queries = { 0 };
+            ShadowAbilityAccess.setProvider(p -> {
+                queries[0]++;
+                return snapshot;
+            });
+            final ShadowAttemptContext[] captured = new ShadowAttemptContext[1];
+            when(coordinator.attempt(any())).thenAnswer(invocation -> {
+                captured[0] = invocation.getArgument(0);
+                return new ShadowAttemptCoordinator.Result(ShadowTheftOutcome.PROTECTED,
+                        captured[0].eventId(), false, ShadowTheftReceipt.empty(), null, null);
+            });
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(1, queries[0], "the ability snapshot is queried AT MOST ONCE per attempt");
+            assertEquals(snapshot, captured[0].abilities(),
+                    "the SAME snapshot flows into the attempt context");
+        } finally {
+            ShadowAbilityAccess.resetForTesting();
+        }
+    }
+
+    @Test
+    void newAttemptBreaksTcthGrantedInvisibilityBeforeTheAttempt() {
+        ShadowEscapeEffects.resetForTesting();
+        try {
+            when(thief.addEffect(any(net.minecraft.world.effect.MobEffectInstance.class)))
+                    .thenReturn(true);
+            when(thief.level().getGameTime()).thenReturn(1000L);
+            ShadowEscapeEffects.applySuccess(thief, new ShadowAbilitySnapshot(
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.II));
+            assertEquals(1, ShadowEscapeEffects.markCount());
+            stubResult(ShadowTheftOutcome.PROTECTED, ShadowTheftReceipt.empty());
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(0, ShadowEscapeEffects.markCount(),
+                    "starting another theft attempt breaks the TCTH invisibility");
+        } finally {
+            ShadowEscapeEffects.resetForTesting();
+        }
+    }
+
+    @Test
+    void failedRollExposureScalesWithTheEscapeTier() {
+        when(thief.getDisplayName()).thenReturn(Component.literal("SneakyPete"));
+        java.util.List<net.minecraft.world.effect.MobEffectInstance> granted = new java.util.ArrayList<>();
+        org.mockito.Mockito.doAnswer(invocation -> {
+            granted.add(invocation.getArgument(0));
+            return true;
+        }).when(thief).addEffect(any(net.minecraft.world.effect.MobEffectInstance.class));
+        ShadowAbilityAccess.resetForTesting();
+        try {
+            // Base (NONE): exposure duration 100 ticks.
+            ShadowAbilityAccess.setProvider(p -> ShadowAbilitySnapshot.none());
+            stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(100, granted.get(0).getDuration(), "NONE tier keeps the base exposure");
+            granted.clear();
+            // 潜影 I: ×0.8 → 80 ticks.
+            ShadowAbilityAccess.setProvider(p -> new ShadowAbilitySnapshot(
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.I));
+            stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(80, granted.get(0).getDuration(), "潜影 I shortens the exposure to 80 ticks");
+            granted.clear();
+            // 潜影 II: ×0.6 → 60; III: ×0.4 → 40.
+            ShadowAbilityAccess.setProvider(p -> new ShadowAbilitySnapshot(
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.II));
+            stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(60, granted.get(0).getDuration());
+            granted.clear();
+            ShadowAbilityAccess.setProvider(p -> new ShadowAbilitySnapshot(
+                    ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE,
+                    ShadowAbilityTier.III));
+            stubResult(ShadowTheftOutcome.FAILED_ROLL, ShadowTheftReceipt.empty());
+            PlayerInteractHandler.onEntityInteract(validEvent());
+            assertEquals(40, granted.get(0).getDuration());
+        } finally {
+            ShadowAbilityAccess.resetForTesting();
+        }
+    }
 }

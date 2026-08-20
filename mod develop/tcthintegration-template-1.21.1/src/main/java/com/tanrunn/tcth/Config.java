@@ -766,6 +766,87 @@ public class Config {
                     "Range: 1 ~ 10000.")
             .defineInRange("shadowDailyItemLossLimit", 3L, 1L, 10_000L);
 
+    // ---- phase 8E: shadow thief job / experience / ability routes ----
+
+    /**
+     * Shadow thief job-experience reward switch (phase 8E).
+     *
+     * <p>Default OFF. When false, no {@code tcth:on_shadow_theft_success} Arc
+     * action is ever sent and no {@code tcth:shadow_thief} job experience is
+     * granted. The data-driven {@code tcth:shadow_rewards_enabled} condition
+     * mirrors {@code enabled} + {@code shadowThiefIntegrationEnabled} + this
+     * switch; a config read failure fails closed.
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_REWARDS_ENABLED = BUILDER
+            .comment("Master switch for shadow thief job-experience rewards.",
+                    "Default off. Even with the framework switches on, no",
+                    "tcth:on_shadow_theft_success Arc action is sent and no",
+                    "tcth:shadow_thief job experience is granted until an",
+                    "operator explicitly enables this. Fail-closed on config",
+                    "read errors.")
+            .define("shadowRewardsEnabled", false);
+
+    /**
+     * Master switch of the shadow thief ability tree (phase 8E).
+     *
+     * <p>Default ON (the four route switches below default ON too), but every
+     * route still requires {@code enabled} +
+     * {@code shadowThiefIntegrationEnabled} + this switch, and the ability
+     * query only runs when Jobs+ is installed — without Jobs+ the snapshot is
+     * always {@code NONE} (basic behaviour).
+     */
+    public static final ModConfigSpec.BooleanValue SHADOW_ABILITIES_ENABLED = BUILDER
+            .comment("Master switch of the tcth:shadow_thief ability tree.",
+                    "Default true. Every route also needs its own switch and",
+                    "the framework switches. A config read failure fails",
+                    "closed (abilities = NONE).")
+            .define("shadowAbilitiesEnabled", true);
+
+    /** 妙手路线 (sleight) switch (phase 8E). */
+    public static final ModConfigSpec.BooleanValue SHADOW_SLEIGHT_ABILITIES_ENABLED = BUILDER
+            .comment("Sleight-of-hand route: success chance +5%/+10%/+15%,",
+                    "global cooldown 200→180/160/140 ticks, high-value",
+                    "penalty -10%/-5%/0. Default true. Fail-closed on",
+                    "config read errors.")
+            .define("shadowSleightAbilitiesEnabled", true);
+
+    /** 夺生路线 (life siphon) switch (phase 8E). */
+    public static final ModConfigSpec.BooleanValue SHADOW_LIFE_SIPHON_ABILITIES_ENABLED = BUILDER
+            .comment("Life-siphon route (player targets only): health 1/2/4,",
+                    "hunger 2/3/4. Default true. Fail-closed on config read",
+                    "errors.")
+            .define("shadowLifeSiphonAbilitiesEnabled", true);
+
+    /** 窃法路线 (spell theft) switch (phase 8E). */
+    public static final ModConfigSpec.BooleanValue SHADOW_SPELL_THEFT_ABILITIES_ENABLED = BUILDER
+            .comment("Spell-theft route (player targets only): up to 10/20/30",
+                    "seconds of a beneficial effect. Default true. Fail-closed",
+                    "on config read errors.")
+            .define("shadowSpellTheftAbilitiesEnabled", true);
+
+    /** 潜影路线 (shadow escape) switch (phase 8E). */
+    public static final ModConfigSpec.BooleanValue SHADOW_ESCAPE_ABILITIES_ENABLED = BUILDER
+            .comment("Shadow-escape route: on success Speed I 4s / Speed I 6s +",
+                    "Invisibility 2s / Speed II 8s + Invisibility 4s; failed-",
+                    "roll exposure duration ×0.8/×0.6/×0.4. Default true.",
+                    "Fail-closed on config read errors.")
+            .define("shadowEscapeAbilitiesEnabled", true);
+
+    /**
+     * Per-(thief, target)-pair daily successful-XP cap (phase 8E).
+     *
+     * <p>Keyed by thief UUID + target UUID + UTC date, PLAYER targets only;
+     * when the cap is reached no further job experience is granted for that
+     * pair that day. Entity targets stay bounded by the LOOTED once-state.
+     */
+    public static final ModConfigSpec.LongValue SHADOW_MAX_EXPERIENCE_REWARDS_PER_PAIR_PER_DAY = BUILDER
+            .comment("Per-pair daily cap on successful shadow thefts that",
+                    "grant job experience (default 3). Player targets only,",
+                    "keyed by thief + target UUID + UTC date; entity targets",
+                    "stay bounded by the LOOTED once-state.",
+                    "Range: 1 ~ 10000.")
+            .defineInRange("shadowMaxExperienceRewardsPerPairPerDay", 3L, 1L, 10_000L);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private Config() {

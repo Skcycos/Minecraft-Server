@@ -681,6 +681,386 @@
       },
       "unitWorth": 25,
       "weightMult": 0.7
+    },
+    "bakeries_bake_sliced_toast": {
+      "type": "item",
+      "content": "bakeries:bake_sliced_toast",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "bakeries_cooked_taro": {
+      "type": "item",
+      "content": "bakeries:cooked_taro",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "brewinandchewin_quiche_slice": {
+      "type": "item",
+      "content": "brewinandchewin:quiche_slice",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_bubblegunk": {
+      "type": "item",
+      "content": "dungeonsdelight:bubblegunk",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_cooked_sniffer_shank": {
+      "type": "item",
+      "content": "dungeonsdelight:cooked_sniffer_shank",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_cooked_snifferwurst": {
+      "type": "item",
+      "content": "dungeonsdelight:cooked_snifferwurst",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_fried_ghast_calamari": {
+      "type": "item",
+      "content": "dungeonsdelight:fried_ghast_calamari",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_slicorice": {
+      "type": "item",
+      "content": "dungeonsdelight:slicorice",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_slime_bar": {
+      "type": "item",
+      "content": "dungeonsdelight:slime_bar",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_smoked_spider_meat": {
+      "type": "item",
+      "content": "dungeonsdelight:smoked_spider_meat",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "dungeonsdelight_soft_serve_sniffer_egg": {
+      "type": "item",
+      "content": "dungeonsdelight:soft_serve_sniffer_egg",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "minecraft_bread": {
+      "type": "item",
+      "content": "minecraft:bread",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_boiled_egg": {
+      "type": "item",
+      "content": "mynethersdelight:boiled_egg",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_burnt_roll": {
+      "type": "item",
+      "content": "mynethersdelight:burnt_roll",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_cooked_loin": {
+      "type": "item",
+      "content": "mynethersdelight:cooked_loin",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_dried_ghast_with_milk": {
+      "type": "item",
+      "content": "mynethersdelight:dried_ghast_with_milk",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_fried_hoglin_chop": {
+      "type": "item",
+      "content": "mynethersdelight:fried_hoglin_chop",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_hot_wings_bucket": {
+      "type": "item",
+      "content": "mynethersdelight:hot_wings_bucket",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_hotdog": {
+      "type": "item",
+      "content": "mynethersdelight:hotdog",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_red_loin_on_a_stick": {
+      "type": "item",
+      "content": "mynethersdelight:red_loin_on_a_stick",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_roasted_sausage": {
+      "type": "item",
+      "content": "mynethersdelight:roasted_sausage",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_spicy_cotton": {
+      "type": "item",
+      "content": "mynethersdelight:spicy_cotton",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_tear_popsicle": {
+      "type": "item",
+      "content": "mynethersdelight:tear_popsicle",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "mynethersdelight_toasts": {
+      "type": "item",
+      "content": "mynethersdelight:toasts",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_adzuki_bun": {
+      "type": "item",
+      "content": "neapolitan:adzuki_bun",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_chocolate_bar": {
+      "type": "item",
+      "content": "neapolitan:chocolate_bar",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_chocolate_spider_eye": {
+      "type": "item",
+      "content": "neapolitan:chocolate_spider_eye",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_chocolate_strawberries": {
+      "type": "item",
+      "content": "neapolitan:chocolate_strawberries",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_cooked_mint_chops": {
+      "type": "item",
+      "content": "neapolitan:cooked_mint_chops",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_dried_banana": {
+      "type": "item",
+      "content": "neapolitan:dried_banana",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_dried_vanilla_pods": {
+      "type": "item",
+      "content": "neapolitan:dried_vanilla_pods",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_mint_candies": {
+      "type": "item",
+      "content": "neapolitan:mint_candies",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_mint_chocolate": {
+      "type": "item",
+      "content": "neapolitan:mint_chocolate",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_mint_chops": {
+      "type": "item",
+      "content": "neapolitan:mint_chops",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_roasted_adzuki_beans": {
+      "type": "item",
+      "content": "neapolitan:roasted_adzuki_beans",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_strawberry_bean_bonbons": {
+      "type": "item",
+      "content": "neapolitan:strawberry_bean_bonbons",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_vanilla_chocolate_fingers": {
+      "type": "item",
+      "content": "neapolitan:vanilla_chocolate_fingers",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
+    },
+    "neapolitan_vanilla_fudge": {
+      "type": "item",
+      "content": "neapolitan:vanilla_fudge",
+      "amount": {
+        "min": 3,
+        "max": 16
+      },
+      "unitWorth": 15,
+      "weightMult": 0.85
     }
   }
 }

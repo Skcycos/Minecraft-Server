@@ -27,6 +27,13 @@ import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerLivestockCooldo
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerStudyAbilitiesEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.HoeDurabilityEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.KnifeDurabilityEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowEscapeAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowLifeSiphonAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRewardsEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowSleightAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowSpellTheftAbilitiesEnabledCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowTargetKindCondition;
+import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowTheftTypeCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingCooldownCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.TastingEffectsEnabledCondition;
 import com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.BrewerTastingEffectsReward;
@@ -167,6 +174,41 @@ public final class TcthArcRegistrar {
     public static final IRewardType<FarmerLivestockEffectsReward> FARMER_LIVESTOCK_EFFECTS =
             RewardType.register(id("farmer_livestock_effects"), new FarmerLivestockEffectsReward.Serializer());
 
+    // ---- phase 8E: shadow thief action type ----
+    public static final ActionType<ShadowTheftSuccessAction> SHADOW_THEFT_SUCCESS =
+            ActionType.register(id("on_shadow_theft_success"), new ShadowTheftSuccessAction.Serializer());
+
+    // ---- phase 8E: shadow thief action data types ----
+    public static final IActionDataType<String> SHADOW_TARGET_KIND = ActionDataType.register(id("target_kind"));
+    public static final IActionDataType<String> SHADOW_THEFT_TYPE = ActionDataType.register(id("theft_type"));
+    public static final IActionDataType<String> SHADOW_TARGET_TYPE = ActionDataType.register(id("target_type"));
+    public static final IActionDataType<String> SHADOW_ITEM_ID = ActionDataType.register(id("item_id"));
+    public static final IActionDataType<Integer> SHADOW_ITEM_COUNT = ActionDataType.register(id("item_count"));
+    public static final IActionDataType<Double> SHADOW_NUMERIC_AMOUNT = ActionDataType.register(id("numeric_amount"));
+    public static final IActionDataType<String> SHADOW_EFFECT_ID = ActionDataType.register(id("effect_id"));
+    public static final IActionDataType<Integer> SHADOW_EFFECT_DURATION_TICKS =
+            ActionDataType.register(id("effect_duration_ticks"));
+
+    // ---- phase 8E: shadow thief condition types ----
+    public static final ConditionType<ShadowTargetKindCondition> SHADOW_TARGET_KIND_CONDITION =
+            ConditionType.register(id("shadow_target_kind"), new ShadowTargetKindCondition.Serializer());
+    public static final ConditionType<ShadowTheftTypeCondition> SHADOW_THEFT_TYPE_CONDITION =
+            ConditionType.register(id("shadow_theft_type"), new ShadowTheftTypeCondition.Serializer());
+    public static final ConditionType<ShadowRewardsEnabledCondition> SHADOW_REWARDS_ENABLED_CONDITION =
+            ConditionType.register(id("shadow_rewards_enabled"), new ShadowRewardsEnabledCondition.Serializer());
+    public static final ConditionType<ShadowSleightAbilitiesEnabledCondition> SHADOW_SLEIGHT_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("shadow_sleight_abilities_enabled"),
+                    new ShadowSleightAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<ShadowLifeSiphonAbilitiesEnabledCondition> SHADOW_LIFE_SIPHON_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("shadow_life_siphon_abilities_enabled"),
+                    new ShadowLifeSiphonAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<ShadowSpellTheftAbilitiesEnabledCondition> SHADOW_SPELL_THEFT_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("shadow_spell_theft_abilities_enabled"),
+                    new ShadowSpellTheftAbilitiesEnabledCondition.Serializer());
+    public static final ConditionType<ShadowEscapeAbilitiesEnabledCondition> SHADOW_ESCAPE_ABILITIES_ENABLED_CONDITION =
+            ConditionType.register(id("shadow_escape_abilities_enabled"),
+                    new ShadowEscapeAbilitiesEnabledCondition.Serializer());
+
     private TcthArcRegistrar() {
     }
 
@@ -229,6 +271,24 @@ public final class TcthArcRegistrar {
         checkInRegistry(ArcRegistry.CONDITION, id("farmer_livestock_abilities_enabled"), "condition type");
         checkInRegistry(ArcRegistry.CONDITION, id("farmer_livestock_cooldown"), "condition type");
         checkInRegistry(ArcRegistry.REWARD, id("farmer_livestock_effects"), "reward type");
+
+        // Phase 8E: shadow thief action type, data types and condition types.
+        checkInRegistry(ArcRegistry.ACTION, id("on_shadow_theft_success"), "action type");
+        checkDataType(SHADOW_TARGET_KIND, "target_kind");
+        checkDataType(SHADOW_THEFT_TYPE, "theft_type");
+        checkDataType(SHADOW_TARGET_TYPE, "target_type");
+        checkDataType(SHADOW_ITEM_ID, "item_id");
+        checkDataType(SHADOW_ITEM_COUNT, "item_count");
+        checkDataType(SHADOW_NUMERIC_AMOUNT, "numeric_amount");
+        checkDataType(SHADOW_EFFECT_ID, "effect_id");
+        checkDataType(SHADOW_EFFECT_DURATION_TICKS, "effect_duration_ticks");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_target_kind"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_theft_type"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_rewards_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_sleight_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_life_siphon_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_spell_theft_abilities_enabled"), "condition type");
+        checkInRegistry(ArcRegistry.CONDITION, id("shadow_escape_abilities_enabled"), "condition type");
     }
 
     private static void checkInRegistry(Registry<?> registry, ResourceLocation registryId, String kind) {

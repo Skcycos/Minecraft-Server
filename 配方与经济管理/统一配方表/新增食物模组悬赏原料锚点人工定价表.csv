@@ -1,0 +1,122 @@
+﻿dependencyId,dependencyKind,affectedTargetCount,currentPrice,currentPriceSource,decision,proposedPrice,evidenceType,evidenceDetail,renewability,acquisitionDifficulty,farmingRisk,economicRisk,rationale,status
+dungeonsdelight:carved_rotgourd,CONTAINER,1,,,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+farmersdelight:hamburger,CONTAINER,1,28,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:bowl,CONTAINER,5,2,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:bread,CONTAINER,3,12,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:bucket,CONTAINER,2,,,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:glass_bottle,CONTAINER,12,2,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:paper,CONTAINER,1,3,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+minecraft:phantom_membrane,CONTAINER,1,30,猜想,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+mynethersdelight:hotdog,CONTAINER,1,,,REVIEW,,容器语义已确认,recipe JSON container 字段证据：烹饪/发酵/搅拌设备将容器纳入交付物（PART_OF_RESULT）,-,-,-,容器语义已确认 PART_OF_RESULT，成本按旧价表计入；本表不设人工价,recipe JSON container 字段 + 设备行为：容器为交付物组成部分，非返还；成本计入,REVIEW
+bakeries:bottle_cream,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:bottle_yeast,ITEM,24,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:cheese_cocoa_toast,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:cheese_cube,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:flour,ITEM,23,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:olive,ITEM,3,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:taro,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+bakeries:toast,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+brewinandchewin:flaxen_cheese_wedge,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+brewinandchewin:pizza_slice,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+brewinandchewin:quiche_slice,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+brewinandchewin:scarlet_cheese_wedge,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+create:wheat_flour,ITEM,23,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:ancient_egg,ITEM,9,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+dungeonsdelight:bogged_brain,ITEM,3,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:brined_flesh,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:candied_vex_sucker,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:ghast_tentacle,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:gritty_flesh,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:monster_cake_slice,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:rotbulb,ITEM,19,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:rotbulb_plant,ITEM,14,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:rotgourd,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:silverfish_abdomen,ITEM,4,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:slime_bar,ITEM,14,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:sniffer_shank,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:spider_meat,ITEM,7,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:spider_pie_slice,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:wormroot_stalk,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+dungeonsdelight:wormroot_tendrils,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+farmersdelight:fried_egg,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+farmersdelight:rotten_tomato,ITEM,3,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+farmersrespite:blazing_chili,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:blaze_powder,ITEM,1,25,猜想,PROVISIONAL,25,配方派生(循环证明),ender_eye=45 派生自 ender_pearl=20(猜想)+blaze_powder=25(猜想)；反解属循环证明，不能升级为 DEFINED,是(下界烈焰人农场),中,低,猜想锚点；循环反解风险，禁入正式池,由既有锚点明确推导，风险已在 economicRisk 标注,ACTIVE
+minecraft:bone_block,ITEM,2,,,PROVISIONAL,72,配方派生(骨粉),骨块=9×骨粉(8 缺省猜想)=72，原版 1 骨块↔9 骨粉,是(骷髅农场/骨粉),低,低,依赖骨粉猜想锚点，禁入正式池,由既有锚点明确推导，风险已在 economicRisk 标注,ACTIVE
+minecraft:bucket,ITEM,4,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:calibrated_sculk_sensor,ITEM,3,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+minecraft:echo_shard,ITEM,1,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+minecraft:fermented_spider_eye,ITEM,3,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:glass_bottle,ITEM,8,2,猜想,PROVISIONAL,2,服务器既有猜想锚点,原料单价参考表 2(猜想)；此处仅作 ITEM 原料，容器语义由 CONTAINER 行决策,是(烧玻璃),低,低,猜想锚点；容器行仍阻断,由既有锚点明确推导，风险已在 economicRisk 标注,ACTIVE
+minecraft:lava_bucket,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:magma_cream,ITEM,4,,,PROVISIONAL,33,配方派生(粘液球+烈焰粉),岩浆膏=粘液球(8 猜想)+烈焰粉(25)=33，原版合成 1:1,是(岩浆怪/合成),中,低,依赖两个猜想锚点，禁入正式池,由既有锚点明确推导，风险已在 economicRisk 标注,ACTIVE
+minecraft:moss_block,ITEM,4,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:poisonous_potato,ITEM,3,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:rotten_flesh,ITEM,2,2,猜想,PROVISIONAL,2,服务器既有猜想锚点,原料单价参考表 2(猜想)；僵尸可再生掉落,是(僵尸),低,低,猜想锚点，禁入正式池,由既有锚点明确推导，风险已在 economicRisk 标注,ACTIVE
+minecraft:sniffer_egg,ITEM,1,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+minecraft:soul_sand,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:twisting_vines,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+minecraft:wind_charge,ITEM,5,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+mynethersdelight:bullet_pepper,ITEM,7,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:crimson_fungus_colony,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:ghast_dough,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:ghast_sourdough,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:ghasta,ITEM,9,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hoglin_hide,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hoglin_loin,ITEM,17,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hoglin_trophy,ITEM,2,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+mynethersdelight:hot_cream,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hot_cream_cone,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hot_wings,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:hot_wings_bucket,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:magma_cake_slice,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:powder_cannon,ITEM,7,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:strider_rock,ITEM,2,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:strider_slice,ITEM,4,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:warped_fungus_colony,ITEM,7,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+mynethersdelight:zoglin_trophy,ITEM,2,,,EXCLUDED,,运营排除,,-,-,-,不纳入原料定价体系,探索/头目/机制专属物品，无稳定市场价格，明确排除，不补价,EXCLUDED
+neapolitan:adzuki_beans,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:chocolate_bar,ITEM,1,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:dried_vanilla_pods,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:ice_cubes,ITEM,9,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:mint_leaves,ITEM,5,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:roasted_adzuki_beans,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+neapolitan:vanilla_pods,ITEM,6,,,REVIEW,,,,未确认,未确认,未确认,缺少价格锚点，禁止猜价,缺少可核验价格证据,REVIEW
+#brewinandchewin:foods/cheese_wedge,TAG,5,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#brewinandchewin:foods/pizza_topping,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:butter,TAG,20,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:cheese,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:flours/wheat,TAG,24,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/banana,TAG,4,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/boiled_egg,TAG,3,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/cabbage,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/chocolate_bar,TAG,6,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/giant_tentacles,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/onion,TAG,3,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/raw_ghast,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/raw_hoglin,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/raw_strider,TAG,2,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/rice_pasta,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/safe_raw_fish,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/strawberry,TAG,5,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:foods/tomato,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:matcha,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:milk,TAG,10,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:pumpkins,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#c:salt,TAG,24,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:acidics,TAG,3,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:ancient_flora,TAG,5,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:extracts,TAG,6,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:fleshes,TAG,7,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:monster_foods,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:raw_ghast,TAG,4,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:rubaboo_ingredients,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:sculk_cheese,TAG,7,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:sea_plants,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#dungeonsdelight:slime_balls,TAG,14,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#minecraft:fox_food,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#minecraft:planks,TAG,2,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#mynethersdelight:boiled_egg_candidate,TAG,1,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#mynethersdelight:hoglin_cure,TAG,2,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#mynethersdelight:hoglin_waxed,TAG,2,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW
+#mynethersdelight:hot_spice,TAG,9,,,REVIEW,,,,未确认,未确认,未确认,缺少成员级价格证据,标签成员无法从静态 JAR 核验，需运行时/数据包确认最便宜有效成员,REVIEW

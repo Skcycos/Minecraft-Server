@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -351,5 +352,65 @@ class PlayerReadonlyCandidateProviderTest {
         assertEquals(thiefHealth, thief.getHealth());
         assertEquals(targetFood, target.getFoodData().getFoodLevel());
         assertEquals(thiefFood, thief.getFoodData().getFoodLevel());
+    }
+
+    // ---- phase 8E: tier-adjusted shared feasibility ----
+
+    private ShadowAttemptContext contextWithAbilities(ShadowAbilitySnapshot abilities) {
+        return new ShadowAttemptContext(UUID.randomUUID(), thief, ShadowTargetKind.PLAYER,
+                UUID.randomUUID(), null, level, new BlockPos(1, 2, 3), 1L, false, 1.0d, true,
+                abilities);
+    }
+
+    private List<ShadowTheftType> probeWith(ShadowAbilitySnapshot abilities) {
+        return PlayerReadonlyCandidateProvider.INSTANCE.provide(contextWithAbilities(abilities))
+                .stream().map(c -> c.type()).toList();
+    }
+
+    @Test
+    void hungerCandidateFollowsTheLifeSiphonTier() {
+        // The divergence case: with a 2-point transfer a conserving plan
+        // exists, but with the 夺生 III transfer (4 points) the saturation
+        // conservation becomes infeasible — the provider must follow the SAME
+        // tier value as prepare (shared numeric source).
+        FoodData targetFood = target.getFoodData();
+        FoodData thiefFood = thief.getFoodData();
+        when(targetFood.getFoodLevel()).thenReturn(10);
+        when(targetFood.getSaturationLevel()).thenReturn(9.0f);
+        when(thiefFood.getFoodLevel()).thenReturn(10);
+        when(thiefFood.getSaturationLevel()).thenReturn(0.0f);
+        when(target.getHealth()).thenReturn(2.0f); // exclude HEALTH
+        when(targetInventory.getItem(anyInt())).thenReturn(ItemStack.EMPTY); // no ITEM
+
+        ShadowAbilitySnapshot base = new ShadowAbilitySnapshot(ShadowAbilityTier.NONE,
+                ShadowAbilityTier.NONE, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        ShadowAbilitySnapshot tierIII = new ShadowAbilitySnapshot(ShadowAbilityTier.NONE,
+                ShadowAbilityTier.III, ShadowAbilityTier.NONE, ShadowAbilityTier.NONE);
+        assertTrue(probeWith(base).contains(ShadowTheftType.HUNGER),
+                "the base 2-point transfer keeps a conserving plan");
+        assertFalse(probeWith(tierIII).contains(ShadowTheftType.HUNGER),
+                "the 夺生 III 4-point transfer makes the plan infeasible — the probe must agree");
+        // And prepare agrees with the probe on both tiers.
+        com.tanrunn.tcth.impl.shadow.HungerPlan planBase = ShadowFeasibility.computeHungerPlan(
+                targetFood, thiefFood, 2);
+        com.tanrunn.tcth.impl.shadow.HungerPlan planIII = ShadowFeasibility.computeHungerPlan(
+                targetFood, thiefFood, 4);
+        assertTrue(planBase != null, "prepare (base) has a plan");
+        assertTrue(planIII == null, "prepare (tier III) has no plan — no candidate/no-plan drift");
+    }
+
+    @Test
+    void healthAndEffectAvailabilityAreTierIndependent() {
+        // 夺生/窃法 tiers change amounts, not availability: the probes stay
+        // driven by the floor/cap and the effect rules.
+        when(target.getHealth()).thenReturn(10.0f);
+        when(thief.getHealth()).thenReturn(10.0f);
+        when(thief.getMaxHealth()).thenReturn(20.0f);
+        ShadowAbilitySnapshot tiers = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
+                ShadowAbilityTier.III, ShadowAbilityTier.III, ShadowAbilityTier.III);
+        assertTrue(probeWith(tiers).contains(ShadowTheftType.HEALTH));
+        when(thief.getHealth()).thenReturn(20.0f);
+        assertFalse(probeWith(tiers).contains(ShadowTheftType.HEALTH),
+                "a full-health thief never sees HEALTH, even at tier III");
     }
 }
