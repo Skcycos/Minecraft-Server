@@ -119,6 +119,15 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'caverns_and_chasms:halt_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:slaughter_rail', reason: '自动化内容禁用' },
+
+  // —— Beyond Dimensions：维度网络自动化组件 ——
+  { id: 'beyonddimensions:net_hopper_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_pump_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_furnace_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_blast_furnace_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_smoker_block', reason: '自动化' },
+  { id: 'beyonddimensions:schematicannon_pathway', reason: '自动化' },
+  { id: 'beyonddimensions:dimensional_connect_block', reason: '自动化' },
 ]
 
 // 挂到 global，供 server / client 脚本读取
