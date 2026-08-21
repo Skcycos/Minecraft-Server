@@ -120,7 +120,7 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:slaughter_rail', reason: '自动化内容禁用' },
 
-  { id: 'selfexpression:cultist_leggings', reason: '自动化' },
+  { pattern: /selfexpression:.*/, reason: '其他获取方式' },
 
   // —— Beyond Dimensions：维度网络自动化组件 ——
   { id: 'beyonddimensions:net_hopper_block', reason: '自动化' },
