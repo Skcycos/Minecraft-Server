@@ -114,7 +114,6 @@ const DISABLED_CRAFT_ENTRIES = [
 
   // —— 正则 pattern 条目（匹配删除 + tooltip 同步生效） ——
   { pattern: /caverns_and_chasms:.*_potion/, reason: '不合适' },
-  { pattern: /slashblade:.*/, reason: '内部测试' },
   { pattern: /beyonddimensions:(xp_exchange_item|net_restocker_item|net_feeder_item|net_magnet_item)/, reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:halt_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
