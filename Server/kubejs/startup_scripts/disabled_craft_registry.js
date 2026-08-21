@@ -118,6 +118,7 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'caverns_and_chasms:halt_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:slaughter_rail', reason: '自动化内容禁用' },
+  { id: 'caverns_and_chasms:bejeweled_apple', reason: '超模' },
 
   { pattern: /selfexpression:.*/, reason: '其他获取方式' },
 
