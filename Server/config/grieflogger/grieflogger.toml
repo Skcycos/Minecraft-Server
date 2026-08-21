@@ -44,7 +44,7 @@
 [queue]
     # The frequency at which the database queue is executed (every 'x' ticks)
     # Allowed range: 1 ~ 100 - Default: 20
-    queueFrequency = 20
+    queueFrequency = 40
 
 [hello]
     # The frequency at which the hello packet is sent to the server (every 'x' ticks)
