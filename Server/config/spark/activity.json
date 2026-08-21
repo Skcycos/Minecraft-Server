@@ -1,0 +1,65 @@
+[
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1787292612216,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/7qOdKTyZyz"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Tanrunn",
+      "uniqueId": "27a96fec-9b28-4152-b433-0dd8f085333b"
+    },
+    "time": 1787290490930,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/MyVrUo0im8"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Tanrunn",
+      "uniqueId": "27a96fec-9b28-4152-b433-0dd8f085333b"
+    },
+    "time": 1787282169115,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/zDxhFDaSSp"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1787281793850,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/fIf2A67yXw"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Tanrunn",
+      "uniqueId": "27a96fec-9b28-4152-b433-0dd8f085333b"
+    },
+    "time": 1787242011870,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/3awqkG6vld"
+    }
+  }
+]
