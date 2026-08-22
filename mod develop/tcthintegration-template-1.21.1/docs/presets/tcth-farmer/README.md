@@ -46,7 +46,7 @@ PASS），**仅 BREAK 收获**，不为其创建无效右键 Mixin。
   及子类被 TCTH 显式判定为 automated 并拒绝发布（`CropHarvestedEventDispatcher`
   返回 `AUTOMATED_REJECTED`）。非 FakePlayer 的机器人玩家属已知边界，
   不伪称全部排除。
-- `CropHarvestRules` 成熟判定：排除标签优先 → 甘蔗/仙人掌仅上层 →
+- `CropHarvestRules` 成熟判定：排除标签优先 → 仙人掌仅上层 →
   `CropBlock` 真实最大年龄 → 可可豆/下界疣 age 最大值 → `farmer_harvestables`
   标签（age 验证）→ 未识别方块 fail-closed。**南瓜/西瓜不再发收获事件**
   （放置-破坏可刷经验，用户决策移除，见 4A.3 报告）。

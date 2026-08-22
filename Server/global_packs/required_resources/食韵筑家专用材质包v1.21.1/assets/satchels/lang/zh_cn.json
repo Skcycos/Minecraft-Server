@@ -1,0 +1,18 @@
+{
+	"curios.identifier.satchel": "挎包",
+	"item.satchels.satchel": "随身挎包",
+	"key.satchels.toggle_satchel": "切换挎包",
+	"satchels.configuration.allowed_menus": "显示挎包栏位的界面",
+	"satchels.configuration.gameplay": "玩法",
+	"satchels.configuration.gui_animation": "界面/HUD 动画",
+	"satchels.configuration.log_opened_menu": "记录打开的界面",
+	"satchels.configuration.rendering": "渲染",
+	"satchels.configuration.satchel_layer": "在玩家身上渲染挎包",
+	"satchels.configuration.satchel_offset": "挎包位置",
+	"satchels.configuration.shift_swap": "挎包栏位交换",
+	"satchels.options.offset": "挎包位置",
+	"satchels.options.offset.selection": "栏位 %s-%s",
+	"satchels.options.offset.tooltip": "挎包在快捷栏上的位置。",
+	"sound.satchels.satchel_rustle": "挎包窸窣作响",
+	"tag.item.satchels.satchels": "挎包"
+}

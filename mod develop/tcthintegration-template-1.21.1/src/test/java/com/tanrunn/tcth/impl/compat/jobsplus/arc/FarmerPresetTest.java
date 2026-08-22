@@ -194,6 +194,7 @@ class FarmerPresetTest {
         String excluded = Files.readString(Path.of(PRESET, "tags/block/farmer_excluded.json"),
                 StandardCharsets.UTF_8);
         for (String id : new String[]{
+                "minecraft:sugar_cane",
                 "neapolitan:vanilla_vine", "neapolitan:banana_bundle", "neapolitan:magic_beans",
                 "dungeonsdelight:rotten_crop", "dungeonsdelight:rotbulb_plant",
                 "dungeonsdelight:wormroot_stalk", "mynethersdelight:bullet_pepper",

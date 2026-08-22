@@ -1,0 +1,9 @@
+{
+  "job": "tcth:shadow_thief",
+  "icon": {
+    "id": "minecraft:echo_shard"
+  },
+  "price": 15,
+  "required_level": 75,
+  "parent": "tcth:shadow_thief/shadow_escape_ii"
+}

@@ -371,8 +371,125 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-105（pull 后补记远端落后提交 + 本地新上）
+     EDITION 68-109（push 前补记远端落后提交 + 本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">109</span>
+    <div>
+      <h2 class="edition-title">随身挎包（Satchels）模组汉化 + 禁用时间冻结</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 01:10</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">随身挎包模组全量汉化 16 词条；同时新增脚本禁止玩家持有时间冻结效果。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">satchels 汉化</span>
+        <span class="item-value">16 条：物品/按键/配置界面/音效字幕，key 与占位符对齐</span>
+      </li>
+      <li>
+        <span class="item-label">时间冻结封禁</span>
+        <span class="item-value">block_chronos_effect.js：每刻移除玩家 runiclib:chronos 并节流提示</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">108</span>
+    <div>
+      <h2 class="edition-title">新增 /exporteffects 效果导出命令与 Buff 图标图鉴</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 00:45</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛠 运维工具</span>
+
+    <div class="pull">新增状态效果导出命令（OP），并将全服 Buff 图标提取入库，便于汉化与平衡查阅。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">/exporteffects</span>
+        <span class="item-value">导出全部模组状态效果注册表至 kubejs/exports/（id/来源模组/类别/颜色）</span>
+      </li>
+      <li>
+        <span class="item-label">图标图鉴</span>
+        <span class="item-value">docs/buff图标图鉴.html + docs/mob_effect_icons/：24 模组共 278 张 buff 图标</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">107</span>
+    <div>
+      <h2 class="edition-title">TCTH 职业经济获取调整：移除甘蔗与小鸡肉块</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 13:35</span>
+        <span class="dot">·</span>
+        <span>cf94d88</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 职业经济调整</span>
+
+    <div class="pull">农夫职业不再因收获甘蔗获得职业经验，厨师职业不再因制作熟鸡肉丁获得职业经验。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">农夫</span>
+        <span class="item-value">移除 minecraft:sugar_cane 的收获奖励，并同步源预设与服务器全局数据包</span>
+      </li>
+      <li>
+        <span class="item-label">厨师</span>
+        <span class="item-value">移除 farmersdelight:cooked_chicken_cuts 的 COMMON 分级、职业经验映射与图鉴条目</span>
+      </li>
+      <li>
+        <span class="item-label">范围</span>
+        <span class="item-value">保留物品配方与 Bountiful 悬赏配置不变；生成脚本加入持久化排除规则</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">106</span>
+    <div>
+      <h2 class="edition-title">禁用洞穴与深渊珠宝苹果合成</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 01:46</span>
+        <span class="dot">·</span>
+        <span>1d0c058</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warning">🚫 配方限制</span>
+
+    <div class="pull">将 caverns_and_chasms:bejeweled_apple 加入统一禁用合成清单，原因：超模。</div>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
