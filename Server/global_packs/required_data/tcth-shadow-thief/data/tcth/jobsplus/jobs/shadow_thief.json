@@ -1,0 +1,10 @@
+{
+  "price": 10,
+  "max_level": 100,
+  "color": "#2E4053",
+  "icon": {
+    "id": "minecraft:echo_shard"
+  },
+  "background": "minecraft:textures/block/deepslate.png",
+  "is_default": false
+}
