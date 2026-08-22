@@ -100,6 +100,9 @@ public final class PlayerInteractHandler {
         if (thief instanceof FakePlayer) {
             return;
         }
+        if (!ShadowAbilityAccess.hasShadowThiefJob(thief)) {
+            return;
+        }
         if (event.getHand() != InteractionHand.MAIN_HAND) {
             return;
         }
