@@ -48,6 +48,11 @@ from pathlib import Path
 TIER_MAP = {"1": "COMMON", "2": "T2", "3": "T3"}
 VALID_TIERS = ("COMMON", "T2", "T3")
 RAW_DOUGH = "kaleidoscope_cookery:raw_dough"
+TCTH_EXCLUDE = {
+    # Keep the food/recipe data authoritative, but remove this item from the
+    # chef catalogue and the chef economy tier inputs.
+    "farmersdelight:cooked_chicken_cuts",
+}
 CATEGORY_ICONS = {
     "COMMON": "tcth:textures/gui/fieldguide/chef_common.png",
     "T2": "tcth:textures/gui/fieldguide/chef_t2.png",
@@ -234,7 +239,7 @@ def main() -> int:
     resolved: dict[str, str] = {}
     conflicts: list[tuple[str, list[str]]] = []
     for pid in sorted(edible):
-        if pid in not_dishes:
+        if pid in not_dishes or pid in TCTH_EXCLUDE:
             continue
         tiers = tier_map.get(pid)
         if not tiers:
@@ -245,7 +250,7 @@ def main() -> int:
         resolved[pid] = min(unique, key=lambda t: VALID_TIERS.index(t))
     # Explicit extension: tcth:dishes re-adds items (even without a tier row).
     for pid in sorted(dishes):
-        if pid in not_dishes or parse_product_id(pid) is None:
+        if pid in not_dishes or pid in TCTH_EXCLUDE or parse_product_id(pid) is None:
             continue
         resolved.setdefault(pid, "COMMON")
 

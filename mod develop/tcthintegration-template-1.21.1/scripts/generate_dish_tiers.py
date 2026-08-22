@@ -35,7 +35,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 TIER_MAP = {"1": "COMMON", "2": "T2", "3": "T3"}
-EXCLUDE = {"kaleidoscope_cookery:raw_dough"}
+EXCLUDE = {
+    "kaleidoscope_cookery:raw_dough",
+    # TCTH chef economy exclusion: keep the food/recipe data authoritative,
+    # but do not generate a dish tier and therefore no chef job XP mapping.
+    "farmersdelight:cooked_chicken_cuts",
+}
 VALID_TIERS = ("COMMON", "T2", "T3")
 
 # Minecraft ResourceLocation rules: lowercase namespace [a-z0-9_.-],

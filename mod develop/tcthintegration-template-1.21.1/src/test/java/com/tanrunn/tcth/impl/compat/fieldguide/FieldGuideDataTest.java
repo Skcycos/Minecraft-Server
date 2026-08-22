@@ -163,7 +163,8 @@ class FieldGuideDataTest {
             catalog.addAll(tagValues(tag));
         }
         assertTrue(catalog.contains("minecraft:cooked_cod"));
-        assertTrue(catalog.contains("farmersdelight:cooked_chicken_cuts"));
+        assertTrue(catalog.contains("farmersdelight:cooked_bacon"));
+        assertFalse(catalog.contains("farmersdelight:cooked_chicken_cuts"));
         assertTrue(catalog.contains("kaleidoscope_cookery:blaze_lamb_chop"));
     }
 
