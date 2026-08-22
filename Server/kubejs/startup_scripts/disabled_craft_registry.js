@@ -90,7 +90,6 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'minecraft:sticky_piston', reason: '粘性活塞，飞行器与高频机器核心' },
   { id: 'minecraft:tnt', reason: '炸药，破坏建筑' },
   { id: 'minecraft:tnt_minecart', reason: 'TNT 矿车，破坏建筑' },
-  { id: 'minecraft:end_crystal', reason: '末地水晶，高爆破坏' },
   { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' },
 
   // —— 潜影盒：全部颜色禁用（放入清单以同步 tooltip，替代原先的正则删除） ——
