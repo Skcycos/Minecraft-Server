@@ -213,16 +213,16 @@ farmerLivestockCooldownTicks = 400
 #locked behind shadowRealAssetTransfersEnabled (default
 #off); the audit log is a plain SavedData, not an fsync
 #WAL — live enablement needs operator confirmation.
-shadowThiefIntegrationEnabled = false
+shadowThiefIntegrationEnabled = true
 #Allow shadow theft attempts against player targets.
 #Default off. When false, player-target attempts are
 #rejected at context validation. Real transfers still
 #require shadowRealAssetTransfersEnabled.
-shadowPlayerTheftEnabled = false
+shadowPlayerTheftEnabled = true
 #Allow shadow theft attempts against entity targets.
 #Default off. When false, entity-target attempts are
 #rejected at context validation.
-shadowEntityTheftEnabled = false
+shadowEntityTheftEnabled = true
 #Write shadow theft attempts to tcth_shadow_audit.dat.
 #Default true. SUCCESS is only posted after a successful
 #audit write; disabling audit therefore blocks SUCCESS
@@ -234,7 +234,7 @@ shadowAuditEnabled = true
 #explicitly enabled by an operator. Fail-closed on config
 #read errors. Live-server enablement needs operator
 #confirmation (the audit log is not an fsync WAL).
-shadowRealAssetTransfersEnabled = false
+shadowRealAssetTransfersEnabled = true
 #Base success chance of a shadow theft attempt (default 0.35).
 #Final balance is decided in a later phase; the value is
 #clamped into [shadowMinSuccessChance, shadowMaxSuccessChance].
