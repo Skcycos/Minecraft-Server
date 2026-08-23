@@ -5,6 +5,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import com.tanrunn.tcth.impl.shadow.ShadowCooldownHud;
+import com.tanrunn.tcth.impl.shadow.ShadowCooldownPayload;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
 @Mod(value = TCTHIntegration.MODID, dist = Dist.CLIENT)
@@ -14,5 +16,7 @@ public class TCTHIntegrationClient {
         // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
         // Do not forget to add translations for your config options to the lang files.
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        ShadowCooldownPayload.setClientHandler(ShadowCooldownHud::accept);
+        ShadowCooldownHud.init();
     }
 }

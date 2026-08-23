@@ -305,7 +305,7 @@ shadowNewPlayerProtectionTicks = 72000
 #tcth:shadow_thief job experience is granted until an
 #operator explicitly enables this. Fail-closed on config
 #read errors.
-shadowRewardsEnabled = false
+shadowRewardsEnabled = true
 #Master switch of the tcth:shadow_thief ability tree.
 #Default true. Every route also needs its own switch and
 #the framework switches. A config read failure fails

@@ -137,6 +137,19 @@ public final class ShadowCooldownTracker {
         put(Kind.FAILURE_COOLDOWN, thiefId, null, durationTicks);
     }
 
+    /**
+     * Returns the longest currently active thief cooldown in server ticks.
+     * This is used only for client HUD synchronisation; the coordinator
+     * remains the authoritative gate.
+     */
+    public long remainingCooldownTicks(UUID thiefId) {
+        Objects.requireNonNull(thiefId, "thiefId");
+        return Math.max(
+                Math.max(remaining(Kind.GLOBAL_COOLDOWN, thiefId),
+                        remaining(Kind.NO_CANDIDATE_COOLDOWN, thiefId)),
+                remaining(Kind.FAILURE_COOLDOWN, thiefId));
+    }
+
     /** @return whether the victim is under post-success protection */
     public boolean isVictimProtected(UUID victimId) {
         return isActive(Kind.VICTIM_PROTECTION, victimId, null);
@@ -170,6 +183,21 @@ public final class ShadowCooldownTracker {
             return false;
         }
         return true;
+    }
+
+    private long remaining(Kind kind, UUID playerId) {
+        Long expiry = entries.get(new Key(kind, playerId, null));
+        if (expiry == null) {
+            return 0L;
+        }
+        if (expiry == NEVER_EXPIRES) {
+            return Long.MAX_VALUE;
+        }
+        if (currentTick >= expiry) {
+            entries.remove(new Key(kind, playerId, null));
+            return 0L;
+        }
+        return expiry - currentTick;
     }
 
     private void put(Kind kind, UUID a, @Nullable UUID b, long durationTicks) {
