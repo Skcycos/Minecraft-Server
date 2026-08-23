@@ -315,7 +315,7 @@ mobPowerAtomCharging = true
 #Allow mobs to spawn with Invisibility
 mobPowerInvisibility = true
 #Allow mobs to spawn with Invincibility
-mobPowerInvincible = true
+mobPowerInvincible = false
 #Allow mobs to spawn with Basic Laser Eyes
 mobPowerLaserBasic = true
 #Allow mobs to spawn with Advanced Laser Eyes
@@ -333,7 +333,7 @@ mobPowerShrink = true
 #Allow mobs to spawn with Enlarge (requires Pehkui)
 mobPowerEnlarge = true
 #Allow mobs to spawn with Creative Flight (fly toward target, floating turret with lasers)
-mobPowerCreativeFlight = true
+mobPowerCreativeFlight = false
 #Allow mobs to spawn with Chest Blast (Soldier Boy). Disabled by default.
 mobPowerChestBlast = false
 #Allow mobs to spawn with Leap (Queen Maeve)
@@ -361,9 +361,9 @@ enableNightVision = true
 #Allow players to obtain the Levitation power
 enableLevitation = true
 #Allow players to obtain the Invincible power
-enableInvincible = true
+enableInvincible = false
 #Allow players to obtain the Creative Flight power
-enableCreativeFlight = true
+enableCreativeFlight = false
 #Allow players to obtain the Basic Laser Eyes power
 enableLaserEyesBasic = true
 #Allow players to obtain the Advanced Laser Eyes power
@@ -411,13 +411,13 @@ enableV1LaserEyesAdvanced = true
 #Allow Head Pop in the V1 power pool
 enableV1HeadPop = true
 #Allow Creative Flight in the V1 power pool
-enableV1CreativeFlight = true
+enableV1CreativeFlight = false
 #Allow Teleport in the V1 power pool
 enableV1Teleport = true
 #Allow Enlarge in the V1 power pool (requires Pehkui)
 enableV1Enlarge = true
 #Allow Invincible in the V1 power pool
-enableV1Invincible = true
+enableV1Invincible = false
 #Allow Star Power in the V1 power pool
 enableV1StarPower = true
 #Allow Chest Blast in the V1 power pool
