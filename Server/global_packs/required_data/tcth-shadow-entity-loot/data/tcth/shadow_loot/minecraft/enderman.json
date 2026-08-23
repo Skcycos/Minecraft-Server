@@ -1,0 +1,7 @@
+{
+  "pools": [
+    { "weight": 100, "entries": [
+      { "id": "minecraft:ender_pearl", "weight": 100, "min_count": 1, "max_count": 1 }
+    ] }
+  ]
+}

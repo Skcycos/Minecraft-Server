@@ -1,0 +1,9 @@
+{
+  "pools": [
+    { "weight": 100, "entries": [
+      { "id": "minecraft:redstone", "weight": 50, "min_count": 1, "max_count": 1 },
+      { "id": "minecraft:sugar", "weight": 25, "min_count": 1, "max_count": 1 },
+      { "id": "minecraft:glowstone_dust", "weight": 25, "min_count": 1, "max_count": 1 }
+    ] }
+  ]
+}

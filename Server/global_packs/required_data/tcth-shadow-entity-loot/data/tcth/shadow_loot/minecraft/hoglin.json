@@ -1,0 +1,8 @@
+{
+  "pools": [
+    { "weight": 100, "entries": [
+      { "id": "minecraft:porkchop", "weight": 80, "min_count": 1, "max_count": 1 },
+      { "id": "minecraft:leather", "weight": 20, "min_count": 1, "max_count": 1 }
+    ] }
+  ]
+}

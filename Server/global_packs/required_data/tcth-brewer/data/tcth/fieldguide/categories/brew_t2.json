@@ -127,6 +127,69 @@
       }
     },
     {
+      "id": "item:brewinandchewin/cocoa_fudge",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/jerky",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/kimchi",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/kippers",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/pickled_pickles",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/red_rum",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
+      "id": "item:brewinandchewin/saccharine_rum",
+      "type": "entry",
+      "unlock": {
+        "prerequisites": [
+          "tcth:brewer_cookbook_gate"
+        ]
+      }
+    },
+    {
       "id": "item:kaleidoscope_tavern/allium_garden",
       "type": "entry",
       "unlock": {
