@@ -129,6 +129,9 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'beyonddimensions:net_smoker_block', reason: '自动化' },
   { id: 'beyonddimensions:schematicannon_pathway', reason: '自动化' },
   { id: 'beyonddimensions:dimensional_connect_block', reason: '自动化' },
+
+  // —— Useful Magic：正则禁用整个模组的全部合成输出 ——
+  { pattern: /usefulmagic:.*/, reason: '本服禁用 Useful Magic 全部合成' },
 ]
 
 // 挂到 global，供 server / client 脚本读取
