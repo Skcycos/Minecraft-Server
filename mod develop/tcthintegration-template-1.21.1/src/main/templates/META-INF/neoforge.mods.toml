@@ -89,6 +89,12 @@ requiredMods=["dungeonsdelight"]
 config="brewinandchewin_compat.mixins.json"
 requiredMods=["brewinandchewin"]
 
+# Kaleidoscope Tavern Shaker + Barrel beverage-preparation detection (phase 7F).
+# Gated so the optional mod's classes are never resolved without the mod.
+[[mixins]]
+config="kaleidoscope_tavern_compat.mixins.json"
+requiredMods=["kaleidoscope_tavern"]
+
 # Farmer tilling-route durability mixin (phase 4B/4C). Injects the real
 # ItemStack.hurtAndBreak(ServerLevel, LivingEntity, Consumer) overload that
 # NeoForge 21.1 uses (Arc's on_hurt_item targets the unused ServerPlayer

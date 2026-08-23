@@ -315,7 +315,7 @@ mobPowerAtomCharging = true
 #Allow mobs to spawn with Invisibility
 mobPowerInvisibility = true
 #Allow mobs to spawn with Invincibility
-mobPowerInvincible = true
+mobPowerInvincible = false
 #Allow mobs to spawn with Basic Laser Eyes
 mobPowerLaserBasic = true
 #Allow mobs to spawn with Advanced Laser Eyes
@@ -333,7 +333,7 @@ mobPowerShrink = true
 #Allow mobs to spawn with Enlarge (requires Pehkui)
 mobPowerEnlarge = true
 #Allow mobs to spawn with Creative Flight (fly toward target, floating turret with lasers)
-mobPowerCreativeFlight = true
+mobPowerCreativeFlight = false
 #Allow mobs to spawn with Chest Blast (Soldier Boy). Disabled by default.
 mobPowerChestBlast = false
 #Allow mobs to spawn with Leap (Queen Maeve)
@@ -361,15 +361,15 @@ enableNightVision = true
 #Allow players to obtain the Levitation power
 enableLevitation = true
 #Allow players to obtain the Invincible power
-enableInvincible = true
+enableInvincible = false
 #Allow players to obtain the Creative Flight power
-enableCreativeFlight = true
+enableCreativeFlight = false
 #Allow players to obtain the Basic Laser Eyes power
 enableLaserEyesBasic = true
 #Allow players to obtain the Advanced Laser Eyes power
-enableLaserEyesAdvanced = true
+enableLaserEyesAdvanced = false
 #Allow players to obtain the Power Absorption power
-enablePowerAbsorption = true
+enablePowerAbsorption = false
 #Allow players to obtain the Sonic Scream power
 enableSonicScream = true
 #Allow players to obtain the Head Pop power
@@ -395,7 +395,7 @@ enableExplosive = true
 #Allow players to obtain the Healing power
 enableHealing = true
 #Allow players to obtain the Mimic power
-enableMimic = true
+enableMimic = false
 #Allow players to obtain the Petrifying Gaze power
 enablePetrifyingGaze = true
 #Allow players to obtain the Stormfront power
@@ -407,17 +407,17 @@ enableEnlarge = true
 #Allow Speedster in the V1 (original formula) power pool
 enableV1Speedster = true
 #Allow Advanced Laser Eyes in the V1 power pool
-enableV1LaserEyesAdvanced = true
+enableV1LaserEyesAdvanced = false
 #Allow Head Pop in the V1 power pool
 enableV1HeadPop = true
 #Allow Creative Flight in the V1 power pool
-enableV1CreativeFlight = true
+enableV1CreativeFlight = false
 #Allow Teleport in the V1 power pool
 enableV1Teleport = true
 #Allow Enlarge in the V1 power pool (requires Pehkui)
 enableV1Enlarge = true
 #Allow Invincible in the V1 power pool
-enableV1Invincible = true
+enableV1Invincible = false
 #Allow Star Power in the V1 power pool
 enableV1StarPower = true
 #Allow Chest Blast in the V1 power pool
@@ -534,7 +534,7 @@ renderPowerParticlesOnSelf = true
 #Whether hostile mobs can spawn with Compound V powers (disabled by default)
 enableMobPowers = false
 #Whether Compound V powers persist through death (always enabled by default)
-persistPowersOnDeath = true
+persistPowersOnDeath = false
 #If persistPowersOnDeath is enabled and the player has the virus (Compound V: Gone Viral), dying removes one random Compound V power permanently
 virusRemovesPowerOnDeath = true
 #Chance (0.0 to 1.0) that a hostile mob spawns with a power when mob powers are enabled

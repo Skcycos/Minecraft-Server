@@ -1903,6 +1903,26 @@
       },
       "unitWorth": 35,
       "weightMult": 0.8
-    }
+    },
+    "kaleidoscope_tavern_brandy": { "type": "item", "content": "kaleidoscope_tavern:brandy", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_carignan": { "type": "item", "content": "kaleidoscope_tavern:carignan", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_glowflower_brew": { "type": "item", "content": "kaleidoscope_tavern:glowflower_brew", "amount": { "min": 1, "max": 3 }, "unitWorth": 70, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_honey_wine": { "type": "item", "content": "kaleidoscope_tavern:honey_wine", "amount": { "min": 1, "max": 3 }, "unitWorth": 70, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_luminous_bride": { "type": "item", "content": "kaleidoscope_tavern:luminous_bride", "amount": { "min": 1, "max": 2 }, "unitWorth": 80, "weightMult": 0.3, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_miners_star": { "type": "item", "content": "kaleidoscope_tavern:miners_star", "amount": { "min": 1, "max": 3 }, "unitWorth": 72, "weightMult": 0.35, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_molotov": { "type": "item", "content": "kaleidoscope_tavern:molotov", "amount": { "min": 1, "max": 4 }, "unitWorth": 45, "weightMult": 0.45, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_mother_snow": { "type": "item", "content": "kaleidoscope_tavern:mother_snow", "amount": { "min": 1, "max": 3 }, "unitWorth": 68, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_plum_wine": { "type": "item", "content": "kaleidoscope_tavern:plum_wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_polaris_sweet_white": { "type": "item", "content": "kaleidoscope_tavern:polaris_sweet_white", "amount": { "min": 1, "max": 2 }, "unitWorth": 78, "weightMult": 0.3, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_red_queen": { "type": "item", "content": "kaleidoscope_tavern:red_queen", "amount": { "min": 1, "max": 4 }, "unitWorth": 48, "weightMult": 0.45, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_riesling_dry_white": { "type": "item", "content": "kaleidoscope_tavern:riesling_dry_white", "amount": { "min": 1, "max": 3 }, "unitWorth": 70, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_rum": { "type": "item", "content": "kaleidoscope_tavern:rum", "amount": { "min": 1, "max": 4 }, "unitWorth": 24, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_sakura_wine": { "type": "item", "content": "kaleidoscope_tavern:sakura_wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 38, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_sauvignon_blanc_dry_white": { "type": "item", "content": "kaleidoscope_tavern:sauvignon_blanc_dry_white", "amount": { "min": 1, "max": 3 }, "unitWorth": 50, "weightMult": 0.45, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_sunset_glow": { "type": "item", "content": "kaleidoscope_tavern:sunset_glow", "amount": { "min": 1, "max": 3 }, "unitWorth": 75, "weightMult": 0.35, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_sweet_berry_wine": { "type": "item", "content": "kaleidoscope_tavern:sweet_berry_wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_vodka": { "type": "item", "content": "kaleidoscope_tavern:vodka", "amount": { "min": 1, "max": 4 }, "unitWorth": 24, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_whiskey": { "type": "item", "content": "kaleidoscope_tavern:whiskey", "amount": { "min": 1, "max": 4 }, "unitWorth": 25, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "kaleidoscope_tavern_wine": { "type": "item", "content": "kaleidoscope_tavern:wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 28, "weightMult": 0.6, "rarity": "UNCOMMON" }
   }
 }
