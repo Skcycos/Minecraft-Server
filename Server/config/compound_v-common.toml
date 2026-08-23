@@ -181,7 +181,7 @@ weight_healing = 3
 # Range: > 0
 weight_mimic = 2
 #Whether player Explosive power destroys blocks
-explosivePlayerBlockDamage = true
+explosivePlayerBlockDamage = false
 #Whether mob Explosive power destroys blocks (disabled by default to prevent grief)
 explosiveMobBlockDamage = false
 #Blast radius of the Explosive power (creeper is 3.0)
@@ -253,7 +253,7 @@ chestBlastRange = 32
 #Chance per tick per block of the Chest Blast beam destroying blocks in its path (0 = disabled). Scans the entire beam line each tick.
 # Default: 0.15
 # Range: 0.0 ~ 1.0
-chestBlastBlockBreakChance = 0.15
+chestBlastBlockBreakChance = 0.0
 #Whether the player's Chest Blast beam is blocked by solid blocks (beam stops at walls)
 chestBlastBlockedByWalls = true
 #Whether the Chest Blast beam can strip Invincibility (if false, Invincible blocks the strip)
