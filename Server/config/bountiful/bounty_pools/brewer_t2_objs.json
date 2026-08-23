@@ -20,6 +20,17 @@
     "kaleidoscope_tavern_sweet_berry_wine": { "type": "item", "content": "kaleidoscope_tavern:sweet_berry_wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
     "kaleidoscope_tavern_vodka": { "type": "item", "content": "kaleidoscope_tavern:vodka", "amount": { "min": 1, "max": 4 }, "unitWorth": 24, "weightMult": 0.6, "rarity": "UNCOMMON" },
     "kaleidoscope_tavern_whiskey": { "type": "item", "content": "kaleidoscope_tavern:whiskey", "amount": { "min": 1, "max": 4 }, "unitWorth": 25, "weightMult": 0.6, "rarity": "UNCOMMON" },
-    "kaleidoscope_tavern_wine": { "type": "item", "content": "kaleidoscope_tavern:wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 28, "weightMult": 0.6, "rarity": "UNCOMMON" }
+    "kaleidoscope_tavern_wine": { "type": "item", "content": "kaleidoscope_tavern:wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 28, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "brewinandchewin_beer": { "type": "item", "content": "brewinandchewin:beer", "amount": { "min": 1, "max": 4 }, "unitWorth": 35, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "brewinandchewin_cocoa_fudge": { "type": "item", "content": "brewinandchewin:cocoa_fudge", "amount": { "min": 1, "max": 3 }, "unitWorth": 55, "weightMult": 0.45, "rarity": "UNCOMMON" },
+    "brewinandchewin_egg_grog": { "type": "item", "content": "brewinandchewin:egg_grog", "amount": { "min": 1, "max": 3 }, "unitWorth": 65, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "brewinandchewin_glittering_grenadine": { "type": "item", "content": "brewinandchewin:glittering_grenadine", "amount": { "min": 1, "max": 3 }, "unitWorth": 70, "weightMult": 0.4, "rarity": "UNCOMMON" },
+    "brewinandchewin_jerky": { "type": "item", "content": "brewinandchewin:jerky", "amount": { "min": 1, "max": 4 }, "unitWorth": 24, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "brewinandchewin_kimchi": { "type": "item", "content": "brewinandchewin:kimchi", "amount": { "min": 1, "max": 4 }, "unitWorth": 24, "weightMult": 0.6, "rarity": "UNCOMMON" },
+    "brewinandchewin_kippers": { "type": "item", "content": "brewinandchewin:kippers", "amount": { "min": 1, "max": 3 }, "unitWorth": 36, "weightMult": 0.5, "rarity": "UNCOMMON" },
+    "brewinandchewin_mead": { "type": "item", "content": "brewinandchewin:mead", "amount": { "min": 1, "max": 3 }, "unitWorth": 55, "weightMult": 0.45, "rarity": "UNCOMMON" },
+    "brewinandchewin_pickled_pickles": { "type": "item", "content": "brewinandchewin:pickled_pickles", "amount": { "min": 1, "max": 4 }, "unitWorth": 28, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "brewinandchewin_rice_wine": { "type": "item", "content": "brewinandchewin:rice_wine", "amount": { "min": 1, "max": 4 }, "unitWorth": 38, "weightMult": 0.55, "rarity": "UNCOMMON" },
+    "brewinandchewin_vodka": { "type": "item", "content": "brewinandchewin:vodka", "amount": { "min": 1, "max": 4 }, "unitWorth": 28, "weightMult": 0.6, "rarity": "UNCOMMON" }
   }
 }

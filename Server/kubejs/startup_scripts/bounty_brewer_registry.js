@@ -33,7 +33,28 @@ const BOUNTY_BREWER_ENTRIES = [
   { id: 'kaleidoscope_tavern:nether_special', tier: 'T3', tierName: '多阶段鸡尾酒', unitWorth: 170, amountMin: 1, amountMax: 2 },
   { id: 'kaleidoscope_tavern:screwdriver', tier: 'T3', tierName: '多阶段鸡尾酒', unitWorth: 225, amountMin: 1, amountMax: 2 },
   { id: 'kaleidoscope_tavern:sculk_special', tier: 'T3', tierName: '多阶段鸡尾酒', unitWorth: 180, amountMin: 1, amountMax: 2 },
-  { id: 'kaleidoscope_tavern:white_lady', tier: 'T3', tierName: '多阶段鸡尾酒', unitWorth: 160, amountMin: 1, amountMax: 2 }
+  { id: 'kaleidoscope_tavern:white_lady', tier: 'T3', tierName: '多阶段鸡尾酒', unitWorth: 160, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:beer', tier: 'T2', tierName: '基础发酵酒', unitWorth: 35, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:cocoa_fudge', tier: 'T2', tierName: '基础发酵酒', unitWorth: 55, amountMin: 1, amountMax: 3 },
+  { id: 'brewinandchewin:egg_grog', tier: 'T2', tierName: '基础发酵酒', unitWorth: 65, amountMin: 1, amountMax: 3 },
+  { id: 'brewinandchewin:glittering_grenadine', tier: 'T2', tierName: '基础发酵酒', unitWorth: 70, amountMin: 1, amountMax: 3 },
+  { id: 'brewinandchewin:jerky', tier: 'T2', tierName: '基础发酵酒', unitWorth: 24, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:kimchi', tier: 'T2', tierName: '基础发酵酒', unitWorth: 24, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:kippers', tier: 'T2', tierName: '基础发酵酒', unitWorth: 36, amountMin: 1, amountMax: 3 },
+  { id: 'brewinandchewin:mead', tier: 'T2', tierName: '基础发酵酒', unitWorth: 55, amountMin: 1, amountMax: 3 },
+  { id: 'brewinandchewin:pickled_pickles', tier: 'T2', tierName: '基础发酵酒', unitWorth: 28, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:rice_wine', tier: 'T2', tierName: '基础发酵酒', unitWorth: 38, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:vodka', tier: 'T2', tierName: '基础发酵酒', unitWorth: 28, amountMin: 1, amountMax: 4 },
+  { id: 'brewinandchewin:bloody_mary', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 110, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:dread_nog', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 220, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:kombucha', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 140, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:pale_jane', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 120, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:red_rum', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 220, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:saccharine_rum', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 150, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:salty_folly', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 160, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:steel_toe_stout', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 175, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:strongroot_ale', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 130, amountMin: 1, amountMax: 2 },
+  { id: 'brewinandchewin:withering_dross', tier: 'T3', tierName: '多阶段发酵酒', unitWorth: 260, amountMin: 1, amountMax: 2 }
 ]
 
 global.SYBountyBrewer = {
