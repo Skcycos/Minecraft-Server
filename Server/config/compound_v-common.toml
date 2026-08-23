@@ -359,7 +359,7 @@ enableInvisibility = true
 #Allow players to obtain the Night Vision power
 enableNightVision = true
 #Allow players to obtain the Levitation power
-enableLevitation = true
+enableLevitation = false
 #Allow players to obtain the Invincible power
 enableInvincible = false
 #Allow players to obtain the Creative Flight power
@@ -399,49 +399,49 @@ enableMimic = false
 #Allow players to obtain the Petrifying Gaze power
 enablePetrifyingGaze = true
 #Allow players to obtain the Stormfront power
-enableStormfront = true
+enableStormfront = false
 #Allow players to obtain the Shrink power (requires Pehkui)
 enableShrink = true
 #Allow players to obtain the Enlarge power (requires Pehkui)
 enableEnlarge = true
 #Allow Speedster in the V1 (original formula) power pool
-enableV1Speedster = true
+enableV1Speedster = false
 #Allow Advanced Laser Eyes in the V1 power pool
 enableV1LaserEyesAdvanced = false
 #Allow Head Pop in the V1 power pool
-enableV1HeadPop = true
+enableV1HeadPop = false
 #Allow Creative Flight in the V1 power pool
 enableV1CreativeFlight = false
 #Allow Teleport in the V1 power pool
-enableV1Teleport = true
+enableV1Teleport = false
 #Allow Enlarge in the V1 power pool (requires Pehkui)
-enableV1Enlarge = true
+enableV1Enlarge = false
 #Allow Invincible in the V1 power pool
 enableV1Invincible = false
 #Allow Star Power in the V1 power pool
-enableV1StarPower = true
+enableV1StarPower = false
 #Allow Chest Blast in the V1 power pool
-enableV1ChestBlast = true
+enableV1ChestBlast = false
 #Allow Stormfront in the V1 power pool
-enableV1Stormfront = true
+enableV1Stormfront = false
 #Allow Slowness as a bad outcome when taking Compound V / Temp V
-enableFailureSlowness = true
+enableFailureSlowness = false
 #Allow Floating as a bad outcome when taking Compound V / Temp V
-enableFailureFloating = true
+enableFailureFloating = false
 #Allow Uncontrolled Teleport as a bad outcome when taking Compound V / Temp V
-enableFailureUncontrolledTeleport = true
+enableFailureUncontrolledTeleport = false
 #Allow Magnetism (harmful) as a bad outcome when taking Compound V / Temp V
-enableFailureMagnetism = true
+enableFailureMagnetism = false
 #Allow Neural Decay when taking Compound V / Temp V
-enableNeuralDecay = true
+enableNeuralDecay = false
 #Allow Noir Visions as a bad outcome (addon)
-enableNoirVisions = true
+enableNoirVisions = false
 #Allow Firecracker as a bad outcome (addon)
-enableFirecracker = true
+enableFirecracker = false
 #Allow Narcolepsy as a bad outcome (addon)
-enableNarcolepsy = true
+enableNarcolepsy = false
 #Allow Silk Weaver as a bad outcome (addon)
-enableSilkWeaver = true
+enableSilkWeaver = false
 #Damage multiplier of damage taken by hostile mobs with Compound V (1.0 = normal, 0.5 = half)
 # Default: 1.0
 # Range: 0.0 ~ 1.0
