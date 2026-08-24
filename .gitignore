@@ -34,6 +34,7 @@ Server/config/paradigm/data/
 Server/config/paradigm/discovered_permissions.json
 Server/config/paradigm/dashboard-heartbeats.json
 Server/config/paradigm/cooldowns.json
+Server/config/paradigm/playerdata/
 Server/config/spark/tmp-client/*.tmp
 Server/config/bountiful/errors.log
 
