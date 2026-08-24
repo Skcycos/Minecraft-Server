@@ -14,6 +14,27 @@
 	]
 	quest.16A579014FC0FA1C.quest_subtitle: "&7这是你的家，不是怪物的自助餐厅"
 	quest.16A579014FC0FA1C.title: "&e给家园画一条边界"
+	quest.1BAE5F9EBA04E5EC.quest_desc: ["&d「服务器里有 刀剑、法术、弓箭 和其他战斗内容。先做一把适合自己的武器，挥两下试试手感。对着空气练习没关系，对着村民练习就不太行了。」&r"]
+	quest.1BAE5F9EBA04E5EC.quest_subtitle: "&7出门前，先确认剑在手边"
+	quest.1BAE5F9EBA04E5EC.title: "&e准备第一把像样的武器"
+	quest.1DF6BFA1C60A1667.quest_desc: [
+		"&d「金币放着不会自动变成房子。挑一件你喜欢的建筑材料买下来，哪怕只是一个窗框——家是从第一块真正想放好的方块开始的。」&r"
+		""
+		"&a在建筑商店购买任意一件商品。"
+	]
+	quest.1DF6BFA1C60A1667.quest_subtitle: "&7让金币第一次离开钱包"
+	quest.1DF6BFA1C60A1667.title: "&e买下第一块建材"
+	quest.20231AB64EC4BE71.quest_desc: ["&d「泰拉、无人之地和其他地形内容，已经把远方变得很有意思。带上食物和挎包，沿着地图走一段，别只在出生点附近绕圈。」&r"]
+	quest.20231AB64EC4BE71.quest_subtitle: "&7世界比木屋门口大得多"
+	quest.20231AB64EC4BE71.title: "&e走出熟悉的街巷"
+	quest.260AAD18F8C8EC89.quest_desc: [
+		"&d「你已经有住所、食物、工具，也知道怎么保护自己的东西了。接下来，可以选择一条更适合自己的路：种田、做菜，或者……走一条不那么光明正大的路。」&r"
+		""
+		"{quest_enhance_table:eNpFjjsKwkAQhu8y9QpZYkzMEbyChJCYMVnY7MJmfSEWloKlhdjYWNvYCLmO-LiF4yt2M98M__fPYahNmdh4jKYSWkHoMhhoOSpV9Z4LTDI0EFozQgaJFLkqUVkIQeLQAgObpBLjichsAaHDwOhJXKDIC_rhAQMpVHPmDFJtKC8mhabUVsfnThD4P0_Ducu9jsM9KoNS_nHbdz2n3SUtTu0fv7VUuN-H-3J9Oe9up_pW76neo97ej4frevXYHGntQRQxKNHk-HqPvvmVnckPWDwBMcVhXg}"
+		"&f农夫、厨师和影窃者各有自己的任务线。选择之前想清楚一点，尤其是影窃者——没有选择对应职业，就不能使用职业专属的偷窃能力。"
+	]
+	quest.260AAD18F8C8EC89.quest_subtitle: " &7你想成为哪一种冒险者？"
+	quest.260AAD18F8C8EC89.title: "&d认识职业系统"
 	quest.2809791110485D6A.quest_desc: [
 		"&d「任务书不是装饰品，小迷糊。遇到不知道该做什么的时候，先来这里看看；遇到知道该做什么但懒得看的时候……也先来这里看看。」&r"
 		""
@@ -21,12 +42,28 @@
 	]
 	quest.2809791110485D6A.quest_subtitle: "&7别让它一直躺在背包里吃灰"
 	quest.2809791110485D6A.title: "&e把任务书翻开"
+	quest.292D1B003610EB78.quest_desc: ["&d「传送石碑是给会探索、但方向感偶尔离家出走的人准备的。放心，我不会因为你绕了三圈才找到木屋而笑你……太大声而已。」r"]
+	quest.292D1B003610EB78.quest_subtitle: " 迷路不可怕，死活找不到家才可怕"
+	quest.292D1B003610EB78.title: "&e留下一个回家的路标"
+	quest.2D407AD33889A9E7.quest_desc: ["&d「看到结构里的箱子时，先看看周围有没有危险。现在战利品更公平，但它可不会替你挡住身后的怪物。」&r"]
+	quest.2D407AD33889A9E7.quest_subtitle: " &7箱子里可能有惊喜，也可能只有一双旧靴子"
+	quest.2D407AD33889A9E7.title: "&e打开一份战利品"
 	quest.312260C6E3ECF292.quest_desc: ["&d「这是随身挎包，适合装食物、工具和那些‘以后一定有用’的材料。至于你捡到的第十七块泥土……嗯，也可以先放进去。」&r"]
 	quest.312260C6E3ECF292.quest_subtitle: " &7冒险者不该把东西全塞在口袋里"
 	quest.312260C6E3ECF292.title: "&e背上你的随身挎包"
+	quest.319927115232E9AE.quest_desc: ["&d「找一只普通敌对生物练练手。记得观察攻击距离和节奏，好的架势可不是让你拿着剑乱挥的理由。」&r"]
+	quest.319927115232E9AE.quest_subtitle: "&7夜晚不是用来站在门口发呆的"
+	quest.319927115232E9AE.title: "&e击败第一只怪物"
+	quest.330B442C6A97131B.quest_desc: ["&d「悬赏板上总有一些小委托。收集、击杀、探索，各有各的报酬。先完成一份简单的，回来时我给你留一碗热汤。」&r"]
 	quest.34721432D5A2D820.quest_desc: ["&d「把木板摆好，工作台就会出现。很神奇，对吧？虽然我更喜欢把它叫作‘以后会堆满东西的第一张桌子’。」&r"]
 	quest.34721432D5A2D820.quest_subtitle: "&7所有木屋都从这里开始"
 	quest.34721432D5A2D820.title: "&e制作工作台"
+	quest.352475C935326FA2.quest_desc: [
+		"使用"
+		"atm来存入你的铜币，这样才能购买一些物品和进入股市"
+	]
+	quest.352475C935326FA2.quest_subtitle: "需要补充"
+	quest.352475C935326FA2.title: "&e小心别丢了"
 	quest.3E9F3C6525A56C51.quest_desc: [
 		"&d「木屋的门没有锁，灶台上的火也还亮着。欢迎来到烟火筑家，我是住在这里的虚拟小管家。先把任务书翻开，认认路，再去折腾那些会爆炸的东西。」&r"
 		""
@@ -67,6 +104,19 @@
 	]
 	quest.5C131B108BCD8098.quest_subtitle: " &7白天挖矿，晚上好好睡觉"
 	quest.5C131B108BCD8098.title: "&e安置床铺"
+	quest.62DB860BE4003199.quest_desc: ["&d「我喜欢看种子破土，也喜欢看厨房里堆满刚摘下来的食材。先种下一批作物吧，别把种子全拿去投掷，农田可不会自己长出来。」&r"]
+	quest.62DB860BE4003199.quest_subtitle: "&7灶台旁边，应该有一片绿油油的田"
+	quest.62DB860BE4003199.title: "&e开垦第一块农田"
+	quest.64F988C954EBE12F.quest_desc: ["&d「食物做好啦。别急着拿去卖，先自己吃一口。认真生活的人，值得吃到热乎乎的饭——这是我这只小狐狸的厨房规矩。」&r"]
+	quest.64F988C954EBE12F.quest_subtitle: "&7给忙了一圈的自己一点奖励"
+	quest.64F988C954EBE12F.title: "&e端出第一道菜"
+	quest.67D7EB63373105B1.quest_desc: ["&d「我喜欢漂亮的屋檐、整齐的街道和亮着灯的小窗户。建筑商店里有不少能帮你布置家园的材料，先打开看看，别只盯着泥土发呆。」&r"]
+	quest.67D7EB63373105B1.quest_subtitle: "&7漂亮的房子需要一点材料，也需要一点规划"
+	quest.67D7EB63373105B1.title: "&e认识建筑商店"
+	quest.7B4A5158B56C394E.quest_desc: ["&d「切菜板摆好，厨刀拿稳。厨房里最重要的不是动作快，而是别把食材切到地上——那样我会有一点点心疼。」&r"]
+	quest.7B4A5158B56C394E.quest_subtitle: " &7料理不是把食材扔进锅里就结束"
+	quest.7B4A5158B56C394E.title: "&e准备一块切菜板"
+	task.2047826561E1C0DA.title: "&a阅读职业说明，并选择一个职业"
 	task.40DDC82D7309B7C5.title: "&e给家园画一条边界"
 	task.45B81A3E1683490B.title: "欢迎来到烟火筑家"
 }
