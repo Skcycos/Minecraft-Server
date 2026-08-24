@@ -371,8 +371,33 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-113（push 前补记远端落后提交 + 本地新上）
+     EDITION 68-114（push 前补记远端落后提交 + 本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">114</span>
+    <div>
+      <h2 class="edition-title">同步服务器配置并暂时禁用两个模组</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置同步与模组维护</span>
+
+    <div class="pull">整理 AutoModpack 同步配置，暂时禁用 CooParticlesAPI 与 UsefulMagic，并纳入服务器运行生成的配置文件。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">AutoModpack</span><span class="item-value">保留现有同步项，仅整理 <code>syncedFiles</code> 顺序</span></li>
+      <li><span class="item-label">暂时禁用</span><span class="item-value">CooParticlesAPI 与 UsefulMagic，保留 `.jar.dis` 文件以便恢复</span></li>
+      <li><span class="item-label">配置文件</span><span class="item-value">纳入 Aotake Sweep、Fast Travel Waypoints 与 <code>vanilla.xin</code> 运行生成配置</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">

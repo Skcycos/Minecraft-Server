@@ -1,0 +1,35 @@
+[fast_travel]
+	#How many XP levels are consumed when a player fast-travels to a waystone waypoint. 0 = free. Ignored when use_waystones_xp_cost_scaling=true.
+	# Default: 0
+	# Range: 0 ~ 1000
+	level_cost = 0
+	#If true, map-based fast travel uses Waystones' configured XP cost calculation, including distance scaling and dimensional costs, instead of level_cost and additional_level_cost_dimensional_travel. Default: false
+	use_waystones_xp_cost_scaling = false
+	#If true, players can fast-travel to waystone waypoints in other dimensions using Xaero World Map's dimension toggle. If false, only same-dimension fast travel is allowed.
+	enable_cross_dimensional_travel = true
+	#Additional XP levels consumed only when fast-traveling between dimensions. This is added on top of level_cost. 0 = no extra cross-dimensional cost. Ignored when use_waystones_xp_cost_scaling=true.
+	# Default: 0
+	# Range: 0 ~ 1000
+	additional_level_cost_dimensional_travel = 0
+	#If true, players must be near any Waystone before they can start fast travel from the world map.
+	require_nearby_waystone_for_use = true
+	#How close the player must be to any Waystone to start fast travel when require_nearby_waystone_for_use=true. Measured in blocks. Default: 7
+	# Default: 7
+	# Range: 1 ~ 64
+	nearby_waystone_use_radius = 7
+	#If true, remove the 3-second teleport countdown whenever the player is currently within nearby_waystone_use_radius blocks of any Waystone.
+	disable_countdown_when_near_a_waystone = true
+	#If true, remove the 3-second teleport countdown for map teleports when the player is not currently within nearby_waystone_use_radius blocks of any Waystone.
+	disable_countdown_for_teleporting_from_anywhere = false
+	#If true, players can only fast-travel when they have open sky above them (ignores leaves, fluids, and transparent blocks like glass). Checked at the player position.
+	require_open_sky_player = true
+	#If true, destination waystones must have open sky above them (ignores leaves, fluids, and transparent blocks like glass).
+	require_open_sky_destination = false
+	#Only apply open-sky checks in these dimensions. Other dimensions are exempt. Example: minecraft:overworld, minecraft:the_end
+	open_sky_dimension_whitelist = ["minecraft:overworld", "minecraft:the_end"]
+	#If true, players can only fast-travel when their current Y level is at least min_y.
+	enable_min_y_check = false
+	#Minimum Y level required to use fast travel when enable_min_y_check=true.
+	# Default: 0
+	# Range: -1024 ~ 4096
+	min_y = 0

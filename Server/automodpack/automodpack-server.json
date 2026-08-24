@@ -5,18 +5,18 @@
   "generateModpackOnStart": true,
   "syncedFiles": [
     "/global_packs/**",
-    "!/kubejs/server_scripts/**",
     "!/mods/MinerTrack-2.1.1.1+neoforge.jar",
-    "!/mods/antixray-neoforge-1.4.8+1.21.1.jar",
     "/mods/*.jar",
     "!/mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
     "/config/scguns*",
-    "!/mods/nomending-0.9.2.jar",
     "!/mods/NumFlux-1.0.4-1.21.1-neo.jar",
-    "/config/gun_scaling/**",
-    "/config/spell_engine/**",
     "/kubejs/**",
-    "/emotes/*"
+    "/emotes/*",
+    "!/kubejs/server_scripts/**",
+    "!/mods/antixray-neoforge-1.4.8+1.21.1.jar",
+    "/config/spell_engine/**",
+    "!/mods/nomending-0.9.2.jar",
+    "/config/gun_scaling/**"
   ],
   "allowEditsInFiles": [
     "/config/**",
