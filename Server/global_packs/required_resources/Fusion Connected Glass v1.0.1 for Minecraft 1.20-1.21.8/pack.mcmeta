@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "description": "Makes glass textures connect",
+    "pack_format": 15,
+    "supported_formats": [15, 1000],
+    "min_format": 15,
+    "max_format": 1000
+  },
+  "fusion": {
+    "min_version": "1.2.11"
+  },
+  "overlays": {
+    "entries": [
+    ]
+  }
+}
