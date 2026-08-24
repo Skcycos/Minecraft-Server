@@ -11,6 +11,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			entity_vis_size: 1.0f
 			icon: {
 				id: "minecraft:campfire"
 			}
@@ -49,6 +50,7 @@
 		}
 		{
 			dependencies: ["3E9F3C6525A56C51"]
+			entity_vis_size: 1.0f
 			id: "2809791110485D6A"
 			rewards: [
 				{
@@ -76,6 +78,7 @@
 		}
 		{
 			dependencies: ["2809791110485D6A"]
+			entity_vis_size: 1.0f
 			id: "086CF68B8FE61954"
 			rewards: [
 				{
@@ -103,6 +106,7 @@
 		}
 		{
 			dependencies: ["086CF68B8FE61954"]
+			entity_vis_size: 1.0f
 			id: "5AA2B118B423DC54"
 			tasks: [{
 				id: "2E3C090FCDBF9349"
@@ -112,6 +116,7 @@
 			y: 0.0d
 		}
 		{
+			entity_vis_size: 1.0f
 			id: "34721432D5A2D820"
 			rewards: [
 				{
@@ -157,6 +162,7 @@
 		}
 		{
 			dependencies: ["34721432D5A2D820"]
+			entity_vis_size: 1.0f
 			id: "3F9229666202F576"
 			rewards: [
 				{
@@ -203,6 +209,7 @@
 		}
 		{
 			dependencies: ["3F9229666202F576"]
+			entity_vis_size: 1.0f
 			id: "516BC0844876A38F"
 			rewards: [
 				{
@@ -231,6 +238,7 @@
 		}
 		{
 			dependencies: ["516BC0844876A38F"]
+			entity_vis_size: 1.0f
 			id: "5C131B108BCD8098"
 			rewards: [
 				{
@@ -267,6 +275,7 @@
 		}
 		{
 			dependencies: ["5C131B108BCD8098"]
+			entity_vis_size: 1.0f
 			id: "44554028E53D9323"
 			rewards: [
 				{
@@ -302,6 +311,7 @@
 			y: -1.5d
 		}
 		{
+			entity_vis_size: 1.0f
 			id: "312260C6E3ECF292"
 			rewards: [
 				{
@@ -337,6 +347,7 @@
 			y: 0.0d
 		}
 		{
+			entity_vis_size: 1.0f
 			id: "16A579014FC0FA1C"
 			rewards: [
 				{

@@ -1,0 +1,74 @@
+{
+  "color": "#FFFFFF",
+  "fontSize": 1,
+  "fontStyle": "bold",
+  "shadow": true,
+  "outlineColor": null,
+  "prefix": "",
+  "suffix": "",
+  "icon": "",
+  "sound": null,
+  "killText": "kill!",
+  "iconPosition": "right",
+  "iconOffsetX": 0,
+  "iconOffsetY": 4,
+  "hudIconOffsetX": 0,
+  "hudIconOffsetY": 0,
+  "damageScale": {
+    "enabled": true,
+    "baseFontSize": 1.0,
+    "stepSize": 10,
+    "sizeOffsetPerStep": 1,
+    "maxSize": 2.5,
+    "holdBase": 0,
+    "holdOffsetPerStep": 5,
+    "holdMax": 20
+  },
+  "animation": {
+    "hold": 0,
+    "position": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": false, "out": true },
+        "startOffset": { "type": "xy", "x": { "base": 2, "random": [-2, 2] }, "y": { "base": 2, "random": [-2, 2] } },
+        "targetOffset": { "type": "direction", "angle": { "base": 90, "random": [-1, 1] }, "distance": { "base": 20, "random": [-2, 2] } }
+      },
+      "exit": { "type": "none" }
+    },
+    "size": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": true, "out": true },
+        "startOffset": -0.6,
+        "targetOffset": 0
+      },
+      "exit": {
+        "type": "normal",
+        "duration": 10,
+        "easing": { "in": true, "out": false },
+        "targetOffset": -1
+      }
+    },
+    "brightness": {
+      "enter": { "type": "none" },
+      "exit": { "type": "none" }
+    },
+    "opacity": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": true, "out": true },
+        "startOpacity": 0,
+        "targetOpacity": 1
+      },
+      "exit": {
+        "type": "normal",
+        "duration": 10,
+        "easing": { "in": true, "out": false },
+        "targetOpacity": 0
+      }
+    }
+  }
+}

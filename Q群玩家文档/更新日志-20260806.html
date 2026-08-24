@@ -371,8 +371,107 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-115（push 前补记远端落后提交 + 本地新上）
+     EDITION 68-119（push 前补记远端落后提交 + 本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">119</span>
+    <div>
+      <h2 class="edition-title">新增多世界管理模组</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 服务端模组部署</span>
+
+    <div class="pull">新增 World Dimension Nexus 多世界管理模组 v0.11.0。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">多世界管理</span><span class="item-value">World Dimension Nexus v0.11.0 (NeoForge 1.21.1)</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">118</span>
+    <div>
+      <h2 class="edition-title">新增弓箭手与战斗增强系列模组，关闭远距离列车姿态</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 服务端模组部署与性能调整</span>
+
+    <div class="pull">部署弓箭手、地下城武器、伤害数字与战斗态势等战斗系列模组，并关闭 Voxy 远距离列车姿态流以节省带宽。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">弓箭手</span><span class="item-value">新增 Archers v3.1.1、Ranged Weapon API v3.0.0 及配套配置，纳入 RPG 系列物品标签</span></li>
+      <li><span class="item-label">地下城武器</span><span class="item-value">新增 Arsenal v1.5.0 与 Shield API v2.2.0，含独特武器/盾牌配置</span></li>
+      <li><span class="item-label">战斗表现</span><span class="item-value">新增 Stylized Damage 伤害数字、Visceral Combat 战斗态势、Immersive Melodies 沉浸式音乐</span></li>
+      <li><span class="item-label">带宽优化</span><span class="item-value">关闭 `voxy-server.toml` 的 `distantTrainsEnabled` 远距离列车姿态流</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">117</span>
+    <div>
+      <h2 class="edition-title">Reese's Sodium Options 汉化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">为钠界面优化模组 Reese's Sodium Options 补充完整中文词条，原包自带中文仅 3 条，现补齐全部 82 条。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">词条数量</span><span class="item-value">82 条，键名与英文原文完全对齐</span></li>
+      <li><span class="item-label">部署位置</span><span class="item-value">全局必选资源包 <code>assets/reeses-sodium-options/lang/zh_cn.json</code></span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">116</span>
+    <div>
+      <h2 class="edition-title">假人模组深度汉化、扫地文案本地化与资源包还原</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化与配置维护</span>
+
+    <div class="pull">补齐 Training Dummy 假人模组汉化（含 lang 文件与游戏内硬编码文本）、竹叶清扫地提示文案本地化为「灶火狐」风格，并还原误改名的全局必选资源包。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">假人汉化</span><span class="item-value">Training Dummy 新增 3 条词条写入全局必选资源包；另解包改写 `DamageStatsHud` 与 `TrainingDummyEntity` 两处玩家可见硬编码英文为中文</span></li>
+      <li><span class="item-label">扫地文案</span><span class="item-value">竹叶清 `aotake_sweep-warning.json` 提示文案由「香草酱」改为「灶火狐」，成功/失败/倒计时场景同步替换</span></li>
+      <li><span class="item-label">资源包还原</span><span class="item-value">全局必选资源包 `食韵筑家专用材质包v1.21.1` 曾误改名 `server-onlen`，已还原并保留完整 34 组模组汉化</span></li>
+      <li><span class="item-label">模组维护</span><span class="item-value">DistantHorizons、grieflogger、reterraforged 转 `.dis` 停用，Lodestone 加中文前缀，新增 voxy/neo-voxy/Holycube 与若干运行配置</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
