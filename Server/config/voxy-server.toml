@@ -1,6 +1,6 @@
 #Master switch for streaming distant train poses to clients. Off = no distant
 #trains for anyone on this server (zero train bandwidth).
-distantTrainsEnabled = true
+distantTrainsEnabled = false
 #Uniform ceiling, in chunks, for how far the server streams train poses to any
 #client. Lower cuts bandwidth for everyone; a client asking for less still gets
 #less. Around 32 matches a default client LOD radius - streaming farther than a

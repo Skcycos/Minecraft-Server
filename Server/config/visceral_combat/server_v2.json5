@@ -1,0 +1,46 @@
+{
+	// Forward Lunge on attack
+	"moveAttack": true,
+	// Require the player to be sprinting in order to lunge on attack
+	"requireSprint": true,
+	// Lunge mode: ARCADE (move in input direction), DUELING (always lunge forward), HYBRID (forward + configurable side influence)
+	"lungeMode": "HYBRID",
+	// HYBRID mode only: how much left/right movement input is blended into the forward lunge (0 = pure forward, 1 = full sideways influence)
+	"hybridSideCoeff": 0.4000000059604645,
+	// ARCADE mode only: coefficient applied to lunge when moving more than 90 degrees away from look direction (0 = no backwards lunge, 1 = full)
+	"backwardsLungeCoeff": 0.4000000059604645,
+	// Forward Lunge speed coeff
+	"lungeSpeed": 2.4000000953674316,
+	// Forward Lunge speed cap
+	"lungeSpeedCap": 4.0,
+	// Minimum attack speed used for lunge/charge calculations (attack speeds below this are treated as this)
+	"minAttackSpeed": 0.800000011920929,
+	// Maximum attack speed used for lunge/charge calculations (attack speeds above this are treated as this)
+	"maxAttackSpeed": 4.0,
+	// Enable the lunge charge system (if false, lunges never require or consume charges and the charge HUD is hidden)
+	"chargesEnabled": true,
+	// Number of lunge charges the player has
+	"maxCharges": 4,
+	// Lunge charge recovery time, as a multiple of the weapon's attack cooldown (e.g. 8 = a spent charge takes 8 full attack cooldowns to recover; higher = slower recovery)
+	"chargeRecoveryTime": 8.0,
+	// Impulse decay coefficient
+	"impulseCoeff": 0.20000000298023224,
+	// Impulse speed coefficient
+	"maxImpulse": 1.2000000476837158,
+	// Impact recoil on attacker when hitting enemy
+	"impactRecoil": true,
+	// Enemy Directional Impact Move
+	"impactEnemy": true,
+	// Enemy directional coefficient
+	"dirCoeff": 1.0,
+	// Attack Particles
+	"particles": true,
+	// Hitstop on Self
+	"hitstopSelf": true,
+	// Hitstop on Enemies
+	"hitstopEnemies": true,
+	// Enable Holster Mode (H key)
+	"holster": false,
+	// Holster Sprint Speed Boost multiplier
+	"holsterBoost": 1.399999976158142
+}
