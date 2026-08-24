@@ -2,7 +2,7 @@
 enabled = true
 #Default currency id shown in the shop header
 #Provided by VirtualCurrencyProvider (virtual_coins) or items:<itemId>
-defaultCurrency = "virtual_coins"
+defaultCurrency = "server_menu:lc_bank_main"
 #Initial balance granted to players on their first login (virtual_coins)
 # Default: 1000
 # Range: 0 ~ 9223372036854775807

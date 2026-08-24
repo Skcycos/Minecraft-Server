@@ -347,6 +347,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["312260C6E3ECF292"]
 			entity_vis_size: 1.0f
 			id: "16A579014FC0FA1C"
 			rewards: [
