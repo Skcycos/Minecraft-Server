@@ -1,0 +1,27 @@
+{
+  "replace": true,
+  "content": {
+    "kaleidoscope_tavern_allium_garden": { "type": "item", "content": "kaleidoscope_tavern:allium_garden", "amount": { "min": 1, "max": 2 }, "unitWorth": 105, "weightMult": 0.28, "rarity": "RARE" },
+    "kaleidoscope_tavern_bloody_mary": { "type": "item", "content": "kaleidoscope_tavern:bloody_mary", "amount": { "min": 1, "max": 2 }, "unitWorth": 105, "weightMult": 0.28, "rarity": "RARE" },
+    "kaleidoscope_tavern_brass_heart": { "type": "item", "content": "kaleidoscope_tavern:brass_heart", "amount": { "min": 1, "max": 2 }, "unitWorth": 220, "weightMult": 0.18, "rarity": "RARE" },
+    "kaleidoscope_tavern_depth_charge": { "type": "item", "content": "kaleidoscope_tavern:depth_charge", "amount": { "min": 1, "max": 2 }, "unitWorth": 180, "weightMult": 0.22, "rarity": "RARE" },
+    "kaleidoscope_tavern_emerald": { "type": "item", "content": "kaleidoscope_tavern:emerald", "amount": { "min": 1, "max": 2 }, "unitWorth": 165, "weightMult": 0.22, "rarity": "RARE" },
+    "kaleidoscope_tavern_godfather": { "type": "item", "content": "kaleidoscope_tavern:godfather", "amount": { "min": 1, "max": 2 }, "unitWorth": 155, "weightMult": 0.22, "rarity": "RARE" },
+    "kaleidoscope_tavern_grasshopper": { "type": "item", "content": "kaleidoscope_tavern:grasshopper", "amount": { "min": 1, "max": 2 }, "unitWorth": 140, "weightMult": 0.28, "rarity": "RARE" },
+    "kaleidoscope_tavern_mojito": { "type": "item", "content": "kaleidoscope_tavern:mojito", "amount": { "min": 1, "max": 2 }, "unitWorth": 110, "weightMult": 0.28, "rarity": "RARE" },
+    "kaleidoscope_tavern_nether_special": { "type": "item", "content": "kaleidoscope_tavern:nether_special", "amount": { "min": 1, "max": 2 }, "unitWorth": 170, "weightMult": 0.22, "rarity": "RARE" },
+    "kaleidoscope_tavern_screwdriver": { "type": "item", "content": "kaleidoscope_tavern:screwdriver", "amount": { "min": 1, "max": 2 }, "unitWorth": 225, "weightMult": 0.18, "rarity": "RARE" },
+    "kaleidoscope_tavern_sculk_special": { "type": "item", "content": "kaleidoscope_tavern:sculk_special", "amount": { "min": 1, "max": 2 }, "unitWorth": 180, "weightMult": 0.22, "rarity": "RARE" },
+    "kaleidoscope_tavern_white_lady": { "type": "item", "content": "kaleidoscope_tavern:white_lady", "amount": { "min": 1, "max": 2 }, "unitWorth": 160, "weightMult": 0.22, "rarity": "RARE" },
+    "brewinandchewin_bloody_mary": { "type": "item", "content": "brewinandchewin:bloody_mary", "amount": { "min": 1, "max": 2 }, "unitWorth": 110, "weightMult": 0.28, "rarity": "RARE" },
+    "brewinandchewin_dread_nog": { "type": "item", "content": "brewinandchewin:dread_nog", "amount": { "min": 1, "max": 2 }, "unitWorth": 220, "weightMult": 0.18, "rarity": "RARE" },
+    "brewinandchewin_kombucha": { "type": "item", "content": "brewinandchewin:kombucha", "amount": { "min": 1, "max": 2 }, "unitWorth": 140, "weightMult": 0.25, "rarity": "RARE" },
+    "brewinandchewin_pale_jane": { "type": "item", "content": "brewinandchewin:pale_jane", "amount": { "min": 1, "max": 2 }, "unitWorth": 120, "weightMult": 0.28, "rarity": "RARE" },
+    "brewinandchewin_red_rum": { "type": "item", "content": "brewinandchewin:red_rum", "amount": { "min": 1, "max": 2 }, "unitWorth": 220, "weightMult": 0.18, "rarity": "RARE" },
+    "brewinandchewin_saccharine_rum": { "type": "item", "content": "brewinandchewin:saccharine_rum", "amount": { "min": 1, "max": 2 }, "unitWorth": 150, "weightMult": 0.22, "rarity": "RARE" },
+    "brewinandchewin_salty_folly": { "type": "item", "content": "brewinandchewin:salty_folly", "amount": { "min": 1, "max": 2 }, "unitWorth": 160, "weightMult": 0.22, "rarity": "RARE" },
+    "brewinandchewin_steel_toe_stout": { "type": "item", "content": "brewinandchewin:steel_toe_stout", "amount": { "min": 1, "max": 2 }, "unitWorth": 175, "weightMult": 0.2, "rarity": "RARE" },
+    "brewinandchewin_strongroot_ale": { "type": "item", "content": "brewinandchewin:strongroot_ale", "amount": { "min": 1, "max": 2 }, "unitWorth": 130, "weightMult": 0.25, "rarity": "RARE" },
+    "brewinandchewin_withering_dross": { "type": "item", "content": "brewinandchewin:withering_dross", "amount": { "min": 1, "max": 2 }, "unitWorth": 260, "weightMult": 0.15, "rarity": "RARE" }
+  }
+}

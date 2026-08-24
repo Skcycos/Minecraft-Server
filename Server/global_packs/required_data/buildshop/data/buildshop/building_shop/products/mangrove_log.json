@@ -4,7 +4,7 @@
   "categories": [
     "wood"
   ],
-  "currency": "virtual_coins",
+  "currency": "server_menu:lc_bank_main",
   "unitPrice": 8,
   "bulkSize": 64,
   "stock": {

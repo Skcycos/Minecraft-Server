@@ -16,7 +16,6 @@
 const DISABLED_CRAFT_ENTRIES = [
   // —— Create：自动建造、采矿、农业与高阶生产 ——
   { id: 'create:schematicannon', reason: '自动建造，替代建筑职业' },
-  { id: 'create:crushing_wheel', reason: '大规模粉碎/资源处理' },
   { id: 'create:mechanical_drill', reason: '自动采矿' },
   { id: 'create:mechanical_harvester', reason: '自动收割' },
   { id: 'create:mechanical_plough', reason: '自动耕地' },
@@ -91,7 +90,6 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'minecraft:sticky_piston', reason: '粘性活塞，飞行器与高频机器核心' },
   { id: 'minecraft:tnt', reason: '炸药，破坏建筑' },
   { id: 'minecraft:tnt_minecart', reason: 'TNT 矿车，破坏建筑' },
-  { id: 'minecraft:end_crystal', reason: '末地水晶，高爆破坏' },
   { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' },
 
   // —— 潜影盒：全部颜色禁用（放入清单以同步 tooltip，替代原先的正则删除） ——
@@ -115,11 +113,25 @@ const DISABLED_CRAFT_ENTRIES = [
 
   // —— 正则 pattern 条目（匹配删除 + tooltip 同步生效） ——
   { pattern: /caverns_and_chasms:.*_potion/, reason: '不合适' },
-  { pattern: /slashblade:.*/, reason: '内部测试' },
   { pattern: /beyonddimensions:(xp_exchange_item|net_restocker_item|net_feeder_item|net_magnet_item)/, reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:halt_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:spiked_rail', reason: '自动化内容禁用' },
   { id: 'caverns_and_chasms:slaughter_rail', reason: '自动化内容禁用' },
+  { id: 'caverns_and_chasms:bejeweled_apple', reason: '超模' },
+
+  { pattern: /selfexpression:.*/, reason: '其他获取方式' },
+
+  // —— Beyond Dimensions：维度网络自动化组件 ——
+  { id: 'beyonddimensions:net_hopper_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_pump_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_furnace_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_blast_furnace_block', reason: '自动化' },
+  { id: 'beyonddimensions:net_smoker_block', reason: '自动化' },
+  { id: 'beyonddimensions:schematicannon_pathway', reason: '自动化' },
+  { id: 'beyonddimensions:dimensional_connect_block', reason: '自动化' },
+
+  // —— Useful Magic：正则禁用整个模组的全部合成输出 ——
+  { pattern: /usefulmagic:.*/, reason: '本服禁用 Useful Magic 全部合成' },
 ]
 
 // 挂到 global，供 server / client 脚本读取

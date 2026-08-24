@@ -52,3 +52,20 @@ indexBaseValue = 1000.0
 # Default: 0.08
 # Range: 0.0 ~ 1.0
 newsImpactMax = 0.08
+#Bank bridge id registered into StockMarketApi by the economy Mod (Server Menu).
+#Empty/unknown id means the bank bridge is unavailable.
+bankBridgeId = "server_menu:lc_bank_main"
+#Maximum single bank→securities deposit amount in LC copper coins.
+#1 copper = 1 securities display unit (internal +100 cents per copper).
+# Default: 10000000
+# Range: 1 ~ 9000000000000000
+maxBankDepositCopper = 10000000
+#Maximum single securities→bank withdrawal request in internal cents
+#(display amount x 100). Rounded up to whole copper before debit.
+# Default: 1000000000
+# Range: 1 ~ 9000000000000000000
+maxBankWithdrawCents = 1000000000
+#Minimum server ticks between two bank transfers by the same player (e.g. 20 = 1 second).
+# Default: 20
+# Range: 0 ~ 1200
+bankTransferCooldownTicks = 20

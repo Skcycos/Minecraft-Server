@@ -23,6 +23,8 @@ public final class ShadowAbilityAccess {
 
     private static Function<ServerPlayer, ShadowAbilitySnapshot> provider =
             player -> ShadowAbilitySnapshot.none();
+    private static Function<ServerPlayer, Boolean> jobEligibilityProvider =
+            player -> false;
 
     private ShadowAbilityAccess() {
     }
@@ -44,6 +46,24 @@ public final class ShadowAbilityAccess {
         }
     }
 
+    /**
+     * Returns whether the player currently owns the shadow thief job.
+     *
+     * <p>The Jobs+ query is installed by the optional compat module. Until
+     * that provider is installed, or when the query fails, the result is
+     * false so the theft entry point fails closed.
+     */
+    public static boolean hasShadowThiefJob(ServerPlayer player) {
+        if (player == null) {
+            return false;
+        }
+        try {
+            return Boolean.TRUE.equals(jobEligibilityProvider.apply(player));
+        } catch (RuntimeException | LinkageError e) {
+            return false;
+        }
+    }
+
     // ---- test / wiring hooks (not part of the public API) ----
 
     /**
@@ -57,7 +77,15 @@ public final class ShadowAbilityAccess {
                 : p -> ShadowAbilitySnapshot.none();
     }
 
+    /** Installs the Jobs+ shadow-thief job eligibility provider. */
+    public static void setJobEligibilityProvider(Function<ServerPlayer, Boolean> provider) {
+        ShadowAbilityAccess.jobEligibilityProvider = provider != null
+                ? provider
+                : p -> false;
+    }
+
     public static void resetForTesting() {
         provider = p -> ShadowAbilitySnapshot.none();
+        jobEligibilityProvider = p -> false;
     }
 }

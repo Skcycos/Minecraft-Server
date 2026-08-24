@@ -1,0 +1,17 @@
+{
+  "id": "standard_bullet",
+  "item": "scguns:standard_bullet",
+  "categories": [
+    "guns"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 2,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "标准子弹",
+  "description": "通用标准弹药",
+  "enabled": true,
+  "sort": 0
+}

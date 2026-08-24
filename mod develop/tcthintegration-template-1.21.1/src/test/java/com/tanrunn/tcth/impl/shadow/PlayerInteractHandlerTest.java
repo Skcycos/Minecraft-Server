@@ -64,6 +64,7 @@ class PlayerInteractHandlerTest {
     @BeforeEach
     void setUp() {
         PlayerInteractHandler.resetForTesting();
+        ShadowAbilityAccess.setJobEligibilityProvider(p -> true);
         level = mock(ServerLevel.class);
         thief = mock(ServerPlayer.class);
         victim = mock(ServerPlayer.class);
@@ -530,8 +531,16 @@ class PlayerInteractHandlerTest {
     // ---- phase 8E: ability snapshot integration ----
 
     @Test
+    void nonShadowThiefCannotStartATheftAttempt() {
+        ShadowAbilityAccess.setJobEligibilityProvider(p -> false);
+        PlayerInteractHandler.onEntityInteract(validEvent());
+        verify(coordinator, never()).attempt(any());
+    }
+
+    @Test
     void abilitySnapshotIsQueriedExactlyOncePerAttemptAndFlowsIntoTheContext() {
         ShadowAbilityAccess.resetForTesting();
+        ShadowAbilityAccess.setJobEligibilityProvider(p -> true);
         try {
             ShadowAbilitySnapshot snapshot = new ShadowAbilitySnapshot(ShadowAbilityTier.III,
                     ShadowAbilityTier.I, ShadowAbilityTier.II, ShadowAbilityTier.NONE);
@@ -584,6 +593,7 @@ class PlayerInteractHandlerTest {
             return true;
         }).when(thief).addEffect(any(net.minecraft.world.effect.MobEffectInstance.class));
         ShadowAbilityAccess.resetForTesting();
+        ShadowAbilityAccess.setJobEligibilityProvider(p -> true);
         try {
             // Base (NONE): exposure duration 100 ticks.
             ShadowAbilityAccess.setProvider(p -> ShadowAbilitySnapshot.none());

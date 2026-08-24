@@ -1,0 +1,17 @@
+{
+  "id": "soul_lantern",
+  "item": "minecraft:soul_lantern",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "灵魂灯笼",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 34
+}

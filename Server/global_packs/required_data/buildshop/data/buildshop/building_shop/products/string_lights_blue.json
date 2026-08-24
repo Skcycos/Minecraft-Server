@@ -1,0 +1,17 @@
+{
+  "id": "string_lights_blue",
+  "item": "kaleidoscope_tavern:string_lights_blue",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "蓝色串灯",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 30
+}

@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "linkedProfessions": [],
+  "objectives": ["brewer_t2_objs", "brewer_t3_objs"],
+  "rewards": ["_all_rews", "brewer_gold_currency_rews"],
+  "canSpawn": true,
+  "canReveal": true,
+  "canWanderBuy": true
+}

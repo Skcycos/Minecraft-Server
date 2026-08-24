@@ -79,6 +79,24 @@ public final class ShadowAbilityModule extends ShadowPowerupAccess {
      *  attempt. */
     public static void install() {
         com.tanrunn.tcth.impl.shadow.ShadowAbilityAccess.setProvider(INSTANCE::snapshotFor);
+        com.tanrunn.tcth.impl.shadow.ShadowAbilityAccess.setJobEligibilityProvider(INSTANCE::hasShadowThiefJob);
+    }
+
+    /** Returns whether the player currently owns the shadow thief job. */
+    public boolean hasShadowThiefJob(ServerPlayer player) {
+        if (player == null) {
+            return false;
+        }
+        try {
+            if (!(player instanceof JobsServerPlayer jobsServerPlayer)) {
+                return false;
+            }
+            return jobsServerPlayer.jobsplus$getJob(JobInstance.of(SHADOW_THIEF_JOB)) != null;
+        } catch (RuntimeException | LinkageError e) {
+            warnThrottled(LAST_QUERY_WARN_NANOS,
+                    "[TCTH] Shadow thief job query failed: " + e);
+            return false;
+        }
     }
 
     @Override

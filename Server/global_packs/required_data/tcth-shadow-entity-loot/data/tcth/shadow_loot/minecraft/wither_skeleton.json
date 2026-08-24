@@ -1,0 +1,8 @@
+{
+  "pools": [
+    { "weight": 100, "entries": [
+      { "id": "minecraft:bone", "weight": 70, "min_count": 1, "max_count": 1 },
+      { "id": "minecraft:coal", "weight": 30, "min_count": 1, "max_count": 1 }
+    ] }
+  ]
+}

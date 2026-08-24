@@ -199,15 +199,6 @@
       }
     },
     {
-      "id": "item:farmersdelight/cooked_chicken_cuts",
-      "type": "entry",
-      "unlock": {
-        "prerequisites": [
-          "tcth:chef_cookbook_gate"
-        ]
-      }
-    },
-    {
       "id": "item:farmersdelight/cooked_cod_slice",
       "type": "entry",
       "unlock": {

@@ -23,6 +23,7 @@ import com.tanrunn.tcth.api.brewing.BeveragePreparedEvent;
 import com.tanrunn.tcth.api.brewing.BeverageTier;
 import com.tanrunn.tcth.impl.brewing.BeverageTierManager;
 import com.tanrunn.tcth.impl.compat.brewinandchewin.KegPouringAdapter;
+import com.tanrunn.tcth.impl.compat.kaleidoscopetavern.KaleidoscopeBrewingAdapter;
 import com.tanrunn.tcth.impl.event.BrewerIntegrationDispatcher;
 import com.tanrunn.tcth.test.MinecraftTestBootstrap;
 
@@ -207,6 +208,42 @@ class BrewerIntegrationTest {
     void kegAdapterRejectsEmptyStack() {
         boolean ok = KegPouringAdapter.onPouringDelivered(player, ItemStack.EMPTY, level, null);
         assertFalse(ok);
+        assertNull(captured.get());
+    }
+
+    @Test
+    void kaleidoscopeShakerAdapterPublishesRuntimeBeverage() {
+        BeverageTierManager.setTierMapForTesting(Map.of(
+                ResourceLocation.parse("minecraft:potion"), BeverageTier.T2));
+        boolean ok = KaleidoscopeBrewingAdapter.onShakerPrepared(
+                player, new ItemStack(Items.POTION), level, null);
+        assertTrue(ok);
+        assertEquals(BeverageDevice.SHAKER, captured.get().getDevice());
+        assertEquals(BeverageTier.T2, captured.get().getTier());
+        assertNull(captured.get().getRecipeId());
+    }
+
+    @Test
+    void kaleidoscopeBarrelAdapterPublishesRecipeId() {
+        ResourceLocation beverage = ResourceLocation.parse("minecraft:potion");
+        ResourceLocation recipe = ResourceLocation.parse("kaleidoscope_tavern:barrel/wine");
+        BeverageTierManager.setTierMapForTesting(Map.of(beverage, BeverageTier.T2));
+        boolean ok = KaleidoscopeBrewingAdapter.onBarrelReady(
+                player, new ItemStack(Items.POTION), level, new BlockPos(7, 8, 9), recipe);
+        assertTrue(ok);
+        assertEquals(BeverageDevice.BARREL, captured.get().getDevice());
+        assertEquals(BeverageTier.T2, captured.get().getTier());
+        assertEquals(recipe, captured.get().getRecipeId());
+        assertEquals(new BlockPos(7, 8, 9), captured.get().getPosition());
+    }
+
+    @Test
+    void kaleidoscopeAdaptersRejectUnknownRuntimeTier() {
+        BeverageTierManager.setTierMapForTesting(Map.of());
+        assertFalse(KaleidoscopeBrewingAdapter.onShakerPrepared(
+                player, new ItemStack(Items.POTION), level, null));
+        assertFalse(KaleidoscopeBrewingAdapter.onBarrelReady(
+                player, new ItemStack(Items.POTION), level, null, null));
         assertNull(captured.get());
     }
 

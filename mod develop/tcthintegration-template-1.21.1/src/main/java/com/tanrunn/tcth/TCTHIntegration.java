@@ -13,6 +13,7 @@ import com.tanrunn.tcth.impl.event.DishCookedEventDispatcher;
 import com.tanrunn.tcth.impl.event.GunKillEventDispatcher;
 import com.tanrunn.tcth.impl.shadow.PlayerInteractHandler;
 import com.tanrunn.tcth.impl.shadow.ShadowCooldownTracker;
+import com.tanrunn.tcth.impl.shadow.ShadowCooldownPayload;
 import com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTracker;
 import com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcher;
 import com.tanrunn.tcth.impl.signature.CookingSignatureComponents;
@@ -41,6 +42,7 @@ public class TCTHIntegration {
     public TCTHIntegration(IEventBus modEventBus, ModContainer modContainer) {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us.
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modEventBus.addListener(ShadowCooldownPayload::register);
 
         // Register the tcth:cooking_signature data component (persistent +
         // network synchronized).

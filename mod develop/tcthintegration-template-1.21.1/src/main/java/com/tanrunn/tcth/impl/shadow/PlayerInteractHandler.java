@@ -100,6 +100,9 @@ public final class PlayerInteractHandler {
         if (thief instanceof FakePlayer) {
             return;
         }
+        if (!ShadowAbilityAccess.hasShadowThiefJob(thief)) {
+            return;
+        }
         if (event.getHand() != InteractionHand.MAIN_HAND) {
             return;
         }
@@ -163,6 +166,7 @@ public final class PlayerInteractHandler {
                     result.failureReason() != null ? result.failureReason() : "-");
         }
         consume(event, context, result);
+        ShadowCooldownPayload.sendTo(thief);
     }
 
     /** The 8D.1 entity-target loot path: gate combination does NOT read
@@ -188,6 +192,7 @@ public final class PlayerInteractHandler {
                     result.failureReason() != null ? result.failureReason() : "-");
         }
         consumeEntity(event, context, result);
+        ShadowCooldownPayload.sendTo(thief);
     }
 
     /** Consumes an entity-path result: cancel for every attempt-stage outcome,

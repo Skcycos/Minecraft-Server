@@ -1,0 +1,17 @@
+{
+  "id": "lantern",
+  "item": "minecraft:lantern",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "灯笼",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 35
+}

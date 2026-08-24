@@ -371,8 +371,1039 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-73（本地上新：自研商业系列 + 禁用合成增强 + NeoForge 248）
+     EDITION 68-109（push 前补记远端落后提交 + 本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">111</span>
+    <div>
+      <h2 class="edition-title">Fast Travel Waypoints 与 Fusion 连接纹理部署</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 客户端与服务端部署</span>
+
+    <div class="pull">新增地图快速传送模组与 Fusion 连接纹理支持，并关闭近战武器的 Spell Engine 自动法术分配。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">Fast Travel Waypoints</span><span class="item-value">v1.4.0 部署至服务端 mods，Waystones 与 Xaero 地图依赖已满足</span></li>
+      <li><span class="item-label">Fusion</span><span class="item-value">v1.3.14a 部署至 AutoModpack 客户端，连接玻璃材质包加入全局必选资源包</span></li>
+      <li><span class="item-label">Spell Engine</span><span class="item-value">关闭近战武器自动法术分配，并同步 spell_engine 配置目录</span></li>
+      <li><span class="item-label">Redcap</span><span class="item-value">材质包升级至 1.21.1 资源包格式并部署至全局必选资源包</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">110</span>
+    <div>
+      <h2 class="edition-title">取消禁用末地水晶（end_crystal）合成</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>即时</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--ok">✅ 合成放行</span>
+    <div class="pull">从禁用合成清单移除末地水晶（minecraft:end_crystal），恢复其合成配方与 tooltip 同步。</div>
+    <ul class="item-list">
+      <li><span class="item-label">移除项</span><span class="item-value">minecraft:end_crystal（原原因：末地水晶，高爆破坏）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">109</span>
+    <div>
+      <h2 class="edition-title">随身挎包（Satchels）模组汉化 + 禁用时间冻结</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 01:10</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">随身挎包模组全量汉化 16 词条；同时新增脚本禁止玩家持有时间冻结效果。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">satchels 汉化</span>
+        <span class="item-value">16 条：物品/按键/配置界面/音效字幕，key 与占位符对齐</span>
+      </li>
+      <li>
+        <span class="item-label">时间冻结封禁</span>
+        <span class="item-value">block_chronos_effect.js：每刻移除玩家 runiclib:chronos 并节流提示</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">108</span>
+    <div>
+      <h2 class="edition-title">新增 /exporteffects 效果导出命令与 Buff 图标图鉴</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 00:45</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛠 运维工具</span>
+
+    <div class="pull">新增状态效果导出命令（OP），并将全服 Buff 图标提取入库，便于汉化与平衡查阅。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">/exporteffects</span>
+        <span class="item-value">导出全部模组状态效果注册表至 kubejs/exports/（id/来源模组/类别/颜色）</span>
+      </li>
+      <li>
+        <span class="item-label">图标图鉴</span>
+        <span class="item-value">docs/buff图标图鉴.html + docs/mob_effect_icons/：24 模组共 278 张 buff 图标</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">107</span>
+    <div>
+      <h2 class="edition-title">TCTH 职业经济获取调整：移除甘蔗与小鸡肉块</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 13:35</span>
+        <span class="dot">·</span>
+        <span>cf94d88</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 职业经济调整</span>
+
+    <div class="pull">农夫职业不再因收获甘蔗获得职业经验，厨师职业不再因制作熟鸡肉丁获得职业经验。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">农夫</span>
+        <span class="item-value">移除 minecraft:sugar_cane 的收获奖励，并同步源预设与服务器全局数据包</span>
+      </li>
+      <li>
+        <span class="item-label">厨师</span>
+        <span class="item-value">移除 farmersdelight:cooked_chicken_cuts 的 COMMON 分级、职业经验映射与图鉴条目</span>
+      </li>
+      <li>
+        <span class="item-label">范围</span>
+        <span class="item-value">保留物品配方与 Bountiful 悬赏配置不变；生成脚本加入持久化排除规则</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">106</span>
+    <div>
+      <h2 class="edition-title">禁用洞穴与深渊珠宝苹果合成</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-22 01:46</span>
+        <span class="dot">·</span>
+        <span>1d0c058</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warning">🚫 配方限制</span>
+
+    <div class="pull">将 caverns_and_chasms:bejeweled_apple 加入统一禁用合成清单，原因：超模。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">105</span>
+    <div>
+      <h2 class="edition-title">简易刀剑（Simply Swords）模组全面汉化（1293 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 23:59</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">简易刀剑模组全量汉化：1293 词条。以模组自带中文为底，修复 76 条英文残留与占位符缺失，补齐 294 条新版词条（怨灵之牙/乔姆波洛特尔等新武器、全部专属效果配置标签）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">专属效果</span>
+        <span class="item-value">38 把专属武器顶名 + 全部子标签中文化（灵魂窃取者/雷神之锤/霜降等）</span>
+      </li>
+      <li>
+        <span class="item-label">质量修复</span>
+        <span class="item-value">14 条丢失 %d/%s 占位符的提示重译，62 条英文配置描述翻译</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">104</span>
+    <div>
+      <h2 class="edition-title">过山车（Simulated Coasters）与更多简易武器（Simply More）模组汉化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 23:30</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">汉化过山车模组（112 词条）与更多简易武器模组（1091 词条），均写入必选资源包。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">过山车</span>
+        <span class="item-value">112 条：轨道/车厢/锚点/铆钉/气球、放置提示与曲线编辑状态、教学文本全译</span>
+      </li>
+      <li>
+        <span class="item-label">更多简易武器</span>
+        <span class="item-value">1091 条：583 物品（材质×武器组合 + 40 专属武器）、29 状态效果、327 专属效果、105 武器属性、进度与配置全译</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">103</span>
+    <div>
+      <h2 class="edition-title">暂时禁用可扩展光照 ScalableLux 模组</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 22:40</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔧 模组调整</span>
+
+    <div class="pull">将可扩展光照模组 ScalableLux 重命名为 .disabled 后缀，暂时停用（NeoForge 不加载非 .jar 文件）。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">102</span>
+    <div>
+      <h2 class="edition-title">前置库 fzzy_config 由客户端移回服务端</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 22:20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 模组调整</span>
+
+    <div class="pull">前置库 fzzy_config 由 Automodpack 客户端同步移回服务端 mods（去掉「客户端」前缀），资源包中的 fzzy_config 语言文件保留。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">101</span>
+    <div>
+      <h2 class="edition-title">第五人格（Compound V）模组全面汉化（300 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 22:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">第五人格模组 Compound V 全量汉化：300 词条覆盖物品/方块/实体/容器/效果/界面/提示/消息/按键。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">效果名</span>
+        <span class="item-value">73 条能力效果独立命名（极速者/激光眼/石化凝视等），通用名统一为「化合物V」</span>
+      </li>
+      <li>
+        <span class="item-label">流程文本</span>
+        <span class="item-value">实验台/化学反应罐/休眠舱/防化服/外骨骼等交互提示与消息全译，占位符无损</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">100</span>
+    <div>
+      <h2 class="edition-title">服务端新增过山车/物理/背包模组，客户端新增附魔描述</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 21:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 新模组</span>
+
+    <div class="pull">服务端新增 3 个模组，客户端 Automodpack 同步新增 1 个模组。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">服务端·过山车</span>
+        <span class="item-value">simulatedcoasters-0.1.5</span>
+      </li>
+      <li>
+        <span class="item-label">服务端·物理</span>
+        <span class="item-value">sable-neoforge-1.21.1-2.0.5</span>
+      </li>
+      <li>
+        <span class="item-label">服务端·背包</span>
+        <span class="item-value">1.3.5-backpacks_mod-1.21-1.21.1</span>
+      </li>
+      <li>
+        <span class="item-label">客户端·附魔描述</span>
+        <span class="item-value">enchdesc-neoforge-1.21.1-21.1.11（Automodpack 同步）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">99</span>
+    <div>
+      <h2 class="edition-title">启用魔法师 wizards 模组</h2>
+      <p class="edition-meta">
+        <span>远端</span>
+        <span class="dot">·</span>
+        <span>08-21 20:19</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 新模组</span>
+
+    <div class="pull">移除 wizards 模组的 .dis 禁用后缀，正式启用魔法师（wizards）模组。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">98</span>
+    <div>
+      <h2 class="edition-title">升级法术核心 spell_engine 1.10.0 → 1.10.1</h2>
+      <p class="edition-meta">
+        <span>远端</span>
+        <span class="dot">·</span>
+        <span>08-21 20:18</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔧 模组升级</span>
+
+    <div class="pull">法术核心模组 spell_engine 由 1.10.0 升级至 1.10.1。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">91</span>
+    <div>
+      <h2 class="edition-title">服务端新增 5 个模组（龙UI库/光子/蓝图编辑器/第五人格/睡眠动画）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-21 01:20</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 新模组</span>
+
+    <div class="pull">服务端新增 5 个模组：龙UI库（ldlib2）作为光子系前置，光子 VFX 库、KilaGraph 蓝图编辑器、第五人格（Compound V）、睡眠动画（seamlesssleep）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">龙UI库</span>
+        <span class="item-value">ldlib2-neoforge-1.21.1-2.2.36.a-all（光子/KilaGraph 前置库）</span>
+      </li>
+      <li>
+        <span class="item-label">光子</span>
+        <span class="item-value">photon-neoforge-1.21.1-2.2.4-all（VFX 特效库）</span>
+      </li>
+      <li>
+        <span class="item-label">蓝图编辑器</span>
+        <span class="item-value">kilagraph-neoforge-1.21.1-21.1.0.9（节点图/蓝图编辑）</span>
+      </li>
+      <li>
+        <span class="item-label">第五人格</span>
+        <span class="item-value">compound_v_amped_up 2.2.2</span>
+      </li>
+      <li>
+        <span class="item-label">睡眠动画</span>
+        <span class="item-value">seamlesssleep-neoforge-1.21-2.5.3</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">97</span>
+    <div>
+      <h2 class="edition-title">同步 bc_particle 至客户端；服务端模组与配置批量更新</h2>
+      <p class="edition-meta">
+        <span>bd69f04</span>
+        <span class="dot">·</span>
+        <span>08-21 17:40</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔄 客户端同步</span>
+    <div class="pull">bc_particle 战斗粒子模组移至 Automodpack 客户端同步（Fabric 模组服务端无法加载），并同步更新法术核心/强度、结构池、捆绑包、第五人格前置等配置与版本。</div>
+    <ul class="item-list">
+      <li><span class="item-label">客户端同步</span><span class="item-value">bc_particle-0.0.2-1.21.1.jar 移至 host-modpack/main/mods（服务端移除）</span></li>
+      <li><span class="item-label">服务端更新</span><span class="item-value">spell_engine / spell_power / armor_model_api / Pehkui / structure_pool_api / runes / bundle-api 及 buildshop 1.0.0→1.0.1、server_menu 1.0.0→1.0.1、stockmarket 1.0.0→1.0.1</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">96</span>
+    <div>
+      <h2 class="edition-title">GriefLogger 队列频率 20→40 tick</h2>
+      <p class="edition-meta">
+        <span>be89408</span>
+        <span class="dot">·</span>
+        <span>08-21 13:43</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 性能调优</span>
+    <div class="pull">GriefLogger 数据库队列执行频率由每 20 tick 调整为每 40 tick，降低写入压力。</div>
+    <ul class="item-list">
+      <li><span class="item-label">配置</span><span class="item-value">grieflogger.toml queueFrequency 20 → 40</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">95</span>
+    <div>
+      <h2 class="edition-title">禁用 selfexpression 全模组合成（其他获取方式）</h2>
+      <p class="edition-meta">
+        <span>184a4f3</span>
+        <span class="dot">·</span>
+        <span>08-21 11:53</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🚫 合成禁用</span>
+    <div class="pull">selfexpression 装饰服装模组全量合成禁用，改为其他获取方式。</div>
+    <ul class="item-list">
+      <li><span class="item-label">规则</span><span class="item-value">正则 /selfexpression:.*/ 匹配全部物品，reason: 其他获取方式</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">94</span>
+    <div>
+      <h2 class="edition-title">禁用 selfexpression:cultist_leggings 合成</h2>
+      <p class="edition-meta">
+        <span>d63edb9</span>
+        <span class="dot">·</span>
+        <span>08-21 11:52</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🚫 合成禁用</span>
+    <div class="pull">新增禁用 selfexpression 邪教徒护腿合成。</div>
+    <ul class="item-list">
+      <li><span class="item-label">物品</span><span class="item-value">selfexpression:cultist_leggings（后续扩展为全模组正则）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">93</span>
+    <div>
+      <h2 class="edition-title">禁用 Beyond Dimensions 7 个自动化组件合成</h2>
+      <p class="edition-meta">
+        <span>40197f8</span>
+        <span class="dot">·</span>
+        <span>08-21 11:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🚫 合成禁用</span>
+    <div class="pull">Beyond Dimensions 维度网络 7 个自动化组件合成禁用，原因：自动化。</div>
+    <ul class="item-list">
+      <li><span class="item-label">物品</span><span class="item-value">net_hopper_block / net_pump_block / net_furnace_block / net_blast_furnace_block / net_smoker_block / schematicannon_pathway / dimensional_connect_block</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">92</span>
+    <div>
+      <h2 class="edition-title">第五人格（Compound V）关闭所有战利品获取渠道</h2>
+      <p class="edition-meta">
+        <span>fb0bba6</span>
+        <span class="dot">·</span>
+        <span>08-21 09:52</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">⚙️ 平衡调整</span>
+    <div class="pull">第五人格模组关闭全部 8 个战利品箱/流浪商人获取渠道，Compound V 系列仅保留其他方式获取。</div>
+    <ul class="item-list">
+      <li><span class="item-label">配置</span><span class="item-value">compound_v-common.toml 8 项 add_to_* 全部设为 false，temp_v_from_trader 关闭</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">90</span>
+    <div>
+      <h2 class="edition-title">自我表达（Selfexpression）模组全面汉化（1405 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 23:30</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🈯 模组汉化</span>
+
+    <div class="pull">自我表达模组全量汉化：1402 个物品名 + 3 个创造标签，全部 1405 词条翻译为中文（覆盖全部服装、面具、头饰等）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">物品名</span>
+        <span class="item-value">1402 条全部翻译（服装/护甲/面具/头饰）</span>
+      </li>
+      <li>
+        <span class="item-label">创造标签</span>
+        <span class="item-value">3 条（tab_selfexpression 等）</span>
+      </li>
+      <li>
+        <span class="item-label">署名说明</span>
+        <span class="item-value">525 条 "By - X"/"Skin - X" 规则化处理为"作者/皮肤：X"</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">89</span>
+    <div>
+      <h2 class="edition-title">建筑商店照明分类大幅扩充：24 种灯具上架</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 23:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏪 建筑商店</span>
+
+    <div class="pull">建筑商店照明分类扩充 24 种灯具，全部 15 金币/个无限上架（虚拟金币结算）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">串灯 17 色</span>
+        <span class="item-value">红/黑/灰/淡灰/白/无色/橙/黄/黄绿/绿/青/淡蓝/蓝/紫/品红/粉/棕（kaleidoscope_tavern）</span>
+      </li>
+      <li>
+        <span class="item-label">吊灯 2 种</span>
+        <span class="item-value">黄色吊灯、蓝色吊灯（kaleidoscope_tavern）</span>
+      </li>
+      <li>
+        <span class="item-label">灯笼 5 种</span>
+        <span class="item-value">铜锈灯笼、灵魂灯笼、灯笼、海晶灯、南瓜灯</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">88</span>
+    <div>
+      <h2 class="edition-title">建筑商店新增厨具分类：盐上架</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 22:30</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏪 建筑商店</span>
+
+    <div class="pull">建筑商店新增厨具分类（图标：handcrafted:white_bowl），烘焙坊的盐上架，无限库存。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">盐</span>
+        <span class="item-value">3 金币/个（bakeries:salt，无限库存）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">87</span>
+    <div>
+      <h2 class="edition-title">建筑商店新增枪械分类：6 种弹药上架</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 22:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏪 建筑商店</span>
+
+    <div class="pull">建筑商店新增枪械分类，6 种 ScorchedGuns 弹药上架（无限库存，虚拟金币结算）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">标准子弹</span>
+        <span class="item-value">2 金币/个</span>
+      </li>
+      <li>
+        <span class="item-label">标准铜元</span>
+        <span class="item-value">2 金币/个</span>
+      </li>
+      <li>
+        <span class="item-label">粉末和球</span>
+        <span class="item-value">3 金币/个</span>
+      </li>
+      <li>
+        <span class="item-label">紧凑铜元</span>
+        <span class="item-value">3 金币/个</span>
+      </li>
+      <li>
+        <span class="item-label">霰弹 / 霰弹外壳</span>
+        <span class="item-value">4 金币/个</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">86</span>
+    <div>
+      <h2 class="edition-title">Xaero 小地图与世界地图全面汉化（963 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 21:30</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌐 模组汉化</span>
+
+    <div class="pull">为 Xaero 小地图与 Xaero 世界地图新增完整中文汉化：小地图在官方中文基础上补齐 128 条新版词条，世界地图 317 条全量翻译。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">小地图</span>
+        <span class="item-value">646 词条（官方 518 + 补译 128 新词条：追踪玩家/信息显示管理器/洞穴模式/路径点过滤器等）</span>
+      </li>
+      <li>
+        <span class="item-label">世界地图</span>
+        <span class="item-value">317 词条全量翻译（地图选择/圈地与队伍/PNG 导出/洞穴模式/传送命令等）</span>
+      </li>
+      <li>
+        <span class="item-label">路径</span>
+        <span class="item-value">资源包 assets/xaerominimap 与 assets/xaeroworldmap 的 lang/zh_cn.json，key 与 en_us 完全对齐，JSON 已校验</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">85</span>
+    <div>
+      <h2 class="edition-title">末地彼岸模组全面汉化（206 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-20 21:00</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌐 模组汉化</span>
+
+    <div class="pull">为末地改造模组 the_beyond（末地彼岸）新增完整中文汉化，覆盖进度、方块、物品、实体、生物群系、状态效果与全部音效字幕共 206 词条。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">内容</span>
+        <span class="item-value">206 词条：进度 30 / 方块 42 / 物品 37 / 实体 11 / 生物群系 5 / 效果 4 / 字幕 75</span>
+      </li>
+      <li>
+        <span class="item-label">关键译名</span>
+        <span class="item-value">深渊游牧者、恩德拉科、忆念系列、灯灵、活焰/惨白焰、冻凝虚空、探路者之靴、喘息图腾、瓷石、记忆岩等</span>
+      </li>
+      <li>
+        <span class="item-label">路径</span>
+        <span class="item-value">资源包 assets/the_beyond/lang/zh_cn.json，key 与 en_us 完全对齐，JSON 已校验</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">84</span>
+    <div>
+      <h2 class="edition-title">新增客户端背包粒子模组</h2>
+      <p class="edition-meta">
+        <span>ecd83ae</span>
+        <span class="dot">·</span>
+        <span>08-20 18:28</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🎨 客户端增强</span>
+
+    <div class="pull">新增客户端背包粒子模组 InventoryParticles（含 MossyLib 前置库），背包内物品可展示粒子效果。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">InventoryParticles + MossyLib 前置，仅客户端生效</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">83</span>
+    <div>
+      <h2 class="edition-title">新增蜘蛛变体模组</h2>
+      <p class="edition-meta">
+        <span>f65fd5b</span>
+        <span class="dot">·</span>
+        <span>08-20 18:27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🕷️ 生物扩展</span>
+
+    <div class="pull">新增蜘蛛变体模组，丰富蜘蛛类生物形态。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">蜘蛛变体（Spider Variants）</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">82</span>
+    <div>
+      <h2 class="edition-title">解禁 Create 粉碎轮合成</h2>
+      <p class="edition-meta">
+        <span>4bc77d7</span>
+        <span class="dot">·</span>
+        <span>08-20 18:22</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配方调整</span>
+
+    <div class="pull">解禁 Create 机械动力粉碎轮（Crushing Wheel）的合成配方。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">配方</span>
+        <span class="item-value">Create 粉碎轮合成重新开放</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">81</span>
+    <div>
+      <h2 class="edition-title">启动脚本改为停服后 5 秒自动重启</h2>
+      <p class="edition-meta">
+        <span>e18ac6c</span>
+        <span class="dot">·</span>
+        <span>08-20 18:19</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔧 运维</span>
+
+    <div class="pull">启动脚本改为停服后 5 秒自动重启，保证服务器崩溃/停服后自动拉起。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">脚本</span>
+        <span class="item-value">run.sh/run.bat 停服后 5 秒自动重启循环</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">80</span>
+    <div>
+      <h2 class="edition-title">新增实用魔法和粒子前置模组（内部测试，无法合成）</h2>
+      <p class="edition-meta">
+        <span>9cd46ea</span>
+        <span class="dot">·</span>
+        <span>08-20 18:17</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🧪 内部测试</span>
+
+    <div class="pull">新增实用魔法与粒子类模组及其前置，当前为内部测试，合成均不可用。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">状态</span>
+        <span class="item-value">内部测试，配方已禁用</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">79</span>
+    <div>
+      <h2 class="edition-title">新增战利品开箱动画和末地改造模组</h2>
+      <p class="edition-meta">
+        <span>bca8f32</span>
+        <span class="dot">·</span>
+        <span>08-20 17:51</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🎨 表现增强</span>
+
+    <div class="pull">新增战利品开箱动画模组与末地（End）改造模组，丰富开箱体验与末地玩法。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">战利品开箱动画 + 末地改造</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">78</span>
+    <div>
+      <h2 class="edition-title">更新股市模组 - 修复死亡重置股市数据问题</h2>
+      <p class="edition-meta">
+        <span>e8e1b88</span>
+        <span class="dot">·</span>
+        <span>08-20 15:17</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--pass">🐛 修复</span>
+
+    <div class="pull">更新股市风云（stockmarket）模组，修复玩家死亡导致股市数据重置的问题。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">修复</span>
+        <span class="item-value">玩家死亡不再重置股市数据</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">77</span>
+    <div>
+      <h2 class="edition-title">server.properties 与 c2me.toml 改为本地不跟踪</h2>
+      <p class="edition-meta">
+        <span>6dd4a8d</span>
+        <span class="dot">·</span>
+        <span>08-20 14:09</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🧹 仓库整理</span>
+
+    <div class="pull">server.properties 与 c2me.toml 改为 git 本地不跟踪，避免运行时配置差异反复污染工作区。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">调整</span>
+        <span class="item-value">两个运行时配置文件移出 git 跟踪范围</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">76</span>
+    <div>
+      <h2 class="edition-title">食物模组正式入池 6E 系列 + 影窃者 8E 工作区</h2>
+      <p class="edition-meta">
+        <span>f26d2f2</span>
+        <span class="dot">·</span>
+        <span>08-20 13:47</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏅 悬赏体系</span>
+
+    <div class="pull">新增食物模组正式入池 6E 系列悬赏，并新增影窃者 8E 工作区（新增食品模组悬赏原材料价格缺口/锚点人工定价等表格）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">悬赏</span>
+        <span class="item-value">食物模组正式入池 6E 系列 + 影窃者 8E 工作区</span>
+      </li>
+      <li>
+        <span class="item-label">配套表格</span>
+        <span class="item-value">新增食品模组悬赏原材料价格缺口表/锚点人工定价表/套利风险评估表等</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">75</span>
+    <div>
+      <h2 class="edition-title">新增客户端资源管理模组 Resourcify</h2>
+      <p class="edition-meta">
+        <span>9665a68</span>
+        <span class="dot">·</span>
+        <span>08-20 10:12</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🎨 客户端增强</span>
+
+    <div class="pull">新增 Resourcify 模组，支持在游戏内浏览和安装资源包。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">功能</span>
+        <span class="item-value">游戏内浏览与安装资源包</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">74</span>
+    <div>
+      <h2 class="edition-title">新增 Xaero 小地图和世界地图</h2>
+      <p class="edition-meta">
+        <span>cd41859</span>
+        <span class="dot">·</span>
+        <span>08-20 09:50</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🗺️ 客户端增强</span>
+
+    <div class="pull">新增 Xaero 小地图与 Xaero 世界地图模组，提升探索体验。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">模组</span>
+        <span class="item-value">Xaero 小地图 + Xaero 世界地图</span>
+      </li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
@@ -380,9 +1411,9 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">建筑商店正式开业：木材/彩虹/照明三分类，内置示例关闭</h2>
       <p class="edition-meta">
-        <span>待提交</span>
+        <span>09e2b16</span>
         <span class="dot">·</span>
-        <span>08-20</span>
+        <span>08-20 02:11</span>
       </p>
     </div>
   </div>

@@ -1,0 +1,17 @@
+{
+  "id": "string_lights_brown",
+  "item": "kaleidoscope_tavern:string_lights_brown",
+  "categories": [
+    "lighting"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "棕色串灯",
+  "description": "照明装饰",
+  "enabled": true,
+  "sort": 30
+}

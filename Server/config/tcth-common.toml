@@ -213,16 +213,16 @@ farmerLivestockCooldownTicks = 400
 #locked behind shadowRealAssetTransfersEnabled (default
 #off); the audit log is a plain SavedData, not an fsync
 #WAL — live enablement needs operator confirmation.
-shadowThiefIntegrationEnabled = false
+shadowThiefIntegrationEnabled = true
 #Allow shadow theft attempts against player targets.
 #Default off. When false, player-target attempts are
 #rejected at context validation. Real transfers still
 #require shadowRealAssetTransfersEnabled.
-shadowPlayerTheftEnabled = false
+shadowPlayerTheftEnabled = true
 #Allow shadow theft attempts against entity targets.
 #Default off. When false, entity-target attempts are
 #rejected at context validation.
-shadowEntityTheftEnabled = false
+shadowEntityTheftEnabled = true
 #Write shadow theft attempts to tcth_shadow_audit.dat.
 #Default true. SUCCESS is only posted after a successful
 #audit write; disabling audit therefore blocks SUCCESS
@@ -234,7 +234,7 @@ shadowAuditEnabled = true
 #explicitly enabled by an operator. Fail-closed on config
 #read errors. Live-server enablement needs operator
 #confirmation (the audit log is not an fsync WAL).
-shadowRealAssetTransfersEnabled = false
+shadowRealAssetTransfersEnabled = true
 #Base success chance of a shadow theft attempt (default 0.35).
 #Final balance is decided in a later phase; the value is
 #clamped into [shadowMinSuccessChance, shadowMaxSuccessChance].
@@ -299,3 +299,41 @@ shadowAlertTicks = 100
 # Default: 72000
 # Range: 0 ~ 1728000
 shadowNewPlayerProtectionTicks = 72000
+#Master switch for shadow thief job-experience rewards.
+#Default off. Even with the framework switches on, no
+#tcth:on_shadow_theft_success Arc action is sent and no
+#tcth:shadow_thief job experience is granted until an
+#operator explicitly enables this. Fail-closed on config
+#read errors.
+shadowRewardsEnabled = true
+#Master switch of the tcth:shadow_thief ability tree.
+#Default true. Every route also needs its own switch and
+#the framework switches. A config read failure fails
+#closed (abilities = NONE).
+shadowAbilitiesEnabled = true
+#Sleight-of-hand route: success chance +5%/+10%/+15%,
+#global cooldown 200→180/160/140 ticks, high-value
+#penalty -10%/-5%/0. Default true. Fail-closed on
+#config read errors.
+shadowSleightAbilitiesEnabled = true
+#Life-siphon route (player targets only): health 1/2/4,
+#hunger 2/3/4. Default true. Fail-closed on config read
+#errors.
+shadowLifeSiphonAbilitiesEnabled = true
+#Spell-theft route (player targets only): up to 10/20/30
+#seconds of a beneficial effect. Default true. Fail-closed
+#on config read errors.
+shadowSpellTheftAbilitiesEnabled = true
+#Shadow-escape route: on success Speed I 4s / Speed I 6s +
+#Invisibility 2s / Speed II 8s + Invisibility 4s; failed-
+#roll exposure duration ×0.8/×0.6/×0.4. Default true.
+#Fail-closed on config read errors.
+shadowEscapeAbilitiesEnabled = true
+#Per-pair daily cap on successful shadow thefts that
+#grant job experience (default 3). Player targets only,
+#keyed by thief + target UUID + UTC date; entity targets
+#stay bounded by the LOOTED once-state.
+#Range: 1 ~ 10000.
+# Default: 3
+# Range: 1 ~ 10000
+shadowMaxExperienceRewardsPerPairPerDay = 3
