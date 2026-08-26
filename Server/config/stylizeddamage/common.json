@@ -165,7 +165,7 @@
   },
   "maxDisplayDistance": 64.0,
   "totalDamage": {
-    "enabled": true,
+    "enabled": false,
     "resetTimeout": 100,
     "maxTrailCount": 20,
     "baseFontSize": 2.0,

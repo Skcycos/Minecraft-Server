@@ -371,8 +371,33 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-126（pull 后补记远端 main 新提交）
+     EDITION 68-127（push 前补记本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">127</span>
+    <div>
+      <h2 class="edition-title">Stylized Damage 配置调整并同步至客户端</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置调整与客户端同步</span>
+
+    <div class="pull">关闭伤害数字总伤害显示、击杀文本本地化为中文，并将 stylizeddamage 配置纳入 AutoModpack 客户端同步。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">总伤害显示</span><span class="item-value">关闭 `totalDamage.enabled`</span></li>
+      <li><span class="item-label">击杀文本</span><span class="item-value">`styles/kill.json` 的 `killText` 改为「🗡击杀!」</span></li>
+      <li><span class="item-label">客户端同步</span><span class="item-value">AutoModpack `syncedFiles` 加入 `/config/stylizeddamage/**`</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">

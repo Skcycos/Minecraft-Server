@@ -1,7 +1,7 @@
 {
   "color": "#FFFF00",
   "fontSize": 3,
-  "killText": "🗡kill!",
+  "killText": "🗡击杀!",
   "bypassDisplayOpacity": true,
   "animation": {
     "hold": 5,
