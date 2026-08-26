@@ -19,7 +19,10 @@ neoforge-*.jar
 neoforge-*.jar.log
 
 # World and player runtime data
-Server/world/
+Server/world/**
+!Server/world/serverconfig/
+!Server/world/serverconfig/DirectAuth-config.json
+!Server/world/serverconfig/DirectAuth-lang-zh.json
 Server/usercache.json
 Server/whitelist.json
 Server/ops.json
