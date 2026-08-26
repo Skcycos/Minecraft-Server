@@ -6,7 +6,6 @@
   "syncedFiles": [
     "/global_packs/**",
     "!/mods/MinerTrack-2.1.1.1+neoforge.jar",
-    "!/mods/vss-0.2.10-neoforge-1.21.1.jar",
     "/mods/*.jar",
     "!/mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
     "/config/scguns*",
