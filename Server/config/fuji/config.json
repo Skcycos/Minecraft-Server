@@ -47,7 +47,7 @@
       "enable": true
     },
     "chat": {
-      "enable": false,
+      "enable": true,
       "style": {
         "enable": true
       },
@@ -494,5 +494,5 @@
       "enable": false
     }
   },
-  "MOD_VERSION": "1.0.0"
+  "MOD_VERSION": "14.11.1-neoforge"
 }
