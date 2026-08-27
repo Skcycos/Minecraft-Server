@@ -371,8 +371,34 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-139（push 前补记本地新上）
+     EDITION 68-140（push 前补记本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">140</span>
+    <div>
+      <h2 class="edition-title">灼热枪械升级至 1.5.2；部署轻松建造，清理假人与客户端粒子模组</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔫 模组升级与增删调整</span>
+
+    <div class="pull">自研 ScorchedGuns 分支升级 1.5.1 → 1.5.2（专用服务器 reload 崩溃修复与客户端物品扩展注册迁移）；同步增删数个模组。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">灼热枪械 1.5.2</span><span class="item-value">C2S 装弹处理不再加载仅客户端 ReloadHandler；枪械/流体扩展改用 RegisterClientExtensionsEvent 注册。保留「[灼热枪械]」前缀部署</span></li>
+      <li><span class="item-label">新增</span><span class="item-value">[轻松建造]sophisticatedbuilding-neoforge-4.0.0.jar 及 common/server 配置</span></li>
+      <li><span class="item-label">移除</span><span class="item-value">[假人]TrainingDummy-1.0.0</span></li>
+      <li><span class="item-label">客户端清理</span><span class="item-value">移除 aaa_particles 系列与 bc_particle 战斗粒子加成；[区块实体优化]bbe 转为停用（.dis）</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
