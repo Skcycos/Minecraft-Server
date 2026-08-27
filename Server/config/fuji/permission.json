@@ -1,0 +1,36 @@
+{
+  "default_level_permission": {
+    "commands": {
+      "fuji": 4,
+      "fuji.about": 4,
+      "fuji.debug": 4,
+      "fuji.gui": 4,
+      "fuji.inspect.argument-types": 4,
+      "fuji.inspect.configurations": 4,
+      "fuji.inspect.events": 4,
+      "fuji.inspect.fuji-commands": 4,
+      "fuji.inspect.jobs": 4,
+      "fuji.inspect.languages": 4,
+      "fuji.inspect.mixins": 4,
+      "fuji.inspect.modules": 4,
+      "fuji.inspect.permissions-and-metas": 4,
+      "fuji.inspect.placeholders": 4,
+      "fuji.inspect.registry": 4,
+      "fuji.inspect.server-commands": 4,
+      "fuji.reload": 4,
+      "fuji.user-guide": 4,
+      "send-actionbar.player.rest": 4,
+      "send-bossbar.player.totalMs.color.style.commandList.notifyMeOnComplete.stepType.title": 4,
+      "send-broadcast.rest": 4,
+      "send-chat.player.message": 4,
+      "send-console.message": 4,
+      "send-custom.as-book.player.customTextName.openBook.giveBook.title.author": 4,
+      "send-custom.as-message.player.name": 4,
+      "send-dialog.player.rows.yesButtonSlotIndex.yesButtonItem.yesButtonName.yesButtonCommand.noButtonSlotIndex.noButtonItem.noButtonName.noButtonCommand.canCloseUsingNoButton.title": 4,
+      "send-message.player.rest": 4,
+      "send-title.player.mainTitle.subTitle.fadeInTicks.stayTicks.fadeOutTicks": 4,
+      "send-toast.player.toastType.icon.message": 4
+    }
+  },
+  "MOD_VERSION": "14.11.1-neoforge"
+}
