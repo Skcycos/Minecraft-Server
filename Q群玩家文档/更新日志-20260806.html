@@ -371,8 +371,234 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-127（push 前补记本地新上）
+     EDITION 68-138（push 前补记本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">138</span>
+    <div>
+      <h2 class="edition-title">灼热枪械升级至 1.5.1：修复专用服务器装弹崩溃</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔫 模组升级与 API 清理</span>
+
+    <div class="pull">自研 ScorchedGuns 分支升级 1.5.0 → 1.5.1：修复专用服务器装弹崩溃，并完成 NeoForge 1.21.1 API 清理。服务器保留「[灼热枪械]」前缀文件名与养老服数值配置。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">装弹崩溃修复</span><span class="item-value">C2S 装弹处理不再加载仅客户端的 ReloadHandler，此前会导致 RuntimeDistCleaner 在专用服务器拒绝 LocalPlayer</span></li>
+      <li><span class="item-label">客户端扩展</span><span class="item-value">枪械与流体扩展改用 RegisterClientExtensionsEvent 注册，替代已移除的 initializeClient API</span></li>
+      <li><span class="item-label">API 清理</span><span class="item-value">移除 EventBusSubscriber.bus（FML 已按事件类型路由）、JEI 分类迁出 getBackground、替换弃用的附魔/物品/客户端 API 为 1.21.1 等价实现</span></li>
+      <li><span class="item-label">部署</span><span class="item-value">Server/mods 更新为 [灼热枪械]ScorchedGuns-Neoforge-1.5.1.jar；scguns-common.toml 伤害倍率等数值不变</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">137</span>
+    <div>
+      <h2 class="edition-title">同步 AutoModpack 自动生成的包含列表</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>29f2933</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">提交 automodpack-server.json 自动生成的字段顺序变化。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">136</span>
+    <div>
+      <h2 class="edition-title">建筑商店全场定价减半</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>3e3de55</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏪 建筑商店价格调整</span>
+    <div class="pull">全部 90 个商品单价调整为原价一半并向上取整，现价区间 1～8 金币；商品结构与分类不变。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">135</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 防爆破限制放宽</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>89f3241</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔐 登录安全设置</span>
+    <div class="pull">同一 IP 上限 5→80，单账号登录尝试上限 5→20，缓解玩家集中登录被误拦。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">134</span>
+    <div>
+      <h2 class="edition-title">提交 DirectAuth 配置改动</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>eec9cd3</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置同步与模组维护</span>
+    <div class="pull">纳入 DirectAuth 运行时配置改动。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">133</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 升级至 1.2.1 并禁用 compound_v_amped_up</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>349846a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+    <div class="pull">登录模组 DirectAuth 升级至 1.2.1；禁用 compound_v_amped_up 资源包。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">132</span>
+    <div>
+      <h2 class="edition-title">同步运行时生成的配置改动</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>3382398</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 运行配置同步</span>
+    <div class="pull">提交服务器运行时自动生成的配置文件改动。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">131</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 中文语言与配置纳入版本跟踪</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>0f7731b</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置同步与模组维护</span>
+    <div class="pull">DirectAuth 中文语言文件与配置进入版本控制，便于汉化与回滚。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">130</span>
+    <div>
+      <h2 class="edition-title">移除 VSS 排除项</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>003c514</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">从 AutoModpack 排除规则中移除 vss 排除项。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">129</span>
+    <div>
+      <h2 class="edition-title">整理排除规则并新增 DirectAuth 与 FTB 任务文档</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>5efc33a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">automodpack 排除规则整理，新增 DirectAuth 与 FTB Quests 任务相关文档。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">128</span>
+    <div>
+      <h2 class="edition-title">撤销误加的 VSS 排除</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>08cd8b8</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">撤销误加的 VSS 排除项（保留 neo-voxy 排除）。</div>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
@@ -380,9 +606,11 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">Stylized Damage 配置调整并同步至客户端</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
-        <span>08-25</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>486199b</span>
       </p>
     </div>
   </div>
