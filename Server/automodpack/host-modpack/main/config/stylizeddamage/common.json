@@ -1,0 +1,211 @@
+{
+  "selectors": {
+    "common": {
+      "common": [
+        {
+          "match": "absorption",
+          "style": "absorption"
+        },
+        {
+          "match": "heal",
+          "style": "heal"
+        },
+        {
+          "match": "#minecraft:is_fire",
+          "style": "fire"
+        },
+        {
+          "match": "kill",
+          "style": "kill"
+        },
+        {
+          "match": "#minecraft:bypasses_armor",
+          "style": "magic"
+        },
+        {
+          "match": [
+            "fire_magic",
+            "irons_spellbooks:fire_magic"
+          ],
+          "style": "iss_fire"
+        },
+        {
+          "match": [
+            "ice_magic",
+            "irons_spellbooks:ice_magic"
+          ],
+          "style": "iss_ice"
+        },
+        {
+          "match": [
+            "lightning_magic",
+            "irons_spellbooks:lightning_magic"
+          ],
+          "style": "iss_lightning"
+        },
+        {
+          "match": [
+            "holy_magic",
+            "irons_spellbooks:holy_magic"
+          ],
+          "style": "iss_holy"
+        },
+        {
+          "match": [
+            "ender_magic",
+            "irons_spellbooks:ender_magic"
+          ],
+          "style": "iss_ender"
+        },
+        {
+          "match": [
+            "blood_magic",
+            "irons_spellbooks:blood_magic"
+          ],
+          "style": "iss_blood"
+        },
+        {
+          "match": [
+            "evocation_magic",
+            "irons_spellbooks:evocation_magic"
+          ],
+          "style": "iss_evocation"
+        },
+        {
+          "match": [
+            "eldritch_magic",
+            "irons_spellbooks:eldritch_magic"
+          ],
+          "style": "iss_eldritch"
+        },
+        {
+          "match": [
+            "nature_magic",
+            "irons_spellbooks:nature_magic"
+          ],
+          "style": "iss_nature"
+        },
+        {
+          "match": [
+            "blood_cauldron",
+            "irons_spellbooks:blood_cauldron"
+          ],
+          "style": "iss_cauldron"
+        },
+        {
+          "match": [
+            "heartstop",
+            "irons_spellbooks:heartstop"
+          ],
+          "style": "iss_heartstop"
+        },
+        {
+          "match": [
+            "dragon_breath_pool",
+            "irons_spellbooks:dragon_breath_pool"
+          ],
+          "style": "iss_dragon_breath"
+        },
+        {
+          "match": [
+            "fire_field",
+            "irons_spellbooks:fire_field"
+          ],
+          "style": "iss_fire_field"
+        },
+        {
+          "match": [
+            "poison_cloud",
+            "irons_spellbooks:poison_cloud"
+          ],
+          "style": "iss_poison_cloud"
+        },
+        {
+          "match": "*",
+          "style": "default"
+        }
+      ]
+    }
+  },
+  "displayFilter": {
+    "mode": "byTarget",
+    "hideSelfDamage": true,
+    "bySource": {
+      "player": {
+        "sameTeam": false,
+        "otherTeam": false
+      },
+      "mob": {
+        "hostile": false,
+        "passive": false
+      },
+      "other": false
+    },
+    "byTarget": {
+      "player": {
+        "sameTeam": true,
+        "otherTeam": true
+      },
+      "mob": {
+        "hostile": true,
+        "passive": true
+      },
+      "other": true
+    }
+  },
+  "minDamageDisplay": 0.1,
+  "maxActiveNumbers": 999,
+  "showHealing": true,
+  "showAbsorption": true,
+  "distanceScale": {
+    "segment": 10.0,
+    "factor": 0.2,
+    "min": 0.3,
+    "maxDisplayDistance": 64.0
+  },
+  "maxDisplayDistance": 64.0,
+  "totalDamage": {
+    "enabled": false,
+    "resetTimeout": 100,
+    "maxTrailCount": 20,
+    "baseFontSize": 2.0,
+    "sizeOffsetPerThousand": 0.5,
+    "sizeOffsetMax": 3.0,
+    "selectors": {
+      "common": {
+        "style": "default"
+      }
+    },
+    "positionX": -0.15,
+    "positionY": 0.15,
+    "enableEntryAnimation": true,
+    "enableExitAnimation": true,
+    "enableBounceAnimation": true,
+    "enableTrailEntryAnimation": true,
+    "enableTrailExitAnimation": true,
+    "bounceScalePeak": 1.4,
+    "labelText": "Damage"
+  },
+  "displayOpacity": {
+    "player": 1.0,
+    "mobHostile": 0.5,
+    "mobPassive": 0.75,
+    "other": 1.0
+  },
+  "killOnlyOnMobDeath": false,
+  "killOnlyFullHealth": false,
+  "hideFullHealthHeal": true,
+  "displayScope": "all",
+  "hideBehindWall": false,
+  "numberAbbreviation": {
+    "enabled": false,
+    "threshold": 1000.0,
+    "suffixes": [
+      "k",
+      "M",
+      "B",
+      "T"
+    ],
+    "decimalPlaces": 1
+  }
+}

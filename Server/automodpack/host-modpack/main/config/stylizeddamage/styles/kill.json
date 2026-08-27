@@ -1,0 +1,53 @@
+{
+  "color": "#FFFF00",
+  "fontSize": 3,
+  "killText": "🗡击杀!",
+  "bypassDisplayOpacity": true,
+  "animation": {
+    "hold": 5,
+    "position": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": false, "out": true },
+        "startOffset": { "type": "xy", "x": { "base": 2, "random": [-2, 2] }, "y": { "base": 2, "random": [-2, 2] } },
+        "targetOffset": { "type": "direction", "angle": { "base": 90, "random": [-1, 1] }, "distance": { "base": 20, "random": [-2, 2] } }
+      },
+      "exit": { "type": "none" }
+    },
+    "size": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": true, "out": true },
+        "startOffset": 1,
+        "targetOffset": 0
+      },
+      "exit": {
+        "type": "normal",
+        "duration": 20,
+        "easing": { "in": true, "out": false },
+        "targetOffset": -1
+      }
+    },
+    "brightness": {
+      "enter": { "type": "none" },
+      "exit": { "type": "none" }
+    },
+    "opacity": {
+      "enter": {
+        "type": "normal",
+        "duration": 5,
+        "easing": { "in": true, "out": true },
+        "startOpacity": 0,
+        "targetOpacity": 1
+      },
+      "exit": {
+        "type": "normal",
+        "duration": 20,
+        "easing": { "in": true, "out": false },
+        "targetOpacity": 0
+      }
+    }
+  }
+}

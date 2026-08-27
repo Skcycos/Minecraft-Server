@@ -6,7 +6,7 @@
   "maxPasswordLength": 32,
   "maxLoginAttempts": 20,
   "loginCooldownMs": 3000,
-  "loginTimeout": 60,
+  "loginTimeout": 300,
   "registrationDelay": 1,
   "maxAccountsPerIP": 80,
   "migrationMap": {
