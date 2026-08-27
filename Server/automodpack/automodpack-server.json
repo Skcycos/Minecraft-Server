@@ -18,6 +18,7 @@
     "/config/stylizeddamage/**",
     "/config/spell_engine/**",
     "!/mods/nomending-0.9.2.jar",
+    "!/mods/fuji-neoforge-14.11.1-neoforge-mc1.21.1.jar",
     "/config/gun_scaling/**"
   ],
   "allowEditsInFiles": [
