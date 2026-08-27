@@ -31,17 +31,6 @@
         {
           "location": {
             "level": "minecraft:overworld",
-            "x": 3448.1145705846357,
-            "y": 73.0,
-            "z": 4227.380354402282,
-            "yaw": -37.75467,
-            "pitch": 3.7572784
-          },
-          "saved_timestamp": 1787840969447
-        },
-        {
-          "location": {
-            "level": "minecraft:overworld",
             "x": 3323.186483045966,
             "y": 64.0,
             "z": 4380.036554944557,
@@ -60,6 +49,17 @@
             "pitch": 34.507286
           },
           "saved_timestamp": 1787841015535
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 3149.094584259143,
+            "y": 65.0,
+            "z": 4286.637179231717,
+            "yaw": 45.380188,
+            "pitch": 9.399623
+          },
+          "saved_timestamp": 1787850108940
         }
       ]
     }
