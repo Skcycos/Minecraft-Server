@@ -9,6 +9,7 @@
     "/mods/*.jar",
     "!/mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
     "/config/scguns*",
+    "!/mods/LuckPerms-NeoForge-5.4.150.jar",
     "!/mods/NumFlux-1.0.4-1.21.1-neo.jar",
     "/kubejs/**",
     "/emotes/*",

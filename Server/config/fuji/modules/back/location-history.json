@@ -1,0 +1,46 @@
+{
+  "player2history": {
+    "5ffea7c0-4715-48a2-bc6b-967b52a24f3a": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 1757.6093623400757,
+            "y": 93.0,
+            "z": 1666.7780464033438,
+            "yaw": 177.5464,
+            "pitch": 19.05007
+          },
+          "saved_timestamp": 1787838885693
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 3440.2195448646503,
+            "y": 76.0,
+            "z": 4216.729481284306,
+            "yaw": 143.69946,
+            "pitch": 12.449997
+          },
+          "saved_timestamp": 1787839703507
+        }
+      ]
+    },
+    "27a96fec-9b28-4152-b433-0dd8f085333b": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -243.68312785868358,
+            "y": 68.0,
+            "z": 276.44413295677384,
+            "yaw": 131.52768,
+            "pitch": 11.549977
+          },
+          "saved_timestamp": 1787839673478
+        }
+      ]
+    }
+  },
+  "MOD_VERSION": "14.11.1-neoforge"
+}

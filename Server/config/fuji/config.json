@@ -12,7 +12,7 @@
       ]
     },
     "language": {
-      "default_language": "en_US",
+      "default_language": "zh_CN",
       "language_value_common_prefix": "<orange>➜</orange> ",
       "validator": {
         "validate_arguments": true
@@ -36,7 +36,7 @@
       "date_formatter": "yyyy-MM-dd HH:mm:ss"
     },
     "document": {
-      "always_use_built_in_doc_strings": true
+      "always_use_built_in_doc_strings": false
     }
   },
   "modules": {
@@ -86,25 +86,25 @@
       "enable": false
     },
     "tpa": {
-      "enable": false
+      "enable": true
     },
     "back": {
-      "enable": false
+      "enable": true
     },
     "home": {
-      "enable": false
+      "enable": true
     },
     "pvp": {
       "enable": false
     },
     "afk": {
-      "enable": false,
+      "enable": true,
       "effect": {
         "enable": true
       }
     },
     "rtp": {
-      "enable": false
+      "enable": true
     },
     "works": {
       "enable": false
@@ -224,7 +224,7 @@
       }
     },
     "sit": {
-      "enable": false
+      "enable": true
     },
     "sign_editor": {
       "enable": false

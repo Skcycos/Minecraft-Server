@@ -371,8 +371,56 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-151（push 前补记本地新上）
+     EDITION 68-153（push 前补记本地新上）
      ============================================================ -->
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">153</span>
+    <div>
+      <h2 class="edition-title">部署 LuckPerms 权限管理；简易武器升级；fuji 模块开启与全面中文化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔐 权限体系与模组调整</span>
+
+    <div class="pull">引入 LuckPerms 细粒度权限管理（仅服务端）；fuji 开启玩家常用功能模块并完成全部中文翻译；simplymore 升级。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">LuckPerms</span><span class="item-value">部署 LuckPerms-NeoForge-5.4.150，并加入 AutoModpack 排除项，仅服务器本地运行</span></li>
+      <li><span class="item-label">fuji 功能开启</span><span class="item-value">tpa / back / home / rtp / sit / afk 六个玩家常用模块启用；默认语言 en_US → zh_CN</span></li>
+      <li><span class="item-label">fuji 中文化</span><span class="item-value">新增外部语言文件 config/fuji/languages/zh_CN.json（1528 词条全覆盖，新翻 1165 条，分 6 批完成，占位符零差异）；关闭内置英文文档开关使翻译生效</span></li>
+      <li><span class="item-label">simplymore</span><span class="item-value">1.2.3 → 1.3.0_alpha5；fuji 更新为 luckperms API 兼容修复版</span></li>
+      <li><span class="item-label">仓库策略</span><span class="item-value">.gitignore 新增：LuckPerms 运行时数据、fuji 缓存与语言默认文件（保留 zh_CN）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">152</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 排除同步 LuckPerms</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">新增排除项</span><span class="item-value">!/mods/LuckPerms-NeoForge-5.4.150.jar</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
