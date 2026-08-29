@@ -11,4 +11,4 @@ fullRepair = true
 #If true, items that can take Mending but have no repair material get Bottle O' Enchanting as a default.
 defaultRepairFallback = true
 #If true, items at 1 durability are protected from being broken: armor auto-unequips when it reaches 1 durability (if there's room in the inventory), and held tools/weapons cannot be used until repaired.
-protectAtOneDurability = true
+protectAtOneDurability = false
