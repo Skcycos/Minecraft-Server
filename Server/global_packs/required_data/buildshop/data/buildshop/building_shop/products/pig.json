@@ -1,0 +1,17 @@
+{
+  "id": "pig",
+  "entity": "minecraft:pig",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 12,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "猪",
+  "description": "常见的家畜",
+  "enabled": true,
+  "sort": 1
+}

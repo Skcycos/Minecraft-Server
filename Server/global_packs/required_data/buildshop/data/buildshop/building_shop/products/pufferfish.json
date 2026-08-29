@@ -1,0 +1,17 @@
+{
+  "id": "pufferfish",
+  "entity": "minecraft:pufferfish",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 22,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "河豚",
+  "description": "会鼓起身体的鱼类",
+  "enabled": true,
+  "sort": 11
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bee",
+  "entity": "minecraft:bee",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 25,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "蜜蜂",
+  "description": "能够采蜜的昆虫",
+  "enabled": true,
+  "sort": 15
+}

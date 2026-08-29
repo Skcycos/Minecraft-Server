@@ -1,0 +1,17 @@
+{
+  "id": "dolphin",
+  "entity": "minecraft:dolphin",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 49,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "海豚",
+  "description": "友善聪慧的海洋动物",
+  "enabled": true,
+  "sort": 24
+}

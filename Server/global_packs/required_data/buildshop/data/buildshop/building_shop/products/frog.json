@@ -1,0 +1,17 @@
+{
+  "id": "frog",
+  "entity": "minecraft:frog",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 22,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "青蛙",
+  "description": "会捕食小型生物的两栖动物",
+  "enabled": true,
+  "sort": 12
+}

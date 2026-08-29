@@ -5,7 +5,7 @@
     "wood"
   ],
   "currency": "server_menu:lc_bank_main",
-  "unitPrice": 4,
+  "unitPrice": 2,
   "bulkSize": 64,
   "stock": {
     "mode": "infinite"

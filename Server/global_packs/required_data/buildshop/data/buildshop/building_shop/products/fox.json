@@ -1,0 +1,17 @@
+{
+  "id": "fox",
+  "entity": "minecraft:fox",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 27,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "狐狸",
+  "description": "行动敏捷的野生动物",
+  "enabled": true,
+  "sort": 19
+}

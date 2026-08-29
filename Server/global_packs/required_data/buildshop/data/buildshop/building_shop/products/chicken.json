@@ -1,0 +1,17 @@
+{
+  "id": "chicken",
+  "entity": "minecraft:chicken",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 12,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "鸡",
+  "description": "温顺的家禽",
+  "enabled": true,
+  "sort": 0
+}

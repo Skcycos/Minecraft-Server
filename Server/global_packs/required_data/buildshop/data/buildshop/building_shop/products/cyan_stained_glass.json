@@ -5,7 +5,7 @@
     "rainbow"
   ],
   "currency": "server_menu:lc_bank_main",
-  "unitPrice": 5,
+  "unitPrice": 3,
   "bulkSize": 64,
   "stock": {
     "mode": "infinite"

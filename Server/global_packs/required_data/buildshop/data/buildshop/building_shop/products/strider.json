@@ -1,0 +1,17 @@
+{
+  "id": "strider",
+  "entity": "minecraft:strider",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 56,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "炽足兽",
+  "description": "能够在熔岩上行走的生物",
+  "enabled": true,
+  "sort": 27
+}

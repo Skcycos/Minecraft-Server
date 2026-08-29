@@ -1,0 +1,17 @@
+{
+  "id": "turtle",
+  "entity": "minecraft:turtle",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 44,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "海龟",
+  "description": "会在海滩产卵的海洋动物",
+  "enabled": true,
+  "sort": 21
+}

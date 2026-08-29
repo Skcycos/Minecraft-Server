@@ -1,0 +1,17 @@
+{
+  "id": "wolf",
+  "entity": "minecraft:wolf",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 27,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "狼",
+  "description": "可驯服的野生犬科动物",
+  "enabled": true,
+  "sort": 18
+}

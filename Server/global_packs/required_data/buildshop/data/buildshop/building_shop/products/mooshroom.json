@@ -1,0 +1,17 @@
+{
+  "id": "mooshroom",
+  "entity": "minecraft:mooshroom",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 49,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "哞菇",
+  "description": "生长在菌丝岛上的特殊牛",
+  "enabled": true,
+  "sort": 25
+}

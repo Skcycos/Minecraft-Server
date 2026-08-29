@@ -1,0 +1,17 @@
+{
+  "id": "mule",
+  "entity": "minecraft:mule",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 74,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "骡",
+  "description": "可骑乘并装备箱子的杂交坐骑",
+  "enabled": true,
+  "sort": 33
+}

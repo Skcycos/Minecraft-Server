@@ -1,0 +1,17 @@
+{
+  "id": "polar_bear",
+  "entity": "minecraft:polar_bear",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 49,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "北极熊",
+  "description": "生活在冰雪生物群系的熊",
+  "enabled": true,
+  "sort": 26
+}
