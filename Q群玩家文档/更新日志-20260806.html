@@ -371,9 +371,37 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-162（push 前补记本地新上）
+     EDITION 68-163（push 前补记本地新上）
      ============================================================ -->
 
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">163</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 放开客户端校验；加速渲染停用</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>eea6d74</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔌 客户端接入放宽</span>
+
+    <div class="pull">未安装整合包的裸客户端可直接进服；客户端加速渲染 mod 停用；新增 creaturefeature 汉化。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">整合包校验</span><span class="item-value"><code>requireAutoModpackOnClient</code> true → false，裸客户端不再被拒</span></li>
+      <li><span class="item-label">加速渲染</span><span class="item-value">[加速渲染]acceleratedrendering 1.0.14 停用（jar → .dis），可随时恢复</span></li>
+      <li><span class="item-label">creaturefeature</span><span class="item-value">新增 zh_cn.json 词条汉化，物品/选项说明全覆盖</span></li>
+      <li><span class="item-label">运行时数据</span><span class="item-value">fuji back/home 玩家数据入库</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
