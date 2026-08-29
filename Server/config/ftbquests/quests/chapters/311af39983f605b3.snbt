@@ -1,0 +1,679 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "311af39983f605b3"
+	group: ""
+	id: "311AF39983F605B3"
+	images: [ ]
+	order_index: 1
+	quest_enhance_decorative_lines: [ ]
+	quest_enhance_hidden_dependency_lines: [ ]
+	quest_links: [ ]
+	quests: [
+		{
+			entity_vis_size: 1.0f
+			id: "0F3A52C30AA7C776"
+			rewards: [{
+				id: "53B5EE1E230505F6"
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							starter_blade: 1b
+						}
+						"minecraft:enchantments": {
+							levels: {
+								"minecraft:mending": 1
+								"minecraft:unbreaking": 3
+							}
+						}
+						"minecraft:lore": ["{\"color\":\"aqua\",\"italic\":false,\"text\":\"新手赠礼\"}"]
+						"slashblade:blade_runtime_state": {
+							attackAmplifier: 0.0f
+							comboSeq: "slashblade:none"
+							fallDecreaseRate: 0.0f
+							lastActionTime: 0L
+							lastProcessedComboTick: -1L
+							onClick: 0b
+							targetEntityId: -1
+						}
+						"slashblade:blade_state": {
+							adjust: [
+								0.0d
+								0.0d
+								0.0d
+							]
+							baseAttackModifier: 4.0f
+							broken: 0b
+							carryType: "pso2"
+							comboRoot: "slashblade:standby"
+							defaultBewitched: 0b
+							effectColor: -13421569
+							effectColorInverse: 0b
+							killCount: 0
+							proudSoul: 0
+							refine: 0
+							sealed: 0b
+							slashArtsKey: "slashblade:judgement_cut"
+							specialEffects: [ ]
+							translationKey: ""
+						}
+					}
+					count: 1
+					id: "slashblade:slashblade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "357462FF3B3E61DF"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0F3A52C30AA7C776"]
+			entity_vis_size: 1.0f
+			id: "06C8FB2F8C638C23"
+			rewards: [
+				{
+					id: "2CE64BC55DB24EDC"
+					type: "xp"
+					xp: 100
+				}
+				{
+					count: 100
+					id: "547FCD55E4A2E859"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "24C3E3C8DB32355A"
+					item: {
+						count: 1
+						id: "minecraft:beef"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:blade/s_nameless"
+				criterion: ""
+				id: "2B1ACBB588516B93"
+				type: "advancement"
+			}]
+			x: 4.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["06C8FB2F8C638C23"]
+			entity_vis_size: 1.0f
+			id: "54F4F0B4F7374596"
+			rewards: [
+				{
+					id: "4FEF9BA08A2554E2"
+					type: "xp"
+					xp: 200
+				}
+				{
+					count: 50
+					id: "2368CE9F5C6D0D5D"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "6DC9DB88A42B5518"
+					item: {
+						count: 1
+						id: "minecraft:arrow"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:root"
+				criterion: ""
+				id: "57497B25C8EB6452"
+				type: "advancement"
+			}]
+			x: 7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["54F4F0B4F7374596"]
+			entity_vis_size: 1.0f
+			id: "6AAFBB0676B58836"
+			rewards: [
+				{
+					id: "1C6729D5370CF864"
+					type: "xp"
+					xp: 150
+				}
+				{
+					count: 2
+					id: "14FCC82EA0576DC0"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "23FB5415F062CC14"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6AAFBB0676B58836"]
+			entity_vis_size: 1.0f
+			id: "70F7FFCAA6D36E14"
+			rewards: [
+				{
+					id: "514C622C68FA90D1"
+					type: "xp"
+					xp: 250
+				}
+				{
+					count: 4
+					id: "742CB60CD73A5D42"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:arts/combo_a"
+				criterion: ""
+				id: "3C43F512F4CCE7E0"
+				type: "advancement"
+			}]
+			x: 12.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["70F7FFCAA6D36E14"]
+			entity_vis_size: 1.0f
+			id: "6DAD7ADCC2DB1FF2"
+			rewards: [
+				{
+					id: "47FE7DCF9E0150AD"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 100
+					id: "64D1C76F6B7097AA"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2C98D7CE5A08E488"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul_tiny"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 8L
+				id: "1687208912EE54ED"
+				item: { count: 1, id: "slashblade:proudsoul_tiny" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6DAD7ADCC2DB1FF2"]
+			entity_vis_size: 1.0f
+			id: "73B11BA517CCA724"
+			rewards: [
+				{
+					id: "375CE4450FDB83D4"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 150
+					id: "1072DE0732D489C1"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 9
+					id: "0C13E5279798F51A"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:tips/refine"
+				criterion: ""
+				id: "15F26D08574CDCF4"
+				type: "advancement"
+			}]
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["73B11BA517CCA724"]
+			entity_vis_size: 1.0f
+			id: "12D9C1DCF56F2BFD"
+			rewards: [
+				{
+					id: "1308A4802FB0379B"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 150
+					id: "081EDD82996B236A"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:tips/bladestand"
+				criterion: ""
+				id: "552F73DE250DCA80"
+				type: "advancement"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["12D9C1DCF56F2BFD"]
+			entity_vis_size: 1.0f
+			id: "2B71EFD9AFD15092"
+			rewards: [
+				{
+					id: "432805CF2520030B"
+					type: "xp"
+					xp: 400
+				}
+				{
+					count: 4
+					id: "033C486E75AA8396"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul_tiny"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:arts/judgement_cut"
+				criterion: ""
+				id: "133CCB2BB291BF8D"
+				type: "advancement"
+			}]
+			x: 7.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2B71EFD9AFD15092"]
+			entity_vis_size: 1.0f
+			id: "202644A7C353356D"
+			rewards: [
+				{
+					count: 200
+					id: "60CD0F96E5919881"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 10
+					id: "77FB57906C72DDF3"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul_tiny"
+					}
+					type: "item"
+				}
+				{
+					id: "1461375AF678211E"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:arts/shooting/summonedswords"
+				criterion: ""
+				id: "098D19D139306108"
+				type: "advancement"
+			}]
+			x: 9.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["202644A7C353356D"]
+			entity_vis_size: 1.0f
+			id: "0674428CEA000BA8"
+			rewards: [
+				{
+					id: "5EB7F63A8A48F31B"
+					type: "xp"
+					xp: 300
+				}
+				{
+					id: "6A6C6F139AB20E0C"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 3
+					id: "6CA3CB8E7B337262"
+					item: {
+						count: 1
+						id: "minecraft:enchanted_golden_apple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "slashblade:abilities/guard_just"
+				criterion: ""
+				id: "2696FE9E337DCB14"
+				type: "advancement"
+			}]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0674428CEA000BA8"]
+			entity_vis_size: 1.0f
+			id: "6EF1F919C26CE734"
+			rewards: [
+				{
+					id: "7C71BF5EDB969972"
+					type: "xp"
+					xp: 600
+				}
+				{
+					count: 300
+					id: "100BC2A41EAE3A64"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "114F8EAF98EE4A9B"
+					item: {
+						count: 1
+						id: "slashblade:proudsoul_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0DD6D045BC11D184"
+				item: { components: { "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 3.0f, broken: 0b, carryType: "pso2", comboRoot: "slashblade:standby", defaultBewitched: 0b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/blade.obj", proudSoul: 0, refine: 0, sealed: 0b, slashArtsKey: "slashblade:judgement_cut", specialEffects: [ ], texture: "slashblade:model/silverbamboo.png", translationKey: "" } }, count: 1, id: "slashblade:slashblade_silverbamboo" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6EF1F919C26CE734"]
+			entity_vis_size: 1.0f
+			id: "51CA3E6746D59D27"
+			rewards: [
+				{
+					id: "7B748E1B116B6C35"
+					type: "xp"
+					xp: 750
+				}
+				{
+					count: 400
+					id: "67223B6CDB0BB7A5"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "55170C93D1019F2F"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "02D9E0451E0C2520"
+				item: { count: 1, id: "slashblade:proudsoul_sphere" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["51CA3E6746D59D27"]
+			entity_vis_size: 1.0f
+			id: "65B86186A72997DD"
+			tasks: [{
+				id: "03F424F38758EC60"
+				item: { components: { "!minecraft:rarity": { }, "minecraft:max_damage": 70, "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 6.0f, broken: 0b, carryType: "pso2", comboRoot: "slashblade:standby", defaultBewitched: 1b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/named/sange/sange.obj", proudSoul: 0, refine: 0, sealed: 0b, slashArtsKey: "slashblade:void_slash", specialEffects: [ ], texture: "slashblade:model/named/sange/sange.png", translationKey: "item.slashblade.sange" } }, count: 1, id: "slashblade:slashblade" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["51CA3E6746D59D27"]
+			entity_vis_size: 1.0f
+			id: "0FAA4A041DE9F078"
+			tasks: [{
+				id: "6968504B981AA446"
+				item: { components: { "!minecraft:rarity": { }, "minecraft:damage": 39, "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 7.0f, broken: 1b, carryType: "default", comboRoot: "slashblade:standby", defaultBewitched: 0b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/named/yamato.obj", proudSoul: 0, refine: 0, sealed: 1b, slashArtsKey: "slashblade:judgement_cut", specialEffects: [ ], texture: "slashblade:model/named/yamato.png", translationKey: "item.slashblade.yamato" } }, count: 1, id: "slashblade:slashblade" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["51CA3E6746D59D27"]
+			entity_vis_size: 1.0f
+			icon: {
+				components: {
+					"!minecraft:rarity": { }
+					"minecraft:max_damage": 70
+					"slashblade:blade_state": {
+						adjust: [
+							0.0d
+							0.0d
+							0.0d
+						]
+						baseAttackModifier: 6.0f
+						broken: 0b
+						carryType: "pso2"
+						comboRoot: "slashblade:standby"
+						defaultBewitched: 0b
+						effectColor: -13421569
+						effectColorInverse: 0b
+						killCount: 0
+						model: "slashblade:model/named/yasha/yasha.obj"
+						proudSoul: 0
+						refine: 0
+						sealed: 0b
+						slashArtsKey: "slashblade:sakura_end"
+						specialEffects: [ ]
+						texture: "slashblade:model/named/yasha/yasha.png"
+						translationKey: "item.slashblade.yasha"
+					}
+				}
+				id: "slashblade:slashblade"
+			}
+			id: "67138B51B83CB27A"
+			tasks: [{
+				id: "7694A1CAE330D11C"
+				item: { components: { "!minecraft:rarity": { }, "minecraft:max_damage": 70, "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 6.0f, broken: 0b, carryType: "pso2", comboRoot: "slashblade:standby", defaultBewitched: 0b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/named/yasha/yasha.obj", proudSoul: 0, refine: 0, sealed: 0b, slashArtsKey: "slashblade:sakura_end", specialEffects: [ ], texture: "slashblade:model/named/yasha/yasha.png", translationKey: "item.slashblade.yasha" } }, count: 1, id: "slashblade:slashblade" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["51CA3E6746D59D27"]
+			entity_vis_size: 1.0f
+			icon: {
+				components: {
+					"!minecraft:rarity": { }
+					"minecraft:max_damage": 50
+					"slashblade:blade_state": {
+						adjust: [
+							0.0d
+							0.0d
+							0.0d
+						]
+						baseAttackModifier: 7.0f
+						broken: 0b
+						carryType: "pso2"
+						comboRoot: "slashblade:standby"
+						defaultBewitched: 0b
+						effectColor: -13421569
+						effectColorInverse: 0b
+						killCount: 0
+						model: "slashblade:model/named/muramasa/muramasa.obj"
+						proudSoul: 0
+						refine: 0
+						sealed: 0b
+						slashArtsKey: "slashblade:drive_vertical"
+						specialEffects: [ ]
+						texture: "slashblade:model/named/muramasa/muramasa.png"
+						translationKey: "item.slashblade.muramasa"
+					}
+				}
+				id: "slashblade:slashblade"
+			}
+			id: "3647358F5C5B83B0"
+			tasks: [{
+				id: "340CBD97AFE1C7DE"
+				item: { components: { "!minecraft:rarity": { }, "minecraft:max_damage": 50, "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 7.0f, broken: 0b, carryType: "pso2", comboRoot: "slashblade:standby", defaultBewitched: 0b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/named/muramasa/muramasa.obj", proudSoul: 0, refine: 0, sealed: 0b, slashArtsKey: "slashblade:drive_vertical", specialEffects: [ ], texture: "slashblade:model/named/muramasa/muramasa.png", translationKey: "item.slashblade.muramasa" } }, count: 1, id: "slashblade:slashblade" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["51CA3E6746D59D27"]
+			entity_vis_size: 1.0f
+			icon: {
+				components: {
+					"minecraft:enchantments": {
+						levels: {
+							"minecraft:fire_aspect": 2
+							"minecraft:knockback": 2
+							"minecraft:smite": 4
+						}
+					}
+					"minecraft:max_damage": 70
+					"minecraft:rarity": "epic"
+					"slashblade:blade_state": {
+						adjust: [
+							0.0d
+							0.0d
+							0.0d
+						]
+						baseAttackModifier: 5.0f
+						broken: 0b
+						carryType: "pso2"
+						comboRoot: "slashblade:standby"
+						defaultBewitched: 1b
+						effectColor: -13421569
+						effectColorInverse: 0b
+						killCount: 0
+						model: "slashblade:model/named/sange/sange.obj"
+						proudSoul: 0
+						refine: 0
+						sealed: 0b
+						slashArtsKey: "slashblade:piercing"
+						specialEffects: [ ]
+						texture: "slashblade:model/named/sange/black.png"
+						translationKey: "item.slashblade.fox_black"
+					}
+				}
+				id: "slashblade:slashblade"
+			}
+			id: "56095F98FFB09975"
+			tasks: [{
+				id: "653BDDCEC5CA735B"
+				item: { components: { "minecraft:enchantments": { levels: { "minecraft:fire_aspect": 2, "minecraft:knockback": 2, "minecraft:smite": 4 } }, "minecraft:max_damage": 70, "minecraft:rarity": "epic", "slashblade:blade_state": { adjust: [ 0.0d, 0.0d, 0.0d ], baseAttackModifier: 5.0f, broken: 0b, carryType: "pso2", comboRoot: "slashblade:standby", defaultBewitched: 1b, effectColor: -13421569, effectColorInverse: 0b, killCount: 0, model: "slashblade:model/named/sange/sange.obj", proudSoul: 0, refine: 0, sealed: 0b, slashArtsKey: "slashblade:piercing", specialEffects: [ ], texture: "slashblade:model/named/sange/black.png", translationKey: "item.slashblade.fox_black" } }, count: 1, id: "slashblade:slashblade" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"65B86186A72997DD"
+				"3647358F5C5B83B0"
+				"67138B51B83CB27A"
+				"56095F98FFB09975"
+				"0FAA4A041DE9F078"
+			]
+			entity_vis_size: 1.0f
+			id: "153FD12A0E1CBCE1"
+			rewards: [
+				{
+					id: "3ACEDE9700B81A7A"
+					type: "xp"
+					xp: 2000
+				}
+				{
+					count: 2000
+					id: "31F2D6B749C24B74"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "699619A327E3A8D0"
+				type: "checkmark"
+			}]
+			x: 7.0d
+			y: 4.5d
+		}
+	]
+}

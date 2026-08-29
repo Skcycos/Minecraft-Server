@@ -1,5 +1,11 @@
 {
+	chapter.311AF39983F605B3.title: "刀剑"
 	chapter.70EDDE3627900FA8.title: "欢迎来烟火筑家"
+	quest.0674428CEA000BA8.quest_subtitle: "&7会进攻的人很多，会停刀的人更少"
+	quest.0674428CEA000BA8.title: "&e掌握防御与格挡"
+	quest.06C8FB2F8C638C23.quest_desc: ["&d「把它拿在手里看看。现在它只是一把无铭之刃，杀敌数、耀魂和精炼都还没有写下第一笔。别急着嫌它普通，普通正是成长的起点。」&r"]
+	quest.06C8FB2F8C638C23.quest_subtitle: " &7无垢之器，等待第一个名字"
+	quest.06C8FB2F8C638C23.title: "&e无铭「无名」"
 	quest.086CF68B8FE61954.quest_desc: [
 		"&d「去皮橡木的纹理很适合做家具。先弄一块回来吧——别站在树下研究半天，树不会自己走进你的背包。」&r"
 		""
@@ -7,6 +13,23 @@
 	]
 	quest.086CF68B8FE61954.quest_subtitle: "&7木屋的第一根柴火"
 	quest.086CF68B8FE61954.title: "&e找到第一棵树"
+	quest.0F3A52C30AA7C776.quest_desc: [
+		"&d「过来，别站在灶台边发呆。这里有一把刚刚替你准备好的刀，它还没有名字，也没有辉煌的战绩，但每一位真正的剑士，都是从一把无铭之刃开始的。」&r"
+		""
+		"&f这把刀是你的新手赠礼。它拥有耐久和经验修补附魔，但真正让它成长的，是你之后留下的战斗记录。"
+	]
+	quest.0F3A52C30AA7C776.quest_subtitle: "&7每一位剑士，都应该有一把自己的刀"
+	quest.0F3A52C30AA7C776.title: "&5灶火中的刀光"
+	quest.12D9C1DCF56F2BFD.quest_desc: ["&d「冒险结束后，把刀放到刀挂台上。它会比随手丢在箱子角落里体面得多，也更配得上你以后建的那间漂亮屋子。」&r"]
+	quest.12D9C1DCF56F2BFD.quest_subtitle: "&7刀也需要一个体面的归处"
+	quest.12D9C1DCF56F2BFD.title: "&e让刀在刀挂台上休息"
+	quest.153FD12A0E1CBCE1.quest_desc: [
+		"&d「我还记得你第一次从灶火边接过它的样子。那时它只是无铭之刃，现在它已经写满了你的战斗、你的失误，还有你一次次重新站起来的样子。」&r"
+		""
+		"&f拔刀剑的故事没有结束。继续精炼、学习剑技、寻找名刀，或者把它挂在自己的屋子里，让来访的朋友看看这段旅程。"
+	]
+	quest.153FD12A0E1CBCE1.quest_subtitle: " &7从新手赠礼，到真正的佩刀"
+	quest.153FD12A0E1CBCE1.title: "&5你的刀，已经有名字了"
 	quest.16A579014FC0FA1C.quest_desc: [
 		"&d「认领一小块土地。别一下子把整片山都圈走，给后来的人留条路，也给自己的金币留点余地认领」"
 		""
@@ -27,6 +50,13 @@
 	quest.20231AB64EC4BE71.quest_desc: ["&d「泰拉、无人之地和其他地形内容，已经把远方变得很有意思。带上食物和挎包，沿着地图走一段，别只在出生点附近绕圈。」&r"]
 	quest.20231AB64EC4BE71.quest_subtitle: "&7世界比木屋门口大得多"
 	quest.20231AB64EC4BE71.title: "&e走出熟悉的街巷"
+	quest.202644A7C353356D.quest_desc: [
+		"&a消耗耀魂成功使用一次幻影剑。"
+		""
+		"&d「当耀魂积攒到足够多时，可以召唤幻影剑。它们只停留一瞬，却足够让敌人明白：你已经不只是拿着一把漂亮的刀了。」&r"
+	]
+	quest.202644A7C353356D.quest_subtitle: "&7让耀魂化作第二道锋芒"
+	quest.202644A7C353356D.title: "&e召唤幻影剑"
 	quest.260AAD18F8C8EC89.quest_desc: [
 		"&d「你已经有住所、食物、工具，也知道怎么保护自己的东西了。接下来，可以选择一条更适合自己的路：种田、做菜，或者……走一条不那么光明正大的路。」&r"
 		""
@@ -45,6 +75,13 @@
 	quest.292D1B003610EB78.quest_desc: ["&d「传送石碑是给会探索、但方向感偶尔离家出走的人准备的。放心，我不会因为你绕了三圈才找到木屋而笑你……太大声而已。」r"]
 	quest.292D1B003610EB78.quest_subtitle: " 迷路不可怕，死活找不到家才可怕"
 	quest.292D1B003610EB78.title: "&e留下一个回家的路标"
+	quest.2B71EFD9AFD15092.quest_desc: [
+		"&a完成一次剑技练习，建议从“次元斩”或基础连击开始。"
+		""
+		"&d「拔刀剑有自己的剑技。先从最容易掌握的招式开始，学会蓄力、出招和收刀。剑技很帅，但先确认前面没有自己的墙。」&r"
+	]
+	quest.2B71EFD9AFD15092.quest_subtitle: "&7真正的刀，不只会普通攻击"
+	quest.2B71EFD9AFD15092.title: "&e学习一次剑技"
 	quest.2D407AD33889A9E7.quest_desc: ["&d「看到结构里的箱子时，先看看周围有没有危险。现在战利品更公平，但它可不会替你挡住身后的怪物。」&r"]
 	quest.2D407AD33889A9E7.quest_subtitle: " &7箱子里可能有惊喜，也可能只有一双旧靴子"
 	quest.2D407AD33889A9E7.title: "&e打开一份战利品"
@@ -80,6 +117,12 @@
 	quest.516BC0844876A38F.quest_desc: ["&d「火把不只是照明，也是‘这里有人住，不要随便刷怪’的温柔提醒。多放几根，晚上回家时心情会好很多。」&r"]
 	quest.516BC0844876A38F.quest_subtitle: " &7黑暗里会有东西盯着你的箱子"
 	quest.516BC0844876A38F.title: "&e给住所点上灯"
+	quest.51CA3E6746D59D27.quest_desc: ["&d「耀魂碎片可以继续提炼。破碎的灵魂、耀魂铁锭、耀魂宝珠和耀魂结晶，每一步都代表更高的强化潜力。」&r"]
+	quest.51CA3E6746D59D27.quest_subtitle: " &7耀魂会从碎片变成更坚韧的形状"
+	quest.51CA3E6746D59D27.title: "&e锻造灵魂材料"
+	quest.54F4F0B4F7374596.quest_desc: ["&d「拔刀不是乱挥。锁定目标，找准距离，在该出手的时候让刀出鞘。很好——至少这次没有砍到自己的门。」&r"]
+	quest.54F4F0B4F7374596.quest_subtitle: "&7刀刃出鞘之前，先找好目标"
+	quest.54F4F0B4F7374596.title: "&e第一次出鞘"
 	quest.5AA2B118B423DC54.quest_desc: [
 		"&d「我当然记得每一道菜的配方，但我不打算替你把所有东西都塞进手里。打开 JEI 或物品查询，自己看一眼，之后做饭和做机器都会省事。」"
 		"&r"
@@ -110,13 +153,34 @@
 	quest.64F988C954EBE12F.quest_desc: ["&d「食物做好啦。别急着拿去卖，先自己吃一口。认真生活的人，值得吃到热乎乎的饭——这是我这只小狐狸的厨房规矩。」&r"]
 	quest.64F988C954EBE12F.quest_subtitle: "&7给忙了一圈的自己一点奖励"
 	quest.64F988C954EBE12F.title: "&e端出第一道菜"
+	quest.65B86186A72997DD.quest_desc: ["&d「阎魔刀、散华、夜叉、鄂门、村正，还有狐月刀。它们不是新手随手拿来挥两下的玩具。等你准备好，再去追寻属于自己的名刀。」&r"]
+	quest.65B86186A72997DD.quest_subtitle: " &7刀名会被记住，持刀的人也一样"
+	quest.65B86186A72997DD.title: "&e见证一把名刀"
 	quest.67D7EB63373105B1.quest_desc: ["&d「我喜欢漂亮的屋檐、整齐的街道和亮着灯的小窗户。建筑商店里有不少能帮你布置家园的材料，先打开看看，别只盯着泥土发呆。」&r"]
 	quest.67D7EB63373105B1.quest_subtitle: "&7漂亮的房子需要一点材料，也需要一点规划"
 	quest.67D7EB63373105B1.title: "&e认识建筑商店"
+	quest.6AAFBB0676B58836.quest_desc: ["&d「把准星放到刀上，看看它的说明。杀敌数是你的足迹，耀魂是刀的潜能，精炼则是一次次锤炼留下的回声。看懂它，你才算真正拿起它。」&r"]
+	quest.6AAFBB0676B58836.quest_subtitle: "&7杀敌数、耀魂、精炼：刀会记住一切"
+	quest.6AAFBB0676B58836.title: "&e读懂刀身上的记录"
+	quest.6DAD7ADCC2DB1FF2.quest_desc: ["&d「看，刀刃附近留下了紫色的灵魂之火。那是耀魂碎片，是拔刀剑继续成长的材料。收好它，别和泥土一起丢进岩浆。」&r"]
+	quest.6DAD7ADCC2DB1FF2.quest_subtitle: "&7战斗留下的，不只有掉落物"
+	quest.6DAD7ADCC2DB1FF2.title: "&e收下第一枚耀魂"
+	quest.6EF1F919C26CE734.quest_desc: ["&d「无铭『无名』会陪你走一段路，但总有一天，你会想看看白鞘、竹光、银纸竹光，甚至那些真正有故事的名刀。」&r"]
+	quest.6EF1F919C26CE734.quest_subtitle: " &7无铭只是开始，不是终点"
+	quest.6EF1F919C26CE734.title: "&e寻找更好的刀身"
+	quest.70F7FFCAA6D36E14.quest_desc: ["&d「试着连续攻击几次，感受刀势的节奏。不要一看到怪物就把所有按键一起按下去，小狐狸的尾巴都快被你吓得炸开了。」&r"]
+	quest.70F7FFCAA6D36E14.quest_subtitle: "&7一刀是攻击，连续的刀才是剑技"
+	quest.70F7FFCAA6D36E14.title: "&e连击入门"
+	quest.73B11BA517CCA724.quest_desc: ["&d「把刀放上铁砧，试着进行一次精炼。精炼需要经验，也需要耀魂。别把最后一点经验全花光，回家修刀时还会用到它。」&r"]
+	quest.73B11BA517CCA724.quest_subtitle: " &7千锤百炼之后，刀才会回应你"
+	quest.73B11BA517CCA724.title: "&e尝试精炼"
 	quest.7B4A5158B56C394E.quest_desc: ["&d「切菜板摆好，厨刀拿稳。厨房里最重要的不是动作快，而是别把食材切到地上——那样我会有一点点心疼。」&r"]
 	quest.7B4A5158B56C394E.quest_subtitle: " &7料理不是把食材扔进锅里就结束"
 	quest.7B4A5158B56C394E.title: "&e准备一块切菜板"
 	task.2047826561E1C0DA.title: "&a阅读职业说明，并选择一个职业"
+	task.23FB5415F062CC14.title: "1"
+	task.357462FF3B3E61DF.title: "1"
 	task.40DDC82D7309B7C5.title: "&e给家园画一条边界"
 	task.45B81A3E1683490B.title: "欢迎来到烟火筑家"
+	task.699619A327E3A8D0.title: "&5你的刀，已经有名字了"
 }
