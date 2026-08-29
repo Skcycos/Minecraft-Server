@@ -30,7 +30,7 @@
   "nonModpackFilesToDelete": {},
   "autoExcludeServerSideMods": true,
   "autoExcludeUnnecessaryFiles": true,
-  "requireAutoModpackOnClient": true,
+  "requireAutoModpackOnClient": false,
   "nagUnModdedClients": true,
   "nagMessage": "This server provides dedicated modpack through AutoModpack!",
   "nagClickableMessage": "Click here to get the AutoModpack!",
