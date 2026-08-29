@@ -1,0 +1,17 @@
+{
+  "id": "glow_squid",
+  "entity": "minecraft:glow_squid",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 31,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "发光鱿鱼",
+  "description": "会发出幽光的水生生物",
+  "enabled": true,
+  "sort": 20
+}

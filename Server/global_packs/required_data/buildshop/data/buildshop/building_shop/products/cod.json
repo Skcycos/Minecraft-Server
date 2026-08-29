@@ -1,0 +1,17 @@
+{
+  "id": "cod",
+  "entity": "minecraft:cod",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 10,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "鳕鱼",
+  "description": "常见的海洋鱼类",
+  "enabled": true,
+  "sort": 5
+}

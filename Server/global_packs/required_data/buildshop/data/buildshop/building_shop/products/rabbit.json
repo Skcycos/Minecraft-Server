@@ -1,0 +1,17 @@
+{
+  "id": "rabbit",
+  "entity": "minecraft:rabbit",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "兔子",
+  "description": "灵活的小型动物",
+  "enabled": true,
+  "sort": 4
+}

@@ -1,0 +1,17 @@
+{
+  "id": "camel",
+  "entity": "minecraft:camel",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 61,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "骆驼",
+  "description": "可乘坐并搭载两人的坐骑",
+  "enabled": true,
+  "sort": 30
+}

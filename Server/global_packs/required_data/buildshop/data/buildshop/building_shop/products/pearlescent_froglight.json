@@ -5,7 +5,7 @@
     "lighting"
   ],
   "currency": "server_menu:lc_bank_main",
-  "unitPrice": 15,
+  "unitPrice": 4,
   "bulkSize": 64,
   "stock": {
     "mode": "infinite"

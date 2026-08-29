@@ -1,0 +1,394 @@
+{
+  "player2history": {
+    "27a96fec-9b28-4152-b433-0dd8f085333b": {
+      "history": [
+        {
+          "location": {
+            "level": "fuji:resca",
+            "x": -222.64583553036465,
+            "y": -59.6239916397455,
+            "z": 327.70029541603463,
+            "yaw": 135.83191,
+            "pitch": -33.900036
+          },
+          "saved_timestamp": 1788011908647
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -79.44647517565731,
+            "y": 66.11759293784915,
+            "z": -123.29326468282807,
+            "yaw": 15.299998,
+            "pitch": 7.9500003
+          },
+          "saved_timestamp": 1788011946816
+        },
+        {
+          "location": {
+            "level": "fuji:res",
+            "x": -151.46496270639366,
+            "y": 67.875,
+            "z": -88.77222577818614,
+            "yaw": -106.19946,
+            "pitch": 0.44998133
+          },
+          "saved_timestamp": 1788012061199
+        }
+      ]
+    },
+    "b3fd927f-43e4-40f9-9258-2bca79e72bef": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:the_nether",
+            "x": -33.84415135116551,
+            "y": 79.0,
+            "z": -34.37231801652882,
+            "yaw": 86.52468,
+            "pitch": 34.946705
+          },
+          "saved_timestamp": 1788009991012
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -237.5,
+            "y": 74.0,
+            "z": -323.5,
+            "yaw": -180.0,
+            "pitch": 0.0
+          },
+          "saved_timestamp": 1788010000768
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -16.016229396629857,
+            "y": 65.0,
+            "z": 65.29600885257122,
+            "yaw": -54.306183,
+            "pitch": 17.001936
+          },
+          "saved_timestamp": 1788010260685
+        }
+      ]
+    },
+    "83c4301d-f472-47b6-9c15-be2a5403ef97": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:the_nether",
+            "x": -1091.6867389449721,
+            "y": 12.0,
+            "z": -381.800137781946,
+            "yaw": 1.0544434,
+            "pitch": 26.40043
+          },
+          "saved_timestamp": 1787940278992
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 1381.5697869790977,
+            "y": -32.0,
+            "z": 272.8494359684755,
+            "yaw": 132.76486,
+            "pitch": 48.00001
+          },
+          "saved_timestamp": 1787984950299
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -258.4406854958425,
+            "y": 64.0,
+            "z": -39.07905726385853,
+            "yaw": -175.33997,
+            "pitch": 4.663123
+          },
+          "saved_timestamp": 1787986275541
+        }
+      ]
+    },
+    "409da3ce-0bba-35b1-9c71-7b100310f88a": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 352.8307904871592,
+            "y": 120.44780570704155,
+            "z": 135.1476760639574,
+            "yaw": -113.30365,
+            "pitch": 6.1502223
+          },
+          "saved_timestamp": 1788007235173
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 330.61891244825216,
+            "y": 153.0,
+            "z": 149.71609270408442,
+            "yaw": -7.400116,
+            "pitch": 10.649938
+          },
+          "saved_timestamp": 1788007590793
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 337.2310895043047,
+            "y": 119.0,
+            "z": 121.14490117662625,
+            "yaw": 129.60101,
+            "pitch": 1.2000542
+          },
+          "saved_timestamp": 1788007718652
+        }
+      ]
+    },
+    "452778fa-5de6-3826-83a2-f867f1e48d62": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -79.5,
+            "y": 64.0,
+            "z": -120.5,
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "saved_timestamp": 1787913479116
+        }
+      ]
+    },
+    "5ffea7c0-4715-48a2-bc6b-967b52a24f3a": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 3420.514967206545,
+            "y": 72.0,
+            "z": 4203.073138127408,
+            "yaw": -169.34937,
+            "pitch": 5.100028
+          },
+          "saved_timestamp": 1788012126287
+        },
+        {
+          "location": {
+            "level": "minecraft:the_nether",
+            "x": 246.69999998807907,
+            "y": 37.0,
+            "z": 271.30000001192093,
+            "yaw": -3.2999961,
+            "pitch": 88.05001
+          },
+          "saved_timestamp": 1788014954099
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 3427.5,
+            "y": 72.5,
+            "z": 4215.5,
+            "yaw": -2.504478E-6,
+            "pitch": 0.0
+          },
+          "saved_timestamp": 1788014965066
+        }
+      ]
+    },
+    "08d55548-800a-4eda-a697-23e5a9f421f6": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 385.7263579654055,
+            "y": 117.0,
+            "z": 83.4474965251626,
+            "yaw": -179.95764,
+            "pitch": 90.0
+          },
+          "saved_timestamp": 1788008485330
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 343.1786569711212,
+            "y": 120.0,
+            "z": 137.3671805241889,
+            "yaw": -43.466526,
+            "pitch": 20.54997
+          },
+          "saved_timestamp": 1788009320754
+        },
+        {
+          "location": {
+            "level": "minecraft:the_nether",
+            "x": 52.97976644750738,
+            "y": 66.02209092288281,
+            "z": 3.6768684690626983,
+            "yaw": -1.5101318,
+            "pitch": 22.653488
+          },
+          "saved_timestamp": 1788011827898
+        }
+      ]
+    },
+    "c969424f-0387-3b4f-aab4-fbb52a83d477": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 329.5,
+            "y": 153.0,
+            "z": 148.5,
+            "yaw": -134.99998,
+            "pitch": 0.0
+          },
+          "saved_timestamp": 1788014657549
+        },
+        {
+          "location": {
+            "level": "minecraft:the_nether",
+            "x": 484.0694221485081,
+            "y": 42.0,
+            "z": 126.39107643450478,
+            "yaw": 79.06055,
+            "pitch": 9.483838
+          },
+          "saved_timestamp": 1788014902859
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 331.1568860838054,
+            "y": 153.50794096177844,
+            "z": 149.82287427997537,
+            "yaw": -8.307486,
+            "pitch": 18.899971
+          },
+          "saved_timestamp": 1788014905997
+        }
+      ]
+    },
+    "4d17831a-892d-3640-b8a8-2eb58a6e26fc": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -83.5,
+            "y": 64.0,
+            "z": -137.5,
+            "yaw": 0.0,
+            "pitch": 0.0
+          },
+          "saved_timestamp": 1787978068593
+        }
+      ]
+    },
+    "eef10037-6760-4f21-bed9-308092c8e215": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -248.80002627639593,
+            "y": 68.0,
+            "z": 282.01635191881803,
+            "yaw": 157.79932,
+            "pitch": 7.199992
+          },
+          "saved_timestamp": 1787987279560
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 1414.9285402391272,
+            "y": -21.5,
+            "z": 3206.4534426912373,
+            "yaw": 85.562805,
+            "pitch": 2.1000423
+          },
+          "saved_timestamp": 1787988274043
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -246.61749813206848,
+            "y": 68.0,
+            "z": 296.84662478641354,
+            "yaw": -174.91565,
+            "pitch": 6.4500303
+          },
+          "saved_timestamp": 1788006956658
+        }
+      ]
+    },
+    "5efbf4da-111a-4f00-ad49-eb45a091a9af": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -53.55000001192093,
+            "y": 65.5,
+            "z": 137.5,
+            "yaw": -84.45044,
+            "pitch": 69.44994
+          },
+          "saved_timestamp": 1787978555648
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -23.636464362162375,
+            "y": 58.0,
+            "z": 52.34541795241452,
+            "yaw": -174.44914,
+            "pitch": 43.499958
+          },
+          "saved_timestamp": 1787980718248
+        }
+      ]
+    },
+    "470230c3-c24a-4d3a-915a-2cf99929c3a6": {
+      "history": [
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": 53.69999998807907,
+            "y": 63.0,
+            "z": 8.621646756045056,
+            "yaw": -154.49998,
+            "pitch": 80.54969
+          },
+          "saved_timestamp": 1788011828605
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -210.30000001192093,
+            "y": 63.0,
+            "z": 215.69999998807907,
+            "yaw": 124.48851,
+            "pitch": 26.051693
+          },
+          "saved_timestamp": 1788012262738
+        },
+        {
+          "location": {
+            "level": "minecraft:overworld",
+            "x": -30.32705262292142,
+            "y": 65.45141116432386,
+            "z": 60.57330240794966,
+            "yaw": 4.3499956,
+            "pitch": 22.65001
+          },
+          "saved_timestamp": 1788012423086
+        }
+      ]
+    }
+  },
+  "MOD_VERSION": "14.11.1-neoforge"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "tropical_fish",
+  "entity": "minecraft:tropical_fish",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 19,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "热带鱼",
+  "description": "色彩斑斓的观赏鱼",
+  "enabled": true,
+  "sort": 10
+}

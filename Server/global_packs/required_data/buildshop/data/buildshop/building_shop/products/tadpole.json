@@ -1,0 +1,17 @@
+{
+  "id": "tadpole",
+  "entity": "minecraft:tadpole",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 12,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "蝌蚪",
+  "description": "青蛙的幼体",
+  "enabled": true,
+  "sort": 8
+}

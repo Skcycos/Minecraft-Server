@@ -371,8 +371,1023 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-119（push 前补记远端落后提交 + 本地新上）
+     EDITION 68-164（push 前补记本地新上）
      ============================================================ -->
+
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">164</span>
+    <div>
+      <h2 class="edition-title">新增一键整理与刀剑任务章节</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>63e6053</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🧰 功能扩充</span>
+
+    <div class="pull">服务端新增一键整理，客户端渲染增强；FTB 任务新增「刀剑」章节（拔刀剑新手任务链）。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">一键整理</span><span class="item-value">新增服务端 [一键整理]inventorysorter 24.0.24</span></li>
+      <li><span class="item-label">客户端渲染</span><span class="item-value">新增 [沉浸渲染]ImmediatelyFast 1.6.13；停用 InventoryProfilesNext 2.2.5（jar → .dis）</span></li>
+      <li><span class="item-label">任务章节</span><span class="item-value">新增「刀剑」章节：新手赠礼无铭之刃任务链，中文词条同步入库</span></li>
+      <li><span class="item-label">fuji</span><span class="item-value">生成 skin/world/view 权限节点；back 运行时数据与自动备份入库</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">163</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 放开客户端校验；加速渲染停用</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>eea6d74</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔌 客户端接入放宽</span>
+
+    <div class="pull">未安装整合包的裸客户端可直接进服；客户端加速渲染 mod 停用；新增 creaturefeature 汉化。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">整合包校验</span><span class="item-value"><code>requireAutoModpackOnClient</code> true → false，裸客户端不再被拒</span></li>
+      <li><span class="item-label">加速渲染</span><span class="item-value">[加速渲染]acceleratedrendering 1.0.14 停用（jar → .dis），可随时恢复</span></li>
+      <li><span class="item-label">creaturefeature</span><span class="item-value">新增 zh_cn.json 词条汉化，物品/选项说明全覆盖</span></li>
+      <li><span class="item-label">运行时数据</span><span class="item-value">fuji back/home 玩家数据入库</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">162</span>
+    <div>
+      <h2 class="edition-title">建筑商店旧商品统一降价</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>7f52086</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">💰 建筑商店调价</span>
+
+    <div class="pull">旧有 90 个物品商品统一降为原价的一半；奇数价格向上取整，最低保留 1 LC。动物商品价格保持不变。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">调价范围</span><span class="item-value">木材、彩色方块、照明、厨具与枪械等原有物品商品</span></li>
+      <li><span class="item-label">取整规则</span><span class="item-value">1→1、2→1、4→2、5→3、8→4 LC</span></li>
+      <li><span class="item-label">动物商品</span><span class="item-value">35 种实体商品维持已确认价格，全部单只购买</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">161</span>
+    <div>
+      <h2 class="edition-title">新增原版动物商品分类</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>7f52086</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🐾 建筑商店扩充</span>
+
+    <div class="pull">新增动物分类与 35 种原版生物商品，统一使用 LC 货币、无限库存与单只购买。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">商品类型</span><span class="item-value">使用 <code>entity</code> 字段生成生物，不占用玩家背包</span></li>
+      <li><span class="item-label">购买方式</span><span class="item-value">全部 <code>bulkSize: 1</code>，价格 9–93 LC/只</span></li>
+      <li><span class="item-label">商品范围</span><span class="item-value">鸡、猪、牛、羊、兔子、鱼类、宠物、坐骑与稀有动物等 35 种原版生物</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">160</span>
+    <div>
+      <h2 class="edition-title">fuji 开启世界/皮肤/查看模块；简化聊天前缀</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 服务器设置</span>
+    <ul class="item-list">
+      <li><span class="item-label">模块开启</span><span class="item-value">world（多世界管理）、skin（皮肤管理）、view 模块启用</span></li>
+      <li><span class="item-label">聊天样式</span><span class="item-value">发送者前缀移除游玩统计图标（时长🔥/挖掘⛏/放置🔳/击杀🗡/移动🌍）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">159</span>
+    <div>
+      <h2 class="edition-title">同步 fuji 运行时数据与自动备份</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 运行配置同步</span>
+    <ul class="item-list">
+      <li><span class="item-label">运行时数据</span><span class="item-value">fuji back/home 玩家数据与 3 份自动备份入库</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">158</span>
+    <div>
+      <h2 class="edition-title">领地商店定价调整：首次 256 铜币，每次递增 50%</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-28</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 经济调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">首次价格</span><span class="item-value">1024 → 256 铜币</span></li>
+      <li><span class="item-label">价格涨幅</span><span class="item-value">每次购买后递增 50%</span></li>
+      <li><span class="item-label">购买上限</span><span class="item-value">每名玩家最多 20 次；买满累计约 170 万铜币</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">157</span>
+    <div>
+      <h2 class="edition-title">建筑商店升级 1.0.2；Pad 菜单升级 1.0.3</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-28</span>
+        <span class="dot">·</span>
+        <span>54200f6</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">buildshop</span><span class="item-value">建筑商店 1.0.1 → 1.0.2</span></li>
+      <li><span class="item-label">server_menu</span><span class="item-value">Pad 菜单 1.0.2 → 1.0.3（随远端同步入库）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">156</span>
+    <div>
+      <h2 class="edition-title">Pad 菜单（server_menu）升级至 1.0.2</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-28</span>
+        <span class="dot">·</span>
+        <span>e01e294</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">server_menu</span><span class="item-value">1.0.1 → 1.0.2（随远端同步入库）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">155</span>
+    <div>
+      <h2 class="edition-title">fuji 开启占位符模块；聊天模块配置生成</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-28</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 服务器设置</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">placeholder 模块</span><span class="item-value">已启用，为聊天等功能提供更多占位符</span></li>
+      <li><span class="item-label">chat 模块</span><span class="item-value">重启后子配置（样式/历史/提及/替换/触发器）已生成，聊天功能正式生效</span></li>
+      <li><span class="item-label">其他</span><span class="item-value">同步 fuji 运行时配置与自动备份</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">154</span>
+    <div>
+      <h2 class="edition-title">简易弓箭与捕星者汉化；fuji 开启聊天模块</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌏 模组汉化</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">简易弓箭 SimplyBows</span><span class="item-value">724 词条全覆盖（无自带中文），含 8 把独特之弓、符文升级体系与全部配置界面</span></li>
+      <li><span class="item-label">捕星者 Starcatcher</span><span class="item-value">自带中文仅覆盖旧版，补翻 3.0.6 新增 451 条（修饰符/图鉴/锦标赛/瓶中信），并清理 319 条过时键、修复 3 处占位符丢失</span></li>
+      <li><span class="item-label">fuji</span><span class="item-value">开启 chat 聊天模块（样式/历史/触发器/替换/@提及，监听保持关闭）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">153</span>
+    <div>
+      <h2 class="edition-title">部署 LuckPerms 权限管理；简易武器升级；fuji 模块开启与全面中文化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔐 权限体系与模组调整</span>
+
+    <div class="pull">引入 LuckPerms 细粒度权限管理（仅服务端）；fuji 开启玩家常用功能模块并完成全部中文翻译；simplymore 升级。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">LuckPerms</span><span class="item-value">部署 LuckPerms-NeoForge-5.4.150，并加入 AutoModpack 排除项，仅服务器本地运行</span></li>
+      <li><span class="item-label">fuji 功能开启</span><span class="item-value">tpa / back / home / rtp / sit / afk 六个玩家常用模块启用；默认语言 en_US → zh_CN</span></li>
+      <li><span class="item-label">fuji 中文化</span><span class="item-value">新增外部语言文件 config/fuji/languages/zh_CN.json（1528 词条全覆盖，新翻 1165 条，分 6 批完成，占位符零差异）；关闭内置英文文档开关使翻译生效</span></li>
+      <li><span class="item-label">simplymore</span><span class="item-value">1.2.3 → 1.3.0_alpha5；fuji 更新为 luckperms API 兼容修复版</span></li>
+      <li><span class="item-label">仓库策略</span><span class="item-value">.gitignore 新增：LuckPerms 运行时数据、fuji 缓存与语言默认文件（保留 zh_CN）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">152</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 排除同步 LuckPerms</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">新增排除项</span><span class="item-value">!/mods/LuckPerms-NeoForge-5.4.150.jar</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">151</span>
+    <div>
+      <h2 class="edition-title">简易提示（Simply Tooltips）升级至 0.1.5</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>c708ec2</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">[简易提示]</span><span class="item-value">SimplyTooltips 0.1.3 → 0.1.5（随远端同步入库）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">150</span>
+    <div>
+      <h2 class="edition-title">新增沉浸式绘画模组；同步运行时配置</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组与配置</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">新增模组</span><span class="item-value">[沉浸式绘画]immersive_paintings-0.7.8（画框可直接放置自绘图片）</span></li>
+      <li><span class="item-label">配置入库</span><span class="item-value">fuji/cosmeticarmorreworked/creaturefeature/meteor_shower/simplybows/simplyswords/immersive_paintings 运行时配置</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">149</span>
+    <div>
+      <h2 class="edition-title">简易刀剑 1.70.2 中文翻译同步更新（2267 词条）</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌏 模组汉化</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">来源切换</span><span class="item-value">新版自带完整官方中文（与英文 2267 键一一对应），资源包整体采用替换旧版自翻稿</span></li>
+      <li><span class="item-label">修复问题</span><span class="item-value">旧稿存在约 430 条与新版机制不符/截断的条目（如「在跃击后，你…」），一并消除</span></li>
+      <li><span class="item-label">校验</span><span class="item-value">键集完全一致，占位符零差异</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">148</span>
+    <div>
+      <h2 class="edition-title">简易刀剑升级至 1.70.2：新增符文锻造台与多种独特武器</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">版本</span><span class="item-value">simplyswords 1.63.0 → 1.70.2（[简易刀剑] 前缀保留）</span></li>
+      <li><span class="item-label">新内容</span><span class="item-value">符文锻造台、血液/风暴/暗影系列新武器与配套效果（流血、狂怒等）及对应进度</span></li>
+      <li><span class="item-label">汉化状态</span><span class="item-value">原 1293 词条继续生效；新版本引入 1043 条新增词条暂为英文，后续补翻</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">147</span>
+    <div>
+      <h2 class="edition-title">新增时装盔甲模组，范式 Paradigm 转为停用</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">新增</span><span class="item-value">[时装盔甲]cosmeticarmorreworkedforked-0.0.4（Cosmetic Armor Reworked 分支版）</span></li>
+      <li><span class="item-label">停用</span><span class="item-value">[范式]Paradigm-2.4.2b 改为 .dis（可随时恢复）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">146</span>
+    <div>
+      <h2 class="edition-title">AutoModpack 排除同步 fuji 前置库</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">新增排除项</span><span class="item-value">!/mods/fuji-neoforge-14.11.1-neoforge-mc1.21.1.jar，前置库仅服务器本地运行</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">145</span>
+    <div>
+      <h2 class="edition-title">新增前置库 Fuji</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">[前置库]</span><span class="item-value">fuji-14.11.1（neoforge 1.21.1）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">144</span>
+    <div>
+      <h2 class="edition-title">新增流星雨与生物特辑模组</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">[流星雨]</span><span class="item-value">meteor_shower-0.0.5</span></li>
+      <li><span class="item-label">[生物特辑]</span><span class="item-value">creaturefeature-1.2.3.2</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">143</span>
+    <div>
+      <h2 class="edition-title">建造模组换装：Sophisticated Building → Effortless Building；新增简易弓箭与怪物装备</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">移除</span><span class="item-value">[轻松建造]sophisticatedbuilding（其汉化资源包条目保留备用）</span></li>
+      <li><span class="item-label">新增本体</span><span class="item-value">[轻松建造]effortlessbuilding-4.2+1.21.1（自带完整社区中文）</span></li>
+      <li><span class="item-label">新增扩展</span><span class="item-value">[轻松建造扩展]extra-orientations-1.4.0（已补汉化）</span></li>
+      <li><span class="item-label">新增其他</span><span class="item-value">[简易弓箭]SimplyBows-0.1.4、[简易刀剑-怪物生成]simplyentityequipment-0.1.0</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">142</span>
+    <div>
+      <h2 class="edition-title">轻松建造扩展（竖直朝向）汉化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌏 模组汉化</span>
+
+    <ul class="item-list">
+      <li><span class="item-label">主模组 effortlessbuilding</span><span class="item-value">自带社区中文翻译完整（134/134 键），无需补翻</span></li>
+      <li><span class="item-label">扩展 extra-orientations</span><span class="item-value">原仅英文，已补 3 条汉化（朝向/水平/垂直）入食韵筑家专用材质包</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">141</span>
+    <div>
+      <h2 class="edition-title">轻松建造（Sophisticated Building）模组全面汉化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌏 模组汉化</span>
+
+    <div class="pull">sophisticatedbuilding-4.0.0 全部 150 条词条汉化并纳入食韵筑家专用材质包，界面统一使用「轻松建造」名称。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">覆盖范围</span><span class="item-value">15 种建造模式与说明、能量等级系统、替换/保护/预览设置、撤销重做、物品与按键提示、命令回执</span></li>
+      <li><span class="item-label">命名约定</span><span class="item-value">模组名译为「轻松建造」，与服务端 jar 前缀 [轻松建造] 一致</span></li>
+      <li><span class="item-label">校验</span><span class="item-value">150 键无缺失无多余，%s/%d/%1$s 占位符全部对应，空描述保持为空</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">140</span>
+    <div>
+      <h2 class="edition-title">灼热枪械升级至 1.5.2；部署轻松建造，清理假人与客户端粒子模组</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      
+        <span class="dot">·</span>
+        <span>a95eba5</span></p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔫 模组升级与增删调整</span>
+
+    <div class="pull">自研 ScorchedGuns 分支升级 1.5.1 → 1.5.2（专用服务器 reload 崩溃修复与客户端物品扩展注册迁移）；同步增删数个模组。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">灼热枪械 1.5.2</span><span class="item-value">C2S 装弹处理不再加载仅客户端 ReloadHandler；枪械/流体扩展改用 RegisterClientExtensionsEvent 注册。保留「[灼热枪械]」前缀部署</span></li>
+      <li><span class="item-label">新增</span><span class="item-value">[轻松建造]sophisticatedbuilding-neoforge-4.0.0.jar 及 common/server 配置</span></li>
+      <li><span class="item-label">移除</span><span class="item-value">[假人]TrainingDummy-1.0.0</span></li>
+      <li><span class="item-label">客户端清理</span><span class="item-value">移除 aaa_particles 系列与 bc_particle 战斗粒子加成；[区块实体优化]bbe 转为停用（.dis）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">139</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 登录时限放宽至 5 分钟；新增一批模组与资源包</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      
+        <span class="dot">·</span>
+        <span>c83d3c3</span></p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置调整与模组部署</span>
+
+    <div class="pull">DirectAuth 未登录超时由 60 秒放宽至 300 秒（5 分钟）；同时部署捕星者、EMI、Punchy 等新模组与多份兼容资源包。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">登录时限</span><span class="item-value">`loginTimeout` 60 → 300，玩家进服后有 5 分钟完成登录</span></li>
+      <li><span class="item-label">服务器模组</span><span class="item-value">[捕星者]starcatcher-3.0.6、[物品管理器]emi-1.1.24</span></li>
+      <li><span class="item-label">客户端模组</span><span class="item-value">[客户端][3D皮肤]skinlayers3d-1.11.2、[客户端][万用皮肤补丁]CustomSkinLoader-15.0.1、punchy-2.7d</span></li>
+      <li><span class="item-label">新增资源包</span><span class="item-value">[punchy兼容性]Modded Swords x Punchy、[punchy捕星者]补丁、[作物优化]Fancy Crops、[简易刀剑-3D]Simply Swords Reforged、[降低屏幕火焰范围]LowOnFire、[降低盾牌覆盖范围]Low Shield</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">138</span>
+    <div>
+      <h2 class="edition-title">灼热枪械升级至 1.5.1：修复专用服务器装弹崩溃</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+      
+        <span class="dot">·</span>
+        <span>0a0941c</span></p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔫 模组升级与 API 清理</span>
+
+    <div class="pull">自研 ScorchedGuns 分支升级 1.5.0 → 1.5.1：修复专用服务器装弹崩溃，并完成 NeoForge 1.21.1 API 清理。服务器保留「[灼热枪械]」前缀文件名与养老服数值配置。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">装弹崩溃修复</span><span class="item-value">C2S 装弹处理不再加载仅客户端的 ReloadHandler，此前会导致 RuntimeDistCleaner 在专用服务器拒绝 LocalPlayer</span></li>
+      <li><span class="item-label">客户端扩展</span><span class="item-value">枪械与流体扩展改用 RegisterClientExtensionsEvent 注册，替代已移除的 initializeClient API</span></li>
+      <li><span class="item-label">API 清理</span><span class="item-value">移除 EventBusSubscriber.bus（FML 已按事件类型路由）、JEI 分类迁出 getBackground、替换弃用的附魔/物品/客户端 API 为 1.21.1 等价实现</span></li>
+      <li><span class="item-label">部署</span><span class="item-value">Server/mods 更新为 [灼热枪械]ScorchedGuns-Neoforge-1.5.1.jar；scguns-common.toml 伤害倍率等数值不变</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">137</span>
+    <div>
+      <h2 class="edition-title">同步 AutoModpack 自动生成的包含列表</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>29f2933</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">提交 automodpack-server.json 自动生成的字段顺序变化。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">136</span>
+    <div>
+      <h2 class="edition-title">建筑商店全场定价减半</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>3e3de55</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏪 建筑商店价格调整</span>
+    <div class="pull">全部 90 个商品单价调整为原价一半并向上取整，现价区间 1～8 金币；商品结构与分类不变。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">135</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 防爆破限制放宽</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-27</span>
+        <span class="dot">·</span>
+        <span>89f3241</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔐 登录安全设置</span>
+    <div class="pull">同一 IP 上限 5→80，单账号登录尝试上限 5→20，缓解玩家集中登录被误拦。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">134</span>
+    <div>
+      <h2 class="edition-title">提交 DirectAuth 配置改动</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>eec9cd3</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置同步与模组维护</span>
+    <div class="pull">纳入 DirectAuth 运行时配置改动。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">133</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 升级至 1.2.1 并禁用 compound_v_amped_up</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>349846a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 模组调整</span>
+    <div class="pull">登录模组 DirectAuth 升级至 1.2.1；禁用 compound_v_amped_up 资源包。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">132</span>
+    <div>
+      <h2 class="edition-title">同步运行时生成的配置改动</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>3382398</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 运行配置同步</span>
+    <div class="pull">提交服务器运行时自动生成的配置文件改动。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">131</span>
+    <div>
+      <h2 class="edition-title">DirectAuth 中文语言与配置纳入版本跟踪</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>0f7731b</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置同步与模组维护</span>
+    <div class="pull">DirectAuth 中文语言文件与配置进入版本控制，便于汉化与回滚。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">130</span>
+    <div>
+      <h2 class="edition-title">移除 VSS 排除项</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>003c514</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">从 AutoModpack 排除规则中移除 vss 排除项。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">129</span>
+    <div>
+      <h2 class="edition-title">整理排除规则并新增 DirectAuth 与 FTB 任务文档</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>5efc33a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">automodpack 排除规则整理，新增 DirectAuth 与 FTB Quests 任务相关文档。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">128</span>
+    <div>
+      <h2 class="edition-title">撤销误加的 VSS 排除</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>08cd8b8</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">撤销误加的 VSS 排除项（保留 neo-voxy 排除）。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">127</span>
+    <div>
+      <h2 class="edition-title">Stylized Damage 配置调整并同步至客户端</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-26</span>
+        <span class="dot">·</span>
+        <span>486199b</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 配置调整与客户端同步</span>
+
+    <div class="pull">关闭伤害数字总伤害显示、击杀文本本地化为中文，并将 stylizeddamage 配置纳入 AutoModpack 客户端同步。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">总伤害显示</span><span class="item-value">关闭 `totalDamage.enabled`</span></li>
+      <li><span class="item-label">击杀文本</span><span class="item-value">`styles/kill.json` 的 `killText` 改为「🗡击杀!」</span></li>
+      <li><span class="item-label">客户端同步</span><span class="item-value">AutoModpack `syncedFiles` 加入 `/config/stylizeddamage/**`</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">126</span>
+    <div>
+      <h2 class="edition-title">精确排除 VSS 客户端同步</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>6f5ec1c</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">将 VSS 排除规则改为精确文件名，避免通配符误匹配。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">125</span>
+    <div>
+      <h2 class="edition-title">整理 VSS 模组文件名</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>73e2d52</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 模组文件维护</span>
+    <div class="pull">移除 VSS 模组文件名的中文前缀，使其与 AutoModpack 排除规则一致。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">124</span>
+    <div>
+      <h2 class="edition-title">完善 Neo-Voxy 与 VSS 排除规则</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>47e2fc9</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ AutoModpack 配置</span>
+    <div class="pull">将 Neo-Voxy 与 VSS 标记为服务端 LOD 模组，避免同步到客户端。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">123</span>
+    <div>
+      <h2 class="edition-title">同步 FTB Quests 与 Spell Engine 运行配置</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>0337a61</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 运行配置同步</span>
+    <div class="pull">提交 FTB Quests 与 Spell Engine 的运行时配置改动。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">122</span>
+    <div>
+      <h2 class="edition-title">整理 Paradigm 玩家数据忽略规则</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>137e1ff</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🧹 运行数据维护</span>
+    <div class="pull">将 Paradigm 玩家数据加入忽略列表并取消跟踪运行时生成文件。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">121</span>
+    <div>
+      <h2 class="edition-title">同步战斗、任务与多世界运行配置</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-25</span>
+        <span class="dot">·</span>
+        <span>24f50c8</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⚙️ 运行配置同步</span>
+    <div class="pull">提交 Archers、建筑商店、FTB Quests、Paradigm 与 World Dimension Nexus 的运行配置。</div>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">120</span>
+    <div>
+      <h2 class="edition-title">合并地形测试功能分支</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-24</span>
+        <span class="dot">·</span>
+        <span>eae9696</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔀 分支合并</span>
+    <div class="pull">合并 feature/terrain-test 分支，纳入地形测试及相关模组配置变更。</div>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
@@ -380,10 +1395,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">新增多世界管理模组</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>df9f87b</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -403,10 +1420,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">新增弓箭手与战斗增强系列模组，关闭远距离列车姿态</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>7a659f8</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -429,10 +1448,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">Reese's Sodium Options 汉化</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>727bc47</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -453,10 +1474,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">假人模组深度汉化、扫地文案本地化与资源包还原</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>0666c66</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -479,10 +1502,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">ReTerraForged 地形重锻汉化</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>6177339</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -504,10 +1529,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">同步服务器配置并暂时禁用两个模组</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>01a9e5d</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -529,10 +1556,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">新增灵灾、假人与资源世界模组</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>7f8945f</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -555,10 +1584,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">食物三档分类表清理：移除 Hoglin 分食行多余空字段</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>c603f84</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -573,10 +1604,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">Fast Travel Waypoints 与 Fusion 连接纹理部署</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-24</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>2cf33f7</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -599,10 +1632,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">取消禁用末地水晶（end_crystal）合成</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
-        <span>即时</span>
-      </p>
+        <span>08-22</span>
+      
+        <span class="dot">·</span>
+        <span>d6f985f</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -620,10 +1655,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">随身挎包（Satchels）模组汉化 + 禁用时间冻结</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-22 01:10</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>a4d20c0</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -650,10 +1687,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">新增 /exporteffects 效果导出命令与 Buff 图标图鉴</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-22 00:45</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>1a6b85d</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -680,12 +1719,14 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">TCTH 职业经济获取调整：移除甘蔗与小鸡肉块</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-22 13:35</span>
         <span class="dot">·</span>
         <span>cf94d88</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>cf94d88</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -716,12 +1757,14 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">禁用洞穴与深渊珠宝苹果合成</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-22 01:46</span>
         <span class="dot">·</span>
         <span>1d0c058</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>1d0c058</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -737,10 +1780,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">简易刀剑（Simply Swords）模组全面汉化（1293 词条）</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 23:59</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>1b8e6b0</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -767,10 +1812,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">过山车（Simulated Coasters）与更多简易武器（Simply More）模组汉化</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 23:30</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>68ba26a</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -797,10 +1844,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">暂时禁用可扩展光照 ScalableLux 模组</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 22:40</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>89ee40c</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -816,10 +1865,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">前置库 fzzy_config 由客户端移回服务端</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 22:20</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>1a4a93a</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -835,10 +1886,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">第五人格（Compound V）模组全面汉化（300 词条）</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 22:00</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>cac029a</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -865,10 +1918,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">服务端新增过山车/物理/背包模组，客户端新增附魔描述</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-21 21:00</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>a7011e6</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -932,48 +1987,6 @@ h1, h2, h3, h4 { font-style: normal; }
     <span class="status status--info">🔧 模组升级</span>
 
     <div class="pull">法术核心模组 spell_engine 由 1.10.0 升级至 1.10.1。</div>
-  </div>
-</article>
-
-<article class="edition">
-  <div class="edition-head">
-    <span class="edition-ordinal">91</span>
-    <div>
-      <h2 class="edition-title">服务端新增 5 个模组（龙UI库/光子/蓝图编辑器/第五人格/睡眠动画）</h2>
-      <p class="edition-meta">
-        <span>本地</span>
-        <span class="dot">·</span>
-        <span>08-21 01:20</span>
-      </p>
-    </div>
-  </div>
-  <div class="edition-body">
-    <span class="status status--info">📦 新模组</span>
-
-    <div class="pull">服务端新增 5 个模组：龙UI库（ldlib2）作为光子系前置，光子 VFX 库、KilaGraph 蓝图编辑器、第五人格（Compound V）、睡眠动画（seamlesssleep）。</div>
-
-    <ul class="item-list">
-      <li>
-        <span class="item-label">龙UI库</span>
-        <span class="item-value">ldlib2-neoforge-1.21.1-2.2.36.a-all（光子/KilaGraph 前置库）</span>
-      </li>
-      <li>
-        <span class="item-label">光子</span>
-        <span class="item-value">photon-neoforge-1.21.1-2.2.4-all（VFX 特效库）</span>
-      </li>
-      <li>
-        <span class="item-label">蓝图编辑器</span>
-        <span class="item-value">kilagraph-neoforge-1.21.1-21.1.0.9（节点图/蓝图编辑）</span>
-      </li>
-      <li>
-        <span class="item-label">第五人格</span>
-        <span class="item-value">compound_v_amped_up 2.2.2</span>
-      </li>
-      <li>
-        <span class="item-label">睡眠动画</span>
-        <span class="item-value">seamlesssleep-neoforge-1.21-2.5.3</span>
-      </li>
-    </ul>
   </div>
 </article>
 
@@ -1106,14 +2119,60 @@ h1, h2, h3, h4 { font-style: normal; }
 
 <article class="edition">
   <div class="edition-head">
+    <span class="edition-ordinal">91</span>
+    <div>
+      <h2 class="edition-title">服务端新增 5 个模组（龙UI库/光子/蓝图编辑器/第五人格/睡眠动画）</h2>
+      <p class="edition-meta">
+        <span>远端 main</span>
+        <span class="dot">·</span>
+        <span>08-21 01:20</span>
+      
+        <span class="dot">·</span>
+        <span>2b73000</span></p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">📦 新模组</span>
+
+    <div class="pull">服务端新增 5 个模组：龙UI库（ldlib2）作为光子系前置，光子 VFX 库、KilaGraph 蓝图编辑器、第五人格（Compound V）、睡眠动画（seamlesssleep）。</div>
+
+    <ul class="item-list">
+      <li>
+        <span class="item-label">龙UI库</span>
+        <span class="item-value">ldlib2-neoforge-1.21.1-2.2.36.a-all（光子/KilaGraph 前置库）</span>
+      </li>
+      <li>
+        <span class="item-label">光子</span>
+        <span class="item-value">photon-neoforge-1.21.1-2.2.4-all（VFX 特效库）</span>
+      </li>
+      <li>
+        <span class="item-label">蓝图编辑器</span>
+        <span class="item-value">kilagraph-neoforge-1.21.1-21.1.0.9（节点图/蓝图编辑）</span>
+      </li>
+      <li>
+        <span class="item-label">第五人格</span>
+        <span class="item-value">compound_v_amped_up 2.2.2</span>
+      </li>
+      <li>
+        <span class="item-label">睡眠动画</span>
+        <span class="item-value">seamlesssleep-neoforge-1.21-2.5.3</span>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
     <span class="edition-ordinal">90</span>
     <div>
       <h2 class="edition-title">自我表达（Selfexpression）模组全面汉化（1405 词条）</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 23:30</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>82262a8</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -1144,10 +2203,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">建筑商店照明分类大幅扩充：24 种灯具上架</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 23:00</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>d9555a9</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -1178,10 +2239,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">建筑商店新增厨具分类：盐上架</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 22:30</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>5b0e094</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -1204,10 +2267,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">建筑商店新增枪械分类：6 种弹药上架</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 22:00</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>08858d6</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -1246,10 +2311,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">Xaero 小地图与世界地图全面汉化（963 词条）</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 21:30</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>89b3c8b</span></p>
     </div>
   </div>
   <div class="edition-body">
@@ -1280,10 +2347,12 @@ h1, h2, h3, h4 { font-style: normal; }
     <div>
       <h2 class="edition-title">末地彼岸模组全面汉化（206 词条）</h2>
       <p class="edition-meta">
-        <span>本地</span>
+        <span>远端 main</span>
         <span class="dot">·</span>
         <span>08-20 21:00</span>
-      </p>
+      
+        <span class="dot">·</span>
+        <span>1dd1b4f</span></p>
     </div>
   </div>
   <div class="edition-body">

@@ -1,0 +1,17 @@
+{
+  "id": "llama",
+  "entity": "minecraft:llama",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 56,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "羊驼",
+  "description": "可携带箱子的坐骑",
+  "enabled": true,
+  "sort": 29
+}

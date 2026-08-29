@@ -1,0 +1,17 @@
+{
+  "id": "axolotl",
+  "entity": "minecraft:axolotl",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 49,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "美西螈",
+  "description": "生活在水中的两栖动物",
+  "enabled": true,
+  "sort": 23
+}

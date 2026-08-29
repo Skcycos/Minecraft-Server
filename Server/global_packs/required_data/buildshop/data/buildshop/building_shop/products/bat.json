@@ -1,0 +1,17 @@
+{
+  "id": "bat",
+  "entity": "minecraft:bat",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 10,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "蝙蝠",
+  "description": "栖息在洞穴中的小动物",
+  "enabled": true,
+  "sort": 7
+}

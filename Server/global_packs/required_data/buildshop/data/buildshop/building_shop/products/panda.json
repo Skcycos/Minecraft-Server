@@ -1,0 +1,17 @@
+{
+  "id": "panda",
+  "entity": "minecraft:panda",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 61,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "熊猫",
+  "description": "生活在竹林中的稀有动物",
+  "enabled": true,
+  "sort": 32
+}

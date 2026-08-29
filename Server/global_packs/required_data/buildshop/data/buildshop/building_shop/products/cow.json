@@ -1,0 +1,17 @@
+{
+  "id": "cow",
+  "entity": "minecraft:cow",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "奶牛",
+  "description": "可饲养的产奶家畜",
+  "enabled": true,
+  "sort": 2
+}

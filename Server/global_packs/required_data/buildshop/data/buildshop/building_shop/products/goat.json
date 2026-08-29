@@ -1,0 +1,17 @@
+{
+  "id": "goat",
+  "entity": "minecraft:goat",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 25,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "山羊",
+  "description": "喜欢跳跃的山地家畜",
+  "enabled": true,
+  "sort": 16
+}

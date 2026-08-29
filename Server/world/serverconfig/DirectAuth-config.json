@@ -1,0 +1,22 @@
+{
+  "language": "zh",
+  "sessionGracePeriod": 600,
+  "sessionCleanupInterval": 10,
+  "minPasswordLength": 4,
+  "maxPasswordLength": 32,
+  "maxLoginAttempts": 20,
+  "loginCooldownMs": 3000,
+  "loginTimeout": 300,
+  "registrationDelay": 1,
+  "maxAccountsPerIP": 80,
+  "migrationMap": {
+    "playerdata": "RENAME",
+    "stats": "RENAME",
+    "advancements": "RENAME",
+    "deaths": "DIRECTORY",
+    "ftbquests": "TEXT_REPLACE",
+    "skinrestorer": "RENAME",
+    "fieldguide_progress": "RENAME",
+    "playerdata/vanilla.xin": "RENAME"
+  }
+}

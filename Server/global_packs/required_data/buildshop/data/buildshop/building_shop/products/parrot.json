@@ -1,0 +1,17 @@
+{
+  "id": "parrot",
+  "entity": "minecraft:parrot",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 49,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "鹦鹉",
+  "description": "可驯服并模仿声音的鸟类",
+  "enabled": true,
+  "sort": 22
+}

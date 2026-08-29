@@ -347,6 +347,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["312260C6E3ECF292"]
 			entity_vis_size: 1.0f
 			id: "16A579014FC0FA1C"
 			rewards: [
@@ -371,6 +372,494 @@
 			}]
 			x: 6.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["16A579014FC0FA1C"]
+			entity_vis_size: 1.0f
+			id: "292D1B003610EB78"
+			rewards: [
+				{
+					id: "317A92C4A90376C5"
+					item: {
+						count: 1
+						id: "waystones:waystone"
+					}
+					type: "item"
+				}
+				{
+					id: "2B0214F77F55EEE4"
+					type: "xp"
+					xp: 150
+				}
+				{
+					count: 100
+					id: "104C8AA2A14E19F4"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 64L
+				id: "0CB7D0D70DCB28FE"
+				item: { count: 1, id: "minecraft:cobblestone" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			entity_vis_size: 1.0f
+			id: "67D7EB63373105B1"
+			rewards: [
+				{
+					count: 100
+					id: "328BAF072CA90637"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					id: "5AB78CC5A28508D8"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "6C6FE33B06B252DB"
+				item: { count: 1, id: "server_menu:tablet" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["352475C935326FA2"]
+			entity_vis_size: 1.0f
+			icon: {
+				id: "lightmanscurrency:coin_copper"
+			}
+			id: "1DF6BFA1C60A1667"
+			rewards: [
+				{
+					count: 150
+					id: "1DB85C58D4475D3C"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					id: "7EDB7B813092714F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [{
+				id: "75DBB5A5F74D4BF4"
+				type: "checkmark"
+			}]
+			x: 8.5d
+			y: 1.5d
+		}
+		{
+			entity_vis_size: 1.0f
+			id: "62DB860BE4003199"
+			rewards: [
+				{
+					count: 32
+					id: "144C36B8478270EA"
+					item: {
+						count: 1
+						id: "minecraft:wheat_seeds"
+					}
+					type: "item"
+				}
+				{
+					count: 10
+					id: "652E485FCB4E23F9"
+					item: {
+						count: 1
+						id: "minecraft:carrot"
+					}
+					type: "item"
+				}
+				{
+					count: 10
+					id: "79D5E8AFC5A9A337"
+					item: {
+						count: 1
+						id: "minecraft:potato"
+					}
+					type: "item"
+				}
+				{
+					id: "4261825E69144678"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [{
+				advancement: "minecraft:husbandry/plant_seed"
+				criterion: ""
+				id: "7200BDAC0F8515BF"
+				type: "advancement"
+			}]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62DB860BE4003199"]
+			entity_vis_size: 1.0f
+			id: "7B4A5158B56C394E"
+			rewards: [
+				{
+					count: 8
+					id: "594784C661026F55"
+					item: {
+						count: 1
+						id: "minecraft:beetroot_seeds"
+					}
+					type: "item"
+				}
+				{
+					id: "0EC5F69BB7E2BDB4"
+					item: {
+						count: 1
+						id: "minecraft:pale_oak_sapling"
+					}
+					type: "item"
+				}
+				{
+					id: "78E6D4BE2AB59778"
+					type: "xp"
+					xp: 175
+				}
+			]
+			tasks: [{
+				id: "7EBABCF5E90F5B06"
+				item: { count: 1, id: "kaleidoscope_cookery:chopping_board" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7B4A5158B56C394E"]
+			entity_vis_size: 1.0f
+			id: "1A1F9A16B9D7D025"
+			rewards: [
+				{
+					count: 8
+					id: "46CAEBD94D04487C"
+					item: {
+						count: 1
+						id: "farmersdelight:onion"
+					}
+					type: "item"
+				}
+				{
+					id: "47C890827D389B4F"
+					item: {
+						count: 1
+						id: "farmersdelight:cooking_pot"
+					}
+					type: "item"
+				}
+				{
+					id: "324AE8DFCF313BAB"
+					item: {
+						count: 1
+						id: "kaleidoscope_cookery:stockpot"
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "32EA5C3174B5A5D1"
+					item: {
+						count: 1
+						id: "minecraft:charcoal"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7318FED495332CE1"
+				item: { count: 1, id: "kaleidoscope_cookery:iron_kitchen_knife" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A1F9A16B9D7D025"]
+			entity_vis_size: 1.0f
+			id: "64F988C954EBE12F"
+			rewards: [
+				{
+					count: 3
+					id: "467CCB0E02D30BF0"
+					item: {
+						count: 1
+						id: "farmersdelight:barbecue_stick"
+					}
+					type: "item"
+				}
+				{
+					count: 150
+					id: "1556AF2821B48FA8"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					id: "612B6369C7A8A6C0"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "3C6DFCD805D67664"
+				item: { count: 1, id: "mynethersdelight:egg_soup" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			entity_vis_size: 1.0f
+			icon: {
+				id: "minecraft:iron_sword"
+			}
+			id: "1BAE5F9EBA04E5EC"
+			rewards: [
+				{
+					id: "7557FE1DBF5DE940"
+					item: {
+						count: 1
+						id: "minecraft:shield"
+					}
+					type: "item"
+				}
+				{
+					count: 10
+					id: "0DE395872D5F23FA"
+					item: {
+						count: 1
+						id: "kaleidoscope_cookery:braised_beef_with_potatoes"
+					}
+					type: "item"
+				}
+				{
+					id: "4D3F79F7FFB0C4FF"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [{
+				id: "70455A4A2A06BE97"
+				item: { count: 1, id: "minecraft:iron_sword" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1BAE5F9EBA04E5EC"]
+			entity_vis_size: 1.0f
+			id: "319927115232E9AE"
+			rewards: [
+				{
+					count: 32
+					id: "559E6077B151D904"
+					item: {
+						count: 1
+						id: "minecraft:arrow"
+					}
+					type: "item"
+				}
+				{
+					id: "6CBCF9F893AC045E"
+					type: "xp"
+					xp: 200
+				}
+				{
+					count: 50
+					id: "161B05B2E2949280"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombie"
+				entity_vis_idle_mode: "USE_GLOBAL"
+				entity_vis_offset_x: 0.0f
+				entity_vis_offset_y: 0.0f
+				entity_vis_rotation: 0.0f
+				entity_vis_silhouette_mode: "NONE"
+				entity_vis_size: 1.0f
+				entity_vis_spin_mode: "USE_GLOBAL"
+				entity_vis_use_as_quest_icon: false
+				entity_vis_walk_mode: "USE_GLOBAL"
+				id: "73237D8DE511CA51"
+				type: "kill"
+				value: 2L
+			}]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["319927115232E9AE"]
+			entity_vis_size: 1.0f
+			id: "20231AB64EC4BE71"
+			rewards: [
+				{
+					id: "608BBE6789201410"
+					item: {
+						count: 1
+						id: "minecraft:compass"
+					}
+					type: "item"
+				}
+				{
+					count: 3
+					id: "1DBD06431DF6D904"
+					item: {
+						count: 1
+						id: "kaleidoscope_cookery:scramble_egg_with_tomatoes"
+					}
+					type: "item"
+				}
+				{
+					id: "3EADDE042F76E558"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				id: "59BD9F996D16AEC5"
+				stat: "minecraft:walk_one_cm"
+				type: "stat"
+				value: 1000
+			}]
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["67D7EB63373105B1"]
+			entity_vis_size: 1.0f
+			id: "352475C935326FA2"
+			tasks: [{
+				id: "360513C76864E580"
+				item: { count: 1, id: "lightmanscurrency:atm" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["20231AB64EC4BE71"]
+			entity_vis_size: 1.0f
+			id: "2D407AD33889A9E7"
+			rewards: [
+				{
+					count: 100
+					id: "61F5BC4B209F5E04"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					id: "4595999F9EBB8680"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [{
+				advancement: "lootr:1chest"
+				criterion: ""
+				id: "7898AADA9C27A37E"
+				type: "advancement"
+			}]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2D407AD33889A9E7"]
+			entity_vis_size: 1.0f
+			id: "330B442C6A97131B"
+			rewards: [
+				{
+					count: 250
+					id: "6A93CE670FB889B0"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+				{
+					id: "399C8CCFCBDA4996"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 8
+					id: "06E6FB7DC7B395D3"
+					item: {
+						count: 1
+						id: "farmersdelight:bone_broth"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "bountiful:bountiful/bounty_complete"
+				criterion: ""
+				id: "5D083F10B3858113"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: 4.5d
+		}
+		{
+			entity_vis_size: 1.0f
+			id: "260AAD18F8C8EC89"
+			rewards: [
+				{
+					id: "51B5BF8B8C36A9B0"
+					type: "xp"
+					xp: 300
+				}
+				{
+					count: 300
+					id: "11073F9392F9A051"
+					item: {
+						count: 1
+						id: "lightmanscurrency:coin_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2047826561E1C0DA"
+				type: "checkmark"
+			}]
+			x: 14.5d
+			y: 4.5d
 		}
 	]
 }

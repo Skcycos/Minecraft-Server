@@ -1,0 +1,17 @@
+{
+  "id": "horse",
+  "entity": "minecraft:horse",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 61,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "马",
+  "description": "可驯服并骑乘的坐骑",
+  "enabled": true,
+  "sort": 31
+}

@@ -1,0 +1,17 @@
+{
+  "id": "squid",
+  "entity": "minecraft:squid",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "鱿鱼",
+  "description": "生活在水中的海洋生物",
+  "enabled": true,
+  "sort": 9
+}

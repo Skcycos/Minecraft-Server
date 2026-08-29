@@ -1,0 +1,17 @@
+{
+  "id": "armadillo",
+  "entity": "minecraft:armadillo",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 25,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "犰狳",
+  "description": "受到惊吓会蜷缩的动物",
+  "enabled": true,
+  "sort": 14
+}

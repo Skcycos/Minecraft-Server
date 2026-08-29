@@ -1,0 +1,17 @@
+{
+  "id": "sniffer",
+  "entity": "minecraft:sniffer",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 93,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "嗅探兽",
+  "description": "能够嗅探远古种子的古老生物",
+  "enabled": true,
+  "sort": 34
+}

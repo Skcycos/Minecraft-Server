@@ -1,0 +1,17 @@
+{
+  "id": "sheep",
+  "entity": "minecraft:sheep",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "羊",
+  "description": "可剪毛的家畜",
+  "enabled": true,
+  "sort": 3
+}

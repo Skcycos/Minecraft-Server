@@ -1,0 +1,7 @@
+{
+  "id": "animals",
+  "name": "动物",
+  "icon": "minecraft:cow_spawn_egg",
+  "sort": 60,
+  "enabled": true
+}

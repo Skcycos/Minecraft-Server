@@ -1,0 +1,17 @@
+{
+  "id": "ocelot",
+  "entity": "minecraft:ocelot",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 27,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "豹猫",
+  "description": "生活在丛林中的野生猫科动物",
+  "enabled": true,
+  "sort": 17
+}

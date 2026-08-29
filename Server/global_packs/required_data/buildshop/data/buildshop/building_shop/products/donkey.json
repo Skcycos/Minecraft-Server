@@ -1,0 +1,17 @@
+{
+  "id": "donkey",
+  "entity": "minecraft:donkey",
+  "categories": [
+    "animals"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 56,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "驴",
+  "description": "可骑乘并装备箱子的坐骑",
+  "enabled": true,
+  "sort": 28
+}
