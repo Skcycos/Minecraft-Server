@@ -1,4 +1,43 @@
 {
-  "dimension_list": [],
+  "dimension_list": [
+    {
+      "auto_load_on_server_startup": true,
+      "dimension": "fuji:resca",
+      "world_preset_type": null,
+      "dimension_type": "minecraft:overworld_caves",
+      "chunk_generator_type": "NOISE",
+      "chunk_generator_parameters": "",
+      "seed": -5802970143724257728,
+      "difficulty": "NORMAL",
+      "should_tick_time": true,
+      "time_of_day": 6001,
+      "weather": {
+        "sunny_time": 0,
+        "is_raining": false,
+        "rain_time": 37604,
+        "is_thundering": false,
+        "thunder_time": 70895
+      }
+    },
+    {
+      "auto_load_on_server_startup": true,
+      "dimension": "fuji:res",
+      "world_preset_type": null,
+      "dimension_type": "minecraft:overworld",
+      "chunk_generator_type": "NOISE",
+      "chunk_generator_parameters": "",
+      "seed": 8111527976887718189,
+      "difficulty": "NORMAL",
+      "should_tick_time": true,
+      "time_of_day": 6001,
+      "weather": {
+        "sunny_time": 0,
+        "is_raining": false,
+        "rain_time": 81313,
+        "is_thundering": false,
+        "thunder_time": 112519
+      }
+    }
+  ],
   "MOD_VERSION": "14.11.1-neoforge"
 }
