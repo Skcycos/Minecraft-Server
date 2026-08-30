@@ -104,7 +104,7 @@
       }
     },
     "rtp": {
-      "enable": true
+      "enable": false
     },
     "works": {
       "enable": false
@@ -272,7 +272,7 @@
       "enable": true
     },
     "command_toolbox": {
-      "enable": false,
+      "enable": true,
       "bed": {
         "enable": false
       },
