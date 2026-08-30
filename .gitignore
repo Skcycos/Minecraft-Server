@@ -113,10 +113,7 @@ Server/config/c2me.toml
 
 # LuckPerms 运行时权限数据
 Server/config/luckperms/
-# fuji 运行时缓存
-Server/config/fuji/cache/
-# fuji 语言默认文件(仅保留中文覆盖)
-Server/config/fuji/languages/*
+# fuji 配置全部本地化（运行时数据/模块配置不再入库），仅保留手工维护的中文语言文件
+Server/config/fuji/**
+!Server/config/fuji/languages/
 !Server/config/fuji/languages/zh_CN.json
-Server/config/fuji/backup/*
-Server/config/fuji/modules/world/world.json
