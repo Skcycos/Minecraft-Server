@@ -115,6 +115,8 @@ Server/config/c2me.toml
 Server/config/luckperms/
 # fuji 运行时缓存
 Server/config/fuji/cache/
+# fuji 自动备份（仅保留本机，不纳入版本控制）
+Server/config/fuji/backup/
 # fuji 语言默认文件(仅保留中文覆盖)
 Server/config/fuji/languages/*
 !Server/config/fuji/languages/zh_CN.json

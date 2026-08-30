@@ -10,13 +10,13 @@
       "seed": -5802970143724257728,
       "difficulty": "NORMAL",
       "should_tick_time": true,
-      "time_of_day": 6001,
+      "time_of_day": 5747,
       "weather": {
         "sunny_time": 0,
-        "is_raining": false,
-        "rain_time": 37604,
+        "is_raining": true,
+        "rain_time": 10953,
         "is_thundering": false,
-        "thunder_time": 70895
+        "thunder_time": 22374
       }
     },
     {
@@ -29,13 +29,51 @@
       "seed": 8111527976887718189,
       "difficulty": "NORMAL",
       "should_tick_time": true,
-      "time_of_day": 6001,
+      "time_of_day": 5747,
       "weather": {
         "sunny_time": 0,
         "is_raining": false,
-        "rain_time": 81313,
+        "rain_time": 32792,
         "is_thundering": false,
-        "thunder_time": 112519
+        "thunder_time": 63998
+      }
+    },
+    {
+      "auto_load_on_server_startup": true,
+      "dimension": "fuji:1",
+      "world_preset_type": null,
+      "dimension_type": "minecraft:overworld",
+      "chunk_generator_type": "NOISE",
+      "chunk_generator_parameters": "",
+      "seed": -9062445057709252421,
+      "difficulty": "NORMAL",
+      "should_tick_time": true,
+      "time_of_day": 5747,
+      "weather": {
+        "sunny_time": 0,
+        "is_raining": false,
+        "rain_time": 85575,
+        "is_thundering": false,
+        "thunder_time": 56813
+      }
+    },
+    {
+      "auto_load_on_server_startup": true,
+      "dimension": "fuji:2",
+      "world_preset_type": null,
+      "dimension_type": "minecraft:overworld",
+      "chunk_generator_type": "NOISE",
+      "chunk_generator_parameters": "",
+      "seed": -2029145739538839048,
+      "difficulty": "NORMAL",
+      "should_tick_time": true,
+      "time_of_day": 5747,
+      "weather": {
+        "sunny_time": 0,
+        "is_raining": false,
+        "rain_time": 55933,
+        "is_thundering": false,
+        "thunder_time": 101604
       }
     }
   ],
