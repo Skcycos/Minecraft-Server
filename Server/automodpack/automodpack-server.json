@@ -15,6 +15,7 @@
     "/emotes/*",
     "!/mods/neo-voxy-116.jar",
     "!/kubejs/server_scripts/**",
+    "!/mods/worldedit-mod-7.3.8.jar",
     "!/mods/antixray-neoforge-1.4.8+1.21.1.jar",
     "/config/stylizeddamage/**",
     "/config/spell_engine/**",
