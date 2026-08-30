@@ -67,7 +67,7 @@
         "enable": true
       },
       "spy": {
-        "enable": false
+        "enable": true
       }
     },
     "placeholder": {
@@ -110,7 +110,7 @@
       "enable": false
     },
     "deathlog": {
-      "enable": false
+      "enable": true
     },
     "view": {
       "enable": true
@@ -269,7 +269,7 @@
       "enable": false
     },
     "command_cooldown": {
-      "enable": false
+      "enable": true
     },
     "command_toolbox": {
       "enable": false,
@@ -340,7 +340,7 @@
         "enable": false
       },
       "warp": {
-        "enable": false
+        "enable": true
       },
       "burn": {
         "enable": false

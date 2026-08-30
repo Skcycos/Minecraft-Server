@@ -861,5 +861,17 @@
 			x: 14.5d
 			y: 4.5d
 		}
+		{
+			dependencies: ["1DF6BFA1C60A1667"]
+			entity_vis_size: 1.0f
+			id: "6087D8DAA9AC5E3B"
+			tasks: [{
+				id: "286BF3CB4EA690DA"
+				item: { count: 1, id: "bountiful:bountyboard" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
 	]
 }
