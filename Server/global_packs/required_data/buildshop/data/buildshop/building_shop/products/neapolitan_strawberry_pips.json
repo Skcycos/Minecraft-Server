@@ -1,0 +1,13 @@
+{
+  "id": "neapolitan_strawberry_pips",
+  "item": "neapolitan:strawberry_pips",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "草莓种子",
+  "description": "那不勒斯风味作物种子",
+  "enabled": true,
+  "sort": 37
+}

@@ -1,0 +1,13 @@
+{
+  "id": "farmersdelight_tomato_seeds",
+  "item": "farmersdelight:tomato_seeds",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "番茄种子",
+  "description": "农夫乐事作物种子",
+  "enabled": true,
+  "sort": 4
+}

@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_flowering_azalea",
+  "item": "minecraft:flowering_azalea",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "盛开杜鹃",
+  "description": "普通树苗",
+  "enabled": true,
+  "sort": 19
+}

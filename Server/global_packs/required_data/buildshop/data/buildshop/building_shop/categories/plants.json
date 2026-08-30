@@ -1,0 +1,7 @@
+{
+  "id": "plants",
+  "name": "种植",
+  "icon": "minecraft:wheat_seeds",
+  "sort": 15,
+  "enabled": true
+}

@@ -1,0 +1,13 @@
+{
+  "id": "kaleidoscope_rice",
+  "item": "kaleidoscope_cookery:rice",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "稻种（万花筒烹饪）",
+  "description": "万花筒烹饪作物种子",
+  "enabled": true,
+  "sort": 7
+}

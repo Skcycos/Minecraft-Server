@@ -1,0 +1,13 @@
+{
+  "id": "kaleidoscope_lettuce_seed",
+  "item": "kaleidoscope_cookery:lettuce_seed",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "生菜种子",
+  "description": "万花筒烹饪作物种子",
+  "enabled": true,
+  "sort": 6
+}

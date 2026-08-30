@@ -119,3 +119,4 @@ Server/config/fuji/cache/
 Server/config/fuji/languages/*
 !Server/config/fuji/languages/zh_CN.json
 Server/config/fuji/backup/*
+Server/config/fuji/modules/world/world.json

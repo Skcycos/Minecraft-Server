@@ -10,13 +10,13 @@
       "seed": -5802970143724257728,
       "difficulty": "NORMAL",
       "should_tick_time": true,
-      "time_of_day": 167130,
+      "time_of_day": 37928,
       "weather": {
         "sunny_time": 0,
         "is_raining": false,
-        "rain_time": 38680,
+        "rain_time": 124712,
         "is_thundering": false,
-        "thunder_time": 40248
+        "thunder_time": 85545
       }
     },
     {
@@ -29,13 +29,13 @@
       "seed": 8111527976887718189,
       "difficulty": "NORMAL",
       "should_tick_time": true,
-      "time_of_day": 167130,
+      "time_of_day": 37928,
       "weather": {
         "sunny_time": 0,
         "is_raining": false,
-        "rain_time": 130293,
+        "rain_time": 61286,
         "is_thundering": false,
-        "thunder_time": 34834
+        "thunder_time": 121156
       }
     }
   ],

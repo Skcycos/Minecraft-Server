@@ -1,0 +1,13 @@
+{
+  "id": "andesite",
+  "item": "minecraft:andesite",
+  "categories": ["stone"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "安山岩",
+  "description": "常见的灰色建筑石材",
+  "enabled": true,
+  "sort": 1
+}

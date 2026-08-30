@@ -1,0 +1,13 @@
+{
+  "id": "nomansland_yellow_birch_sapling",
+  "item": "nomansland:yellow_birch_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "黄桦树苗",
+  "description": "无人之地的特殊树苗",
+  "enabled": true,
+  "sort": 45
+}

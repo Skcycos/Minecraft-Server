@@ -1,0 +1,13 @@
+{
+  "id": "nomansland_maple_sapling",
+  "item": "nomansland:maple_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "枫树苗",
+  "description": "无人之地的特殊树苗",
+  "enabled": true,
+  "sort": 39
+}

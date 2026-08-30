@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_mangrove_propagule",
+  "item": "minecraft:mangrove_propagule",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "红树胎生苗",
+  "description": "稀有树苗",
+  "enabled": true,
+  "sort": 21
+}

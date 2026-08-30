@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_potato",
+  "item": "minecraft:potato",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 50,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "马铃薯",
+  "description": "原版普通种子",
+  "enabled": true,
+  "sort": 26
+}

@@ -1,0 +1,13 @@
+{
+  "id": "moresnifferflowers_corrupted_sapling",
+  "item": "moresnifferflowers:corrupted_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 200,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "腐化树苗",
+  "description": "嗅探兽花卉特殊树苗",
+  "enabled": true,
+  "sort": 33
+}

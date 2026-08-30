@@ -1,0 +1,13 @@
+{
+  "id": "granite",
+  "item": "minecraft:granite",
+  "categories": ["stone"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "花岗岩",
+  "description": "带有暖色纹理的建筑石材",
+  "enabled": true,
+  "sort": 3
+}

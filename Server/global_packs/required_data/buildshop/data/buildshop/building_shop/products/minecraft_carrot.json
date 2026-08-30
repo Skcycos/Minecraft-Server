@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_carrot",
+  "item": "minecraft:carrot",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 50,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "胡萝卜",
+  "description": "原版普通种子",
+  "enabled": true,
+  "sort": 16
+}

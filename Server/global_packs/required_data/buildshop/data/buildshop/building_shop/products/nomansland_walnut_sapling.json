@@ -1,0 +1,13 @@
+{
+  "id": "nomansland_walnut_sapling",
+  "item": "nomansland:walnut_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "胡桃树苗",
+  "description": "无人之地的特殊树苗",
+  "enabled": true,
+  "sort": 43
+}

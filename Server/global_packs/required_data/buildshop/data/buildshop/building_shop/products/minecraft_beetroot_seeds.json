@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_beetroot_seeds",
+  "item": "minecraft:beetroot_seeds",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 50,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "甜菜种子",
+  "description": "原版普通种子",
+  "enabled": true,
+  "sort": 14
+}

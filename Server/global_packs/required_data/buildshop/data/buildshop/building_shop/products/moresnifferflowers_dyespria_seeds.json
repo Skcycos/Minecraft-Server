@@ -1,0 +1,13 @@
+{
+  "id": "moresnifferflowers_dyespria_seeds",
+  "item": "moresnifferflowers:dyespria_seeds",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "染灵花种子",
+  "description": "嗅探兽花卉种子",
+  "enabled": true,
+  "sort": 35
+}

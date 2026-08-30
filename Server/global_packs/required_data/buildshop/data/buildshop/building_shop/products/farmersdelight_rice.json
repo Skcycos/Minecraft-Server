@@ -1,0 +1,13 @@
+{
+  "id": "farmersdelight_rice",
+  "item": "farmersdelight:rice",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "稻种（农夫乐事）",
+  "description": "农夫乐事种植作物",
+  "enabled": true,
+  "sort": 3
+}

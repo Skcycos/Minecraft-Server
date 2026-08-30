@@ -14,13 +14,14 @@ var REQUIRED_PERMISSION_LEVEL = 2
 
 var ITEM_TAG_IDS = [
   'minecraft:saplings',
-  'minecraft:seeds',
+  'minecraft:villager_plantable_seeds',
   'c:saplings',
   'c:seeds',
   'forge:saplings',
   'forge:seeds',
   'neoforge:saplings',
-  'neoforge:seeds'
+  'neoforge:seeds',
+  'tconstruct:seeds'
 ]
 
 function createItemTags() {
@@ -33,7 +34,8 @@ function createItemTags() {
     try {
       tags.push({
         id: id,
-        key: TagKey.create(Registries.ITEM, ResourceLocation.parse(id))
+        key: TagKey.create(Registries.ITEM, ResourceLocation.parse(id)),
+        ingredient: Ingredient.of('#' + id)
       })
     } catch (e) {
       console.warn('[SaplingSeedExport] 创建标签失败：' + id + ' -> ' + e)
@@ -86,11 +88,19 @@ ServerEvents.commandRegistry(event => {
             var matchedTags = []
             tags.forEach(function (tag) {
               try {
-                if (stack.is(tag.key)) {
+                // Ingredient 的标签匹配由 KubeJS 处理，兼容 NeoForge 的动态标签。
+                if (tag.ingredient.test(stack)) {
                   matchedTags.push(tag.id)
                 }
               } catch (e) {
-                // 某些模组物品可能在标签检查时抛出异常，不影响其他物品导出。
+                // 兼容少数环境中 Ingredient.test 不可用的情况。
+                try {
+                  if (stack.is(tag.key)) {
+                    matchedTags.push(tag.id)
+                  }
+                } catch (ignored) {
+                  // 某些模组物品可能在标签检查时抛出异常，不影响其他物品导出。
+                }
               }
             })
 
@@ -139,4 +149,3 @@ ServerEvents.commandRegistry(event => {
       })
   )
 })
-

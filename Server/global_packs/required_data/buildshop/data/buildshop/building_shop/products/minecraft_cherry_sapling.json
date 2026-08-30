@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_cherry_sapling",
+  "item": "minecraft:cherry_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "樱花树苗",
+  "description": "普通树苗",
+  "enabled": true,
+  "sort": 17
+}

@@ -1,0 +1,13 @@
+{
+  "id": "nomansland_autumnal_oak_sapling",
+  "item": "nomansland:autumnal_oak_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "秋色橡树苗",
+  "description": "无人之地的特殊树苗",
+  "enabled": true,
+  "sort": 38
+}

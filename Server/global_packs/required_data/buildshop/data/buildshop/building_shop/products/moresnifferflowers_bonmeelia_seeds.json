@@ -1,0 +1,13 @@
+{
+  "id": "moresnifferflowers_bonmeelia_seeds",
+  "item": "moresnifferflowers:bonmeelia_seeds",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "邦梅莉亚种子",
+  "description": "嗅探兽花卉种子",
+  "enabled": true,
+  "sort": 32
+}

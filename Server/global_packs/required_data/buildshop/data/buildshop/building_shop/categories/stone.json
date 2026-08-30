@@ -1,0 +1,7 @@
+{
+  "id": "stone",
+  "name": "石材",
+  "icon": "minecraft:andesite",
+  "sort": 16,
+  "enabled": true
+}

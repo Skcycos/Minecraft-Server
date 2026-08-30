@@ -1,0 +1,13 @@
+{
+  "id": "spawn_date_seed",
+  "item": "spawn:date_seed",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "椰枣种子",
+  "description": "动物生态的特殊种子",
+  "enabled": true,
+  "sort": 46
+}

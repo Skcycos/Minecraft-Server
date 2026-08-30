@@ -1,0 +1,13 @@
+{
+  "id": "moresnifferflowers_dawnberry_vine_seeds",
+  "item": "moresnifferflowers:dawnberry_vine_seeds",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "黎明莓藤种子",
+  "description": "嗅探兽花卉种子",
+  "enabled": true,
+  "sort": 34
+}

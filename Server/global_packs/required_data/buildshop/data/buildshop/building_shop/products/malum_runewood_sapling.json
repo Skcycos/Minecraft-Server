@@ -1,0 +1,13 @@
+{
+  "id": "malum_runewood_sapling",
+  "item": "malum:runewood_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 200,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "符文木树苗",
+  "description": "灵灾的特殊树苗",
+  "enabled": true,
+  "sort": 11
+}
