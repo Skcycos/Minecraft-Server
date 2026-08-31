@@ -1,9 +1,0 @@
-{
-  "job": "tcth:chef",
-  "icon": {
-    "id": "farmersdelight:iron_knife"
-  },
-  "price": 10,
-  "required_level": 20,
-  "parent": "tcth:chef/knife_basic"
-}

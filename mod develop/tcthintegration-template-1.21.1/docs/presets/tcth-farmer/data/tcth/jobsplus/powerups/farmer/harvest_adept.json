@@ -1,9 +1,0 @@
-{
-  "job": "tcth:farmer",
-  "icon": {
-    "id": "minecraft:carrot"
-  },
-  "price": 12,
-  "required_level": 30,
-  "parent": "tcth:farmer/harvest_basic"
-}

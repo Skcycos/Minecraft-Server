@@ -1,9 +1,0 @@
-{
-  "job": "tcth:brewer",
-  "icon": {
-    "id": "brewinandchewin:keg"
-  },
-  "price": 18,
-  "required_level": 60,
-  "parent": "tcth:brewer/resistance_adept"
-}

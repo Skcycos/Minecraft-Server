@@ -1,7 +1,0 @@
-{
-  "pools": [
-    { "weight": 100, "entries": [
-      { "id": "minecraft:porkchop", "weight": 100, "min_count": 1, "max_count": 1 }
-    ] }
-  ]
-}

@@ -1,8 +1,0 @@
-{
-  "job": "tcth:farmer",
-  "icon": {
-    "id": "minecraft:wheat_seeds"
-  },
-  "price": 8,
-  "required_level": 15
-}

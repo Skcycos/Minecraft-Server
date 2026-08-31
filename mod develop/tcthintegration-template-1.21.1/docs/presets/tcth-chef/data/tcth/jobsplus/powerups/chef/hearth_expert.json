@@ -1,9 +1,0 @@
-{
-  "job": "tcth:chef",
-  "icon": {
-    "id": "minecraft:campfire"
-  },
-  "price": 15,
-  "required_level": 60,
-  "parent": "tcth:chef/hearth_master"
-}

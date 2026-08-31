@@ -1,9 +1,0 @@
-{
-  "job": "tcth:gunner",
-  "icon": {
-    "id": "scguns:defender_pistol"
-  },
-  "price": 10,
-  "required_level": 25,
-  "parent": "tcth:gunner/marksmanship_basic"
-}
