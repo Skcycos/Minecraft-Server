@@ -1,8 +1,0 @@
-{
-  "job": "tcth:shadow_thief",
-  "icon": {
-    "id": "minecraft:echo_shard"
-  },
-  "price": 5,
-  "required_level": 5
-}

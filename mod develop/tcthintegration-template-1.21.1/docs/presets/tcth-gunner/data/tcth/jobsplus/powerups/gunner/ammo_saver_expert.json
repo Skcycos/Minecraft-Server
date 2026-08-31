@@ -1,9 +1,0 @@
-{
-  "job": "tcth:gunner",
-  "icon": {
-    "id": "scguns:defender_pistol"
-  },
-  "price": 15,
-  "required_level": 60,
-  "parent": "tcth:gunner/ammo_saver_adept"
-}

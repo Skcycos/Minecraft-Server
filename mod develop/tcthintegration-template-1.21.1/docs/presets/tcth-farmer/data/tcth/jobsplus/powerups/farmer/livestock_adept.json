@@ -1,9 +1,0 @@
-{
-  "job": "tcth:farmer",
-  "icon": {
-    "id": "minecraft:egg"
-  },
-  "price": 12,
-  "required_level": 35,
-  "parent": "tcth:farmer/livestock_basic"
-}

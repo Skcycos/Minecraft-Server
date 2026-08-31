@@ -1,9 +1,0 @@
-{
-  "job": "tcth:gunner",
-  "icon": {
-    "id": "scguns:defender_pistol"
-  },
-  "price": 18,
-  "required_level": 70,
-  "parent": "tcth:gunner/battlefield_defense_adept"
-}

@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#tcth:chef_common",
-    "#tcth:chef_t2",
-    "#tcth:chef_t3"
-  ]
-}

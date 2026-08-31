@@ -1,9 +1,0 @@
-{
-  "job": "tcth:farmer",
-  "icon": {
-    "id": "minecraft:golden_carrot"
-  },
-  "price": 18,
-  "required_level": 60,
-  "parent": "tcth:farmer/harvest_adept"
-}

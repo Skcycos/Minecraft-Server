@@ -1,9 +1,0 @@
-{
-  "job": "tcth:shadow_thief",
-  "icon": {
-    "id": "minecraft:echo_shard"
-  },
-  "price": 10,
-  "required_level": 20,
-  "parent": "tcth:shadow_thief/sleight_of_hand_i"
-}

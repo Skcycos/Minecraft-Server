@@ -1,9 +1,0 @@
-{
-  "job": "tcth:chef",
-  "icon": {
-    "id": "minecraft:experience_bottle"
-  },
-  "price": 10,
-  "required_level": 50,
-  "parent": "tcth:chef/culinary_experience_i"
-}
