@@ -4,7 +4,7 @@
 
 ServerEvents.recipes(event => {
   const registry = global.SYDisabledCraft
-  if (!registry || (!registry.ids && !registry.patterns)) {
+  if (!registry || (!registry.ids && !registry.patterns && !registry.recipeIds)) {
     console.warn('[食韵筑家] SYDisabledCraft 为空，跳过配方禁用')
     return
   }
@@ -38,6 +38,17 @@ ServerEvents.recipes(event => {
       removed++
     } catch (e) {
       console.warn(`[食韵筑家] 正则配方删除失败: ${pattern} → ${e}`)
+      skipped++
+    }
+  })
+
+  // 按配方 ID（同一物品多 NBT 变体、只禁某变体的合成，如农场 T0）
+  ;(registry.recipeIds || []).forEach(recipeId => {
+    try {
+      event.remove({ id: recipeId })
+      removed++
+    } catch (e) {
+      console.warn(`[食韵筑家] 按配方 ID 删除失败: ${recipeId} → ${e}`)
       skipped++
     }
   })
