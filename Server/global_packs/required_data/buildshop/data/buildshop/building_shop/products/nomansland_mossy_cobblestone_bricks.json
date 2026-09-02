@@ -1,0 +1,17 @@
+{
+  "id": "nomansland_mossy_cobblestone_bricks",
+  "item": "nomansland:mossy_cobblestone_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "苔藓圆石砖",
+  "description": "无人之地风格的苔藓圆石砖",
+  "enabled": true,
+  "sort": 37
+}

@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_sugilite_bricks",
+  "item": "caverns_and_chasms:sugilite_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "舒俱来石砖",
+  "description": "舒俱来石烧制的砖块",
+  "enabled": true,
+  "sort": 33
+}

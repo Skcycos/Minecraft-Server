@@ -1,0 +1,17 @@
+{
+  "id": "mossy_stone_bricks",
+  "item": "minecraft:mossy_stone_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "苔石砖",
+  "description": "覆着苔藓的石砖",
+  "enabled": true,
+  "sort": 10
+}

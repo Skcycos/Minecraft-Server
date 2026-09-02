@@ -1,0 +1,17 @@
+{
+  "id": "nomansland_cobbled_deepslate_bricks",
+  "item": "nomansland:cobbled_deepslate_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "无人之地深板岩砖",
+  "description": "无人之地风格的深板岩圆石砖",
+  "enabled": true,
+  "sort": 36
+}

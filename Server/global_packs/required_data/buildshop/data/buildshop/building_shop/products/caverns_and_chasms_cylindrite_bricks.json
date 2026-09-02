@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_cylindrite_bricks",
+  "item": "caverns_and_chasms:cylindrite_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "圆柱石砖",
+  "description": "圆柱石烧制的砖块",
+  "enabled": true,
+  "sort": 25
+}

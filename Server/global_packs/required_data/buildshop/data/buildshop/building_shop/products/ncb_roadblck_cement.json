@@ -1,0 +1,17 @@
+{
+  "id": "ncb_roadblck_cement",
+  "item": "ncb_roadblck:cement",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "水泥",
+  "description": "建筑用的水泥块",
+  "enabled": true,
+  "sort": 35
+}

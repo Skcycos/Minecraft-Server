@@ -1,6 +1,19 @@
 [
   {
     "user": {
+      "type": "player",
+      "name": "Tanrunn",
+      "uniqueId": "27a96fec-9b28-4152-b433-0dd8f085333b"
+    },
+    "time": 1788357295430,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/IeAwxDZbSp"
+    }
+  },
+  {
+    "user": {
       "type": "other",
       "name": "Server"
     },

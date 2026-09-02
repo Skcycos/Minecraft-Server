@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_cassiterite_bricks",
+  "item": "caverns_and_chasms:cassiterite_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "锡石砖",
+  "description": "锡石烧制的砖块",
+  "enabled": true,
+  "sort": 19
+}

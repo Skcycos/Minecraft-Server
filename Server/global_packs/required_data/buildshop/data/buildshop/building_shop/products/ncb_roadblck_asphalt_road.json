@@ -1,0 +1,17 @@
+{
+  "id": "ncb_roadblck_asphalt_road",
+  "item": "ncb_roadblck:asphalt_road",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "沥青路面",
+  "description": "铺设道路的沥青方块",
+  "enabled": true,
+  "sort": 34
+}

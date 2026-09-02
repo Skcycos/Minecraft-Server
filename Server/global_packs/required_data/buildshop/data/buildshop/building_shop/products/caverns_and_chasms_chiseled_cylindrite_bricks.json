@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_chiseled_cylindrite_bricks",
+  "item": "caverns_and_chasms:chiseled_cylindrite_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "錾制圆柱石砖",
+  "description": "带錾纹的圆柱石砖",
+  "enabled": true,
+  "sort": 20
+}

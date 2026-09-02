@@ -140,6 +140,30 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'easy_mob_farm:enduring_capture_net', reason: 'bug' },
   { id: 'easy_mob_farm:ironbound_containment_cage', reason: 'bug' },
   { id: 'easy_mob_farm:mystic_binding_crystal', reason: 'bug' },
+
+  // —— Easy Mob Farm：农场方块整体禁用（含 bug） ——
+  { id: 'easy_mob_farm:animal_plains_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:bee_hive_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:desert_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:iron_golem_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:jungle_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:lucky_drop_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:monster_plains_cave_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:nether_fortress_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:ocean_farm', reason: 'bug' },
+  { id: 'easy_mob_farm:swamp_farm', reason: 'bug' },
+
+  // —— Easy Mob Farm：农场升级模板（配套农场整体禁用） ——
+  { id: 'easy_mob_farm:tier0_mob_farm_template', reason: 'bug' },
+  { id: 'easy_mob_farm:tier1_mob_farm_template', reason: 'bug' },
+  { id: 'easy_mob_farm:tier2_mob_farm_template', reason: 'bug' },
+  { id: 'easy_mob_farm:tier3_mob_farm_template', reason: 'bug' },
+
+  // —— 预制建筑扩展：自定义蓝图 ——
+  { id: 'prefab_custom_addon:custom_blueprint', reason: '可绕过建筑限制' },
+
+  // —— 预制建筑：正则禁用整个模组的全部合成 ——
+  { pattern: /prefab:.*/, reason: '本服禁用 预制建筑 全部合成' },
 ]
 
 /**

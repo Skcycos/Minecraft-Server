@@ -1,0 +1,17 @@
+{
+  "id": "dark_prismarine",
+  "item": "minecraft:dark_prismarine",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "暗海晶石",
+  "description": "深色的海晶建材",
+  "enabled": true,
+  "sort": 7
+}

@@ -1,0 +1,17 @@
+{
+  "id": "dripstone_block",
+  "item": "minecraft:dripstone_block",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "滴水石块",
+  "description": "溶洞常见的滴水石",
+  "enabled": true,
+  "sort": 8
+}

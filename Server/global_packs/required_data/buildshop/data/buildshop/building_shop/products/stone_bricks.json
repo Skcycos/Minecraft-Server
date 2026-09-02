@@ -1,0 +1,17 @@
+{
+  "id": "stone_bricks",
+  "item": "minecraft:stone_bricks",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "石砖",
+  "description": "经典的石砖建材",
+  "enabled": true,
+  "sort": 17
+}

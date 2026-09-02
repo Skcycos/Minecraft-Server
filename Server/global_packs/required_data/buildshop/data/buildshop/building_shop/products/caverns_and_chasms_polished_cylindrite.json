@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_polished_cylindrite",
+  "item": "caverns_and_chasms:polished_cylindrite",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "磨制圆柱石",
+  "description": "打磨光滑的圆柱石",
+  "enabled": true,
+  "sort": 28
+}

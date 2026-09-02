@@ -1,0 +1,10 @@
+#Prefab Custom Addon common config
+[download]
+	#拓展包下载服务器地址 (例如 http://your.server:9999)
+	serverUrl = "http://121.89.89.67:9999"
+	trustedServers = ["http://121.89.89.67:9999"]
+
+#Gameplay settings
+[gameplay]
+	#是否启用 custom_blueprint 配方 (true=可以合成, false=无法合成, 蓝图只能通过指令/创造栏获得). 8 个外包建筑蓝图 (outsource_blueprint_*) 不受此开关影响, 始终生效.
+	enableCustomBlueprintRecipe = true

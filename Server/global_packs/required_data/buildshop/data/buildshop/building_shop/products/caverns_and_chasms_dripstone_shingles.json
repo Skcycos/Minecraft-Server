@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_dripstone_shingles",
+  "item": "caverns_and_chasms:dripstone_shingles",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "滴水石瓦",
+  "description": "滴水石制成的瓦片",
+  "enabled": true,
+  "sort": 26
+}

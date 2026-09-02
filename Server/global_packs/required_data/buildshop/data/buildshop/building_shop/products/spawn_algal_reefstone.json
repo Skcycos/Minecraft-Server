@@ -1,0 +1,17 @@
+{
+  "id": "spawn_algal_reefstone",
+  "item": "spawn:algal_reefstone",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "藻生礁石",
+  "description": "附着海藻的礁石块",
+  "enabled": true,
+  "sort": 39
+}

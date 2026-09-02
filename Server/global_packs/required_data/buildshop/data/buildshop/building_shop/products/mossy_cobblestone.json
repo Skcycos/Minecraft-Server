@@ -1,0 +1,17 @@
+{
+  "id": "mossy_cobblestone",
+  "item": "minecraft:mossy_cobblestone",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "苔石",
+  "description": "长满苔藓的圆石",
+  "enabled": true,
+  "sort": 9
+}

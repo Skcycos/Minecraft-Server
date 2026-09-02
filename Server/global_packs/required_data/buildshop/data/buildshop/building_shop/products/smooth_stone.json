@@ -1,0 +1,17 @@
+{
+  "id": "smooth_stone",
+  "item": "minecraft:smooth_stone",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "平滑石头",
+  "description": "打磨平滑的石头",
+  "enabled": true,
+  "sort": 16
+}

@@ -1,0 +1,17 @@
+{
+  "id": "caverns_and_chasms_smooth_cassiterite",
+  "item": "caverns_and_chasms:smooth_cassiterite",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "平滑锡石",
+  "description": "平滑切制的锡石",
+  "enabled": true,
+  "sort": 30
+}

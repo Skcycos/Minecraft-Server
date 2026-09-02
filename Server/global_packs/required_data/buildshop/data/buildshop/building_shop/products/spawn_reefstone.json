@@ -1,0 +1,17 @@
+{
+  "id": "spawn_reefstone",
+  "item": "spawn:reefstone",
+  "categories": [
+    "stone"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 1,
+  "bulkSize": 64,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "礁石",
+  "description": "海洋遗迹的礁石块",
+  "enabled": true,
+  "sort": 38
+}
