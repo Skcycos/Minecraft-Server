@@ -142,6 +142,25 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'easy_mob_farm:mystic_binding_crystal', reason: 'bug' },
 ]
 
+/**
+ * 按配方 ID 禁用（同一物品多 NBT 变体、只禁某变体合成时使用，无 tooltip）
+ * @typedef {{ id: string, reason?: string }} DisabledRecipeEntry
+ * @type {DisabledRecipeEntry[]}
+ */
+const DISABLED_RECIPE_IDS = [
+  // —— Easy Mob Farm：全部农场 T0 合成（T0 与 T1~3 是同一物品，只能按配方删） ——
+  { id: 'easy_mob_farm:mob_farm/animal_plains_farm/tier0_animal_plains_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/bee_hive_farm/tier0_bee_hive_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/desert_farm/tier0_desert_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/iron_golem_farm/tier0_iron_golem_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/jungle_farm/tier0_jungle_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/monster_plains_cave/tier0_monster_plains_cave_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/nether_fortress_farm/tier0_nether_fortress_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/ocean_farm/tier0_ocean_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/swamp_farm/tier0_swamp_farm', reason: '其他方式获取' },
+  { id: 'easy_mob_farm:mob_farm/lucky_drop_farm/tier0_lucky_drop_farm', reason: '其他方式获取' },
+]
+
 // 挂到 global，供 server / client 脚本读取
 global.SYDisabledCraft = {
   /** 完整条目（含 reason） */
@@ -150,6 +169,12 @@ global.SYDisabledCraft = {
   ids: DISABLED_CRAFT_ENTRIES.filter(e => e.id).map(e => e.id),
   /** 正则 pattern 列表（匹配删除 + tooltip），如 /caverns_and_chasms:.*_potion/ */
   patterns: DISABLED_CRAFT_ENTRIES.filter(e => e.pattern).map(e => e.pattern),
+  /** 按配方 ID 禁用列表（仅删配方，无 tooltip） */
+  recipeIds: DISABLED_RECIPE_IDS.map(e => e.id),
+  /** 配方 ID -> reason */
+  recipeIdReasons: Object.fromEntries(
+    DISABLED_RECIPE_IDS.map(e => [e.id, e.reason || '其他方式获取'])
+  ),
   /** id 或 pattern -> reason */
   reasons: Object.fromEntries(
     DISABLED_CRAFT_ENTRIES.map(e => [e.id || String(e.pattern), e.reason || '服务器已禁用该物品的合成'])
@@ -160,5 +185,5 @@ global.SYDisabledCraft = {
 }
 
 console.info(
-  `[食韵筑家] 已注册禁用合成 ${global.SYDisabledCraft.ids.length} 项 + 正则 ${global.SYDisabledCraft.patterns.length} 条（startup）`
+  `[食韵筑家] 已注册禁用合成 ${global.SYDisabledCraft.ids.length} 项 + 正则 ${global.SYDisabledCraft.patterns.length} 条 + 按配方 ${global.SYDisabledCraft.recipeIds.length} 条（startup）`
 )
