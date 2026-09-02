@@ -28,17 +28,6 @@
 - `id`：仍支持带 NBT 的完整字符串，只精确匹配该变体
 - 同一个数组里 `id` 和 `pattern` 可以混用；正则条目无法用 `Item.of` 校验物品是否存在，会直接作为 Ingredient 添加
 
-### 按配方 ID 禁用（DISABLED_RECIPE_IDS）
-
-同一物品靠 NBT 区分多个变体（如 Easy Mob Farm 的 T0~T3 农场是同一物品）、只想禁用某个变体的合成时，把**配方 ID**（不是物品 ID）加到同文件里的 `DISABLED_RECIPE_IDS` 数组：
-
-```js
-{ id: 'easy_mob_farm:mob_farm/ocean_farm/tier0_ocean_farm', reason: '其他方式获取' },
-```
-
-- 仅在服务端删除该配方（JEI 也搜不到），**不会**添加 tooltip（物品共享 id，无法只标注某个变体）
-- 配方 ID 可在 mod jar 的 `data/<modid>/recipe/` 路径里查到
-
 ## 会自动同步什么？
 
 | 脚本 | 作用 |

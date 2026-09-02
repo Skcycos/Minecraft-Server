@@ -4,7 +4,7 @@
 
 ServerEvents.recipes(event => {
   const registry = global.SYDisabledCraft
-  if (!registry || (!registry.ids && !registry.patterns && !registry.recipeIds)) {
+  if (!registry || (!registry.ids && !registry.patterns)) {
     console.warn('[食韵筑家] SYDisabledCraft 为空，跳过配方禁用')
     return
   }
@@ -42,16 +42,19 @@ ServerEvents.recipes(event => {
     }
   })
 
-  // 按配方 ID（同一物品多 NBT 变体、只禁某变体的合成，如农场 T0）
-  ;(registry.recipeIds || []).forEach(recipeId => {
-    try {
-      event.remove({ id: recipeId })
-      removed++
-    } catch (e) {
-      console.warn(`[食韵筑家] 按配方 ID 删除失败: ${recipeId} → ${e}`)
-      skipped++
-    }
-  })
-
   console.info(`[食韵筑家] 禁用合成输出：处理 ${removed} 项，跳过 ${skipped} 项`)
+
+  // —— Easy Mob Farm：全部农场 T0 合成禁用（T0 与 T1~3 是同一物品，只能按配方删） ——
+  ;[
+    'easy_mob_farm:mob_farm/animal_plains_farm/tier0_animal_plains_farm',
+    'easy_mob_farm:mob_farm/bee_hive_farm/tier0_bee_hive_farm',
+    'easy_mob_farm:mob_farm/desert_farm/tier0_desert_farm',
+    'easy_mob_farm:mob_farm/iron_golem_farm/tier0_iron_golem_farm',
+    'easy_mob_farm:mob_farm/jungle_farm/tier0_jungle_farm',
+    'easy_mob_farm:mob_farm/monster_plains_cave/tier0_monster_plains_cave_farm',
+    'easy_mob_farm:mob_farm/nether_fortress_farm/tier0_nether_fortress_farm',
+    'easy_mob_farm:mob_farm/ocean_farm/tier0_ocean_farm',
+    'easy_mob_farm:mob_farm/swamp_farm/tier0_swamp_farm',
+    'easy_mob_farm:mob_farm/lucky_drop_farm/tier0_lucky_drop_farm',
+  ].forEach(recipeId => event.remove({ id: recipeId }))
 })
