@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.368Z" hostname="tanrunn-fedora" time="0.006">
+  <properties/>
+  <testcase name="automatedEventIsNotRecorded()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <testcase name="integrationDisabledDoesNotRecord()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <testcase name="stopCleanupClearsCache()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.0"/>
+  <testcase name="ttlExpiryAllowsRepost()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <testcase name="multipleDistinctEventsAreRecorded()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.0"/>
+  <testcase name="frameworkDisabledDoesNotRecord()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.0"/>
+  <testcase name="statsDisabledDoesNotRecord()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <testcase name="manualEventIsRecorded()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.0"/>
+  <testcase name="duplicateEventIdIsNotRecordedTwice()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.0"/>
+  <testcase name="linkageErrorIsIsolated()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <testcase name="failedStatsWriteDoesNotCommitEventId()" classname="com.tanrunn.tcth.impl.stats.GunnerStatsTrackerTest" time="0.001"/>
+  <system-out><![CDATA[[00:14:10] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Gunner stats failed for event 5924f59a-5eec-41ef-a5ef-a7ad68e62183, player fa3d6c88-7c8f-4c44-8857-f715a4911a5f, weapon scguns:defender_pistol: java.lang.LinkageError: bad bytecode
+[00:14:10] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Gunner stats failed for event 43ff1134-4952-45c2-ad8b-772dc564311c, player ffd2d7de-c92c-4d75-a639-a8c9b659ec91, weapon scguns:defender_pistol: java.lang.RuntimeException: disk full
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

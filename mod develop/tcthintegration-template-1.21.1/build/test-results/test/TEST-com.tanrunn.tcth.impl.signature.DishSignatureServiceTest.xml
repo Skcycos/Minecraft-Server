@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:09.777Z" hostname="tanrunn-fedora" time="0.006">
+  <properties/>
+  <testcase name="countIsUnchanged()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.001"/>
+  <testcase name="disabledFrameworkDoesNotSign()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="nonDishDoesNotSign()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="disabledConfigDoesNotSign()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="signFailureDoesNotThrow()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.001"/>
+  <testcase name="rawDoughIsNotADishAndIsNeverSigned()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="signsRealDishStackInPlace()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.001"/>
+  <testcase name="automatedFlagIsNotPartOfService()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="emptyStackDoesNotSign()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="nullPlayerDoesNotSign()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.001"/>
+  <testcase name="eventDefensiveCopyCarriesSignatureButIsIndependent()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <testcase name="previousSignatureIsOverwrittenByNewChef()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.001"/>
+  <testcase name="otherModComponentsArePreserved()" classname="com.tanrunn.tcth.impl.signature.DishSignatureServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

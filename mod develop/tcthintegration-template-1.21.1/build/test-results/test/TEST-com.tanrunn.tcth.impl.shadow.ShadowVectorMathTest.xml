@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:09.620Z" hostname="tanrunn-fedora" time="0.003">
+  <properties/>
+  <testcase name="behindBoundaryAtExactlyOneHundredThirtyFiveDegrees()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="zeroLengthDistanceFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.001"/>
+  <testcase name="nullInputFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="thresholdsAreSingleSourceConstants()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="nonFiniteInputFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="watchedRequiresLineOfSight()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="watchedAndBehindAreMutuallyExclusiveAcrossTheFullCircle()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.001"/>
+  <testcase name="targetLookingStraightAtThiefIsWatched()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="zeroLengthTargetLookFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="targetLookingAwayFromThiefIsBehind()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="watcherBoundaryAtExactlyFortyFiveDegreesRequiresLos()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="behindRequiresLineOfSight()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="watchedBoundaryAtExactlyFortyFiveDegrees()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.001"/>
+  <testcase name="sideViewIsNeitherWatchedNorBehind()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <testcase name="lineOfSightKeepsFactsMutuallyExclusive()" classname="com.tanrunn.tcth.impl.shadow.ShadowVectorMathTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

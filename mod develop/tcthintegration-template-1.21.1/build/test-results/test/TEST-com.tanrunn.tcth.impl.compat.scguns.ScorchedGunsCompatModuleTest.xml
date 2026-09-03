@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" tests="36" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:52.721Z" hostname="tanrunn-fedora" time="1.267">
+  <properties/>
+  <testcase name="pvpIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.165"/>
+  <testcase name="thirdPartyFinisherIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.068"/>
+  <testcase name="nonSgProjectileIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="beamWithNonBulletDamageTypeIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="arrowRegistryCapacityIsBounded()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.779"/>
+  <testcase name="fallDeathAfterHitIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="arrowServerStopIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.006"/>
+  <testcase name="integrationDisabledDoesNotRegisterArrows()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="duplicateDeathEventPublishesOnlyOnce()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.012"/>
+  <testcase name="beamFakePlayerIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.058"/>
+  <testcase name="niamiArrowUsesFrozenWeaponSnapshot()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.005"/>
+  <testcase name="niamiArrowKillPublishes()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="explosionKillPublishes()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="emptyWeaponIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="integrationDisabledPublishesNothing()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.004"/>
+  <testcase name="nonGunWeaponIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="vanillaBowArrowIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="beamWithNonPlayerCausingEntityIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="expiredArrowIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="beamKillPublishesOnce()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="semiBeamKillPublishes()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="realSgTypesAreLoadable()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.021"/>
+  <testcase name="projectileKillPublishesOnce()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="fakePlayerShooterIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="arrowShooterLogoutIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.043"/>
+  <testcase name="fireDeathAfterHitIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="beamWithNonBeamGunIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="offHandOrNonNiamiMainHandDoesNotRegister()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="meleeKillIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="hitWithoutKillPublishesNothing()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="shooterMismatchIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="unclassifiedTargetIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.001"/>
+  <testcase name="arrowLeftWorldIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.039"/>
+  <testcase name="arrowShooterMismatchIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <testcase name="unregisteredArrowIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.003"/>
+  <testcase name="delayedPoisonOrWitherDeathIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.scguns.ScorchedGunsCompatModuleTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.533Z" hostname="tanrunn-fedora" time="0.044">
+  <properties/>
+  <testcase name="differentEventIdsBothSettle()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.005"/>
+  <testcase name="failedSendDoesNotConsumeEventIdAndCanRetry()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.002"/>
+  <testcase name="stopClearsIdempotencyCache()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.029"/>
+  <testcase name="rewardSwitchOffSendsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.001"/>
+  <testcase name="moduleExceptionDoesNotBreakTick()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.001"/>
+  <testcase name="rateLimitDropsSurplusSends()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.001"/>
+  <testcase name="automatedEventSendsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.0"/>
+  <testcase name="nullPlayerSendsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.001"/>
+  <testcase name="chefDishModuleAndFarmerModuleAreIndependent()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.0"/>
+  <testcase name="frameworkSwitchOffSendsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.0"/>
+  <testcase name="successfulSettlementsAreIdempotentByEventId()" classname="com.tanrunn.tcth.impl.compat.jobsplus.FarmerRewardModuleTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Farmer reward settlement failed for 492e4fcb-d8aa-4e8d-abd3-e0b8071bf757: java.lang.IllegalStateException: boom
+[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Farmer reward settlement failed for 990da8fc-326b-4c06-b3af-9fa104625a2d: java.lang.NullPointerException: Cannot invoke "com.mojang.authlib.GameProfile.getName()" because the return value of "net.minecraft.server.level.ServerPlayer.getGameProfile()" is null
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

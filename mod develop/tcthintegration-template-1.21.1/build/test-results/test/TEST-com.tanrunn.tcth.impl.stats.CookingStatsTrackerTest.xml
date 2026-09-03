@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.252Z" hostname="tanrunn-fedora" time="0.069">
+  <properties/>
+  <testcase name="automatedEventsAreNotCounted()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.003"/>
+  <testcase name="dishClassifierCheckIsApplied()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <testcase name="tierDataReloadRegisteredByTcthDataReloads()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.001"/>
+  <testcase name="statsDataDoesNotExistUntilFirstRecord()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <testcase name="disabledModuleCountsNothing()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.001"/>
+  <testcase name="duplicateEventIdIsNotCountedTwice()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <testcase name="nonDishItemsAreNotCounted()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.001"/>
+  <testcase name="twoPlayersAreIsolated()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <testcase name="eventIdCacheIsBounded()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.06"/>
+  <testcase name="countIsAccumulatedAndZeroCountFiltered()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <testcase name="zeroCountEventIsNotCounted()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.001"/>
+  <testcase name="nullPlayerEventsAreNotCounted()" classname="com.tanrunn.tcth.impl.stats.CookingStatsTrackerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

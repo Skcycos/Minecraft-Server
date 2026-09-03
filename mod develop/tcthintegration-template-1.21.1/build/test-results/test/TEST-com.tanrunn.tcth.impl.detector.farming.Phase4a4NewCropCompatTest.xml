@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" tests="22" skipped="0" failures="2" errors="0" timestamp="2026-08-23T16:13:54.253Z" hostname="tanrunn-fedora" time="0.19">
+  <properties/>
+  <testcase name="colonyAgePositiveWithDecreasePublishesWhenTagAllowed()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="optionalDependencyVersionRangesArePinnedToValidatedMajors()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="optionalModJarsHaveExpectedVersions()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.002">
+    <failure message="org.opentest4j.AssertionFailedError: missing dev-mods/neapolitan-6.0.1.jar ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: missing dev-mods/neapolitan-6.0.1.jar ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at app//com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest.assertModMetadata(Phase4a4NewCropCompatTest.java:101)
+	at app//com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest.optionalModJarsHaveExpectedVersions(Phase4a4NewCropCompatTest.java:89)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="normalizeDoublePlantUpperGoesToLower()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.0"/>
+  <testcase name="releaseJarTemplateDoesNotShipThirdPartyClassFilesInResources()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.034"/>
+  <testcase name="mainPublicApiHasZeroThirdPartyImports()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.011"/>
+  <testcase name="powderyCaneAge2Or3LitTrueWithResetIsEvidence()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="successHelpersAcceptConsumeAndSuccess()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.0"/>
+  <testcase name="neapolitanAndMndMixinConfigsGatedByRequiredMods()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.002"/>
+  <testcase name="thirdPartyTypesOnlyInCompatMixinPackages()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.12"/>
+  <testcase name="powderyCannonLitTrueToFalseIsEvidence()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="matureSweetBerryStyleRightClickPublishesOnce()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.002"/>
+  <testcase name="serverMatchingJarBlockstatesContainExpectedIds()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001">
+    <failure message="org.opentest4j.AssertionFailedError: missing dev-mods/neapolitan-6.0.1.jar ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: missing dev-mods/neapolitan-6.0.1.jar ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at app//com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest.assertJarHas(Phase4a4NewCropCompatTest.java:455)
+	at app//com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest.serverMatchingJarBlockstatesContainExpectedIds(Phase4a4NewCropCompatTest.java:436)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="powderyCannonNegativeEvidenceMatrix()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="colonyTagDeniedAgeZeroNoAgeDropOrFailedReturnIsZero()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="colonyKnifeFullResetPublishes()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="noAgeDecreaseIsZero()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.0"/>
+  <testcase name="powderyHandlersRejectFailedOrFakeWithoutPublishing()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <testcase name="powderyCaneNegativeEvidenceMatrix()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.0"/>
+  <testcase name="normalizeDoublePlantLowerUnchanged()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.0"/>
+  <testcase name="upperAndLowerBreakSameTickPublishAtMostOnce()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.003"/>
+  <testcase name="immatureOrFailedOrFakePlayerRightClickIsZero()" classname="com.tanrunn.tcth.impl.detector.farming.Phase4a4NewCropCompatTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

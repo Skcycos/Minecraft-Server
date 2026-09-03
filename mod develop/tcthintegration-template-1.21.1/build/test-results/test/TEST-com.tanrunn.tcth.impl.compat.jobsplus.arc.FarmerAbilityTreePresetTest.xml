@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" tests="15" skipped="0" failures="1" errors="0" timestamp="2026-08-23T16:13:49.964Z" hostname="tanrunn-fedora" time="0.081">
+  <properties/>
+  <testcase name="eachRouteIIExcludesIIIOnly()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.004"/>
+  <testcase name="parentChainsAreCorrect()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.006"/>
+  <testcase name="uiIconsReferenceValidItems()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.004"/>
+  <testcase name="eachRouteIIINeverExcludesAnything()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="studyMultipliersAre115_135_160AndNeverStack()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="tillingRouteIsJavaDrivenWithoutArcPowerup()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="fourRoutesWithThreeNodesEach()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.006"/>
+  <testcase name="shearingTargetsSheepWithShearsInHand()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.001"/>
+  <testcase name="serverDeployedCopyMatchesPresets()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.027">
+    <failure message="org.opentest4j.AssertionFailedError: server copy of arc/farmer/breed_animal.json must match the preset ==&gt; expected: &lt;{&#10;  &quot;holder&quot;: {&#10;    &quot;type&quot;: &quot;jobsplus:job&quot;,&#10;    &quot;id&quot;: &quot;tcth:farmer&quot;&#10;  },&#10;  &quot;type&quot;: &quot;arc:on_breed_animal&quot;,&#10;  &quot;rewards&quot;: [&#10;    {&#10;      &quot;type&quot;: &quot;jobsplus:job_exp&quot;,&#10;      &quot;chance&quot;: 100,&#10;      &quot;min&quot;: 3,&#10;      &quot;max&quot;: 5&#10;    }&#10;  ]&#10;}&#10;&gt; but was: &lt;{&#13;&#10;  &quot;holder&quot;: {&#13;&#10;    &quot;type&quot;: &quot;jobsplus:job&quot;,&#13;&#10;    &quot;id&quot;: &quot;tcth:farmer&quot;&#13;&#10;  },&#13;&#10;  &quot;type&quot;: &quot;arc:on_breed_animal&quot;,&#13;&#10;  &quot;rewards&quot;: [&#13;&#10;    {&#13;&#10;      &quot;type&quot;: &quot;jobsplus:job_exp&quot;,&#13;&#10;      &quot;chance&quot;: 100,&#13;&#10;      &quot;min&quot;: 3,&#13;&#10;      &quot;max&quot;: 5&#13;&#10;    }&#13;&#10;  ]&#13;&#10;}&#13;&#10;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: server copy of arc/farmer/breed_animal.json must match the preset ==&gt; expected: &lt;{
+  &quot;holder&quot;: {
+    &quot;type&quot;: &quot;jobsplus:job&quot;,
+    &quot;id&quot;: &quot;tcth:farmer&quot;
+  },
+  &quot;type&quot;: &quot;arc:on_breed_animal&quot;,
+  &quot;rewards&quot;: [
+    {
+      &quot;type&quot;: &quot;jobsplus:job_exp&quot;,
+      &quot;chance&quot;: 100,
+      &quot;min&quot;: 3,
+      &quot;max&quot;: 5
+    }
+  ]
+}
+&gt; but was: &lt;{
+  &quot;holder&quot;: {
+    &quot;type&quot;: &quot;jobsplus:job&quot;,
+    &quot;id&quot;: &quot;tcth:farmer&quot;
+  },
+  &quot;type&quot;: &quot;arc:on_breed_animal&quot;,
+  &quot;rewards&quot;: [
+    {
+      &quot;type&quot;: &quot;jobsplus:job_exp&quot;,
+      &quot;chance&quot;: 100,
+      &quot;min&quot;: 3,
+      &quot;max&quot;: 5
+    }
+  ]
+}
+&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at app//com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest.serverDeployedCopyMatchesPresets(FarmerAbilityTreePresetTest.java:315)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="livestockCoversThreeEventsWithTierPackages()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.006"/>
+  <testcase name="eachRouteIExcludesIIAndIII()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="harvestRouteIsJavaDrivenWithoutArcPowerup()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="allTwentyFourPowerupLangKeysPresentInBothLanguages()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.002"/>
+  <testcase name="requiredLevelsAreExact()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.005"/>
+  <testcase name="pricesArePositiveAndReasonable()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.FarmerAbilityTreePresetTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

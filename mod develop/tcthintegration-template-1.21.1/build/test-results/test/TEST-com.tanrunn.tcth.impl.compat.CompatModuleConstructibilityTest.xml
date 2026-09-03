@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.CompatModuleConstructibilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:47.586Z" hostname="tanrunn-fedora" time="0.01">
+  <properties/>
+  <testcase name="allCompatModulesHavePublicNoArgConstructor()" classname="com.tanrunn.tcth.impl.compat.CompatModuleConstructibilityTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

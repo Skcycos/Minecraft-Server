@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" tests="77" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:55.505Z" hostname="tanrunn-fedora" time="0.382">
+  <properties/>
+  <testcase name="hungerPrepareFailsWhenVictimAtFloorOrThiefFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.047"/>
+  <testcase name="hungerInternalRestoreFromThiefSatState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.038"/>
+  <testcase name="hungerSaturationTransferStaysWithinFoodLevels()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="spellTheftCapsPerTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.007"/>
+  <testcase name="healthRespectsVictimFloor()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="effectPrepareFiltersAmbientHarmfulAndBlacklisted()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.011"/>
+  <testcase name="itemOuterRollbackRestoresBothSlotsExactly()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.006"/>
+  <testcase name="hungerOuterRollbackRestoresBothSides()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="itemHighValueModifierApplies()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectCandidatePoolExcludesThiefHeldEffects()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="lifeSiphonHealthStillRespectsTheFloorAndCap()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="effectCancelledRemovalAbortsTheTransfer()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="itemCommitInternalRollbackFailureIsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.05"/>
+  <testcase name="hungerInternalRestoreFromThiefFoodState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="hungerCommitTransfersFoodAndSmallSaturation()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="unregisteredItemRestoreFailureIsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="protocolTypeMismatchRefusesCommitAndRollback()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="healthOuterRollbackRestoresBothSides()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="effectRestoreWithNoOpForceAddReturnsFalse()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="itemRestoreNoOpWriteNeverReportsTrue()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="itemWrongReceiverWriteRestoresCleanly()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="effectThiefStrongerAtCommitFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="hungerHighSaturationInfeasibleProducesNoPlan()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="hungerInternalRestoreFromEachSetterException()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="hungerRestoreNoOpWriteNeverReportsTrue()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="externalRollbackRefusesIntermediateItemState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="hungerRespectsVictimFloor()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="itemCommitTransfersOneWithFullComponents()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="hungerRespectsThiefFullness()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthStrictSnapshotDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="candidatePresentImpliesPrepareNonNullWithoutDrift()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthNeverOverhealsTheThief()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="itemSingleItemInternalRestoreFromRemovedState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="highValueModifierBySleightTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectRestoreWithCancelledThiefRemovalReturnsFalse()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="candidatePresentImpliesPrepareNonNullAcrossTiers()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="hungerSaturationDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectCommitTransfersUpToTwoHundredTicksAtSameAmplifier()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="lifeSiphonHungerNeverBreaksTheFloorOrCap()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="itemSingleItemStackCommitsAndRollsBackExactly()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthCommitExceptionRollsBackInternally()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="coordinatorRandomCallCountsWithRealEngine()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.018"/>
+  <testcase name="healthDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="providerPoolDrawsExactlyOnceOverRenormalisedWeights()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthZeroActualHealFailsCleanWithFullRestore()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="effectRestoreFromRemainderWrittenState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="hungerCommitInternalRollbackFailureIsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="effectTransferIsCappedByVictimRemainingTime()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="spellTheftCapIsStillCappedByRemainingTime()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="effectInternalRestoreFromEveryIntermediateState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="hungerInternalRestoreFromVictimSatState()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="lifeSiphonHealthTransfersPerTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="itemReceiverNoOpWriteIsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="hungerDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectPrepareExcludesStrongerThief()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="healthRestoreNoOpWriteNeverReportsTrue()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthPartialHealMismatchFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="healthRollbackRefusesExternalChanges()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="itemSlotDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="itemSelectsUniformlyAmongReceivableStacks()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="itemCommitExceptionAfterPartialChangeRollsBackInternally()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="coinIsAlwaysRefusedByTheEngine()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.001"/>
+  <testcase name="effectExternalLookalikeEffectIsNotOverwritten()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="itemThiefSlotDriftFailsClean()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="hungerCandidatePoolExcludesInfeasibleSaturation()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="hungerCommitExceptionRollsBackInternally()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="lifeSiphonHungerTransfersPerTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectOuterRollbackRestoresBothSidesExactly()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="healthPrepareFailsWhenVictimAtFloorOrThiefFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="effectPrepareExcludesLongerSameAmplifierThief()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="coordinatorRejectsPlanTypeMismatchWithoutRoll()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.004"/>
+  <testcase name="hungerClampedPostValuesNeverCommit()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.003"/>
+  <testcase name="itemPrepareFailsWhenNothingReceivable()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.001"/>
+  <testcase name="itemRollbackRefusesExternalSlotChanges()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <testcase name="healthCommitTransfersOnePointWithinBounds()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.001"/>
+  <testcase name="unregisteredItemRestoresCleanly()" classname="com.tanrunn.tcth.impl.shadow.PlayerAssetTransferExecutorTest" time="0.002"/>
+  <system-out><![CDATA[[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] HUNGER commit failed (event 4baa7526-f712-4bce-a3ee-7840264b25af): java.lang.RuntimeException: sat boom
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] ITEM commit failed (event 124f271f-ef06-41a3-8725-c0917a025be8): java.lang.RuntimeException: merge boom
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] ITEM commit found an unregistered item (event e93e7f00-b5ea-41d3-ba9c-c51f9dedfe8c)
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] ITEM commit write mismatch (event d78ede34-e22f-4e88-a45a-44290f65a7f1): victim=2 minecraft:diamond thief=9 minecraft:emerald
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] HEALTH commit failed (event 0cb8844e-c861-4549-bd0f-e521b3c9cf9e): java.lang.RuntimeException: heal boom
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] HEALTH commit heal mismatch (event 05c81283-fa5f-46e8-8e78-5802d916d7fa): gain=0.0 loss=1.0 planned=1.0
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] EFFECT commit failed (event c5390637-a55f-4d8d-8f8d-65727980dc10): java.lang.RuntimeException: thief write boom
+[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] HUNGER commit write mismatch (event a01d3783-54d7-41a2-8450-e7702eb214b4)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

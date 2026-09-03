@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.brewinandchewin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "KegPouringMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

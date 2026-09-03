@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.484Z" hostname="tanrunn-fedora" time="0.015">
+  <properties/>
+  <testcase name="duplicateEventIdIsProcessedOnce()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.002"/>
+  <testcase name="nullPlayerDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <testcase name="nonCatalogItemDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="oneUnlockFailureDoesNotAffectLaterEvents()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="cachedIdsExpireAfterFortyTicks()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <testcase name="frameworkDisabledDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <testcase name="emptyResultDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.002"/>
+  <testcase name="unlockFailureDoesNotCommitEventIdAndIsRetryable()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="automatedProductionDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="serverStoppingClearsCache()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="adapterIsDefensiveWithoutLiveProgressSystem()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="nonDishDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.001"/>
+  <testcase name="disabledCookbookToggleDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <testcase name="dishTakeOutUnlocksMatchingEntry()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <testcase name="alreadyUnlockedEntryIsSkippedWithoutDuplicateUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideCompatModuleTest" time="0.0"/>
+  <system-out><![CDATA[[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Field Guide unlock handler failed for player 'TestPlayer' item 'minecraft:cooked_cod' event 84fb2318-2d15-41c2-842b-7b8cbab187d4: java.lang.IllegalStateException: boom
+[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Field Guide unlock handler failed for player 'TestPlayer' item 'minecraft:cooked_cod' event 6d1d97a5-331d-4315-91dc-5972eb910716: java.lang.IllegalStateException: boom
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:51.133Z" hostname="tanrunn-fedora" time="0.007">
+  <properties/>
+  <testcase name="clearPlayerRemovesEntry()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.001"/>
+  <testcase name="brewerCooldownIsIndependentOfChefTastingCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.0"/>
+  <testcase name="conditionPassesWhenNotOnCooldownAndBlocksWhenOnCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.003"/>
+  <testcase name="clearAllRemovesAllEntries()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.0"/>
+  <testcase name="cooldownBoundaryAt399And400()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.001"/>
+  <testcase name="noCooldownBeforeFirstCommit()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerDrinkCooldownTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

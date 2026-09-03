@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.032Z" hostname="tanrunn-fedora" time="0.217">
+  <properties/>
+  <testcase name="automatedEventsAreNotCounted()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.003"/>
+  <testcase name="disabledModuleCountsNothing()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="duplicateEventIdIsNotCountedTwice()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.001"/>
+  <testcase name="eventIdCacheRespectsHardCap()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.206"/>
+  <testcase name="gradedRealEventIsCounted()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="nullPlayerEventsAreNotCounted()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.001"/>
+  <testcase name="t3IsNotCounted()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="unknownTierIsNotCounted()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="expiredEventIdsAllowRetry()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="stopClearsEventIdCache()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.001"/>
+  <testcase name="configReadExceptionFailsClosedForStats()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.0"/>
+  <testcase name="disabledFrameworkCountsNothing()" classname="com.tanrunn.tcth.impl.stats.BrewingStatsTrackerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

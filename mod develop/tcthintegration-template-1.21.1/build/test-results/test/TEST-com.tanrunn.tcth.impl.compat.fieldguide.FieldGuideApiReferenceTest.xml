@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideApiReferenceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.234Z" hostname="tanrunn-fedora" time="0.227">
+  <properties/>
+  <testcase name="compiledMainOutputContainsNoFieldGuideClasses()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideApiReferenceTest" time="0.108"/>
+  <testcase name="modsTomlDeclaresFieldGuideOptional()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideApiReferenceTest" time="0.001"/>
+  <testcase name="fieldGuideReferencesOnlyInCompatPackage()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideApiReferenceTest" time="0.117"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

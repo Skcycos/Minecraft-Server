@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.066Z" hostname="tanrunn-fedora" time="0.157">
+  <properties/>
+  <testcase name="ambiguousMultipleTrackerEntriesResolveToNull()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.141"/>
+  <testcase name="singleTrackerRecipeIdIsResolved()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.004"/>
+  <testcase name="emptyTrackerResolvesToNull()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <testcase name="nullPlayerIsAutomated()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.004"/>
+  <testcase name="nullRecipeProducesNullRecipeId()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <testcase name="mapsPlayerDevicePositionRecipeAndResultStack()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <testcase name="excludedItemIsNotPublished()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <testcase name="eventResultIsTheOnTakeStackNotTheHeldItem()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <testcase name="resolvedRecipeIdSurvivesTrackerClearing()" classname="com.tanrunn.tcth.impl.compat.farmersdelight.FarmersDelightDishAdapterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

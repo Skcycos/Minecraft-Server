@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:47.902Z" hostname="tanrunn-fedora" time="0.945">
+  <properties/>
+  <testcase name="threeWaySwitchFailClosed()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.011"/>
+  <testcase name="perTickRateLimitDropsExcess()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.06"/>
+  <testcase name="playerLogoutClearsOnlyThatPlayersState()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.005"/>
+  <testcase name="unknownT3AutomatedAndNullPlayerSettleZero()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.001"/>
+  <testcase name="commonAndT2EachSettleExactlyOnce()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.001"/>
+  <testcase name="exceptionIsIsolatedAndSameEventRetryable()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.002"/>
+  <testcase name="idempotencyCacheHardCapNeverExceeds4096()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.858"/>
+  <testcase name="idempotencyCommittedOnlyOnSuccess()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.002"/>
+  <testcase name="sendFailureThenRetrySameEventSettlesOnce()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerRewardModuleTest" time="0.002"/>
+  <system-out><![CDATA[[00:13:47] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Beverage reward settlement failed: java.lang.RuntimeException: boom
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

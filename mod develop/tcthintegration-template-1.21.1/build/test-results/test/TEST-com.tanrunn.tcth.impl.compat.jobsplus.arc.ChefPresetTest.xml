@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.875Z" hostname="tanrunn-fedora" time="0.033">
+  <properties/>
+  <testcase name="chefJobUsesLangKeysNotInlineName()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.0"/>
+  <testcase name="powerupIIIHasMultiplier20WithOnlyMasterSwitch()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.0"/>
+  <testcase name="chefMealsTagExistsInPreset()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.001"/>
+  <testcase name="noStandaloneManualRewardRemains()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.0"/>
+  <testcase name="baseTierRewardsAreMutuallyExclusive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.005"/>
+  <testcase name="powerupIHasMultiplier125AndExcludesHigherTiers()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.002"/>
+  <testcase name="presetHasNoLegacyCookOrPrepareActions()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.003"/>
+  <testcase name="mainModLangContainsAllPowerupKeysInBothLanguages()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.002"/>
+  <testcase name="presetJobAndPowerupsHaveNoInlineNames()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.007"/>
+  <testcase name="t3SuperbHitsT3AndQualityBonusExactlyOnce()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.004"/>
+  <testcase name="tasteMealIsMigratedToTcthChef()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.0"/>
+  <testcase name="powerupIIHasMultiplier15AndExcludesIII()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.001"/>
+  <testcase name="presetHasNoLangDirectory()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.001"/>
+  <testcase name="zhDescriptionsReflectExactMultipliers()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.001"/>
+  <testcase name="powerupMultpliersMatchDescriptions()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.001"/>
+  <testcase name="automatedNeverMatchesAnyReward()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefPresetTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

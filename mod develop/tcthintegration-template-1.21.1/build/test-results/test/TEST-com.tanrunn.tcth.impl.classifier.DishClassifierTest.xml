@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.classifier.DishClassifierTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:45.929Z" hostname="tanrunn-fedora" time="0.277">
+  <properties/>
+  <testcase name="notDishesTagOverridesEverything()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.264"/>
+  <testcase name="buildingBlocksToolsAndDecorationsAreNotDishes()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.001"/>
+  <testcase name="notDishesWinsOverDishesTag()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.005"/>
+  <testcase name="foodItemsAreDishes()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.001"/>
+  <testcase name="notDishesTagFileContainsRawDough()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.001"/>
+  <testcase name="notDishesExclusionWinsOverFoodComponent()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.002"/>
+  <testcase name="dishesTagCanExtendRecognition()" classname="com.tanrunn.tcth.impl.classifier.DishClassifierTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

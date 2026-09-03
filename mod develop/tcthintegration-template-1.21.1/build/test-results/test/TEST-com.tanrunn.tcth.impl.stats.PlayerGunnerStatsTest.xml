@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.392Z" hostname="tanrunn-fedora" time="0.009">
+  <properties/>
+  <testcase name="mostUsedWeaponIsReturned()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="lastKillInfoIsTracked()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="emptyStatsReturnDefaults()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="saturatedAdditionDoesNotOverflow()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="existingWeaponContinuesAccumulatingPastCap()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.003"/>
+  <testcase name="weaponKillsAreTracked()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.001"/>
+  <testcase name="nonFiniteOrNegativeDistanceDoesNotUpdateMax()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="maxDistanceIsTracked()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="totalKillsAccumulate()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="tierDistributionIsTracked()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="nbtLoadSanitizesBadMaxDistance()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.001"/>
+  <testcase name="nbtRoundTripPreservesData()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.0"/>
+  <testcase name="newWeaponBeyondCapIsNotTracked()" classname="com.tanrunn.tcth.impl.stats.PlayerGunnerStatsTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

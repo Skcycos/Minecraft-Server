@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcherTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.960Z" hostname="tanrunn-fedora" time="0.003">
+  <properties/>
+  <testcase name="sendFailureIsSwallowedAndReturnsNull()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcherTest" time="0.002"/>
+  <testcase name="itemStackDataIsDefensiveCopyNotCarrier()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcherTest" time="0.0"/>
+  <testcase name="actionDataFieldsAreCompleteAndCorrect()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcherTest" time="0.001"/>
+  <testcase name="nullRecipeIdOmitsRecipeField()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.DishActionDispatcherTest" time="0.0"/>
+  <system-out><![CDATA[[00:13:49] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Failed to send dish action for tester (item minecraft:cooked_beef, tier COMMON): java.lang.ClassCastException: class net.minecraft.server.level.ServerPlayer cannot be cast to class com.daqem.arc.api.player.ArcServerPlayer (net.minecraft.server.level.ServerPlayer and com.daqem.arc.api.player.ArcServerPlayer are in unnamed module of loader 'app')
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

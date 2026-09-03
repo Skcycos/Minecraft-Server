@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:51.241Z" hostname="tanrunn-fedora" time="0.053">
+  <properties/>
+  <testcase name="commitThenInsideCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.003"/>
+  <testcase name="cooldownExpiresAfterWindow()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <testcase name="logoutClearsPlayerEntry()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <testcase name="noCommitMeansNoCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <testcase name="sharedByAllTastingNodes()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <testcase name="serverStopClearsAllEntries()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <testcase name="registerLifecycleIsIdempotent()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.042"/>
+  <testcase name="canRetriggerAfterCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.002"/>
+  <testcase name="notOnCooldownInitially()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefTastingCooldownTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

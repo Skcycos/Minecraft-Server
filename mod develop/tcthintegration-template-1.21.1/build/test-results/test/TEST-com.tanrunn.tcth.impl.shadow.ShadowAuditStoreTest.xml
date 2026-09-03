@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" tests="49" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:56.598Z" hostname="tanrunn-fedora" time="1.643">
+  <properties/>
+  <testcase name="allCriticalRecordsRefuseAppend()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.199"/>
+  <testcase name="invalidRecordsFailClosedInsteadOfCountingTowardsTheCap()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.007"/>
+  <testcase name="missingRecordsListFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="criticalRecordBeyondAllCriticalCapFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.222"/>
+  <testcase name="missingRequiredScalarsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="queryResultsAreImmutableSnapshots()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="positionAllThreeValidIntsLoads()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="negativeVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="loadOverflowKeepsCriticalRecordsElseFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.228"/>
+  <testcase name="loadKeepsNewestTenThousandValidRecordsWithIdentifiableIds()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.332"/>
+  <testcase name="mistypedRecordsListFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="missingNullableTheftTypeIsAllowed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="stateTransitionsAreRestricted()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="missingDataVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="partialPositionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="nonFiniteAndNegativeScalarsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="unknownNonNullEnumsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="failureReasonRoundTrips()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="finalInsertWithoutPendingIsAllowed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="failClosedFlagSurvivesSaveAndReload()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="byteIdenticalDuplicateEventIdsAreAccepted()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="zeroDataVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="v2MissingFailClosedFlagFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="mistypedOptionalFieldsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="mistypedDataVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="mistypedFailClosedFlagFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="nonAssetEffectRecordsAreLegal()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.004"/>
+  <testcase name="positionAllPresentWrongTypesFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="unknownFutureVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="positionPartialFieldFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="minimalV1SchemaWithEmptyRecordsLoadsHealthy()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="loadDropsSettledFinalBeyondAllCriticalCap()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.347"/>
+  <testcase name="setDirtyOnlyOnRealWrites()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.001"/>
+  <testcase name="recordValidationRejectsBadCombinations()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.003"/>
+  <testcase name="pendingToFinalCannotSwapTheAuditSubject()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="invalidResourceLocationsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="upsertByEventIdFinalisesPendingInPlace()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="capacityNeverEvictsPendingOrRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.142"/>
+  <testcase name="missingTimestampOrServerTickFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="positionIsImmutableInRecord()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="conflictingDuplicateEventIdFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="mistypedRequiredScalarsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="capacityEvictsOldestOnAppend()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.143"/>
+  <testcase name="saveLoadRoundTripPreservesRecords()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="nonCompoundRecordElementsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="positionFullyAbsentLoadsNull()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="legacyV1DataMigratesHealthy()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="dataVersionIsStored()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <testcase name="positionMixedTypesFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAuditStoreTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

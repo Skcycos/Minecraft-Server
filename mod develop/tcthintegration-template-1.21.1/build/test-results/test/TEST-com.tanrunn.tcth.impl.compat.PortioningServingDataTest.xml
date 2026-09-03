@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.PortioningServingDataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:47.720Z" hostname="tanrunn-fedora" time="0.137">
+  <properties/>
+  <testcase name="servingContainerTagIsClassificationDataOnlyNotJavaGated()" classname="com.tanrunn.tcth.impl.compat.PortioningServingDataTest" time="0.131"/>
+  <testcase name="allThreeServedItemsHaveT2DishTier()" classname="com.tanrunn.tcth.impl.compat.PortioningServingDataTest" time="0.002"/>
+  <testcase name="allThreeServedItemsAreInChefT2Tag()" classname="com.tanrunn.tcth.impl.compat.PortioningServingDataTest" time="0.001"/>
+  <testcase name="allThreeServedItemsAreInFieldGuideChefT2()" classname="com.tanrunn.tcth.impl.compat.PortioningServingDataTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:09.215Z" hostname="tanrunn-fedora" time="0.027">
+  <properties/>
+  <testcase name="eventIdIsRememberedUntilTtl()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.012"/>
+  <testcase name="nextTickSamePairIsNotBlockedByIdempotency()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.0"/>
+  <testcase name="logoutRemovesAttemptKeysOfThePlayerOnly()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.001"/>
+  <testcase name="eventIdFloodNeverTouchesTheCooldownTracker()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.009"/>
+  <testcase name="updatingExistingKeyDoesNotGrowTheTracker()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.0"/>
+  <testcase name="capacityEvictsOldestEntry()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.002"/>
+  <testcase name="serverStoppingClearsEverything()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.0"/>
+  <testcase name="attemptKeyIsThiefPlusTargetPlusServerTick()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.0"/>
+  <testcase name="attemptKeyExpiresAfterTtl()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.001"/>
+  <testcase name="sameTickDifferentEventIdsAreDuplicates()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.0"/>
+  <testcase name="lifecycleRegistrationIsIdempotent()" classname="com.tanrunn.tcth.impl.shadow.ShadowIdempotencyTrackerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

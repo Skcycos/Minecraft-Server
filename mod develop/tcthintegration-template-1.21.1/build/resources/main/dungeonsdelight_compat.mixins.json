@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.tanrunn.tcth.mixin.dungeonsdelight",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MonsterPotResultSlotMixin",
+    "MonsterPotBlockEntityAccessor",
+    "MonsterPotMenuShiftTakeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

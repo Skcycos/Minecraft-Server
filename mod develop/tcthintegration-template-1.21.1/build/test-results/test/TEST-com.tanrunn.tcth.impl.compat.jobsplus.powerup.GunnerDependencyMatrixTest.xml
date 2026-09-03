@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" tests="12" skipped="0" failures="1" errors="0" timestamp="2026-08-23T16:13:51.587Z" hostname="tanrunn-fedora" time="0.045">
+  <properties/>
+  <testcase name="jobsPlusModuleGuardsSgDependentRegistration()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="modsTomlDeclaresBothConfigsWithCorrectRequiredMods()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="niamiMixinBytecodeReferencesNoJobsPlus()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="handleShootHasExactlyOneMathMaxAndConsumeAmmoOnlyInBeamWeapon()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001">
+    <failure message="org.opentest4j.AssertionFailedError: compile-classpath SG jar must exist for structural checks ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: compile-classpath SG jar must exist for structural checks ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at app//com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest.handleShootHasExactlyOneMathMaxAndConsumeAmmoOnlyInBeamWeapon(GunnerDependencyMatrixTest.java:208)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="niamiConfigRequiresOnlyScgunsAndContainsOnlyNiami()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.016"/>
+  <testcase name="studyConditionBytecodeReferencesNoScorchedGuns()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="gunnerAbilityModuleBytecodeReferencesNoScorchedGuns()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="redirectHandlerHasRedirectArgsFirst()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="ammoSaverMixinTransitivelyRequiresJobsPlus()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.001"/>
+  <testcase name="sgDamageEvidenceIsTheOnlySgReferencingAbilityClass()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.017"/>
+  <testcase name="builtJarDeclaresBothMixinConfigsWhenPresent()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.004"/>
+  <testcase name="ammoSaverConfigRequiresScgunsAndJobsplusAndContainsOnlyAmmoSaver()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerDependencyMatrixTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

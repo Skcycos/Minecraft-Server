@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.791Z" hostname="tanrunn-fedora" time="0.341">
+  <properties/>
+  <testcase name="resistanceDoesNotAffectFireFallOrProjectile()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.274"/>
+  <testcase name="automatedEventGrantsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.0"/>
+  <testcase name="resistanceReducesMagicalDamage()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.035"/>
+  <testcase name="nonJobsServerPlayerReturnsNone()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.002"/>
+  <testcase name="gradedEventGrantsSpeedAndLuckByTier()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.003"/>
+  <testcase name="unknownTierGrantsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <testcase name="singleRouteSwitchOnlyAffectsItsRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.002"/>
+  <testcase name="higherTierOverwritesLower()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.002"/>
+  <testcase name="noResistanceTierLeavesDamageUnchanged()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <testcase name="brokenQueryReturnsNoneWithoutThrowing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.004"/>
+  <testcase name="nonFiniteDamageFailsClosedAndIsNotMultiplied()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.004"/>
+  <testcase name="noTierGrantsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <testcase name="resistanceReducesWitherDamage()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.003"/>
+  <testcase name="highestActiveTierReflectsStates()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.002"/>
+  <testcase name="brewingRouteAppliesHighestTierExactlyOncePerEvent()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <testcase name="configFailureFailsClosedForEveryRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.002"/>
+  <testcase name="t3GrantsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <testcase name="masterOffDisablesAllRoutes()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.BrewerAbilityModuleTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:51] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Brewer powerup query failed for route TASTING: java.lang.IllegalStateException: corrupt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:46.835Z" hostname="tanrunn-fedora" time="0.058">
+  <properties/>
+  <testcase name="mainModTagExcludesNonRuntimeCategories()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.002"/>
+  <testcase name="mainModHas64PerItemTierFiles()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.015"/>
+  <testcase name="bacMixinConfigGatedByRequiredMods()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.004"/>
+  <testcase name="perItemTierFilesOnlyContainCommonOrT2()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.032"/>
+  <testcase name="auditDraftTiersJsonIsNotRuntime()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.001"/>
+  <testcase name="mainModTagHas64RuntimeItems()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.001"/>
+  <testcase name="publicApiHasNoThirdPartyTypes()" classname="com.tanrunn.tcth.impl.compat.BrewerDataConsistencyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

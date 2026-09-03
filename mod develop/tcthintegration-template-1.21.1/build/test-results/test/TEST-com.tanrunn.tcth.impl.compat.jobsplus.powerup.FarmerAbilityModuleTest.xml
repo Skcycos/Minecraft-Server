@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:51.295Z" hostname="tanrunn-fedora" time="0.041">
+  <properties/>
+  <testcase name="brokenConfigGateFailsClosed()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.011"/>
+  <testcase name="hoeNeverSkipsWhenNoTierOrGatesClosed()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.007"/>
+  <testcase name="hoeSkipsOnlyOnTaggedToolsAndActiveTier()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="studyMultipliersMatchSpec()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="harvestTickConstantsMatchSpec()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.0"/>
+  <testcase name="nonJobsServerPlayerReturnsNone()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.0"/>
+  <testcase name="routeSwitchOffBlocksHarvest()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="brokenQueryReturnsNoneWithoutThrowing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="noTierGrantsNothingAndCommitsNothing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="realHarvestGrantsHasteAndSpeedByTier()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="masterSwitchOffBlocksHarvest()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="tillingTagIsMinecraftHoes()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="highestActiveIsRouteIndependent()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="automatedHarvestNeverGrants()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="tillingChancePctMatchesSpec()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.001"/>
+  <testcase name="highestActiveTierReflectsStates()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="hoeSkipsOnlyWithinChanceWindow()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <testcase name="harvestCooldownBlocksSecondGrantWithinWindow()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.FarmerAbilityModuleTest" time="0.002"/>
+  <system-out><![CDATA[[00:13:51] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Farmer ability master gate read failed: java.lang.IllegalStateException: broken
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

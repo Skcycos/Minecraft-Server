@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2026-08-23T16:13:47.889Z" hostname="tanrunn-fedora" time="0.007">
+  <properties/>
+  <testcase name="presetMatchesServerGlobalPackCopy()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" time="0.002">
+    <failure message="org.opentest4j.AssertionFailedError: brew_t2.json preset must match the server global pack copy ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: brew_t2.json preset must match the server global pack copy ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at app//com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest.presetMatchesServerGlobalPackCopy(BrewerFieldGuideDataTest.java:130)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="noT3CandidateIngredientOrContainerEnters()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" time="0.001"/>
+  <testcase name="twoCategoriesWithExpectedCounts()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" time="0.001"/>
+  <testcase name="categoriesAreMutuallyExclusiveAndTotal64()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" time="0.001"/>
+  <testcase name="everyEntryPinsTheBrewerGateAndIsValidResourceLocation()" classname="com.tanrunn.tcth.impl.compat.brewer.BrewerFieldGuideDataTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

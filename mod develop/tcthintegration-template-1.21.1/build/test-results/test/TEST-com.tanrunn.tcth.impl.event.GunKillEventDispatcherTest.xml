@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:55.002Z" hostname="tanrunn-fedora" time="0.46">
+  <properties/>
+  <testcase name="frameworkDisabledRejectsAll()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="stopCleanupClearsCache()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="gunnerDisabledRejectsAll()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.0"/>
+  <testcase name="ttlExpiryAllowsRepost()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="enabledPublishesExactlyOnce()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="idempotencyExpiryIsPositive()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.0"/>
+  <testcase name="duplicateEventIdIsRejected()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="clientSideLevelIsInvalidContext()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.001"/>
+  <testcase name="capacityCapIsEnforced()" classname="com.tanrunn.tcth.impl.event.GunKillEventDispatcherTest" time="0.454"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

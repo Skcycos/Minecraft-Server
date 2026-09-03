@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.464Z" hostname="tanrunn-fedora" time="0.019">
+  <properties/>
+  <testcase name="noUnlockWithoutBeverageEvent()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.002"/>
+  <testcase name="gradedEventUnlocksMatchingEntry()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.002"/>
+  <testcase name="t3DoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.0"/>
+  <testcase name="nullPlayerDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.0"/>
+  <testcase name="disabledFieldGuideMasterSwitchDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="configReadExceptionFailsClosedForBrewerSwitch()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.002"/>
+  <testcase name="disabledFrameworkDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="configReadExceptionFailsClosedForMasterSwitch()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="automatedDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.0"/>
+  <testcase name="disabledBrewerCatalogueDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="missingEntryDoesNotUnlockAndNotCommitted()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="adapterIsDefensiveWithoutLiveProgressSystem()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.003"/>
+  <testcase name="unknownTierDoesNotUnlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="repeatedPreparationDoesNotReunlock()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <testcase name="duplicateEventIdNotUnlockedTwice()" classname="com.tanrunn.tcth.impl.compat.fieldguide.FieldGuideBrewerUnlockTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Field Guide brewer unlock handler failed for player 'TestPlayer' item 'minecraft:honey_bottle' event 5625c185-1b51-4d2e-9aa4-96aa3c5f9f64: java.lang.IllegalStateException: config boom
+[00:13:49] [Test worker/ERROR] [co.ta.tc.TCTHIntegration/]: [TCTH] Field Guide brewer unlock handler failed for player 'TestPlayer' item 'minecraft:honey_bottle' event 8c917e74-6576-43cf-9420-3e11c659a1c3: java.lang.IllegalStateException: config boom
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

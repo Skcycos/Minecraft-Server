@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:55.888Z" hostname="tanrunn-fedora" time="0.293">
+  <properties/>
+  <testcase name="invalidContextIsNotCancelledAndGivesNoFeedback()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.081"/>
+  <testcase name="entityTargetWithUnregisteredTypeIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.083"/>
+  <testcase name="duplicateIsCancelledAndSilent()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.004"/>
+  <testcase name="nonPlayerTargetIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="lineOfSightFeedsMutuallyExclusiveFacts()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.003"/>
+  <testcase name="technicalOutcomesNeverLeakInternalReasons()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="playerTargetStillRoutesToThePlayerCoordinator()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="entityTargetRoutesToTheEntityCoordinator()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.045"/>
+  <testcase name="clientSideEntityInteractIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="oneFeedbackPerEvent()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.003"/>
+  <testcase name="nonEmptyMainHandIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="nonEmptyOffhandIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="abilitySnapshotIsQueriedExactlyOncePerAttemptAndFlowsIntoTheContext()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.003"/>
+  <testcase name="crossDimensionTargetIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="handlerExceptionIsIsolated()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="failedRollExposureScalesWithTheEscapeTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.005"/>
+  <testcase name="attemptOutcomesCancelTheInteractionExactlyOnce()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.006"/>
+  <testcase name="cancelledEventIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="deadTargetIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="nonSneakingIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="offhandInteractionIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="lineOfSightExceptionFailsClosedToFalse()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="noCandidateTellsTheThiefOnly()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="outOfRangeTargetIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="failedRollExposesTheThiefNameAndDebuffsThem()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.003"/>
+  <testcase name="clientSideEventIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="frameworkDisabledIsNotCancelledAndGivesNoFeedback()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="nonShadowThiefCannotStartATheftAttempt()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="successHidesTheThiefIdentityFromTheVictim()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.005"/>
+  <testcase name="contextCarriesPlayerKindAndNoTargetType()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="selfTargetIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="validInteractionInvokesCoordinatorExactlyOnce()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="lineOfSightFalseIsWrittenIntoContext()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <testcase name="newAttemptBreaksTcthGrantedInvisibilityBeforeTheAttempt()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.004"/>
+  <testcase name="entityFeedbackMatrixCoversEveryOutcome()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.008"/>
+  <testcase name="lineOfSightTrueIsWrittenIntoContext()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.001"/>
+  <testcase name="fakePlayerThiefIsIgnored()" classname="com.tanrunn.tcth.impl.shadow.PlayerInteractHandlerTest" time="0.002"/>
+  <system-out><![CDATA[[00:13:55] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft interaction handling failed: java.lang.NullPointerException: Cannot invoke "net.minecraft.server.network.ServerGamePacketListenerImpl.send(net.minecraft.network.protocol.Packet)" because "player.connection" is null
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

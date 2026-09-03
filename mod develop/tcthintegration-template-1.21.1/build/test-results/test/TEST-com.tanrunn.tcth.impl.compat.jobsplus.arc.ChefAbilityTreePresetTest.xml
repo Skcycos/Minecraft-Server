@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.835Z" hostname="tanrunn-fedora" time="0.038">
+  <properties/>
+  <testcase name="baseDishRewardsAreUnchanged()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.001"/>
+  <testcase name="tastingTargetsChefMealsWithCooldownAndSingleFullPackage()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.001"/>
+  <testcase name="translationsMatchExactEffectNumbers()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.003"/>
+  <testcase name="cooldownConfigValueMatchesPresetText()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.001"/>
+  <testcase name="eachRouteIIExcludesIIIOnly()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.002"/>
+  <testcase name="parentChainsAreCorrect()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.004"/>
+  <testcase name="uiIconsReferenceValidItems()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.003"/>
+  <testcase name="eachRouteIIINeverExcludesAnything()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.002"/>
+  <testcase name="knifeRouteIsJavaDrivenWithoutArcPowerup()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.002"/>
+  <testcase name="studyMultipliersAre125_150_200_AndNeverStack()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.002"/>
+  <testcase name="fourRoutesWithThreeNodesEach()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.005"/>
+  <testcase name="hearthMultipliersAre085_070_050WithFireTagCondition()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.001"/>
+  <testcase name="eachRouteIExcludesIIAndIII()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.001"/>
+  <testcase name="requiredLevelsAreExact()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.003"/>
+  <testcase name="pricesArePositiveAndReasonable()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.ChefAbilityTreePresetTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

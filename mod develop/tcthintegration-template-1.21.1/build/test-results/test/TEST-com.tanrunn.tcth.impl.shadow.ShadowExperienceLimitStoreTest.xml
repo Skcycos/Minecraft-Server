@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" tests="48" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:59.338Z" hostname="tanrunn-fedora" time="9.872">
+  <properties/>
+  <testcase name="allReservedIndexFullRejectsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.84"/>
+  <testcase name="futureVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="reservedOnDiskMigratesToRecoveryAndBlocksResend()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="recentCommittedEventIdStillReturnsCommittedExisting()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="indexFullRejectsNewReservations()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.816"/>
+  <testcase name="retentionCleanupThenSaveLoadStaysHealthy()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.004"/>
+  <testcase name="sixtyFifthDayRotationFreesCommittedIndexEntries()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="retentionWindowCleansOldCommittedAndFreesCapacity()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.869"/>
+  <testcase name="eventIdIdempotencyNeverDoubleCounts()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="fullUnsettledCapacityRejectsAndLeavesNbtUnchanged()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.842"/>
+  <testcase name="sixtyFiveConsecutiveDaysStayHealthyAcrossSaveLoad()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.002"/>
+  <testcase name="cleanupCanRemoveTheCurrentPairWithoutStaleRotationState()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.002"/>
+  <testcase name="corruptedAggregatesFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="retentionBoundaryDay64CleansDay0()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="failedReservationsDoNotConsumePairCapacity()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.981"/>
+  <testcase name="globalIndexFullWithoutSafeRotationRejects()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.838"/>
+  <testcase name="missingDataVersionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="retentionBoundaryDay65CleansDays0And1()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="v1DataWithReservedMigratesToRecovery()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="retentionBoundaryDay63KeepsDay0()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="failClosedFlagSurvivesSaveAndReload()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="missingPairsOrReservationsFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="retentionCleanupDeletesEmptyPairsAndFreesMaxPairsCapacity()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.255"/>
+  <testcase name="doubleSaveLoadIsStable()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.003"/>
+  <testcase name="reservedAndRecoveryNeverCleanedByRetention()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="cleanupThatCannotFreePairCapacityRejectsWithoutApplyingCleanup()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.499"/>
+  <testcase name="pairCapacityFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.191"/>
+  <testcase name="fullPairCapacityCleansOldCommittedPairsBeforeGuardingCapacity()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.191"/>
+  <testcase name="utcDayRolloverResetsTheQuota()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="corruptedReservationsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="failedReservationsThenSaveLoadStaysHealthy()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.859"/>
+  <testcase name="eventIdReuseWithDifferentPairOrDayIsRejected()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="pairsAreIndependent()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="restartPersistenceRoundTrips()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="oldestDayWithUnsettledReservationRefusesNewReservation()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="indexFullAfterRotationStillRejects()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.982"/>
+  <testcase name="invalidInputsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="zeroAndNegativeVersionsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="dateSupplierIsInjectable()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="recoveryStateSurvivesAnotherSaveAndLoad()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="committedEventIdIsDurableAcrossSaveLoad()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="indexFullWithNewPairDoesNotCreatePair()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.878"/>
+  <testcase name="missingFailClosedFlagFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="dateRollbackInvalidDateAndCleanupStillFullRejectsWithNoStateChange()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.797"/>
+  <testcase name="reservationLifecycleReservesCommitsAndReleases()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <testcase name="committedAfterRestartIsNeverReleased()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="rejectionPathsLeaveNoEmptyDaysMaps()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.0"/>
+  <testcase name="conflictingDuplicateEventIdsFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowExperienceLimitStoreTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

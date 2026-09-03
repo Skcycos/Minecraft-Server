@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.api.shadow.ShadowApiReferenceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:45.710Z" hostname="tanrunn-fedora" time="0.115">
+  <properties/>
+  <testcase name="publicApiHasNoThirdPartyReferences()" classname="com.tanrunn.tcth.api.shadow.ShadowApiReferenceTest" time="0.004"/>
+  <testcase name="compiledMainOutputHasNoThirdPartyClasses()" classname="com.tanrunn.tcth.api.shadow.ShadowApiReferenceTest" time="0.083"/>
+  <testcase name="publicApiHasNoPlayerPropertyReferences()" classname="com.tanrunn.tcth.api.shadow.ShadowApiReferenceTest" time="0.004"/>
+  <testcase name="noShadowJobPresetInResources()" classname="com.tanrunn.tcth.api.shadow.ShadowApiReferenceTest" time="0.023"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

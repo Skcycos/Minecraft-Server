@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.command.TcthShadowAuditCommandTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:46.445Z" hostname="tanrunn-fedora" time="0.383">
+  <properties/>
+  <testcase name="recentRequiresPermission()" classname="com.tanrunn.tcth.impl.command.TcthShadowAuditCommandTest" time="0.371"/>
+  <testcase name="noResetOrDeleteCommandsExist()" classname="com.tanrunn.tcth.impl.command.TcthShadowAuditCommandTest" time="0.0"/>
+  <testcase name="playerQueryWithoutPermissionOnlyAllowsSelf()" classname="com.tanrunn.tcth.impl.command.TcthShadowAuditCommandTest" time="0.007"/>
+  <testcase name="limitIsStrictlyBounded()" classname="com.tanrunn.tcth.impl.command.TcthShadowAuditCommandTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

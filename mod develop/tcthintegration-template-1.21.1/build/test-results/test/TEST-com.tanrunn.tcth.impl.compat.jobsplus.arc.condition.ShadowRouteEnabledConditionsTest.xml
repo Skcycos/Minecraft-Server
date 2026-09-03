@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.724Z" hostname="tanrunn-fedora" time="0.006">
+  <properties/>
+  <testcase name="routeSwitchOffStopsOnlyThatRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" time="0.003"/>
+  <testcase name="configFailureFailsClosedEvenWhenInverted()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" time="0.002"/>
+  <testcase name="masterSwitchOffStopsEveryRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" time="0.0"/>
+  <testcase name="allFourRoutesMatchWhenEverythingIsOn()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" time="0.0"/>
+  <testcase name="integrationSwitchOffStopsEveryRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ShadowRouteEnabledConditionsTest" time="0.0"/>
+  <system-out><![CDATA[[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] tcth:shadow_sleight_abilities_enabled config read failed; shadow abilities fail-closed (disabled): java.lang.IllegalStateException: config broken
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

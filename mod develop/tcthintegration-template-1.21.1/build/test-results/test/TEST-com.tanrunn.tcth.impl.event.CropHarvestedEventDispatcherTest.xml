@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:54.471Z" hostname="tanrunn-fedora" time="0.518">
+  <properties/>
+  <testcase name="farmingSwitchOffReturnsFarmingDisabled()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="nullPlayerRejectedAsAutomated()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="frameworkSwitchOffReturnsFrameworkDisabled()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="stopClearsCache()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="clientLevelRejected()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="cacheIsBounded()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.471"/>
+  <testcase name="immatureHarvestRejected()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.002"/>
+  <testcase name="postedEventCarriesExpectedFields()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="differentMethodNotDeduplicated()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="expiredEntriesArePrunedOnTick()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.034"/>
+  <testcase name="sameHarvestIsIdempotent()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="nullLevelRejected()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <testcase name="fakePlayerRejectedAsAutomated()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.0"/>
+  <testcase name="differentTickNotDeduplicated()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.0"/>
+  <testcase name="differentPositionNotDeduplicated()" classname="com.tanrunn.tcth.impl.event.CropHarvestedEventDispatcherTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

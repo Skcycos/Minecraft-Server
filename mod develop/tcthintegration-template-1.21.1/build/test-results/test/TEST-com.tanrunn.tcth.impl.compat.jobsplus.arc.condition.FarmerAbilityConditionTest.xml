@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.543Z" hostname="tanrunn-fedora" time="0.161">
+  <properties/>
+  <testcase name="repeatedFailuresStayFailClosedAcrossThrottleWindow()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.083"/>
+  <testcase name="livestockCooldownNetworkRoundTripKeepsInverted()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.065"/>
+  <testcase name="hoeToggleFailsClosedOnExceptionRegardlessOfInverted()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.002"/>
+  <testcase name="livestockToggleFailsClosedOnException()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.003"/>
+  <testcase name="livestockCooldownConditionPassesForNonServerPlayer()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.001"/>
+  <testcase name="hoeToggleMatchesAllFourGates()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.001"/>
+  <testcase name="hoeToggleNetworkRoundTripKeepsInverted()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.001"/>
+  <testcase name="studyToggleFailsClosedOnException()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.001"/>
+  <testcase name="livestockCooldownConditionPassesWhenNotOnCooldown()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.002"/>
+  <testcase name="warnThrottlesAreSixtySeconds()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.FarmerAbilityConditionTest" time="0.0"/>
+  <system-out><![CDATA[[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Tilling toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Tilling toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Livestock toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.480Z" hostname="tanrunn-fedora" time="0.063">
+  <properties/>
+  <testcase name="cooldownConditionBlocksInsideWindowAndPassesOutside()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.05"/>
+  <testcase name="fireDamageMatchesFireTaggedSourcesOnly()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.003"/>
+  <testcase name="fireDamageSupportsInverted()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <testcase name="routeConditionsFailClosedOnRuntimeException()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.002"/>
+  <testcase name="allSwitchesOnLetsEveryRoutePass()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <testcase name="fireDamageNeverMatchesMissingSource()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <testcase name="routeOffStopsOnlyItsOwnRoute()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <testcase name="masterSwitchBlocksWhenOff()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.0"/>
+  <testcase name="masterOffStopsAllFourRoutes()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.0"/>
+  <testcase name="routeConditionsFailClosedOnLinkageError()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <testcase name="masterConditionsFailClosedOnRuntimeException()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.condition.ChefAbilityConditionsTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Chef ability toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: config not loaded
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

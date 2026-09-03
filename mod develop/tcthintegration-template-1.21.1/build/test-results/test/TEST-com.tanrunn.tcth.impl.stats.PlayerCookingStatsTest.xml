@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.384Z" hostname="tanrunn-fedora" time="0.007">
+  <properties/>
+  <testcase name="playerCapKeepsUpdatingExistingPlayers()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.002"/>
+  <testcase name="unknownDeviceTierQualityDoNotFailLoading()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.001"/>
+  <testcase name="dataVersionIsStoredAndOldVersionLoadsSafely()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <testcase name="firstDishIncreasesEventsAndUnique()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <testcase name="itemCountCapKeepsAccumulatingExistingItems()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.003"/>
+  <testcase name="saveLoadRoundTripIsConsistent()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.001"/>
+  <testcase name="countAccumulatesPerItemAndDevicesCountPerEvent()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <testcase name="deviceCountsNeverOverflowFromLoadedNbt()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <testcase name="saturatingAdditionNeverOverflows()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <testcase name="repeatDishIncreasesEventsButNotUnique()" classname="com.tanrunn.tcth.impl.stats.PlayerCookingStatsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

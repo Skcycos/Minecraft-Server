@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:54.444Z" hostname="tanrunn-fedora" time="0.026">
+  <properties/>
+  <testcase name="realPlayerIsNotAutomated()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.006"/>
+  <testcase name="kaleidoscopeShakerAdapterPublishesRuntimeBeverage()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.003"/>
+  <testcase name="automatedActorIsAutomatedViaPredicate()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="nullPlayerIsAutomated()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.0"/>
+  <testcase name="kegAdapterPublishesForRuntimeTier()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.004"/>
+  <testcase name="eventRejectsNullAndCopiesResult()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.003"/>
+  <testcase name="eventIdsAreUnique()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="kegAdapterRejectsEmptyStack()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="kegAdapterRejectsUnknownTier()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.0"/>
+  <testcase name="beverageTierEnumIsRuntimeOnly()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="dispatcherDisabledIsFailClosed()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="kaleidoscopeAdaptersRejectUnknownRuntimeTier()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.0"/>
+  <testcase name="beverageDeviceEnumHasExpectedMembers()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="dispatcherPublishesWhenEnabled()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="dispatcherConfigExceptionFailsClosed()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.0"/>
+  <testcase name="dispatcherClientLevelRejected()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <testcase name="kaleidoscopeBarrelAdapterPublishesRecipeId()" classname="com.tanrunn.tcth.impl.event.BrewerIntegrationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

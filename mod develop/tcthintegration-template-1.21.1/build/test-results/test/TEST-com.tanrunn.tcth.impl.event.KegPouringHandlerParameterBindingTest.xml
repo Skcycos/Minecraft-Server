@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.event.KegPouringHandlerParameterBindingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:55.465Z" hostname="tanrunn-fedora" time="0.007">
+  <properties/>
+  <testcase name="dropPublishesDeliveredStackNotRemainingContainer()" classname="com.tanrunn.tcth.impl.event.KegPouringHandlerParameterBindingTest" time="0.005"/>
+  <testcase name="setItemInHandPublishesDeliveredStackNotEmptyOriginal()" classname="com.tanrunn.tcth.impl.event.KegPouringHandlerParameterBindingTest" time="0.001"/>
+  <testcase name="dropWithUnknownTierPublishesNothing()" classname="com.tanrunn.tcth.impl.event.KegPouringHandlerParameterBindingTest" time="0.001"/>
+  <testcase name="setItemInHandWithUnknownTierPublishesNothing()" classname="com.tanrunn.tcth.impl.event.KegPouringHandlerParameterBindingTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

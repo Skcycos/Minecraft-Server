@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:10.357Z" hostname="tanrunn-fedora" time="0.001">
+  <properties/>
+  <testcase name="reconcileSilentUsesZeroTimestamp()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="multiMedalUnlockPreservesDefinitionOrder()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="alreadyUnlockedNotReturnedAgain()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="ninetyNineKillsNoCenturionOneHundredUnlocks()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.001"/>
+  <testcase name="bossFinisherAtOneBossKill()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="firstKillUnlocksFirstBloodOnly()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="zeroKillsUnlocksNothing()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="longShotBoundaryFiftyInclusive()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <testcase name="eliteHunterUsesEliteOnlyNotHeavy()" classname="com.tanrunn.tcth.impl.stats.GunnerMedalEvaluatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

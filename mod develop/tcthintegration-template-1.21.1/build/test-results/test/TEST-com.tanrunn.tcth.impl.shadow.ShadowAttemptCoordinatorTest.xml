@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" tests="65" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:56.357Z" hostname="tanrunn-fedora" time="0.238">
+  <properties/>
+  <testcase name="gatesClosedNeverTouchTheDateSupplier()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.01"/>
+  <testcase name="dailyItemLimitBelowCapKeepsItem()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="executorExceptionIsIsolated()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="effectPrepareFailureRecordsEffectTypeWithoutEffectId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="receiptMismatchAfterCommitRollsBackOnceToRolledBack()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="rollbackFailureYieldsRecoveryRequiredWithCommittedReceipt()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="effectPendingRecordHasNoEffectId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="fakePlayerThiefIsRejected()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="quotaCommitExceptionNeverContinuesToSuccess()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="effectFailedRollRecordsEffectTypeWithoutEffectId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="realTransferGateOffKeepsAssetsUntouched()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="realAuditStoreWritesPendingAndFinalExactlyOnce()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="playerTargetWithTargetTypeIsInvalid()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="receiptMismatchAndRollbackExceptionYieldsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.006"/>
+  <testcase name="playerTheftDisabledYieldsFrameworkDisabled()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="duplicateAttemptKeyIsRejectedEvenWithDifferentEventId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="quotaCommitFailureRollbackFailureKeepsQuotaAndRecovery()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.006"/>
+  <testcase name="coinIsHardBlockedFromThePool()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="protectionUnknownFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="escapeEffectsAreAppliedOnlyAfterFinalSuccess()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.007"/>
+  <testcase name="auditUnavailableRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="mutablePositionDoesNotAffectRecordAfterConstruction()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="sleightBonusNeverExceedsTheConfiguredMaximum()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="configMasterDisabledYieldsFrameworkDisabled()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="pendingRecordAlertsOnceMoreAfterRestart()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="unhealthyAuditStoreRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="eventIdIsStableAcrossResultAndPostedEvent()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="prewriteFailureSkipsCommit()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="protectionExceptionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="commitSuccessAndFinalAuditSuccessYieldsSuccess()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="failurePathsSettleIdempotency()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="sleightTierShortensTheGlobalCooldown()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="realTransferGateOffRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="protectionDenialYieldsProtected()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="successfulItemThenCleanFailureKeepsTheFirstQuota()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.007"/>
+  <testcase name="effectCommitFailureRecordsEffectTypeWithoutEffectId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="auditDisabledRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="effectSuccessRecordsEffectId()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="receiptMismatchAndRollbackFailureYieldsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="masterSwitchDisabledYieldsFrameworkDisabled()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="rollbackExceptionYieldsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.009"/>
+  <testcase name="candidateProviderExceptionYieldsNoCandidate()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="frameworkExceptionIsIsolated()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="settingsSupplierExceptionFailsClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="inMemoryAuditEnforcesProductionTransitionRules()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.006"/>
+  <testcase name="finalAuditFailureTriggersRollbackOnceAndRollsBack()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="failedRollYieldsFailedRollWithExposure()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.002"/>
+  <testcase name="defaultsWiringRefusesWhenAuditDisabled()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="dateSupplierExceptionPrunesOnlyItemAndForbidsItemTransfer()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="sleightTierRaisesTheSuccessChance()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="duplicateEventIdIsRejectedWithZeroWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="futureAuditVersionFailsClosedCoordinatorRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="successfulItemTheftRecordsTheDailyLoss()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="quotaCommitFailureRollsBackOnceAndReleases()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="dailyItemLimitPrunesOnlyItemAndRenormalises()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="epochMillisAndServerTickAreRecordedSeparately()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="auditFactoryReturningNullRefusesBeforeAnyWork()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="commitFailureYieldsNoReceiptNoSuccess()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="pendingRecordForEventIdYieldsRecoveryRequired()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="finalAuditFailureRollbackSuccessReleasesCommittedQuota()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.005"/>
+  <testcase name="emptyCandidatesYieldNoCandidate()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <testcase name="noneTierNeverGrantsEscapeEffects()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="defaultsWiringIsFullyFailClosed()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.004"/>
+  <testcase name="globalCooldownYieldsCooldown()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.003"/>
+  <testcase name="entityContextWithoutTargetTypeIsInvalid()" classname="com.tanrunn.tcth.impl.shadow.ShadowAttemptCoordinatorTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event fccf3914-b93c-4400-939a-84e2d3d1034b)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow transfer prepare failed (event 6d32e4ff-1691-4ca7-87b7-ab9923cac574): java.lang.IllegalStateException: boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft committed with a mismatched receipt; rolled back (event 1e2ad7cf-32ab-4ecf-87c7-3b99122e8176)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event 875e14d7-1dbb-4bcc-a76e-7fd2e1b5b056) — rollback failed after commit; operator intervention required
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event 6c51f192-8393-4021-8a75-7e51b52bd5b3)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow daily quota commit failed (event 41dbd916-b169-443a-8644-34fd307f0f81): java.lang.IllegalStateException: fake storage boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft quota commit failed; rolled back (event 41dbd916-b169-443a-8644-34fd307f0f81)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow transfer rollback failed (event ce2dce96-6cdb-4139-b5fc-5045d3a7a29c): java.lang.IllegalStateException: restore boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event ce2dce96-6cdb-4139-b5fc-5045d3a7a29c) — mismatched receipt and rollback failed; operator intervention required
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event d1092f2a-b779-4ab9-a481-e3f7cc261c66) — quota commit failed and rollback failed; operator intervention required
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unavailable (event 2cf99541-f13d-4b09-a2f1-0dafe8cadb62): java.lang.IllegalStateException: storage boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft attempt blocked: unresolved PENDING record (event 444fbd41-20a1-4014-b637-b0fe11e81e92)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unhealthy (event 148efdef-a893-49ad-9832-7ef717401b64)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow protection service failed (event d4b1ada5-1bcc-46bd-ac9b-18d2e3cbdae0): java.lang.IllegalStateException: boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event b6c64e4c-02a3-4eda-b353-5b3d3890b36d)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event f496ffe9-ca1a-475a-b5af-7fe2528e6d52) — mismatched receipt and rollback failed; operator intervention required
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow transfer rollback failed (event 94e38a3b-36db-4a21-aa34-ba956fd54f4b): java.lang.IllegalStateException: restore boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event 94e38a3b-36db-4a21-aa34-ba956fd54f4b) — rollback failed after commit; operator intervention required
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow candidate provider failed (event b95d7bd2-b07a-4f94-a1c6-761f31f60416): java.lang.IllegalStateException: boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft attempt failed with a framework exception (event 7771523e-717a-4db8-94ce-45bd44f3ffde): java.lang.IllegalStateException: settings boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft attempt failed with a framework exception (event b09903cb-a9be-4cf0-9c88-f232f1c61b60): java.lang.IllegalStateException: config boom
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event e7663511-d478-4402-a000-8448503ddad8)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event aded5097-01bb-43e9-8799-20ecbbde97a1)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unhealthy (event e82f4031-701f-4830-a3f7-8d1892ccb88f)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft quota commit failed; rolled back (event 69e123e5-ca0e-4c91-b187-7bba04c5bf93)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store factory returned null (event 596af397-0135-46d0-a2cf-4bae543fe5eb)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft attempt blocked: unresolved PENDING record (event bd5713a7-a081-4e83-ab42-335bbd8ad0f7)
+[00:13:56] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event 2fa238ac-9925-43c8-ba8b-6bf16a912bf2)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

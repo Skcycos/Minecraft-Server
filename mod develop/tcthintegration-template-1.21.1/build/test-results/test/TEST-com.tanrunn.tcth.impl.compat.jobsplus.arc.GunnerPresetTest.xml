@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.385Z" hostname="tanrunn-fedora" time="0.071">
+  <properties/>
+  <testcase name="presetHasNoForeignDependencies()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.017"/>
+  <testcase name="gunnerJobJsonIsValid()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.0"/>
+  <testcase name="tierTagsAreStrictlyMutuallyExclusive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.001"/>
+  <testcase name="rewardsConditionInvertedFlipsResult()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.0"/>
+  <testcase name="packMcmetaIsValid()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.001"/>
+  <testcase name="distanceConditionRejectsNonFiniteBounds()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.004"/>
+  <testcase name="distanceConditionNonFiniteEventDistanceNeverMatches()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.033"/>
+  <testcase name="fourRewardFilesExistAndMatchContract()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.003"/>
+  <testcase name="rewardsConditionRequiresAllThreeSwitches()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.001"/>
+  <testcase name="rewardsConditionFailsClosedOnConfigError()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.002"/>
+  <testcase name="gunKillEventRejectsNonFiniteDistance()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.003"/>
+  <testcase name="excludedTagExistsAndHasPriorityEntities()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.001"/>
+  <testcase name="presetDoesNotLeakIntoMainJarResources()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.GunnerPresetTest" time="0.001"/>
+  <system-out><![CDATA[[00:13:50] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] tcth:gunner_rewards_enabled config read failed: java.lang.RuntimeException: broken config
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

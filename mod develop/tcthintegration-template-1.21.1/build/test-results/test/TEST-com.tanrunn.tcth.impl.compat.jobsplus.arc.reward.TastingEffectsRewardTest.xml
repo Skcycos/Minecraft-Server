@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:50.758Z" hostname="tanrunn-fedora" time="0.012">
+  <properties/>
+  <testcase name="tier1GrantsOnlyRegenerationI5s()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.002"/>
+  <testcase name="noEffectsForNonServerPlayer()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.002"/>
+  <testcase name="tier3GrantsFullThreeEffectPackageOnly()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.002"/>
+  <testcase name="cooldownCommitsOnlyAfterSuccessfulGrant()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.002"/>
+  <testcase name="tier2GrantsFullTwoEffectPackageOnly()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.002"/>
+  <testcase name="invalidTierIsRejectedAtConstruction()" classname="com.tanrunn.tcth.impl.compat.jobsplus.arc.reward.TastingEffectsRewardTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

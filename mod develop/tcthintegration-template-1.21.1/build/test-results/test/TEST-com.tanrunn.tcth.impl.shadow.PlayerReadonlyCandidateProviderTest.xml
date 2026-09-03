@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:56.182Z" hostname="tanrunn-fedora" time="0.151">
+  <properties/>
+  <testcase name="armorAndOffhandSlotsAreNeverProbed()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.011"/>
+  <testcase name="itemCandidateRequiresCapacityPerStack()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="itemCandidateRequiresMainInventoryItemAndThiefSpace()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="healthCandidateAbsentWhenTargetAtFloor()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="effectCandidateAbsentForAmbientEffects()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.056"/>
+  <testcase name="effectCandidateAbsentForZeroDuration()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="itemCandidateAbsentWhenNoStackIsReceivable()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="effectCandidateRequiresWhitelistedBeneficialFiniteNonAmbient()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="hungerCandidateRequiresTargetAboveFloorAndThiefNotFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="effectCandidateAbsentForHarmfulEffect()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="entityTargetsProduceNothing()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.001"/>
+  <testcase name="isStealableReadOnlyRules()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="hungerCandidateFollowsTheLifeSiphonTier()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.004"/>
+  <testcase name="hungerCandidateAbsentWhenTargetAtFloor()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="tagBlacklistedItemIsNotStealable()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="shulkerBoxIsNotStealable()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="probingNeverMutatesAnyAsset()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.007"/>
+  <testcase name="itemCandidateAllowsMergeIntoPartialStack()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="healthCandidateRequiresTargetAboveFloorAndThiefNotFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="healthAndEffectAvailabilityAreTierIndependent()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="effectCandidateAbsentWhenBlacklisted()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.013"/>
+  <testcase name="hungerCandidateAbsentWhenThiefFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.001"/>
+  <testcase name="effectCandidateAbsentForInfiniteDuration()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="healthCandidateAbsentWhenThiefFull()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.004"/>
+  <testcase name="coinIsNeverProduced()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.003"/>
+  <testcase name="itemCandidateRequiresThiefCapacity()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.002"/>
+  <testcase name="effectCandidateAbsentWhenNotWhitelisted()" classname="com.tanrunn.tcth.impl.shadow.PlayerReadonlyCandidateProviderTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

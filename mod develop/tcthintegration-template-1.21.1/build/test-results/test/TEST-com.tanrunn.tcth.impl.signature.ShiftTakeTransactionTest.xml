@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:14:09.807Z" hostname="tanrunn-fedora" time="0.005">
+  <properties/>
+  <testcase name="recipeIdSurvivesUntilEndThenCleared()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.001"/>
+  <testcase name="failedMoveRemovesSignatureWhenPreviouslyUnsigned()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="commitTwiceReturnsNullSecondTime()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="failedMovePublishesNothingAndRestoresPreviousSignature()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.001"/>
+  <testcase name="fullMovePublishesOnceWithDeliveredCountAndSignedSnapshot()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="eventSnapshotCarriesCurrentChefNotOldChef()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="partialMoveDeliversMovedCountAndRestoresRemainingSignature()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="sharedSemanticsAppliedByIdentity()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="zeroMoveCommitsToNull()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.001"/>
+  <testcase name="beginRejectsFoodInNotDishesTagWithoutSigning()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <testcase name="beginRejectsEmptyStack()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.001"/>
+  <testcase name="beginRejectsNonDishWithoutSigning()" classname="com.tanrunn.tcth.impl.signature.ShiftTakeTransactionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

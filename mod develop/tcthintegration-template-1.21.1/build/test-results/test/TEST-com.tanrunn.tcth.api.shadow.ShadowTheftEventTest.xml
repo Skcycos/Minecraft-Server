@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:45.827Z" hostname="tanrunn-fedora" time="0.086">
+  <properties/>
+  <testcase name="successRequiresMatchingTheftTypeAndReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.014"/>
+  <testcase name="successEventCarriesTypeAndReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <testcase name="eventIdStaysConstant()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.0"/>
+  <testcase name="rolledBackRequiresEmptyReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.0"/>
+  <testcase name="nonAssetOutcomesRequireEmptyReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.002"/>
+  <testcase name="nullPositionIsAllowed()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <testcase name="nullFieldsAreRejected()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <testcase name="positionIsImmutable()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <testcase name="automatedFlagIsPreserved()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.059"/>
+  <testcase name="recoveryRequiredMayCarryCommittedReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <testcase name="auditFailedNeverCarriesReceipt()" classname="com.tanrunn.tcth.api.shadow.ShadowTheftEventTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:51.239Z" hostname="tanrunn-fedora" time="0.002">
+  <properties/>
+  <testcase name="tierValuesAreExactlyFour()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="studyRouteHighestActive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="hearthRouteHighestActive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="tastingRouteHighestActive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.001"/>
+  <testcase name="fourRoutesCanBeActiveSimultaneously()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="noneWhenNothingActive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="knifeRouteHighestActive()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.0"/>
+  <testcase name="routeNodesAndJobLocationAreWellFormed()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.ChefPowerupAccessTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
