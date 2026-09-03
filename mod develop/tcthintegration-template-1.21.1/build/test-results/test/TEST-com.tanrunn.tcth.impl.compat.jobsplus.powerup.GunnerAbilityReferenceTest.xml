@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerAbilityReferenceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:51.579Z" hostname="tanrunn-fedora" time="0.007">
-  <properties/>
-  <testcase name="sgEvidenceClassLivesInsideScgunsPackage()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerAbilityReferenceTest" time="0.002"/>
-  <testcase name="eachSgMixinDeclaredInItsOwnConditionalConfig()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerAbilityReferenceTest" time="0.002"/>
-  <testcase name="onlySgMixinsResideInTheMixinPackage()" classname="com.tanrunn.tcth.impl.compat.jobsplus.powerup.GunnerAbilityReferenceTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

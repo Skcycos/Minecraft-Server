@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModuleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-23T16:13:49.596Z" hostname="tanrunn-fedora" time="0.003">
-  <properties/>
-  <testcase name="moduleDisablesItselfWhenArcIsMissing()" classname="com.tanrunn.tcth.impl.compat.jobsplus.JobsPlusCompatModuleTest" time="0.003"/>
-  <system-out><![CDATA[[00:13:49] [Test worker/WARN] [co.ta.tc.TCTHIntegration/]: [TCTH] Jobs+ is installed but Arc is missing; dish reward module disabled
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
