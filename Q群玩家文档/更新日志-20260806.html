@@ -371,9 +371,430 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-165（push 前补记本地新上）
+     EDITION 68-181（push 前补记本地新上）
      ============================================================ -->
 
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">181</span>
+    <div>
+      <h2 class="edition-title">性能大盘整</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-03</span>
+        <span class="dot">·</span>
+        <span>438ace6</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--perf">🚀 性能优化</span>
+
+    <div class="pull">堆内存升至 10G；ServerCore 动态性能、繁殖帽开启，刷怪上限降 30%；多项 tick 优化参数收紧。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">内存</span><span class="item-value">JVM 堆上限 8G → 10G，应对 OOM 崩溃</span></li>
+      <li><span class="item-label">ServerCore</span><span class="item-value">动态性能调整开启（35 MSPT 目标自动降档）；繁殖帽开启（64 格内同 32 只）；刷怪上限全体 -30%（怪物 70→49）</span></li>
+      <li><span class="item-label">tick 优化</span><span class="item-value">取消重复流体随机刻；Does It Tick 水平冻结距离 64 → 42 格；沉浸式优化 blocksPerLevel 64 → 40</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">180</span>
+    <div>
+      <h2 class="edition-title">新模组批次：随机传送、视奸与生活细节</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-03</span>
+        <span class="dot">·</span>
+        <span>438ace6</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🧰 模组扩充</span>
+
+    <div class="pull">一批服务端/客户端模组上线，覆盖传送、监控、装饰与防崩溃。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">玩法</span><span class="item-value">[随机传送]LeafRTP 3.2.1（含 GUI/倒计时/领地保护插件）、[思索]ponderer、[杂乱无章]cluttered、[怪物消失]despawntweaks、[叶子快速腐烂]LeavesBeGone</span></li>
+      <li><span class="item-label">鞘翅</span><span class="item-value">[鞘翅装饰]elytratrims 3.10.0 + 扩展 2.2.2</span></li>
+      <li><span class="item-label">运维</span><span class="item-value">[视奸]watut（查看玩家界面）、MiniMOTD（服务器列表 MOTD）、[漏洞崩溃修复]crashexploitfixer、[异步]async（性能观察中）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">179</span>
+    <div>
+      <h2 class="edition-title">生物农场上线即全量禁用</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-02</span>
+        <span class="dot">·</span>
+        <span>2edc5fb</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">🐾 bug 隔离</span>
+
+    <div class="pull">Easy Mob Farm 引入后发现严重 bug：全部农场方块、升级模板与 bug 道具整体禁用合成。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">禁用范围</span><span class="item-value">10 种农场方块、4 种升级模板、6 种捕捉/强化道具，正则全模组禁用并显示禁止合成提示</span></li>
+      <li><span class="item-label">配方</span><span class="item-value">T0 农场配方禁用统一收回 registry 维护</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">178</span>
+    <div>
+      <h2 class="edition-title">建筑商店石材分类上新 36 种</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-02</span>
+        <span class="dot">·</span>
+        <span>2edc5fb</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛒 建筑商店扩充</span>
+
+    <div class="pull">石材分类一次上架 36 种方块，全部 1 LC、64 个一组、无限库存。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">原版</span><span class="item-value">黑石、苔石、海晶石、石英块、深板岩圆石等 14 种</span></li>
+      <li><span class="item-label">模组</span><span class="item-value">洞穴与幽暗锡石/圆柱石/舒俱来石/滴水石瓦系列 16 种；沥青路面、水泥；无人之地 2 种；礁石 2 种</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">177</span>
+    <div>
+      <h2 class="edition-title">预制建筑玩法收紧</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-02</span>
+        <span class="dot">·</span>
+        <span>2edc5fb</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">⚖️ 平衡调整</span>
+
+    <div class="pull">预制建筑不再白送：新手赠送与箱内物资全部关闭，模组整体合成禁用。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">新手赠送</span><span class="item-value">newPlayersGetStartingItem 关闭，入服不再自动获得起始屋</span></li>
+      <li><span class="item-label">箱内物资</span><span class="item-value">工具/盔甲/食物/火把等 12 类物资与起始屋箱内容物全部清空</span></li>
+      <li><span class="item-label">合成禁用</span><span class="item-value">prefab 与扩展 prefab_custom_addon 全模组正则禁用（含自定义蓝图）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">176</span>
+    <div>
+      <h2 class="edition-title">预制建筑上线</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-01</span>
+        <span class="dot">·</span>
+        <span>a72656a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏗️ 模组新增</span>
+
+    <div class="pull">整装建筑模组 Prefab 1.0.9 与自定义扩展 addon 2.0.2 上线，含龙 UI 库前置。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">建筑</span><span class="item-value">63 种预制结构：住宅/仓库/农场/现代建筑/魔法神殿等</span></li>
+      <li><span class="item-label">扩展</span><span class="item-value">prefab-custom-addon 2.0.2，拓展包从自建下载服务器分发</span></li>
+      <li><span class="item-label">前置</span><span class="item-value">[龙UI库]ldlib2 2.2.36.a 启用</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">175</span>
+    <div>
+      <h2 class="edition-title">Pad 菜单升级 1.0.4</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-01</span>
+        <span class="dot">·</span>
+        <span>7ec58b5</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">⌨️ 自研更新</span>
+
+    <div class="pull">server_menu 1.0.3 → 1.0.4，随后部署同版本重建 jar 修复。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">升级</span><span class="item-value">1.0.3 → 1.0.4（7ec58b5）；09-03 部署重建版（438ace6）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">174</span>
+    <div>
+      <h2 class="edition-title">客户端渲染批次与三模组汉化</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-31</span>
+        <span class="dot">·</span>
+        <span>da30528</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🌏 汉化与客户端</span>
+
+    <div class="pull">渲染优化三件套汉化入库，同时清理停用残档与汉化临时脚本。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">汉化</span><span class="item-value">obe 渲染优化 48 键、gnetum 加速渲染HUD 57 键、ruok 钌补齐至 405 键全覆盖；fism 无文本无需汉化</span></li>
+      <li><span class="item-label">新增客户端</span><span class="item-value">obe、fism、gnetum、ruok、[鼠标轮训优化]Ixeris 4.6.5</span></li>
+      <li><span class="item-label">清理</span><span class="item-value">删除 5 个停用残档、directauth 旧版备份与 4 个汉化临时脚本</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">173</span>
+    <div>
+      <h2 class="edition-title">崩溃防护与体验增强</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-31</span>
+        <span class="dot">·</span>
+        <span>77bc8fe</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛡️ 稳定性</span>
+
+    <div class="pull">引入实体崩溃自动挂起与领地体验优化组件。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">崩溃防护</span><span class="item-value">[neruina]3.3.3 + 前置 configurable 3.5.2：报错实体自动挂起不崩服</span></li>
+      <li><span class="item-label">领地</span><span class="item-value">opac_essentials 2.2 基础支持；[OPAC移除警告]屏蔽领地提示刷屏</span></li>
+      <li><span class="item-label">客户端</span><span class="item-value">[比你命还长的快捷栏]LongHotbar 2.2.0J</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">172</span>
+    <div>
+      <h2 class="edition-title">WorldEdit 上线；灵魂锻造任务开工</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-31</span>
+        <span class="dot">·</span>
+        <span>47028c0</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🏗️ 建造工具</span>
+
+    <div class="pull">管理员工具 WorldEdit 上线（仅服务端，不下发客户端），任务组开新坑。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">WorldEdit</span><span class="item-value">7.3.8，AutoModpack 排除同步</span></li>
+      <li><span class="item-label">任务</span><span class="item-value">新增「灵魂锻造」章节（未完成），中文词条先行入库</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">171</span>
+    <div>
+      <h2 class="edition-title">仓库治理：运行时数据退出版本控制</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-31</span>
+        <span class="dot">·</span>
+        <span>225bc61</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🗄️ 仓库维护</span>
+
+    <div class="pull">fuji 配置目录整体本地化，仅保留手工维护的中文语言文件入库。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">fuji</span><span class="item-value">config.json/模块运行时数据/备份 zip 全部不再跟踪，仅保留 languages/zh_CN.json（1528 词条）</span></li>
+      <li><span class="item-label">其他</span><span class="item-value">WorldEdit 解包缓存不再跟踪</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">170</span>
+    <div>
+      <h2 class="edition-title">Chunky 预生成上线</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-30</span>
+        <span class="dot">·</span>
+        <span>1b29b74</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--perf">🚀 性能优化</span>
+
+    <div class="pull">引入区块预生成模组，主世界与资源世界预先跑图，消除探索卡顿。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">Chunky</span><span class="item-value">1.4.23，主世界/资源世界预生成任务配置入库</span></li>
+      <li><span class="item-label">fuji</span><span class="item-value">command_toolbox（传送点管理）配置生成</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">169</span>
+    <div>
+      <h2 class="edition-title">新手刀不可合成；导出脚本上线</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-30</span>
+        <span class="dot">·</span>
+        <span>eb7f4d4</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">⚖️ 平衡调整</span>
+
+    <div class="pull">新手赠礼拔刀剑添加不可合成标记并部署守护脚本，防止配方绕过。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">守护脚本</span><span class="item-value">starter_blade_crafting_guard.js，监管工作台合成</span></li>
+      <li><span class="item-label">工具</span><span class="item-value">export_saplings_and_seeds.js 树苗/种子导出脚本；清理无用脚本 create_disabled_recipes.js</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">168</span>
+    <div>
+      <h2 class="edition-title">建筑商店大上架：石材、种子与树苗</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-30</span>
+        <span class="dot">·</span>
+        <span>df5d6ce</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🛒 建筑商店扩充</span>
+
+    <div class="pull">新增石材与植物两个分类，上架 50 余种商品。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">石材</span><span class="item-value">安山岩、闪长岩、花岗岩等基础石材</span></li>
+      <li><span class="item-label">植物</span><span class="item-value">各模组树苗（云杉/樱花/红枫/柳树/符文木等）、作物种子（农夫乐事/万花筒/嗅探花等）</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">167</span>
+    <div>
+      <h2 class="edition-title">fuji 三模块开启；性能 mod 批次一</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-30</span>
+        <span class="dot">·</span>
+        <span>6bc125a</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--perf">🚀 性能优化</span>
+
+    <div class="pull">fuji 管理功能扩容，两项世界生成性能 mod 上线，任务组新增赏金玩法。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">fuji</span><span class="item-value">开启 spy（聊天监控）/ deathlog（死亡日志）/ command_cooldown（命令冷却）</span></li>
+      <li><span class="item-label">性能</span><span class="item-value">[区块加速]byepregen 1.1.2.0、[快速噪声]zfastnoise 1.0.13；antixray 停用</span></li>
+      <li><span class="item-label">任务</span><span class="item-value">欢迎章节新增赏金布告板任务</span></li>
+    </ul>
+  </div>
+</article>
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">166</span>
+    <div>
+      <h2 class="edition-title">nomending 取消耐久保护</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>08-29</span>
+        <span class="dot">·</span>
+        <span>5c76102</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--warn">⚖️ 平衡调整</span>
+
+    <div class="pull">工具与盔甲不再受 1 点耐久保护，可以自然耗尽损坏。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">配置</span><span class="item-value">protectAtOneDurability true → false：盔甲不再自动卸下，手持工具不再禁止使用</span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">
