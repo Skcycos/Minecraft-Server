@@ -1,0 +1,6 @@
+# Bundled addons RTP has installed here (name<TAB>content-hash).
+# Deleting an addon jar opts out of it; this record keeps it from returning.
+LeafRTPGuiAddon.jar	10f33f59d2dbe6247acd42ff5e66d7070e277a3695d0d44e6b1b87d1e59dea2e
+LeafRTPClaimAddon.jar	5404ee2d3ed5d9d801abc61906dff218605c692363924a4d8b503e7effcaad89
+LeafRTPCountdownAddon.jar	af8a573630bd670dc6229286c44f64307ea67602b1e9818c63bccbacc8961676
+README.md	3c4c6509c9ac405c7090df8d6b29689c59326870ddb85fdc2917ce3e8a10d7a4

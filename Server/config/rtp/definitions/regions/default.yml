@@ -1,0 +1,89 @@
+# --- RTP Region Configuration ---
+# Documentation: https://github.com/DailyStruggle/RTP/wiki/Regions
+
+# Target world name (e.g. "world", "world_nether").
+# "[0]" = main world, "[1]" = 2nd loaded world, etc.
+# @type: enum
+# @source: world
+world: "[0]"
+
+# Use the world's /worldborder as the bound instead of the shape radius below.
+worldBorderOverride: false
+
+# Spawn area shape and size. radius/centerRadius are measured in chunks.
+#
+# The teleport radius can be set in two places; pick ONE:
+#   1. Shared default (most servers): edit `defaults.shape.radius` in config.yml.
+#      Leaving the value below as "@config" inherits that whole `defaults.shape`
+#      block, so a single-world server sets radius/centerRadius once, there.
+#   2. Per-region override (this region only): replace "@config" with an inline
+#      `shape:` block here. An inline block wins over the config.yml default.
+#
+# See https://github.com/DailyStruggle/RTP/wiki/Config-yml
+# Example per-region override (mirrors the defaults.shape block in config.yml):
+#   shape:
+#     name: "CIRCLE"
+#     mode: "ACCUMULATE"
+#     radius: 256
+#     centerRadius: 64
+shape: "@config"
+
+# Vertical landing window. "@config" inherits the whole `defaults.vert` block from
+# config.yml. See https://github.com/DailyStruggle/RTP/wiki/Config-yml
+# Replace with an inline block to override per-region, e.g.:
+#   vert:
+#     name: "LINEAR"
+#     minY: 32
+#     maxY: 128
+#     direction: 2
+#     requireSkyLight: false
+vert: "@config"
+
+# If true, rtp.regions.<name> is required. "@config" inherits defaults.requirePermission
+# from config.yml. See https://github.com/DailyStruggle/RTP/wiki/Config-yml
+# Replace with a literal to override per-region, e.g.:
+#   requirePermission: true
+requirePermission: "@config"
+
+# Region to redirect to if no permission
+# @type: enum
+# @source: region
+override: "default"
+
+# Economy cost override for this region (added on top of the economy.yml base price).
+# Use "@economy" to inherit the base price from economy.yml instead of a literal.
+# See https://github.com/DailyStruggle/RTP/wiki/Economy
+# Replace with a number or the inheritance token to override per-region, e.g.:
+#   price: 100.0
+#   price: "@economy"
+price: 0.0
+
+# Optional cosmetic display name shown in /rtp info and the GUI menu. Does NOT
+# change the region's identity (commands/permissions still use the file name).
+# Supports color codes (e.g. &#55ff55 or &a). Defaults to the region name.
+# displayName: "&#55ff55Wild Overworld"
+
+# --- Advanced (cache/precision tuning; defaults suit most servers) ---
+# Each "@config" inherits the matching defaults.<key> value from config.yml;
+# replace with a number to override per-region. See:
+#   https://github.com/DailyStruggle/RTP/wiki/Config-yml
+#   https://github.com/DailyStruggle/RTP/wiki/Regions
+# Max pre-calculated safe locations. Example override:
+#   cacheCap: 10
+cacheCap: "@config"
+
+# Backlog cache capacity for candidate locations pre-filtered before full safety checks. 0 disables it.
+# Example override:
+#   backlogCacheCap: 1000
+backlogCacheCap: "@config"
+
+# Max chunks kept loaded for zero-latency. Example override:
+#   activeChunkCap: 64
+activeChunkCap: "@config"
+
+# Precision for bad-location tracking (1-5). Example override:
+#   spatialResolution: 3
+spatialResolution: "@config"
+
+# DO NOT TOUCH VERSION NUMBER
+version: "1.1"

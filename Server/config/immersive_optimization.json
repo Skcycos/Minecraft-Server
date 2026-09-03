@@ -7,7 +7,7 @@
   "enableTrackingCulling": true,
   "enableViewportCulling": true,
   "minDistance": 6,
-  "blocksPerLevel": 64,
+  "blocksPerLevel": 40,
   "blocksPerLevelDistanceCulled": 10,
   "blocksPerLevelTrackingCulled": 10,
   "blocksPerLevelViewportCulled": 20,

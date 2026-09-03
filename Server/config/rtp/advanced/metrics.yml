@@ -1,0 +1,28 @@
+# --- RTP Metrics Settings ---
+# Documentation: https://github.com/DailyStruggle/RTP/wiki/Metrics
+
+# Report per-region detail on Folia. Does nothing on other platforms.
+# @type: boolean
+# @default: true
+foliaIncludeRegions: true
+
+# How to combine per-region TPS on Folia.
+# @type: enum
+# @options: [mean, max]
+# @default: mean
+foliaAggregationTps: "mean"
+
+# How to combine per-region MSPT on Folia.
+# @type: enum
+# @options: [mean, max]
+# @default: max
+foliaAggregationMspt: "max"
+
+# How to combine per-region tick budget on Folia.
+# @type: enum
+# @options: [mean, max]
+# @default: max
+foliaAggregationTickBudget: "max"
+
+# DO NOT TOUCH VERSION NUMBER
+version: 1.1

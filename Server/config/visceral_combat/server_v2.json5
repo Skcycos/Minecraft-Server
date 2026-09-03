@@ -34,9 +34,9 @@
 	// Enemy directional coefficient
 	"dirCoeff": 1.0,
 	// Attack Particles
-	"particles": true,
+	"particles": false,
 	// Hitstop on Self
-	"hitstopSelf": true,
+	"hitstopSelf": false,
 	// Hitstop on Enemies
 	"hitstopEnemies": true,
 	// Enable Holster Mode (H key)

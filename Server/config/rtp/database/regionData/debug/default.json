@@ -1,0 +1,187 @@
+{
+  "world": "minecraft:overworld",
+  "scanStride": -1,
+  "spatialResolution": 3,
+  "badLocations": [
+    {
+      "start": 5179,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 24838,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 67630,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 72738,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 100588,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 102481,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 119252,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 127989,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 129548,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 160988,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 162461,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 166007,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 169389,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 180775,
+      "length": 1,
+      "cause": "vert"
+    }
+  ],
+  "biomeLocations": {
+    "AUTUMNAL_FOREST": [
+      {
+        "start": 21036,
+        "length": 3
+      }
+    ],
+    "ICE_SPIKES": [
+      {
+        "start": 146762,
+        "length": 3
+      }
+    ],
+    "OLD_GROWTH_SPRUCE_TAIGA": [
+      {
+        "start": 124656,
+        "length": 3
+      }
+    ],
+    "TERRALITH:HIGHLANDS": [
+      {
+        "start": 16336,
+        "length": 3
+      }
+    ],
+    "FORESTED_HIGHLANDS": [
+      {
+        "start": 63362,
+        "length": 3
+      }
+    ],
+    "VOLCANIC_PEAKS": [
+      {
+        "start": 12079,
+        "length": 3
+      }
+    ],
+    "TERRALITH:BRUSHLAND": [
+      {
+        "start": 14402,
+        "length": 3
+      },
+      {
+        "start": 92308,
+        "length": 3
+      }
+    ],
+    "BRUSHLAND": [
+      {
+        "start": 49710,
+        "length": 3
+      },
+      {
+        "start": 173038,
+        "length": 3
+      }
+    ],
+    "PLAINS": [
+      {
+        "start": 31594,
+        "length": 3
+      }
+    ],
+    "OLD_GROWTH_PINE_TAIGA": [
+      {
+        "start": 94089,
+        "length": 3
+      }
+    ],
+    "BIRCH_TAIGA": [
+      {
+        "start": 97165,
+        "length": 3
+      }
+    ],
+    "OLD_GROWTH_FOREST": [
+      {
+        "start": 122754,
+        "length": 3
+      }
+    ],
+    "HIGHLANDS": [
+      {
+        "start": 123871,
+        "length": 3
+      },
+      {
+        "start": 169070,
+        "length": 3
+      }
+    ],
+    "SPARSE_JUNGLE": [
+      {
+        "start": 155161,
+        "length": 3
+      }
+    ],
+    "SAVANNA_PLATEAU": [
+      {
+        "start": 3539,
+        "length": 3
+      }
+    ],
+    "TERRALITH:FORESTED_HIGHLANDS": [
+      {
+        "start": 110017,
+        "length": 3
+      }
+    ]
+  }
+}

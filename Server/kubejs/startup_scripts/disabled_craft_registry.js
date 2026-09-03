@@ -92,6 +92,9 @@ const DISABLED_CRAFT_ENTRIES = [
   { id: 'minecraft:tnt_minecart', reason: 'TNT 矿车，破坏建筑' },
   { id: 'minecraft:respawn_anchor', reason: '重生锚，主世界误爆风险' },
 
+  // —— Lightman's Currency：限制交易系统核心 ——
+  { id: 'lightmanscurrency:trading_core', reason: '交易系统核心，本服禁用合成' },
+
   // —— 潜影盒：全部颜色禁用（放入清单以同步 tooltip，替代原先的正则删除） ——
   { id: 'minecraft:shulker_box', reason: '潜影盒全部颜色禁用' },
   { id: 'minecraft:white_shulker_box', reason: '潜影盒全部颜色禁用' },
@@ -133,37 +136,17 @@ const DISABLED_CRAFT_ENTRIES = [
   // —— Useful Magic：正则禁用整个模组的全部合成输出 ——
   { pattern: /usefulmagic:.*/, reason: '本服禁用 Useful Magic 全部合成' },
 
-  // —— Easy Mob Farm：有 bug 的道具 ——
-  { id: 'easy_mob_farm:sword_enhancement', reason: 'bug' },
-  { id: 'easy_mob_farm:speed_enhancement', reason: 'bug' },
-  { id: 'easy_mob_farm:creative_mob_catcher', reason: 'bug' },
-  { id: 'easy_mob_farm:enduring_capture_net', reason: 'bug' },
-  { id: 'easy_mob_farm:ironbound_containment_cage', reason: 'bug' },
-  { id: 'easy_mob_farm:mystic_binding_crystal', reason: 'bug' },
-
-  // —— Easy Mob Farm：农场方块整体禁用（含 bug） ——
-  { id: 'easy_mob_farm:animal_plains_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:bee_hive_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:desert_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:iron_golem_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:jungle_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:lucky_drop_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:monster_plains_cave_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:nether_fortress_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:ocean_farm', reason: 'bug' },
-  { id: 'easy_mob_farm:swamp_farm', reason: 'bug' },
-
-  // —— Easy Mob Farm：农场升级模板（配套农场整体禁用） ——
-  { id: 'easy_mob_farm:tier0_mob_farm_template', reason: 'bug' },
-  { id: 'easy_mob_farm:tier1_mob_farm_template', reason: 'bug' },
-  { id: 'easy_mob_farm:tier2_mob_farm_template', reason: 'bug' },
-  { id: 'easy_mob_farm:tier3_mob_farm_template', reason: 'bug' },
+  // —— 生物农场：正则禁用整个模组的全部内容 ——
+  { pattern: /easy_mob_farm:.*/, reason: '本服禁用 生物农场 全部内容' },
 
   // —— 预制建筑扩展：自定义蓝图 ——
   { id: 'prefab_custom_addon:custom_blueprint', reason: '可绕过建筑限制' },
 
   // —— 预制建筑：正则禁用整个模组的全部合成 ——
   { pattern: /prefab:.*/, reason: '本服禁用 预制建筑 全部合成' },
+
+  // —— 预制建筑扩展：正则禁用整个模组的全部合成 ——
+  { pattern: /prefab_custom_addon:.*/, reason: '本服禁用 预制建筑扩展 全部合成' },
 ]
 
 /**
@@ -172,17 +155,7 @@ const DISABLED_CRAFT_ENTRIES = [
  * @type {DisabledRecipeEntry[]}
  */
 const DISABLED_RECIPE_IDS = [
-  // —— Easy Mob Farm：全部农场 T0 合成（T0 与 T1~3 是同一物品，只能按配方删） ——
-  { id: 'easy_mob_farm:mob_farm/animal_plains_farm/tier0_animal_plains_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/bee_hive_farm/tier0_bee_hive_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/desert_farm/tier0_desert_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/iron_golem_farm/tier0_iron_golem_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/jungle_farm/tier0_jungle_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/monster_plains_cave/tier0_monster_plains_cave_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/nether_fortress_farm/tier0_nether_fortress_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/ocean_farm/tier0_ocean_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/swamp_farm/tier0_swamp_farm', reason: '其他方式获取' },
-  { id: 'easy_mob_farm:mob_farm/lucky_drop_farm/tier0_lucky_drop_farm', reason: '其他方式获取' },
+  // （easy_mob_farm 的 T0 配方已由上面的全模组正则覆盖，无需按配方 ID 单独列出）
 ]
 
 // 挂到 global，供 server / client 脚本读取

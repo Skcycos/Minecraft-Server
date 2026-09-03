@@ -4,7 +4,7 @@
 	OptimizeEntitiesTicking = true
 	# Default: 64
 	# Range: > 1
-	LivingEntitiesMaxHorizontalTickDistance = 64
+	LivingEntitiesMaxHorizontalTickDistance = 42
 	# Default: 32
 	# Range: > 1
 	LivingEntitiesMaxVerticalTickDistance = 32

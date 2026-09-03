@@ -1,0 +1,6 @@
+effects: "effects"
+players: "players"
+inherit: "inherit"
+permission: "permission"
+version: "version"
+when: "when"
