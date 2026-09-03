@@ -1,6 +1,6 @@
 ["Async Config"]
 	#Enables parallel processing of entities.
-	disabled = false
+	disabled = true
 	#Maximum worker threads. -1 = auto.
 	# Default: -1
 	# Range: > -1

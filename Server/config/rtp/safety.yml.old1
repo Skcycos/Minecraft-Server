@@ -1,0 +1,102 @@
+# --- RTP Safety Configuration ---
+# Documentation: https://github.com/DailyStruggle/RTP/wiki/Safety
+
+# Seconds you can't be hurt after teleporting. 0 = off.
+# @type: integer
+# @range: [0, null]
+# @unit: seconds
+# @default: 5
+invulnerabilityTime: 5
+
+# How many blocks around you we check for danger. 0 = just the spot.
+# @type: integer
+# @range: [0, null]
+# @unit: blocks
+# @default: 0
+safetyRadius: 0
+
+# Size of the safety platform built under you. -1 = off.
+# @type: integer
+# @range: [-1, null]
+# @unit: blocks
+# @default: -1
+platformRadius: -1
+
+# How thick the safety platform is.
+# @type: integer
+# @range: [1, null]
+# @unit: blocks
+# @default: 1
+platformDepth: 1
+
+# How much air is cleared above the platform.
+# @type: integer
+# @range: [0, null]
+# @unit: blocks
+# @default: 2
+platformAirHeight: 2
+
+# Block the platform is made of.
+# @type: material
+# @source: material
+# @default: GLASS
+platformMaterial: "GLASS"
+
+# Seconds until the platform turns back into the old blocks. -1 = never, 0 = on reload.
+# @type: integer
+# @range: [-1, null]
+# @unit: seconds
+# @default: -1
+platformRestoreSeconds: -1
+
+# --- Optional PvP / combat-tag check ---
+# true = check if you're fighting before teleporting.
+# @type: boolean
+# @default: false
+pvpCheckEnabled: false
+
+# Seconds you stay "in combat" after a PvP hit (built-in tracker only).
+# @type: integer
+# @range: [0, null]
+# @unit: seconds
+# @default: 15
+pvpCombatTagSeconds: 15
+
+# What to do if you /rtp while fighting.
+# ALLOW = let it, DENY = block it, DELAY = wait, CANCEL = stop it.
+# @type: enum
+# @options: [ALLOW, DENY, DELAY, CANCEL]
+# @default: DENY
+pvpOnCombat: "DENY"
+
+# Where to read combat state from.
+# AUTO = plugin if present else built-in, NATIVE = built-in, EXTERNAL = plugin only.
+# @type: enum
+# @options: [AUTO, NATIVE, EXTERNAL]
+# @default: AUTO
+pvpSource: "AUTO"
+
+# Built-in tracker: tag the player who gets hit.
+# @type: boolean
+# @default: true
+pvpTagVictim: true
+
+# Built-in tracker: tag the player who hits.
+# @type: boolean
+# @default: true
+pvpTagAggressor: true
+
+# --- Advanced (most servers leave these alone) ---
+# How many retries before a chunk check gives up.
+# @type: integer
+# @range: [0, null]
+# @default: 2
+staleChunkRetryLimit: 2
+
+# Skip bad spots without loading chunks (faster).
+# @type: boolean
+# @default: true
+anvilPrefilterEnabled: true
+
+# DO NOT TOUCH VERSION NUMBER
+version: 1.1

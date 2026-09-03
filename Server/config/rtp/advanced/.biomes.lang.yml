@@ -1,10 +1,9 @@
 # --- Language Mapping: biomes.yml ---
 # Maps internal baseline keys (left) to user-visible key names used in
-# biomes.yml (right). biomes.yml is language-neutral (biome-id list), so
-# every row is identity; the file exists purely to mirror the value file
-# under lang/advanced/ and keep the config loader's path uniform.
-biomeWhitelist: "biomeWhitelist"
-biomes: "biomes"
-biomeWeighted: "biomeWeighted"
-biomeWeights: "biomeWeights"
+# biomes.yml (right). Restored from the pre-split per-locale safety.lang.yml
+# so the translated key names survive the advanced/ relocation.
+biomeWhitelist: "生物群系白名单"
+biomes: "生物群系"
+biomeWeighted: "生物群系加权"
+biomeWeights: "生物群系权重"
 version: "version"

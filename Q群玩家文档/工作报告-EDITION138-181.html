@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>食韵筑家服务器 · 运维工作报告（EDITION 138–181）</title>
+<style>
+  :root {
+    --paper: #f7f4ee;
+    --paper-2: #efeae0;
+    --ink: #1f1c17;
+    --ink-2: #57503f;
+    --accent: #b3552e;
+    --accent-2: #f3e2d3;
+    --green: #4a7c59;
+    --green-2: #e2ecdd;
+    --red: #a03a3a;
+    --red-2: #f3dede;
+    --blue: #3a6a8c;
+    --blue-2: #dfe9f0;
+    --line: #d8d0c0;
+    --card: #fffdf8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 28px 80px; }
+
+  /* ===== 封面头部 ===== */
+  header.cover {
+    border-bottom: 3px double var(--line);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .kicker {
+    font-size: 12px; letter-spacing: 4px; color: var(--accent);
+    font-weight: 600; margin-bottom: 10px;
+  }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: 1px; line-height: 1.3; }
+  .sub { color: var(--ink-2); margin-top: 10px; font-size: 14px; }
+  .meta-line {
+    margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .meta-line span {
+    background: var(--paper-2); border: 1px solid var(--line);
+    padding: 3px 12px; border-radius: 999px; font-size: 12.5px; color: var(--ink-2);
+  }
+
+  /* ===== 统计卡片 ===== */
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px; margin: 28px 0 40px;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 14px; text-align: center;
+  }
+  .stat b { display: block; font-size: 26px; color: var(--accent); font-weight: 800; }
+  .stat span { font-size: 12.5px; color: var(--ink-2); }
+
+  /* ===== 章节 ===== */
+  section { margin-bottom: 44px; }
+  h2.sec {
+    font-size: 21px; font-weight: 800; padding-left: 12px;
+    border-left: 5px solid var(--accent); margin-bottom: 6px;
+  }
+  .sec-sub { color: var(--ink-2); font-size: 13px; margin-bottom: 16px; padding-left: 17px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 22px; margin-bottom: 14px;
+  }
+  .card h3 { font-size: 16px; margin-bottom: 8px; }
+  .card h3 .tag {
+    display: inline-block; vertical-align: 2px; font-size: 11px; font-weight: 600;
+    padding: 1px 8px; border-radius: 999px; margin-left: 8px; letter-spacing: 1px;
+  }
+  .tag.add { background: var(--green-2); color: var(--green); }
+  .tag.up  { background: var(--blue-2); color: var(--blue); }
+  .tag.off { background: var(--red-2); color: var(--red); }
+  .tag.fix { background: var(--accent-2); color: var(--accent); }
+  .card ul { padding-left: 20px; }
+  .card li { margin: 3px 0; }
+  .card li b { color: var(--ink); }
+  .muted { color: var(--ink-2); font-size: 13px; }
+  code {
+    font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px; background: var(--paper-2);
+    padding: 1px 6px; border-radius: 5px; border: 1px solid var(--line);
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
+  th { background: var(--paper-2); font-size: 12.5px; letter-spacing: 1px; }
+  td.num { text-align: center; font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+  /* ===== 时间轴 ===== */
+  .timeline { border-left: 2px solid var(--line); margin-left: 8px; padding-left: 22px; }
+  .t-item { position: relative; padding-bottom: 18px; }
+  .t-item::before {
+    content: ""; position: absolute; left: -28px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--paper);
+  }
+  .t-date { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 1px; }
+  .t-title { font-weight: 700; margin: 2px 0; }
+  .t-desc { color: var(--ink-2); font-size: 13.5px; }
+
+  /* ===== 风险区 ===== */
+  .risk {
+    background: var(--red-2); border: 1px solid #d8b8b8; border-radius: 12px;
+    padding: 18px 22px; margin-bottom: 14px;
+  }
+  .risk h3 { color: var(--red); font-size: 16px; margin-bottom: 6px; }
+  .next {
+    background: var(--green-2); border: 1px solid #bcd2b4; border-radius: 12px;
+    padding: 18px 22px; margin-bottom: 14px;
+  }
+  .next h3 { color: var(--green); font-size: 16px; margin-bottom: 6px; }
+
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 3px double var(--line);
+    color: var(--ink-2); font-size: 12.5px; text-align: center;
+  }
+  @media print {
+    body { background: #fff; }
+    .wrap { padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="kicker">食韵筑家 III · 烟火长歌</div>
+  <h1>服务器运维工作报告</h1>
+  <div class="sub">覆盖更新日志 EDITION 138 – 181（共 44 个版次）· 面向管理组的阶段性总结</div>
+  <div class="meta-line">
+    <span>周期：2026-08-25 ～ 2026-09-03</span>
+    <span>服务端模组 207 个</span>
+    <span>客户端整合包模组 59 个</span>
+    <span> NeoForge 1.21.1</span>
+  </div>
+</header>
+
+<!-- ============ 概览 ============ -->
+<div class="stats">
+  <div class="stat"><b>44</b><span>更新版次</span></div>
+  <div class="stat"><b>30+</b><span>新增/替换模组</span></div>
+  <div class="stat"><b>210</b><span>商店在售商品</span></div>
+  <div class="stat"><b>101</b><span>禁用清单条目</span></div>
+  <div class="stat"><b>5000+</b><span>汉化词条交付</span></div>
+  <div class="stat"><b>10G</b><span>JVM 堆上限</span></div>
+</div>
+
+<!-- ============ 一、模组管理 ============ -->
+<section>
+  <h2 class="sec">一、模组管理</h2>
+  <div class="sec-sub">新增、升级与停用，全部经 AutoModpack 同步或服务端部署，保持两端一致。</div>
+
+  <div class="card">
+    <h3>新增模组（按功能分组）</h3>
+    <ul>
+      <li><b>建造类：</b>轻松建造（后换装 Effortless Building）、时装盔甲、沉浸式绘画、预制建筑 Prefab 1.0.9 + 扩展 addon 2.0.2（前置 龙UI库 ldlib2）</li>
+      <li><b>玩法类：</b>流星雨、生物特辑、简易弓箭、简易怪物装备、一键整理 inventorysorter、生物特辑、怪物消失、杂乱无章、叶子快速腐烂</li>
+      <li><b>战斗/拔刀：</b>简易刀剑 1.70.2（符文锻造台）、拔刀剑重锋生态配套（刀挂台/守护脚本）</li>
+      <li><b>经济/领地：</b>LuckPerms 权限体系、opac_essentials、OPAC 领地警告屏蔽</li>
+      <li><b>运维/稳定：</b>neruina 3.3.3（+configurable 前置）、漏洞崩溃修复 crashexploitfixer、视奸 watut + coroutil、WorldEdit 7.3.8（仅服务端）</li>
+      <li><b>传送/体验：</b>LeafRTP 随机传送 3.2.1（含 GUI/倒计时/领地保护插件）、LongHotbar 快捷栏、鼠标轮训优化 Ixeris、简易提示 0.1.5、简易绘画</li>
+      <li><b>世界生成：</b>Chunky 1.4.23 预生成、byepregen 区块加速、zfastnoise 快速噪声、distant horizons</li>
+      <li><b>MOTD：</b>MiniMOTD（服务器列表）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>升级与修复 <span class="tag up">UPGRADE</span></h3>
+    <ul>
+      <li><b>灼热枪械（自研分支）：</b>1.5.0 → 1.5.1（修复专用服务器装弹崩溃）→ 1.5.2</li>
+      <li><b>简易刀剑：</b>1.63.0 → 1.70.2（符文锻造台与多系列独特武器）</li>
+      <li><b>ApricityUI：</b>1.2.3.1 → 1.2.4-hotfix</li>
+      <li><b>Pad 菜单（自研）：</b>1.0.2 → 1.0.3 → 1.0.4（含重建版部署）</li>
+      <li><b>简易提示：</b>0.1.3 → 0.1.5；buildshop 1.0.2 / server_menu 配套升级</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>停用与移除 <span class="tag off">DISABLED</span></h3>
+    <ul>
+      <li><b>范式 Paradigm 2.4.2b：</b>停用（.dis），可随时恢复</li>
+      <li><b>antixray：</b>停用（性能 mod 栈重叠）</li>
+      <li><b>InventoryProfilesNext：</b>由服务端一键整理替代，客户端整合包中移除</li>
+      <li><b>加速渲染 acceleratedrendering：</b>停用（jar → .dis）</li>
+      <li><b>清理：</b>directauth 旧版备份、5 个停用残档与 4 个汉化临时脚本移出仓库</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 二、自研开发 ============ -->
+<section>
+  <h2 class="sec">二、自研模组与工具链</h2>
+  <div class="sec-sub">围绕「建筑商店 + Pad 菜单 + fuji 管理端」的自研体系持续迭代。</div>
+
+  <div class="card">
+    <h3>灼热枪械（ScorchedGuns 分支）</h3>
+    <ul>
+      <li>1.5.1 修复专用服务器装弹崩溃：C2S 装弹处理不再加载仅客户端的 ReloadHandler。</li>
+      <li>客户端扩展迁移至 <code>RegisterClientExtensionsEvent</code>；JEI 分类迁出 <code>getBackground</code>；替换 1.21.1 弃用 API。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>server_menu（Pad 菜单）</h3>
+    <ul>
+      <li>1.0.2 → 1.0.4 三个版本迭代；领地商店（首次 256 铜币、递增 50%、上限 20 次）与飞行模块配置落地。</li>
+      <li>配合 OPAC 领地上限的权限发放链路（prometheus 权限桥）。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>fuji 管理端模块矩阵</h3>
+    <ul>
+      <li>先后开启：chat（含样式/历史/@提及）、tpa/back/home/rtp/sit/afk、placeholder、world/skin/view、spy/deathlog/command_cooldown、command_toolbox。</li>
+      <li>外部语言文件 zh_CN.json 1528 词条全覆盖；权限节点随模块自动生成并纳入 LuckPerms/prometheus 管理。</li>
+      <li>fuji 配置目录整体本地化：运行时数据退出版本控制，仅保留手工维护的语言文件。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>KubeJS 工具脚本</h3>
+    <ul>
+      <li><b>禁用合成清单（registry）：</b>唯一维护入口，统一驱动删配方 + 客户端 tooltip，当前 94 条 ID + 7 条正则。</li>
+      <li><b>starter_blade_crafting_guard.js：</b>新手刀防合成绕过守护。</li>
+      <li><b>export_saplings_and_seeds.js：</b>树苗/种子批量导出，服务商店上架。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>仓库工程化</h3>
+    <ul>
+      <li>TCTH 职业模组源码迁入独立仓库 <code>Skcycos/tcthintegration-1.21.1</code>（保留完整历史）。</li>
+      <li>fuji 运行时数据、备份 zip、WorldEdit 解包缓存加入 .gitignore；更新日志规则从 AGENTS.md 移除（按需补记）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 三、经济与商店 ============ -->
+<section>
+  <h2 class="sec">三、经济与商店</h2>
+  <div class="sec-sub">建筑商店完成「降价 → 扩品类 → 石材上新」三轮调整，商品数 90 → 210。</div>
+
+  <table>
+    <tr><th>轮次</th><th>内容</th><th>结果</th></tr>
+    <tr><td>全场五折</td><td>90 个旧商品统一半价（向上取整，最低 1 LC）</td><td class="num">90 项</td></tr>
+    <tr><td>动物商品</td><td>新增 animals 分类，35 种原版生物（entity 生成、单只购买）</td><td class="num">+35</td></tr>
+    <tr><td>大上架</td><td>新增 stone/plants 分类：基础石材、各模组树苗、作物种子</td><td class="num">+50 余</td></tr>
+    <tr><td>石材上新</td><td>36 种方块 1 LC：原版 14 + 洞穴与幽暗 16 + 道路/无人之地/礁石 6</td><td class="num">+36</td></tr>
+  </table>
+  <p class="muted">当前：8 个分类 / 210 个在售商品 / LC 铜币本位 / 无限库存为主。领地商店同步调价（首次 256、递增 50%、上限 20 次）。</p>
+</section>
+
+<!-- ============ 四、任务与玩法 ============ -->
+<section>
+  <h2 class="sec">四、任务与玩法</h2>
+  <div class="card">
+    <ul>
+      <li><b>「刀剑」章节：</b>拔刀剑新手任务链（无铭之刃 → 灶火中的刀光 → 刀挂台 → 名刀），中文文案全部手写。</li>
+      <li><b>「灵魂锻造」章节：</b>灵灾向任务线开工（未完成），词条先行入库。</li>
+      <li><b>赏金布告板：</b>欢迎章节新增 Bountiful 任务。</li>
+      <li><b>平衡收紧：</b>nomending 取消 1 点耐久保护；新手刀标记不可合成；预制建筑关闭新手赠送与箱内物资、全模组合成禁用；Easy Mob Farm 发现 bug 后全量禁用。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 五、汉化工程 ============ -->
+<section>
+  <h2 class="sec">五、汉化工程</h2>
+  <div class="sec-sub">本周期交付 9 个模组/项目的中文本地化，全部经键值校验与占位符核对。</div>
+  <table>
+    <tr><th>项目</th><th>规模</th><th>备注</th></tr>
+    <tr><td>轻松建造（Sophisticated Building）</td><td class="num">全面汉化</td><td>含扩展「竖直朝向」</td></tr>
+    <tr><td>简易刀剑</td><td class="num">2267 键</td><td>同步官方新版，清理旧稿 430 条</td></tr>
+    <tr><td>简易弓箭</td><td class="num">724 词条</td><td>全覆盖</td></tr>
+    <tr><td>捕星者</td><td class="num">451 词条</td><td>补翻新增并清理过时键</td></tr>
+    <tr><td>fuji 管理端</td><td class="num">1528 词条</td><td>新翻 1165 条，6 批交付，占位符零差异</td></tr>
+    <tr><td>creaturefeature</td><td class="num">全覆盖</td><td>物品/选项说明</td></tr>
+    <tr><td>obe / gnetum / ruok</td><td class="num">48+57+405 键</td><td>ruok 补齐至与英文 100% 对齐并修正上游占位符错译</td></tr>
+  </table>
+</section>
+
+<!-- ============ 六、性能优化 ============ -->
+<section>
+  <h2 class="sec">六、性能优化</h2>
+  <div class="sec-sub">「预生成 + 分层降频 + 距离冻结 + 动态降档」四层体系成型。</div>
+  <div class="card">
+    <ul>
+      <li><b>预生成：</b>Chunky 对主世界/资源世界预生成；byepregen 跳过区块预生成开销；zfastnoise 加速噪声计算。</li>
+      <li><b>距离冻结：</b>Does It Tick 水平 42 格外冻结实体 tick（Boss 白名单保护）。</li>
+      <li><b>分层降频：</b>沉浸式优化 blocksPerLevel 40、MSPT 45 阈值自适应；投射物与载具类不剔除。</li>
+      <li><b>ServerCore：</b>动态性能调整开启（35 MSPT 目标，视距/模拟距离/怪物上限自动降档）；繁殖帽开启；刷怪上限全体 -30%（怪物 70→49）；取消重复流体随机刻；村民脑叶切除。</li>
+      <li><b>内存：</b>JVM 堆 8G → 10G，应对 OOM。</li>
+      <li><b>同步裁剪：</b>AutoModpack 排除规则多轮整理（fuji/LuckPerms/VSS/WorldEdit 等服务端专属内容不下发客户端）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 七、稳定性与故障处理 ============ -->
+<section>
+  <h2 class="sec">七、稳定性与故障处理</h2>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="t-date">08-25 前后</div>
+      <div class="t-title">DirectAuth 登录体系调整</div>
+      <div class="t-desc">防爆破限制放宽（IP 5→80、单账号 5→20）；升级 1.2.1；登录时限放宽至 5 分钟。</div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">08-29 ～ 09-03</div>
+      <div class="t-title">拔刀剑刀光实体崩服事件</div>
+      <div class="t-desc">SlashBlade Resharped 2.0.5 对非玩家实体读取玩家专属属性 <code>player.sweeping_damage_ratio</code> 导致 Ticking entity 崩服（残留刀光实体反复触发，另伴随 60s watchdog 卡死与 OOM）。处置：Neruina 兜底 + 清理残留实体 + 堆 10G；根因待上游修复。</div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">08-31</div>
+      <div class="t-title">崩溃防护体系</div>
+      <div class="t-desc">neruina（报错实体自动挂起）+ configurable 前置 + crashexploitfixer 上线；neruina 曾因缺前置启动失败，当日补装解决。</div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">09-03</div>
+      <div class="t-title">玩家进服卡死排查</div>
+      <div class="t-desc">Async（异步，alpha）与 C2ME 线程模型冲突锁定为卡死嫌疑；先行扩容堆至 10G 观察，备选方案为停用 Async。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 八、领地与权限 ============ -->
+<section>
+  <h2 class="sec">八、领地与权限</h2>
+  <div class="card">
+    <ul>
+      <li><b>LuckPerms：</b>部署 NeoForge 5.4.150（仅服务端），与 fuji/OPAC 打通。</li>
+      <li><b>领地上限售卖：</b>领地商店定价调整后，通过权限 <code>xaero.pac_max_claims</code> 动态发放购买额度。</li>
+      <li><b>已知问题：</b>领地主人离线时 prometheus 无法解析权限 → OPAC 回退默认上限（1 区块），队友访问受限（5 分钟一次例外）。LuckPerms 迁移方案已完成分析，待商店侧适配后实施。</li>
+      <li><b>体验优化：</b>opac_essentials 上线；领地提示刷屏由独立 mod 屏蔽。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 九、风险 ============ -->
+<section>
+  <h2 class="sec">九、风险与遗留问题</h2>
+  <div class="risk">
+    <h3>① SlashBlade Resharped 2.0.5 属性读取崩溃（中高）</h3>
+    <p class="muted">上游 bug，玩家正常放技能也可能触发；Neruina 阈值兜底，建议向上游报 bug 或关注修复版。</p>
+  </div>
+  <div class="risk">
+    <h3>② Async（异步，alpha）与 C2ME 冲突嫌疑（中）</h3>
+    <p class="muted">玩家进服触发区块加载卡死的直接嫌疑栈；10G 观察期后未缓解则停用 Async。</p>
+  </div>
+  <div class="risk">
+    <h3>③ OPAC 离线权限解析缺失（中）</h3>
+    <p class="muted">领地主人离线期间队友访问受限；短期靠调低例外冷却缓解，长期走 LuckPerms 迁移。</p>
+  </div>
+  <div class="risk">
+    <h3>④ dungeonsdelight 战利品修改器加载失败（低）</h3>
+    <p class="muted">上游 JSON 使用已改名的 loot 条件 ID，对应掉落不生效，功能损失有限。</p>
+  </div>
+</section>
+
+<!-- ============ 十、下一步 ============ -->
+<section>
+  <h2 class="sec">十、下一步计划</h2>
+  <div class="next">
+    <h3>短期</h3>
+    <ul>
+      <li>完成「灵魂锻造」任务章节并汉化校验。</li>
+      <li>观察 10G 堆 + 新性能参数下的 MSPT 与崩溃率，决定 Async 去留。</li>
+      <li>领地权限 LuckPerms 迁移落地（含存量数据迁移与离线解析验证）。</li>
+    </ul>
+  </div>
+  <div class="next">
+    <h3>中期</h3>
+    <ul>
+      <li>建筑商店分类继续扩容（石英/玻璃/装饰系），探索与任务奖励联动。</li>
+      <li>向上游反馈 SlashBlade / dungeonsdelight 问题并跟踪修复版。</li>
+      <li>预生成覆盖度复核（新探索区域补充跑图）。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  食韵筑家服务器管理组 · 报告生成于 2026-09-03 · 数据来源：更新日志 EDITION 138–181 与仓库提交记录
+</footer>
+
+</div>
+</body>
+</html>

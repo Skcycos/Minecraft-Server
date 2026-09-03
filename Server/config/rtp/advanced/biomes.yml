@@ -1,15 +1,18 @@
 # --- RTP Biome Filter (advanced) ---
-# Documentation: https://github.com/DailyStruggle/RTP/wiki/Biome-Controls
+# Documentation: plugins/RTP/docs/admin/configuration/SAFETY.md
 
-# true = only land in the listed biomes. false = never land in them.
+# Split out of safety.yml so the common safety knobs stay uncluttered.
+#
+# If true, the biomes list is a whitelist (only these biomes are
+# allowed). If false, it is a blacklist (these biomes are excluded).
 # @type: boolean
 # @default: false
-biomeWhitelist: false
+生物群系白名单: false
 
-# The biomes the list above uses.
+# Biomes treated as whitelist or blacklist members per biomeWhitelist.
 # @type: list<biome>
 # @source: biome
-biomes:
+生物群系:
   - "OCEAN"
   - "DEEP_OCEAN"
   - "WARM_OCEAN"
@@ -33,21 +36,22 @@ biomes:
   - "DEEP_DARK"
   - "THE_VOID"
 
-# --- Biome weighting ---
-# Pick each biome equally instead of by size. Needs biomeRecall.
+# 以相等概率引导每个请求的生物群系，而非按其覆盖区域的比例。需要 biomeRecall；
+# 对无过滤的传送无效。
 # @type: boolean
 # @default: false
-biomeWeighted: false
+生物群系加权: false
 
-# How often each biome is picked (needs biomeWeighted).
-# 1.0 = normal, 2.0 = twice as often, 0.0 = never. Add modded biomes by id.
+# 按生物群系过滤传送的各生物群系相对权重。仅当 biomeWeighted 为 true 时使用。
+# 未列出的生物群系使用 1.0（无偏向）；2.0 = 被选中约两倍频率，0.0 = 抑制。
+# 完整的原版生物群系集已按 1.0 预先列出作为可编辑参考；用平台 id 添加模组生物
+# 群系（如 terralith:emerald_peaks）。需要 biomeRecall。
 # @type: map<string, number>
-biomeWeights:
-  # Relative selection weight for this biome (1.0 = no bias).
+生物群系权重:
+  # 该生物群系的相对选择权重（1.0 = 无偏向）。
   # @type: number
   # @range: [0.0, null]
   # @default: 1.0
-  # --- Overworld ---
   plains: 1.0
   sunflower_plains: 1.0
   snowy_plains: 1.0
@@ -102,19 +106,19 @@ biomeWeights:
   dripstone_caves: 1.0
   lush_caves: 1.0
   deep_dark: 1.0
-  # --- Nether ---
+  # --- 下界 ---
   nether_wastes: 1.0
   warped_forest: 1.0
   crimson_forest: 1.0
   soul_sand_valley: 1.0
   basalt_deltas: 1.0
-  # --- The End ---
+  # --- 末地 ---
   the_end: 1.0
   end_highlands: 1.0
   end_midlands: 1.0
   small_end_islands: 1.0
   end_barrens: 1.0
-  # --- Misc / technical ---
+  # --- 杂项 / 技术 ---
   the_void: 1.0
 
 # DO NOT TOUCH VERSION NUMBER

@@ -1,80 +1,85 @@
-# --- RTP Core Configuration ---
-# Documentation: https://github.com/DailyStruggle/RTP/wiki/Core-Configuration
-# Pick your language in language.yml.
-#
-# Where to find things (files/folders in this RTP folder):
-#   config.yml    - this file: core teleport behavior and shared defaults
-#   safety.yml    - where players may or may not land (blocks, biomes)
-#   economy.yml   - charge players for /rtp (needs Vault)
-#   language.yml  - pick your language
-#   messages/     - all player-facing text (commands, player, system, network, placeholders)
-#   effects/      - particle and sound effects on teleport
-#   regions/      - per-region settings
-#   worlds/       - per-world settings
-#   advanced/     - tuning you usually do not need (performance, database, logging, metrics, network, biomes, blocks)
-#   lang/         - bundled translations
-#   addons/       - config for optional add-ons (countdown, GUI menu, claim integrations)
-# Seconds to wait before teleporting. 0 = right away.
+# 传送延迟（秒）
+# 玩家在实际执行传送之前必须等待的时间。
+# 有时会让服务器有时间预加载目标区块。
 # @type: integer
 # @range: [0, null]
 # @unit: seconds
 # @default: 2
-teleportDelay: 2
+传送延迟: 2
 
-# How far you can move before the teleport cancels.
+# 移动取消（方块）
+# 若玩家在延迟期间移动超过此距离，传送将被取消。设为 -1 可禁用。
 # @type: integer
 # @range: [0, null]
 # @unit: blocks
 # @default: 2
-cancelDistance: 2
+取消距离: 2
 
-# Wait time between /rtp uses. Skipped by rtp.nocooldown.
+# 传送之间的等待时间（秒）
+# 玩家两次成功使用 RTP 之间必须等待的时间。
 # @type: integer
 # @range: [0, null]
 # @unit: seconds
 # @default: 300
-teleportCooldown: 300
+传送冷却: 300
 
-# Max /rtp uses before lockout. 0 = no limit. Skipped by rtp.nolock.
+# 玩家在 lockAfterResetSeconds 窗口内可成功使用 /rtp 的最大次数，超过后被锁定
+#（BetterRTP LockAfter 兼容）。0 禁用上限。rtp.nolock 权限可绕过。
 # @type: integer
 # @range: [0, null]
 # @default: 0
 lockAfterUses: 0
 
-# Seconds until the use count resets. 0 = never resets.
+# lockAfterUses 滚动使用上限窗口的长度。计数器在窗口首次使用后经过此秒数重置。
+# 0 表示上限永不重置（硬性终身上限）。
 # @type: integer
 # @range: [0, null]
 # @unit: seconds
 # @default: 0
 lockAfterResetSeconds: 0
 
-# true = set your spawn point where you land.
+# 为 true 时，成功的 /rtp 将着陆位置设为玩家的持久重生锚点
+#（BetterRTP 兼容）。
 # @type: boolean
 # @default: false
 setRespawnOnTeleport: false
 
-# Console commands run after teleport. [player] = the player's name.
+# 传送后命令
+# 一次成功传送之后要执行的命令列表。
+# 占位符 [player] 表示玩家名。
 # @type: list<string>
-consoleCommands:
-  - "say [player] has just randomly teleported!"
+控制台命令:
+  - "say [player] 刚刚被随机传送了！"
 
-# Commands run as the player after teleport. [player] = their name.
+# 在成功传送后以被传送玩家身份执行的命令。
+# 使用 [player] 表示玩家名称。空条目将被忽略。
 # @type: list<string>
-playerCommands:
+玩家命令:
+  # 在成功传送后以被传送玩家身份执行的命令。
+  # 使用 [player] 表示玩家名称。空条目将被忽略。
+  # @type: list<string>
   - ""
 
-# Menu look. renderer = list of styles to try in order.
+# 通用菜单框架。
+# `renderer` 是渲染器 id 的有序偏好列表。出现异常或缺少适配器时，
+# 框架会遍历该列表并回退到下一条目。若列表耗尽，无 token 的打开页
+# 路径将回退到可配置的 `menuInvalid` 消息。可用 id: book。(聊天
+# 渲染器将在后续版本中提供，届时会加入默认列表。)
 menu:
-  # Menu styles to try; first one that works wins.
+  # Ordered preference list of renderer ids.
   # @type: list<enum>
   # @options: ["book", "chat"]
   renderer:
+    # 通用菜单框架。
+    # `renderer` 是渲染器 id 的有序偏好列表。出现异常或缺少适配器时，
+    # 框架会遍历该列表并回退到下一条目。若列表耗尽，无 token 的打开页
+    # 路径将回退到可配置的 `menuInvalid` 消息。可用 id: book。(聊天
+    # 渲染器将在后续版本中提供，届时会加入默认列表。)
     - "book"
 
-# Shared defaults. A region/world value of "@config" copies the matching entry below,
-# so you change a setting once here instead of in every region file.
+# 通过 "@config" 令牌由区域/世界文件继承的全局默认值。
 defaults:
-  # Default area shape and size. radius/centerRadius = how far out you land, measured in chunks.
+  # 默认区域的形状和大小。radius/centerRadius = 你落地的距离，以区块为单位。
   shape:
     # Landing area shape algorithm.
     # @type: enum
@@ -111,5 +116,5 @@ defaults:
   # Whether regions/worlds need permission.
   requirePermission: false
 
-# DO NOT TOUCH VERSION NUMBER
+# 请勿修改版本号
 version: 3.1

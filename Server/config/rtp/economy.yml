@@ -1,40 +1,41 @@
-# --- RTP Economy Settings ---
-# Documentation: https://github.com/DailyStruggle/RTP/wiki/Economy
+# --- RTP 经济配置 ---
 
-# Cost for a /rtp.
+# 通过服务器经济系统配置随机传送的费用。
+# 传送费用
+# 标准 /rtp 命令的基础费用。
 # @type: number
 # @range: [0.0, null]
 # @default: 50.0
-price: 50.0
+价格: 50.0
 
-# Extra cost to /rtp another player.
+# 传送其他玩家 (/rtp <玩家>) 的费用。
 # @type: number
 # @range: [0.0, null]
 # @default: 200.0
-priceOther: 200.0
+价格其他: 200.0
 
-# Extra cost when you add parameters to /rtp.
+# 使用自定义参数 (/rtp region:<区域> 等) 的费用。
 # @type: number
 # @range: [0.0, null]
 # @default: 1000000000.0
-paramsPrice: 1000000000.0
+参数价格: 1000000000.0
 
-# Extra cost when you pick a biome.
+# 指定生物群系 (/rtp biome:<生物群系>) 的额外费用。
 # @type: number
 # @range: [0.0, null]
 # @default: 5000.0
-biomePrice: 5000.0
+生物群系价格: 5000.0
 
-# Give money back if the teleport is cancelled.
+# 若传送被取消（玩家移动、失败等）则退还费用。
 # @type: boolean
 # @default: true
-refundOnCancel: true
+取消时退款: true
 
-# Lowest balance you can have left after paying.
+# 玩家付款后必须保留的最低余额；若会低于此下限则拒绝传送。
 # @type: number
 # @range: [0.0, null]
 # @default: 0.0
-balanceFloor: 0.0
+最低余额: 0.0
 
-# DO NOT TOUCH VERSION NUMBER
+# 请勿修改版本号
 version: 1.1

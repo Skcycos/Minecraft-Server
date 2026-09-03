@@ -1,390 +1,366 @@
-# --- RTP Operator / Command-Output Messages ---
-# Strings emitted by operator-facing commands and menus: the scan command, the
-# /rtp info diagnostics, and the generalized menu framework (front page, admin
-# panel, config editor, maps, multi-config submenus).
-#
-# Formatting and shared [Pn] placeholders follow the same rules as player.yml.
+# --- RTP 消息（本语言） ---
+# 本语言面向玩家和管理员的消息文本，按主题分组。
+# 由英文消息自动生成的副本；请勿手动编辑（会被覆盖）。
 
 # ###############################################################################
-# Section 7: Scan Command
+# 第 6 节: 扫描命令
 # ###############################################################################
-# messages related to the scan command
-# placeholder: [scan_regions] - list of regions
-scanStart: "&a[P0] scan task started for regions: [scan_regions]"
-scanReset: "&7[P0] scan queue reset for regions: [scan_regions]"
-scanCancel: "&7[P0] scan task cancelled for regions: [scan_regions]"
-scanPause: "#A020F0[P0] scan task paused for regions: [scan_regions]"
-scanResume: "#10A5F5[P0] scan task resumed for regions: [scan_regions]"
-scanRunning: "&c[P0] scan task already running for regions: [scan_regions]"
-scanNotRunning: "&c[P0] scan task not running for regions: [scan_regions]"
-# placeholder: [scan_chunks], [scan_totalChunks], [scan_cps], [scan_landPercentage], [scan_eta]
-scanStatus: "[P0] &8» &7[scan_regions] &8| &7[scan_chunks]&8/&7[scan_totalChunks] &8| #7E9CC8[scan_cps]&7 cps &8| #7E9CC8[scan_landPercentage]%&7 land &8| &7ETA #7E9CC8[scan_eta]"
+开始扫描: "&a[P0] 已为以下区域启动扫描任务: [scan_regions]"
+重置扫描: "&7[P0] 已重置以下区域的扫描队列: [scan_regions]"
+取消扫描: "&7[P0] 已取消以下区域的扫描任务: [scan_regions]"
+暂停扫描: "#A020F0[P0] 已暂停以下区域的扫描任务: [scan_regions]"
+恢复扫描: "#10A5F5[P0] 已恢复以下区域的扫描任务: [scan_regions]"
+扫描进行中: "&c[P0] 以下区域已有扫描任务在进行: [scan_regions]"
+扫描未运行: "&c[P0] 以下区域当前没有扫描任务: [scan_regions]"
+# 占位符: [scan_chunks], [scan_totalChunks], [scan_cps], [scan_landPercentage], [scan_eta]
+扫描状态: "[P0] &8» &7[scan_regions] &8| &7[scan_chunks]&8/&7[scan_totalChunks] &8| #7E9CC8[scan_cps]&7 cps &8| #7E9CC8[scan_landPercentage]%&7 陆地 &8| &7ETA #7E9CC8[scan_eta]"
 # Boss-bar title shown to players with rtp.scan permission while a world scan is running.
 # Set to empty string to disable the boss-bar.
-# The bar's color is taken from the first legacy color code in this value:
-#   &c/&4 = red, &e/&6 = yellow, &a/&2 = green, &9/&1/&3/&b = blue,
-#   &5 = purple, &d = pink, &f/&7/&8/&0 = white. Defaults to green if none.
 # placeholder: [scan_regions], [scan_chunks], [scan_totalChunks], [scan_cps], [scan_landPercentage], [scan_eta]
-scanBossBar: "&aScanning [scan_regions]: [scan_chunks]/[scan_totalChunks] ([scan_landPercentage]% land) ETA [scan_eta]"
+scanBossBar: "Scanning [scan_regions]: [scan_chunks]/[scan_totalChunks] ([scan_landPercentage]% land) ETA [scan_eta]"
 
 # ###############################################################################
-# Section 8: Info Command
+# 第 7 节: 信息命令
 # ###############################################################################
-# messages related to the info command
-infoTitle: "&2&l/rtp info"
-infoTickets: "&7Global Active Chunk Tickets: #7E9CC8[tickets]"
-infoTeleports: "&7Active Teleport State Machines: #7E9CC8[teleports]"
-infoMSPT: "&7Current Plugin MSPT: #7E9CC8[mspt]"
-infoTotalLoads: "&7Lifetime Chunks Loaded: #7E9CC8[loads]"
-infoLoadsByOrigin: "&7Loads by Origin: #7E9CC8[loadsByOrigin]"
-infoLeakRate: "&7Current Chunk Leak Rate: #7E9CC8[leakRate]"
-# --- Health metrics block ---
-infoQueueDepth: "&7Players Waiting In Region Queues: #7E9CC8[queueDepth]"
-infoPendingTeleports: "&7Pending Teleport Pipelines: #7E9CC8[pendingTeleports]"
-infoAvgPipelineMs: "&7Avg Pipeline Latency: #7E9CC8[avgPipelineMs] ms"
-# Pipeline-latency percentiles. Placeholders: [pipelineMsP50] [pipelineMsP75]
-# [pipelineMsP90] [pipelineMsP95] [pipelineMsP99] [pipelineSampleCount].
-infoPipelinePercentiles: "&7Pipeline Latency (ms) P50/P75/P90/P95/P99: #7E9CC8[pipelineMsP50] / [pipelineMsP75] / [pipelineMsP90] / [pipelineMsP95] / [pipelineMsP99]&7 (n=[pipelineSampleCount])"
-# Slow-teleport audit (immediate/unqueued teleports only). Placeholders:
-# [slowPipelineCount] [slowPipelineThresholdMs].
-infoSlowPipeline: "&7Slow Teleports (> #7E9CC8[slowPipelineThresholdMs]&7 ms): #7E9CC8[slowPipelineCount]"
-# Queue-growth audit. Placeholders: [queueGrowthWarnCount] [queueGrowthWarnThreshold].
-infoQueueGrowth: "&7Queue-Growth Warnings (>= #7E9CC8[queueGrowthWarnThreshold]&7): #7E9CC8[queueGrowthWarnCount]"
-infoHeap: "&7JVM Heap: #7E9CC8[heapUsedMb] / [heapMaxMb] MiB"
-# Header line for the Health pipeline labelled block in /rtp info.
-infoHealthPipelineHeader: "&7--- Health: pipeline ---"
-# TPS readout for the 1m / 5m / 15m windows. Placeholders: [tps1m] [tps5m] [tps15m].
-infoTps: "&7TPS (1m/5m/15m): #7E9CC8[tps1m] / [tps5m] / [tps15m]"
-# Live server MSPT and tick-budget utilisation. Placeholders: [mspt] [tickBudgetUtilisation].
-infoMSPTLive: "&7Server MSPT: #7E9CC8[mspt] ms (&7tick budget: #7E9CC8[tickBudgetUtilisation]&7)"
-# Configured player soft-cap vs current online count. Placeholders: [softCap] [playerCount].
-infoSoftCap: "&7Players: #7E9CC8[playerCount] / [softCap]"
-# Most recent database round-trip latency in ms. Placeholder: [databaseLatencyMs].
-infoDatabaseLatencyMs: "&7Database Latency: #7E9CC8[databaseLatencyMs] ms"
-# Generation outcome metrics.
-# Success/failure rate over all recorded generation attempts. Placeholders:
-# [genSuccessRate] [genFailureRate] [genOutcomeTotal].
-infoFailureRate: "&7Generation Success: #7E9CC8[genSuccessRate]&7 (fail #7E9CC8[genFailureRate]&7, n=#7E9CC8[genOutcomeTotal]&7)"
-# Single most common rejection cause and its share of all failures. Placeholders:
-# [genTopRejectionCause] [genTopRejectionShare].
-infoTopRejectionCause: "&7Top Rejection Cause: #7E9CC8[genTopRejectionCause]&7 (#7E9CC8[genTopRejectionShare]&7)"
-# Per-cause rejection breakdown.
-# Placeholder: [genFailureBreakdown] - comma-separated cause=N list, busiest first.
-infoFailureBreakdown: "&7Rejections by Cause: #7E9CC8[genFailureBreakdown]"
+信息标题: "&2&l/rtp 信息"
+信息_票据: "&7全局活动区块票据: #7E9CC8[tickets]"
+信息_传送: "&7活动传送状态机: #7E9CC8[teleports]"
+信息_MSPT: "&7当前插件 MSPT: #7E9CC8[mspt]"
+信息_总加载次数: "&7累计加载区块数: #7E9CC8[loads]"
+信息_按来源加载: "&7按来源加载: #7E9CC8[loadsByOrigin]"
+信息_泄漏率: "&7当前区块泄漏率: #7E9CC8[leakRate]"
+# --- 指标 健康状态块 ---
+信息_队列深度: "&7区域队列中等待的玩家: #7E9CC8[queueDepth]"
+信息_等待传送: "&7待处理传送管道: #7E9CC8[pendingTeleports]"
+信息_平均管道毫秒: "&7平均管道延迟: #7E9CC8[avgPipelineMs] ms"
+# 管道延迟百分位数。占位符: [pipelineMsP50] [pipelineMsP75]
+# [pipelineMsP90] [pipelineMsP95] [pipelineMsP99] [pipelineSampleCount]。
+infoPipelinePercentiles: "&7管道延迟(ms) P50/P75/P90/P95/P99: #7E9CC8[pipelineMsP50] / [pipelineMsP75] / [pipelineMsP90] / [pipelineMsP95] / [pipelineMsP99]&7 (n=[pipelineSampleCount])"
+# 慢速传送审计（仅限即时/未排队传送）。占位符:
+# [slowPipelineCount] [slowPipelineThresholdMs]。
+infoSlowPipeline: "&7慢速传送 (> #7E9CC8[slowPipelineThresholdMs]&7 ms): #7E9CC8[slowPipelineCount]"
+# 队列增长审计。占位符: [queueGrowthWarnCount] [queueGrowthWarnThreshold]。
+infoQueueGrowth: "&7队列增长警告 (>= #7E9CC8[queueGrowthWarnThreshold]&7): #7E9CC8[queueGrowthWarnCount]"
+信息_堆内存: "&7JVM 堆内存: #7E9CC8[heapUsedMb] / [heapMaxMb] MiB"
+# /rtp info 中 Health pipeline 标记块的标题行。
+信息_健康管道标题: "&7--- 健康状态: 管道 ---"
+# 1m / 5m / 15m 窗口的 TPS 读数。占位符: [tps1m] [tps5m] [tps15m]。
+信息_TPS: "&7TPS (1分/5分/15分): #7E9CC8[tps1m] / [tps5m] / [tps15m]"
+# 实时服务器 MSPT 与 tick 预算使用率。占位符: [mspt] [tickBudgetUtilisation]。
+信息_MSPT实时: "&7服务器 MSPT: #7E9CC8[mspt] ms (&7tick 预算: #7E9CC8[tickBudgetUtilisation]&7)"
+# 已配置的玩家软上限与当前在线人数对比。占位符: [softCap] [playerCount]。
+信息_软上限: "&7玩家数: #7E9CC8[playerCount] / [softCap]"
+# 最近一次数据库往返延迟（毫秒）。占位符: [databaseLatencyMs]。
+信息_数据库延迟毫秒: "&7数据库延迟: #7E9CC8[databaseLatencyMs] ms"
+# 生成结果指标。
+# 所有已记录生成尝试的成功/失败率。占位符:
+# [genSuccessRate] [genFailureRate] [genOutcomeTotal]。
+infoFailureRate: "&7生成成功率: #7E9CC8[genSuccessRate]&7 (失败 #7E9CC8[genFailureRate]&7, n=#7E9CC8[genOutcomeTotal]&7)"
+# 最常见的单一拒绝原因及其在所有失败中的占比。占位符:
+# [genTopRejectionCause] [genTopRejectionShare]。
+infoTopRejectionCause: "&7主要拒绝原因: #7E9CC8[genTopRejectionCause]&7 (#7E9CC8[genTopRejectionShare]&7)"
+# 按原因分类的拒绝明细。
+# 占位符: [genFailureBreakdown] - 以逗号分隔的 cause=N 列表，最忙的排在前面。
+infoFailureBreakdown: "&7按原因分类的拒绝: #7E9CC8[genFailureBreakdown]"
 # Health colour-band thresholds. Used to colour the coloured-variant
 # placeholders (e.g. [tps1mColoured]) green/yellow/red.
-infoThresholdTpsGreen: 19.5
-infoThresholdTpsYellow: 18.0
-infoThresholdMsptGreen: 30.0
-infoThresholdMsptYellow: 45.0
-infoThresholdCacheFillGreen: 0.5
-infoThresholdCacheFillYellow: 0.25
-infoThresholdNetworkAgeYellow: 5.0
-# Header line introducing the per-Folia-region table (Folia runtime only).
-infoFoliaRegionsHeader: "&7--- Folia regions ---"
-# Per-row template for a single Folia region. Placeholders: [regionId] [tps1m]
-# [mspt] [playerCount] [queueDepth] [tickBudgetUtilisation].
-infoFoliaRegion: "  #7E9CC8[regionId]&7: tps=#7E9CC8[tps1m]&7 mspt=#7E9CC8[mspt]&7 players=#7E9CC8[playerCount]&7 queue=#7E9CC8[queueDepth]&7 budget=#7E9CC8[tickBudgetUtilisation]"
-infoDisclaimerHeader: "&7--- Diagnostic Disclaimer ---"
-infoDisclaimer: "&7Diagnostic Note: If the server's total orphaned chunk count exceeds this plugin's lifetime loads ([loads]), this plugin is not the sole source of the memory leak."
-infoWorldHeader: "#008080Worlds:"
-infoConsoleWorldHeader: "&7--- Worlds ---"
-infoWorld: "  #21ADA8[world]"
-infoRegionHeader: "#63C5DARegions:"
-infoConsoleRegionHeader: "&7--- Regions ---"
-infoRegion: "  #52B2BF[region]"
-# Biome-occupancy leaderboard shown by /rtp info biomes - which biomes online
-# players spend their time in, sampled over the server's uptime.
-# Header placeholders: [biomeTotalSamples] [biomeDistinctCount].
-infoBiomeActivityHeader: "&8--- &3Biome occupancy &8(&3[biomeTotalSamples]&8 samples, &3[biomeDistinctCount]&8 biomes) ---"
-# Per-biome row. Placeholders: [biomeRank] [biomeName] [biomeSamples] [biomePercent] [biomeBar].
+信息_TPS阈值_绿: 19.5
+信息_TPS阈值_黄: 18.0
+信息_MSPT阈值_绿: 30.0
+信息_MSPT阈值_黄: 45.0
+信息_缓存填充阈值_绿: 0.5
+信息_缓存填充阈值_黄: 0.25
+信息_网络快照陈旧阈值_黄: 5.0
+# 介绍每个 Folia 区域表格的标题行（仅限 Folia 运行时）。
+信息_Folia区域标题: "&7--- Folia 区域 ---"
+# 单个 Folia 区域的行模板。占位符: [regionId] [tps1m]
+# [mspt] [playerCount] [queueDepth] [tickBudgetUtilisation]。
+信息_Folia区域: "#7E9CC8[regionId]&7: tps=#7E9CC8[tps1m]&7 mspt=#7E9CC8[mspt]&7 玩家=#7E9CC8[playerCount]&7 队列=#7E9CC8[queueDepth]&7 预算=#7E9CC8[tickBudgetUtilisation]"
+信息_免责声明_标题: "&7--- 诊断说明 ---"
+信息_免责声明: "&7诊断说明: 如果服务器孤儿区块总数超过本插件的累计加载数 ([loads])，则本插件并非内存泄漏的唯一原因。"
+信息_世界标题: "#008080世界:"
+信息_控制台_世界标题: "&7--- 世界 ---"
+信息世界: "#21ADA8[world]"
+信息_区域标题: "#63C5DA区域:"
+信息_控制台_区域标题: "&7--- 区域 ---"
+信息区域: "#52B2BF[region]"
+# /rtp info biomes 显示的生物群系占用排行榜。
+# 标题占位符: [biomeTotalSamples] [biomeDistinctCount]。
+infoBiomeActivityHeader: "&8--- &3生物群系占用 &8(&3[biomeTotalSamples]&8 次采样, &3[biomeDistinctCount]&8 个生物群系) ---"
+# 每个生物群系的行。占位符: [biomeRank] [biomeName] [biomeSamples] [biomePercent] [biomeBar]。
 infoBiomeActivityRow: "&8 [biomeRank]. &3[biomeName] &8[biomeBar] &7[biomePercent]% &8([biomeSamples])"
-# Shown when no occupancy has been sampled yet.
-infoBiomeActivityEmpty: "&8--- &7no biome occupancy sampled yet &8---"
+# 尚未采样到任何占用数据时显示。
+infoBiomeActivityEmpty: "&8--- &7暂无生物群系占用数据 &8---"
 
 # sub-info listings
 # placeholders: [world], [region], [requirePermission], [override], [shape], [worldBorderOverride], [cacheCap], [cached], [keptCache], [unkeptCache], [backlogCache], [backlogCacheCap]
-# learned-state placeholders (resolve to N/A when the region has no memory shape or has not been scanned): [memCoveragePct], [memBadPct], [memBadCount], [memTopCause], [memTopCausePct]
-worldInfo:
+世界信息:
   - "#21ADA8[world]:"
-  - "#99EEBB  - region: [region]"
-  - "#99EEBB  - requirePermission: [requirePermission]"
-  - "#99EEBB  - override: [override]"
+  - "#99EEBB  - 区域: [region]"
+  - "#99EEBB  - 需要权限: [requirePermission]"
+  - "#99EEBB  - 覆盖: [override]"
 
-regionInfo:
+区域信息:
   - "#52B2BF[region]:"
-  - "#58CCED  - world: [world]"
-  - "#58CCED  - shape: [shape]"
-  - "#58CCED  - requirePermission: [requirePermission]"
-  - "#58CCED  - worldBorderOverride: [worldBorderOverride]"
-  - "#58CCED  - cacheCap: [cacheCap]"
-  - "#58CCED  - keptCache (L1): [keptCache]"
-  - "#58CCED  - unkeptCache (L2): [unkeptCache]"
-  - "#58CCED  - backlogCache (L3): [backlogCache] / [backlogCacheCap]"
-  - "#58CCED  - cached: [cached]"
-  - "#58CCED  - learned coverage: [memCoveragePct] (bad: [memBadPct], [memBadCount] cells)"
-  - "#58CCED  - top reject cause: [memTopCause] ([memTopCausePct])"
+  - "#58CCED  - 世界: [world]"
+  - "#58CCED  - 形状: [shape]"
+  - "#58CCED  - 需要权限: [requirePermission]"
+  - "#58CCED  - 覆盖世界边界: [worldBorderOverride]"
+  - "#58CCED  - 缓存上限: [cacheCap]"
+  - "#58CCED  - 已保留缓存 (L1): [keptCache]"
+  - "#58CCED  - 已释放缓存 (L2): [unkeptCache]"
+  - "#58CCED  - 积压缓存 (L3): [backlogCache] / [backlogCacheCap]"
+  - "#58CCED  - 已缓存: [cached]"
+  - "#58CCED  - 已学习覆盖率: [memCoveragePct] (坏点: [memBadPct], [memBadCount] 格)"
+  - "#58CCED  - 主要拒绝原因: [memTopCause] ([memTopCausePct])"
 
 # ###############################################################################
-# Section 9: Generalized Menu Framework
+# Section 8b: Generalized Menu Framework
 # ###############################################################################
-# Sent when a /rtp menu command is malformed, points at an unknown
-# path/parameter, or fails its permission check.
-menuInvalid: "&c[P0] that menu command is invalid."
-# Sent when a menu command cannot resolve the calling player UUID.
-menuUnknownPlayer: "&c[P0] menu commands can only be used by in-game players."
-# Hover-fallback template used by the menu reflector when no YAML block-comment
-# is available for a parameter. Placeholder: [type] - the declared parameter type.
-menuHoverFallbackType: "type: [type]"
-# Hover-fallback template used by the menu reflector when a parameter exposes a
-# small curated value set. Placeholder: [values] - comma-joined accepted values.
-menuHoverFallbackBounds: "accepted: [values]"
-# Label for the "go back one level" navigation row prepended to every non-root menu page.
-menuBack: "&7« back"
-# Label template for the "execute the assembled command" row prepended to every
-# runnable non-root menu page. Placeholder: [command] - the assembled /rtp ... invocation.
-menuExecute: "&2▶ run [command]"
-# Header row at the top of a parameter-value picker sub-page.
-# Placeholders: [param] - parameter name; [command] - assembled /rtp ... invocation.
-menuPickValue: "&7pick a value for [param] (will run: /rtp [command] [param]:<value>)"
-# Label for the "type a custom value" fallback row on a parameter-value picker page.
-# Clicking it prefills chat with the assembled command up to '<param>:' so the player
-# can type any value, including ones not in the suggestion list.
-menuTypeValue: "&7✎ type a custom value..."
-# Non-clickable header row at the top of every non-root menu page.
-# Surfaces the currently-constructed /rtp invocation including any staged
-# parameter assignments (name:value). Placeholder: [command] - assembled args.
-menuConstructed: "&7building: #7E9CC8/rtp [command]"
-# Non-clickable title row prepended to the root /rtp menu page.
-# Provides a welcoming header before the player descends into any subcommand.
-menuRootTitle: "#5FB3B3&l⚡ RTP menu"
-# Non-clickable subtitle/hint row prepended to the root /rtp menu page below
-# menuRootTitle. Short orientation text for first-time users.
-menuRootHint: "&7click an option below to begin"
-# Navigation rows appended to paginated menu pages - clicking them moves
-# to the previous/next page of the same model. Placeholder:
-# [page] - the 1-based human-readable target page number.
-menuPagePrev: "&7« previous page ([page])"
-menuPageNext: "&7next page ([page]) »"
-# Section divider on the front page above teleport rows (player view).
-menuFrontPageSectionTeleport: "&8» #3E6B45 teleport"
-# Front-page rows. No placeholders.
-menuFrontPageRowTeleport: "#1B7A33🎲 teleport &7- /rtp"
-menuFrontPageRowRegion: "#1F6FB2🌍 pick a region &7- /rtp region:..."
-menuFrontPageRowWorld: "#1F6FB2🌐 pick a world &7- /rtp world:..."
-menuFrontPageRowBiome: "#1F8A40🌳 pick a biome &7- /rtp biome:..."
-menuFrontPageRowHelp: "#7A4FB8❓ list commands &7- /rtp help"
-# Front-page admin entry row: the only inline admin-visible row on the
-# front page; click descends into the admin panel. Hidden when the viewer
-# lacks rtp.menu.admin.
-menuFrontPageRowAdmin: "#9D7CD8▶ admin panel &7- operator tools"
-# Hover text for the admin-panel entry row. No placeholders.
-menuFrontPageHoverAdmin: "&7operator tools: config, scans, diagnostics, reload"
-# --- Admin panel book page ---
-# Non-clickable title row at the top of the admin panel. No placeholders.
-menuAdminPanelTitle: "#9D7CD8&l⚙ admin panel"
-# Non-clickable hint row below menuAdminPanelTitle. No placeholders.
-menuAdminPanelHint: "&7click an option below"
-# Section dividers on the admin panel. No placeholders.
-menuAdminPanelSectionConfig: "&8» &7configuration"
-menuAdminPanelSectionDiagnostics: "&8» &7diagnostics"
-menuAdminPanelSectionLifecycle: "&8» &7lifecycle"
-menuAdminPanelSectionBrowse: "&8» &7browse"
-# Admin-panel rows + hovers. No placeholders.
-menuAdminPanelRowConfig: "#5FB3B3▶ config editor"
-menuAdminPanelHoverConfig: "&7open the curated config selector"
-menuAdminPanelRowRegions: "#5FB3B3▶ regions"
-menuAdminPanelHoverRegions: "&7add, remove, or edit per-region configs"
-menuAdminPanelRowWorlds: "#5FB3B3▶ worlds"
-menuAdminPanelHoverWorlds: "&7add, remove, or edit per-world configs"
-menuAdminPanelRowEffects: "#5FB3B3▶ effects"
-menuAdminPanelHoverEffects: "&7add, remove, or edit per-group teleport effects"
-menuAdminPanelRowInfo: "#5FB3B3▶ server info"
-menuAdminPanelHoverInfo: "&7show plugin version, region counts, and queue state"
-menuAdminPanelRowDiagnostics: "&c▶ full diagnostics"
-menuAdminPanelHoverDiagnostics: "&7runs the full diagnostic suite; may be expensive"
-menuAdminPanelRowMemory: "#5FB3B3▶ memory tracker snapshot"
-menuAdminPanelHoverMemory: "&7dump active chunk-ticket and pipeline allocations"
-menuAdminPanelRowScan: "#5FB3B3▶ scan control"
-menuAdminPanelHoverScan: "&7open the scan submenu (start / pause / cancel)"
-menuAdminPanelRowReload: "&c▶ reload"
-menuAdminPanelHoverReload: "&7reloads all config files; in-flight teleports may be affected"
-menuAdminPanelRowBrowse: "#5FB3B3▶ browse all commands"
-menuAdminPanelHoverBrowse: "&7open the reflected /rtp command tree"
-menuAdminPanelRowBack: "&7« back"
-# --- Visualizations submenu (admin map of bad locations per region) ---
-# Admin-panel row: open the Visualizations submenu. No placeholders.
-menuAdminPanelRowVisualizations: "#5FB3B3▶ visualizations"
-# Hover text for the admin-panel Visualizations row. No placeholders.
-menuAdminPanelHoverVisualizations: "&7open maps and other operator-facing visualizations"
-# Section divider above the Visualizations block on the admin panel.
-menuAdminPanelSectionVisualizations: "&8» &7visualizations"
-# Non-clickable title row at the top of the Visualizations submenu.
-menuVisualizationsTitle: "#9D7CD8&l⌖ visualizations"
-# Non-clickable hint row below the title.
-menuVisualizationsHint: "&7pick a region to view its bad-locations map"
-# Visualizations row template; [region] - region name.
-menuVisualizationsRowRegion: "#5FB3B3▶ [region] &7- region shape map"
-# Hover text for a Visualizations region row; [region] - region name.
-menuVisualizationsHoverRegion: "&7open a map showing bad locations in &b[region]"
-# Non-clickable hint row shown when no regions are configured.
-menuVisualizationsEmpty: "&7(no regions configured)"
-# Visualizations submenu back row (returns to the admin panel).
-menuVisualizationsRowBack: "&7« back"
-# --- Admin panel Setup section: curated prefabs ---
-# Section divider above the Setup (quick start) block on the admin panel.
-menuAdminPanelSectionSetup: "&8» &7setup (quick start)"
-# Setup row + hover: survival-default identity overlay (reset to shipped defaults).
-menuPrefabSurvivalDefaultRow: "#5FB3B3▶ survival-default"
-menuPrefabSurvivalDefaultHover: "&7reset to the shipped defaults (identity overlay)"
-# Setup row + hover: low-performance (longer pulse, smaller caches, login cache off).
-menuPrefabLowPerformanceRow: "#5FB3B3▶ low-performance"
-menuPrefabLowPerformanceHover: "&7underpowered hosts / shared-CPU VPSes: longer pulse, smaller caches, login cache off"
-# Setup row + hover: high-performance (short pulse, large caches, login cache on).
-menuPrefabHighPerformanceRow: "#5FB3B3▶ high-performance"
-menuPrefabHighPerformanceHover: "&7dedicated hardware / large player counts: short pulse, large caches, login cache on"
-# Setup row + hover: folia-tuned (regional scheduler tuning).
-menuPrefabFoliaTunedRow: "#5FB3B3▶ folia-tuned"
-menuPrefabFoliaTunedHover: "&7folia regional scheduler: faster per-region pulses, fewer concurrent chunk tickets"
-# Setup row + hover: multi-world (one region per world from current default).
-menuPrefabMultiWorldRow: "#5FB3B3▶ multi-world"
-menuPrefabMultiWorldHover: "&7synthesise one region per world from the current default"
-# Confirmation menu title. Placeholder: [prefab] - prefab id or display name.
-menuPrefabConfirmTitle: "#9D7CD8&l⚙ confirm prefab: #5FB3B3[prefab]"
-# Confirmation menu non-clickable hint row below the title. No placeholders.
-menuPrefabConfirmHint: "&7review the changes below, then click confirm or cancel"
-# Confirmation menu footer row: confirm and write the prefab to disk.
+# Sent when a menu token is unknown, malformed, or belongs to another player.
+菜单_无效: "&c[P0] that menu link is invalid."
+# 当菜单兑换无法解析调用玩家 UUID 时发送。
+菜单_未知玩家: "&c[P0] menu links can only be used by in-game players."
+# 菜单反射器在没有可用 YAML 块注释时使用的悬停备用模板。
+# 占位符: [type] - 声明的参数类型。
+菜单_悬停_备用类型: "类型: [type]"
+# 菜单反射器在参数公开小型精选值集时使用的悬停备用模板。
+# 占位符: [values] - 以逗号连接的可接受值。
+菜单_悬停_备用范围: "可选值: [values]"
+# 每个非根菜单页面前置的「返回上一级」导航行的标签。
+菜单_返回: "&7« 返回"
+# 每个可运行非根菜单页面前置的「执行已组装命令」行的标签模板。
+# 占位符: [command] - 组装好的 /rtp ... 调用。
+菜单_执行: "&2» 执行 [command]"
+# 参数值选择子页面顶部的标题行。
+# 占位符: [param] - 参数名称; [command] - 组装好的 /rtp ... 调用。
+菜单_选择值: "&7为 [param] 选择一个值 (将执行: /rtp [command] [param]:<value>)"
+# 参数值选择页面上「输入自定义值」备用行的标签。
+# 点击后将聊天框预填为组装好的命令直到 '<param>:'，玩家可输入任意值。
+菜单_输入值: "&7» 输入自定义值..."
+# 每个非根菜单页面顶部的不可点击标题行。
+# 显示当前构建的 /rtp 调用（含已暂存的参数赋值）。占位符: [command]。
+菜单_已构建: "&7正在构建: #7E9CC8/rtp [command]"
+# 根 /rtp 菜单页面前置的不可点击标题行。
+# 在玩家进入任何子命令前提供欢迎标题。
+菜单_主标题: "#5FB3B3&l» RTP 菜单"
+# 根 /rtp 菜单页面标题下方的不可点击副标题/提示行。
+# 面向首次使用者的简短引导文字。
+菜单_主提示: "&7点击下方选项开始"
+# 附加到分页菜单页面的导航行。
+# 占位符: [page] - 基于 1 的人类可读目标页码。
+菜单_上一页: "&7« 上一页 ([page])"
+菜单_下一页: "&7下一页 ([page]) »"
+# 首页传送行上方的分区分隔符（玩家视图）。
+菜单_首页_传送分区: "&8--- &7teleport &8---"
+# 首页行。无占位符。
+菜单_首页_传送行: "&2» /rtp &7- 随机传送到一个位置"
+菜单_首页_区域行: "&2» /rtp region:&7... &7- 选择区域"
+menuFrontPageRowWorld: "&2▶ /rtp world:&7... &7- 选择世界"
+菜单_首页_生物群系行: "&2▶ /rtp biome:&7... &7- 选择生物群系"
+菜单_首页_帮助行: "&2» /rtp help &7- 列出命令"
+# 首页管理员入口行: 首页上唯一的内联管理员可见行；
+# 点击后进入管理面板。
+# 当查看者缺少 rtp.menu.admin 权限时隐藏。
+menuFrontPageRowAdmin: "#9D7CD8» 管理面板 &7- 管理员工具"
+# 管理面板入口行的悬停文字。无占位符。
+menuFrontPageHoverAdmin: "&7管理员工具: 配置、扫描、诊断、重载"
+# --- 管理面板书本页面 ---
+# 管理面板顶部的不可点击标题行。无占位符。
+menuAdminPanelTitle: "#5FB3B3&l⚙ admin panel"
+# menuAdminPanelTitle 下方的不可点击提示行。无占位符。
+menuAdminPanelHint: "&7click an option; destructive actions show a warning hover"
+# 管理面板上的分区分隔符。无占位符。
+menuAdminPanelSectionConfig: "&8--- &7configuration &8---"
+menuAdminPanelSectionDiagnostics: "&8--- &7diagnostics &8---"
+menuAdminPanelSectionLifecycle: "&8--- &7lifecycle &8---"
+menuAdminPanelSectionBrowse: "&8--- &7browse &8---"
+# 管理面板行 + 悬停文字。无占位符。
+menuAdminPanelRowConfig: "&b▶ config editor"
+menuAdminPanelHoverConfig: "&7打开精选配置选择器"
+menuAdminPanelRowRegions: "#5FB3B3» 区域"
+menuAdminPanelHoverRegions: "&7添加、删除或编辑每区域配置"
+menuAdminPanelRowWorlds: "#5FB3B3▶ 世界"
+menuAdminPanelHoverWorlds: "&7添加、删除或编辑每世界配置"
+menuAdminPanelRowEffects: "#5FB3B3» 效果"
+menuAdminPanelHoverEffects: "&7添加、删除或编辑每组传送效果"
+menuAdminPanelRowInfo: "&b▶ server info"
+menuAdminPanelHoverInfo: "&7显示插件版本、区域数量和队列状态"
+menuAdminPanelRowDiagnostics: "&c» 完整诊断"
+menuAdminPanelHoverDiagnostics: "&7运行完整诊断套件; 可能较耗时"
+menuAdminPanelRowMemory: "&b▶ memory tracker snapshot"
+menuAdminPanelHoverMemory: "&7转储活跃的区块票据和管道分配"
+menuAdminPanelRowScan: "&b▶ scan control"
+menuAdminPanelHoverScan: "&7打开扫描子菜单 (开始 / 暂停 / 取消)"
+menuAdminPanelRowReload: "&c» 重载"
+menuAdminPanelHoverReload: "&7重载所有配置文件; 进行中的传送可能受影响"
+menuAdminPanelRowBrowse: "&b▶ browse all commands"
+menuAdminPanelHoverBrowse: "&7打开反射式 /rtp 命令树"
+menuAdminPanelRowBack: "&7« 返回"
+# --- 可视化子菜单（每区域坏点管理员地图）---
+# 管理面板行: 打开可视化子菜单。无占位符。
+menuAdminPanelRowVisualizations: "#5FB3B3» 可视化"
+# 管理面板可视化行的悬停文字。无占位符。
+menuAdminPanelHoverVisualizations: "&7打开地图和其他面向管理员的可视化工具"
+# 管理面板上可视化块上方的分区分隔符。
+menuAdminPanelSectionVisualizations: "&8- &7可视化"
+# 可视化子菜单顶部的不可点击标题行。
+menuVisualizationsTitle: "#9D7CD8&l» 可视化"
+# 标题下方的不可点击提示行。
+menuVisualizationsHint: "&7选择一个区域以查看其坏点地图"
+# 可视化行模板; [region] - 区域名称。
+menuVisualizationsRowRegion: "#5FB3B3» [region] &7- 区域形状地图"
+# 可视化区域行的悬停文字; [region] - 区域名称。
+menuVisualizationsHoverRegion: "&7打开显示 &b[region]&7 中坏点的地图"
+# 未配置任何区域时显示的不可点击提示行。
+menuVisualizationsEmpty: "&7(未配置任何区域)"
+# 可视化子菜单返回行（返回管理面板）。
+menuVisualizationsRowBack: "&7« 返回"
+# --- 管理面板设置部分: 精选预设 ---
+# 管理面板上设置（快速开始）块上方的分区分隔符。
+menuAdminPanelSectionSetup: "&8- &7设置 (快速开始)"
+# 设置行 + 悬停: survival-default 恒等覆盖（重置为出厂默认值）。
+menuPrefabSurvivalDefaultRow: "#5FB3B3» survival-default"
+menuPrefabSurvivalDefaultHover: "&7重置为出厂默认值 (恒等覆盖)"
+# 设置行 + 悬停: low-performance（更长脉冲、更小缓存、关闭登录缓存）。
+menuPrefabLowPerformanceRow: "#5FB3B3» low-performance"
+menuPrefabLowPerformanceHover: "&7低配主机 / 共享CPU VPS: 更长脉冲、更小缓存、关闭登录缓存"
+# 设置行 + 悬停: high-performance（短脉冲、大缓存、开启登录缓存）。
+menuPrefabHighPerformanceRow: "#5FB3B3» high-performance"
+menuPrefabHighPerformanceHover: "&7专用硬件 / 大量玩家: 短脉冲、大缓存、开启登录缓存"
+# 设置行 + 悬停: folia-tuned（区域调度器调优）。
+menuPrefabFoliaTunedRow: "#5FB3B3» folia-tuned"
+menuPrefabFoliaTunedHover: "&7Folia 区域调度器: 更快的每区域脉冲、更少的并发区块票据"
+# 设置行 + 悬停: multi-world（从当前默认值为每个世界生成一个区域）。
+menuPrefabMultiWorldRow: "#5FB3B3» multi-world"
+menuPrefabMultiWorldHover: "&7从当前默认值为每个世界生成一个区域"
+# 确认菜单标题。占位符: [prefab] - 预设 id 或显示名称。
+menuPrefabConfirmTitle: "#9D7CD8&l» 确认预设: #5FB3B3[prefab]"
+# 确认菜单标题下方的不可点击提示行。无占位符。
+menuPrefabConfirmHint: "&7查看以下更改，然后点击确认或取消"
+# 确认菜单底部行: 确认并将预设写入磁盘。
 menuPrefabConfirmRow: "&2&l[confirm]"
-# Confirmation menu footer row: cancel and return to the admin panel.
+# 确认菜单底部行: 取消并返回管理面板。
 menuPrefabCancelRow: "&c&l[cancel]"
-# Clickable row label for the Refresh affordance at the bottom of the /rtp info
-# book. Re-renders the current scope against a fresh metrics snapshot.
+# /rtp info 书本底部刷新按钮的可点击行标签。
+# 根据最新指标快照重新渲染当前范围。
 infoBookRefreshRow: "&2[Refresh]"
-# Hover text for the info-book refresh row.
-infoBookRefreshHover: "&7Re-render this page against a fresh metrics snapshot."
-# Clickable row label for the Switch-to-chat affordance at the bottom of the
-# /rtp info book. Re-runs the same scope through the legacy chat path.
+# info 书本刷新行的悬停文字。
+infoBookRefreshHover: "&7根据最新指标快照重新渲染此页面。"
+# /rtp info 书本底部切换到聊天按钮的可点击行标签。
+# 通过旧版聊天路径重新运行相同范围。
 infoBookSwitchToTextRow: "&7[Switch to chat]"
-# Hover text for the info-book switch-to-chat row.
-infoBookSwitchToTextHover: "&7Re-run /rtp info in chat instead of the book."
-# Footer row rendered when the /rtp info book content exceeds the book page
-# cap. Clicking re-runs the same scope in chat mode so no data is lost.
-infoBookOverflowFooter: "&7(content truncated - click to view full output in chat)"
-# Non-clickable note row indicating that periodic auto-refresh for the info
-# book is not currently supported on this build (deferred to a later
-# milestone). Users may click the Refresh row to refresh manually.
-infoBookAutoRefreshDeferredNote: "&8(auto-refresh not yet supported; click Refresh to update)"
-# Non-clickable title row at the top of the config-file selector page.
-# Shown when an admin clicks "/rtp config" from the front page.
-configSelectorTitle: "#5FB3B3&l⚙ config files"
-# Label for the "back to /rtp menu root" navigation row on the config selector page.
-configSelectorBackRow: "&7« back to menu"
-# Non-clickable title row at the top of a single config-file page.
-# Placeholder: [file] - the config file name (e.g. "performance", "safety").
-configFileTitle: "#5FB3B3&l⚙ config: #9D7CD8[file]"
-# Label for the "back to config selector" navigation row on a single config-file page.
-configFileBackRow: "&7« back to config files"
-# Non-clickable hint row shown when a config file has no editable keys.
-configFileEmptyHint: "&7(no editable keys in this file)"
-# Per-key row label on a config-file page. Placeholders:
-#   [key]   - the config key name; [value] - the currently-stored value.
-configKeyRowFormat: "#7E9CC8[key]&7: #B084DC[value]"
-# Hover text for a per-key row on a config-file page. Placeholders:
-#   [key], [value], [type] - the config key name, current value, and declared type.
-configKeyHoverFormat: "&7click to edit #7E9CC8[key] &7(type: [type])"
-# Non-clickable title row at the top of a shape/vert type-picker page.
-# Placeholders: [param] - "shape" or "vert"; [current] - currently-active type name.
-configTypePickerTitle: "#5FB3B3&l⚙ pick [param] type &7(current: #9D7CD8[current]&7)"
-# Non-clickable title row at the top of a shape/vert sub-parameter page.
-# Placeholders: [param] - "shape" or "vert"; [type] - the active type name.
-configSubParamPageTitle: "#5FB3B3&l⚙ [param] &7- #9D7CD8[type] &7sub-parameters"
-# Hint sent when the book view falls back to the legacy raw-YAML chat dump
-# (no book renderer available on this platform).
-configViewRawHint: "&7[P0] book view unavailable; falling back to raw dump."
-# Placeholder text rendered in place of a config value that has not been set.
-configValueUnsetPlaceholder: "&8(unset)"
+# info 书本切换到聊天行的悬停文字。
+infoBookSwitchToTextHover: "&7在聊天中重新运行 /rtp info 而非书本。"
+# /rtp info 书本内容超出书本页数上限时渲染的底部行。
+# 点击后在聊天中重新运行相同范围，确保数据不丢失。
+infoBookOverflowFooter: "&7(内容已截断 - 点击在聊天中查看完整输出)"
+# 不可点击的提示行，说明此版本暂不支持 info 书本的定期自动刷新。
+# 用户可点击刷新行手动更新。
+infoBookAutoRefreshDeferredNote: "&8(暂不支持自动刷新; 点击刷新手动更新)"
+# 配置文件选择页面顶部的不可点击标题行。
+# 管理员点击 /rtp config 时显示。
+configSelectorTitle: "#5FB3B3&l» 配置文件"
+# 配置选择页面上「返回 /rtp 菜单根」导航行的标签。
+configSelectorBackRow: "&7« 返回菜单"
+# 单个配置文件页面顶部的不可点击标题行。
+# 占位符: [file] - 配置文件名（如 performance、safety）。
+configFileTitle: "#5FB3B3&l⚙ config: &7[file]"
+# 单个配置文件页面上「返回配置文件列表」导航行的标签。
+configFileBackRow: "&7« 返回配置文件列表"
+# 配置文件中没有可编辑键时显示的不可点击提示行。
+configFileEmptyHint: "&7(此文件中没有可编辑的键)"
+# 配置文件页面上每个键的行标签。占位符:
+#   [key] - 配置键名; [value] - 当前存储的值。
+configKeyRowFormat: "&7[key]&7: #7E9CC8[value]"
+# 配置文件页面上每个键行的悬停文字。占位符:
+#   [key], [value], [type] - 配置键名、当前值和声明类型。
+configKeyHoverFormat: "&7click to edit &7[key] &7(type: [type])"
+# 形状/vert 类型选择页面顶部的不可点击标题行。
+# 占位符: [param] - shape 或 vert; [current] - 当前激活的类型名称。
+configTypePickerTitle: "#5FB3B3&l⚙ pick [param] type &7(current: &7[current]&7)"
+# 形状/vert 子参数页面顶部的不可点击标题行。
+# 占位符: [param] - shape 或 vert; [type] - 激活的类型名称。
+configSubParamPageTitle: "#5FB3B3&l⚙ [param] &7- &7[type] &7sub-parameters"
+# 书本视图回退到旧版原始 YAML 聊天转储时发送的提示
+#（此平台上没有可用的书本渲染器）。
+configViewRawHint: "&7[P0] 书本视图不可用; 回退到原始转储。"
+# 替代未设置配置值的占位符文字。
+configValueUnsetPlaceholder: "&8(未设置)"
 # Non-clickable header row separating the "Changeable" list from the "Pending"
 # staging-cart list on a config-file page when the viewer has staged one or
-# more uncommitted edits. No placeholders. Avoid yellow (&e/&6) and white
-# (&f): book parchment renders them washed out.
-configPendingHeader: "&1&l-- pending --"
+# more uncommitted edits. No placeholders.
+configPendingHeader: "&6&l-- pending changes --"
 # Per-row label for a staged (pending) key=value entry on a config-file page.
 # Clicking the row removes it from the cart. Placeholders: [key], [value].
-# Avoid yellow/white on book parchment.
 configPendingRowFormat: "&9[key]&8 = &0[value]"
-# Hover text shown when the viewer hovers a pending (staged) row on a
-# config-file page. No placeholders.
-configPendingRowHover: "click to unstage"
-# Clickable label for the "apply staged changes" row on a config-file page.
-# Runs the assembled /rtp config <file> k1=v1 ... command and clears the cart.
+# 查看者悬停在配置文件页面上暂存（待处理）行时显示的悬停文字。无占位符。
+configPendingRowHover: "点击取消暂存"
+# 配置文件页面上「应用暂存更改」行的可点击标签。
+# 运行组装好的 /rtp config <file> k1=v1 ... 命令并清空购物车。
 configApplyRow: "&2&l[apply]"
-# Clickable label for the "discard staged changes" row on a config-file page.
-# Clears the cart without applying.
+# 配置文件页面上「放弃暂存更改」行的可点击标签。
+# 清空购物车但不应用更改。
 configDiscardRow: "&c&l[discard]"
 
-# --- Map / chart rendering ---
-# Sent when a map row is clicked but map rendering is not available on this
-# server (e.g. the Lite assembly, or no map provider installed).
-mapBindingMissing: "&c[P0] map rendering is not available on this server."
-# Sent when a chart is requested but no renderer is registered for that
-# chart type.
-mapResolverMissing: "&c[P0] no chart resolver registered for this request."
-# Sent when chart data is unavailable for the requested target (unknown
-# region, no data yet, world unloaded).
-# Placeholder: [region] - the requested region name (may be empty).
-mapUnavailable: "&e[P1] chart data is not available right now."
-# Sent when the map service cannot allocate a map right now (e.g. a
-# per-viewer cap has been reached).
-mapBusy: "&e[P1] the map service is busy; please try again shortly."
-# Label for the clickable "/rtp info" menu row that renders a heatmap of
-# the current region's known bad locations. Hidden when map rendering is
-# not available on this server.
-menuInfoBadPointsLabel: "#9D7CD8&l# bad-points map"
+# --- 地图/图表渲染 ---
+# 当点击地图行但此服务器上地图渲染不可用时发送（例如 Lite 版本或未安装地图提供者）。
+mapBindingMissing: "&c[P0] 此服务器上地图渲染不可用。"
+# 当请求图表但未为该图表类型注册渲染器时发送。
+mapResolverMissing: "&c[P0] 此请求未注册图表解析器。"
+# 当解析器运行但底层数据源对请求目标不可用时发送。
+# 占位符: [region] - 请求的区域名称（可能为空）。
+mapUnavailable: "&e[P1] 图表数据当前不可用。"
+# 当地图服务当前无法分配地图时发送（例如已达到每个查看者的上限）。
+mapBusy: "&e[P1] 地图服务繁忙，请稍后再试。"
+# 可点击的 /rtp info 菜单行的标签，渲染当前区域已知坏点的热力图。
+# 当此服务器上地图渲染不可用时，该行被隐藏。
+menuInfoBadPointsLabel: "#9D7CD8&l# 坏点地图"
 
-# --- MultiConfig submenu ---
-# Header row fallback used when no per-kind header key is registered.
-# Placeholder: [parserKind] - the raw multi-config kind name.
+# --- 多配置子菜单 ---
+# 未注册特定类型标题键时使用的默认标题行。
+# 占位符: [parserKind] - 原始多配置类型名称。
 multiconfigHeaderDefault: "#5FB3B3&l[parserKind]"
-# Header row label for the regions multi-config selector page. No placeholders.
-multiconfigHeaderRegions: "#5FB3B3&l regions"
-# Header row label for the worlds multi-config selector page. No placeholders.
-multiconfigHeaderWorlds: "#5FB3B3&l worlds"
-# Toggle-row label when remove-mode is OFF. No placeholders.
-multiconfigToggleRemoveModeOff: "&8[ ] remove mode"
-# Toggle-row label when remove-mode is ON. Clicks on entry rows delete.
-multiconfigToggleRemoveModeOn: "&c[x] remove mode (click an entry to delete)"
-# Selector row label for the "+ Add new..." entry. No placeholders.
-multiconfigRowAdd: "&2+ add new..."
-# Hover text for the Add row. Placeholder: [name] - prefilled default name.
-multiconfigRowAddHover: "&7type a name in the anvil prompt; prefilled: &f[name]"
-# Hover text for an entry row in normal mode. Placeholder: [name].
-multiconfigRowEditHover: "&7edit &f[name]"
-# Hover text for an entry row in remove-mode. Placeholder: [name].
-multiconfigRowRemoveHover: "&cdelete &f[name]"
-# Confirm-delete page title row. Placeholder: [name].
-multiconfigConfirmTitle: "&c&ldelete [name]?"
-# Confirm-delete page Yes-row label. No placeholders.
+# 区域多配置选择页面的标题行标签。无占位符。
+multiconfigHeaderRegions: "#5FB3B3&l 区域"
+# 世界多配置选择页面的标题行标签。无占位符。
+multiconfigHeaderWorlds: "#5FB3B3&l 世界"
+# 删除模式关闭时的切换行标签。无占位符。
+multiconfigToggleRemoveModeOff: "&8[ ] 删除模式"
+# 删除模式开启时的切换行标签。点击条目行将删除。
+multiconfigToggleRemoveModeOn: "&c[x] 删除模式 (点击条目以删除)"
+# 「+ 添加新...」条目的选择器行标签。无占位符。
+multiconfigRowAdd: "&2+ 新增..."
+# 添加行的悬停文字。占位符: [name] - 预填的默认名称。
+multiconfigRowAddHover: "&7在铁砧提示中输入名称; 预填: &f[name]"
+# 普通模式下条目行的悬停文字。占位符: [name]。
+multiconfigRowEditHover: "&7编辑 &f[name]"
+# 删除模式下条目行的悬停文字。占位符: [name]。
+multiconfigRowRemoveHover: "&c删除 &f[name]"
+# 确认删除页面标题行。占位符: [name]。
+multiconfigConfirmTitle: "&c&l删除 [name]?"
+# 确认删除页面「是」行标签。无占位符。
 multiconfigConfirmYes: "&c&l[confirm delete]"
-# Confirm-delete page Cancel-row label. No placeholders.
+# 确认删除页面「取消」行标签。无占位符。
 multiconfigConfirmNo: "&2&l[cancel]"
-# Hover text on a locked (grayed) default-region row. No placeholders.
-multiconfigLockRegionDefault: "&7the default region cannot be removed"
-# Hover text on a locked (grayed) world row. Placeholder: [name].
-multiconfigLockWorldLoaded: "&7world '[name]' is loaded on the server; unload it before removing its config"
-# Result message after a successful ADD. Placeholder: [name].
-multiconfigResultAdded: "&aadded '[name]'."
-# Result message after a successful REMOVE. Placeholder: [name].
-multiconfigResultRemoved: "&aremoved '[name]'."
-# Result message when ADD failed. Placeholders: [name], [reason].
-multiconfigResultAddFailed: "&ccould not add '[name]': [reason]"
-# Result message when REMOVE failed. Placeholders: [name], [reason].
-multiconfigResultRemoveFailed: "&ccould not remove '[name]': [reason]"
-# Result message when the proposed entry name is rejected by the sanitiser.
-# Placeholder: [name].
-multiconfigResultNameInvalid: "&cname '[name]' is not allowed; use letters, digits, '_', '-', '.'"
-# Result message when an ADD collides with an existing entry name.
-# Placeholder: [name].
-multiconfigResultNameTaken: "&can entry named '[name]' already exists."
+# 锁定（灰色）默认区域行的悬停文字。无占位符。
+multiconfigLockRegionDefault: "&7默认区域不能被删除"
+# 锁定（灰色）世界行的悬停文字。占位符: [name]。
+multiconfigLockWorldLoaded: "&7世界 '[name]' 已在服务器上加载; 请先卸载再删除其配置"
+# 成功 ADD 后的结果消息。占位符: [name]。
+multiconfigResultAdded: "&a已添加 '[name]'。"
+# 成功 REMOVE 后的结果消息。占位符: [name]。
+multiconfigResultRemoved: "&a已删除 '[name]'。"
+# ADD 失败时的结果消息。占位符: [name], [reason]。
+multiconfigResultAddFailed: "&c无法添加 '[name]': [reason]"
+# REMOVE 失败时的结果消息。占位符: [name], [reason]。
+multiconfigResultRemoveFailed: "&c无法删除 '[name]': [reason]"
+# 提议的条目名称被清理器拒绝时的结果消息。
+# 占位符: [name]。
+multiconfigResultNameInvalid: "&c名称 '[name]' 不合法; 请使用字母、数字、'_'、'-'、'.'"
+# ADD 与现有条目名称冲突时的结果消息。
+# 占位符: [name]。
+multiconfigResultNameTaken: "&c已存在名为 '[name]' 的条目。"
 
 # DO NOT TOUCH VERSION NUMBER
 version: 1.0

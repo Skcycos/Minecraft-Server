@@ -1,32 +1,28 @@
 # --- RTP Database / Persistence Configuration ---
-# Documentation: https://github.com/DailyStruggle/RTP/wiki/Core-Configuration
+# Documentation: plugins/RTP/docs/admin/configuration/CORE_CONFIG.md
 
-# Where RTP saves its data.
+# Backend used to persist teleport data and cached locations. The sql network
+# transport (network.yml) reuses this same accessor pool.
 database:
-  # Which database to use.
+  # Backend type.
   # @type: enum
   # @options: ["yaml", "sqlite", "mysql", "postgresql"]
-  # @default: "sqlite"
-  type: "yaml"
-
-  # Address. mysql/postgresql only.
+  # @default: "sqlite
+  type: "sqlite"
+  # Database host. Used by mysql/postgresql only.
   # @type: string
   host: "127.0.0.1"
-
-  # Port. mysql/postgresql only.
+  # Database port. Used by mysql/postgresql only.
   # @type: integer
   # @range: [1, 65535]
   port: 3306
-
-  # Database name. mysql/postgresql only.
+  # Database / schema name. Used by mysql/postgresql only.
   # @type: string
   name: "rtp"
-
-  # Username. mysql/postgresql only.
+  # Database username. Used by mysql/postgresql only.
   # @type: string
   username: "root"
-
-  # Password. mysql/postgresql only.
+  # Database password. Used by mysql/postgresql only.
   # @type: string
   password: "password"
 

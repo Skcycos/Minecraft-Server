@@ -4,7 +4,7 @@
 # Loaded first so every other file reads from lang/<language>/.
 # Bundled: en, de, es, fr, ja, ko, nl, zh. Add more in lang/<code>/.
 # Run /rtp reload after changing this.
-language: en
+language: zh
 
 # Config schema version (do not edit).
 version: 1.0

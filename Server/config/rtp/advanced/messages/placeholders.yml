@@ -1,17 +1,10 @@
-# --- RTP Shared Placeholders ---
-# The shared "[Pn]" placeholders applied to every message across all the other
-# messages/*.yml files. [P0] is the RTP prefix by default and appears nearly
-# everywhere, so it lives in its own file for easy editing.
-#
-# format: Pn - where n is the index in this list
+# --- RTP 消息（本语言） ---
+# 本语言面向玩家和管理员的消息文本，按主题分组。
+# 由英文消息自动生成的副本；请勿手动编辑（会被覆盖）。
 
-# ###############################################################################
-# Section 0: Placeholders
-# ###############################################################################
-placeholders:
-  # P0 - plugin prefix shown in every message. Uses a rainbow gradient on
-  # Paper/Folia and per-character hex codes on Spigot.
-  - "<rainbow>[RTP]</rainbow>"
+占位符:
+  # P0
+  - "[RTP]"
 
 # DO NOT TOUCH VERSION NUMBER
 version: 1.0

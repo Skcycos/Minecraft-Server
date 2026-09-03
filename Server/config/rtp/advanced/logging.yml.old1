@@ -1,0 +1,74 @@
+# --- Plugin Logging Toggles ---
+# Documentation: https://github.com/DailyStruggle/RTP/wiki/Logging
+
+# Minimum log level (finer of this and the server logger's own level).
+# ALL keeps behavior identical to the server logger.
+# @type: enum
+# @options: [SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST, ALL, OFF]
+# @default: ALL
+min_level: "INFO"
+
+# Log player-executed RTP commands
+# @type: boolean
+# @default: false
+command: false
+
+# Log successful teleport events
+# @type: boolean
+# @default: true
+teleport: true
+
+# Log info when location selection fails
+# @type: boolean
+# @default: true
+selection_failure: true
+
+# --- Event logging ---
+# Log RTP triggered by world changes
+# @type: boolean
+# @default: true
+event_changeworld: true
+
+# Log RTP triggered on join
+# @type: boolean
+# @default: true
+event_join: true
+
+# Log RTP triggered on respawn
+# @type: boolean
+# @default: true
+event_respawn: true
+
+# Log move event processing
+# @type: boolean
+# @default: true
+event_move: true
+
+# Log teleport event processing
+# @type: boolean
+# @default: true
+event_teleport: true
+
+# --- Debug (verbose) ---
+# Log all files reloaded during /rtp reload
+# @type: boolean
+# @default: false
+detailed_reload: false
+
+# Log region initialization details
+# @type: boolean
+# @default: false
+detailed_region_init: false
+
+# Debug logs for memory activity
+# @type: boolean
+# @default: false
+system_memory_tracker: false
+
+# Debug logs for database activity
+# @type: boolean
+# @default: false
+system_database: false
+
+# DO NOT TOUCH VERSION NUMBER
+version: 1.1

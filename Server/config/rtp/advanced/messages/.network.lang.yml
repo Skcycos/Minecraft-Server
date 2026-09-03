@@ -12,4 +12,4 @@ networkFallback: "networkFallback"
 networkFailed: "networkFailed"
 networkRegionUnavailable: "networkRegionUnavailable"
 networkRegionAmbiguous: "networkRegionAmbiguous"
-version: "version"
+version: version
