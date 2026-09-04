@@ -1,0 +1,327 @@
+[24Aug2026 00:13:47.549] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Duplicate compat module registration for 'fake_mod' ignored
+[24Aug2026 00:13:47.565] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Compat module for mod 'mod_construction_throws' (class 'com.tanrunn.tcth.impl.compat.CompatLoaderTest$ConstructionThrowingModule') threw during construction: java.lang.IllegalStateException: boom in construction hook
+[24Aug2026 00:13:47.569] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to construct compat module for mod 'mod_a' (class 'com.tanrunn.tcth.impl.compat.NonExistentModule') during construction: java.lang.ClassNotFoundException: com.tanrunn.tcth.impl.compat.NonExistentModule
+[24Aug2026 00:13:47.576] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Compat module registration for 'late_mod' rejected: loader already initialized (all descriptors must be registered before init)
+[24Aug2026 00:13:47.580] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Compat module for mod 'mod_setup_throws' (class com.tanrunn.tcth.impl.compat.CompatLoaderTest$CommonSetupThrowingModule) threw during common setup: java.lang.IllegalStateException: boom in common setup
+[24Aug2026 00:13:47.582] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Class 'java.lang.String' for mod 'mod_x' does not implement CompatModule; module disabled
+[24Aug2026 00:13:47.584] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Compat module class 'com.tanrunn.tcth.impl.compat.CompatLoaderTest$WrongModIdModule' reports modId 'mismatched_mod' but was registered for 'mod_wrong'; module disabled
+[24Aug2026 00:13:47.702] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Field Guide cookbook module active (unlock on dish take-out / beverage prepared)
+[24Aug2026 00:13:47.984] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Beverage reward settlement failed: java.lang.RuntimeException: boom
+[24Aug2026 00:13:49.471] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Field Guide brewer unlock handler failed for player 'TestPlayer' item 'minecraft:honey_bottle' event 5625c185-1b51-4d2e-9aa4-96aa3c5f9f64: java.lang.IllegalStateException: config boom
+[24Aug2026 00:13:49.474] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Field Guide brewer unlock handler failed for player 'TestPlayer' item 'minecraft:honey_bottle' event 8c917e74-6576-43cf-9420-3e11c659a1c3: java.lang.IllegalStateException: config boom
+[24Aug2026 00:13:49.488] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Field Guide unlock handler failed for player 'TestPlayer' item 'minecraft:cooked_cod' event 84fb2318-2d15-41c2-842b-7b8cbab187d4: java.lang.IllegalStateException: boom
+[24Aug2026 00:13:49.492] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Field Guide unlock handler failed for player 'TestPlayer' item 'minecraft:cooked_cod' event 6d1d97a5-331d-4315-91dc-5972eb910716: java.lang.IllegalStateException: boom
+[24Aug2026 00:13:49.530] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Skipping invalid dish tier entry 'tcth:items/minecraft/bad_recipe': java.lang.IllegalArgumentException: No enum constant com.tanrunn.tcth.impl.compat.jobsplus.DishTier.NOT_A_TIER
+[24Aug2026 00:13:49.531] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Skipping dish tier entry 'tcth:bad_entry': path must start with 'recipes/' or 'items/'
+[24Aug2026 00:13:49.572] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Farmer reward settlement failed for 492e4fcb-d8aa-4e8d-abd3-e0b8071bf757: java.lang.IllegalStateException: boom
+[24Aug2026 00:13:49.573] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Farmer reward settlement failed for 990da8fc-326b-4c06-b3af-9fa104625a2d: java.lang.NullPointerException: Cannot invoke "com.mojang.authlib.GameProfile.getName()" because the return value of "net.minecraft.server.level.ServerPlayer.getGameProfile()" is null
+[24Aug2026 00:13:49.584] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Gunner reward settlement failed for 97084b03-ea9b-447a-b72a-d2b2fbf31e19: java.lang.NullPointerException: Cannot invoke "com.mojang.authlib.GameProfile.getName()" because the return value of "net.minecraft.server.level.ServerPlayer.getGameProfile()" is null
+[24Aug2026 00:13:49.595] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Gunner reward settlement failed for 04d5b343-d985-46af-94e2-681764832088: java.lang.NullPointerException: Cannot invoke "com.mojang.authlib.GameProfile.getName()" because the return value of "net.minecraft.server.level.ServerPlayer.getGameProfile()" is null
+[24Aug2026 00:13:49.598] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Jobs+ is installed but Arc is missing; dish reward module disabled
+[24Aug2026 00:13:49.718] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow reward action send threw (event b9484eab-a9d2-4701-a12f-7b0d227293fa): java.lang.RuntimeException: sendToAction exploded
+[24Aug2026 00:13:49.766] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow reward switch read failed; rewards fail-closed: java.lang.LinkageError: jobsplus classes missing
+[24Aug2026 00:13:49.961] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to send dish action for tester (item minecraft:cooked_beef, tier COMMON): java.lang.ClassCastException: class net.minecraft.server.level.ServerPlayer cannot be cast to class com.daqem.arc.api.player.ArcServerPlayer (net.minecraft.server.level.ServerPlayer and com.daqem.arc.api.player.ArcServerPlayer are in unnamed module of loader 'app')
+[24Aug2026 00:13:50.450] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] tcth:gunner_rewards_enabled config read failed: java.lang.RuntimeException: broken config
+[24Aug2026 00:13:50.460] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft send: player not ArcServerPlayer for thief (e6e9abb2-8e08-4321-a4c0-a73be11bd4d7): java.lang.ClassCastException: class net.minecraft.server.level.ServerPlayer cannot be cast to class com.daqem.arc.api.player.ArcServerPlayer (net.minecraft.server.level.ServerPlayer and com.daqem.arc.api.player.ArcServerPlayer are in unnamed module of loader 'app')
+[24Aug2026 00:13:50.476] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] brewer_study_abilities_enabled config read failed; fail-closed (disabled): java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:50.479] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] brewer_tasting_abilities_enabled config read failed; fail-closed (disabled): java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:50.535] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Chef ability toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: config not loaded
+[24Aug2026 00:13:50.603] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Tilling toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+[24Aug2026 00:13:50.694] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Tilling toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+[24Aug2026 00:13:50.696] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Livestock toggle config read failed; abilities fail-closed (disabled): java.lang.IllegalStateException: broken
+[24Aug2026 00:13:50.713] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] gunner_experience_abilities_enabled config read failed; fail-closed (disabled): java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:50.722] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] tcth:shadow_rewards_enabled config read failed: java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:50.728] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] tcth:shadow_sleight_abilities_enabled config read failed; shadow abilities fail-closed (disabled): java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:51.116] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Brewer powerup query failed for route TASTING: java.lang.IllegalStateException: corrupt
+[24Aug2026 00:13:51.184] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Chef powerup query failed for route KNIFE: java.lang.IllegalStateException: jobsplus data corrupt
+[24Aug2026 00:13:51.305] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Farmer ability master gate read failed: java.lang.IllegalStateException: broken
+[24Aug2026 00:13:51.571] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Gunner powerup query failed for route DEFENSE: java.lang.IllegalStateException: jobsplus data corrupt
+[24Aug2026 00:13:51.646] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow powerup query failed for route SLEIGHT: java.lang.IllegalStateException: jobsplus data corrupt
+[24Aug2026 00:13:51.650] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow ability config read failed; abilities fail-closed (NONE): java.lang.IllegalStateException: config broken
+[24Aug2026 00:13:54.048] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to sign dish for player 'null': java.lang.IllegalStateException: Cannot get config value before config is loaded.
+[24Aug2026 00:13:54.123] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to sign dish for player 'null': java.lang.IllegalStateException: Cannot get config value before config is loaded.
+[24Aug2026 00:13:54.163] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to sign dish for player 'null': java.lang.IllegalStateException: Cannot get config value before config is loaded.
+[24Aug2026 00:13:54.166] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Failed to sign dish for player 'null': java.lang.IllegalStateException: Cannot get config value before config is loaded.
+[24Aug2026 00:13:55.588] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] HUNGER commit failed (event 4baa7526-f712-4bce-a3ee-7840264b25af): java.lang.RuntimeException: sat boom
+[24Aug2026 00:13:55.686] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] ITEM commit failed (event 124f271f-ef06-41a3-8725-c0917a025be8): java.lang.RuntimeException: merge boom
+[24Aug2026 00:13:55.695] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] ITEM commit found an unregistered item (event e93e7f00-b5ea-41d3-ba9c-c51f9dedfe8c)
+[24Aug2026 00:13:55.716] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] ITEM commit write mismatch (event d78ede34-e22f-4e88-a45a-44290f65a7f1): victim=2 minecraft:diamond thief=9 minecraft:emerald
+[24Aug2026 00:13:55.771] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] HEALTH commit failed (event 0cb8844e-c861-4549-bd0f-e521b3c9cf9e): java.lang.RuntimeException: heal boom
+[24Aug2026 00:13:55.799] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] HEALTH commit heal mismatch (event 05c81283-fa5f-46e8-8e78-5802d916d7fa): gain=0.0 loss=1.0 planned=1.0
+[24Aug2026 00:13:55.803] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] EFFECT commit failed (event c5390637-a55f-4d8d-8f8d-65727980dc10): java.lang.RuntimeException: thief write boom
+[24Aug2026 00:13:55.878] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] HUNGER commit write mismatch (event a01d3783-54d7-41a2-8450-e7702eb214b4)
+[24Aug2026 00:13:55.969] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft interaction handling failed: java.lang.NullPointerException: Cannot invoke "net.minecraft.server.network.ServerGamePacketListenerImpl.send(net.minecraft.network.protocol.Packet)" because "player.connection" is null
+[24Aug2026 00:13:56.366] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event fccf3914-b93c-4400-939a-84e2d3d1034b)
+[24Aug2026 00:13:56.376] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow transfer prepare failed (event 6d32e4ff-1691-4ca7-87b7-ab9923cac574): java.lang.IllegalStateException: boom
+[24Aug2026 00:13:56.383] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft committed with a mismatched receipt; rolled back (event 1e2ad7cf-32ab-4ecf-87c7-3b99122e8176)
+[24Aug2026 00:13:56.387] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event 875e14d7-1dbb-4bcc-a76e-7fd2e1b5b056) — rollback failed after commit; operator intervention required
+[24Aug2026 00:13:56.391] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event 6c51f192-8393-4021-8a75-7e51b52bd5b3)
+[24Aug2026 00:13:56.396] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow daily quota commit failed (event 41dbd916-b169-443a-8644-34fd307f0f81): java.lang.IllegalStateException: fake storage boom
+[24Aug2026 00:13:56.397] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft quota commit failed; rolled back (event 41dbd916-b169-443a-8644-34fd307f0f81)
+[24Aug2026 00:13:56.410] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow transfer rollback failed (event ce2dce96-6cdb-4139-b5fc-5045d3a7a29c): java.lang.IllegalStateException: restore boom
+[24Aug2026 00:13:56.411] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event ce2dce96-6cdb-4139-b5fc-5045d3a7a29c) — mismatched receipt and rollback failed; operator intervention required
+[24Aug2026 00:13:56.421] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event d1092f2a-b779-4ab9-a481-e3f7cc261c66) — quota commit failed and rollback failed; operator intervention required
+[24Aug2026 00:13:56.437] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unavailable (event 2cf99541-f13d-4b09-a2f1-0dafe8cadb62): java.lang.IllegalStateException: storage boom
+[24Aug2026 00:13:56.447] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft attempt blocked: unresolved PENDING record (event 444fbd41-20a1-4014-b637-b0fe11e81e92)
+[24Aug2026 00:13:56.451] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unhealthy (event 148efdef-a893-49ad-9832-7ef717401b64)
+[24Aug2026 00:13:56.459] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow protection service failed (event d4b1ada5-1bcc-46bd-ac9b-18d2e3cbdae0): java.lang.IllegalStateException: boom
+[24Aug2026 00:13:56.486] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event b6c64e4c-02a3-4eda-b353-5b3d3890b36d)
+[24Aug2026 00:13:56.495] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event f496ffe9-ca1a-475a-b5af-7fe2528e6d52) — mismatched receipt and rollback failed; operator intervention required
+[24Aug2026 00:13:56.505] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow transfer rollback failed (event 94e38a3b-36db-4a21-aa34-ba956fd54f4b): java.lang.IllegalStateException: restore boom
+[24Aug2026 00:13:56.506] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft RECOVERY REQUIRED (event 94e38a3b-36db-4a21-aa34-ba956fd54f4b) — rollback failed after commit; operator intervention required
+[24Aug2026 00:13:56.510] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow candidate provider failed (event b95d7bd2-b07a-4f94-a1c6-761f31f60416): java.lang.IllegalStateException: boom
+[24Aug2026 00:13:56.515] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft attempt failed with a framework exception (event 7771523e-717a-4db8-94ce-45bd44f3ffde): java.lang.IllegalStateException: settings boom
+[24Aug2026 00:13:56.520] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft attempt failed with a framework exception (event b09903cb-a9be-4cf0-9c88-f232f1c61b60): java.lang.IllegalStateException: config boom
+[24Aug2026 00:13:56.532] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event e7663511-d478-4402-a000-8448503ddad8)
+[24Aug2026 00:13:56.538] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit disabled (event aded5097-01bb-43e9-8799-20ecbbde97a1)
+[24Aug2026 00:13:56.551] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store unhealthy (event e82f4031-701f-4830-a3f7-8d1892ccb88f)
+[24Aug2026 00:13:56.560] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft quota commit failed; rolled back (event 69e123e5-ca0e-4c91-b187-7bba04c5bf93)
+[24Aug2026 00:13:56.568] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft refused: audit store factory returned null (event 596af397-0135-46d0-a2cf-4bae543fe5eb)
+[24Aug2026 00:13:56.573] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft attempt blocked: unresolved PENDING record (event bd5713a7-a081-4e83-ab42-335bbd8ad0f7)
+[24Aug2026 00:13:56.579] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft committed but audit failed; rolled back (event 2fa238ac-9925-43c8-ba8b-6bf16a912bf2)
+[24Aug2026 00:13:58.567] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.614] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.615] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.618] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.619] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.620] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.621] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.703] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.704] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.705] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.706] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.709] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.710] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.714] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.715] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.717] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.718] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.721] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.722] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.724] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.725] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.767] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reaction did not apply (entity null)
+[24Aug2026 00:13:58.771] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.772] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.871] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.873] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.877] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.880] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.886] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.888] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.894] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.896] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.912] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.916] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.925] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.928] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.932] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.936] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.942] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.944] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.948] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.950] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.954] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.955] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.961] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.963] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.967] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.970] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.976] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.979] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.984] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.986] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.990] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:58.993] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:58.999] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.002] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.006] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.008] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.017] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.018] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.021] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.022] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.041] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.044] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.048] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.049] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.055] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.057] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.065] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.067] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:13:59.071] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:13:59.245] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow escape success effects failed for thief: java.lang.IllegalStateException: boom
+[24Aug2026 00:14:09.314] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.315] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definition rejected (unknown entity/item): minecraft:cow
+[24Aug2026 00:14:09.316] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.317] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.317] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.317] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.318] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.318] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.318] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.319] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.319] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.321] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.321] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.351] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.352] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.353] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.354] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.355] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.356] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.356] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.357] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.358] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.358] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot reload skipped: registry access unavailable
+[24Aug2026 00:14:09.358] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.359] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.360] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.360] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.361] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.362] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.364] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot file unreadable: tcth:shadow_loot/minecraft/chicken.json
+[24Aug2026 00:14:09.364] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.364] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.366] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.418] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.420] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.423] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.424] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.424] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.425] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.427] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.428] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.428] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.430] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definition rejected (invalid schema): minecraft:cow
+[24Aug2026 00:14:09.430] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.430] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.431] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.432] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 2 entities
+[24Aug2026 00:14:09.433] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.433] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.433] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.434] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.436] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.438] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.441] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.442] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.443] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.444] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.444] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.445] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.445] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.446] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.448] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.448] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.449] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.450] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 3 entities
+[24Aug2026 00:14:09.450] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.451] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.452] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.453] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.453] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.454] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.454] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.455] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 1 entities
+[24Aug2026 00:14:09.455] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.455] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.461] [Test worker/INFO] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow loot definitions loaded: 0 entities
+[24Aug2026 00:14:09.570] [Test worker/ERROR] [net.neoforged.bus.EventBus/EVENTBUS]: Exception caught during firing event: boom
+	Index: 1
+	Listeners:
+		0: com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcherTest$$Lambda/0x00007fb914e166a8@2496ae03
+		1: com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcherTest$$Lambda/0x00007fb914e16ae0@2e86a16
+java.lang.IllegalStateException: boom
+	at com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcherTest.lambda$listenerExceptionIsIsolated$3(ShadowTheftEventDispatcherTest.java:106)
+	at net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27)
+	at net.neoforged.bus.EventBus.post(EventBus.java:360)
+	at net.neoforged.bus.EventBus.post(EventBus.java:328)
+	at com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcher.publish(ShadowTheftEventDispatcher.java:85)
+	at com.tanrunn.tcth.impl.shadow.ShadowTheftEventDispatcherTest.listenerExceptionIsIsolated(ShadowTheftEventDispatcherTest.java:108)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:135)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:104)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.MethodInvocation.invokeOn(MethodInvocation.java:77)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:28)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:19)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:88)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+[24Aug2026 00:14:09.573] [Test worker/WARN] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Shadow theft event dispatch failed (event 96d73f1b-7fbd-434c-b4c0-832d3dab1b4c): java.lang.IllegalStateException: boom
+[24Aug2026 00:14:10.373] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Gunner stats failed for event 5924f59a-5eec-41ef-a5ef-a7ad68e62183, player fa3d6c88-7c8f-4c44-8857-f715a4911a5f, weapon scguns:defender_pistol: java.lang.LinkageError: bad bytecode
+[24Aug2026 00:14:10.374] [Test worker/ERROR] [com.tanrunn.tcth.TCTHIntegration/]: [TCTH] Gunner stats failed for event 43ff1134-4952-45c2-ad8b-772dc564311c, player ffd2d7de-c92c-4d75-a639-a8c9b659ec91, weapon scguns:defender_pistol: java.lang.RuntimeException: disk full

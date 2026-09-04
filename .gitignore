@@ -119,3 +119,9 @@ Server/config/fuji/**
 !Server/config/fuji/languages/zh_CN.json
 # WorldEdit 归档解包运行时缓存
 Server/config/worldedit/.archive-unpack/
+
+# Mod development build artifacts
+mod develop/**/build/
+mod develop/**/logs/
+mod develop/**/run/
+mod develop/**/__pycache__/
