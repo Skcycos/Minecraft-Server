@@ -4,6 +4,18 @@
       "type": "other",
       "name": "Server"
     },
+    "time": 1788453377312,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/7LgWffD1WC"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
     "time": 1788427233454,
     "type": "Profiler",
     "data": {

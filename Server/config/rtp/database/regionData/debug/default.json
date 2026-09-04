@@ -39,6 +39,11 @@
       "cause": "vert"
     },
     {
+      "start": 1949,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 2298,
       "length": 1,
       "cause": "vert"
@@ -89,6 +94,11 @@
       "cause": "vert"
     },
     {
+      "start": 5469,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 5538,
       "length": 1,
       "cause": "vert"
@@ -114,8 +124,8 @@
       "cause": "vert"
     },
     {
-      "start": 6481,
-      "length": 1,
+      "start": 6480,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -135,6 +145,11 @@
     },
     {
       "start": 6981,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 6987,
       "length": 1,
       "cause": "vert"
     },
@@ -175,6 +190,11 @@
     },
     {
       "start": 8502,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 8527,
       "length": 1,
       "cause": "vert"
     },
@@ -229,6 +249,11 @@
       "cause": "vert"
     },
     {
+      "start": 12215,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 12269,
       "length": 1,
       "cause": "vert"
@@ -240,6 +265,11 @@
     },
     {
       "start": 12837,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 12845,
       "length": 1,
       "cause": "vert"
     },
@@ -270,6 +300,11 @@
     },
     {
       "start": 14014,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 14938,
       "length": 1,
       "cause": "vert"
     },
@@ -334,6 +369,11 @@
       "cause": "vert"
     },
     {
+      "start": 18234,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 18257,
       "length": 1,
       "cause": "vert"
@@ -385,6 +425,11 @@
     },
     {
       "start": 19512,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 19592,
       "length": 1,
       "cause": "vert"
     },
@@ -449,6 +494,11 @@
       "cause": "vert"
     },
     {
+      "start": 22097,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 22103,
       "length": 1,
       "cause": "vert"
@@ -475,6 +525,11 @@
     },
     {
       "start": 22778,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 22988,
       "length": 1,
       "cause": "vert"
     },
@@ -559,6 +614,11 @@
       "cause": "vert"
     },
     {
+      "start": 26202,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 26456,
       "length": 1,
       "cause": "vert"
@@ -580,7 +640,7 @@
     },
     {
       "start": 26837,
-      "length": 1,
+      "length": 4,
       "cause": "biome"
     },
     {
@@ -631,6 +691,11 @@
     {
       "start": 28381,
       "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 28683,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -784,6 +849,11 @@
       "cause": "vert"
     },
     {
+      "start": 35844,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 35852,
       "length": 1,
       "cause": "vert"
@@ -919,6 +989,11 @@
       "cause": "vert"
     },
     {
+      "start": 40674,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 41064,
       "length": 2,
       "cause": "vert"
@@ -1049,6 +1124,16 @@
       "cause": "vert"
     },
     {
+      "start": 45617,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 45657,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 45673,
       "length": 1,
       "cause": "vert"
@@ -1079,6 +1164,11 @@
       "cause": "biome"
     },
     {
+      "start": 46979,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 47009,
       "length": 1,
       "cause": "vert"
@@ -1089,8 +1179,8 @@
       "cause": "vert"
     },
     {
-      "start": 47431,
-      "length": 1,
+      "start": 47429,
+      "length": 3,
       "cause": "vert"
     },
     {
@@ -1114,8 +1204,8 @@
       "cause": "vert"
     },
     {
-      "start": 48761,
-      "length": 2,
+      "start": 48759,
+      "length": 4,
       "cause": "vert"
     },
     {
@@ -1135,6 +1225,16 @@
     },
     {
       "start": 49410,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 49452,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 49634,
       "length": 1,
       "cause": "vert"
     },
@@ -1200,6 +1300,11 @@
     },
     {
       "start": 52321,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 52331,
       "length": 1,
       "cause": "vert"
     },
@@ -1304,6 +1409,11 @@
       "cause": "vert"
     },
     {
+      "start": 56945,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
       "start": 56963,
       "length": 1,
       "cause": "vert"
@@ -1330,7 +1440,7 @@
     },
     {
       "start": 58288,
-      "length": 1,
+      "length": 5,
       "cause": "vert"
     },
     {
@@ -1414,6 +1524,11 @@
       "cause": "vert"
     },
     {
+      "start": 63074,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 63105,
       "length": 1,
       "cause": "vert"
@@ -1486,6 +1601,11 @@
     {
       "start": 66326,
       "length": 4,
+      "cause": "vert"
+    },
+    {
+      "start": 66493,
+      "length": 1,
       "cause": "vert"
     },
     {
@@ -1664,6 +1784,11 @@
       "cause": "vert"
     },
     {
+      "start": 74830,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 75185,
       "length": 1,
       "cause": "vert"
@@ -1687,6 +1812,11 @@
       "start": 75293,
       "length": 5,
       "cause": "biome"
+    },
+    {
+      "start": 75461,
+      "length": 1,
+      "cause": "vert"
     },
     {
       "start": 75845,
@@ -1794,6 +1924,16 @@
       "cause": "vert"
     },
     {
+      "start": 82276,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 82612,
+      "length": 1,
+      "cause": "biome"
+    },
+    {
       "start": 82710,
       "length": 1,
       "cause": "vert"
@@ -1884,6 +2024,11 @@
       "cause": "biome"
     },
     {
+      "start": 86727,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
       "start": 87147,
       "length": 1,
       "cause": "vert"
@@ -1925,6 +2070,11 @@
     },
     {
       "start": 88478,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 88617,
       "length": 1,
       "cause": "vert"
     },
@@ -1994,6 +2144,16 @@
       "cause": "vert"
     },
     {
+      "start": 91010,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 91034,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 91159,
       "length": 1,
       "cause": "vert"
@@ -2006,6 +2166,11 @@
     {
       "start": 91411,
       "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 91684,
+      "length": 1,
       "cause": "vert"
     },
     {
@@ -2244,6 +2409,11 @@
       "cause": "vert"
     },
     {
+      "start": 102268,
+      "length": 1,
+      "cause": "biome"
+    },
+    {
       "start": 102481,
       "length": 1,
       "cause": "vert"
@@ -2334,6 +2504,16 @@
       "cause": "vert"
     },
     {
+      "start": 104132,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
+      "start": 104223,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
       "start": 104698,
       "length": 1,
       "cause": "vert"
@@ -2350,6 +2530,11 @@
     },
     {
       "start": 104859,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 105041,
       "length": 1,
       "cause": "vert"
     },
@@ -2414,6 +2599,11 @@
       "cause": "vert"
     },
     {
+      "start": 106465,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 106494,
       "length": 1,
       "cause": "vert"
@@ -2430,6 +2620,11 @@
     },
     {
       "start": 108385,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 108421,
       "length": 1,
       "cause": "vert"
     },
@@ -2464,8 +2659,8 @@
       "cause": "vert"
     },
     {
-      "start": 109640,
-      "length": 1,
+      "start": 109637,
+      "length": 4,
       "cause": "vert"
     },
     {
@@ -2509,6 +2704,11 @@
       "cause": "vert"
     },
     {
+      "start": 111021,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 111521,
       "length": 2,
       "cause": "vert"
@@ -2544,6 +2744,11 @@
       "cause": "vert"
     },
     {
+      "start": 112858,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 113321,
       "length": 1,
       "cause": "biome"
@@ -2575,6 +2780,11 @@
     },
     {
       "start": 114613,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 114653,
       "length": 1,
       "cause": "vert"
     },
@@ -2659,6 +2869,11 @@
       "cause": "vert"
     },
     {
+      "start": 116497,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 116517,
       "length": 1,
       "cause": "vert"
@@ -2675,6 +2890,11 @@
     },
     {
       "start": 117136,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 117186,
       "length": 1,
       "cause": "vert"
     },
@@ -2819,6 +3039,11 @@
       "cause": "vert"
     },
     {
+      "start": 121953,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 122589,
       "length": 1,
       "cause": "vert"
@@ -2829,8 +3054,13 @@
       "cause": "vert"
     },
     {
-      "start": 122872,
+      "start": 122834,
       "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 122871,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -2885,6 +3115,11 @@
     },
     {
       "start": 125515,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 125525,
       "length": 1,
       "cause": "vert"
     },
@@ -3119,12 +3354,22 @@
       "cause": "vert"
     },
     {
+      "start": 133118,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 133341,
       "length": 1,
       "cause": "vert"
     },
     {
       "start": 133461,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 133518,
       "length": 1,
       "cause": "vert"
     },
@@ -3189,6 +3434,11 @@
       "cause": "vert"
     },
     {
+      "start": 134962,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 135118,
       "length": 3,
       "cause": "vert"
@@ -3197,6 +3447,11 @@
       "start": 135177,
       "length": 2,
       "cause": "vert"
+    },
+    {
+      "start": 135593,
+      "length": 1,
+      "cause": "biome"
     },
     {
       "start": 135731,
@@ -3329,6 +3584,11 @@
       "cause": "vert"
     },
     {
+      "start": 139780,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 139879,
       "length": 1,
       "cause": "vert"
@@ -3349,6 +3609,16 @@
       "cause": "vert"
     },
     {
+      "start": 140215,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 140333,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 140348,
       "length": 1,
       "cause": "vert"
@@ -3365,6 +3635,11 @@
     },
     {
       "start": 140421,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 140681,
       "length": 1,
       "cause": "vert"
     },
@@ -3404,6 +3679,11 @@
       "cause": "vert"
     },
     {
+      "start": 141887,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 142249,
       "length": 2,
       "cause": "vert"
@@ -3415,6 +3695,11 @@
     },
     {
       "start": 142589,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 142669,
       "length": 1,
       "cause": "vert"
     },
@@ -3440,6 +3725,11 @@
     },
     {
       "start": 143121,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 143171,
       "length": 1,
       "cause": "vert"
     },
@@ -3549,7 +3839,17 @@
       "cause": "vert"
     },
     {
+      "start": 145512,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 145822,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 145892,
       "length": 1,
       "cause": "vert"
     },
@@ -3570,6 +3870,11 @@
     },
     {
       "start": 146079,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 146509,
       "length": 1,
       "cause": "vert"
     },
@@ -3604,6 +3909,11 @@
       "cause": "vert"
     },
     {
+      "start": 147469,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 147482,
       "length": 1,
       "cause": "vert"
@@ -3629,6 +3939,11 @@
       "cause": "vert"
     },
     {
+      "start": 148897,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 149046,
       "length": 1,
       "cause": "vert"
@@ -3651,6 +3966,11 @@
     {
       "start": 149743,
       "length": 5,
+      "cause": "vert"
+    },
+    {
+      "start": 149842,
+      "length": 1,
       "cause": "vert"
     },
     {
@@ -3694,6 +4014,11 @@
       "cause": "vert"
     },
     {
+      "start": 151231,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 151570,
       "length": 5,
       "cause": "vert"
@@ -3706,6 +4031,11 @@
     {
       "start": 151852,
       "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 151953,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -3734,6 +4064,11 @@
       "cause": "vert"
     },
     {
+      "start": 152662,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 152674,
       "length": 1,
       "cause": "vert"
@@ -3754,8 +4089,8 @@
       "cause": "vert"
     },
     {
-      "start": 153036,
-      "length": 1,
+      "start": 153034,
+      "length": 3,
       "cause": "vert"
     },
     {
@@ -3776,6 +4111,11 @@
     {
       "start": 153232,
       "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 153367,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -3874,12 +4214,22 @@
       "cause": "vert"
     },
     {
+      "start": 155411,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 155533,
       "length": 1,
       "cause": "vert"
     },
     {
       "start": 155563,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 155623,
       "length": 1,
       "cause": "vert"
     },
@@ -3950,6 +4300,21 @@
     },
     {
       "start": 157590,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 157911,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 158431,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 158452,
       "length": 1,
       "cause": "vert"
     },
@@ -4079,6 +4444,11 @@
       "cause": "vert"
     },
     {
+      "start": 161948,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 162014,
       "length": 1,
       "cause": "vert"
@@ -4089,7 +4459,17 @@
       "cause": "vert"
     },
     {
+      "start": 162163,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 162461,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 162746,
       "length": 1,
       "cause": "vert"
     },
@@ -4115,6 +4495,11 @@
     },
     {
       "start": 162988,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 163205,
       "length": 1,
       "cause": "vert"
     },
@@ -4249,6 +4634,11 @@
       "cause": "vert"
     },
     {
+      "start": 166923,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 166962,
       "length": 1,
       "cause": "vert"
@@ -4330,6 +4720,11 @@
     },
     {
       "start": 169504,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 169647,
       "length": 1,
       "cause": "vert"
     },
@@ -4494,7 +4889,17 @@
       "cause": "vert"
     },
     {
+      "start": 173316,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 173471,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 173513,
       "length": 1,
       "cause": "vert"
     },
@@ -4515,6 +4920,11 @@
     },
     {
       "start": 173906,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 173923,
       "length": 1,
       "cause": "vert"
     },
@@ -4549,6 +4959,11 @@
       "cause": "vert"
     },
     {
+      "start": 174684,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 174867,
       "length": 1,
       "cause": "vert"
@@ -4575,7 +4990,7 @@
     },
     {
       "start": 175481,
-      "length": 1,
+      "length": 3,
       "cause": "vert"
     },
     {
@@ -4600,7 +5015,7 @@
     },
     {
       "start": 175618,
-      "length": 1,
+      "length": 5,
       "cause": "vert"
     },
     {
@@ -4610,6 +5025,11 @@
     },
     {
       "start": 176408,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 176493,
       "length": 1,
       "cause": "vert"
     },
@@ -4684,6 +5104,11 @@
       "cause": "vert"
     },
     {
+      "start": 178607,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 178646,
       "length": 1,
       "cause": "vert"
@@ -4749,12 +5174,22 @@
       "cause": "vert"
     },
     {
+      "start": 180572,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 180775,
       "length": 4,
       "cause": "vert"
     },
     {
       "start": 180884,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 180946,
       "length": 1,
       "cause": "vert"
     },
@@ -4999,6 +5434,11 @@
       "cause": "vert"
     },
     {
+      "start": 185977,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 185997,
       "length": 1,
       "cause": "vert"
@@ -5064,6 +5504,11 @@
       "cause": "vert"
     },
     {
+      "start": 187007,
+      "length": 2,
+      "cause": "vert"
+    },
+    {
       "start": 187071,
       "length": 1,
       "cause": "vert"
@@ -5124,7 +5569,17 @@
       "cause": "vert"
     },
     {
+      "start": 188289,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 188471,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 188887,
       "length": 1,
       "cause": "vert"
     },
@@ -5140,6 +5595,11 @@
     },
     {
       "start": 189085,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 189111,
       "length": 1,
       "cause": "vert"
     },
@@ -5239,6 +5699,11 @@
       "cause": "vert"
     },
     {
+      "start": 190694,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 190700,
       "length": 1,
       "cause": "vert"
@@ -5250,6 +5715,11 @@
     },
     {
       "start": 191021,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 191228,
       "length": 1,
       "cause": "vert"
     },
@@ -5305,7 +5775,7 @@
     },
     {
       "start": 192357,
-      "length": 4,
+      "length": 8,
       "cause": "vert"
     },
     {
@@ -5363,8 +5833,8 @@
         "length": 3
       },
       {
-        "start": 4918,
-        "length": 3
+        "start": 4917,
+        "length": 4
       },
       {
         "start": 4943,
@@ -5380,7 +5850,7 @@
       },
       {
         "start": 6404,
-        "length": 3
+        "length": 8
       },
       {
         "start": 6867,
@@ -5471,6 +5941,10 @@
         "length": 3
       },
       {
+        "start": 29885,
+        "length": 3
+      },
+      {
         "start": 31659,
         "length": 3
       },
@@ -5535,6 +6009,10 @@
         "length": 3
       },
       {
+        "start": 53252,
+        "length": 3
+      },
+      {
         "start": 53262,
         "length": 3
       },
@@ -5552,6 +6030,10 @@
       },
       {
         "start": 83515,
+        "length": 3
+      },
+      {
+        "start": 84615,
         "length": 3
       },
       {
@@ -5595,16 +6077,24 @@
         "length": 3
       },
       {
+        "start": 165158,
+        "length": 3
+      },
+      {
+        "start": 166689,
+        "length": 3
+      },
+      {
         "start": 169712,
         "length": 3
       },
       {
         "start": 171205,
-        "length": 3
+        "length": 5
       },
       {
         "start": 171221,
-        "length": 3
+        "length": 5
       },
       {
         "start": 172738,
@@ -5625,11 +6115,19 @@
       {
         "start": 182015,
         "length": 3
+      },
+      {
+        "start": 188312,
+        "length": 3
       }
     ],
     "BLOOMING_VALLEY": [
       {
         "start": 151404,
+        "length": 3
+      },
+      {
+        "start": 154300,
         "length": 3
       },
       {
@@ -5654,6 +6152,10 @@
       }
     ],
     "SUNFLOWER_PLAINS": [
+      {
+        "start": 248,
+        "length": 3
+      },
       {
         "start": 5089,
         "length": 3
@@ -5721,6 +6223,10 @@
         "length": 3
       },
       {
+        "start": 189237,
+        "length": 3
+      },
+      {
         "start": 190830,
         "length": 3
       }
@@ -5735,11 +6241,19 @@
         "length": 3
       },
       {
+        "start": 57250,
+        "length": 3
+      },
+      {
         "start": 62005,
         "length": 3
       },
       {
-        "start": 63925,
+        "start": 63922,
+        "length": 6
+      },
+      {
+        "start": 65910,
         "length": 3
       },
       {
@@ -5760,6 +6274,10 @@
       },
       {
         "start": 71006,
+        "length": 3
+      },
+      {
+        "start": 72037,
         "length": 3
       },
       {
@@ -5835,6 +6353,10 @@
         "length": 3
       },
       {
+        "start": 155667,
+        "length": 3
+      },
+      {
         "start": 158589,
         "length": 3
       },
@@ -5844,6 +6366,10 @@
       }
     ],
     "SANDY_ISLAND": [
+      {
+        "start": 59769,
+        "length": 3
+      },
       {
         "start": 61694,
         "length": 3
@@ -5859,8 +6385,8 @@
         "length": 3
       },
       {
-        "start": 2495,
-        "length": 3
+        "start": 2493,
+        "length": 5
       },
       {
         "start": 2923,
@@ -5876,6 +6402,10 @@
       },
       {
         "start": 10289,
+        "length": 3
+      },
+      {
+        "start": 15986,
         "length": 3
       },
       {
@@ -5919,6 +6449,10 @@
         "length": 3
       },
       {
+        "start": 110697,
+        "length": 3
+      },
+      {
         "start": 113069,
         "length": 3
       },
@@ -5936,6 +6470,14 @@
       },
       {
         "start": 118852,
+        "length": 3
+      },
+      {
+        "start": 119579,
+        "length": 3
+      },
+      {
+        "start": 120158,
         "length": 3
       },
       {
@@ -6019,6 +6561,10 @@
         "length": 3
       },
       {
+        "start": 156504,
+        "length": 3
+      },
+      {
         "start": 156521,
         "length": 3
       },
@@ -6027,12 +6573,16 @@
         "length": 3
       },
       {
+        "start": 159435,
+        "length": 3
+      },
+      {
         "start": 159449,
         "length": 3
       },
       {
         "start": 160929,
-        "length": 3
+        "length": 8
       },
       {
         "start": 172939,
@@ -6059,11 +6609,23 @@
       {
         "start": 173631,
         "length": 3
+      },
+      {
+        "start": 186067,
+        "length": 3
       }
     ],
     "TERRALITH:TROPICAL_JUNGLE": [
       {
         "start": 88964,
+        "length": 3
+      },
+      {
+        "start": 116594,
+        "length": 3
+      },
+      {
+        "start": 124361,
         "length": 3
       }
     ],
@@ -6077,6 +6639,10 @@
         "length": 3
       },
       {
+        "start": 33015,
+        "length": 3
+      },
+      {
         "start": 36042,
         "length": 4
       },
@@ -6085,8 +6651,8 @@
         "length": 3
       },
       {
-        "start": 38487,
-        "length": 3
+        "start": 38483,
+        "length": 7
       },
       {
         "start": 39213,
@@ -6153,6 +6719,10 @@
         "length": 3
       },
       {
+        "start": 78749,
+        "length": 3
+      },
+      {
         "start": 79829,
         "length": 3
       },
@@ -6189,6 +6759,10 @@
         "length": 3
       },
       {
+        "start": 93255,
+        "length": 3
+      },
+      {
         "start": 95575,
         "length": 3
       },
@@ -6218,6 +6792,10 @@
       },
       {
         "start": 104945,
+        "length": 3
+      },
+      {
+        "start": 105093,
         "length": 3
       },
       {
@@ -6343,15 +6921,43 @@
       {
         "start": 187390,
         "length": 3
+      },
+      {
+        "start": 190576,
+        "length": 3
+      }
+    ],
+    "TERRALITH:BLOOMING_PLATEAU": [
+      {
+        "start": 178308,
+        "length": 3
+      }
+    ],
+    "NOMANSLAND:CAVES": [
+      {
+        "start": 29880,
+        "length": 3
       }
     ],
     "TERRALITH:BRUSHLAND": [
+      {
+        "start": 3,
+        "length": 3
+      },
       {
         "start": 14402,
         "length": 3
       },
       {
+        "start": 21217,
+        "length": 3
+      },
+      {
         "start": 92308,
+        "length": 3
+      },
+      {
+        "start": 105653,
         "length": 3
       }
     ],
@@ -6377,6 +6983,10 @@
         "length": 3
       },
       {
+        "start": 105409,
+        "length": 3
+      },
+      {
         "start": 107864,
         "length": 3
       },
@@ -6398,6 +7008,10 @@
       },
       {
         "start": 116597,
+        "length": 3
+      },
+      {
+        "start": 117909,
         "length": 3
       },
       {
@@ -6538,6 +7152,10 @@
       },
       {
         "start": 57267,
+        "length": 3
+      },
+      {
+        "start": 87051,
         "length": 3
       },
       {
@@ -6747,6 +7365,10 @@
         "length": 3
       },
       {
+        "start": 120838,
+        "length": 3
+      },
+      {
         "start": 122748,
         "length": 9
       },
@@ -6813,6 +7435,10 @@
     ],
     "HIGHLANDS": [
       {
+        "start": 4529,
+        "length": 3
+      },
+      {
         "start": 5962,
         "length": 3
       },
@@ -6822,6 +7448,10 @@
       },
       {
         "start": 8977,
+        "length": 3
+      },
+      {
+        "start": 10050,
         "length": 3
       },
       {
@@ -6869,15 +7499,19 @@
         "length": 3
       },
       {
-        "start": 17540,
-        "length": 4
+        "start": 17521,
+        "length": 3
       },
       {
-        "start": 17549,
-        "length": 5
+        "start": 17540,
+        "length": 14
       },
       {
         "start": 17784,
+        "length": 3
+      },
+      {
+        "start": 18149,
         "length": 3
       },
       {
@@ -6905,8 +7539,8 @@
         "length": 9
       },
       {
-        "start": 22697,
-        "length": 3
+        "start": 22691,
+        "length": 9
       },
       {
         "start": 24023,
@@ -6946,6 +7580,10 @@
       },
       {
         "start": 28956,
+        "length": 5
+      },
+      {
+        "start": 29669,
         "length": 3
       },
       {
@@ -7002,6 +7640,10 @@
       },
       {
         "start": 38503,
+        "length": 3
+      },
+      {
+        "start": 38876,
         "length": 3
       },
       {
@@ -7094,7 +7736,7 @@
       },
       {
         "start": 61961,
-        "length": 3
+        "length": 4
       },
       {
         "start": 63907,
@@ -7110,7 +7752,7 @@
       },
       {
         "start": 67880,
-        "length": 4
+        "length": 7
       },
       {
         "start": 68905,
@@ -7146,6 +7788,10 @@
       },
       {
         "start": 82609,
+        "length": 3
+      },
+      {
+        "start": 84043,
         "length": 3
       },
       {
@@ -7201,8 +7847,8 @@
         "length": 3
       },
       {
-        "start": 116104,
-        "length": 3
+        "start": 116101,
+        "length": 6
       },
       {
         "start": 116111,
@@ -7258,7 +7904,7 @@
       },
       {
         "start": 147082,
-        "length": 3
+        "length": 4
       },
       {
         "start": 158625,
@@ -7295,8 +7941,8 @@
         "length": 3
       },
       {
-        "start": 67068,
-        "length": 3
+        "start": 67063,
+        "length": 8
       },
       {
         "start": 88423,
@@ -7395,6 +8041,10 @@
         "length": 3
       },
       {
+        "start": 28778,
+        "length": 3
+      },
+      {
         "start": 32472,
         "length": 3
       },
@@ -7467,7 +8117,17 @@
         "length": 3
       }
     ],
+    "BOREAL_FOREST": [
+      {
+        "start": 154895,
+        "length": 3
+      }
+    ],
     "TERRALITH:ARID_HIGHLANDS": [
+      {
+        "start": 17086,
+        "length": 3
+      },
       {
         "start": 22917,
         "length": 3
@@ -7475,15 +8135,35 @@
       {
         "start": 26994,
         "length": 3
+      },
+      {
+        "start": 44094,
+        "length": 3
       }
     ],
-    "BOREAL_FOREST": [
+    "TERRALITH:ROCKY_JUNGLE": [
       {
-        "start": 154895,
+        "start": 92487,
         "length": 3
       }
     ],
     "NOMANSLAND:BAYOU": [
+      {
+        "start": 57128,
+        "length": 3
+      },
+      {
+        "start": 68850,
+        "length": 3
+      },
+      {
+        "start": 82555,
+        "length": 3
+      },
+      {
+        "start": 100669,
+        "length": 3
+      },
       {
         "start": 100886,
         "length": 3
@@ -7531,6 +8211,10 @@
         "length": 3
       },
       {
+        "start": 41015,
+        "length": 3
+      },
+      {
         "start": 61581,
         "length": 3
       },
@@ -7547,11 +8231,23 @@
         "length": 3
       },
       {
+        "start": 71546,
+        "length": 3
+      },
+      {
+        "start": 72050,
+        "length": 3
+      },
+      {
         "start": 74685,
         "length": 3
       },
       {
         "start": 79983,
+        "length": 3
+      },
+      {
+        "start": 80014,
         "length": 3
       },
       {
@@ -7584,6 +8280,10 @@
       },
       {
         "start": 94601,
+        "length": 3
+      },
+      {
+        "start": 98118,
         "length": 3
       },
       {
@@ -7667,8 +8367,12 @@
         "length": 4
       },
       {
-        "start": 140757,
+        "start": 139372,
         "length": 3
+      },
+      {
+        "start": 140753,
+        "length": 7
       },
       {
         "start": 142114,
@@ -7680,6 +8384,10 @@
       },
       {
         "start": 143311,
+        "length": 3
+      },
+      {
+        "start": 144211,
         "length": 3
       },
       {
@@ -7795,6 +8503,10 @@
         "length": 3
       },
       {
+        "start": 184449,
+        "length": 3
+      },
+      {
         "start": 186805,
         "length": 3
       },
@@ -7869,7 +8581,15 @@
         "length": 3
       },
       {
+        "start": 16016,
+        "length": 3
+      },
+      {
         "start": 17318,
+        "length": 3
+      },
+      {
+        "start": 17351,
         "length": 3
       },
       {
@@ -7878,6 +8598,10 @@
       },
       {
         "start": 23050,
+        "length": 3
+      },
+      {
+        "start": 40160,
         "length": 3
       },
       {
@@ -7906,6 +8630,10 @@
       },
       {
         "start": 49475,
+        "length": 3
+      },
+      {
+        "start": 53112,
         "length": 3
       },
       {
@@ -7949,6 +8677,10 @@
         "length": 3
       },
       {
+        "start": 88526,
+        "length": 3
+      },
+      {
         "start": 89676,
         "length": 3
       },
@@ -7957,11 +8689,19 @@
         "length": 3
       },
       {
+        "start": 91947,
+        "length": 3
+      },
+      {
         "start": 91957,
         "length": 3
       },
       {
         "start": 93095,
+        "length": 3
+      },
+      {
+        "start": 94275,
         "length": 3
       },
       {
@@ -7978,6 +8718,10 @@
       },
       {
         "start": 107319,
+        "length": 3
+      },
+      {
+        "start": 109308,
         "length": 3
       },
       {
@@ -8002,10 +8746,14 @@
       },
       {
         "start": 121390,
-        "length": 3
+        "length": 7
       },
       {
         "start": 121922,
+        "length": 3
+      },
+      {
+        "start": 125321,
         "length": 3
       },
       {
@@ -8103,6 +8851,10 @@
     ],
     "SAVANNA_PLATEAU": [
       {
+        "start": 87,
+        "length": 3
+      },
+      {
         "start": 514,
         "length": 3
       },
@@ -8156,6 +8908,10 @@
       },
       {
         "start": 15612,
+        "length": 3
+      },
+      {
+        "start": 16811,
         "length": 3
       },
       {
@@ -8315,6 +9071,18 @@
         "length": 3
       },
       {
+        "start": 49654,
+        "length": 3
+      },
+      {
+        "start": 52435,
+        "length": 3
+      },
+      {
+        "start": 52443,
+        "length": 3
+      },
+      {
         "start": 53337,
         "length": 5
       },
@@ -8375,6 +9143,10 @@
         "length": 3
       },
       {
+        "start": 60664,
+        "length": 3
+      },
+      {
         "start": 61711,
         "length": 3
       },
@@ -8383,11 +9155,19 @@
         "length": 3
       },
       {
+        "start": 62814,
+        "length": 3
+      },
+      {
         "start": 63831,
         "length": 5
       },
       {
         "start": 64749,
+        "length": 3
+      },
+      {
+        "start": 64768,
         "length": 3
       },
       {
@@ -8411,6 +9191,10 @@
         "length": 3
       },
       {
+        "start": 68812,
+        "length": 3
+      },
+      {
         "start": 73912,
         "length": 3
       },
@@ -8424,6 +9208,10 @@
       },
       {
         "start": 76017,
+        "length": 3
+      },
+      {
+        "start": 76048,
         "length": 3
       },
       {
@@ -8448,6 +9236,10 @@
       },
       {
         "start": 79225,
+        "length": 3
+      },
+      {
+        "start": 80327,
         "length": 3
       },
       {
@@ -8587,6 +9379,10 @@
         "length": 3
       },
       {
+        "start": 4526,
+        "length": 3
+      },
+      {
         "start": 49336,
         "length": 3
       },
@@ -8596,6 +9392,10 @@
       },
       {
         "start": 57730,
+        "length": 3
+      },
+      {
+        "start": 59619,
         "length": 3
       },
       {
@@ -8611,6 +9411,10 @@
         "length": 3
       },
       {
+        "start": 75703,
+        "length": 3
+      },
+      {
         "start": 86827,
         "length": 3
       },
@@ -8623,8 +9427,8 @@
         "length": 3
       },
       {
-        "start": 178221,
-        "length": 3
+        "start": 178219,
+        "length": 5
       }
     ],
     "AUTUMNAL_FOREST": [
@@ -8706,6 +9510,10 @@
       },
       {
         "start": 54013,
+        "length": 3
+      },
+      {
+        "start": 54949,
         "length": 3
       },
       {
@@ -8823,8 +9631,18 @@
         "length": 3
       },
       {
+        "start": 78656,
+        "length": 3
+      },
+      {
         "start": 183047,
         "length": 9
+      }
+    ],
+    "TERRALITH:ASHEN_SAVANNA": [
+      {
+        "start": 45348,
+        "length": 3
       }
     ],
     "STONY_PEAKS": [
@@ -8835,6 +9653,10 @@
       {
         "start": 25958,
         "length": 7
+      },
+      {
+        "start": 27371,
+        "length": 3
       },
       {
         "start": 29540,
@@ -8858,7 +9680,7 @@
       },
       {
         "start": 32492,
-        "length": 3
+        "length": 5
       },
       {
         "start": 33265,
@@ -8870,6 +9692,10 @@
       },
       {
         "start": 34031,
+        "length": 3
+      },
+      {
+        "start": 37133,
         "length": 3
       },
       {
@@ -8889,7 +9715,15 @@
         "length": 3
       },
       {
+        "start": 43667,
+        "length": 3
+      },
+      {
         "start": 43678,
+        "length": 3
+      },
+      {
+        "start": 44540,
         "length": 3
       },
       {
@@ -8934,7 +9768,7 @@
       },
       {
         "start": 82398,
-        "length": 3
+        "length": 4
       },
       {
         "start": 85696,
@@ -8972,7 +9806,7 @@
       },
       {
         "start": 100743,
-        "length": 3
+        "length": 4
       },
       {
         "start": 111750,
@@ -9109,6 +9943,10 @@
     ],
     "TERRALITH:YELLOWSTONE": [
       {
+        "start": 128785,
+        "length": 3
+      },
+      {
         "start": 131482,
         "length": 3
       },
@@ -9117,7 +9955,15 @@
         "length": 3
       },
       {
+        "start": 171666,
+        "length": 3
+      },
+      {
         "start": 184054,
+        "length": 3
+      },
+      {
+        "start": 190097,
         "length": 3
       }
     ],
@@ -9142,6 +9988,10 @@
       },
       {
         "start": 85702,
+        "length": 3
+      },
+      {
+        "start": 89063,
         "length": 3
       },
       {
@@ -9170,6 +10020,10 @@
       },
       {
         "start": 135447,
+        "length": 3
+      },
+      {
+        "start": 136814,
         "length": 3
       },
       {
@@ -9403,6 +10257,14 @@
         "length": 3
       },
       {
+        "start": 60220,
+        "length": 3
+      },
+      {
+        "start": 63125,
+        "length": 3
+      },
+      {
         "start": 65155,
         "length": 3
       },
@@ -9439,6 +10301,10 @@
         "length": 3
       },
       {
+        "start": 103195,
+        "length": 3
+      },
+      {
         "start": 104403,
         "length": 3
       },
@@ -9452,6 +10318,10 @@
       },
       {
         "start": 106856,
+        "length": 3
+      },
+      {
+        "start": 123451,
         "length": 3
       },
       {
@@ -9531,6 +10401,10 @@
         "length": 3
       },
       {
+        "start": 159874,
+        "length": 3
+      },
+      {
         "start": 177554,
         "length": 3
       },
@@ -9555,7 +10429,15 @@
     ],
     "MUSHROOM_FIELDS": [
       {
+        "start": 150277,
+        "length": 3
+      },
+      {
         "start": 154586,
+        "length": 3
+      },
+      {
+        "start": 192795,
         "length": 3
       }
     ],
@@ -9586,6 +10468,10 @@
       },
       {
         "start": 70764,
+        "length": 3
+      },
+      {
+        "start": 71728,
         "length": 3
       },
       {
@@ -9631,6 +10517,10 @@
         "length": 3
       },
       {
+        "start": 49747,
+        "length": 3
+      },
+      {
         "start": 50605,
         "length": 3
       },
@@ -9669,9 +10559,23 @@
         "length": 3
       }
     ],
+    "SPAWN:COLD_ISLAND": [
+      {
+        "start": 160451,
+        "length": 3
+      }
+    ],
     "NOMANSLAND:PRAIRIE": [
       {
+        "start": 23151,
+        "length": 3
+      },
+      {
         "start": 93445,
+        "length": 3
+      },
+      {
+        "start": 118189,
         "length": 3
       },
       {
@@ -9691,6 +10595,10 @@
       {
         "start": 117105,
         "length": 9
+      },
+      {
+        "start": 118368,
+        "length": 3
       },
       {
         "start": 120959,
@@ -9734,6 +10642,10 @@
       },
       {
         "start": 167191,
+        "length": 3
+      },
+      {
+        "start": 170193,
         "length": 3
       }
     ],
@@ -9797,6 +10709,12 @@
         "length": 3
       }
     ],
+    "TERRALITH:VOLCANIC_CRATER": [
+      {
+        "start": 26637,
+        "length": 3
+      }
+    ],
     "BIRCH_FOREST": [
       {
         "start": 16340,
@@ -9831,6 +10749,10 @@
         "length": 3
       },
       {
+        "start": 52196,
+        "length": 3
+      },
+      {
         "start": 53039,
         "length": 3
       },
@@ -9840,6 +10762,10 @@
       },
       {
         "start": 58401,
+        "length": 3
+      },
+      {
+        "start": 58537,
         "length": 3
       },
       {
@@ -9880,6 +10806,10 @@
       },
       {
         "start": 152999,
+        "length": 3
+      },
+      {
+        "start": 168418,
         "length": 3
       },
       {
@@ -9935,6 +10865,10 @@
       {
         "start": 188085,
         "length": 3
+      },
+      {
+        "start": 190726,
+        "length": 3
       }
     ],
     "FLOWER_FOREST": [
@@ -9949,11 +10883,19 @@
     ],
     "CHERRY_GROVE": [
       {
+        "start": 45226,
+        "length": 3
+      },
+      {
         "start": 49573,
         "length": 4
       },
       {
         "start": 51346,
+        "length": 3
+      },
+      {
+        "start": 69542,
         "length": 3
       },
       {
@@ -10011,6 +10953,10 @@
         "length": 3
       },
       {
+        "start": 23081,
+        "length": 3
+      },
+      {
         "start": 26531,
         "length": 3
       },
@@ -10024,6 +10970,14 @@
       },
       {
         "start": 29397,
+        "length": 3
+      },
+      {
+        "start": 32163,
+        "length": 3
+      },
+      {
+        "start": 32837,
         "length": 3
       },
       {
@@ -10053,6 +11007,10 @@
       {
         "start": 56879,
         "length": 8
+      },
+      {
+        "start": 57815,
+        "length": 3
       },
       {
         "start": 67521,
@@ -10092,6 +11050,10 @@
       },
       {
         "start": 105662,
+        "length": 3
+      },
+      {
+        "start": 111855,
         "length": 3
       },
       {
@@ -10137,6 +11099,10 @@
     ],
     "TERRALITH:SAVANNA_BADLANDS": [
       {
+        "start": 40425,
+        "length": 3
+      },
+      {
         "start": 50693,
         "length": 3
       }
@@ -10144,6 +11110,12 @@
     "LUSH_VALLEY": [
       {
         "start": 78781,
+        "length": 3
+      }
+    ],
+    "CAVE/ANDESITE_CAVES": [
+      {
+        "start": 68487,
         "length": 3
       }
     ],
@@ -10208,6 +11180,10 @@
       },
       {
         "start": 12967,
+        "length": 3
+      },
+      {
+        "start": 13526,
         "length": 3
       },
       {
@@ -10296,6 +11272,10 @@
       },
       {
         "start": 26325,
+        "length": 3
+      },
+      {
+        "start": 27703,
         "length": 3
       },
       {
@@ -10415,6 +11395,10 @@
         "length": 3
       },
       {
+        "start": 48975,
+        "length": 3
+      },
+      {
         "start": 53458,
         "length": 9
       },
@@ -10465,11 +11449,19 @@
         "length": 3
       },
       {
+        "start": 46337,
+        "length": 3
+      },
+      {
         "start": 50727,
         "length": 3
       },
       {
         "start": 52534,
+        "length": 3
+      },
+      {
+        "start": 53445,
         "length": 3
       },
       {
@@ -10529,6 +11521,10 @@
         "length": 3
       },
       {
+        "start": 79308,
+        "length": 3
+      },
+      {
         "start": 80370,
         "length": 3
       },
@@ -10549,6 +11545,10 @@
         "length": 3
       },
       {
+        "start": 85855,
+        "length": 3
+      },
+      {
         "start": 85878,
         "length": 3
       },
@@ -10562,7 +11562,7 @@
       },
       {
         "start": 89247,
-        "length": 3
+        "length": 6
       },
       {
         "start": 93631,
@@ -10647,6 +11647,10 @@
     ],
     "STEPPE": [
       {
+        "start": 648,
+        "length": 3
+      },
+      {
         "start": 1917,
         "length": 3
       },
@@ -10660,6 +11664,10 @@
       },
       {
         "start": 4148,
+        "length": 3
+      },
+      {
+        "start": 8624,
         "length": 3
       },
       {
@@ -10692,6 +11700,10 @@
       },
       {
         "start": 49956,
+        "length": 3
+      },
+      {
+        "start": 51707,
         "length": 3
       },
       {
@@ -10744,6 +11756,10 @@
       },
       {
         "start": 105817,
+        "length": 3
+      },
+      {
+        "start": 118667,
         "length": 3
       },
       {
@@ -10873,7 +11889,15 @@
         "length": 3
       },
       {
+        "start": 15559,
+        "length": 3
+      },
+      {
         "start": 15568,
+        "length": 3
+      },
+      {
+        "start": 16774,
         "length": 3
       },
       {
@@ -10913,6 +11937,10 @@
         "length": 3
       },
       {
+        "start": 116944,
+        "length": 3
+      },
+      {
         "start": 120803,
         "length": 3
       },
@@ -10938,6 +11966,10 @@
       },
       {
         "start": 138174,
+        "length": 3
+      },
+      {
+        "start": 140946,
         "length": 3
       },
       {
@@ -10997,6 +12029,10 @@
         "length": 3
       },
       {
+        "start": 171546,
+        "length": 3
+      },
+      {
         "start": 172664,
         "length": 3
       },
@@ -11006,6 +12042,10 @@
       },
       {
         "start": 178365,
+        "length": 3
+      },
+      {
+        "start": 180384,
         "length": 3
       },
       {
@@ -11115,6 +12155,10 @@
         "length": 3
       },
       {
+        "start": 19083,
+        "length": 3
+      },
+      {
         "start": 21011,
         "length": 3
       },
@@ -11167,6 +12211,10 @@
         "length": 3
       },
       {
+        "start": 70165,
+        "length": 3
+      },
+      {
         "start": 71145,
         "length": 3
       },
@@ -11200,6 +12248,10 @@
       },
       {
         "start": 90646,
+        "length": 3
+      },
+      {
+        "start": 94159,
         "length": 3
       },
       {
@@ -11248,6 +12300,10 @@
       },
       {
         "start": 141577,
+        "length": 3
+      },
+      {
+        "start": 153053,
         "length": 3
       },
       {
@@ -11313,7 +12369,15 @@
         "length": 3
       },
       {
+        "start": 114555,
+        "length": 3
+      },
+      {
         "start": 155380,
+        "length": 3
+      },
+      {
+        "start": 158268,
         "length": 3
       },
       {
@@ -11462,7 +12526,7 @@
       },
       {
         "start": 172802,
-        "length": 3
+        "length": 4
       },
       {
         "start": 174331,
@@ -11536,6 +12600,10 @@
     "BIRCH_TAIGA": [
       {
         "start": 1232,
+        "length": 3
+      },
+      {
+        "start": 2030,
         "length": 3
       },
       {
@@ -11661,6 +12729,14 @@
     ],
     "SPARSE_JUNGLE": [
       {
+        "start": 13,
+        "length": 3
+      },
+      {
+        "start": 424,
+        "length": 3
+      },
+      {
         "start": 597,
         "length": 3
       },
@@ -11757,6 +12833,10 @@
         "length": 3
       },
       {
+        "start": 105468,
+        "length": 3
+      },
+      {
         "start": 106235,
         "length": 3
       },
@@ -11810,6 +12890,10 @@
       },
       {
         "start": 176151,
+        "length": 3
+      },
+      {
+        "start": 178350,
         "length": 3
       },
       {
@@ -11887,6 +12971,12 @@
         "length": 3
       }
     ],
+    "TERRALITH:SHIELD": [
+      {
+        "start": 142495,
+        "length": 3
+      }
+    ],
     "ICE_MARSH": [
       {
         "start": 180955,
@@ -11915,6 +13005,10 @@
         "length": 3
       },
       {
+        "start": 30429,
+        "length": 3
+      },
+      {
         "start": 31862,
         "length": 3
       },
@@ -11924,6 +13018,18 @@
       },
       {
         "start": 38912,
+        "length": 3
+      },
+      {
+        "start": 53958,
+        "length": 3
+      },
+      {
+        "start": 62935,
+        "length": 3
+      },
+      {
+        "start": 112349,
         "length": 3
       }
     ],
@@ -12087,6 +13193,10 @@
         "length": 3
       },
       {
+        "start": 188450,
+        "length": 3
+      },
+      {
         "start": 190004,
         "length": 3
       }
@@ -12118,6 +13228,10 @@
       },
       {
         "start": 56688,
+        "length": 3
+      },
+      {
+        "start": 56712,
         "length": 3
       },
       {
@@ -12201,6 +13315,10 @@
         "length": 3
       },
       {
+        "start": 95611,
+        "length": 3
+      },
+      {
         "start": 97956,
         "length": 3
       },
@@ -12214,6 +13332,10 @@
       },
       {
         "start": 112563,
+        "length": 3
+      },
+      {
+        "start": 125219,
         "length": 3
       },
       {
@@ -12245,13 +13367,27 @@
         "length": 6
       },
       {
-        "start": 187731,
+        "start": 187730,
+        "length": 4
+      }
+    ],
+    "TERRALITH:BIRCH_TAIGA": [
+      {
+        "start": 9287,
         "length": 3
       }
     ],
     "TERRALITH:LAVENDER_VALLEY": [
       {
         "start": 38428,
+        "length": 3
+      },
+      {
+        "start": 85369,
+        "length": 3
+      },
+      {
+        "start": 142889,
         "length": 3
       }
     ],
@@ -12266,6 +13402,10 @@
       },
       {
         "start": 76876,
+        "length": 3
+      },
+      {
+        "start": 77951,
         "length": 3
       },
       {
@@ -12293,6 +13433,10 @@
         "length": 3
       },
       {
+        "start": 100549,
+        "length": 3
+      },
+      {
         "start": 102939,
         "length": 3
       },
@@ -12310,7 +13454,7 @@
       },
       {
         "start": 115312,
-        "length": 3
+        "length": 4
       },
       {
         "start": 116591,
@@ -12334,6 +13478,10 @@
       },
       {
         "start": 162132,
+        "length": 3
+      },
+      {
+        "start": 167675,
         "length": 3
       }
     ],
@@ -12426,7 +13574,7 @@
       },
       {
         "start": 162658,
-        "length": 3
+        "length": 6
       },
       {
         "start": 163851,
@@ -12605,6 +13753,10 @@
         "length": 8
       },
       {
+        "start": 173667,
+        "length": 3
+      },
+      {
         "start": 173681,
         "length": 3
       },
@@ -12656,6 +13808,10 @@
       },
       {
         "start": 92993,
+        "length": 3
+      },
+      {
+        "start": 93000,
         "length": 3
       },
       {
@@ -12727,6 +13883,10 @@
         "length": 3
       },
       {
+        "start": 154044,
+        "length": 3
+      },
+      {
         "start": 155496,
         "length": 3
       },
@@ -12740,6 +13900,10 @@
       },
       {
         "start": 180620,
+        "length": 3
+      },
+      {
+        "start": 182472,
         "length": 3
       },
       {
@@ -12885,7 +14049,19 @@
         "length": 3
       },
       {
+        "start": 21721,
+        "length": 3
+      },
+      {
         "start": 29101,
+        "length": 3
+      },
+      {
+        "start": 30061,
+        "length": 3
+      },
+      {
+        "start": 30068,
         "length": 3
       },
       {
@@ -12941,6 +14117,14 @@
         "length": 3
       },
       {
+        "start": 55595,
+        "length": 3
+      },
+      {
+        "start": 57467,
+        "length": 3
+      },
+      {
         "start": 61091,
         "length": 3
       },
@@ -12962,6 +14146,10 @@
       },
       {
         "start": 78402,
+        "length": 3
+      },
+      {
+        "start": 80055,
         "length": 3
       },
       {
@@ -13113,6 +14301,10 @@
         "length": 3
       },
       {
+        "start": 130456,
+        "length": 3
+      },
+      {
         "start": 131255,
         "length": 3
       },
@@ -13125,12 +14317,16 @@
         "length": 3
       },
       {
+        "start": 133949,
+        "length": 3
+      },
+      {
         "start": 135720,
         "length": 3
       },
       {
         "start": 136873,
-        "length": 3
+        "length": 7
       },
       {
         "start": 138046,
@@ -13145,7 +14341,15 @@
         "length": 3
       },
       {
+        "start": 139499,
+        "length": 3
+      },
+      {
         "start": 141026,
+        "length": 3
+      },
+      {
+        "start": 143722,
         "length": 3
       },
       {
@@ -13181,11 +14385,19 @@
         "length": 3
       },
       {
+        "start": 153568,
+        "length": 3
+      },
+      {
         "start": 153795,
         "length": 3
       },
       {
         "start": 155268,
+        "length": 3
+      },
+      {
+        "start": 158066,
         "length": 3
       },
       {
@@ -13253,11 +14465,23 @@
         "length": 3
       },
       {
+        "start": 183864,
+        "length": 3
+      },
+      {
         "start": 185380,
         "length": 3
       },
       {
         "start": 185430,
+        "length": 3
+      },
+      {
+        "start": 185450,
+        "length": 3
+      },
+      {
+        "start": 185463,
         "length": 3
       },
       {
@@ -13298,6 +14522,10 @@
       },
       {
         "start": 89380,
+        "length": 3
+      },
+      {
+        "start": 98596,
         "length": 3
       }
     ],
@@ -13360,6 +14588,16 @@
       },
       {
         "start": 164965,
+        "length": 3
+      },
+      {
+        "start": 168992,
+        "length": 3
+      }
+    ],
+    "TERRALITH:SAVANNA_SLOPES": [
+      {
+        "start": 53322,
         "length": 3
       }
     ],
@@ -13449,6 +14687,14 @@
         "length": 3
       },
       {
+        "start": 13254,
+        "length": 3
+      },
+      {
+        "start": 13826,
+        "length": 3
+      },
+      {
         "start": 15546,
         "length": 5
       },
@@ -13489,7 +14735,15 @@
         "length": 3
       },
       {
+        "start": 23878,
+        "length": 3
+      },
+      {
         "start": 25257,
+        "length": 3
+      },
+      {
+        "start": 26625,
         "length": 3
       },
       {
@@ -13557,6 +14811,10 @@
         "length": 3
       },
       {
+        "start": 48823,
+        "length": 3
+      },
+      {
         "start": 49710,
         "length": 3
       },
@@ -13598,6 +14856,10 @@
       },
       {
         "start": 57930,
+        "length": 3
+      },
+      {
+        "start": 58470,
         "length": 3
       },
       {
@@ -13695,6 +14957,10 @@
       {
         "start": 84550,
         "length": 8
+      },
+      {
+        "start": 85621,
+        "length": 3
       },
       {
         "start": 85657,
@@ -13797,6 +15063,14 @@
         "length": 6
       },
       {
+        "start": 105508,
+        "length": 3
+      },
+      {
+        "start": 106908,
+        "length": 6
+      },
+      {
         "start": 109210,
         "length": 3
       },
@@ -13857,6 +15131,10 @@
         "length": 3
       },
       {
+        "start": 120784,
+        "length": 3
+      },
+      {
         "start": 121716,
         "length": 3
       },
@@ -13878,6 +15156,10 @@
       },
       {
         "start": 130968,
+        "length": 3
+      },
+      {
+        "start": 131109,
         "length": 3
       },
       {
@@ -13972,6 +15254,10 @@
     "TERRALITH:MOONLIGHT_VALLEY": [
       {
         "start": 63944,
+        "length": 3
+      },
+      {
+        "start": 87072,
         "length": 3
       }
     ],
@@ -14149,6 +15435,10 @@
         "length": 3
       },
       {
+        "start": 88471,
+        "length": 3
+      },
+      {
         "start": 91905,
         "length": 7
       },
@@ -14206,6 +15496,10 @@
       },
       {
         "start": 108564,
+        "length": 3
+      },
+      {
+        "start": 111024,
         "length": 3
       },
       {
@@ -14278,6 +15572,10 @@
       },
       {
         "start": 140308,
+        "length": 3
+      },
+      {
+        "start": 144364,
         "length": 3
       },
       {
@@ -14369,6 +15667,10 @@
         "length": 3
       },
       {
+        "start": 176815,
+        "length": 3
+      },
+      {
         "start": 178332,
         "length": 3
       },
@@ -14420,6 +15722,10 @@
       },
       {
         "start": 85900,
+        "length": 3
+      },
+      {
+        "start": 86997,
         "length": 3
       },
       {
@@ -14493,6 +15799,10 @@
         "length": 3
       },
       {
+        "start": 37789,
+        "length": 3
+      },
+      {
         "start": 46077,
         "length": 3
       },
@@ -14563,6 +15873,10 @@
         "length": 3
       },
       {
+        "start": 112051,
+        "length": 3
+      },
+      {
         "start": 128860,
         "length": 3
       },
@@ -14580,6 +15894,12 @@
       },
       {
         "start": 174799,
+        "length": 3
+      }
+    ],
+    "SPAWN:TIDE_POOL": [
+      {
+        "start": 153223,
         "length": 3
       }
     ]

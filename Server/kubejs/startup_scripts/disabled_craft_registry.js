@@ -140,7 +140,7 @@ const DISABLED_CRAFT_ENTRIES = [
   { pattern: /easy_mob_farm:.*/, reason: '本服禁用 生物农场 全部内容' },
 
   // —— 预制建筑扩展：自定义蓝图 ——
-  { id: 'prefab_custom_addon:custom_blueprint', reason: '可绕过建筑限制' },
+  // 当前 prefab-custom-addon 文件为 .dis 禁用状态，物品未注册，不能加入清单。
 
   // —— 预制建筑：正则禁用整个模组的全部合成 ——
   { pattern: /prefab:.*/, reason: '本服禁用 预制建筑 全部合成' },

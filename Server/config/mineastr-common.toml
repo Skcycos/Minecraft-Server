@@ -97,12 +97,12 @@ minimumRegionMinutes = 30
 minimumRegionChunkMinutes = 2
 #是否在玩家首次加入以及告知版本变化时显示简要数据告知。
 #关闭内置告知不免除服务器提供者自行履行适用规则的责任。
-enablePrivacyNotice = true
+enablePrivacyNotice = false
 #加入服务器时显示的简要告知；可使用 \n 换行，最长 2000 字符。
 #支持 {server_name} 和 {retention_days} 占位符。
-privacyNoticeText = "本服使用 MineAstr 按区块统计活动，并摘要采集玩家周边已加载方块的类型与建筑特征，由 AI 生成地区介绍；普通聊天以及玩家上下线、死亡和公开成就事件也可转发给 AstrBot。不读取容器内容、告示牌文字或完整建筑蓝图。原始活动最多保存 {retention_days} 天。使用 /mineastr privacy 查看详情，/mineastr tracking optout 可退出并删除可识别活动数据。"
+privacyNoticeText = "本服使用 MineAstr 按区块统计活动，并摘要采集玩家周边已加载方块与建筑特征；服务器还可运行 AI 玩家 Bot，并在服主显式启用后观察高信息量设备交互及非 NBT 的容器差量以学习设备用法。普通聊天和公开服务器事件也可转发给 AstrBot。不保存完整容器快照、告示牌文字或完整建筑蓝图。原始活动最多保存 {retention_days} 天。使用 /mineastr privacy 查看详情，/mineastr tracking optout 与 /mineastr learning optout 可分别退出。"
 #简要告知版本。修改后，所有玩家下次加入时会重新看到告知。
-privacyNoticeVersion = "3"
+privacyNoticeVersion = "4"
 #是否允许 AstrBot 请求执行服务器命令。默认关闭。
 #即使启用，仍必须同时通过 trustedCommandUsers 与 allowedCommandRules 检查。
 enableCommandTool = false
@@ -121,3 +121,139 @@ commandPermissionLevel = 4
 # Default: 256
 # Range: 1 ~ 1024
 commandMaxLength = 256
+#是否由 MineAstr 服务端 Mod 启动内置 Mineflayer Agent。默认关闭，配置账号后再启用。
+#Agent 使用独立 Node 子进程；缺少兼容 Node 时会安全禁用，不影响其他功能。
+enableAgent = false
+#Node 可执行文件路径；留空或 node 表示从 PATH 查找。要求 Node.js 22 或更高版本。
+agentNodeExecutable = "node"
+#找不到兼容 Node 时是否下载 MineAstr 固定版本并校验 SHA-256。默认关闭。
+#自动下载只支持已列入 MineAstr 校验表的平台，不执行未知文件。
+agentAutoDownloadNode = false
+#Bot 登录模式：offline 或 microsoft。离线模式存在身份冒用风险。
+agentAccountMode = "offline"
+#Agent 专用玩家名；建议加入白名单，不要与真人账号共用。
+#agentUseBotDisplayNameAsUsername=true 时仅作为自动名称无效时的回退值。
+agentUsername = "MineAstrBot"
+#自动使用 AstrBot 下发的机器人称呼作为 Agent 玩家名。
+#名称必须符合 Minecraft 的 3-16 位英文字母/数字/下划线规则；否则回退到 agentUsername。
+agentUseBotDisplayNameAsUsername = true
+#Agent 每次进入世界后、执行任何 AI 任务前依次发送的前置指令；默认空。
+#可用于 /login、/register 或切换子服。命令可能包含凭据并以明文保存在服务端配置中，
+#请限制文件权限；最多 5 条、每条 256 字符。日志和状态不会回显指令内容。
+agentJoinCommands = []
+#进入世界后等待多久发送第一条前置指令，以及多条指令之间的间隔（毫秒）。
+#认证插件尚未准备好时可适当调大；范围 0-5000。
+# Default: 1000
+# Range: 0 ~ 5000
+agentJoinCommandDelayMs = 1000
+#最后一条前置指令发出后等待多久，才允许 AI 任务开始执行（毫秒）。
+#用于等待 /login 等认证插件完成权限恢复；范围 0-10000。
+# Default: 1500
+# Range: 0 ~ 10000
+agentJoinCommandSettleMs = 1500
+#Mineflayer 游戏会话策略：on_demand、players_online 或 always。
+#on_demand（默认）只在收到聊天/动作任务时上线；players_online 在有真人玩家或任务时上线；
+#always 保留 0.10.0 的常驻行为。Node 控制进程仍会在后台待命。
+agentSessionPolicy = "on_demand"
+#按需会话不再被玩家或任务需要后，Mineflayer 延迟退出服务器的秒数。
+#默认 60 秒，用于避免玩家短暂重连造成 Bot 频繁登录；设为 0 表示立即退出。
+# Default: 60
+# Range: 0 ~ 3600
+agentIdleDisconnectSeconds = 60
+#Mineflayer 连接地址。服务端同机运行时保持 127.0.0.1。
+agentServerHost = "127.0.0.1"
+#Mineflayer 连接的 Minecraft 端口。
+# Default: 25565
+# Range: 1 ~ 65535
+agentServerPort = 25565
+#Mineflayer 连接时是否先发送 HAProxy PROXY protocol v1 头。默认关闭。
+#仅当服务端的 Proxy Protocol Mod/代理对 Agent 连接地址启用了该协议时打开，
+#否则 Minecraft 会把该头当成无效握手。为避免伪造来源，MineAstr 只允许同机地址使用。
+agentProxyProtocol = false
+#是否允许 Agent 在服务端安全边界内自主执行任务。默认开启。
+#AstrBot 可额外启用分级审批；服务端禁区、预算和紧急停止始终生效。
+agentFullAutonomy = true
+#是否允许 Agent 自主反击近距离的明确敌对生物。默认开启。
+#不会主动攻击玩家、宠物或中立生物；苦力怕、监守者等高危目标会触发撤退。
+agentCombatEnabled = true
+#Agent 自主防卫检测半径（格）；只会在正常近战触及距离内出手。
+# Default: 6
+# Range: 3 ~ 16
+agentCombatRadius = 6
+#Agent 可继续自主反击的最低生命值；低于或等于此值时改为撤退。
+# Default: 10
+# Range: 1 ~ 20
+agentCombatMinHealth = 10
+#Agent 近战攻击间隔（毫秒），用于避免无效高频挥击。
+# Default: 650
+# Range: 250 ~ 2000
+agentCombatAttackCooldownMs = 650
+#是否由服务端权威背包数据帮助 Agent 自动进食。默认开启。
+#该机制能识别带 FOOD 数据组件的 Mod 食物，解决兼容模式下 Mineflayer 无法解析 Mod 背包的问题。
+agentServerSideSurvivalEnabled = true
+#Agent 开始自动使用背包食物的饱食度阈值。
+# Default: 14
+# Range: 1 ~ 19
+agentAutoEatFoodThreshold = 14
+#背包没有食物且饱食度极低时，是否允许 Agent 捕猎未命名、未驯服的成年常见食用动物。
+#该行为有独立审计记录；不会攻击玩家、宠物、幼年或命名生物。
+agentEmergencyHuntingEnabled = true
+#允许紧急捕猎的饱食度阈值；只有背包无可食物时才生效。
+# Default: 6
+# Range: 1 ~ 12
+agentHuntingFoodThreshold = 6
+#是否允许 Agent 在明确的寻路任务中挖掘挡路方块。默认开启。
+#启用后仍会避开容器、液体相邻方块、坠落方块、禁区和不可破坏方块，并按当前最佳工具耗时计入成本。
+agentNavigationAllowDigging = true
+#是否允许 Agent 在明确的寻路任务中消耗背包方块搭路或垫高。默认开启。
+#只有 Mineflayer 能可靠识别背包物品时才会实际规划放置；Mod 数据降级状态下不会假定存在材料。
+agentNavigationAllowPlacing = true
+#寻路中挖掘的基础成本；12 表示 Mineflayer 原生 1x 倍率，实际成本还会按最佳可用工具和方块挖掘时间增加。
+# Default: 12
+# Range: 1 ~ 99
+agentNavigationDigCost = 12
+#寻路破坏疑似人工结构方块时增加的成本。默认 70，会强烈优先开门和绕行，但在确实无路时仍允许挖掘。
+#结构判断使用围合空间、连续墙地顶、门和方块实体等几何信号，不仅依赖方块材质。
+# Default: 70
+# Range: 1 ~ 99
+agentNavigationStructureBreakCost = 70
+#寻路中放置一个方块的成本；值越高越倾向绕路并节省材料。
+# Default: 18
+# Range: 1 ~ 99
+agentNavigationPlaceCost = 18
+#经过可通行液体的额外寻路成本；危险液体仍会直接避开。
+# Default: 8
+# Range: 1 ~ 99
+agentNavigationLiquidCost = 8
+#Agent 长距离寻路的持久化压缩区块缓存上限。每方块只保存 2-bit 可通行分类，不保存 NBT、容器或玩家数据。
+#超过上限时按最旧更新时间删除；缓存位于世界 data/mineastr/agent/navigation-cache。
+# Default: 2048
+# Range: 64 ~ 16384
+agentNavigationCacheMaxChunks = 2048
+#RoadWeaver 存在时是否读取其已规划道路折线，用于 Agent 长距离导航。
+#RoadWeaver 是可选依赖；未安装、数据异常或道路不可通时会自动回退到普通地形寻路。
+agentRoadWeaverRoutingEnabled = true
+#Agent 或服务端重启后是否自动续行 24 小时内未完成的 goto/goto_waypoint 任务。
+#恢复前会重新检查维度、坐标和禁区；其他动作任务不会自动恢复。
+agentResumeInterruptedNavigation = true
+#是否允许同机 Mineflayer Bot 使用 MineAstr 限定的 NeoForge 协议兼容层。默认开启。
+#它只向 127.0.0.1/localhost/::1 上的 Bot 提供本服务器必需频道清单，不关闭 NeoForge 的全局校验。
+#Bot 会忽略无法解析的 Mod 自定义数据，因此兼容模式下仍应通过观察结果确认任务。
+agentNeoForgeCompatibility = true
+#Agent 禁止进入或改变的区域，格式 dimension,minX,minY,minZ,maxX,maxY,maxZ。
+agentForbiddenRegions = []
+#独立、客户端可用的 NeoForge 实例目录；留空表示禁用临时 with-mod 渲染。
+agentClientInstancePath = ""
+#启动临时模组客户端前要求的最小可用内存，默认 3072MB。
+# Default: 3072
+# Range: 1024 ~ 65536
+agentRendererMinFreeMemoryMb = 3072
+#单次模组客户端观察会话最长分钟数。
+# Default: 10
+# Range: 1 ~ 120
+agentRendererMaxMinutes = 10
+#是否观察全服高信息量 Mod 设备交互以形成候选技能。默认关闭。
+#启用前应更新告知；普通行走和挖矿不会进入技能学习。
+enablePassiveSkillLearning = false
+#候选技能验证沙盒，格式 dimension,minX,minY,minZ,maxX,maxY,maxZ；留空时禁止自动发布技能。
+skillSandboxRegion = ""

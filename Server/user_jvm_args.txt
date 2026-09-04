@@ -5,5 +5,5 @@
 # To set the minimum to 2.5GB: -Xms2500M
 
 # 食韵筑家：最小 4G，最大 8G
--Xms4G
--Xmx10G
+-Xms8G
+-Xmx14G
