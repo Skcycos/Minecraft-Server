@@ -1,5 +1,9 @@
 [
   {
+    "mob": "minecraft:phantom",
+    "result": "deny"
+  },
+  {
     "when": "finalize",
     "hostile": true,
     "healthmultiply": 2.5,
