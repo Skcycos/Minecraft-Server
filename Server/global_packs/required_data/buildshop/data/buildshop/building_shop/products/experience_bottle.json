@@ -1,0 +1,17 @@
+{
+  "id": "experience_bottle",
+  "item": "minecraft:experience_bottle",
+  "categories": [
+    "misc"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 10,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "附魔之瓶",
+  "description": "提供随机经验值",
+  "enabled": true,
+  "sort": 0
+}

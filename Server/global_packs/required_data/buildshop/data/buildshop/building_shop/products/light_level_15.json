@@ -1,0 +1,22 @@
+{
+  "id": "light_level_15",
+  "item": "minecraft:light",
+  "components": {
+    "minecraft:block_state": {
+      "level": "15"
+    }
+  },
+  "categories": [
+    "lighting"
+  ],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 10,
+  "bulkSize": 1,
+  "stock": {
+    "mode": "infinite"
+  },
+  "displayName": "光源方块（照度 15）",
+  "description": "隐形光源；被方块覆盖后光源消失",
+  "enabled": true,
+  "sort": 60
+}

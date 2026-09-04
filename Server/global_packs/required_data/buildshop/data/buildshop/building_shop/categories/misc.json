@@ -1,0 +1,7 @@
+{
+  "id": "misc",
+  "name": "杂项",
+  "icon": "minecraft:experience_bottle",
+  "sort": 70,
+  "enabled": true
+}
