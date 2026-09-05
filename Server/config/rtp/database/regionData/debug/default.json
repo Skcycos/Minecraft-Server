@@ -294,8 +294,8 @@
       "cause": "vert"
     },
     {
-      "start": 13997,
-      "length": 1,
+      "start": 13995,
+      "length": 3,
       "cause": "vert"
     },
     {
@@ -934,6 +934,11 @@
       "cause": "biome"
     },
     {
+      "start": 38835,
+      "length": 1,
+      "cause": "biome"
+    },
+    {
       "start": 38993,
       "length": 1,
       "cause": "vert"
@@ -1489,6 +1494,11 @@
       "cause": "vert"
     },
     {
+      "start": 60162,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 60174,
       "length": 1,
       "cause": "vert"
@@ -1525,6 +1535,11 @@
     },
     {
       "start": 63074,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 63089,
       "length": 1,
       "cause": "vert"
     },
@@ -2134,6 +2149,11 @@
       "cause": "vert"
     },
     {
+      "start": 90615,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 90620,
       "length": 1,
       "cause": "vert"
@@ -2390,6 +2410,11 @@
     },
     {
       "start": 101130,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 101281,
       "length": 1,
       "cause": "vert"
     },
@@ -3641,6 +3666,11 @@
     {
       "start": 140681,
       "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 140785,
+      "length": 2,
       "cause": "vert"
     },
     {
@@ -4984,6 +5014,11 @@
       "cause": "vert"
     },
     {
+      "start": 175382,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 175430,
       "length": 1,
       "cause": "vert"
@@ -5049,6 +5084,11 @@
       "cause": "vert"
     },
     {
+      "start": 176904,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
       "start": 176920,
       "length": 1,
       "cause": "vert"
@@ -5065,6 +5105,11 @@
     },
     {
       "start": 177093,
+      "length": 1,
+      "cause": "vert"
+    },
+    {
+      "start": 177122,
       "length": 1,
       "cause": "vert"
     },
@@ -5465,12 +5510,7 @@
     },
     {
       "start": 186382,
-      "length": 1,
-      "cause": "vert"
-    },
-    {
-      "start": 186387,
-      "length": 1,
+      "length": 6,
       "cause": "vert"
     },
     {
@@ -6363,6 +6403,10 @@
       {
         "start": 160057,
         "length": 3
+      },
+      {
+        "start": 161536,
+        "length": 3
       }
     ],
     "SANDY_ISLAND": [
@@ -6800,6 +6844,10 @@
       },
       {
         "start": 105765,
+        "length": 3
+      },
+      {
+        "start": 106167,
         "length": 3
       },
       {
@@ -8117,12 +8165,6 @@
         "length": 3
       }
     ],
-    "BOREAL_FOREST": [
-      {
-        "start": 154895,
-        "length": 3
-      }
-    ],
     "TERRALITH:ARID_HIGHLANDS": [
       {
         "start": 17086,
@@ -8138,6 +8180,12 @@
       },
       {
         "start": 44094,
+        "length": 3
+      }
+    ],
+    "BOREAL_FOREST": [
+      {
+        "start": 154895,
         "length": 3
       }
     ],
@@ -8851,8 +8899,8 @@
     ],
     "SAVANNA_PLATEAU": [
       {
-        "start": 87,
-        "length": 3
+        "start": 83,
+        "length": 7
       },
       {
         "start": 514,
@@ -11001,6 +11049,10 @@
         "length": 6
       },
       {
+        "start": 50477,
+        "length": 3
+      },
+      {
         "start": 51364,
         "length": 3
       },
@@ -12110,6 +12162,10 @@
       },
       {
         "start": 84219,
+        "length": 3
+      },
+      {
+        "start": 98884,
         "length": 3
       },
       {
@@ -14033,6 +14089,10 @@
         "length": 3
       },
       {
+        "start": 9788,
+        "length": 3
+      },
+      {
         "start": 11975,
         "length": 3
       },
@@ -15191,6 +15251,10 @@
         "length": 3
       },
       {
+        "start": 149137,
+        "length": 3
+      },
+      {
         "start": 165486,
         "length": 3
       },
@@ -15216,6 +15280,10 @@
       },
       {
         "start": 176846,
+        "length": 3
+      },
+      {
+        "start": 177655,
         "length": 3
       },
       {
@@ -15423,6 +15491,10 @@
         "length": 3
       },
       {
+        "start": 85083,
+        "length": 3
+      },
+      {
         "start": 86220,
         "length": 3
       },
@@ -15512,6 +15584,10 @@
       },
       {
         "start": 112280,
+        "length": 3
+      },
+      {
+        "start": 113697,
         "length": 3
       },
       {
