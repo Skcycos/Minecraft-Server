@@ -53,8 +53,10 @@ Server/config/*.bak
 Server/.mixin.out/
 Server/.sable/
 Server/automodpack/.private/
+Server/automodpack/cache/
 Server/**/*.tmp
 Server/database.db-journal
+Server/bluemap/
 
 # tacz runtime export cache
 Server/tacz/

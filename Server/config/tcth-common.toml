@@ -337,3 +337,28 @@ shadowEscapeAbilitiesEnabled = true
 # Default: 3
 # Range: 1 ~ 10000
 shadowMaxExperienceRewardsPerPairPerDay = 3
+#Enable the local per-player TCTH activity monitor.
+#Disabled by default. Aggregates player-attributed cooking,
+#brewing, farming, gunner and shadow events in memory, then
+#writes batched JSONL records to logs/tcth-player-activity.jsonl.
+#No full item NBT/components are written; does not affect rewards.
+playerActivityMonitorEnabled = false
+#Registry ids to monitor, for example ["minecraft:diamond"].
+#Empty means all supported item-bearing events.
+#Use an item id without a count or NBT; invalid/blank values
+#are rejected. A non-empty list also excludes non-item shadow
+#outcomes, so the monitor stays focused on item farming.
+playerActivityMonitorItemFilter = []
+#Activity monitor batch interval in server ticks (default 100 = 5 s).
+#Events are counted in memory and written asynchronously at this interval.
+#Range: 20 ~ 1200.
+# Default: 100
+# Range: 20 ~ 1200
+playerActivityMonitorFlushIntervalTicks = 100
+#High-volume alert threshold per player and subject per batch.
+#Default 512. Matching JSONL records carry alert=true so a suspected
+#single-item farming burst can be found quickly.
+#Range: 1 ~ 1000000000.
+# Default: 512
+# Range: 1 ~ 1000000000
+playerActivityMonitorAlertThreshold = 512

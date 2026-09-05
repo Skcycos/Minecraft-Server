@@ -1,7 +1,7 @@
 {
-  "DO_NOT_CHANGE_IT": 2,
-  "selectedModpack": "",
-  "installedModpacks": {},
+  "DO_NOT_CHANGE_IT": 3,
+  "selectedModpackId": "",
+  "modpackConnections": {},
   "updateSelectedModpackOnLaunch": true,
   "selfUpdater": false,
   "syncAutoModpackVersion": true,
