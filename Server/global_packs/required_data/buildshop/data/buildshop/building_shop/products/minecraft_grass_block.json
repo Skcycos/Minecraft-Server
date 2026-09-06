@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_grass_block",
+  "item": "minecraft:grass_block",
+  "categories": ["stone"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "草方块",
+  "description": "建筑材料",
+  "enabled": true,
+  "sort": 41
+}

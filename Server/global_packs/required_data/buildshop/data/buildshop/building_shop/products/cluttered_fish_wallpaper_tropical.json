@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_fish_wallpaper_tropical",
+  "item": "cluttered:fish_wallpaper_tropical",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "热带鱼壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 30
+}

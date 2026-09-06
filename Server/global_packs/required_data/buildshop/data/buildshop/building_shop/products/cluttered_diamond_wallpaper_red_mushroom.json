@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_diamond_wallpaper_red_mushroom",
+  "item": "cluttered:diamond_wallpaper_red_mushroom",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "红色蘑菇纹样壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 59
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_flowering_poplar_log",
+  "item": "cluttered:flowering_poplar_log",
+  "categories": ["wood"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "开花杨木原木",
+  "description": "建筑木材",
+  "enabled": true,
+  "sort": 19
+}

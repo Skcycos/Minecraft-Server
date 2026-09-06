@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_flowering_crabapple_log",
+  "item": "cluttered:flowering_crabapple_log",
+  "categories": ["wood"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "开花海棠原木",
+  "description": "建筑木材",
+  "enabled": true,
+  "sort": 20
+}

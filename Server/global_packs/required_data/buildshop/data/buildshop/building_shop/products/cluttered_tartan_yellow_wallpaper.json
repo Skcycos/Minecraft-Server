@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_tartan_yellow_wallpaper",
+  "item": "cluttered:tartan_yellow_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "黄色格子花呢壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 49
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_aura_tiles",
+  "item": "cluttered:aura_tiles",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "光环瓷砖",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 15
+}

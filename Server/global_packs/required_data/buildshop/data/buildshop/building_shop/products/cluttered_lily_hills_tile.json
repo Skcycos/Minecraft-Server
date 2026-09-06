@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_lily_hills_tile",
+  "item": "cluttered:lily_hills_tile",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "百合丘瓷砖",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 25
+}

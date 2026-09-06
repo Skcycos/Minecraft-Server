@@ -1,0 +1,7 @@
+{
+  "id": "wall_decor",
+  "name": "墙面装饰",
+  "icon": "cluttered:checkered_pink_strawberry_wallpaper",
+  "sort": 55,
+  "enabled": true
+}

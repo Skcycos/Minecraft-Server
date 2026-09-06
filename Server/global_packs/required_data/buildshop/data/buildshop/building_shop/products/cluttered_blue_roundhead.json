@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_blue_roundhead",
+  "item": "cluttered:blue_roundhead",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "蓝色圆头蘑菇",
+  "description": "特殊蘑菇",
+  "enabled": true,
+  "sort": 52
+}

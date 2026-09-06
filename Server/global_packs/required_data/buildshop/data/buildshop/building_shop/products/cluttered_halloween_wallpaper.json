@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_halloween_wallpaper",
+  "item": "cluttered:halloween_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "万圣节条纹墙",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 45
+}

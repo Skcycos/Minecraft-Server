@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_floral_berry_wallpaper",
+  "item": "cluttered:floral_berry_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "花朵草莓壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 4
+}

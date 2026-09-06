@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_diamond_wallpaper_blackberry",
+  "item": "cluttered:diamond_wallpaper_blackberry",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "黑莓纹样壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 60
+}

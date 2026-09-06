@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_checkered_green_wallpaper",
+  "item": "cluttered:checkered_green_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "绿色格纹壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 2
+}

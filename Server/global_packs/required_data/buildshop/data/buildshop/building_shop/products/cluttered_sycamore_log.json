@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_sycamore_log",
+  "item": "cluttered:sycamore_log",
+  "categories": ["wood"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "悬铃木原木",
+  "description": "建筑木材",
+  "enabled": true,
+  "sort": 24
+}

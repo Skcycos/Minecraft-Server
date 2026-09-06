@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_vine",
+  "item": "minecraft:vine",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 20,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "藤蔓",
+  "description": "攀爬植物",
+  "enabled": true,
+  "sort": 54
+}

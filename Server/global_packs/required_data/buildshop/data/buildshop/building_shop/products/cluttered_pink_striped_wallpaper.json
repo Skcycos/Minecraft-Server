@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_pink_striped_wallpaper",
+  "item": "cluttered:pink_striped_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "粉红色条纹壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 52
+}

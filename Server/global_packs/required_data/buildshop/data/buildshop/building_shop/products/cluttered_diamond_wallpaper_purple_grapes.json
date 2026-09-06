@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_diamond_wallpaper_purple_grapes",
+  "item": "cluttered:diamond_wallpaper_purple_grapes",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "紫葡萄纹样壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 58
+}

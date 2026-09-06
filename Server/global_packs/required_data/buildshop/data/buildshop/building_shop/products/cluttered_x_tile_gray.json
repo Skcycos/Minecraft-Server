@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_x_tile_gray",
+  "item": "cluttered:x_tile_gray",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "灰色十字砖",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 11
+}

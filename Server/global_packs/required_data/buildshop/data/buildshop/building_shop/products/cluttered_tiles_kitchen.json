@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_tiles_kitchen",
+  "item": "cluttered:tiles_kitchen",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "厨房方砖",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 13
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_brown_wainscoting",
+  "item": "cluttered:brown_wainscoting",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "薄荷巧克力墙护墙板",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 48
+}

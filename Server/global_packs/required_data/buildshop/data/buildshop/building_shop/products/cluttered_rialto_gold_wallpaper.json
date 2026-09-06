@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_rialto_gold_wallpaper",
+  "item": "cluttered:rialto_gold_wallpaper",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "里亚尔托金线壁纸",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 51
+}

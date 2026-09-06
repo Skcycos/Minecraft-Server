@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_fly_agaric",
+  "item": "cluttered:fly_agaric",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 100,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "毒蝇伞",
+  "description": "特殊蘑菇",
+  "enabled": true,
+  "sort": 51
+}

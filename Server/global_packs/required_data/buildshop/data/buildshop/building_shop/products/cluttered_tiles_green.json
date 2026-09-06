@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_tiles_green",
+  "item": "cluttered:tiles_green",
+  "categories": ["wall_decor"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "绿色方砖",
+  "description": "墙面装饰",
+  "enabled": true,
+  "sort": 23
+}

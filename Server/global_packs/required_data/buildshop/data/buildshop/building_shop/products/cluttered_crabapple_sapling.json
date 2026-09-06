@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_crabapple_sapling",
+  "item": "cluttered:crabapple_sapling",
+  "categories": ["plants"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 150,
+  "bulkSize": 1,
+  "stock": {"mode": "infinite"},
+  "displayName": "海棠树苗",
+  "description": "特殊树苗",
+  "enabled": true,
+  "sort": 53
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_raw_chalcedony",
+  "item": "cluttered:raw_chalcedony",
+  "categories": ["stone"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "玉髓",
+  "description": "建筑石材",
+  "enabled": true,
+  "sort": 43
+}

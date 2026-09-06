@@ -1,0 +1,13 @@
+{
+  "id": "cluttered_raw_marble",
+  "item": "cluttered:raw_marble",
+  "categories": ["stone"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 6,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "大理石",
+  "description": "建筑石材",
+  "enabled": true,
+  "sort": 42
+}
