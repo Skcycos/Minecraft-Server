@@ -8,8 +8,8 @@ initialCash = 1000.0
 # Default: 0.001
 # Range: 0.0 ~ 0.1
 feeRate = 0.001
-#How often (in server ticks) the whole market updates its prices, e.g. 100 = every 5 seconds
-# Default: 100
+#How often (in server ticks) the whole market updates its prices, e.g. 200 = every 10 seconds
+# Default: 200
 # Range: 1 ~ 1200
 tickInterval = 100
 #Maximum quantity allowed per order
@@ -48,7 +48,8 @@ dividendPerShare = 0.05
 # Default: 1000.0
 # Range: 1.0 ~ 1.0E9
 indexBaseValue = 1000.0
-#Maximum absolute news price impact
+#Base absolute news price impact; earnings events may use up to 1.8x this value
+#but all impacts still respect the configured hard price boundaries
 # Default: 0.08
 # Range: 0.0 ~ 1.0
 newsImpactMax = 0.08
@@ -69,3 +70,18 @@ maxBankWithdrawCents = 1000000000
 # Default: 20
 # Range: 0 ~ 1200
 bankTransferCooldownTicks = 20
+#Hard lower price boundary as a multiple of the split-adjusted reference price.
+#The model never lets a stock fall below this value.
+# Default: 0.35
+# Range: 0.01 ~ 1.0
+priceFloorMultiplier = 0.35
+#Hard upper price boundary as a multiple of the split-adjusted reference price.
+#The model never lets a stock rise above this value.
+# Default: 3.0
+# Range: 1.0 ~ 100.0
+priceCeilingMultiplier = 3.0
+#Fraction of the logarithmic gap back to the reference price applied on each update.
+#0 disables mean reversion; 0.0015 keeps high volatility while preventing permanent drift.
+# Default: 0.0015
+# Range: 0.0 ~ 1.0
+meanReversionStrength = 0.0015

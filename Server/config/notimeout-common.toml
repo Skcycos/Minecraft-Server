@@ -1,0 +1,5 @@
+#General mod settings
+[general]
+	# Default: 240
+	# Range: 1 ~ 30000
+	timeoutInSeconds = 240

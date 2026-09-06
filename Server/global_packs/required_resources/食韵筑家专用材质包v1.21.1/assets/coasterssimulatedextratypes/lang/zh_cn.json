@@ -1,0 +1,13 @@
+{
+  "itemGroup.coasterssimulatedextratypes": "模拟过山车：轨道样式",
+  "item.coasterssimulatedextratypes.coaster_style_tool": "过山车样式工具",
+  "item.coasterssimulatedextratypes.anchor_style_tool": "轨道锚点样式工具",
+
+  "coasterssimulatedextratypes.configuration.title": "模拟过山车轨道样式配置",
+  "coasterssimulatedextratypes.configuration.section.coasterssimulatedextratypes.common.toml": "模拟过山车：轨道样式配置",
+  "coasterssimulatedextratypes.configuration.section.coasterssimulatedextratypes.common.toml.title": "模拟过山车：轨道样式配置",
+  "coasterssimulatedextratypes.configuration.items": "物品列表",
+  "coasterssimulatedextratypes.configuration.logDirtBlock": "记录泥土方块",
+  "coasterssimulatedextratypes.configuration.magicNumberIntroduction": "魔法数字文本",
+  "coasterssimulatedextratypes.configuration.magicNumber": "魔法数字"
+}
