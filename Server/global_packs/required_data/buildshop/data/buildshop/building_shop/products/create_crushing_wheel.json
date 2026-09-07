@@ -1,0 +1,13 @@
+{
+  "id": "create_crushing_wheel",
+  "item": "create:crushing_wheel",
+  "categories": ["mechanical_power"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 40,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "粉碎轮",
+  "description": "机械动力设备",
+  "enabled": true,
+  "sort": 2
+}

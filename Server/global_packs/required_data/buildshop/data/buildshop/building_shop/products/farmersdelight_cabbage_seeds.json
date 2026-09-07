@@ -4,7 +4,7 @@
   "categories": ["plants"],
   "currency": "server_menu:lc_bank_main",
   "unitPrice": 100,
-  "bulkSize": 1,
+  "bulkSize": 64,
   "stock": {"mode": "infinite"},
   "displayName": "卷心菜种子",
   "description": "农夫乐事作物种子",

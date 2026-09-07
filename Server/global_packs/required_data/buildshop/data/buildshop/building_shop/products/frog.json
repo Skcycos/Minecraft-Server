@@ -6,7 +6,7 @@
   ],
   "currency": "server_menu:lc_bank_main",
   "unitPrice": 22,
-  "bulkSize": 1,
+  "bulkSize": 64,
   "stock": {
     "mode": "infinite"
   },

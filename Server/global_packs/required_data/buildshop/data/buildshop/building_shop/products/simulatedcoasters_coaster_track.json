@@ -1,0 +1,13 @@
+{
+  "id": "simulatedcoasters_coaster_track",
+  "item": "simulatedcoasters:coaster_track",
+  "categories": ["mechanical_power"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 15,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "过山车轨道",
+  "description": "过山车轨道组件",
+  "enabled": true,
+  "sort": 0
+}

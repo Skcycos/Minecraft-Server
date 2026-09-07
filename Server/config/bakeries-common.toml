@@ -6,3 +6,5 @@ aprilFoolsDayEffect = true
 eternalBaguetteDamageUp = 2.0
 #After being turned off, the Cocoa Manin effect will not remove the invincibility frame of the creatures
 fermentationGameplay = true
+#A tutorial book is provided when players enter the world for the first time
+provideTutorialBooks = true

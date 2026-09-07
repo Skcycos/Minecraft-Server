@@ -4,7 +4,7 @@
   "categories": ["plants"],
   "currency": "server_menu:lc_bank_main",
   "unitPrice": 100,
-  "bulkSize": 1,
+  "bulkSize": 64,
   "stock": {"mode": "infinite"},
   "displayName": "深色橡木树苗",
   "description": "普通树苗",

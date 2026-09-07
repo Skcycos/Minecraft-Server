@@ -1,0 +1,67 @@
+#Enable Voxy LOD rendering system
+enabled = true
+#Enable LOD terrain rendering (can be disabled while keeping data ingestion)
+enableRendering = true
+#Enable automatic chunk data ingestion for LOD generation
+ingestEnabled = true
+#LOD section render distance (multiplied by 32 for actual chunk distance)
+#Example: 16 = 512 chunks render distance
+# Default: 16
+# Range: 2 ~ 64
+sectionRenderDistance = 16
+#Number of background threads for LOD processing
+#Default is based on CPU core count.
+# Default: 4
+# Range: 1 ~ 6
+serviceThreads = 4
+#Subdivision size for LOD rendering (28-256)
+#Lower = more detailed LODs but more GPU load
+# Default: 63.0
+# Range: 28.0 ~ 256.0
+subDivisionSize = 123.0
+#Apply environmental fog to LOD terrain
+useEnvironmentalFog = true
+#Don't share threads with Sodium's chunk builder
+dontUseSodiumBuilderThreads = false
+#LOD boundary overlap in blocks (like DH's overdraw prevention)
+#Controls how much LODs overlap with vanilla chunk edges.
+#Higher values = more overlap = smoother transitions but slight overdraw.
+#0 = exact match (may have gaps), 1 = minimal overlap, 2-4 = smoother for fast flight
+# Default: 1
+# Range: 0 ~ 4
+lodBoundaryBuffer = 1
+#Use a camera-centred circular handoff between vanilla terrain and Voxy LOD.
+#The transition uses stable spatial dithering instead of transparent terrain blending.
+enableLodBoundaryFade = true
+#Width of the vanilla-to-LOD transition band in blocks.
+#A wider band makes movement smoother without adding chunk rebuilds.
+# Default: 16
+# Range: 8 ~ 64
+lodBoundaryFadeLength = 16
+#Distance between the outer transition edge and vanilla render distance, in blocks.
+#This keeps a loaded vanilla safety ring behind the LOD handoff.
+# Default: 8
+# Range: 8 ~ 32
+lodBoundaryInset = 8
+#Enable FakeSight-style extended chunk requests
+#When enabled, Voxy reports a larger render/request distance so the server sends more chunks for LOD ingestion.
+enableExtendedRequestDistance = false
+#FakeSight request distance in chunks
+#This is the chunk distance reported to the server/integrated server.
+#Singleplayer expands gradually after movement stops.
+#Large values increase server/client load. Maximum: 127.
+# Default: 48
+# Range: 8 ~ 48
+requestDistance = 48
+#World curvature effect - simulates standing on a spherical planet
+#0 = disabled (flat world)
+#1 = real Earth curvature (6371km radius)
+#Higher values = more extreme curvature (smaller planet effect)
+#Valid range: 0 (off), or 50-5000. Values 1-49 are auto-corrected to 50.
+#Inspired by Distant Horizons' earth curvature feature
+# Default: 0
+# Range: 0 ~ 5000
+earthCurveRatio = 0
+#Show render statistics in F3 debug screen
+#Displays LOD traversal counts, visible sections, and quad counts
+renderStatistics = false

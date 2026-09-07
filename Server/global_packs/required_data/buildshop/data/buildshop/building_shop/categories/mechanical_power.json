@@ -1,0 +1,7 @@
+{
+  "id": "mechanical_power",
+  "name": "机械动力",
+  "icon": "create:crushing_wheel",
+  "sort": 35,
+  "enabled": true
+}

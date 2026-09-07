@@ -1,0 +1,78 @@
+[rendering]
+	#Number of grass blades rendered on each grass block. Higher is denser but heavier.
+	# Default: 64
+	# Range: 1 ~ 64
+	bladesPerBlock = 32
+	#Fraction of blades removed from clump rims inward. 0 keeps all; 1 removes all.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	grassSparsity = 0.10000000149011612
+	#Height of the grass blades.
+	# Default: 0.3
+	# Range: 0.1 ~ 1.3
+	bladeHeight = 0.5
+	#Scales the built-in blade height variation. 1.0 is the default look; 0 makes blades uniform.
+	# Default: 1.35
+	# Range: 0.0 ~ 5.0
+	heightVariation = 1.0
+	#Width multiplier for grass blades.
+	# Default: 0.95
+	# Range: 0.25 ~ 2.0
+	bladeWidth = 0.75
+	#How far (in blocks) grass renders around you. Cached per chunk, so distance is cheap.
+	# Default: 160
+	# Range: 16 ~ 160
+	renderRadius = 128
+	#Blade look: TAPERED (smooth gradient) or SEGMENTED (vanilla-like banded blades).
+	#Allowed Values: TAPERED, SEGMENTED
+	grassStyle = "SEGMENTED"
+	#Replace vanilla short and tall grass plants with generated custom blades.
+	grassPlantsAsBlades = true
+	#Flowers surrounded by more flowers sprout extra companions, filling out patches.
+	denseFlowers = true
+	#Shed occasional grass-blade particles into sufficiently strong wind.
+	bladeParticles = true
+	#Render grass blades when a thin snow layer covers the grass block.
+	grassThroughSnow = false
+	#Render grass blades and re-rendered plants into Iris/Oculus shader-pack shadow maps.
+	shaderPackShadows = false
+	#Brightness multiplier for the grass colour. Tune to match how your shaderpack lights it.
+	# Default: 1.0
+	# Range: 0.25 ~ 2.0
+	grassBrightness = 1.0
+	#Maximum stable per-blade hue offset in degrees.
+	# Default: 8.0
+	# Range: 0.0 ~ 30.0
+	bladeHueJitterDegrees = 8.0
+	#Brightness multiplier at the base of each grass blade.
+	# Default: 0.8
+	# Range: 0.25 ~ 2.0
+	bladeGradientBottom = 0.800000011920929
+	#Brightness multiplier at the tip of each grass blade.
+	# Default: 1.0
+	# Range: 0.25 ~ 2.0
+	bladeGradientTop = 1.0
+	#Blade gradient response curve. 1.0 is linear.
+	# Default: 1.9
+	# Range: 0.1 ~ 4.0
+	bladeGradientCurve = 1.899999976158142
+	#Wind speed API value. 100 preserves the original wind behavior.
+	# Default: 100
+	# Range: 0 ~ 500
+	windSpeed = 100
+	#Wind direction in degrees on the XZ plane. 0 = +X, 90 = +Z.
+	# Default: 0.0
+	# Range: 0.0 ~ 360.0
+	windDirectionDegrees = 0.0
+	#If true, wind smoothly wanders in direction and varies speed between 70 and 110.
+	dynamicWind = true
+	#Multiplier limiting the dynamic-wind speed range. 1.0 preserves 70-110; 0.0 is calm.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	dynamicWindSpeedLimit = 0.800000011920929
+
+[plants]
+	#Block ids Grassier Grass should leave to vanilla rendering instead of hiding and re-rendering.
+	plantBlacklist = ["minecraft:sea_pickle", "minecraft:seagrass", "minecraft:tall_seagrass"]
+	#Extra block ids Grassier Grass should hide and re-render as grass blades.
+	plantWhitelist = []
