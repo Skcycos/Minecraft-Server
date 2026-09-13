@@ -58,6 +58,9 @@ Server/**/*.tmp
 Server/database.db-journal
 Server/bluemap/
 
+# BlueMap 配置与运行期生成的地图配置（不入库）
+Server/config/bluemap/
+
 # tacz runtime export cache
 Server/tacz/
 
