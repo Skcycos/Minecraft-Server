@@ -1,7 +1,7 @@
 #Master switch for the building shop mod
 enabled = true
 #Default currency id shown in the shop header
-#Provided by VirtualCurrencyProvider (virtual_coins) or items:<itemId>
+#Built-in providers: virtual_coins or items:<itemId>; external providers may also be used
 defaultCurrency = "server_menu:lc_bank_main"
 #Initial balance granted to players on their first login (virtual_coins)
 # Default: 1000

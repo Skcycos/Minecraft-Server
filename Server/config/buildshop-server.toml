@@ -1,0 +1,4 @@
+#UI backend used by the building shop client.
+#Allowed values: aui, ldlib2.
+#If the selected client library is missing, the client falls back to the other available backend.
+uiBackend = "ldlib2"
