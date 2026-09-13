@@ -49,8 +49,8 @@
 	// ========== Rewards / Currency ==========
 // Custom reward item ID (e.g. minecraft:emerald). If empty, oTc coins are used.
 // 
-	"customCurrencyItem": "",
-	// Base oTc coin rewards per order tier [White, Green, Blue, Purple, Red]
+	"customCurrencyItem": "lightmanscurrency:coin_copper",
+	// Base reward item counts per order tier [White, Green, Blue, Purple, Red]
 	"defaultCoinArray": [1,2,3,4,6],
 	// Extra oTc coins for completing urgent orders (added on top of base)
 	"rushBonus": 3,

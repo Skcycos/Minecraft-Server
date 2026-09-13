@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_brown_concrete_powder",
+  "item": "minecraft:brown_concrete_powder",
+  "categories": ["rainbow"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 3,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "棕色混凝土粉末",
+  "description": "彩色建筑材料",
+  "enabled": true,
+  "sort": 58
+}

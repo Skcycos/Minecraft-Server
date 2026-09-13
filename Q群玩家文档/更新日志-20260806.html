@@ -371,9 +371,39 @@ h1, h2, h3, h4 { font-style: normal; }
 </header>
 
 <!-- ============================================================
-     EDITION 68-182（push 前补记本地新上）
+     EDITION 68-183（push 前补记本地新上）
      ============================================================ -->
 
+
+<article class="edition">
+  <div class="edition-head">
+    <span class="edition-ordinal">183</span>
+    <div>
+      <h2 class="edition-title">客户端模组批量更新同步至服务器</h2>
+      <p class="edition-meta">
+        <span>本地</span>
+        <span class="dot">·</span>
+        <span>09-07</span>
+        <span class="dot">·</span>
+        <span>3aecfe7</span>
+      </p>
+    </div>
+  </div>
+  <div class="edition-body">
+    <span class="status status--info">🔄 模组更新</span>
+
+    <div class="pull">根据 HMCL 更新清单同步 71 个不同模组 jar，保持服务端与 AutoModpack 客户端包的原目录、文件名前缀和中文标记不变。</div>
+
+    <ul class="item-list">
+      <li><span class="item-label">部署范围</span><span class="item-value">服务端 51 个；AutoModpack 客户端整合包 20 个；重复清单记录只部署一次</span></li>
+      <li><span class="item-label">服务端链</span><span class="item-value">更新 C2ME、ModernFix、byepregen、Lithostitched、FTB Quests/Teams、Waystones、Jade、JEI、KubeJS、Ecliptic Seasons、Spell Engine、Wizards、Lootr、SlashBlade Resharped 等</span></li>
+      <li><span class="item-label">客户端链</span><span class="item-value">更新 Sodium、SCLP、OBE、Sound Physics、Particular、Shoulder Surfing、FancyToasts、Fusion、Cinematic Respawn、AsyncParticles 等</span></li>
+      <li><span class="item-label">配置</span><span class="item-value">同步 Bakeries、Beyond Dimensions、byepregen、Easy Mob Farm、Ecliptic Seasons、FTB、JobsPlus、OPAC、Starcatcher、VSS、Waystones、WorldEdit、zfastnoise，以及 Grassier Grass/Voxy 客户端配置</span></li>
+      <li><span class="item-label">商店</span><span class="item-value">新增 <code>mechanical_power</code> 分类、Create 粉碎轮、Neapolitan 红豆/薄荷、Simulated Coasters 轨道锚点/轨道；一批商品 bulkSize 由 1 调整为 64</span></li>
+      <li><span class="item-label">回滚</span><span class="item-value">旧 jar 备份至 <code>Server/mods-backup/mod-update-20260907T140429Z/</code>，上传暂存保留于 <code>Server/update_mods/</code></span></li>
+    </ul>
+  </div>
+</article>
 
 <article class="edition">
   <div class="edition-head">

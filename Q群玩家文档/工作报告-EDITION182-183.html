@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>食韵筑家服务器 · 运维工作报告（EDITION 182–183）</title>
+<style>
+  :root {
+    --paper: #f7f4ee; --paper-2: #efeae0; --ink: #1f1c17; --ink-2: #57503f;
+    --accent: #b3552e; --accent-2: #f3e2d3; --green: #4a7c59; --green-2: #e2ecdd;
+    --blue: #3a6a8c; --blue-2: #dfe9f0; --red: #a03a3a; --red-2: #f3dede;
+    --line: #d8d0c0; --card: #fffdf8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--paper); color: var(--ink); line-height: 1.75; font-size: 15px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 28px 80px; }
+  header.cover { border-bottom: 3px double var(--line); padding-bottom: 28px; margin-bottom: 36px; }
+  .kicker { font-size: 12px; letter-spacing: 4px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: 1px; line-height: 1.3; }
+  .sub { color: var(--ink-2); margin-top: 10px; font-size: 14px; }
+  .meta-line { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .meta-line span { background: var(--paper-2); border: 1px solid var(--line); padding: 3px 12px;
+    border-radius: 999px; font-size: 12.5px; color: var(--ink-2); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 28px 0 40px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 14px; text-align: center; }
+  .stat b { display: block; font-size: 26px; color: var(--accent); font-weight: 800; }
+  .stat span { font-size: 12.5px; color: var(--ink-2); }
+  section { margin-bottom: 38px; }
+  h2.sec { font-size: 21px; font-weight: 800; padding-left: 12px; border-left: 5px solid var(--accent); margin-bottom: 6px; }
+  .sec-sub { color: var(--ink-2); font-size: 13px; margin-bottom: 16px; padding-left: 17px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; }
+  .card h3 .tag { display: inline-block; vertical-align: 2px; font-size: 11px; font-weight: 600; padding: 1px 8px;
+    border-radius: 999px; margin-left: 8px; letter-spacing: 1px; }
+  .tag.add { background: var(--green-2); color: var(--green); }
+  .tag.up { background: var(--blue-2); color: var(--blue); }
+  .tag.fix { background: var(--accent-2); color: var(--accent); }
+  .tag.warn { background: var(--red-2); color: var(--red); }
+  .card ul { padding-left: 20px; } .card li { margin: 3px 0; } .card li b { color: var(--ink); }
+  .muted { color: var(--ink-2); font-size: 13px; }
+  code { font-family: "JetBrains Mono", Menlo, Consolas, monospace; font-size: 12.5px; background: var(--paper-2);
+    padding: 1px 6px; border-radius: 5px; border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
+  th { background: var(--paper-2); font-size: 12.5px; letter-spacing: 1px; }
+  td.num { text-align: center; font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .risk { background: var(--red-2); border: 1px solid #d8b8b8; border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; }
+  .risk h3 { color: var(--red); font-size: 16px; margin-bottom: 6px; }
+  .next { background: var(--green-2); border: 1px solid #bcd2b4; border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; }
+  .next h3 { color: var(--green); font-size: 16px; margin-bottom: 6px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 3px double var(--line); color: var(--ink-2); font-size: 12.5px; text-align: center; }
+  @media print { body { background: #fff; } .wrap { padding: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="kicker">食韵筑家 III · 烟火长歌</div>
+  <h1>服务器运维工作报告</h1>
+  <div class="sub">覆盖更新日志 EDITION 182 – 183（2 个版次）· 模组批量升级、配置同步与商店结构调整</div>
+  <div class="meta-line">
+    <span>周期：2026-09-03 ～ 2026-09-07</span>
+    <span>NeoForge 1.21.1</span>
+    <span>提交：3aecfe7</span>
+    <span>面向管理组</span>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>2</b><span>覆盖版次</span></div>
+  <div class="stat"><b>71</b><span>不同模组更新</span></div>
+  <div class="stat"><b>51</b><span>服务端 jar</span></div>
+  <div class="stat"><b>20</b><span>客户端 jar</span></div>
+  <div class="stat"><b>71</b><span>旧版备份</span></div>
+  <div class="stat"><b>64</b><span>统一批量规格</span></div>
+</div>
+
+<section>
+  <h2 class="sec">一、阶段结论</h2>
+  <div class="sec-sub">本阶段完成一次以客户端 HMCL 更新清单为来源的服务端/客户端模组同步，并将同一批仓库配置与建筑商店变更一并归档。</div>
+  <div class="card">
+    <h3>发布状态 <span class="tag up">已入库</span></h3>
+    <ul>
+      <li>EDITION 182 清理 Fuji 备份归档，ApricityUI 沿用远端 1.2.4-hotfix。</li>
+      <li>EDITION 183 同步 71 个不同模组 jar：服务端 51 个、AutoModpack 客户端整合包 20 个。</li>
+      <li>原部署目录、文件名前缀和中文标记保持不变；重复清单记录未重复部署。</li>
+      <li>旧 jar 已保存至 <code>Server/mods-backup/mod-update-20260907T140429Z/</code>，上传源保留在 <code>Server/update_mods/</code>。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">二、模组版本批量升级</h2>
+  <div class="sec-sub">以下为本批次的主要功能链，完整文件以仓库中的更新目录与部署目录为准。</div>
+  <div class="card">
+    <h3>服务端与通用前置 <span class="tag up">51 个</span></h3>
+    <ul>
+      <li><b>性能与区块：</b>C2ME、ModernFix、byepregen、Lithostitched、CoroUtil、zfastnoise。</li>
+      <li><b>任务与经济：</b>FTB Quests、FTB Teams、JobsPlus、Waystones、OPAC、Starcatcher。</li>
+      <li><b>玩法与内容：</b>Jade/Jade Addons、JEI、KubeJS/KubeLoader、Ecliptic Seasons、Farmers Delight、Spell Engine、Wizards、FramedBlocks、Lootr。</li>
+      <li><b>战斗与交互：</b>SlashBlade Resharped、Visceral Combat、Balm、Blueprint、ExtraLib、ldlib2 等前置与内容链。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>客户端体验与渲染 <span class="tag add">20 个</span></h3>
+    <ul>
+      <li>Sodium、SCLP、OBE、Sound Physics、Particular、AsyncParticles、CreativeCore、Fusion。</li>
+      <li>New Visual Keybinding、Shoulder Surfing、FancyToasts、Cinematic Respawn、JECharacters、GUI Tween、Wakes、Punchy 等体验模组完成更新。</li>
+      <li>同版 <code>takeaseat</code> jar 按上传源刷新，未改变原有版本标识和部署位置。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">三、配置与建筑商店</h2>
+  <div class="card">
+    <h3>运行配置同步 <span class="tag fix">已同步</span></h3>
+    <ul>
+      <li>同步 Bakeries、Beyond Dimensions、byepregen、Easy Mob Farm、Ecliptic Seasons、FTB、JobsPlus、OPAC、Starcatcher、VSS、Waystones、WorldEdit、zfastnoise 等配置。</li>
+      <li>补充 Grassier Grass 与 Voxy 客户端配置，随客户端整合包一并纳入仓库。</li>
+      <li>Easy Mob Farm 增补末地与下界荒地的农场掉落配置；其余配置以当前仓库文件为准。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>建筑商店调整 <span class="tag add">数据包</span></h3>
+    <ul>
+      <li>新增 <code>mechanical_power</code> 分类。</li>
+      <li>新增 Create 粉碎轮、Neapolitan 红豆/薄荷、Simulated Coasters 轨道锚点/轨道商品。</li>
+      <li>动物、植物等一批商品的 <code>bulkSize</code> 由 1 统一调整为 64，降低重复购买操作。</li>
+      <li>建筑商店数据包调整可使用游戏内 <code>/reload</code> 热重载。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">四、发布与回滚保障</h2>
+  <table>
+    <thead><tr><th>项目</th><th>结果</th><th>位置</th></tr></thead>
+    <tbody>
+      <tr><td>更新源</td><td class="num">71 个</td><td><code>Server/update_mods/</code></td></tr>
+      <tr><td>服务端部署</td><td class="num">51 个</td><td><code>Server/mods/</code></td></tr>
+      <tr><td>客户端部署</td><td class="num">20 个</td><td><code>Server/automodpack/host-modpack/main/mods/</code></td></tr>
+      <tr><td>旧版回滚包</td><td class="num">71 个</td><td><code>Server/mods-backup/mod-update-20260907T140429Z/</code></td></tr>
+    </tbody>
+  </table>
+  <div class="card">
+    <ul>
+      <li>部署前后均按 modid 对照更新清单，确认目录与文件名前缀保留。</li>
+      <li>更新 jar 已完成 ZIP 可读性校验；模组部署提交与远端 <code>main</code> 已同步至 <code>3aecfe7</code>。</li>
+      <li>模组 jar 需要重启服务器才能加载；重启后应重点观察启动日志、区块加载和客户端连接兼容性。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">五、风险与下一步</h2>
+  <div class="risk">
+    <h3>① 批量升级后的兼容性观察</h3>
+    <p class="muted">C2ME、Lithostitched、ModernFix 及多项玩法前置同时升级，需以重启后的完整启动和玩家进服测试作为最终验收。</p>
+  </div>
+  <div class="risk">
+    <h3>② 旧版备份暂不清理</h3>
+    <p class="muted">本批次保留了 71 个旧 jar，待确认新版本稳定后再按需要归档；回滚时应保持原目录和前缀对应关系。</p>
+  </div>
+  <div class="next">
+    <h3>建议执行顺序</h3>
+    <ul>
+      <li>安排服务器重启，确认模组加载无缺失、无重复和无崩溃。</li>
+      <li>完成客户端进服、任务、传送、商店与建筑商品的快速回归测试。</li>
+      <li>观察一段时间后，再决定是否压缩或清理本批次旧版备份。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  食韵筑家服务器管理组 · 报告生成于 2026-09-07 · 数据来源：更新日志 EDITION 182–183、HMCL 更新清单与提交 3aecfe7
+</footer>
+
+</div>
+</body>
+</html>

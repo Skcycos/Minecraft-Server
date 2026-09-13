@@ -29,7 +29,7 @@
 | `parse_food.py` | 从字节码提取食物属性(饥饿/饱和/效果) | `_work/food_props.json` |
 | `gen_unite_diff.py` | 对比 UNITE 覆盖 vs 原始配方 | `农夫乐事配方表/farmersdelight_unite_diff.csv` |
 | `gen_unified_csv.py` | 合并两模组配方 + 应用 UNITE + 附食物属性 | `统一配方表/统一配方总表.csv` |
-| `sync_bounty_economy.py` | 应用悬赏经济锚点、职业隔离与金币上限，同步 Tooltip 注册表并校验 | `Server/config/bountiful/`、`菜品悬赏定价表.csv`、`bounty_food_registry.js` |
+| `sync_bounty_economy.py` | 应用悬赏经济锚点、职业隔离与金币上限，同步 Tooltip 注册表、OrderToCook 菜单并校验 | `Server/config/bountiful/`、`Server/config/ordertocook/custom_menu_items.json5`、`菜品悬赏定价表.csv`、`bounty_food_registry.js` |
 
 ## 说明
 
@@ -39,3 +39,4 @@
 - 食物属性提取依赖 `javap`(JDK 自带);效果中文名映射与物品中文映射在脚本内维护,新版本物品缺失时脚本会回退显示原始 ID,便于发现补录。
 - 数据准确性说明见 `../README.md` 与 `农夫乐事配方表/00-UNITE统一分析.md`。
 - 悬赏经济改价后运行 `python3 sync_bounty_economy.py`；它不会替代服务器完整重启和 `/bo sample` 游戏内抽样。
+- OrderToCook 菜单也可单独同步：`python3 sync_bounty_economy.py --ordertocook-menu`。它使用《食物三档分类表.csv》的悬赏 `unitWorth` 作为主价源，将单品价换算成有效 `hunger`，并按订单数量累加；当前表未收录的饮品使用现有悬赏池价兜底。

@@ -7,6 +7,7 @@ KubeJS Tooltip 注册表。配方来源仍以「食物配方导出 CSV」为准�
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -18,6 +19,14 @@ POOL_DIR = ROOT / "Server/config/bountiful/bounty_pools"
 DECREE_DIR = ROOT / "Server/config/bountiful/bounty_decrees"
 TABLE_DIR = ROOT / "配方与经济管理/统一配方表"
 REGISTRY_PATH = ROOT / "Server/kubejs/startup_scripts/bounty_food_registry.js"
+ORDERTOCOOK_MENU_PATH = ROOT / "Server/config/ordertocook/custom_menu_items.json5"
+
+# OrderToCook 只接受一个整数 hunger，并用它参与订单总价：
+# ceil(订单内所有物品的 hunger×数量 × 等级加成)。最高等级加成为 0.75。
+# 因此把悬赏单品价换算成有效 hunger，保证多道菜直接按数量累加时，
+# 最高等级的食物奖励约为原单品价，并留出约 10% 的订单经济余量。
+ORDERTOCOOK_MAX_HUNGER_RATE = 0.75
+ORDERTOCOOK_PRICE_BUFFER = 1.10
 
 
 # 多产出配方按「整份成本 ÷ 产出数量」计价；稀有材料使用实际成本锚点。
@@ -255,6 +264,99 @@ def load_food_entries() -> list[dict]:
     return result
 
 
+def read_table_rows(filename: str) -> list[dict[str, str]]:
+    with (TABLE_DIR / filename).open(newline="", encoding="utf-8-sig") as handle:
+        return list(csv.DictReader(handle))
+
+
+def positive_number(value: str | None) -> float | None:
+    if value is None or not value.strip():
+        return None
+    try:
+        number = float(value)
+    except ValueError:
+        return None
+    return number if number > 0 else None
+
+
+def load_ordertocook_entries() -> list[dict]:
+    """将悬赏池的单品价换算为 OrderToCook 的有效 hunger。
+
+    食物三档分类表的悬赏 unitWorth 是当前悬赏池的主数据；菜品悬赏定价表
+    用于补充历史单品记录；酒饮等尚未进入表格的条目最后使用悬赏池现价。
+    CSV 中的饥饿值作为最低 hunger，避免配置后反而比原版食物更低。
+    """
+    tier_pools = (
+        ("food_common_objs", "T1"),
+        ("food_t2_objs", "T2"),
+        ("food_t3_objs", "T3"),
+        ("brewer_t2_objs", "T2"),
+        ("brewer_t3_objs", "T3"),
+    )
+    food_rows = {row["产物ID"]: row for row in read_table_rows("食物三档分类表.csv")}
+    price_rows = {row["产物ID"]: row for row in read_table_rows("菜品悬赏定价表.csv")}
+
+    entries = []
+    seen = set()
+    for pool_name, tier in tier_pools:
+        data = read_json(POOL_DIR / f"{pool_name}.json")
+        for pool_entry in data["content"].values():
+            if pool_entry.get("type") != "item":
+                continue
+            item_id = pool_entry["content"]
+            if item_id in REMOVE_FROM_BOUNTIES or item_id in seen:
+                continue
+
+            food_row = food_rows.get(item_id, {})
+            price_row = price_rows.get(item_id, {})
+            unit_worth = (
+                positive_number(food_row.get("悬赏unitWorth"))
+                or positive_number(price_row.get("建议unitWorth_铜币"))
+                or float(pool_entry["unitWorth"])
+            )
+            csv_hunger = positive_number(food_row.get("饥饿值")) or 0
+            price_hunger = math.ceil(
+                unit_worth * ORDERTOCOOK_PRICE_BUFFER / ORDERTOCOOK_MAX_HUNGER_RATE
+            )
+            entries.append(
+                {
+                    "item": item_id,
+                    "hunger": max(1, math.ceil(csv_hunger), price_hunger),
+                    "tier": tier,
+                    "unit_worth": math.ceil(unit_worth),
+                }
+            )
+            seen.add(item_id)
+    return entries
+
+
+def write_ordertocook_menu() -> None:
+    entries = load_ordertocook_entries()
+    ORDERTOCOOK_MENU_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ORDERTOCOOK_MENU_PATH.write_text(
+        json.dumps({"items": [{"item": entry["item"], "hunger": entry["hunger"]} for entry in entries]},
+                   ensure_ascii=False, indent=2)
+        + "\n",
+        encoding="utf-8",
+    )
+
+
+def validate_ordertocook_menu() -> None:
+    entries = load_ordertocook_entries()
+    menu = read_json(ORDERTOCOOK_MENU_PATH)
+    configured = menu.get("items")
+    if not isinstance(configured, list):
+        raise RuntimeError("OrderToCook custom_menu_items.items 必须为数组")
+    expected = {entry["item"]: entry["hunger"] for entry in entries}
+    actual = {entry.get("item"): entry.get("hunger") for entry in configured}
+    if set(actual) != set(expected):
+        raise RuntimeError("OrderToCook 菜单与食物/饮品悬赏池不一致")
+    if actual != expected:
+        raise RuntimeError("OrderToCook 菜单存在过期或错误的 hunger")
+    if any(not isinstance(value, int) or value <= 0 for value in actual.values()):
+        raise RuntimeError("OrderToCook custom hunger 必须为正整数")
+
+
 def write_registry() -> None:
     entries = load_food_entries()
     lines = [
@@ -310,12 +412,27 @@ def validate() -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--ordertocook-menu",
+        action="store_true",
+        help="只按当前食物/饮品悬赏池生成 OrderToCook 菜单",
+    )
+    args = parser.parse_args()
+    if args.ordertocook_menu:
+        write_ordertocook_menu()
+        validate_ordertocook_menu()
+        print("OrderToCook 菜单同步完成：", len(load_ordertocook_entries()), "项")
+        return
+
     update_objective_pools()
     update_rewards_and_decrees()
     update_reference_table()
     update_price_tables()
+    write_ordertocook_menu()
     write_registry()
     validate()
+    validate_ordertocook_menu()
     counts = {
         name: len(read_json(POOL_DIR / f"{name}.json")["content"])
         for name in ("food_common_objs", "food_t2_objs", "food_t3_objs")

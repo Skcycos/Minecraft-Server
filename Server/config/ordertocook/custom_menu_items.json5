@@ -1,3 +1,1524 @@
 {
-	"items": []
+  "items": [
+    {
+      "item": "kaleidoscope_cookery:fried_caterpillar",
+      "hunger": 12
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_meatball",
+      "hunger": 21
+    },
+    {
+      "item": "farmersdelight:cooked_rice",
+      "hunger": 11
+    },
+    {
+      "item": "farmersdelight:beef_patty",
+      "hunger": 20
+    },
+    {
+      "item": "farmersdelight:cooked_bacon",
+      "hunger": 14
+    },
+    {
+      "item": "farmersdelight:cooked_salmon_slice",
+      "hunger": 8
+    },
+    {
+      "item": "farmersdelight:cooked_cod_slice",
+      "hunger": 8
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_rice",
+      "hunger": 9
+    },
+    {
+      "item": "farmersdelight:cake_slice",
+      "hunger": 12
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_cow_offal",
+      "hunger": 11
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_cut_small_meats",
+      "hunger": 8
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_pork_belly",
+      "hunger": 15
+    },
+    {
+      "item": "kaleidoscope_cookery:fried_egg",
+      "hunger": 9
+    },
+    {
+      "item": "kaleidoscope_cookery:cooked_lamb_chops",
+      "hunger": 15
+    },
+    {
+      "item": "farmersdelight:cooked_chicken_cuts",
+      "hunger": 8
+    },
+    {
+      "item": "farmersdelight:pumpkin_slice",
+      "hunger": 8
+    },
+    {
+      "item": "minecraft:baked_potato",
+      "hunger": 8
+    },
+    {
+      "item": "minecraft:cooked_beef",
+      "hunger": 17
+    },
+    {
+      "item": "minecraft:cooked_chicken",
+      "hunger": 12
+    },
+    {
+      "item": "minecraft:cooked_cod",
+      "hunger": 12
+    },
+    {
+      "item": "minecraft:cooked_mutton",
+      "hunger": 25
+    },
+    {
+      "item": "minecraft:cooked_porkchop",
+      "hunger": 25
+    },
+    {
+      "item": "minecraft:cooked_rabbit",
+      "hunger": 21
+    },
+    {
+      "item": "minecraft:cooked_salmon",
+      "hunger": 14
+    },
+    {
+      "item": "minecraft:dried_kelp",
+      "hunger": 5
+    },
+    {
+      "item": "farmersdelight:smoked_ham",
+      "hunger": 43
+    },
+    {
+      "item": "kaleidoscope_cookery:flower_tea",
+      "hunger": 18
+    },
+    {
+      "item": "kaleidoscope_cookery:barley_tea",
+      "hunger": 15
+    },
+    {
+      "item": "kaleidoscope_cookery:bamboo_tube_rice",
+      "hunger": 27
+    },
+    {
+      "item": "kaleidoscope_cookery:cold_cut_ham_slices",
+      "hunger": 133
+    },
+    {
+      "item": "farmersdelight:roast_chicken_block",
+      "hunger": 88
+    },
+    {
+      "item": "farmersdelight:chocolate_pie_slice",
+      "hunger": 15
+    },
+    {
+      "item": "farmersdelight:sweet_berry_cheesecake_slice",
+      "hunger": 15
+    },
+    {
+      "item": "farmersdelight:apple_pie_slice",
+      "hunger": 14
+    },
+    {
+      "item": "farmersdelight:pumpkin_pie_slice",
+      "hunger": 14
+    },
+    {
+      "item": "farmersdelight:egg_sandwich",
+      "hunger": 49
+    },
+    {
+      "item": "minecraft:rabbit_stew",
+      "hunger": 43
+    },
+    {
+      "item": "kaleidoscope_cookery:sweet_and_sour_ender_pearls",
+      "hunger": 90
+    },
+    {
+      "item": "kaleidoscope_cookery:lamb_and_radish_soup",
+      "hunger": 39
+    },
+    {
+      "item": "farmersdelight:bone_broth",
+      "hunger": 34
+    },
+    {
+      "item": "kaleidoscope_cookery:beef_meatball_soup",
+      "hunger": 34
+    },
+    {
+      "item": "kaleidoscope_cookery:wild_mushroom_rabbit_soup",
+      "hunger": 34
+    },
+    {
+      "item": "farmersdelight:salmon_roll",
+      "hunger": 33
+    },
+    {
+      "item": "farmersdelight:cabbage_rolls",
+      "hunger": 31
+    },
+    {
+      "item": "farmersdelight:cod_roll",
+      "hunger": 30
+    },
+    {
+      "item": "kaleidoscope_cookery:braised_beef_with_potatoes",
+      "hunger": 28
+    },
+    {
+      "item": "kaleidoscope_cookery:pufferfish_soup",
+      "hunger": 28
+    },
+    {
+      "item": "kaleidoscope_cookery:shawarma_spit",
+      "hunger": 28
+    },
+    {
+      "item": "kaleidoscope_cookery:borscht",
+      "hunger": 24
+    },
+    {
+      "item": "kaleidoscope_cookery:chicken_and_mushroom_stew",
+      "hunger": 24
+    },
+    {
+      "item": "kaleidoscope_cookery:dough_drop_soup",
+      "hunger": 22
+    },
+    {
+      "item": "kaleidoscope_cookery:seafood_miso_soup",
+      "hunger": 22
+    },
+    {
+      "item": "farmersdelight:kelp_roll_slice",
+      "hunger": 8
+    },
+    {
+      "item": "kaleidoscope_cookery:egg_fried_rice",
+      "hunger": 18
+    },
+    {
+      "item": "kaleidoscope_cookery:dumpling",
+      "hunger": 17
+    },
+    {
+      "item": "kaleidoscope_cookery:meat_pie",
+      "hunger": 17
+    },
+    {
+      "item": "kaleidoscope_cookery:fondant_spider_eye",
+      "hunger": 15
+    },
+    {
+      "item": "kaleidoscope_cookery:sashimi",
+      "hunger": 14
+    },
+    {
+      "item": "kaleidoscope_cookery:slime_ball_meal",
+      "hunger": 12
+    },
+    {
+      "item": "kaleidoscope_cookery:pork_bone_soup",
+      "hunger": 6
+    },
+    {
+      "item": "kaleidoscope_cookery:sticky_rice_cake",
+      "hunger": 14
+    },
+    {
+      "item": "kaleidoscope_cookery:qingtuan",
+      "hunger": 15
+    },
+    {
+      "item": "kaleidoscope_cookery:mantou",
+      "hunger": 15
+    },
+    {
+      "item": "kaleidoscope_cookery:sticky_candy",
+      "hunger": 21
+    },
+    {
+      "item": "kaleidoscope_cookery:apple_platter",
+      "hunger": 42
+    },
+    {
+      "item": "kaleidoscope_cookery:berry_platter",
+      "hunger": 97
+    },
+    {
+      "item": "kaleidoscope_cookery:watermelon_platter",
+      "hunger": 18
+    },
+    {
+      "item": "kaleidoscope_cookery:tomato_platter",
+      "hunger": 50
+    },
+    {
+      "item": "kaleidoscope_cookery:shengjian_mantou",
+      "hunger": 37
+    },
+    {
+      "item": "bakeries:bake_sliced_toast",
+      "hunger": 22
+    },
+    {
+      "item": "bakeries:cooked_taro",
+      "hunger": 22
+    },
+    {
+      "item": "brewinandchewin:quiche_slice",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:bubblegunk",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:cooked_sniffer_shank",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:cooked_snifferwurst",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:fried_ghast_calamari",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:slicorice",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:slime_bar",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:smoked_spider_meat",
+      "hunger": 22
+    },
+    {
+      "item": "dungeonsdelight:soft_serve_sniffer_egg",
+      "hunger": 22
+    },
+    {
+      "item": "minecraft:bread",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:boiled_egg",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:burnt_roll",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:cooked_loin",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:dried_ghast_with_milk",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:fried_hoglin_chop",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:hot_wings_bucket",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:hotdog",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:red_loin_on_a_stick",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:roasted_sausage",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:spicy_cotton",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:tear_popsicle",
+      "hunger": 22
+    },
+    {
+      "item": "mynethersdelight:toasts",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:adzuki_bun",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:chocolate_bar",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:chocolate_spider_eye",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:chocolate_strawberries",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:cooked_mint_chops",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:dried_banana",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:dried_vanilla_pods",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:mint_candies",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:mint_chocolate",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:mint_chops",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:roasted_adzuki_beans",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:strawberry_bean_bonbons",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:vanilla_chocolate_fingers",
+      "hunger": 22
+    },
+    {
+      "item": "neapolitan:vanilla_fudge",
+      "hunger": 22
+    },
+    {
+      "item": "farmersdelight:fruit_salad",
+      "hunger": 103
+    },
+    {
+      "item": "farmersdelight:bacon_and_eggs",
+      "hunger": 118
+    },
+    {
+      "item": "farmersdelight:hamburger",
+      "hunger": 100
+    },
+    {
+      "item": "farmersdelight:mutton_wrap",
+      "hunger": 96
+    },
+    {
+      "item": "farmersdelight:pasta_with_mutton_chop",
+      "hunger": 93
+    },
+    {
+      "item": "kaleidoscope_cookery:cold_roasted_meat",
+      "hunger": 93
+    },
+    {
+      "item": "farmersdelight:steak_and_potatoes",
+      "hunger": 90
+    },
+    {
+      "item": "farmersdelight:bacon_sandwich",
+      "hunger": 84
+    },
+    {
+      "item": "farmersdelight:onion_soup",
+      "hunger": 84
+    },
+    {
+      "item": "farmersdelight:ratatouille",
+      "hunger": 77
+    },
+    {
+      "item": "kaleidoscope_cookery:fish_flavored_shredded_pork",
+      "hunger": 72
+    },
+    {
+      "item": "kaleidoscope_cookery:hui_noodle",
+      "hunger": 72
+    },
+    {
+      "item": "farmersdelight:chicken_sandwich",
+      "hunger": 71
+    },
+    {
+      "item": "farmersdelight:fish_stew",
+      "hunger": 68
+    },
+    {
+      "item": "farmersdelight:dumplings",
+      "hunger": 67
+    },
+    {
+      "item": "farmersdelight:chicken_soup",
+      "hunger": 65
+    },
+    {
+      "item": "farmersdelight:glow_berry_custard",
+      "hunger": 64
+    },
+    {
+      "item": "farmersdelight:mixed_salad",
+      "hunger": 64
+    },
+    {
+      "item": "kaleidoscope_cookery:beef_noodle",
+      "hunger": 59
+    },
+    {
+      "item": "kaleidoscope_cookery:stir_fried_pork_with_peppers",
+      "hunger": 59
+    },
+    {
+      "item": "kaleidoscope_cookery:udon_noodle",
+      "hunger": 59
+    },
+    {
+      "item": "farmersdelight:fried_rice",
+      "hunger": 56
+    },
+    {
+      "item": "farmersdelight:stuffed_potato",
+      "hunger": 56
+    },
+    {
+      "item": "farmersdelight:mushroom_rice",
+      "hunger": 55
+    },
+    {
+      "item": "farmersdelight:vegetable_soup",
+      "hunger": 55
+    },
+    {
+      "item": "kaleidoscope_cookery:spicy_rabbit_head",
+      "hunger": 55
+    },
+    {
+      "item": "farmersdelight:apple_cider",
+      "hunger": 53
+    },
+    {
+      "item": "farmersdelight:barbecue_stick",
+      "hunger": 52
+    },
+    {
+      "item": "farmersdelight:beef_stew",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_cookery:braised_pork_ribs",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_cookery:hot_dry_noodles",
+      "hunger": 50
+    },
+    {
+      "item": "kaleidoscope_cookery:sweet_and_sour_pork",
+      "hunger": 50
+    },
+    {
+      "item": "kaleidoscope_cookery:stuffed_tiger_skin_pepper",
+      "hunger": 49
+    },
+    {
+      "item": "kaleidoscope_cookery:numbing_spicy_chicken",
+      "hunger": 47
+    },
+    {
+      "item": "kaleidoscope_cookery:braised_beef",
+      "hunger": 46
+    },
+    {
+      "item": "kaleidoscope_cookery:braised_beef_rice_bowl",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:fish_flavored_shredded_pork_rice_bowl",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:oil_splashed_fish",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:stir_fried_pork_with_peppers_rice_bowl",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:sweet_and_sour_pork_rice_bowl",
+      "hunger": 40
+    },
+    {
+      "item": "farmersdelight:kelp_roll",
+      "hunger": 36
+    },
+    {
+      "item": "kaleidoscope_cookery:four_joy_meatball_soup",
+      "hunger": 34
+    },
+    {
+      "item": "kaleidoscope_cookery:candied_potato",
+      "hunger": 24
+    },
+    {
+      "item": "kaleidoscope_cookery:laba_congee",
+      "hunger": 21
+    },
+    {
+      "item": "kaleidoscope_cookery:brown_mushroom_pot_soup",
+      "hunger": 18
+    },
+    {
+      "item": "kaleidoscope_cookery:red_mushroom_pot_soup",
+      "hunger": 18
+    },
+    {
+      "item": "kaleidoscope_cookery:stargazy_pie",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_cookery:scramble_egg_with_tomatoes_rice_bowl",
+      "hunger": 47
+    },
+    {
+      "item": "kaleidoscope_cookery:scramble_egg_with_tomatoes",
+      "hunger": 33
+    },
+    {
+      "item": "kaleidoscope_cookery:zongzi",
+      "hunger": 22
+    },
+    {
+      "item": "kaleidoscope_cookery:zongzi_plate",
+      "hunger": 97
+    },
+    {
+      "item": "kaleidoscope_cookery:sticky_rice_cake_plate",
+      "hunger": 74
+    },
+    {
+      "item": "kaleidoscope_cookery:qingtuan_plate",
+      "hunger": 67
+    },
+    {
+      "item": "kaleidoscope_cookery:sticky_candy_plate",
+      "hunger": 90
+    },
+    {
+      "item": "kaleidoscope_cookery:baozi",
+      "hunger": 37
+    },
+    {
+      "item": "kaleidoscope_cookery:baozi_plate",
+      "hunger": 197
+    },
+    {
+      "item": "kaleidoscope_cookery:shengjian_mantou_plate",
+      "hunger": 197
+    },
+    {
+      "item": "kaleidoscope_cookery:samsa",
+      "hunger": 37
+    },
+    {
+      "item": "bakeries:bagel",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:bagel_filled_sauce",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:baguette",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:baguette_with_filling",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:berry_bagel",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:brown_sugar_roll",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:cheese_cream_bread",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:ciabatta",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:country_bread_slice",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:croissant",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:dirty_choco_croissant",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:egg_tart",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:flat_croissant",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:focaccia",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:honey_butter_spread_country_bread",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:honey_butter_spread_toast",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:matcha_parfait",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:meat_floss_bread_roll",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:pineapple_bun",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:rice_bread",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:round_bread",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:salmon_sandwich",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:salt_croissant",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:sliced_cheese_cocoa_toast",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:sliced_toast",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:taro_salt_yolk_bread",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:tomato_cheese_croissant_sandwich",
+      "hunger": 52
+    },
+    {
+      "item": "bakeries:whole_wheat_bagel",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:apple_jelly",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:cheesy_pasta",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:creamy_onion_soup",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:glow_berry_marmalade",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:ham_and_cheese_sandwich",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:horror_lasagna",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:pizza_slice",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:scarlet_pierogi",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:sweet_berry_jam",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:vegetable_omelet",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:amethyst_rock_candy",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:au_rotten_potatoes",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:bloated_baked_potato",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:bloody_mary",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:brains_in_a_brick",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:breeze_cream_cone",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:chicken_jockey_sandwich",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:chloropasta",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:cob_n_candy",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:croak_monster",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:devilish_eggs",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:echo_rock_candy",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:gelled_salad",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:ghast_roll",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:ghastly_spirits",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:ghoulash",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:gyudon",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:haggis",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:jelly_beans",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:malicious_sandwich",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:marshbellow",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:monster_burger",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:monster_cake_slice",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:monster_muffin",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:necronog",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:poi",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:poisonous_poutine",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:rot_roast",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:rotpop",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:rubaboo",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:salt_soaked_stew",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:sculk_apple",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:shiokara",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:silverfish_fried_rice",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:sinigang",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:slime_noodles",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:snifferwurst",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:snuffledog",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:soaked_skewer",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:spider_bisque",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:spider_extract",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:spider_pie_slice",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:spider_salmagundi",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:spider_tanghulu",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:takoyaki",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:terrine_loaf",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:trial_freakshake",
+      "hunger": 52
+    },
+    {
+      "item": "dungeonsdelight:wispy_rice_ball",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:bacon-wrapped_sausage_on_a_stick",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:bleeding_tartar",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:blue_tenderloin_steak",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:breakfast_sampler",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:chilidog",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:crimson_stroganoff",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:deviled_egg",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:egg_soup",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:fries_ghasta",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:ghast_salad",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:giant_takoyaki",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:hoglin_sausage",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:hot_cream_cone",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:hot_wings",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:hotdog_with_mixed_salad",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:hotdog_with_nether_salad",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:magma_cake_slice",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:nether_burger",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:rock_soup",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:sausage_and_potatoes",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:scotch_eggs",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:sizzling_pudding",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:slices_of_bread",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:spicy_curry",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:spicy_hoglin_stew",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:spicy_noodle_soup",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:spicy_skewer",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:strider_stew",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:strider_with_grilled_fungus",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:stuffed_pepper",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:twisted_ghasta",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:adzuki_curry",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:adzuki_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:adzuki_stew",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:banana_bread",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:banana_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:chocolate_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:mint_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:neapolitan_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:strawberry_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:strawberry_scones",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:vanilla_ice_cream",
+      "hunger": 52
+    },
+    {
+      "item": "neapolitan:vanilla_pudding",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:plate_of_stuffed_hoglin",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:plate_of_stuffed_hoglin_ham",
+      "hunger": 52
+    },
+    {
+      "item": "mynethersdelight:plate_of_stuffed_hoglin_snout",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_cookery:end_style_sashimi",
+      "hunger": 460
+    },
+    {
+      "item": "kaleidoscope_cookery:golden_salad",
+      "hunger": 769
+    },
+    {
+      "item": "kaleidoscope_cookery:spicy_blood_stew",
+      "hunger": 229
+    },
+    {
+      "item": "kaleidoscope_cookery:fried_spring_roll",
+      "hunger": 207
+    },
+    {
+      "item": "kaleidoscope_cookery:frost_lamb_chop",
+      "hunger": 207
+    },
+    {
+      "item": "kaleidoscope_cookery:blaze_lamb_chop",
+      "hunger": 196
+    },
+    {
+      "item": "kaleidoscope_cookery:buddha_jumps_over_the_wall",
+      "hunger": 196
+    },
+    {
+      "item": "kaleidoscope_cookery:fondant_pie",
+      "hunger": 166
+    },
+    {
+      "item": "kaleidoscope_cookery:crystal_lamb_chop",
+      "hunger": 162
+    },
+    {
+      "item": "farmersdelight:roasted_mutton_chops",
+      "hunger": 134
+    },
+    {
+      "item": "farmersdelight:pumpkin_soup",
+      "hunger": 125
+    },
+    {
+      "item": "farmersdelight:grilled_salmon",
+      "hunger": 134
+    },
+    {
+      "item": "kaleidoscope_cookery:donkey_burger",
+      "hunger": 133
+    },
+    {
+      "item": "farmersdelight:noodle_soup",
+      "hunger": 130
+    },
+    {
+      "item": "farmersdelight:pasta_with_meatballs",
+      "hunger": 121
+    },
+    {
+      "item": "farmersdelight:vegetable_noodles",
+      "hunger": 121
+    },
+    {
+      "item": "farmersdelight:squid_ink_pasta",
+      "hunger": 116
+    },
+    {
+      "item": "farmersdelight:baked_cod_stew",
+      "hunger": 113
+    },
+    {
+      "item": "kaleidoscope_cookery:pan_seared_knight_steak",
+      "hunger": 93
+    },
+    {
+      "item": "kaleidoscope_cookery:dongpo_pork",
+      "hunger": 84
+    },
+    {
+      "item": "kaleidoscope_cookery:chorus_fried_egg",
+      "hunger": 78
+    },
+    {
+      "item": "kaleidoscope_cookery:spicy_chicken",
+      "hunger": 69
+    },
+    {
+      "item": "kaleidoscope_cookery:crimson_fungus_pot_soup",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:warped_fungus_pot_soup",
+      "hunger": 40
+    },
+    {
+      "item": "kaleidoscope_cookery:nether_style_sashimi",
+      "hunger": 176
+    },
+    {
+      "item": "kaleidoscope_cookery:cold_style_sashimi",
+      "hunger": 216
+    },
+    {
+      "item": "kaleidoscope_cookery:desert_style_sashimi",
+      "hunger": 174
+    },
+    {
+      "item": "kaleidoscope_cookery:tundra_style_sashimi",
+      "hunger": 194
+    },
+    {
+      "item": "kaleidoscope_cookery:fearsome_thick_soup",
+      "hunger": 80
+    },
+    {
+      "item": "kaleidoscope_cookery:chorus_fruit_platter",
+      "hunger": 159
+    },
+    {
+      "item": "kaleidoscope_tavern:brandy",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_tavern:carignan",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_tavern:glowflower_brew",
+      "hunger": 103
+    },
+    {
+      "item": "kaleidoscope_tavern:honey_wine",
+      "hunger": 103
+    },
+    {
+      "item": "kaleidoscope_tavern:luminous_bride",
+      "hunger": 118
+    },
+    {
+      "item": "kaleidoscope_tavern:miners_star",
+      "hunger": 106
+    },
+    {
+      "item": "kaleidoscope_tavern:molotov",
+      "hunger": 67
+    },
+    {
+      "item": "kaleidoscope_tavern:mother_snow",
+      "hunger": 100
+    },
+    {
+      "item": "kaleidoscope_tavern:plum_wine",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_tavern:polaris_sweet_white",
+      "hunger": 115
+    },
+    {
+      "item": "kaleidoscope_tavern:red_queen",
+      "hunger": 71
+    },
+    {
+      "item": "kaleidoscope_tavern:riesling_dry_white",
+      "hunger": 103
+    },
+    {
+      "item": "kaleidoscope_tavern:rum",
+      "hunger": 36
+    },
+    {
+      "item": "kaleidoscope_tavern:sakura_wine",
+      "hunger": 56
+    },
+    {
+      "item": "kaleidoscope_tavern:sauvignon_blanc_dry_white",
+      "hunger": 74
+    },
+    {
+      "item": "kaleidoscope_tavern:sunset_glow",
+      "hunger": 110
+    },
+    {
+      "item": "kaleidoscope_tavern:sweet_berry_wine",
+      "hunger": 52
+    },
+    {
+      "item": "kaleidoscope_tavern:vodka",
+      "hunger": 36
+    },
+    {
+      "item": "kaleidoscope_tavern:whiskey",
+      "hunger": 37
+    },
+    {
+      "item": "kaleidoscope_tavern:wine",
+      "hunger": 42
+    },
+    {
+      "item": "brewinandchewin:beer",
+      "hunger": 52
+    },
+    {
+      "item": "brewinandchewin:cocoa_fudge",
+      "hunger": 81
+    },
+    {
+      "item": "brewinandchewin:egg_grog",
+      "hunger": 96
+    },
+    {
+      "item": "brewinandchewin:glittering_grenadine",
+      "hunger": 103
+    },
+    {
+      "item": "brewinandchewin:jerky",
+      "hunger": 36
+    },
+    {
+      "item": "brewinandchewin:kimchi",
+      "hunger": 36
+    },
+    {
+      "item": "brewinandchewin:kippers",
+      "hunger": 53
+    },
+    {
+      "item": "brewinandchewin:mead",
+      "hunger": 81
+    },
+    {
+      "item": "brewinandchewin:pickled_pickles",
+      "hunger": 42
+    },
+    {
+      "item": "brewinandchewin:rice_wine",
+      "hunger": 56
+    },
+    {
+      "item": "brewinandchewin:vodka",
+      "hunger": 42
+    },
+    {
+      "item": "kaleidoscope_tavern:allium_garden",
+      "hunger": 155
+    },
+    {
+      "item": "kaleidoscope_tavern:bloody_mary",
+      "hunger": 155
+    },
+    {
+      "item": "kaleidoscope_tavern:brass_heart",
+      "hunger": 323
+    },
+    {
+      "item": "kaleidoscope_tavern:depth_charge",
+      "hunger": 265
+    },
+    {
+      "item": "kaleidoscope_tavern:emerald",
+      "hunger": 243
+    },
+    {
+      "item": "kaleidoscope_tavern:godfather",
+      "hunger": 228
+    },
+    {
+      "item": "kaleidoscope_tavern:grasshopper",
+      "hunger": 206
+    },
+    {
+      "item": "kaleidoscope_tavern:mojito",
+      "hunger": 162
+    },
+    {
+      "item": "kaleidoscope_tavern:nether_special",
+      "hunger": 250
+    },
+    {
+      "item": "kaleidoscope_tavern:screwdriver",
+      "hunger": 331
+    },
+    {
+      "item": "kaleidoscope_tavern:sculk_special",
+      "hunger": 265
+    },
+    {
+      "item": "kaleidoscope_tavern:white_lady",
+      "hunger": 235
+    },
+    {
+      "item": "brewinandchewin:bloody_mary",
+      "hunger": 162
+    },
+    {
+      "item": "brewinandchewin:dread_nog",
+      "hunger": 323
+    },
+    {
+      "item": "brewinandchewin:kombucha",
+      "hunger": 206
+    },
+    {
+      "item": "brewinandchewin:pale_jane",
+      "hunger": 176
+    },
+    {
+      "item": "brewinandchewin:red_rum",
+      "hunger": 323
+    },
+    {
+      "item": "brewinandchewin:saccharine_rum",
+      "hunger": 220
+    },
+    {
+      "item": "brewinandchewin:salty_folly",
+      "hunger": 235
+    },
+    {
+      "item": "brewinandchewin:steel_toe_stout",
+      "hunger": 257
+    },
+    {
+      "item": "brewinandchewin:strongroot_ale",
+      "hunger": 191
+    },
+    {
+      "item": "brewinandchewin:withering_dross",
+      "hunger": 382
+    }
+  ]
 }

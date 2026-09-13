@@ -1,0 +1,13 @@
+{
+  "id": "minecraft_green_concrete",
+  "item": "minecraft:green_concrete",
+  "categories": ["rainbow"],
+  "currency": "server_menu:lc_bank_main",
+  "unitPrice": 3,
+  "bulkSize": 64,
+  "stock": {"mode": "infinite"},
+  "displayName": "绿色混凝土",
+  "description": "彩色建筑材料",
+  "enabled": true,
+  "sort": 53
+}
