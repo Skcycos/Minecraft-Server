@@ -4,6 +4,10 @@
 # For example, to set the maximum to 3GB: -Xmx3G
 # To set the minimum to 2.5GB: -Xms2500M
 
-# 食韵筑家：最小 4G，最大 8G
+# 食韵筑家：16G 主机保留系统与模组原生内存，堆上限 12G，ZGC 软目标 10G
 -Xms8G
--Xmx14G
+-Xmx12G
+-XX:+UseZGC
+-XX:+ZGenerational
+-XX:SoftMaxHeapSize=10G
+-XX:+DisableExplicitGC
