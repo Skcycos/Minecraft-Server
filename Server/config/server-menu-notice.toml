@@ -1,0 +1,27 @@
+#有人发出红包时，是否在 AstrBot 群里提醒。
+#红包本身已经会在游戏内全服广播；这里只额外发一条群通知。
+enableRedEnvelopeNotice = true
+#有人刮出大奖时，是否在 AstrBot 群里提醒。
+#「大奖」沿用游戏内好运播报的判定门槛（见下面的倍率设置）。
+enableLotteryJackpotNotice = true
+#彩票群通知的最低中奖倍率，单位基点（10000 = 1 倍）。
+#默认 20000（2 倍），与游戏内 announcePublicPrize 的门槛一致。
+#调到 10000 会让所有中奖（含不赚不亏）都进群，通常不建议。
+# Default: 20000
+# Range: 10000 ~ 1000000
+lotteryJackpotMinMultiplierBps = 20000
+#股市产生新的见闻时，是否在 AstrBot 群里提醒。
+#见闻由股市模组按市场周期生成，默认约每 20 分钟一个周期、每周期 25% 概率产出一条；
+#因此实测频率很低，不需要额外限流。
+enableMarketNewsNotice = true
+#股市见闻进群的最低价格影响幅度，单位百分比。
+#默认 5.0：只播报比较明显的行情事件，过滤掉小幅波动。
+#设为 0 会把每一条见闻都推到群里。
+# Default: 5.0
+# Range: 0.0 ~ 100.0
+marketNewsMinImpactPercent = 5.0
+#检查股市新见闻的间隔秒数。
+#只是读取内存里的见闻列表，开销极低；不建议低于 5 秒。
+# Default: 30
+# Range: 5 ~ 600
+marketNewsPollSeconds = 30

@@ -100,9 +100,9 @@ minimumRegionChunkMinutes = 2
 enablePrivacyNotice = false
 #加入服务器时显示的简要告知；可使用 \n 换行，最长 2000 字符。
 #支持 {server_name} 和 {retention_days} 占位符。
-privacyNoticeText = "本服使用 MineAstr 按区块统计活动，并摘要采集玩家周边已加载方块与建筑特征；服务器还可运行 AI 玩家 Bot，并在服主显式启用后观察高信息量设备交互及非 NBT 的容器差量以学习设备用法。普通聊天和公开服务器事件也可转发给 AstrBot。不保存完整容器快照、告示牌文字或完整建筑蓝图。原始活动最多保存 {retention_days} 天。使用 /mineastr privacy 查看详情，/mineastr tracking optout 与 /mineastr learning optout 可分别退出。"
+privacyNoticeText = "本服使用 MineAstr 按区块统计活动，并摘要采集玩家周边已加载方块与建筑特征；服务器还可运行 AI 玩家 Bot，并在服主显式启用后观察高信息量设备交互及非 NBT 的容器差量以学习设备用法。普通聊天和公开服务器事件也可转发给 AstrBot；安装客户端 Mod 的玩家在 AstrBot 请求时会把当前游戏画面截图发送给 AstrBot（默认自动发送，玩家可在客户端配置中改为始终拒绝）。不保存完整容器快照、告示牌文字或完整建筑蓝图。原始活动最多保存 {retention_days} 天。使用 /mineastr privacy 查看详情，/mineastr tracking optout 与 /mineastr learning optout 可分别退出。"
 #简要告知版本。修改后，所有玩家下次加入时会重新看到告知。
-privacyNoticeVersion = "4"
+privacyNoticeVersion = "5"
 #是否允许 AstrBot 请求执行服务器命令。默认关闭。
 #即使启用，仍必须同时通过 trustedCommandUsers 与 allowedCommandRules 检查。
 enableCommandTool = false
@@ -257,3 +257,33 @@ agentRendererMaxMinutes = 10
 enablePassiveSkillLearning = false
 #候选技能验证沙盒，格式 dimension,minX,minY,minZ,maxX,maxY,maxZ；留空时禁止自动发布技能。
 skillSandboxRegion = ""
+#是否允许 AstrBot 启动持续陪伴会话、保持 Mineflayer 在线并执行自然动作。默认关闭。
+#主动聊天由 AstrBot 插件独立配置；开启本项不会在没有陪伴会话时自动登录。
+agentCompanionEnabled = false
+#陪伴目标完成后继续保持会话的默认秒数；玩家离线或明确停止时提前结束。
+# Default: 600
+# Range: 60 ~ 3600
+agentCompanionLingerSeconds = 600
+#是否在显式陪伴会话内启用拟人化注意、注视和低风险小动作。
+#该功能不会单独唤醒 Bot，也不会绕过任务、战斗、生命保护或禁区。
+agentHumanBehaviorEnabled = true
+#拟人化动作强度，0 表示只响应直接事件，100 表示更活跃；默认 50。
+# Default: 50
+# Range: 0 ~ 100
+agentHumanBehaviorIntensity = 50
+#陪伴和跟随时希望与关注玩家保持的社交距离（格）。
+# Default: 3
+# Range: 2 ~ 8
+agentSocialDistance = 3
+#WorldMind 原始示范轨迹最长保存天数；确认技能只保留抽象步骤。
+# Default: 7
+# Range: 1 ~ 90
+worldMindRawRetentionDays = 7
+#服务端本地最多保留的 WorldMind 原始/候选示范数量，超过后删除最旧项。
+# Default: 256
+# Range: 16 ~ 4096
+worldMindMaxDemonstrations = 256
+#是否允许其它服务端 Mod 通过 MineAstrServerEvents 推送自定义事件到 AstrBot 群聊。
+#例如服务器服务中心会把「有人发红包」「彩票中大奖」「股市新见闻」推送到群里；
+#各个 Mod 自己还有独立的开关，这里关掉会一次性屏蔽全部第三方事件。
+enableExternalEventPush = true
